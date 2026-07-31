@@ -3,7 +3,7 @@
 **Durada:** 8 h (4 sessions; S4 = Prova pràctica T2) · **Maquinari:** micro:bit V2 + Micro:shield; Kit Keyestudio 1 (LED/actuadors), Kit 2 (sensor de temperatura) i Kit 3 (relé, DHT11); vehicle muntat a SA4, control per ràdio de SA5
 
 ## Vincle competencial
-- **Competències específiques:** CE-R1 (principal), CE-R3 (principal); CE-R4, CE-R5 (secundàries).
+- **Competències específiques:** CE-R1 (principal), CE-R3 (principal); CE-R2, CE-R4, CE-R5 (secundàries).
 - **Criteris d'avaluació:** CA1.1, CA2.1, CA3.1.
 - **Competències clau:** STEM, CD, CPSAA.
 

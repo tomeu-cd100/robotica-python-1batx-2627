@@ -3,7 +3,7 @@
 **Durada:** 6 h (3 sessions) · **Maquinari:** micro:bit V2 sola (matriu de 25 LED, botons A/B); simulador python.microbit.org com a suport
 
 ## Vincle competencial
-- **Competències específiques:** CE-R1 (principal), CE-R5 (principal).
+- **Competències específiques:** CE-R1 (principal), CE-R5 (principal); CE-R2 (secundària).
 - **Criteris d'avaluació:** CA1.2, CA5.3.
 - **Competències clau:** STEM, CD, CC.
 

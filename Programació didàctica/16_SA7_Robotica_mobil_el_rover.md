@@ -3,14 +3,14 @@
 **Durada:** 8 h (4 sessions) · **Maquinari:** micro:bit V2 + Micro:shield; Kit Keyestudio 2 (motoreductors, rodes, seguidor de línia, ultrasons HC-SR04); fabricació del **rover** (peces pretallades pel docent)
 
 ## Vincle competencial
-- **Competències específiques:** CE-R1 (principal), CE-R3 (principal), CE-R4 (principal); CE-R5 (principal).
+- **Competències específiques:** CE-R1 (principal), CE-R3 (principal), CE-R4 (principal), CE-R5 (principal); CE-R2 (secundària).
 - **Criteris d'avaluació:** CA1.1, CA3.1, CA4.1.
 - **Competències clau:** STEM, CD, CE.
 
 ## Sabers
 **Bloc F · Robòtica, tecnologies emergents i projecte** (inici): robòtica mòbil (xassís, rodes, cinemàtica diferencial), algorismes de comportament (seguidor de línia, evita-obstacles), modelització de trajectòries.
 
-> **Fabricació del rover:** el muntatge físic del rover es fa en una **sessió prèvia a la SA7** ("Sessió 0" del 3r trimestre), finançada per la compressió d'hores de la SA8 (vegeu `08_Sequenciacio_temporal_anual.md`, «Fil conductor i consum del marge»). En arribar a la S1 d'aquesta SA, l'alumnat ja disposa del **rover muntat** (peces pretallades pel docent) i hi comença a programar comportaments.
+> **Fabricació del rover:** el muntatge físic del rover es fa en una **sessió prèvia a la SA7** ("Sessió 0" del 3r trimestre), finançada per la compressió d'hores de la SA8 (vegeu `08_Sequenciacio_temporal_anual.md`, «Fil conductor i consum del marge»). En arribar a la S1 d'aquesta SA, l'alumnat ja disposa del **rover muntat** (peces pretallades pel docent) i hi comença a programar comportaments. Igual que el muntatge de la mascota (SA2·S4) i del vehicle (SA4·S4), el **muntatge del rover** a la Sessió 0 té instrument propi: **checklist de muntatge** avaluada amb **R2** (criteri "Muntatge"), de caràcter **formatiu** (no compta a les hores ni als instruments de la SA7 pròpiament dita, que comencen a la S1).
 
 ## Objectius d'aprenentatge
 1. Relacionar el control de dos motoreductors amb el gir del rover (**cinemàtica diferencial** bàsica).
