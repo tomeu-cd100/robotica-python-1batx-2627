@@ -40,10 +40,13 @@ TARGETS = [
     ("SA1/SA1_poster_robot_plantilla.md", "checklist"),
     ("00_General/00_Plantilla_disseny_objecte.md", "checklist"),
     ("00_General/00_Tauler_reptes.md", "checklist"),
-    # Targetes de repàs exprés: es reparteixen en paper com a deures de represa
-    # (SA6 S2 la de MicroPython, SA5 S3 la de C++, SA7 S4 la de ràdio).
+    # Targetes de repàs exprés: es reparteixen en paper com a deures de
+    # represa. Curs nou (100% MicroPython, sense C++): la targeta de
+    # comparació de paradigmes del germà no aplica.
+    # TODO (Tasks 7-15): revisar quines targetes de repàs calen realment
+    # (p. ex. sintaxi bàsica, sensors, ràdio) quan existeixin les guies
+    # docents; de moment només es manté la de MicroPython i la de ràdio.
     ("00_General/00_Repas_expres_MicroPython.md", "targeta"),
-    ("00_General/00_Repas_expres_Cpp.md", "targeta"),
     ("00_General/00_Repas_expres_Radio.md", "targeta"),
 ]
 
