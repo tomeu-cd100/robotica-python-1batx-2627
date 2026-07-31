@@ -132,17 +132,17 @@ Aporta **comunicació, actuadors i sensors avançats** per a control, telemetria
 
 ## Compres del fil conductor individual
 
-La fabricació dels tres artefactes del fil conductor (mascota/vehicle/rover, un per alumne) consumeix consumibles propis, no coberts pels kits:
+La fabricació de la mascota (T1) i el vehicle (T2), més les dues peces d'ampliació del rover (T3), consumeix consumibles propis, no coberts pels kits. **El rover no té xassís propi: reaprofita el del vehicle** (vegeu `Classes/00_General/00_Fil_conductor_construccions.md`), per això el DM i les caniques/roda boja només es consumeixen a T1/T2:
 
-| Material | Quantitat orientativa (curs, ~30 alumnes) |
+| Material | Quantitat orientativa (curs, 20 alumnes) |
 |---|---|
-| DM 3 mm | ~20-25 taulers/curs |
-| Filament PLA | 4-6 bobines/curs |
-| Cargols M3 + separadors | ~30 jocs |
-| Portapiles 4×AA (individual) | ×30 |
-| Caniques/roda boja (rover) | ×30 |
+| DM 3 mm | **20 taulers/curs** (10 mascota + 10 vehicle; 0 pel rover) |
+| Filament PLA | 3-4 bobines/curs |
+| Cargols M3 + separadors | ~20 jocs |
+| Portapiles 4×AA (individual) | ×20 |
+| Canica de 16 mm (roda boja, vehicle; reaprofitada pel rover) | ×20 |
 
-**Total orientatiu: ~250-350 €** (detall complet a `09b_Guia_compra_pressupost.md`).
+**Total orientatiu: ~150-270 €** (detall complet a `09b_Guia_compra_pressupost.md`).
 
 > ℹ️ El maquinari de control (micro:bit V2, Micro:shield, kits Keyestudio) surt de la **dotació d'aula existent** i es **retorna al juny**; només els consumibles de fabricació digital són compra recurrent.
 
