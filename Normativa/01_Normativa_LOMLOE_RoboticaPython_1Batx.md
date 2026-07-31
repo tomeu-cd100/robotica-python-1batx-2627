@@ -1,4 +1,4 @@
-# Normativa oficial — Optativa pròpia "Robòtica amb Python" · 1r de Batxillerat (científic i tecnològic)
+# Normativa oficial — Optativa pròpia "Robòtica amb Python" · 1r de Batxillerat (Ciències i Tecnologia)
 ### Marc LOMLOE a Catalunya · Curs 2026-2027
 
 > Document de síntesi normativa elaborat per fonamentar la programació de la matèria.
@@ -65,6 +65,8 @@ Canvis rellevants que **afecten directament** l'organització de la matèria:
 | **Matèries optatives** (2-3 franges; 2-4 h/matèria) | **6 h** |
 | **Total** | **30 h** |
 
+> **Font de la taula:** Infografia oficial del Departament d'Educació *"1r de batxillerat. Curs 2026-2027 — Modificació del Decret 171/2022"* (darrera actualització 22/01/2026; `Infografia_1Batx_2026-2027.pdf` d'aquesta carpeta, i versió canònica en línia al punt 7 de §8), amb les xifres confirmades pel desplegament del **Decret 103/2026**. La xifra directament rellevant per a la programació d'aquesta matèria és la de les **matèries optatives: 6 h setmanals en 2-3 franges, amb un mínim de 2 h i un màxim de 4 h per matèria** (§2.2, punt 4); les altres files només donen el context de l'horari complet de 1r.
+>
 > ⚠️ La distribució exacta de franges (2 o 3) i les hores concretes assignades a cada optativa les fixa **cada centre**, dins d'aquests mínims i màxims, a partir del seu projecte educatiu (PEC/PGA).
 
 ### 2.3. Documents d'organització i gestió dels centres (DOIGC)
