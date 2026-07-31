@@ -45,7 +45,7 @@
 |---|---|---|
 | T1-T2 | **micro:bit V2 + Micro:shield** (1 per alumne) + sensors/actuadors dels kits Keyestudio | ✅ ja al centre |
 | T2 | Motoreductors, rodes, micro servos (Kit 2 Keyestudio) | ✅ ja al centre |
-| T3 | **Rover fabricat propi** per parella: xassís DM tallat amb xTool S1 + peces Bambu P2S + motors/sensors Keyestudio + micro:bit | ✅ fabricació pròpia, cost quasi zero |
+| T1-T3 | **Fil conductor de construccions** (mascota T1, vehicle T2, rover T3): DM tallat amb xTool S1 + peces Bambu P2S + motors/sensors Keyestudio + micro:bit | ✅ fabricació pròpia, només consumibles |
 | Opcional | **Raspberry Pi Pico** (MicroPython amb Thonny) | 💰 opció documentada **no bloquejant** (full de compra a `09b`) |
 | Opcional | Python a PC + Arduino UNO via pyFirmata | ✅ documentat com a ampliació; fragilitat coneguda (pyFirmata sense manteniment, provar `pyfirmata2` amb el Python de les aules) |
 
@@ -76,12 +76,28 @@ pràctiques trimestrals amb sessió pròpia dins la SA de tancament del trimestr
 | | SA9 † | Repte final integrador | 10 | Projecte per parelles amb el rover + sensors lliures, documentació tècnica, defensa oral · **prova T3** |
 | | | **Subtotal** | **68** | + ~2 h de marge |
 
-- **Fabricació del rover:** les sessions de tall/impressió es planifiquen com al curs
-  germà (consumint marge de contingència de forma explícita); les peces poden arribar
-  **pretallades pel docent** si el calendari s'estreny.
+### Fil conductor de construccions trimestrals
+
+Cada trimestre tanca amb una **construcció real per parella** (làser xTool S1 + Bambu
+P2S + material dels kits), seguint el model del curs germà:
+
+| Trim. | Construcció | Tanca a | Què consolida | Evolució |
+|---|---|---|---|---|
+| T1 | **Mascota expressiva** — carcassa DM al voltant de la micro:bit; display com a cara, servo (orelles/cua), reacciona a llum/so/sacsejada | SA3 | sortides + entrades | — |
+| T2 | **Vehicle teledirigit** — xassís DM + 2 motoreductors i rodes (Kit 2), comandament per ràdio des d'una segona micro:bit, aturada d'emergència per ultrasons | SA6 | moviment + ràdio + control | precursor directe del rover |
+| T3 | **Rover autònom** — evolució del vehicle del T2: seguidor de línia, evita-obstacles, telemetria a estació base | SA9 | integració total | reutilitza xassís i motors del T2 |
+
+- La fabricació grossa (xassís, rodes de suport) es fa **un sol cop al T2**; el T3
+  afegeix sensors i autonomia, no reconstrueix.
+- **Fabricació:** les sessions de tall/impressió es planifiquen com al curs germà,
+  **consumint per endavant les retallades del pla de contingència** — amb les tres
+  construccions el **marge efectiu queda ≈ 0**; si el calendari s'estreny, les peces
+  arriben **pretallades pel docent**.
+- **Consumibles del fil conductor:** DM 3 mm + filament PLA + cargols/portapiles,
+  ~130-180 €/curs (mateix ordre que el curs germà; full de compra a `09b`).
 - **Pla de contingència:** no es retallen mai SA1-SA3 ni SA9; primera retallada a les
-  sessions de producte de SA2/SA4; SA8 comprimible de 6 h a 4 h; SA7 de 8 h a 6 h com
-  a últim recurs.
+  sessions de producte de SA2/SA4 (assignades a fabricació); SA8 comprimible de 6 h a
+  4 h (assignada a fabricació T3); SA7 de 8 h a 6 h com a **única palanca lliure**.
 - **Progressió Python:** seqüències → variables/bucles (SA2) → condicionals (SA3) →
   funcions (SA4) → estructures de dades i esdeveniments (SA5-SA6) → integració (SA7-SA9).
   Objectes: només ús (no definició de classes), nivell inicial real del grup.
