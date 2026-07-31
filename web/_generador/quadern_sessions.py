@@ -49,9 +49,21 @@ _TITOL_SA = {
 # SA de cada trimestre porta, a més, una sessió de prova pràctica.
 SESSIONS = {
     1: [
-        _s("SA1", 1, _TITOL_SA["SA1"],
-           "TODO: pendent de la guia docent de SA1 (micro:bit V2 + Micro:shield).",
-           "TODO"),
+        _s("SA1", 1, "Què és un robot?",
+           "Avui he apres el model entrada-proces-sortida i que es un sistema "
+           "embegut. He analitzat 3 sistemes quotidians (rentadora, dron, "
+           "semafor) i he fet la prova diagnostica (no qualifica).",
+           "robot, sistema embegut, entrada, proces, sortida"),
+        _s("SA1", 2, "Arquitectura de la micro:bit i seguretat",
+           "Avui he conegut les parts de la micro:bit (display, botons, "
+           "sensors interns) i he llegit i signat les normes de seguretat "
+           "del laboratori.",
+           "microcontrolador, sensor, actuador, placa, digital, analogic"),
+        _s("SA1", 3, "El primer programa MicroPython",
+           "Avui he llegit, provat i modificat el meu primer programa "
+           "MicroPython (from microbit import *, display.scroll, display.show, "
+           "sleep) i he comencat la fitxa-poster.",
+           "MicroPython, display, bucle, while True"),
         _s("SA2", 1, _TITOL_SA["SA2"],
            "TODO: pendent de la guia docent de SA2 (sortides Keyestudio: LED, brunzidor...).",
            "TODO"),
