@@ -52,7 +52,7 @@ El marge real (~2 h) és **més petit que les pèrdues habituals** d'un curs (fe
 
 ## Fil conductor individual i consum del marge
 
-El curs aplica el **fil conductor de tres artefactes individuals** (mascota T1 → vehicle T2 → rover T3, un exemplar propi per alumne, construït amb la talladora làser i la impressora 3D de l'aula): vegeu `../Classes/00_General/00_Fil_conductor_robots.md` (a crear en les guies docents de cada SA). Cada sessió de fabricació **consumeix per endavant** una de les retallades del pla de contingència anterior; cal deixar-ho explícit aquí perquè no es descobreixi al març.
+El curs aplica el **fil conductor de tres artefactes individuals** (mascota T1 → vehicle T2 → rover T3, un exemplar propi per alumne, construït amb la talladora làser i la impressora 3D de l'aula): vegeu `../Classes/00_General/00_Fil_conductor_construccions.md`. Cada sessió de fabricació **consumeix per endavant** una de les retallades del pla de contingència anterior; cal deixar-ho explícit aquí perquè no es descobreixi al març.
 
 | Trimestre | Sessió de fabricació | Consum explícit del pla de contingència |
 |---|---|---|

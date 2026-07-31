@@ -33,7 +33,7 @@ def test_ordre_grups_amb_projectes():
 
 def test_etiqueta_i_trimestre():
     assert group_label("projecte-t1") == "🐣 Projecte T1 · La mascota reactiva"
-    assert group_label("projecte-t2") == "🦾 Projecte T2 · El braç robòtic"
+    assert group_label("projecte-t2") == "🚗 Projecte T2 · El vehicle teledirigit"
     assert group_label("projecte-t3") == "🚙 Projecte T3 · El rover autònom"
     assert group_tri("projecte-t1") == 1
     assert group_tri("projecte-t3") == 3
@@ -49,7 +49,7 @@ def test_out_for_projecte():
 
 def test_projecte_public_alumnat():
     assert classify_public("classes", GENERAL / "00_Projecte_T1_portada.md") == "alumnat"
-    assert classify_public("classes", GENERAL / "00_Projecte_T2_Brac.md") == "alumnat"
+    assert classify_public("classes", GENERAL / "00_Projecte_T2_Vehicle.md") == "alumnat"
 
 
 @pytest.mark.skipif(
@@ -77,7 +77,7 @@ def test_redireccions_dossiers():
     base = ROOT / "web" / "classes" / "00-general"
     for antic, nou in [
         ("00-projecte-t1-mascota.html", "../projecte-t1/00-projecte-t1-mascota.html"),
-        ("00-projecte-t2-brac.html", "../projecte-t2/00-projecte-t2-brac.html"),
+        ("00-projecte-t2-vehicle.html", "../projecte-t2/00-projecte-t2-vehicle.html"),
         ("00-projecte-t3-rover.html", "../projecte-t3/00-projecte-t3-rover.html"),
     ]:
         f = base / antic
