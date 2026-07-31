@@ -37,7 +37,7 @@ L'avaluació és **competencial, contínua, formativa i global**, d'acord amb el
 | **Proves pràctiques** (programació/electrònica) | **20 %** | Reptes individuals curts (T1, T2, T3). |
 | **Actitud, autonomia i responsabilitat** | **10 %** | Observació, autoavaluació. |
 
-> Recomanació: ponderació **per competències** dins de cada dimensió. La qualificació trimestral i final s'expressa amb un enter **del 0 al 10 (sense decimals)**, com estableix el Decret 171/2022.
+> Recomanació: ponderació **per competències** dins de cada dimensió. La qualificació trimestral i final s'expressa amb un enter **de l'1 al 10 (sense decimals)**, com estableix la normativa de batxillerat (RD 243/2022 i DOIGC — vegeu `../Normativa/01_Normativa_LOMLOE_RoboticaPython_1Batx.md`).
 
 ### Les tres escales que conviuen (i com es relacionen)
 

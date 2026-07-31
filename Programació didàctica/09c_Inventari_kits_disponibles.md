@@ -67,15 +67,16 @@ Aporta els **sensors de percepció** i les **peces mecàniques** per a la robòt
 - **Sensor de llum**, **sensor de temperatura**, **sensor PIR** de moviment.
 - **Sensor d'ultrasons HC-SR04**.
 - **Seguidor de línia.**
-- **Sensor d'humitat.**
+- **Sensor d'humitat del terra.**
 
 **On s'utilitza:**
 | SA | Ús del Kit 2 |
 |---|---|
-| SA3 | Sensor de llum, temperatura, ultrasons, PIR, humitat (entrades). |
+| SA3 | Sensor de llum, temperatura, ultrasons, PIR, humitat del terra (entrades). |
 | SA4 | Micro servo(s) i motoreductor (moviment del vehicle). |
 | SA6 | Sensor de temperatura + actuador per a control (llaç tancat). |
 | SA7 | Motoreductors, rodes, seguidor de línia i ultrasò per al rover individual. |
+| SA9 | Sensor d'humitat del terra: **reserva per a SA9** (repte lliure de reg/domòtica, en combinació amb el relé i la bomba d'aigua del Kit 3). |
 
 ---
 
@@ -87,9 +88,11 @@ Aporta **comunicació, actuadors i sensors avançats** per a control, telemetria
 - **Mòdul relé.**
 - **LED RGB** addicional i **LEDs individuals**.
 - **Sensor de so / micròfon.**
-- **IMU (giroscopi + acceleròmetre)**, si el kit el porta, com a complement del de la micro:bit.
+- **IMU MPU6050** (giroscopi + acceleròmetre), com a complement del de la micro:bit.
 - **Sensor de temperatura i humitat DHT11.**
-- **Sensor de pressió baromètrica** o **CO₂**, segons el kit concret.
+- **Sensor de pressió baromètrica BMP280.**
+- **Sensor de CO₂ CCS811.**
+- **Bomba d'aigua** (amb tub).
 
 **On s'utilitza:**
 | SA | Ús del Kit 3 |
@@ -97,8 +100,8 @@ Aporta **comunicació, actuadors i sensors avançats** per a control, telemetria
 | SA2 | Relé, LED RGB, LEDs (sortides i commutació). |
 | SA3 | Sensor de so, DHT11 (entrades). |
 | SA6 | Relé + DHT11 per a control (termòstat, commutació d'actuadors). |
-| SA8 | Sensors avançats (DHT11, pressió/CO₂ si disponibles) per a telemetria. |
-| SA9 | Qualsevol sensor del kit per al repte lliure. |
+| SA8 | **IMU MPU6050** (orientació/gestos del rover), **DHT11**, **BMP280** i **CCS811** per a telemetria (dades enviades per ràdio i registrades). |
+| SA9 | Qualsevol sensor del kit per al repte lliure; **bomba d'aigua + relé + sensor d'humitat del terra (Kit 2)**: **reserva per a SA9** (repte de reg/domòtica). |
 
 ---
 
@@ -122,8 +125,8 @@ Aporta **comunicació, actuadors i sensors avançats** per a control, telemetria
 | **SA5** Ràdio: robots que parlen | ràdio integrada micro:bit | micro:bit | ✅ |
 | **SA6** Control: el robot decideix | sensor temperatura + relé/actuador | Kit 1 + 2 + 3 | ✅ |
 | **SA7** Robòtica mòbil: el rover | rover individual (motoreductors, seguidor de línia, ultrasò) | Fil conductor + Kit 2 | ✅ |
-| **SA8** Autonomia i telemetria | ràdio + sensors avançats | micro:bit + Kit 3 | ✅ |
-| **SA9** Repte final integrador | tot el material | Tots | ✅ |
+| **SA8** Autonomia i telemetria | ràdio + IMU MPU6050 + DHT11 + BMP280 + CCS811 | micro:bit + Kit 3 | ✅ |
+| **SA9** Repte final integrador | tot el material; humitat del terra + bomba d'aigua (reserva reg/domòtica) | Tots | ✅ |
 
 ---
 

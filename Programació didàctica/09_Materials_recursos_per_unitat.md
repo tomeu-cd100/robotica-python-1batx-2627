@@ -9,8 +9,8 @@ Mapatge del **maquinari disponible** i dels **recursos oberts** a cada situació
 | **micro:bit V2** (1 per alumne) | Plataforma nucli de programació MicroPython | Totes (SA1-SA9) |
 | **Micro:shield** (1 per alumne) | Connexió de sensors i actuadors Keyestudio a la micro:bit | SA2-SA9 |
 | **Kit Keyestudio 1** (1 per alumne) | Sensors i actuadors bàsics | SA2-SA4, SA6 |
-| **Kit Keyestudio 2** (1 per alumne) | Sensors de percepció i peces de robòtica mòbil | SA3, SA6-SA7 |
-| **Kit Keyestudio 3** (1 per alumne) | Comunicació, actuadors i sensors avançats | SA2-SA3, SA6, SA8-SA9 |
+| **Kit Keyestudio 2** (1 per alumne) | Sensors de percepció (llum, temperatura, PIR, ultrasons, humitat del terra) i peces de robòtica mòbil | SA3, SA6-SA7, SA9 (humitat del terra: reserva reg/domòtica) |
+| **Kit Keyestudio 3** (1 per alumne) | Comunicació, actuadors i sensors avançats (relé, IMU MPU6050, DHT11, BMP280, CCS811, bomba d'aigua) | SA2-SA3, SA6, SA8 (telemetria IMU/BMP280/CCS811), SA9 (bomba d'aigua: reserva reg/domòtica) |
 | **Fil conductor individual** (mascota T1 / vehicle T2 / rover T3, peces pretallades pel docent) | Fabricació digital i muntatge individual | SA2, SA4, SA7-SA9 |
 
 ## 9.2. Programari i entorns (gratuïts)
