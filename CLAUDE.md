@@ -24,7 +24,8 @@ Material docent en **català** (Robòtica amb Python, 1r Batx, LOMLOE). Markdown
 - **Contracte de cobertura per SA**: definit a `tools/qa.py:comprova_cobertura_sa()` —
   README, guia_docent, fitxa_alumnat, fitxa_ampliada, checklists docent/alumnat,
   qüestionari de conceptes, exemple resolt, i per SA1–SA8 esquemes de connexions +
-  `Reptes/Reptes_SAn.md` + solucionari.
+  `Reptes/Reptes_SAn.md` + solucionari. **SA0** és material d'acollida sense sessions
+  pròpies (es fa dins la S1 de SA1): contracte reduït, només exigeix `README.md`.
 - **Quadre d'hores nou** (doc `Programació didàctica/08_Sequenciacio_temporal_anual.md`,
   quan existeixi): SA1=6, SA2=8, SA3=8 (T1) · SA4=8, SA5=6, SA6=8 (T2) · SA7=8, SA8=6,
   SA9=10 (T3) → **68 h + marge** (~70 h de curs). `tools/qa.py:comprova_hores()` valida

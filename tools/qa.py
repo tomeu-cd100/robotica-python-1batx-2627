@@ -12,7 +12,9 @@ Comprova (i falla amb exit != 0 si troba res):
      esperats sense que sigui un error real]
   2. Cobertura de cada SA: que hi hagi guia docent, fitxa base, fitxa
      ampliada, checklists, README, esquemes/connexions (SA1-SA8) i el
-     repte + solucionari corresponent (SA1-SA8). [omès amb --nomes-sintaxi]
+     repte + solucionari corresponent (SA1-SA8). SA0 és material d'acollida
+     sense sessions pròpies: contracte reduït, només exigeix README.
+     [omès amb --nomes-sintaxi]
   3. Coherència horària: la taula de `08_Sequenciacio_temporal_anual.md`
      ha de sumar les hores del subtotal declarat (quadre nou: SA1=6, SA2=8,
      SA3=8, SA4=8, SA5=6, SA6=8, SA7=8, SA8=6, SA9=10 → 68 h + marge).
@@ -131,9 +133,15 @@ def comprova_enllacos_web() -> None:
 # --- 2 · Cobertura de cada SA ------------------------------------------------
 def comprova_cobertura_sa() -> None:
     if NOMES_SINTAXI:
-        print("2) Cobertura SA1-SA9: omesa (--nomes-sintaxi).")
+        print("2) Cobertura SA0-SA9: omesa (--nomes-sintaxi).")
         return
     fallats = 0
+    # SA0 és material d'acollida sense sessions pròpies (es fa dins la S1 de
+    # SA1): contracte reduït, només exigeix README (no guia/fitxes/reptes).
+    sa0_readme = ARREL / "Classes" / "SA0" / "README.md"
+    if not sa0_readme.exists():
+        errors.append(f"[cobertura] SA0: falta {sa0_readme.relative_to(ARREL)}")
+        fallats += 1
     for n in range(1, 10):
         sa = f"SA{n}"
         base = ARREL / "Classes" / sa
@@ -162,7 +170,7 @@ def comprova_cobertura_sa() -> None:
             if not f.exists():
                 errors.append(f"[cobertura] {sa}: falta {f.relative_to(ARREL)}")
                 fallats += 1
-    print(f"2) Cobertura SA1-SA9: {fallats} mancances.")
+    print(f"2) Cobertura SA0-SA9: {fallats} mancances.")
 
 
 # --- 3 · Coherència horària --------------------------------------------------

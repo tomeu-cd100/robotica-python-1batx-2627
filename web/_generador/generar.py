@@ -965,7 +965,7 @@ def sa_fil_html(sa: int, current_out: str, fil: dict) -> str:
 # (ampliada, qüestionari) i el del docent. "__codi__" és el rang de les
 # pàgines de codi (kind == "code").
 DOC_ORDRE_CLAUS = ["fil-conductor", "projecte-t",
-                   "guia-docent", "vocabulari", "guia", "diagnostica",
+                   "guia-docent", "vocabulari", "primers-passos", "guia", "diagnostica",
                    "fitxa-alumnat", "banc-de-reptes", "planificacio",
                    "prova", "normes", "esquemes", "connexions",
                    "recursos", "diagrama", "exemple", "__codi__", "auditoria",
