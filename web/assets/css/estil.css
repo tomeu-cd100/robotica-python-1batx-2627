@@ -1,0 +1,952 @@
+/* ============================================================
+   Robòtica · 1r de Batxillerat — full d'estil
+   Disseny: net i modern. Doble codi de color:
+   · cada APARTAT (secció) té el seu accent  -> [data-section]
+   · cada TRIMESTRE té el seu color          -> [data-tri]
+   ============================================================ */
+
+/* ---------- Tokens ---------- */
+:root {
+  --fs-base: 1.0625rem;   /* 17px a mida 100%; escala amb la mida de l'arrel */
+  --ff-text: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --ff-llegible: Verdana, "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  --ff-mono: "Cascadia Code", "JetBrains Mono", "Fira Code", Consolas, "SF Mono", monospace;
+
+  --bg: #ffffff;
+  --surface: #f2f8f7;
+  --surface-2: #e8f1f0;
+  --border: #d7e6e5;
+  --border-fort: #b7d0cf;
+  --text: #0e1b1c;
+  --muted: #4f6d6e;
+  --link: var(--accent, #0c6e70);
+
+  --radi: 14px;
+  --radi-s: 9px;
+  --ombra: 0 1px 2px rgba(12, 40, 40, .05), 0 8px 24px rgba(12, 40, 40, .07);
+  --ombra-forta: 0 12px 40px rgba(12, 40, 40, .16);
+  --maxw: 1440px;
+
+  /* accent per defecte — identitat «Arduino teal + coure» */
+  --accent: #0c6e70;
+  --accent-2: #b85c1a;
+  --accent-soft: #e3f1f0;
+}
+
+html[data-tema="fosc"] {
+  --bg: #0a1516;
+  --surface: #10201f;
+  --surface-2: #0d1c1b;
+  --border: #21332f;
+  --border-fort: #34504b;
+  --text: #e6efee;
+  --muted: #93aeac;
+  --ombra: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .35);
+  --ombra-forta: 0 12px 40px rgba(0, 0, 0, .5);
+  --accent: #2dd4bf;
+  --accent-2: #f0a868;
+}
+
+/* ---------- Accents per apartat ---------- */
+[data-section="inici"]      { --accent: #0c6e70; --accent-2: #b85c1a; --accent-soft: #e3f1f0; }
+[data-section="docent"]     { --accent: #0c6e70; --accent-2: #b85c1a; --accent-soft: #e3f1f0; }
+[data-section="alumnat"]    { --accent: #0891b2; --accent-2: #06b6d4; --accent-soft: #ecfeff; }
+[data-section="programacio"]{ --accent: #0c6e70; --accent-2: #b85c1a; --accent-soft: #e3f1f0; }
+[data-section="classes"]    { --accent: #0891b2; --accent-2: #06b6d4; --accent-soft: #ecfeff; }
+[data-section="reptes"]     { --accent: #d97706; --accent-2: #f59e0b; --accent-soft: #fffbeb; }
+[data-section="avaluacio"]  { --accent: #e11d48; --accent-2: #f43f5e; --accent-soft: #fff1f2; }
+[data-section="normativa"]  { --accent: #475569; --accent-2: #64748b; --accent-soft: #f1f5f9; }
+[data-section="simulacions"]{ --accent: #65a30d; --accent-2: #84cc16; --accent-soft: #f7fee7; }
+[data-section="recursos"]   { --accent: #059669; --accent-2: #10b981; --accent-soft: #ecfdf5; }
+html[data-tema="fosc"] [data-section] { --accent-soft: rgba(255, 255, 255, .06); }
+
+/* Accents en mode fosc: variants clares (sèrie 400) per garantir
+   contrast AA (≥ 4.5:1) del text d'accent sobre --bg/--surface */
+html[data-tema="fosc"] [data-section="inici"]       { --accent: #2dd4bf; --accent-2: #f0a868; }
+html[data-tema="fosc"] [data-section="docent"]      { --accent: #2dd4bf; --accent-2: #f0a868; }
+html[data-tema="fosc"] [data-section="alumnat"]     { --accent: #38bdf8; --accent-2: #67e8f9; }
+html[data-tema="fosc"] [data-section="programacio"] { --accent: #2dd4bf; --accent-2: #f0a868; }
+html[data-tema="fosc"] [data-section="classes"]     { --accent: #38bdf8; --accent-2: #67e8f9; }
+html[data-tema="fosc"] [data-section="reptes"]      { --accent: #fbbf24; --accent-2: #fcd34d; }
+html[data-tema="fosc"] [data-section="avaluacio"]   { --accent: #fb7185; --accent-2: #fda4af; }
+html[data-tema="fosc"] [data-section="normativa"]   { --accent: #94a3b8; --accent-2: #cbd5e1; }
+html[data-tema="fosc"] [data-section="simulacions"] { --accent: #a3e635; --accent-2: #bef264; }
+html[data-tema="fosc"] [data-section="recursos"]    { --accent: #34d399; --accent-2: #6ee7b7; }
+
+/* Amb accents clars, el text blanc sobre fons d'accent perd contrast:
+   en fosc, aquests elements passen a text fosc sobre l'accent clar */
+html[data-tema="fosc"] .skip,
+html[data-tema="fosc"] .btn-primari,
+html[data-tema="fosc"] .sa-fil-pill.actiu { color: #0b1120; }
+
+/* ---------- Colors de trimestre ---------- */
+[data-tri="0"] { --tri: #64748b; }   /* preàmbul (SA0), neutre */
+[data-tri="1"] { --tri: #2563eb; }
+[data-tri="2"] { --tri: #7c3aed; }
+[data-tri="3"] { --tri: #db2777; }
+/* variants clares en fosc (mateix criteri AA que els accents) */
+html[data-tema="fosc"] [data-tri="0"] { --tri: #94a3b8; }
+html[data-tema="fosc"] [data-tri="1"] { --tri: #60a5fa; }
+html[data-tema="fosc"] [data-tri="2"] { --tri: #a78bfa; }
+html[data-tema="fosc"] [data-tri="3"] { --tri: #f472b6; }
+
+/* ---------- Ajustos de lectura (mida de text i tipografia) ----------
+   La mida escala la font de l'arrel: tot el que va en rem (cos i títols)
+   creix o minva de manera proporcional. Es persisteix a localStorage. */
+html[data-mida="90"]  { font-size: 90%; }
+html[data-mida="110"] { font-size: 110%; }
+html[data-mida="120"] { font-size: 120%; }
+html[data-mida="130"] { font-size: 130%; }
+html[data-font="llegible"] body {
+  --ff-text: var(--ff-llegible);
+  letter-spacing: .01em;
+  line-height: 1.8;
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  margin: 0;
+  font-family: var(--ff-text);
+  font-size: var(--fs-base);
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Anell de focus d'alt contrast per a la navegació per teclat (WCAG 2.4.7) */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Respecte per les preferències de moviment reduït (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* Contingut només per a lectors de pantalla (regions aria-live, etc.) */
+.vo {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.skip {
+  position: absolute; left: -999px; top: 0; background: var(--accent);
+  color: #fff; padding: .6rem 1rem; border-radius: 0 0 var(--radi-s) 0; z-index: 100;
+}
+.skip:focus { left: 0; }
+
+/* ---------- Topbar ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 1.2rem;
+  padding: 0 1.4rem; height: 62px;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: saturate(160%) blur(10px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: inset 0 -3px 0 var(--accent);
+}
+.brand {
+  font-weight: 800; font-size: 1.08rem; color: var(--text); white-space: nowrap;
+  display: flex; align-items: center; gap: .45rem; letter-spacing: -.01em;
+}
+.brand:hover { text-decoration: none; }
+.brand-mark { color: var(--accent); }
+.brand-sub { color: var(--muted); font-weight: 600; font-size: .82rem; }
+.topnav { display: flex; gap: .25rem; margin-left: auto; flex-wrap: wrap; }
+.topnav a {
+  color: var(--muted); font-weight: 600; font-size: .92rem;
+  padding: .4rem .7rem; border-radius: var(--radi-s); white-space: nowrap;
+}
+.topnav a:hover { color: var(--text); background: var(--surface-2); text-decoration: none; }
+.topnav a.actiu { color: var(--accent); background: var(--accent-soft); }
+
+.topbar-eines { display: flex; align-items: center; gap: .6rem; }
+.cercador { position: relative; }
+#cerca {
+  width: 190px; max-width: 38vw; padding: .5rem .8rem; font-size: .9rem;
+  border: 1px solid var(--border-fort); border-radius: 999px;
+  background: var(--surface); color: var(--text); transition: width .2s, border-color .2s;
+}
+#cerca:focus { outline: none; border-color: var(--accent); width: 240px; }
+#cerca:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.cerca-resultats {
+  position: absolute; right: 0; top: 120%; width: 360px; max-width: 80vw;
+  max-height: 60vh; overflow: auto; background: var(--bg);
+  border: 1px solid var(--border); border-radius: var(--radi);
+  box-shadow: var(--ombra-forta); padding: .4rem; z-index: 60;
+}
+.cerca-resultats a {
+  display: block; padding: .55rem .7rem; border-radius: var(--radi-s); color: var(--text);
+}
+.cerca-resultats a:hover, .cerca-resultats a.sel { background: var(--accent-soft); text-decoration: none; }
+.cerca-resultats .r-sec { display: block; font-size: .76rem; color: var(--muted); }
+.cerca-buit { padding: .7rem; color: var(--muted); font-size: .9rem; }
+
+.tema-btn, .menu-btn {
+  border: 1px solid var(--border-fort); background: var(--surface); color: var(--text);
+  width: 38px; height: 38px; border-radius: 10px; cursor: pointer; font-size: 1.05rem;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.tema-btn:hover, .menu-btn:hover { border-color: var(--accent); color: var(--accent); }
+.menu-btn { display: none; }
+
+/* ---------- Barra d'ajustos de lectura ---------- */
+.a11y-grup {
+  display: inline-flex; align-items: center; gap: .2rem;
+  border: 1px solid var(--border-fort); border-radius: 10px;
+  background: var(--surface); padding: 2px;
+}
+.a11y-btn {
+  border: 0; background: transparent; color: var(--text); cursor: pointer;
+  min-width: 34px; height: 32px; border-radius: 8px; padding: 0 .45rem;
+  font-size: .9rem; font-weight: 700; line-height: 1;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.a11y-btn:hover { background: var(--surface-2); color: var(--accent); }
+.a11y-btn.font-toggle { font-weight: 800; letter-spacing: -.02em; }
+.a11y-btn.font-toggle[aria-pressed="true"] {
+  background: var(--accent-soft); color: var(--accent);
+}
+
+/* ---------- Layout ---------- */
+.layout {
+  display: grid;
+  grid-template-columns: 256px minmax(0, 1fr) 240px;
+  gap: 2.4rem;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 2rem 1.8rem 4rem;
+}
+body.sense-toc .layout { grid-template-columns: 256px minmax(0, 1fr); }
+body.sense-sidebar .layout {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 1080px;
+}
+body.sense-sidebar .sidebar { display: none; }
+
+/* ---------- Sidebar ---------- */
+.sidebar { position: relative; }
+.sidebar-nav {
+  position: sticky; top: 84px;
+  border: 1px solid var(--border); border-radius: var(--radi);
+  background: var(--surface); padding: 1rem .9rem; box-shadow: var(--ombra);
+}
+.sidebar-titol {
+  margin: 0 0 .6rem; font-size: .78rem; text-transform: uppercase;
+  letter-spacing: .07em; color: var(--accent); font-weight: 800;
+}
+.sidebar-nav ul { list-style: none; margin: 0; padding: 0; }
+.sidebar-nav li { margin: 1px 0; }
+.sidebar-nav a {
+  display: flex; align-items: center; gap: .4rem; justify-content: space-between;
+  padding: .42rem .6rem; border-radius: var(--radi-s);
+  color: var(--text); font-size: .9rem; font-weight: 500;
+}
+.sidebar-nav a:hover { background: var(--surface-2); text-decoration: none; }
+.sidebar-nav a.actiu {
+  background: var(--accent-soft); color: var(--accent); font-weight: 700;
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+.tri-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--tri); flex: none; }
+.sb-top { margin-bottom: .4rem; }
+
+/* grups plegables del menú lateral */
+.sb-grup { margin: .15rem 0; border-top: 1px solid var(--border); }
+.sb-grup > summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; gap: .4rem;
+  padding: .5rem .6rem; font-size: .86rem; font-weight: 700; color: var(--text);
+  border-radius: var(--radi-s);
+}
+.sb-grup > summary::-webkit-details-marker { display: none; }
+.sb-grup > summary::after {
+  content: "▸"; margin-left: auto; color: var(--muted); font-size: .8rem; transition: transform .15s;
+}
+.sb-grup[open] > summary::after { transform: rotate(90deg); }
+.sb-grup > summary:hover { background: var(--surface-2); }
+.sb-grup > summary span:first-child { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sb-grup ul { margin: 0 0 .3rem; padding: 0; }
+.sb-grup ul a { padding-left: 1rem; font-size: .86rem; }
+
+/* sidebar compacte: SA no activa = un sol enllaç a la portada */
+.sb-grup-link {
+  display: flex; align-items: center; gap: .4rem; margin: .15rem 0;
+  padding: .5rem .6rem; font-size: .86rem; font-weight: 700; color: var(--text);
+  border-top: 1px solid var(--border); border-radius: var(--radi-s);
+}
+.sb-grup-link:hover { background: var(--surface-2); text-decoration: none; color: var(--accent); }
+.sb-grup-link span:first-child { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sb-grup-link .tri-dot { margin-left: auto; }
+
+/* ---------- Contingut / prose ---------- */
+main { min-width: 0; }
+.breadcrumb { font-size: .85rem; color: var(--muted); margin-bottom: 1rem; }
+.breadcrumb a { color: var(--muted); }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb .sep { opacity: .5; }
+.breadcrumb [aria-current] { color: var(--text); font-weight: 600; }
+
+.badge-tri {
+  display: inline-flex; align-items: center; gap: .4rem;
+  background: color-mix(in srgb, var(--tri) 12%, transparent);
+  color: var(--tri); border: 1px solid color-mix(in srgb, var(--tri) 35%, transparent);
+  font-weight: 700; font-size: .8rem; padding: .25rem .7rem; border-radius: 999px;
+  margin-bottom: 1.2rem;
+}
+.badge-tri::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--tri); }
+.badge-tri.mini { margin: 0; font-size: .72rem; padding: .15rem .5rem; }
+
+.prose { max-width: 74ch; }
+body.sense-toc .prose, body.sense-sidebar .prose { max-width: 78ch; }
+.prose h1 {
+  font-size: 2.1rem; line-height: 1.15; letter-spacing: -.02em;
+  margin: .2rem 0 1.2rem; font-weight: 800;
+}
+.prose h2 {
+  font-size: 1.5rem; margin: 2.4rem 0 .9rem; padding-top: .4rem; font-weight: 750;
+  letter-spacing: -.01em; border-top: 1px solid var(--border);
+}
+.prose h2:first-of-type { border-top: 0; }
+.prose h3 { font-size: 1.2rem; margin: 1.8rem 0 .6rem; font-weight: 700; }
+.prose h4 { font-size: 1.03rem; margin: 1.4rem 0 .5rem; font-weight: 700; color: var(--muted); }
+.prose p { margin: .9rem 0; }
+.prose ul, .prose ol { padding-left: 1.4rem; margin: .8rem 0; }
+.prose li { margin: .3rem 0; }
+.prose img { max-width: 100%; height: auto; border-radius: var(--radi-s); border: 1px solid var(--border); }
+.prose hr { border: 0; border-top: 1px solid var(--border); margin: 2.2rem 0; }
+.prose strong { font-weight: 700; }
+
+/* àncores de capçalera (toc) */
+.prose .headerlink {
+  margin-left: .4rem; color: var(--border-fort); font-weight: 400;
+  opacity: 0; text-decoration: none; transition: opacity .15s;
+}
+.prose h1:hover .headerlink, .prose h2:hover .headerlink, .prose h3:hover .headerlink { opacity: 1; }
+
+/* taules */
+/* embolcall amb scroll horitzontal propi: les taules amples (rúbriques)
+   no trenquen la maqueta en mòbil i la <table> conserva la semàntica */
+.taula-scroll { overflow-x: auto; margin: 1.2rem 0; }
+.taula-scroll > table { margin: 0; }
+.prose table {
+  width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: .92rem;
+  border: 1px solid var(--border); border-radius: var(--radi); overflow: hidden;
+}
+.prose th, .prose td { padding: .6rem .8rem; text-align: left; border-bottom: 1px solid var(--border); }
+.prose thead th { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.prose tbody tr:nth-child(even) { background: var(--surface); }
+.prose tbody tr:hover { background: var(--surface-2); }
+
+/* codi en línia i blocs */
+.prose code {
+  font-family: var(--ff-mono); font-size: .88em;
+  background: var(--surface-2); padding: .12em .4em; border-radius: 6px;
+  border: 1px solid var(--border);
+}
+.prose pre {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radi); padding: 1rem 1.1rem; overflow: auto; margin: 1.2rem 0;
+  border-left: 4px solid var(--accent);
+}
+.prose pre code { background: none; border: 0; padding: 0; font-size: .86rem; line-height: 1.55; }
+
+/* cites / admonicions */
+.prose blockquote {
+  margin: 1.2rem 0; padding: .8rem 1.1rem; border-left: 4px solid var(--accent);
+  background: var(--accent-soft); border-radius: 0 var(--radi-s) var(--radi-s) 0; color: var(--text);
+}
+.prose blockquote p { margin: .4rem 0; }
+.prose .admonition {
+  margin: 1.2rem 0; padding: .9rem 1.1rem; border: 1px solid var(--border);
+  border-left: 4px solid var(--accent); border-radius: var(--radi-s); background: var(--surface);
+}
+.prose .admonition-title { font-weight: 700; margin: 0 0 .3rem; }
+
+/* ---------- TOC ---------- */
+.toc { position: relative; }
+.toc-titol {
+  font-size: .76rem; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--muted); font-weight: 800; margin: 0 0 .5rem;
+}
+.toc ul { list-style: none; margin: 0; padding: 0; position: sticky; top: 84px; }
+.toc li { margin: .15rem 0; }
+.toc a {
+  display: block; color: var(--muted); font-size: .85rem; padding: .2rem .4rem;
+  border-left: 2px solid var(--border); border-radius: 0 6px 6px 0;
+}
+.toc a:hover { color: var(--accent); border-left-color: var(--accent); text-decoration: none; }
+.toc .toc-l2 a { padding-left: 1rem; }
+
+/* ---------- Home ---------- */
+.hero { padding: 2rem 0 1rem; }
+.hero-kicker {
+  color: var(--accent); font-family: var(--ff-mono); font-weight: 700;
+  text-transform: uppercase; letter-spacing: .08em; margin: 0 0 .7rem; font-size: .8rem;
+}
+.hero-titol {
+  font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.05; letter-spacing: -.03em;
+  margin: 0 0 1rem; font-weight: 850;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2) 78%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero-lead { font-size: 1.18rem; color: var(--muted); max-width: 60ch; margin: 0 0 1.6rem; }
+.hero-cta { display: flex; gap: .8rem; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; padding: .7rem 1.3rem; border-radius: 999px;
+  font-weight: 700; font-size: .95rem; cursor: pointer; transition: transform .12s, box-shadow .12s;
+}
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+.btn-primari { background: var(--accent); color: #fff; box-shadow: var(--ombra); }
+.btn-secundari { background: var(--surface); color: var(--text); border: 1px solid var(--border-fort); }
+
+.seccio-sep { font-size: 1.4rem; margin: 2.6rem 0 1rem; letter-spacing: -.01em; }
+.seccio-intro { color: var(--muted); margin: -.4rem 0 1.2rem; }
+
+.sec-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem;
+}
+.sec-card {
+  position: relative; display: flex; flex-direction: column; gap: .35rem;
+  padding: 1.3rem 1.2rem 1.2rem; border: 1px solid var(--border); border-radius: var(--radi);
+  background: var(--surface); color: var(--text); overflow: hidden;
+  transition: transform .14s, box-shadow .14s, border-color .14s;
+}
+.sec-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 5px; background: var(--accent); }
+.sec-card:hover { transform: translateY(-3px); box-shadow: var(--ombra-forta); border-color: var(--accent); text-decoration: none; }
+.sec-ic { font-size: 1.7rem; }
+.sec-tit { font-weight: 750; font-size: 1.12rem; }
+.sec-desc { color: var(--muted); font-size: .9rem; line-height: 1.5; }
+
+/* targetes de SA per trimestre */
+.tri-wrap { display: grid; gap: 1.8rem; }
+.tri-block { border: 1px solid var(--border); border-radius: var(--radi); padding: 1.2rem 1.3rem; background: var(--surface); }
+.tri-tit { display: flex; align-items: center; gap: .6rem; margin: 0 0 1rem; font-size: 1.15rem; }
+.tri-pastilla { width: 14px; height: 14px; border-radius: 4px; background: var(--tri); }
+.sa-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .9rem; }
+.sa-card {
+  display: flex; gap: .8rem; align-items: flex-start; padding: .95rem 1rem;
+  border: 1px solid var(--border); border-left: 5px solid var(--tri); border-radius: var(--radi-s);
+  background: var(--bg); color: var(--text); transition: transform .12s, box-shadow .12s, border-color .12s;
+}
+.sa-card:hover { transform: translateY(-2px); box-shadow: var(--ombra); border-color: var(--tri); text-decoration: none; }
+.sa-ic { font-size: 1.5rem; line-height: 1.1; flex: none; }
+.sa-body { display: flex; flex-direction: column; gap: .12rem; min-width: 0; }
+.sa-num { font-family: var(--ff-mono); font-weight: 700; color: var(--tri); font-size: .8rem; letter-spacing: .04em; }
+.sa-nom { font-weight: 650; line-height: 1.3; }
+.sa-prod { font-size: .82rem; color: var(--muted); line-height: 1.4; }
+.sa-meta { font-size: .78rem; color: var(--muted); margin-top: .1rem; }
+
+/* targetes índex de secció */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .9rem; }
+.card {
+  display: flex; align-items: flex-start; gap: .7rem; padding: 1rem 1.1rem;
+  border: 1px solid var(--border); border-radius: var(--radi); background: var(--surface);
+  color: var(--text); transition: transform .12s, box-shadow .12s, border-color .12s;
+}
+.card:hover { transform: translateY(-2px); box-shadow: var(--ombra); border-color: var(--accent); text-decoration: none; }
+.card-ic { font-size: 1.2rem; }
+.card-tit { font-weight: 650; line-height: 1.3; }
+.card .badge-tri.mini { margin-left: auto; }
+
+/* ---------- Galeria d'imatges ---------- */
+.galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+.galeria-item { margin: 0; border: 1px solid var(--border); border-radius: var(--radi); overflow: hidden; background: var(--surface); }
+.galeria-item img { width: 100%; height: 170px; object-fit: cover; display: block; border: 0; border-radius: 0; }
+.galeria-item figcaption { padding: .6rem .8rem; font-size: .85rem; color: var(--muted); text-transform: capitalize; }
+
+/* ---------- Documents i visor ---------- */
+.doc-ext {
+  display: inline-block; font-size: .68rem; font-weight: 700; text-transform: uppercase;
+  background: var(--accent-soft); color: var(--accent); padding: .05rem .4rem;
+  border-radius: 5px; margin-left: .35rem; vertical-align: middle; letter-spacing: .03em;
+}
+.card.doc-folder { background: var(--bg); border-style: dashed; }
+.card.doc-folder small { color: var(--muted); font-weight: 500; display: block; margin-top: .15rem; }
+
+.visor-h1 { font-size: 1.7rem; margin: .2rem 0 1rem; letter-spacing: -.02em; }
+.visor-cont { display: flex; flex-direction: column; align-items: center; gap: 1rem; min-height: 50vh; }
+.visor-pagina { max-width: 100%; height: auto; box-shadow: var(--ombra); border: 1px solid var(--border); border-radius: 6px; background: #fff; }
+.visor-iframe { width: 100%; height: 80vh; border: 1px solid var(--border); border-radius: var(--radi); background: var(--surface); }
+.visor-msg { color: var(--muted); padding: 3rem 1rem; text-align: center; }
+.visor-msg a { font-weight: 600; }
+
+/* ---------- Pàgines de codi ---------- */
+.codi-intro { color: var(--muted); }
+.codi-llista { columns: 1; }
+.codi-llista .codi-desc { color: var(--muted); font-size: .88rem; }
+.codi-quan {
+  display: inline-block; flex: none; white-space: nowrap;
+  font-size: .72rem; font-weight: 700; padding: .1rem .55rem; border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.codi-bloc { margin: 1rem 0; border: 1px solid var(--border); border-radius: var(--radi); overflow: hidden; box-shadow: var(--ombra); }
+.codi-cap {
+  display: flex; align-items: center; justify-content: space-between; gap: .8rem;
+  padding: .55rem .9rem; background: var(--surface-2);
+}
+header.codi-cap, details[open] > .codi-cap { border-bottom: 1px solid var(--border); }
+summary.codi-cap { cursor: pointer; list-style: none; }
+summary.codi-cap::-webkit-details-marker { display: none; }
+summary.codi-cap::before { content: "▸"; color: var(--muted); flex: none; }
+details[open] > summary.codi-cap::before { content: "▾"; }
+summary.codi-cap .codi-desc {
+  flex: 1; min-width: 0; color: var(--muted); font-size: .82rem;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.codi-nom { font-size: .85rem; background: none; border: 0; color: var(--accent); font-weight: 700; }
+.copia-btn {
+  border: 1px solid var(--border-fort); background: var(--bg); color: var(--text);
+  font-size: .78rem; font-weight: 600; padding: .25rem .7rem; border-radius: 7px; cursor: pointer;
+}
+.copia-btn:hover { border-color: var(--accent); color: var(--accent); }
+.copia-btn.fet { color: #059669; border-color: #059669; }
+.codi-cos { overflow: auto; }
+.codi-cos .highlight { margin: 0; }
+.codi-cos pre, .codi-cos .highlight pre { margin: 0; padding: 1rem 1.1rem; border: 0; border-radius: 0; background: var(--surface); }
+
+/* ---------- Peu ---------- */
+.peu {
+  border-top: 1px solid var(--border); padding: 2rem 1.8rem; text-align: center;
+  color: var(--muted); font-size: .88rem; background: var(--surface);
+}
+.peu p { margin: .3rem 0; }
+.peu a { color: var(--accent); }
+
+/* ---------- Responsiu ---------- */
+@media (max-width: 1100px) {
+  .layout, body.sense-toc .layout { grid-template-columns: 240px minmax(0, 1fr); }
+  .toc { display: none; }
+}
+@media (max-width: 860px) {
+  .topnav { display: none; }
+  .menu-btn { display: inline-flex; }
+  .layout, body.sense-toc .layout, body.sense-sidebar .layout { grid-template-columns: minmax(0, 1fr); padding: 1.4rem 1.1rem 3rem; }
+  .sidebar {
+    position: fixed; inset: 62px 0 0 0; z-index: 40; background: var(--bg);
+    padding: 1rem; overflow: auto; transform: translateX(-100%); transition: transform .25s;
+    border-right: 1px solid var(--border);
+  }
+  body.menu-obert .sidebar { transform: translateX(0); }
+  body.sense-sidebar .sidebar { display: none; }
+  .sidebar-nav { position: static; }
+  .codi-llista { columns: 1; }
+  /* mínim 16px a l'input: evita el zoom automàtic de Safari iOS (WCAG 1.4.4) */
+  #cerca { font-size: 16px; }
+}
+@media (max-width: 560px) {
+  .topbar { gap: .6rem; padding: 0 .8rem; }
+  .a11y-btn { min-width: 30px; padding: 0 .3rem; }
+}
+@media (max-width: 480px) {
+  #cerca { width: 118px; }
+  .brand-sub { display: none; }
+}
+@media (max-width: 430px) {
+  .a11y-grup .font-toggle { display: none; }  /* prioritza mida de text i tema */
+}
+
+/* ---------- Botó "Baixa PDF" ---------- */
+.pagina-eines { display: flex; justify-content: flex-end; margin: -.2rem 0 .8rem; }
+.baixa-pdf {
+  display: inline-flex; align-items: center; gap: .4rem;
+  border: 1px solid var(--border-fort); background: var(--surface); color: var(--text);
+  font-size: .85rem; font-weight: 650; padding: .4rem .9rem; border-radius: 999px;
+  transition: border-color .12s, color .12s;
+}
+.baixa-pdf:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.print-cap { display: none; }
+
+/* ---------- Navegació pautada ---------- */
+/* Caixa «Com s'usa aquesta secció» (índex de secció) */
+.pauta-box {
+  background: var(--accent-soft); border: 1px solid var(--border);
+  border-left: 4px solid var(--accent); border-radius: var(--radi-s);
+  padding: .9rem 1.2rem; margin: 0 0 1.4rem;
+}
+.pauta-box .pauta-tit {
+  margin: 0 0 .35rem; font-weight: 700; font-size: .95rem;
+  letter-spacing: .02em; color: var(--accent);
+}
+.pauta-box ol { margin: 0; padding-left: 1.25rem; }
+.pauta-box li { margin: .25rem 0; }
+
+/* Rutes guiades de la portada («Per on començo?») */
+.ruta-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem; margin: 0 0 1.6rem;
+}
+.ruta-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radi); padding: 1rem 1.2rem; box-shadow: var(--ombra);
+}
+.ruta-card .ruta-tit { margin: 0 0 .5rem; font-weight: 700; }
+.ruta-card ol { margin: 0; padding-left: 1.25rem; }
+.ruta-card li { margin: .3rem 0; }
+.ruta-card .ruta-mes { margin: .7rem 0 0; }
+.ruta-card .ruta-mes a { font-weight: 700; color: var(--accent); }
+
+/* Hubs per audiència (Docent / Alumnat): passos numerats amb accent */
+.hub-hero { padding: 1.4rem 0 .4rem; }
+.hub-passos {
+  list-style: none; counter-reset: pas; margin: 0 0 1.4rem; padding: 0;
+}
+.hub-passos > li {
+  position: relative; padding: .55rem 0 .55rem 2.6rem;
+  border-bottom: 1px solid var(--border); counter-increment: pas;
+}
+.hub-passos > li:last-child { border-bottom: 0; }
+.hub-passos > li::before {
+  content: counter(pas); position: absolute; left: 0; top: .5rem;
+  width: 1.8rem; height: 1.8rem; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent);
+  font-weight: 800; font-size: .9rem;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.hub-passos a { font-weight: 650; }
+
+/* Fil transversal d'una SA (pastilles d'enllaç creuat entre seccions) */
+.sa-fil {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .45rem;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radi-s); padding: .6rem .9rem; margin: 1.8rem 0 0;
+}
+.sa-fil-tit { color: var(--muted); font-size: .88rem; margin-right: .25rem;
+  display: inline-flex; align-items: center; gap: .4rem; }
+.sa-fil-pill {
+  display: inline-block; padding: .22rem .7rem; border-radius: 999px;
+  border: 1px solid var(--border-fort); font-size: .85rem;
+  background: var(--bg); color: var(--text); white-space: nowrap;
+}
+a.sa-fil-pill:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.sa-fil-pill.actiu { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* Paginador d'itinerari (‹ anterior · següent ›) */
+.pager {
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: stretch;
+  gap: .8rem; margin: 1.2rem 0 0; padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.pager-a {
+  display: flex; flex-direction: column; gap: .1rem; padding: .55rem .8rem;
+  border: 1px solid var(--border); border-radius: var(--radi-s);
+  background: var(--surface); min-width: 0;
+}
+.pager-a.buit { visibility: hidden; }
+.pager-a:hover { border-color: var(--accent); text-decoration: none; }
+.pager-a.next { text-align: right; }
+.pager-dir { font-size: .75rem; color: var(--muted); letter-spacing: .03em; }
+.pager-tit { font-weight: 600; font-size: .92rem; color: var(--text);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pager-a:hover .pager-tit { color: var(--accent); }
+.pager-seq { align-self: center; color: var(--muted); font-size: .8rem; white-space: nowrap; }
+@media (max-width: 640px) {
+  .pager { grid-template-columns: 1fr; }
+  .pager-seq { order: -1; justify-self: center; }
+  .pager-a.next { text-align: left; }
+  .pager-a.buit { display: none; }
+}
+
+/* Barra de progrés del curs (stepper SA0 → SA9) */
+.stepper {
+  display: flex; gap: .3rem; margin: 0 0 1.1rem; padding-bottom: .1rem;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+}
+.stepper .step {
+  display: flex; flex-direction: column; align-items: center; gap: .1rem;
+  flex: 1 1 0; min-width: 44px; padding: .35rem .2rem;
+  border: 1px solid var(--border); border-radius: var(--radi-s);
+  border-bottom: 3px solid var(--tri, var(--border));
+  background: var(--surface); color: var(--muted); font-size: .72rem;
+}
+.stepper .step:hover { border-color: var(--tri, var(--accent)); text-decoration: none; color: var(--text); }
+.stepper .step-ic { font-size: 1rem; line-height: 1; }
+.stepper .step-n { font-weight: 700; letter-spacing: .02em; }
+.stepper .step.actiu {
+  background: color-mix(in srgb, var(--tri) 14%, transparent);
+  color: var(--text); border-color: var(--tri);
+}
+@media (max-width: 640px) {
+  .stepper .step { min-width: 40px; }
+  .stepper .step-ic { display: none; }
+}
+
+/* «La teva ruta» — passos de la SA (portada, vista alumnat i docent) */
+.ruta { margin: 1.2rem 0; }
+.ruta > ol {
+  list-style: none; margin: 1rem 0 0; padding: 0;
+  counter-reset: pas;
+}
+.ruta > ol > li {
+  counter-increment: pas; position: relative;
+  margin: 0 0 .6rem; padding: .7rem .9rem .7rem 3.4rem;
+  border: 1px solid var(--border); border-left: 4px solid var(--tri, var(--accent));
+  border-radius: var(--radi-s); background: var(--surface);
+}
+.ruta > ol > li::before {
+  content: counter(pas); position: absolute; left: .9rem; top: 50%;
+  transform: translateY(-50%);
+  width: 1.9rem; height: 1.9rem; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: color-mix(in srgb, var(--tri, var(--accent)) 14%, transparent);
+  color: var(--tri, var(--accent));
+  font-weight: 700; font-size: .95rem;
+}
+/* capsa «Si vols més» (h3 + llista que el segueix) */
+.ruta h3 {
+  margin: 1.4rem 0 .4rem; font-size: 1rem; color: var(--muted);
+}
+.ruta h3 + ul {
+  margin: 0; padding: .8rem 1rem; list-style: none;
+  border: 1px dashed var(--border-fort); border-radius: var(--radi-s);
+  background: color-mix(in srgb, var(--surface) 60%, transparent);
+}
+.ruta h3 + ul li { margin: .25rem 0; }
+
+/* Vista alumnat: fora la graella de material, el «comença aquí» de la
+   portada i la barra «Tot sobre la SAx» (a Classes). El docent ho veu tot. */
+html[data-vista="alumnat"] [data-section="classes"] .material-sa,
+html[data-vista="alumnat"] [data-section="classes"] .comenca-aqui.portada-alumnat,
+html[data-vista="alumnat"] [data-section="classes"] .sa-fil,
+html[data-vista="alumnat"] .sidebar .amagat-alumnat { display: none; }
+
+/* ---------- Impressió / PDF ---------- */
+@page { size: A4; margin: 15mm 14mm 16mm; }
+@media print {
+  .topbar, .sidebar, .toc, .peu, .breadcrumb, .skip,
+  .pagina-eines, .menu-btn, .badge-tri, .copia-btn,
+  .sa-fil, .pager, .pauta-box, .stepper { display: none !important; }
+  html, body { background: #fff !important; color: #000; font-size: 11pt; }
+  .layout, body.sense-toc .layout, body.sense-sidebar .layout {
+    display: block; max-width: 100%; padding: 0; margin: 0; gap: 0;
+  }
+  main#contingut { padding: 0; }
+  .prose { max-width: 100%; }
+  .print-cap {
+    display: block; border-bottom: 2px solid #000; margin: 0 0 1rem; padding: 0 0 .45rem;
+  }
+  .print-cap .pc-site { font-size: .72rem; color: #333; letter-spacing: .05em; text-transform: uppercase; }
+  .print-cap .pc-tit { font-size: 1.35rem; font-weight: 800; margin: .15rem 0 0; line-height: 1.2; }
+  a { color: #000; }
+  .taula-scroll { overflow: visible; }
+  .codi-bloc, .card, .sa-card, .prose table, .prose blockquote { break-inside: avoid; }
+  .prose pre, .codi-cos pre { white-space: pre-wrap; word-wrap: break-word; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* ============================================================
+   Vistes docent / alumnat (commutador data-vista)
+   ============================================================ */
+/* Per defecte (vista docent) es veu tot; la vista alumnat amaga .nomes-docent */
+html[data-vista="alumnat"] .nomes-docent { display: none !important; }
+/* Invers: elements només per a la vista alumnat (p. ex. enllaç de grup del
+   sidebar quan l'índex del grup és material docent) */
+html[data-vista="docent"] .nomes-alumnat { display: none !important; }
+
+/* Portada: bloc alumnat visible per defecte, ocult en vista docent */
+html[data-vista="docent"] .portada-alumnat { display: none; }
+
+/* Botó del commutador al capçal */
+.vista-btn {
+  cursor: pointer;
+  border: 1px solid var(--border-fort);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: var(--radi-s);
+  padding: .3rem .6rem;
+  font: inherit;
+  font-size: .9rem;
+  white-space: nowrap;
+}
+.vista-btn:hover { background: var(--surface-2); }
+.vista-btn .vista-ic-docent { display: none; }
+html[data-vista="docent"] .vista-btn .vista-ic-alumnat { display: none; }
+html[data-vista="docent"] .vista-btn .vista-ic-docent { display: inline; }
+
+/* Bloc «Comença aquí» per SA */
+.comenca-aqui {
+  background: var(--accent-soft);
+  border: 1px solid var(--border-fort);
+  border-radius: var(--radi);
+  padding: .8rem 1rem;
+  margin: 1rem 0 1.5rem;
+}
+.comenca-aqui .ca-tit { font-weight: 700; margin: 0 0 .6rem; }
+
+/* Paginador d'itinerari filtrat per vista */
+.pager[data-pager-vista="alumnat"] { display: none; }
+html[data-vista="alumnat"] .pager[data-pager-vista="docent"] { display: none; }
+html[data-vista="alumnat"] .pager[data-pager-vista="alumnat"] { display: grid; }
+
+/* Avís quan s'obre una pàgina docent en vista alumnat */
+.avis-docent { display: none; }
+html[data-vista="alumnat"] body[data-public="docent"] .avis-docent {
+  display: block;
+  background: var(--accent-soft);
+  border: 1px solid var(--border-fort);
+  border-radius: var(--radi-s);
+  padding: .5rem .8rem;
+  margin-bottom: 1rem;
+  font-size: .95em;
+}
+
+/* ============================================================
+   Components de pòster i targetes (substitueixen els diagrames
+   ASCII dels recursos transversals 00_*). Theme-aware via
+   variables; els tons de semàfor van com a tint amb el text
+   en --text per garantir contrast en clar i fosc.
+   ============================================================ */
+:root {
+  --verd: #1f8a3b;   --verd-bg: rgba(31, 138, 59, .10);   --verd-br: rgba(31, 138, 59, .45);
+  --groc: #b06a00;   --groc-bg: rgba(214, 158, 0, .14);   --groc-br: rgba(214, 158, 0, .5);
+  --vermell: #c0392b; --vermell-bg: rgba(192, 57, 43, .10); --vermell-br: rgba(192, 57, 43, .45);
+}
+html[data-tema="fosc"] {
+  --verd: #5fd07f;   --verd-bg: rgba(95, 208, 127, .12);   --verd-br: rgba(95, 208, 127, .4);
+  --groc: #e6b34d;   --groc-bg: rgba(230, 179, 77, .14);   --groc-br: rgba(230, 179, 77, .4);
+  --vermell: #f0776b; --vermell-bg: rgba(240, 119, 107, .13); --vermell-br: rgba(240, 119, 107, .4);
+}
+
+/* Flux del mètode de projecte (passos amb fletxa) */
+.flux { display: flex; flex-wrap: wrap; align-items: stretch; gap: .5rem; margin: 1.1rem 0; }
+.flux .pas {
+  flex: 1 1 130px; background: var(--surface); border: 1px solid var(--border-fort);
+  border-radius: var(--radi-s); padding: .6rem .7rem; text-align: center;
+}
+.flux .pas b { display: block; color: var(--accent); font-size: .98rem; letter-spacing: .02em; }
+.flux .pas small { color: var(--muted); font-size: .8rem; line-height: 1.25; display: block; margin-top: .2rem; }
+.flux .fl { align-self: center; color: var(--accent-2); font-weight: 800; font-size: 1.2rem; flex: 0 0 auto; }
+
+/* Rutina DEPURA: sis blocs amb lletra inicial destacada */
+.depura { display: grid; gap: .55rem; margin: 1.1rem 0; }
+.depura .pas {
+  display: grid; grid-template-columns: 3.1rem 1fr; align-items: center; gap: .8rem;
+  background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+  border-radius: var(--radi-s); padding: .5rem .8rem;
+}
+.depura .ll {
+  font-size: 1.7rem; font-weight: 800; color: var(--accent); text-align: center; line-height: 1;
+}
+.depura .tx b { text-transform: uppercase; letter-spacing: .04em; }
+.depura .tx small { display: block; color: var(--muted); }
+
+/* Rols de l'equip */
+.rols { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: .7rem; margin: 1.1rem 0; }
+.rols .rol {
+  background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--accent-2);
+  border-radius: var(--radi-s); padding: .7rem .85rem;
+}
+.rols .rol .ic { font-size: 1.5rem; }
+.rols .rol b { display: block; margin: .2rem 0 .15rem; }
+.rols .rol small { color: var(--muted); line-height: 1.3; }
+
+/* Semàfor d'usos (SÍ / AMB CURA / NO) — reutilitzable */
+.semafor { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: .7rem; margin: 1.1rem 0; }
+.semafor .col { border: 1px solid var(--border); border-radius: var(--radi-s); overflow: hidden; }
+.semafor .cap { padding: .5rem .8rem; font-weight: 700; }
+.semafor .col ul { margin: 0; padding: .6rem .9rem .7rem 1.6rem; }
+.semafor .col li { margin: .35rem 0; }
+.semafor .si  .cap { background: var(--verd-bg);    color: var(--verd);    border-bottom: 2px solid var(--verd-br); }
+.semafor .cur .cap { background: var(--groc-bg);    color: var(--groc);    border-bottom: 2px solid var(--groc-br); }
+.semafor .no  .cap { background: var(--vermell-bg); color: var(--vermell); border-bottom: 2px solid var(--vermell-br); }
+.semafor .si  { border-color: var(--verd-br); }
+.semafor .cur { border-color: var(--groc-br); }
+.semafor .no  { border-color: var(--vermell-br); }
+
+/* Banner destacat (regla d'or, prova de foc) */
+.banner {
+  margin: 1.1rem 0; padding: 1rem 1.2rem; text-align: center;
+  background: var(--accent-soft); border: 1px solid var(--border-fort);
+  border-radius: var(--radi); font-size: 1.15rem; font-weight: 650; line-height: 1.35; color: var(--text);
+}
+.banner .em { color: var(--accent); font-weight: 800; }
+
+/* Caixa de declaració (formulari a emplenar) */
+.declara {
+  margin: 1.1rem 0; padding: .9rem 1.1rem; background: var(--surface);
+  border: 1px dashed var(--border-fort); border-radius: var(--radi-s);
+}
+.declara p { margin: .5rem 0; }
+.declara .buit { display: inline-block; min-width: 8rem; border-bottom: 1px solid var(--muted); }
+
+/* Avisos (targetes curtes amb icona) */
+.avisos { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .7rem; margin: 1.1rem 0; }
+.avisos .avis {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radi-s);
+  padding: .7rem .85rem;
+}
+.avisos .avis b { display: block; }
+.avisos .avis .ic { font-size: 1.4rem; }
+
+/* Coavaluació (2 estrelles i un desig) i exit ticket */
+.trio { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .7rem; margin: 1.1rem 0; }
+.trio .b {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radi-s);
+  padding: .8rem .9rem; text-align: center; line-height: 1.35;
+}
+.trio .b .ic { font-size: 1.3rem; display: block; margin-bottom: .2rem; }
+
+/* ---------- Targetes de rescat (00_Targetes_rescat) ---------- */
+.targeta {
+  margin: .9rem 0; border: 1px solid var(--border); border-radius: var(--radi);
+  background: var(--surface); overflow: hidden; break-inside: avoid;
+}
+.targeta > .cap {
+  padding: .55rem .9rem; font-weight: 700; background: var(--accent-soft);
+  border-bottom: 1px solid var(--border);
+}
+.targeta > ul { list-style: none; margin: 0; padding: .3rem 0; }
+.targeta > ul > li {
+  margin: 0; padding: .5rem .9rem .5rem 2.4rem; position: relative; line-height: 1.4;
+  border-top: 1px solid var(--border);
+}
+.targeta > ul > li:first-child { border-top: 0; }
+.targeta > ul > li::before {
+  position: absolute; left: .85rem; top: .5rem; font-size: 1rem;
+}
+.targeta li.n-verd    { background: var(--verd-bg); }
+.targeta li.n-groc    { background: var(--groc-bg); }
+.targeta li.n-vermell { background: var(--vermell-bg); }
+.targeta li.n-verd::before    { content: "🟢"; }
+.targeta li.n-groc::before    { content: "🟡"; }
+.targeta li.n-vermell::before { content: "🔴"; }
+.targeta li code { white-space: pre-wrap; }
+
+/* ---------- Vocabulari amb miniatura (SA0) ---------- */
+table.vocab td:first-child { white-space: nowrap; }
+.vocab-term { display: inline-flex; align-items: center; gap: .6rem; }
+.vocab-term img {
+  width: 56px; height: 56px; object-fit: cover; border-radius: 8px; flex: 0 0 auto;
+  border: 1px solid var(--border); background: #fff;
+}
+@media (max-width: 640px) { .vocab-term img { width: 44px; height: 44px; } }
+
+@media print {
+  .flux .pas, .depura .pas, .rols .rol, .semafor .col, .avisos .avis,
+  .trio .b, .targeta, .banner, .declara { break-inside: avoid; }
+}
+
+/* ---------- Porta de la vista docent (fricció, no seguretat) ---------- */
+[data-ocult-docent] { display: none !important; }
+.porta-docent { display: flex; justify-content: center; padding: 3rem 1rem; }
+.porta-docent-caixa {
+  max-width: 26rem; padding: 1.5rem 1.75rem; border-radius: 12px;
+  border: 1px solid var(--vora, #ccc); background: var(--fons-eleva, #fff);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .12);
+}
+.porta-docent-nota { font-size: .9em; opacity: .8; }
+.porta-docent-caixa label { display: block; margin: .75rem 0 .5rem; }
+.porta-docent-input { margin-left: .4rem; padding: .35rem .5rem; }
+.porta-docent-botons { display: flex; gap: .6rem; margin-top: .6rem; }
+.porta-docent-err { color: #b3261e; font-weight: 600; }
+[data-tema="fosc"] .porta-docent-err { color: #ff8a80; }

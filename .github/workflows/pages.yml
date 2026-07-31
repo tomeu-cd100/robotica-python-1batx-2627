@@ -1,0 +1,61 @@
+name: Construir i publicar el web a GitHub Pages
+
+# El web es CONSTRUEIX a CI a partir del material .md (no es puja precommitejat).
+# Es reconstrueix a cada push a main; el filtre per camins s'ha tret expressament
+# perque qualsevol material font (Classes/, Programació didàctica/, Reptes/…) o el
+# generador poden afectar la sortida. El build es determinista (la data surt de
+# l'últim commit), de manera que reconstruir material igual dona el mateix resultat.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clona el repositori
+        uses: actions/checkout@v4
+
+      - name: Prepara Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instal·la les dependències del generador
+        run: pip install -r web/_generador/requirements.txt
+
+      - name: Genera el web (HTML, codi, simulacions, índex de cerca)
+        run: python web/_generador/generar.py
+
+      - name: Genera els PDF de les activitats (Chrome headless)
+        run: python web/_generador/generar_pdf.py
+
+      - name: Configura Pages
+        uses: actions/configure-pages@v5
+
+      - name: Puja la carpeta web/ com a artefacte
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+
+  desplegar:
+    needs: construir
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.desplegament.outputs.page_url }}
+    steps:
+      - name: Desplega a Pages
+        id: desplegament
+        uses: actions/deploy-pages@v4
