@@ -7,9 +7,9 @@ from microbit import *
 while True:
     # while True: es repeteix per sempre, comprovant els botons continuament.
     if button_a.is_pressed():
-        display.show(Image.HAPPY)   # Botó A premut -> cara contenta
+        display.show(Image.HAPPY)   # Boto A premut -> cara contenta
     elif button_b.is_pressed():
-        display.show(Image.SAD)     # Botó B premut -> cara trista
+        display.show(Image.SAD)     # Boto B premut -> cara trista
     else:
-        display.show(Image.ASLEEP)  # Cap botó premut -> cara "en repos"
+        display.show(Image.ASLEEP)  # Cap boto premut -> cara "en repos"
     sleep(100)                      # Petita pausa abans de tornar a mirar
