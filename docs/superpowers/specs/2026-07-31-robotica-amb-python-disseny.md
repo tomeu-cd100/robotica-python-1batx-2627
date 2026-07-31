@@ -11,6 +11,11 @@
   de **15-20 alumnes**, **sense base prèvia de programació** (es comença de zero).
 - **Idea força:** Python sempre sobre maquinari — **robòtica des del dia 1**. Res
   d'interfícies d'usuari ni d'aplicacions locals/núvol: tot el curs és **robot físic**.
+- **Treball individual:** totes les activitats, construccions i projectes són
+  **individuals** (hi ha dotació de material per a tot l'alumnat). La coavaluació i
+  l'ajuda entre iguals es mantenen com a dinàmica d'aula, però cap producte és compartit.
+- **Maquinari de referència: micro:bit** (dotació assegurada, 1 per alumne). Pico i
+  pyFirmata queden com a opcions documentades, fora del nucli del curs.
 - **Relació amb altres cursos:** conviu en paral·lel amb l'optativa «Robòtica»
   (Arduino/C++, repositori `Curs 2627 1 Batx Robotica`). **Franges horàries diferents:
   sense conflicte de material.** Els dos cursos comparteixen aula, kits i infraestructura
@@ -73,13 +78,14 @@ pràctiques trimestrals amb sessió pròpia dins la SA de tancament del trimestr
 | | SA6 † | Control: el robot decideix | 8 | Llaç obert/tancat, histèresi (termòstat), màquines d'estats, data logging · **prova T2** |
 | 3r | SA7 | Robòtica mòbil: el rover | 8 | Muntatge del rover fabricat, cinemàtica diferencial, seguidor de línia, evita-obstacles |
 | | SA8 | Autonomia i telemetria | 6 | Comportaments autònoms combinats, telemetria per ràdio a estació base, dades del recorregut |
-| | SA9 † | Repte final integrador | 10 | Projecte per parelles amb el rover + sensors lliures, documentació tècnica, defensa oral · **prova T3** |
+| | SA9 † | Repte final integrador | 10 | Projecte **individual** amb el rover + sensors lliures, documentació tècnica, defensa oral · **prova T3** |
 | | | **Subtotal** | **68** | + ~2 h de marge |
 
 ### Fil conductor de construccions trimestrals
 
-Cada trimestre tanca amb una **construcció real per parella** (làser xTool S1 + Bambu
-P2S + material dels kits), seguint el model del curs germà:
+Cada trimestre tanca amb una **construcció real individual** (làser xTool S1 + Bambu
+P2S + material dels kits — hi ha dotació per a tot l'alumnat), seguint el model del
+curs germà però amb **tot el treball individual: cap activitat en parelles**:
 
 | Trim. | Construcció | Tanca a | Què consolida | Evolució |
 |---|---|---|---|---|
@@ -93,8 +99,10 @@ P2S + material dels kits), seguint el model del curs germà:
   **consumint per endavant les retallades del pla de contingència** — amb les tres
   construccions el **marge efectiu queda ≈ 0**; si el calendari s'estreny, les peces
   arriben **pretallades pel docent**.
-- **Consumibles del fil conductor:** DM 3 mm + filament PLA + cargols/portapiles,
-  ~130-180 €/curs (mateix ordre que el curs germà; full de compra a `09b`).
+- **Consumibles del fil conductor:** DM 3 mm + filament PLA + cargols/portapiles.
+  Amb construccions **individuals** (15-20 unitats en lloc de ~10 per parelles), la
+  previsió puja a **~250-350 €/curs** (full de compra a `09b`); mitigació: *nesting*
+  agressiu a làser i disseny de xassís minimalista.
 - **Pla de contingència:** no es retallen mai SA1-SA3 ni SA9; primera retallada a les
   sessions de producte de SA2/SA4 (assignades a fabricació); SA8 comprimible de 6 h a
   4 h (assignada a fabricació T3); SA7 de 8 h a 6 h com a **única palanca lliure**.
