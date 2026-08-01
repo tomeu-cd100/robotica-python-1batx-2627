@@ -13,7 +13,8 @@ Comprova (i falla amb exit != 0 si troba res):
   2. Cobertura de cada SA: que hi hagi guia docent, fitxa base, fitxa
      ampliada, checklists, README, esquemes/connexions (SA1-SA8) i el
      repte + solucionari corresponent (SA1-SA8). SA0 és material d'acollida
-     sense sessions pròpies: contracte reduït, només exigeix README.
+     sense sessions pròpies: contracte reduït, exigeix README + els 3
+     fitxers de contingut (vocabulari, primers passos, guia de programació).
      [omès amb --nomes-sintaxi]
   3. Coherència horària: la taula de `08_Sequenciacio_temporal_anual.md`
      ha de sumar les hores del subtotal declarat (quadre nou: SA1=6, SA2=8,
@@ -137,11 +138,21 @@ def comprova_cobertura_sa() -> None:
         return
     fallats = 0
     # SA0 és material d'acollida sense sessions pròpies (es fa dins la S1 de
-    # SA1): contracte reduït, només exigeix README (no guia/fitxes/reptes).
-    sa0_readme = ARREL / "Classes" / "SA0" / "README.md"
-    if not sa0_readme.exists():
-        errors.append(f"[cobertura] SA0: falta {sa0_readme.relative_to(ARREL)}")
-        fallats += 1
+    # SA1): contracte reduït (no guia docent/fitxes/checklists/reptes), però
+    # exigeix el README i els 3 fitxers de contingut (vocabulari, primers
+    # passos, guia de programació -- aquest darrer és el circuit de reforç
+    # 🔴 dels mini-checks, vegeu 00_Mini_checks_individuals.md).
+    sa0_base = ARREL / "Classes" / "SA0"
+    sa0_esperats = [
+        sa0_base / "README.md",
+        sa0_base / "SA0_vocabulari_robotica.md",
+        sa0_base / "SA0_primers_passos_editor.md",
+        sa0_base / "SA0_guia_programacio.md",
+    ]
+    for f in sa0_esperats:
+        if not f.exists():
+            errors.append(f"[cobertura] SA0: falta {f.relative_to(ARREL)}")
+            fallats += 1
     for n in range(1, 10):
         sa = f"SA{n}"
         base = ARREL / "Classes" / sa

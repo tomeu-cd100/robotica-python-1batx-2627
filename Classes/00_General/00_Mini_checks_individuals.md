@@ -52,7 +52,7 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 
 **Què mires:** primera línia `from microbit import *` present · `display.scroll("...")` per al nom · `sleep(500)` entremig · `display.show(Image.HAPPY)` · `sleep(2000)` final.
 **🟢** les 5 línies completes i en l'ordre correcte · **🟡** l'estructura hi és però falta l'`import` o confon `scroll`/`show` · **🔴** no sap escriure cap de les dues instruccions de display.
-**Reforç 🔴:** `SA0_guia_programacio.md` A1-A2 (primer programa, estructura d'un fitxer `.py`).
+**Reforç 🔴:** [`SA0_guia_programacio.md` A1-A2 (primer programa, estructura d'un fitxer `.py`)](../SA0/SA0_guia_programacio.md#a1-a2-primer-programa-i-estructura-dun-fitxer-py).
 
 ## SA2 · Mini-check (inici de la Sessió 2)
 
@@ -61,7 +61,7 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 
 **Què mires:** `while True:` · `pin1.write_digital(1)` / `pin1.write_digital(0)` · `sleep(500)` a cada estat · indentació correcta.
 **🟢** estructura completa i correcta · **🟡** estructura bé, errors de sintaxi o d'indentació · **🔴** no sap on va cada instrucció.
-**Reforç 🔴:** `SA0_guia_programacio.md` A3-A4 (bucles, sortides digitals).
+**Reforç 🔴:** [`SA0_guia_programacio.md` A3-A4 (bucles, sortides digitals)](../SA0/SA0_guia_programacio.md#a3-a4-bucles-i-sortides-digitals).
 
 ## SA3 · Mini-check (inici de la Sessió 2)
 
@@ -70,7 +70,7 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 
 **Què mires:** condició amb `<` ben escrita · les dues branques actuen sobre el LED · resposta (b): 0-255.
 **🟢** tot correcte · **🟡** if bé però rang confós amb 0-1023 · **🔴** no sap escriure la condició.
-**Reforç 🔴:** `SA0_guia_programacio.md` A5 (`if/elif/else`) i A6 (entrades analògiques).
+**Reforç 🔴:** [`SA0_guia_programacio.md` A5 (`if/elif/else`)](../SA0/SA0_guia_programacio.md#a5-condicionals-ifelifelse) i [A6 (entrades analògiques)](../SA0/SA0_guia_programacio.md#a6-entrades-analogiques).
 
 ## SA4 · Mini-check (final de la Sessió 2, combinat amb el tancament)
 
@@ -79,7 +79,7 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 
 **Què mires:** `def avancar(velocitat):` amb el paràmetre ben col·locat · ús del paràmetre dins la funció (no un valor fix) · (b) consum de corrent superior al que dona l'USB → cal alimentació externa (portapiles).
 **🟢** tot · **🟡** funció correcta però (b) confosa · **🔴** no recorda la sintaxi de `def`/paràmetre.
-**Reforç 🔴:** `SA0_guia_programacio.md` A7 (funcions i paràmetres).
+**Reforç 🔴:** [`SA0_guia_programacio.md` A7 (funcions i paràmetres)](../SA0/SA0_guia_programacio.md#a7-funcions-i-parametres).
 
 ## SA5 · Mini-check (final de la Sessió 2, combinat amb el tancament)
 
@@ -88,7 +88,7 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 
 **Què mires:** `import radio` · `radio.config(group=10)` · `radio.on()` obligatori (abans del bucle) · dins el `while True:`, `missatge = radio.receive()` i `if missatge == 'F':` amb `==` (no `=`).
 **🟢** les 6-7 línies completes, `on()` fora del bucle i la comparació ben feta · **🟡** l'estructura hi és però oblida `radio.on()` o el `group` · **🔴** no distingeix `receive()` d'una simple lectura de botó.
-**Reforç 🔴:** repassar el bloc de ràdio de `SA0_guia_programacio.md` Part B.
+**Reforç 🔴:** repassar el [bloc de ràdio de `SA0_guia_programacio.md` Part B](../SA0/SA0_guia_programacio.md#part-b-radio).
 
 ## SA6 · Mini-check (inici de la Sessió 2)
 
@@ -97,7 +97,7 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 
 **Què mires:** (a) la lectura balla al voltant de la consigna → commutació contínua · (b) histèresi: `if temp < 24: activa()` / `if temp > 26: desactiva()` (valors raonables).
 **🟢** explica i escriu els dos llindars · **🟡** intueix el problema però només mou un llindar · **🔴** no veu el problema.
-**Reforç 🔴:** repassar l'exemple de termòstat amb histèresi de la fitxa SA6.
+**Reforç 🔴:** repassar l'exemple de termòstat amb histèresi de la fitxa SA6: [`termostat_histeresi`](../SA6/codi/termostat_histeresi/EXPLICACIO.md).
 
 ## SA7 · Mini-check (inici de la Sessió 2)
 
@@ -108,7 +108,7 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 
 **Què mires:** `while True:` · `if SENSOR.read_analog() < LLINDAR: avancar(400)` / `else: aturar()` · que la lectura es faci **a cada volta** del bucle (llaç tancat: llegeix → decideix → actua), no un sol cop abans d'entrar-hi.
 **🟢** estructura reactiva completa i correcta, lectura dins del bucle · **🟡** lògica bé però llegeix el sensor un sol cop fora del bucle, o inverteix el sentit de la comparació · **🔴** no lliga sensor→decisió→acció.
-**Reforç 🔴:** repassar el cicle «llegir → decidir → actuar» amb `nivell_llum.py`/`termometre.py` (SA3); el seguidor de línia concret (`SEGUIDOR_LINIA`, `LLINDAR_LINIA`) i l'evita-obstacles amb `mesura_distancia()` arriben aquesta mateixa Sessió 2 i la Sessió 3.
+**Reforç 🔴:** repassar el cicle «llegir → decidir → actuar» amb [`nivell_llum.py`](../SA3/codi/nivell_llum/EXPLICACIO.md)/[`termometre.py`](../SA3/codi/termometre/EXPLICACIO.md) (SA3); el seguidor de línia concret (`SEGUIDOR_LINIA`, `LLINDAR_LINIA`) i l'evita-obstacles amb `mesura_distancia()` arriben aquesta mateixa Sessió 2 i la Sessió 3.
 
 ## SA8 · Mini-check (inici de la Sessió 2)
 
@@ -117,7 +117,7 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 
 **Què mires:** `import radio` · `radio.config(group=10)` · `radio.on()` · dins `while True:`, `radio.send('T:' + str(temperature()))` (cal `str(...)` perquè `send` envia text) · `sleep(2000)` marca la cadència.
 **🟢** les 6 línies completes amb el `str(...)` ben col·locat · **🟡** l'estructura hi és però oblida `str(...)` o el `sleep` · **🔴** no sap muntar l'emissor (falta `config`/`on`/`send`).
-**Reforç 🔴:** repassar l'esquelet de telemetria de `00_Projecte_T3_Rover.md`.
+**Reforç 🔴:** repassar l'esquelet de telemetria de [`00_Projecte_T3_Rover.md`](00_Projecte_T3_Rover.md).
 
 ## SA9 · Mini-check (inici de la Sessió 2)
 
@@ -126,7 +126,7 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 
 **Què mires:** capacitat d'**integrar sense bastida** dos blocs ja apresos per separat (llegir sensor + condicional + ràdio) en una sola funció pròpia; que el llindar sigui una constant raonada, no un número a l'atzar.
 **🟢** integra els tres blocs sense ajuda · **🟡** els tres blocs hi són però amb estructura confusa (p. ex. `radio.on()` oblidat) · **🔴** no sap combinar sensor i ràdio en una sola funció.
-**Reforç 🔴:** repassar per separat SA3 (sensors), SA5/SA8 (ràdio) i tornar-ho a intentar abans del repte lliure.
+**Reforç 🔴:** repassar per separat [SA3](../SA3/README.md) (sensors), [SA5](../SA5/README.md)/[SA8](../SA8/README.md) (ràdio) i tornar-ho a intentar abans del repte lliure.
 
 ---
 

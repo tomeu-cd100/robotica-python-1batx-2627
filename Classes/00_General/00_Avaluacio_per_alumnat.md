@@ -62,6 +62,15 @@ En aquesta matèria **equivocar-se és part del contingut**: tot falla la primer
 - Després de cada prova escriuràs el **pla de millora personal** (3 línies): què m'ha fallat, què practicaré, com ho comprovaré. Es reprèn a l'inici de la SA següent.
 - El **5 %** restant de «Proves pràctiques» surt del **millor dels 3 mini-checks** del trimestre (un per SA, sense apunts): en tancar el trimestre, el docent tria el més ben resolt i li posa nota amb l'escala del semàfor (🟢=9-10 · 🟡=6-8 · 🟠=4-5 · 🔴=1-3). **No es fa mitjana** dels tres: només el millor compta, així que fer-los tots amb honestedat només et pot beneficiar.
 
+### 5b · La porta mínima: cal demostrar que saps escriure codi tot sol
+
+Encara que la mitjana de les 4 parts et doni un 5 o més, **el trimestre només es dona per superat si, a més, compleixes UNA d'aquestes dues condicions** (és la manera d'assegurar que ningú aprova sense haver escrit mai codi sol):
+
+- **almenys un dels teus 3 mini-checks del trimestre surt 🟡 o millor** (no cal que sigui el que qualifica: n'hi ha prou que un dels tres surti almenys 🟡), **o**
+- **treus almenys la meitat de l'ítem obligatori de la prova trimestral que et demana escriure una funció nova** (a T2 i T3: almenys 1 dels 2 punts). **A T1** (que encara no té funcions), l'equivalent és treure almenys **la meitat dels punts dels condicionals del nucli** de la prova.
+
+**Si no arribes a cap de les dues:** no perds el trimestre per sempre. El docent et proposa un **mini-check equivalent** (mateix tipus, enunciat diferent) per fer-lo sol i sense apunts, dins les dues primeres setmanes del trimestre següent o en una tutoria. Si aquest surt 🟡 o millor, la porta queda oberta i el trimestre es dona per superat amb efecte retroactiu.
+
 ## 6 · Si una SA no et surt bé
 
 La recuperació és **millorar el producte o el codi** dins del termini (cultura de prototip: itera!), no un examen memorístic.

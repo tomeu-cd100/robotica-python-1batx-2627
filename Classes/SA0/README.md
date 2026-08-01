@@ -6,8 +6,9 @@ qualifica. Es treballa dins la **S1 de la SA1**, com a material de suport perqu�
 amb el mateix vocabulari bàsic i sàpiga on escriure i transferir el primer programa.
 
 > Contracte de cobertura (vegeu `tools/qa.py:comprova_cobertura_sa()`): a diferència de
-> SA1–SA9, la SA0 només exigeix **README** (és material d'acollida, no una SA completa amb
-> guia docent/fitxes/checklists/reptes).
+> SA1–SA9, la SA0 no exigeix guia docent/fitxes/checklists/reptes (és material d'acollida,
+> no una SA completa), però sí els seus **3 fitxers de contingut** (vocabulari, primers
+> passos i guia de programació) a més del **README**.
 
 ## Contingut
 
@@ -15,6 +16,7 @@ amb el mateix vocabulari bàsic i sàpiga on escriure i transferir el primer pro
 |---|---|
 | [`SA0_vocabulari_robotica.md`](SA0_vocabulari_robotica.md) | Vocabulari bàsic (robot, sensor, actuador, microcontrolador, programa, bucle, entrada/sortida, MicroPython vs Python...), amb exemples de micro:bit. |
 | [`SA0_primers_passos_editor.md`](SA0_primers_passos_editor.md) | Primer contacte amb l'editor python.microbit.org: no cal crear compte, com desar `.hex`/`.py` i com connectar i transferir el programa a la placa. |
+| [`SA0_guia_programacio.md`](SA0_guia_programacio.md) | Guia de referència de programació (seccions A1-A7 + Part B): on deriva el docent quan un [mini-check](../00_General/00_Mini_checks_individuals.md) surt 🔴. |
 
 ## Itinerari (per on començo?)
 
@@ -25,6 +27,8 @@ amb el mateix vocabulari bàsic i sàpiga on escriure i transferir el primer pro
 3. Per al detall complet de l'entorn de treball (simulador, Thonny, incidències de
    maquinari...), consulta
    [`00_Entorns_de_treball.md`](../00_General/00_Entorns_de_treball.md).
+4. La **[guia de programació](SA0_guia_programacio.md)** no cal llegir-la de cap a cap: hi
+   tornaràs quan un mini-check et derivi a una secció concreta.
 
 ## Notes
 
