@@ -78,12 +78,18 @@ def aturar():
 
 
 def mesura_distancia():
+    # Mateixa lectura robusta que evita_obstacles.py (SA7-S3): time_pulse_us
+    # pot senyalar timeout amb un valor negatiu O amb una excepcio OSError
+    # (depen de placa/versio); el try/except cobreix el segon cas.
     TRIGGER.write_digital(0)
     utime.sleep_us(2)
     TRIGGER.write_digital(1)
     utime.sleep_us(10)
     TRIGGER.write_digital(0)
-    durada_us = machine.time_pulse_us(ECHO, 1, 30000)
+    try:
+        durada_us = machine.time_pulse_us(ECHO, 1, 30000)
+    except OSError:
+        return None
     if durada_us < 0:
         return None
     return (durada_us * VELOCITAT_SO_CM_US) / 2

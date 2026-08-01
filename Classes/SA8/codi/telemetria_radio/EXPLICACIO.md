@@ -39,13 +39,16 @@ El MPU6050 es connecta pel bus **I2C** (P19 SCL / P20 SDA): en lloc d'un pin ded
 ### Bloc 3 — Llegir el DHT11: el mateix time-of-flight de l'HC-SR04, repetit 40 cops
 
 ```python
-if machine.time_pulse_us(DHT_PIN, 0, 1000) < 0:
+try:
+    if machine.time_pulse_us(DHT_PIN, 0, 1000) < 0:
+        return None
+    ...
+    bits.append(1 if durada > 40 else 0)
+except OSError:
     return None
-...
-bits.append(1 if durada > 40 else 0)
 ```
 
-El DHT11 no és analògic ni I2C: envia les seves dades com una seqüència de 40 **polsos** de durada variable. Es mesuren amb `machine.time_pulse_us`, **exactament** la mateixa eina que `mesura_distancia()` (SA7) fa servir per l'HC-SR04, només que aquí cal repetir-la 40 vegades i muntar els bits en 5 bytes (humitat, temperatura i una suma de control). Si la suma de control no quadra, la lectura es descarta (`return None`): més val "no tinc dada aquest cop" que una dada incorrecta.
+El DHT11 no és analògic ni I2C: envia les seves dades com una seqüència de 40 **polsos** de durada variable. Es mesuren amb `machine.time_pulse_us`, **exactament** la mateixa eina que `mesura_distancia()` (SA7) fa servir per l'HC-SR04, només que aquí cal repetir-la 40 vegades i muntar els bits en 5 bytes (humitat, temperatura i una suma de control). Igual que a `evita_obstacles.py` (SA7-S3), un `try`/`except OSError` embolica totes les crides a `time_pulse_us`: un timeout puntual (llançat com a excepció, no com a valor negatiu) no ha d'aturar tota la telemetria. Si la suma de control no quadra, la lectura també es descarta (`return None`): més val "no tinc dada aquest cop" que una dada incorrecta.
 
 ### Bloc 4 — Enviar telemetria NOMÉS cada cert temps
 

@@ -35,7 +35,7 @@ def mesura_distancia():
     # trobar mai el pols esperat (obstacle massa lluny, eco perdut, sensor
     # mal cablejat). Segons la placa/versio de MicroPython aixo es manifesta
     # de DUES maneres possibles: retornant un valor negatiu (-1/-2, ja
-    # comprovat sota) O bé llancant una excepcio OSError. Un "try/except"
+    # comprovat sota) O BE llancant una excepcio OSError. Un "try/except"
     # cobreix aquesta segona possibilitat perque una lectura puntual dolenta
     # NO aturi tot el programa del rover.
     TRIGGER.write_digital(0)
