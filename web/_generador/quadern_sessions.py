@@ -144,12 +144,27 @@ SESSIONS = {
            "les meves ordres per radio i les converteix en moviment amb "
            "les funcions de la SA4. He guardat l'historic en tuples.",
            "esdeveniment, accio, tupla, historic de comandes"),
-        _s("SA6", 1, _TITOL_SA["SA6"],
-           "TODO: pendent de la guia docent de SA6 (llaç obert/tancat, histèresi).",
-           "TODO"),
-        _s("SA6", 2, "PROVA PRÀCTICA T2 (individual)",
-           "TODO: pendent de definir l'enunciat de la prova del 2n trimestre.",
-           "TODO", prova=True),
+        _s("SA6", 1, "Llaç obert i llaç tancat: la màquina d'estats",
+           "Avui he distingit llac obert de llac tancat amb exemples del "
+           "vehicle, he dissenyat el meu diagrama d'estats RUN/STOP/ALERTA "
+           "i he provat una FSM de semafor i un termostat amb histeresi.",
+           "llac obert, llac tancat, maquina d'estats, transicio, histeresi"),
+        _s("SA6", 2, "Aturada d'emergència prioritària",
+           "Avui he programat l'estat STOP com a prioritari: es dispara amb "
+           "el polsador o amb una comanda de radio dedicada i interromp "
+           "qualsevol moviment. He fet el mini-check individual (no "
+           "qualifica) i he provat el registre de dades amb el modul log.",
+           "STOP prioritari, polsador, actualitza_estat, log, MY_DATA.HTM"),
+        _s("SA6", 3, "Repte «vehicle amb aturada d'emergència» (producte de la SA — es tanca el Projecte T2)",
+           "Avui he tancat el repte vehicle amb aturada d'emergencia: "
+           "protocol de radio complet (F/B/L/R/S/X) i maquina d'estats amb "
+           "STOP prioritari. He tancat el Projecte T2 amb una mini-defensa breu.",
+           "protocol CMD, comanda X, maquina d'estats, mini-defensa, Projecte T2"),
+        _s("SA6", 4, "PROVA PRÀCTICA T2 (individual)",
+           "Avui he fet la prova pràctica individual del 2n trimestre "
+           "(SA4-SA6): funcions de moviment, radio i sistemes de control "
+           "amb maquina d'estats.",
+           "prova practica, avaluacio individual", prova=True),
     ],
     3: [
         _s("SA7", 1, _TITOL_SA["SA7"],
