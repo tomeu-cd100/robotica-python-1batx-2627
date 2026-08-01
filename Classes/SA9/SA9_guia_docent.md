@@ -84,8 +84,9 @@ Amb 15-20 alumnes, una sola sessió de defenses no dona: 5' + preguntes + canvi 
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
+| Mini-check | 10' | **Mini-check individual** (10', sense apunts; banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md#sa9--mini-check-inici-de-la-sessió-2)): integrar sensor + condicional + ràdio en una sola funció, sense bastida. | Fan el mini-check (no qualifica). |
 | Explicació | 20' | Modelatge de [`plantilla_projecte.py`](codi/plantilla_projecte/EXPLICACIO.md): l'arquitectura percep/decideix/actua, i com copiar-hi funcions ja fetes de SA1-SA8 (motors, sensors, ràdio). | Prenen notes; identifiquen quines funcions pròpies (de fitxers anteriors) poden reutilitzar sense reescriure-les. |
-| Pràctica | 80' | Acompanya el muntatge del component nou de cada repte (ronda per taules: reg necessita atenció al relé/bomba, PIR i NeoPixel necessiten cablatge nou) i la primera integració de codi. | Munten el maquinari nou del seu repte i programen un **prototip mínim viable**: almenys un element nou integrat sobre el que ja tenien (Activitat 2 de la fitxa). |
+| Pràctica | 70' | Acompanya el muntatge del component nou de cada repte (ronda per taules: reg necessita atenció al relé/bomba, PIR i NeoPixel necessiten cablatge nou) i la primera integració de codi. | Munten el maquinari nou del seu repte i programen un **prototip mínim viable**: almenys un element nou integrat sobre el que ja tenien (Activitat 2 de la fitxa). |
 | Tancament | 20' | Recull dubtes de maquinari abans de la S3; anticipa que la S3 és de proves i millora. | Documenten al quadern quin component nou han integrat i com. |
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: deixa el modelatge de `plantilla_projecte.py` com a lectura prèvia (assignada a la S1) i centra el temps a l'aula en el muntatge i la programació.
@@ -153,6 +154,7 @@ Amb 15-20 alumnes, una sola sessió de defenses no dona: 5' + preguntes + canvi 
 
 | Instrument | Què evidencia | Criteri | Rúbrica | Qualifica? |
 |---|---|---|---|---|
+| Mini-check (S2) | Integrar sensor + condicional + ràdio en una sola funció, sense bastida | CA1.1 | — | **No** (radar formatiu) |
 | Dossier tècnic (§1-§3, avançat S3) | Objectiu, disseny, esquema de connexions | CA1.1, CA2.1, CA3.1 | R2, R4 | Formativa |
 | Producte «rover ampliat» (S4) | Repte integrat, funcional | CA1.1, CA1.2, CA2.1, CA2.2, CA3.1, CA4.1, CA4.2 | **R1, R2, R3** | Sí |
 | Dossier tècnic complet (S4) | Codi comentat, proves, dificultats, millores, conclusions, ètica/ODS | CA4.1, CA5.1 | **R4** | Sí |

@@ -23,6 +23,7 @@
 - ⚠️ *Error a vigilar:* repte massa ambiciós per al temps disponible
 
 **Sessió 2 — Prototipar**
+- [ ] Mini-check individual (10', a l'inici — [banc SA9](../00_General/00_Mini_checks_individuals.md#sa9--mini-check-inici-de-la-sessió-2))
 - [ ] Modelatge de `plantilla_projecte.py` (percep/decideix/actua)
 - [ ] Ronda de muntatge del component nou de cada repte (atenció especial: relé+bomba, PIR, NeoPixel)
 - [ ] Acompanyar la primera integració de codi (prototip mínim viable)

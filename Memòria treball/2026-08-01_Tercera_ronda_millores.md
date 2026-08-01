@@ -61,9 +61,10 @@ Registre de l'aplicació del pla de la tercera ronda de millores, sorgit de la
   PDF versionats amb 0 desfasats un cop regenerats).
 - `py -3.13 web/_generador/generar.py` → net.
 - `py -3.13 web/_generador/generar_fulls_imprimibles.py` executat després de tots
-  els canvis de contingut: 15 PDF regenerats sense error nou (els avisos «falta»
-  d'alguns fulls de `00_General` són pendents preexistents, no relacionats amb
-  aquesta ronda) + el nou `00_Quadern_sessions_docent.pdf` (35 pàgines).
+  els canvis de contingut: 14 PDF regenerats sense error nou (inclòs el quadern
+  nou, `00_Quadern_sessions_docent.pdf`, 35 pàgines; els avisos «falta» d'alguns
+  fulls de `00_General` són pendents preexistents, no relacionats amb aquesta
+  ronda).
 - pytest de `web/_generador/tests/`.
 
 ## 3. Pendents d'aula (no verificables des del repositori)
