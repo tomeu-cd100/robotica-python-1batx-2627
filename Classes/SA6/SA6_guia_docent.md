@@ -32,7 +32,7 @@
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Repte inicial: *"Com fas que un vehicle teledirigit s'aturi SEMPRE que calgui, encara que estigui fent una altra cosa?"* | Formulen hipòtesis: què fa que una ordre "guanyi" sempre a les altres? |
+| Activació | 10' | Repte inicial: *"Com fas que un vehicle teledirigit s'aturi SEMPRE que calgui, encara que estigui fent una altra cosa?"* 🥋 **Kata del dia:** K10 (ràdio) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis: què fa que una ordre "guanyi" sempre a les altres? |
 | Explicació | 30' | **Llaç obert** (el vehicle segueix una comanda fixa, sense comprovar res) vs **llaç tancat** (el sistema comprova un sensor i hi reacciona: consigna, error, realimentació). Introdueix la **màquina d'estats finits (FSM)**: una variable d'estat + transicions. Modelatge de [`maquina_estats_semafor.py`](codi/maquina_estats_semafor/EXPLICACIO.md). | Prenen notes; distingeixen exemples propis de llaç obert i llaç tancat al vehicle (SA4-SA5). |
 | Pràctica | 50' | Acompanya el disseny del **diagrama RUN/STOP/ALERTA** (paper o pissarra) abans d'escriure cap codi (Predicció → disseny). Modelatge de [`termostat_histeresi.py`](codi/termostat_histeresi/EXPLICACIO.md) com a primer exemple de **llaç tancat amb realimentació**: per què un únic llindar fa "clic-clic" i com ho resol la **histèresi** (dos llindars). | Dissenyen el seu diagrama d'estats; proven `maquina_estats_semafor.py` i `termostat_histeresi.py` (Activitat 1 de la fitxa). |
 | Tancament | 20' | Recull dubtes; anticipa que la Sessió 2 converteix el diagrama en un STOP real i prioritari. | Entrada del quadern: diagrama d'estats propi + per què calen dos llindars a un termòstat. |
@@ -78,7 +78,7 @@
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Mostra [`vehicle_seguretat.py`](codi/vehicle_seguretat/EXPLICACIO.md) **sense executar-lo** (PRIMM): pregunta què passa si arriba `"X"` mentre el vehicle avança. | Prediuen el comportament davant de cada comanda, amb èmfasi en la prioritat de l'STOP. |
+| Activació | 10' | Mostra [`vehicle_seguretat.py`](codi/vehicle_seguretat/EXPLICACIO.md) **sense executar-lo** (PRIMM): pregunta què passa si arriba `"X"` mentre el vehicle avança. 🥋 **Kata del dia:** K11 (llistes) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen el comportament davant de cada comanda, amb èmfasi en la prioritat de l'STOP. |
 | Explicació | 20' | Sensor de temperatura (Kit 2 / intern) i **DHT11** (Kit 3) com a **+ampliació**: exemple de "termòstat" integrat amb la màquina d'estats del vehicle (mateix esquema d'histèresi de la Sessió 1, ara amb el relé del Kit 3). Recorda que **no** és control proporcional. | Prenen notes; qui vagi sobrat integra el sensor com a tercer estat ALERTA (opcional). |
 | Repte | 70' | Acompanya el tancament individual del repte «vehicle amb aturada d'emergència»: cadascú prova el **seu** protocol complet (F/B/L/R/S/X) amb el comandament d'un company o del docent. | Tanquen `vehicle_seguretat.py`: protocol de ràdio + màquina d'estats + STOP prioritari + LED. Proven l'STOP amb el polsador i amb `"X"` per ràdio. |
 | Tancament | 20' | Recull dubtes; **mini-defensa breu** de cada alumne/a (2-3', R4·DO): decisió de disseny justificada. | Mini-defensa; anoten al quadern el diagrama d'estats final i una decisió justificada. |

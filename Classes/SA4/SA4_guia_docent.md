@@ -39,7 +39,7 @@
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Pregunta del repte inicial: *"com organitzaries el codi perquè 'avançar', 'girar' i 'aturar' es puguin cridar com si fossin ordres pròpies?"* Mostra un fragment repetitiu (3 còpies del mateix bloc amb un valor diferent cada cop). | Formulen hipòtesis: com evitarien la repetició? |
+| Activació | 10' | Pregunta del repte inicial: *"com organitzaries el codi perquè 'avançar', 'girar' i 'aturar' es puguin cridar com si fossin ordres pròpies?"* Mostra un fragment repetitiu (3 còpies del mateix bloc amb un valor diferent cada cop). 🥋 **Kata del dia:** K06 (if/while) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis: com evitarien la repetició? |
 | Explicació | 30' | Sintaxi de `def nom(parametre):`, com es criden les funcions i què és un **valor de retorn** (`return`). Repassa en veu alta `mapa()` (SA3) i `respira()` (SA2) com a funcions que ja coneixien sense el nom. Introdueix el **servomotor**: `pin0.set_analog_period(20)` i `write_analog(26-128)` per a 0-180°. | Prenen notes; identifiquen paràmetre i valor de retorn a `mapa()`. |
 | Pràctica | 60' | Modelatge de [`funcions_moviments.py`](codi/funcions_moviments/funcions_moviments.py): `graus_a_pwm(angle)` (retorna un valor), `mou_servo(angle)` (un paràmetre), `saluda(vegades)` i `escombra(angle_maxim)` (reutilització del mateix codi amb arguments diferents). | Escriuen i proven `funcions_moviments.py` amb el servo de la mascota (P0, [esquemes](SA4_esquemes_connexions.md)); fan l'Activitat 1 de la fitxa. |
 | Tancament | 20' | Recull dubtes; anticipa `coreografia.py` (combinar funcions). | Entrada del quadern: què és un paràmetre, què és un valor de retorn. |
@@ -85,7 +85,7 @@
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Mostra [`control_per_botons.py`](codi/control_per_botons/control_per_botons.py) **sense executar-lo** (PRIMM): pregunta què farà cada botó. | Prediuen el comportament dels botons A/B. |
+| Activació | 10' | Mostra [`control_per_botons.py`](codi/control_per_botons/control_per_botons.py) **sense executar-lo** (PRIMM): pregunta què farà cada botó. 🥋 **Kata del dia:** K07 (funcions/paràmetres) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen el comportament dels botons A/B. |
 | Explicació | 20' | Modelatge de la **seqüència amb estat** (`PAS`, `seguent_moviment()`) i de per què el botó B **sempre** atura, es processi on es processi (anticipa l'estat STOP de la SA6). | Prenen notes; identifiquen quines funcions ja coneixen (`avancar`, `girar`...) i quines són noves (seqüència, botons). |
 | Repte | 70' | Acompanya la programació individual del repte: seqüència **pròpia** de moviments encadenada amb les funcions de moviment, activada amb els botons A/B. | Programen la seva pròpia seqüència a partir de `control_per_botons.py` (Activitat 3, producte). |
 | Tancament | 20' | Recull dubtes; anuncia la fabricació de la S4. | Anoten al quadern la seqüència triada i per què. |

@@ -52,7 +52,7 @@ Assigna els **grups de ràdio per parelles de números de llista** (rotant si el
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Pregunta del repte inicial: *"com envies una ordre a un robot sense fils, i com fas perquè no es 'perdi' cap missatge?"* Reparteix la taula de grups de ràdio. | Formulen hipòtesis: com es "sentirien" dues plaques sense fil físic? |
+| Activació | 10' | Pregunta del repte inicial: *"com envies una ordre a un robot sense fils, i com fas perquè no es 'perdi' cap missatge?"* Reparteix la taula de grups de ràdio. 🥋 **Kata del dia:** K08 (return) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis: com es "sentirien" dues plaques sense fil físic? |
 | Explicació | 30' | `radio.on()`, `radio.config(group=N, power=...)` i per què el `group` evita interferències entre 20 plaques a la vegada. Introdueix `radio.send()`/`radio.receive()` i que **`receive()` no espera**: torna `None` si no ha arribat res. | Prenen notes; identifiquen per què cal cridar `receive()` dins d'un bucle. |
 | Pràctica | 60' | Modelatge de [`radio_missatges.py`](codi/radio_missatges/radio_missatges.py): enviar amb remitent (`MEU_NOM + ":" + text`), guardar els missatges rebuts en una **llista** (`historic`, xat "5×5"). | Escriuen el **seu propi** codi d'emissor i de receptor; s'aparellen **puntualment** (banc de proves) amb la placa d'un company (mateix grup de la taula) i intercanvien breument el rol d'emissor/receptor. Fan l'Activitat 1 de la fitxa. |
 | Tancament | 20' | Recull dubtes; anticipa el protocol de comandes de la Sessió 2. | Entrada del quadern: què és el `group`, com es guarda un missatge a una llista. |
@@ -98,7 +98,7 @@ Assigna els **grups de ràdio per parelles de números de llista** (rotant si el
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Mostra [`receptor_vehicle.py`](codi/receptor_vehicle/receptor_vehicle.py) **sense executar-lo** (PRIMM): pregunta què farà cada ordre rebuda. | Prediuen el comportament del vehicle davant de cada comanda. |
+| Activació | 10' | Mostra [`receptor_vehicle.py`](codi/receptor_vehicle/receptor_vehicle.py) **sense executar-lo** (PRIMM): pregunta què farà cada ordre rebuda. 🥋 **Kata del dia:** K09 (global) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen el comportament del vehicle davant de cada comanda. |
 | Explicació | 20' | Modelatge de la funció `actua(ordre)` (esdeveniment → acció) i de per què reutilitza **exactament** les funcions `avancar`/`retrocedir`/`girar`/`aturar` de la SA4 sense reescriure-les. Introdueix l'historial amb **tuples** (`(ordre, instant)`) com a estructura de dades nova. | Prenen notes; identifiquen quines parts del programa ja coneixien (funcions de moviment) i quines són noves (protocol per ràdio, tuples). |
 | Repte | 70' | Acompanya el tancament individual del repte «control remot bàsic»: cadascú prova el **seu** receptor aparellat puntualment amb el comandament d'un company o del docent. | Tanquen `receptor_vehicle.py`, proven el vehicle amb ràdio real (Activitat 3, producte). |
 | Tancament | 20' | Recull dubtes; mini-defensa breu de cada alumne/a. | Anoten al quadern el protocol final i un exemple de l'historial de comandes. |

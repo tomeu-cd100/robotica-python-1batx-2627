@@ -1,0 +1,649 @@
+# 00 · Banc d'activació amb repàs espaiat (katas)
+
+> **Per a qui és?** Per al **docent**. Un banc de **katas curtes (10' o menys)** per a la fase d'**Activació** de cada sessió, de la S4 a la S33 (`Programació didàctica/04_Metodologia.md` §4.2, `06_Avaluacio_criteris_qualificacio.md`). Substitueix la pregunta oberta habitual d'aquella franja per un exercici curt d'**escriptura de codi** sobre un concepte de fa 1-2 setmanes. **No qualifica**: és repàs espaiat + fluïdesa d'escriptura, no avaluació.
+
+## El problema que resol
+
+L'alumnat llegeix i modifica codi amb solvència, però té poca pràctica d'**escriure'n de zero**: la producció autònoma viu sobretot als reptes opcionals i a SA9. Aquest banc obliga TOTHOM a escriure unes línies de codi cada sessió, sobre material que ja es va explicar fa temps (no el d'avui): és **repàs espaiat** (retrieval practice) i **fluïdesa** alhora.
+
+## Regla d'or: repàs espaiat
+
+Cada kata repassa un concepte **de fa 1-2 setmanes**, mai el que es treballa aquell mateix dia (això ja el cobreix el Modelatge/PRIMM de la sessió). El curs avança a raó d'~1 sessió/setmana, així que "1-2 setmanes" equival, a la pràctica, a "com a mínim la sessió anterior, normalment 2-4 sessions enrere".
+
+## Progressió per concepte
+
+| Aparició del concepte al banc | Tipus de kata | Què fa l'alumnat |
+|---|---|---|
+| 1a vegada | **Parsons** | Rep les línies del programa desordenades i les ha d'ordenar (amb la indentació correcta). |
+| 2a vegada | **Completar buits** | Rep el programa gairebé complet, amb `___` en els punts clau (paraules clau, condicions, noms). |
+| 3a vegada o més | **Escriure de zero** | Rep només l'enunciat (i, si cal, un esquelet mínim). Escriu 2-6 línies pel seu compte. |
+
+La taula de la secció «Mapa sessió → kata» indica, per a cada kata, quina és la seva posició dins d'aquesta progressió.
+
+## Com s'usa (10')
+
+1. Projecta o imprimeix **només l'enunciat** de la kata del dia (mai la solució).
+2. Cronometra 8-10': individual, en paper o a l'editor, **sense apunts**.
+3. Correcció **a mà alçada** en 30 segons per alumne, amb el criteri de la fitxa (no es puntua ni es registra com a nota).
+4. Si un concepte falla de manera massiva (més d'un terç de la classe), és un avís per revisar-lo abans de la propera prova (`06_Avaluacio_criteris_qualificacio.md`).
+
+> ⚠️ **Dies sense kata.** No hi ha kata els dies de **prova pràctica** (S11, S22, S34: l'activació d'aquell dia és repàs lliure/dubtes) ni els dies en què el **mini-check individual** ja ocupa la franja d'activació (`00_Mini_checks_individuals.md` §Rutina, punt 1: «aquell dia el mini-check substitueix la graella d'activació») ni els dies sense fase d'Activació pròpia a la guia docent (fabricació pura o sessions de projecte obert de SA9 S3-S4). Aquests dies es marquen a la taula amb el motiu.
+
+## Conceptes coberts
+
+variables · `while`/`if`/`elif` · `for` amb `range` · condicionals amb sensors/llindar · funcions (`def`, paràmetres) · `return` · `global` · llistes · `for` sobre una col·lecció · ràdio (`radio.send`/`radio.receive`) · diccionaris / FSM · `log` · `try`/`except`.
+
+> Els conceptes **`for` sobre col·lecció** i **`try`/`except`** s'avancen a SA7 (Task 2 del pla de millora pedagògica: mou aquest contingut a SA7-S2). Les katas K13 i K14 porten la nota «⚠️ requereix activitat SA7-S2» perquè només tenen sentit si aquell moviment ja s'ha fet al material de SA7; mentre no s'hagi fet, ajorna-les a la primera sessió en què el concepte ja s'hagi explicat.
+
+---
+
+## Mapa sessió → kata
+
+| Sessió | SA · Sessió | Kata | Concepte | Tipus |
+|---|---|---|---|---|
+| S4 | SA2 · S1 | [K01](#k01--s4--ifwhile--parsons) | if/while | Parsons |
+| S5 | SA2 · S2 | — | *(mini-check SA2, substitueix l'activació)* | — |
+| S6 | SA2 · S3 | [K02](#k02--s6--variables--parsons) | variables | Parsons |
+| S7 | SA2 · S4 | [K03](#k03--s7--for-range--parsons) | for-range | Parsons |
+| S8 | SA3 · S1 | [K04](#k04--s8--ifwhile--completar-buits) | if/while | Completar buits |
+| S9 | SA3 · S2 | — | *(mini-check SA3, substitueix l'activació)* | — |
+| S10 | SA3 · S3 | [K05](#k05--s10--condicionals-amb-sensorsllindar--parsons) | condicionals amb sensors/llindar | Parsons |
+| S11 | SA3 · S4 | — | *(prova pràctica T1: repàs lliure)* | — |
+| S12 | SA4 · S1 | [K06](#k06--s12--ifwhile--escriure-de-zero) | if/while | Escriure de zero |
+| S13 | SA4 · S2 | — | *(mini-check SA4, substitueix l'activació)* | — |
+| S14 | SA4 · S3 | [K07](#k07--s14--funcionsparametres--parsons) | funcions/paràmetres | Parsons |
+| S15 | SA4 · S4 | — | *(fabricació del vehicle: sense fase d'Activació a la guia)* | — |
+| S16 | SA5 · S1 | [K08](#k08--s16--return--parsons) | return | Parsons |
+| S17 | SA5 · S2 | — | *(mini-check SA5, substitueix l'activació)* | — |
+| S18 | SA5 · S3 | [K09](#k09--s18--global--parsons) | global | Parsons |
+| S19 | SA6 · S1 | [K10](#k10--s19--radio--parsons) | ràdio | Parsons |
+| S20 | SA6 · S2 | — | *(mini-check SA6, substitueix l'activació)* | — |
+| S21 | SA6 · S3 | [K11](#k11--s21--llistes--parsons) | llistes | Parsons |
+| S22 | SA6 · S4 | — | *(prova pràctica T2: repàs lliure)* | — |
+| S23 | SA7 · S1 | [K12](#k12--s23--fsmdiccionari--parsons) | FSM/diccionari | Parsons |
+| S24 | SA7 · S2 | — | *(mini-check SA7, substitueix l'activació)* | — |
+| S25 | SA7 · S3 | [K13](#k13--s25--for-sobre-col·lecció--parsons--️-requereix-activitat-sa7-s2) ⚠️ | for sobre col·lecció | Parsons |
+| S26 | SA7 · S4 | [K14](#k14--s26--tryexcept--parsons--️-requereix-activitat-sa7-s2) ⚠️ | try/except | Parsons |
+| S27 | SA8 · S1 | [K15](#k15--s27--log--parsons) | log | Parsons |
+| S28 | SA8 · S2 | — | *(mini-check SA8, la guia no té fase d'Activació aquell dia)* | — |
+| S29 | SA8 · S3 | [K16](#k16--s29--funcionsparametres--completar-buits) | funcions/paràmetres | Completar buits |
+| S30 | SA9 · S1 | [K17](#k17--s30--return--completar-buits) | return | Completar buits |
+| S31 | SA9 · S2 | — | *(mini-check SA9, la guia no té fase d'Activació aquell dia)* | — |
+| S32 | SA9 · S3 | — | *(sessió de proves/defenses esglaonades: sense fase d'Activació a la guia)* | — |
+| S33 | SA9 · S4 | — | *(sessió de comunicació/defensa: sense fase d'Activació a la guia)* | — |
+| S34 | SA9 · S5 | — | *(prova pràctica T3: repàs lliure)* | — |
+
+---
+
+## Les katas
+
+### K01 · S4 — if/while — Parsons
+
+**Repassa:** el `while True:` + `if/elif/else` amb botons de SA1 (`emocions_botons.py`).
+
+**Enunciat per a l'alumnat:**
+> Aquestes línies formen un programa vàlid però estan **desordenades**. Escriu-les en l'ordre correcte, amb la indentació que toqui, perquè: mentre es manté premut el botó A es mostri una cara contenta, i en cas contrari una cara adormida, per sempre.
+> ```
+> sleep(100)
+> from microbit import *
+> while True:
+> if button_a.is_pressed():
+> display.show(Image.HAPPY)
+> else:
+> display.show(Image.ASLEEP)
+> ```
+
+**Solució completa:**
+```python
+from microbit import *
+
+while True:
+    if button_a.is_pressed():
+        display.show(Image.HAPPY)
+    else:
+        display.show(Image.ASLEEP)
+    sleep(100)
+```
+
+**Correcció ràpida (30''):** `while True:` amb dos punts i tot el cos indentat sota seu · `if`/`else` alineats entre ells i indentats un nivell més · `sleep(100)` dins del bucle (no abans de `while`).
+
+---
+
+### K02 · S6 — variables — Parsons
+
+**Repassa:** l'acumulador (`comptador`) inicialitzat fora del bucle de `led_parpelleig.py` (SA2).
+
+**Enunciat per a l'alumnat:**
+> Ordena aquestes línies perquè el programa compti les sacsejades de la placa i mostri el comptador cada cop que en detecta una.
+> ```
+> sleep(100)
+> comptador = 0
+> from microbit import *
+> while True:
+> comptador = comptador + 1
+> display.show(str(comptador))
+> if accelerometer.was_gesture("shake"):
+> ```
+
+**Solució completa:**
+```python
+from microbit import *
+
+comptador = 0
+
+while True:
+    if accelerometer.was_gesture("shake"):
+        comptador = comptador + 1
+        display.show(str(comptador))
+    sleep(100)
+```
+
+**Correcció ràpida (30''):** `comptador = 0` **fora** i **abans** del `while` (s'inicialitza un sol cop) · `comptador = comptador + 1` dins de l'`if`, no fora · `str(comptador)` abans de `show()`.
+
+---
+
+### K03 · S7 — for-range — Parsons
+
+**Repassa:** el `for i in range(vegades):` de `funcions_moviments.py` (`saluda()`, SA4 — aquí encara sense funció, en context de SA2).
+
+**Enunciat per a l'alumnat:**
+> Ordena aquestes línies perquè una cara contenta parpellegi exactament **5 vegades** fent servir un `for`.
+> ```
+> sleep(300)
+> display.clear()
+> from microbit import *
+> VEGADES = 5
+> sleep(300)
+> for i in range(VEGADES):
+> display.show(Image.HAPPY)
+> ```
+
+**Solució completa:**
+```python
+from microbit import *
+
+VEGADES = 5
+
+for i in range(VEGADES):
+    display.show(Image.HAPPY)
+    sleep(300)
+    display.clear()
+    sleep(300)
+```
+
+**Correcció ràpida (30''):** `for i in range(VEGADES):` amb dos punts i les 4 línies del cos indentades igual · cap comptador manual ni `while` · `VEGADES` en majúscules abans del `for` (convenció de constant).
+
+---
+
+### K04 · S8 — if/while — Completar buits
+
+**Repassa:** el mateix patró `while`/`if` de K01, amb un cas nou (LED extern en lloc de display).
+
+**Enunciat per a l'alumnat:**
+> Completa els `___` perquè el LED del pin **P1** estigui encès mentre es manté premut el botó A, i apagat en cas contrari.
+> ```python
+> from microbit import *
+>
+> while ___:
+>     if button_a.___():
+>         pin1.write_digital(___)
+>     else:
+>         pin1.write_digital(___)
+>     sleep(50)
+> ```
+
+**Solució completa:**
+```python
+from microbit import *
+
+while True:
+    if button_a.is_pressed():
+        pin1.write_digital(1)
+    else:
+        pin1.write_digital(0)
+    sleep(50)
+```
+
+**Correcció ràpida (30''):** `True` (no `1` ni cap variable) · `is_pressed()` amb parèntesis (no `was_pressed`, que només detecta el moment de prémer) · `1` a la branca `if` i `0` a l'`else`, no invertits.
+
+---
+
+### K05 · S10 — condicionals amb sensors/llindar — Parsons
+
+**Repassa:** la comparació amb `LLINDAR_FOSCOR` de `nivell_llum.py` (SA3).
+
+**Enunciat per a l'alumnat:**
+> Ordena aquestes línies perquè el programa mostri una cara adormida quan hi ha poca llum (per sota del llindar) i esborri el display en cas contrari.
+> ```
+> sleep(200)
+> LLINDAR_FOSCOR = 50
+> display.clear()
+> from microbit import *
+> while True:
+> llum = display.read_light_level()
+> if llum < LLINDAR_FOSCOR:
+> display.show(Image.ASLEEP)
+> else:
+> ```
+
+**Solució completa:**
+```python
+from microbit import *
+
+LLINDAR_FOSCOR = 50
+
+while True:
+    llum = display.read_light_level()
+    if llum < LLINDAR_FOSCOR:
+        display.show(Image.ASLEEP)
+    else:
+        display.clear()
+    sleep(200)
+```
+
+**Correcció ràpida (30''):** `llum = display.read_light_level()` es **llegeix dins del bucle**, a cada volta · la comparació és `llum < LLINDAR_FOSCOR` (el llindar és el segon terme) · `LLINDAR_FOSCOR` es defineix un cop, fora del bucle.
+
+---
+
+### K06 · S12 — if/while — Escriure de zero
+
+**Repassa:** 3a aparició d'aquest concepte al banc (K01 Parsons, K04 completar buits): ara, de zero.
+
+**Enunciat per a l'alumnat:**
+> Sense mirar apunts, completa aquest esquelet (màxim 4 línies noves) perquè es mostri una fletxa cap a la dreta (`Image.ARROW_E`) quan es faci el gest `'right'` amb la placa, i el display s'esborri en cas contrari.
+> ```python
+> from microbit import *
+>
+> while True:
+>     # escriu aquí 3-4 línies
+>     sleep(100)
+> ```
+
+**Solució completa:**
+```python
+from microbit import *
+
+while True:
+    if accelerometer.was_gesture('right'):
+        display.show(Image.ARROW_E)
+    else:
+        display.clear()
+    sleep(100)
+```
+
+**Correcció ràpida (30''):** `if`/`else` amb dos punts i indentació correcta dins del `while` · `was_gesture('right')` ben escrit (cometes, parèntesi) · `display.clear()` a l'`else` (si no hi és, la fletxa es queda encesa per sempre).
+
+---
+
+### K07 · S14 — funcions/paràmetres — Parsons
+
+**Repassa:** `def` amb un paràmetre, de `funcions_moviments.py` (`saluda(vegades)`, taught S12).
+
+**Enunciat per a l'alumnat:**
+> Ordena aquestes línies perquè defineixin una funció `saluda(vegades)` que repeteix un gest content tantes vegades com li digui el paràmetre, i que després es cridi 3 vegades.
+> ```
+> saluda(3)
+> display.clear()
+> sleep(300)
+> def saluda(vegades):
+> sleep(300)
+> for i in range(vegades):
+> display.show(Image.HAPPY)
+> ```
+
+**Solució completa:**
+```python
+def saluda(vegades):
+    for i in range(vegades):
+        display.show(Image.HAPPY)
+        sleep(300)
+        display.clear()
+        sleep(300)
+
+
+saluda(3)
+```
+
+**Correcció ràpida (30''):** `def saluda(vegades):` amb dos punts i el cos indentat **sota** el `def` · la crida `saluda(3)` va **fora** de la funció (sense indentar), amb parèntesis i un valor concret.
+
+---
+
+### K08 · S16 — return — Parsons
+
+**Repassa:** `graus_a_pwm(angle)`, la primera funció **amb valor de retorn** del curs (`funcions_moviments.py`, SA4 S1/S3).
+
+**Enunciat per a l'alumnat:**
+> Ordena aquestes línies perquè una funció converteixi un angle (0-180°) al valor PWM que espera un servomotor, i mostri el resultat per a un angle de 90°.
+> ```
+> valor = graus_a_pwm(90)
+> def graus_a_pwm(angle):
+> display.scroll(str(valor))
+> return 26 + (angle * (128 - 26)) // 180
+> ```
+
+**Solució completa:**
+```python
+def graus_a_pwm(angle):
+    return 26 + (angle * (128 - 26)) // 180
+
+
+valor = graus_a_pwm(90)
+display.scroll(str(valor))
+```
+
+**Correcció ràpida (30''):** `return` és la **darrera** línia del cos de la funció (calcula i torna un valor, no mostra res) · `valor = graus_a_pwm(90)` recull el que retorna la funció · `str(valor)` abans de `scroll()`.
+
+---
+
+### K09 · S18 — global — Parsons
+
+**Repassa:** `canvia_emocio()` (`mascota_reactiva.py`, SA3) i `actualitza_estat()` (`maquina_estats_semafor.py`), les funcions que canvien una variable definida fora seu amb `global`.
+
+**Enunciat per a l'alumnat:**
+> Ordena aquestes línies perquè una funció canviï una variable `estat` definida fora d'ella, i mostri el nou valor.
+> ```
+> canvia_estat(1)
+> estat = 0
+> global estat
+> def canvia_estat(nou):
+> display.show(str(estat))
+> estat = nou
+> ```
+
+**Solució completa:**
+```python
+estat = 0
+
+
+def canvia_estat(nou):
+    global estat
+    estat = nou
+    display.show(str(estat))
+
+
+canvia_estat(1)
+```
+
+**Correcció ràpida (30''):** `estat = 0` es defineix **fora** de la funció, abans de tot · `global estat` és la **primera** línia dins del cos de la funció (abans de tocar-la) · la crida `canvia_estat(1)` és fora de la funció.
+
+---
+
+### K10 · S19 — ràdio — Parsons
+
+**Repassa:** `radio.on()`/`radio.config()`/`radio.send()`/`radio.receive()` de `radio_missatges.py` (SA5 S1).
+
+**Enunciat per a l'alumnat:**
+> Ordena aquestes línies perquè el programa enviï "Hola" en prémer el botó A, i mostri qualsevol missatge que arribi.
+> ```
+> radio.on()
+> import radio
+> sleep(20)
+> radio.config(group=5)
+> if button_a.was_pressed():
+> while True:
+> radio.send("Hola")
+> missatge = radio.receive()
+> if missatge is not None:
+> display.scroll(missatge)
+> ```
+
+**Solució completa:**
+```python
+from microbit import *
+import radio
+
+radio.on()
+radio.config(group=5)
+
+while True:
+    if button_a.was_pressed():
+        radio.send("Hola")
+    missatge = radio.receive()
+    if missatge is not None:
+        display.scroll(missatge)
+    sleep(20)
+```
+
+**Correcció ràpida (30''):** `radio.on()` i `radio.config()` es criden **un sol cop, fora** del bucle · `radio.receive()` **pot tornar `None`**: cal comprovar-ho abans de fer-hi res.
+
+---
+
+### K11 · S21 — llistes — Parsons
+
+**Repassa:** l'`historic` (`append()`/`pop(0)`) de `radio_missatges.py` (SA5 S1).
+
+**Enunciat per a l'alumnat:**
+> Ordena aquestes línies perquè una funció guardi missatges en una llista, però descarti sempre el més antic quan ja n'hi hagi més de `MAX`.
+> ```
+> desa("A")
+> historic = []
+> historic.append(missatge)
+> MAX = 3
+> def desa(missatge):
+> historic.pop(0)
+> if len(historic) > MAX:
+> desa("B")
+> ```
+
+**Solució completa:**
+```python
+historic = []
+MAX = 3
+
+
+def desa(missatge):
+    historic.append(missatge)
+    if len(historic) > MAX:
+        historic.pop(0)
+
+
+desa("A")
+desa("B")
+```
+
+**Correcció ràpida (30''):** `historic = []` i `MAX = 3` es defineixen **fora** de la funció, abans de tot · `append()` és sempre la primera acció dins de `desa()` · `pop(0)` treu el **primer** element (el més antic), no el darrer.
+
+---
+
+### K12 · S23 — FSM/diccionari — Parsons
+
+**Repassa:** el diccionari `TRANSICIONS` de `maquina_estats_semafor.py` (SA6 S1).
+
+**Enunciat per a l'alumnat:**
+> Ordena aquestes línies perquè una petita màquina d'estats alterni "encès"/"apagat" cada segon, fent servir un diccionari de transicions.
+> ```
+> sleep(1000)
+> estat = APAGAT
+> canvia()
+> ENCES, APAGAT = range(2)
+> global estat
+> TRANSICIONS = {ENCES: APAGAT, APAGAT: ENCES}
+> def canvia():
+> while True:
+> estat = TRANSICIONS[estat]
+> display.show(str(estat))
+> ```
+
+**Solució completa:**
+```python
+ENCES, APAGAT = range(2)
+estat = APAGAT
+
+TRANSICIONS = {ENCES: APAGAT, APAGAT: ENCES}
+
+
+def canvia():
+    global estat
+    estat = TRANSICIONS[estat]
+    display.show(str(estat))
+
+
+while True:
+    canvia()
+    sleep(1000)
+```
+
+**Correcció ràpida (30''):** `TRANSICIONS[estat]` retorna directament el **següent** estat (no cal cap `if/elif`) · `global estat` dins de `canvia()` · el `while True:` només crida `canvia()` i espera; tota la lògica de transició viu al diccionari.
+
+---
+
+### K13 · S25 — for sobre col·lecció — Parsons — ⚠️ requereix activitat SA7-S2
+
+> ⚠️ **Coordinació amb el Task 2 del pla de millora pedagògica.** Aquesta kata dona per fet que `for element in col·lecció` ja s'ha explicat a SA7-S2 (avançat des de SA8 segons el pla de millora). Si aquell moviment encara no s'ha fet al material de SA7, **ajorna aquesta kata** a la primera sessió posterior en què el concepte ja s'hagi explicat i deixa S25 amb repàs lliure.
+
+**Repassa:** iterar directament sobre els elements d'una llista (en lloc d'un índex), en el context de les mesures de distància del rover.
+
+**Enunciat per a l'alumnat:**
+> Ordena aquestes línies perquè el programa recorri una llista de distàncies mesurades i mostri un avís cada cop que una és inferior a 10 cm.
+> ```
+> sleep(300)
+> distancies = [12, 8, 20, 5]
+> display.clear()
+> for d in distancies:
+> display.show("!")
+> if d < 10:
+> else:
+> ```
+
+**Solució completa:**
+```python
+distancies = [12, 8, 20, 5]
+
+for d in distancies:
+    if d < 10:
+        display.show("!")
+    else:
+        display.clear()
+    sleep(300)
+```
+
+**Correcció ràpida (30''):** `for d in distancies:` recorre els **valors** directament (sense `range(len(...))` ni índex) · tot el cos (`if/else` i `sleep`) va indentat dins del `for`.
+
+---
+
+### K14 · S26 — try/except — Parsons — ⚠️ requereix activitat SA7-S2
+
+> ⚠️ **Coordinació amb el Task 2 del pla de millora pedagògica.** Mateixa nota que K13: `try`/`except` es dona per explicat a SA7-S2. Si encara no s'ha fet, ajorna aquesta kata.
+
+**Repassa:** convertir de manera segura un text rebut a número, sense que un valor inesperat aturi el programa.
+
+**Enunciat per a l'alumnat:**
+> Ordena aquestes línies perquè el programa intenti convertir un missatge a número i, si no ho aconsegueix, mostri una "E" d'error en lloc d'aturar-se.
+> ```
+> display.show("E")
+> valor = int(missatge)
+> missatge = "12"
+> try:
+> display.show(str(valor))
+> except ValueError:
+> ```
+
+**Solució completa:**
+```python
+missatge = "12"
+
+try:
+    valor = int(missatge)
+    display.show(str(valor))
+except ValueError:
+    display.show("E")
+```
+
+**Correcció ràpida (30''):** `try:` i `except ValueError:` van al **mateix nivell** d'indentació · el codi que **pot fallar** (`int(missatge)`) va dins del `try`, no dins de l'`except` · el missatge d'error només s'executa si falla la conversió.
+
+---
+
+### K15 · S27 — log — Parsons
+
+**Repassa:** `log.set_labels()`/`log.add()` de `registre_dades.py` (SA6 S2).
+
+**Enunciat per a l'alumnat:**
+> Ordena aquestes línies perquè el programa registri la temperatura i la llum cada 2 segons amb el mòdul `log` de la micro:bit.
+> ```
+> sleep(2000)
+> import log
+> log.set_labels('temp', 'llum')
+> log.add(temp=temperature(), llum=display.read_light_level())
+> while True:
+> ```
+
+**Solució completa:**
+```python
+import log
+
+log.set_labels('temp', 'llum')
+
+while True:
+    log.add(temp=temperature(), llum=display.read_light_level())
+    sleep(2000)
+```
+
+**Correcció ràpida (30''):** `log.set_labels()` es crida **un sol cop, abans** del bucle · `log.add()` fa servir els **mateixos noms** de columna (`temp`, `llum`) que `set_labels()` · `sleep(2000)` dins del bucle marca la cadència.
+
+---
+
+### K16 · S29 — funcions/paràmetres — Completar buits
+
+**Repassa:** 2a aparició d'aquest concepte (K07 Parsons): funció amb paràmetre per moure un motor, com `avancar(velocitat)` de `velocitat_pwm.py`/`rover_missions.py`.
+
+**Enunciat per a l'alumnat:**
+> Completa els `___` perquè la funció faci avançar el motor M1 (pins P13/P14) a la velocitat que li passis com a paràmetre, i crida-la a 500.
+> ```python
+> def avancar(___):
+>     pin13.write_analog(___)
+>     pin14.write_digital(0)
+>
+>
+> ___(500)
+> ```
+
+**Solució completa:**
+```python
+def avancar(velocitat):
+    pin13.write_analog(velocitat)
+    pin14.write_digital(0)
+
+
+avancar(500)
+```
+
+**Correcció ràpida (30''):** el nom del paràmetre (`velocitat`) es fa servir **igual** dins de la funció, no un número fix · l'altre pin del motor (P14) es posa sempre a `0` · la crida final és `avancar(500)`, amb parèntesis.
+
+---
+
+### K17 · S30 — return — Completar buits
+
+**Repassa:** 2a aparició d'aquest concepte (K08 Parsons): una funció que retorna un text segons una condició, com `NOMS_MISSIO`/classificacions de `rover_missions.py`.
+
+**Enunciat per a l'alumnat:**
+> Completa els `___` perquè la funció classifiqui una distància com a `"PROP"` (menys de 15 cm) o `"LLUNY"` (la resta), i mostri el resultat de classificar 10.
+> ```python
+> def classifica(distancia):
+>     if distancia < 15:
+>         return "PROP"
+>     else:
+>         return ___
+>
+>
+> resultat = ___(10)
+> display.scroll(str(resultat))
+> ```
+
+**Solució completa:**
+```python
+def classifica(distancia):
+    if distancia < 15:
+        return "PROP"
+    else:
+        return "LLUNY"
+
+
+resultat = classifica(10)
+display.scroll(str(resultat))
+```
+
+**Correcció ràpida (30''):** cada branca (`if` i `else`) té el seu propi `return` amb un text diferent · la crida `classifica(10)` es fa amb parèntesis i s'assigna a `resultat` · `str(resultat)` abans de `scroll()`.
+
+---
+
+> Aquest banc l'usen `Programació didàctica/04_Metodologia.md` §4.2 i `06_Avaluacio_criteris_qualificacio.md`, i el criden les guies docents de SA2-SA9 a la franja d'Activació de cada sessió amb la kata que toca. Document intern del curs. Llicència CC BY-SA 4.0.

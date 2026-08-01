@@ -50,7 +50,7 @@
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Repte inicial: *"Com fa un robot per seguir una línia pintada a terra o esquivar un obstacle sense que ningú el guiï?"* Revisió ràpida del rover muntat a la Sessió 0. | Formulen hipòtesis: què necessita "saber" el rover per decidir sol? |
+| Activació | 10' | Repte inicial: *"Com fa un robot per seguir una línia pintada a terra o esquivar un obstacle sense que ningú el guiï?"* Revisió ràpida del rover muntat a la Sessió 0. 🥋 **Kata del dia:** K12 (FSM/diccionari) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis: què necessita "saber" el rover per decidir sol? |
 | Explicació | 30' | **Cinemàtica diferencial**: el rover gira variant la velocitat/sentit relatiu de cada roda (dues rodes motrius + roda boja). Recorda que `avancar()`/`retrocedir()`/`girar()`/`aturar()` són **exactament** les de la SA4: cap pin nou. Modelatge de [`calibratge_motors.py`](codi/calibratge_motors/EXPLICACIO.md): per què cal compensar la velocitat entre M1 i M2. | Prenen notes; relacionen exemples propis (un cotxe de joguina, una cadira de rodes elèctrica) amb la cinemàtica diferencial. |
 | Pràctica | 60' | Acompanya el calibratge individual (proves curtes, ajustar `FACTOR_M1`/`FACTOR_M2`) i les primeres proves de trajectòria (quadrat, gir tancat) amb temps fixos. | Calibren el seu rover perquè vagi recte; proven una trajectòria en quadrat amb girs i avanços temporitzats (Activitat 1 de la fitxa). |
 | Tancament | 20' | Recull dubtes; anticipa que la S2 afegeix el primer sensor propi del rover (seguidor de línia). | Entrada del quadern: factors de calibratge propis + croquis de la trajectòria en quadrat provada. |
@@ -96,7 +96,7 @@
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Mostra [`evita_obstacles.py`](codi/evita_obstacles/EXPLICACIO.md) **sense executar-lo** (PRIMM): pregunta què passa si el rover avança i la distància baixa de 15 cm de cop. | Prediuen el comportament davant d'un obstacle sobtat. |
+| Activació | 10' | Mostra [`evita_obstacles.py`](codi/evita_obstacles/EXPLICACIO.md) **sense executar-lo** (PRIMM): pregunta què passa si el rover avança i la distància baixa de 15 cm de cop. 🥋 **Kata del dia:** K13 (for sobre col·lecció ⚠️ requereix activitat SA7-S2) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen el comportament davant d'un obstacle sobtat. |
 | Explicació | 25' | Sensor d'**ultrasons HC-SR04**: mesura de distància amb `machine.time_pulse_us`, **exactament** el patró de `alarma_ultrasons.py` (SA3), només canviant de pins (trigger **P1**, echo **P2**; a la SA3 es practicava a P14/P15, ara ocupats pels motors). Funció `mesura_distancia()`. Algorisme d'evita-obstacles: aturar, girar, tornar a mesurar. | Prenen notes; comparen amb el patró de la SA3 i identifiquen què canvia (només els pins) i què no (la lògica del time-of-flight). |
 | Repte | 65' | Acompanya el repte **"tria un comportament autònom"**: segons el material disponible a cada taula, cada alumne/a tria seguidor de línia i/o evita-obstacles i el prova a fons. | Trien i proven el seu comportament (Activitat 3 de la fitxa); si sobra temps, proven l'altre. |
 | Tancament | 20' | Recull dubtes; anticipa la integració de la S4. | Documenten al quadern quin comportament han triat i per què. |
@@ -120,7 +120,7 @@
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Recorda el comportament triat a la S3; introdueix la idea de **missió**: combinar més d'un comportament (o afegir-hi millores) sobre una pista real. | Recuperen el seu comportament de la S3. |
+| Activació | 10' | Recorda el comportament triat a la S3; introdueix la idea de **missió**: combinar més d'un comportament (o afegir-hi millores) sobre una pista real. 🥋 **Kata del dia:** K14 (try/except ⚠️ requereix activitat SA7-S2) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Recuperen el seu comportament de la S3. |
 | Explicació | 15' | Modelatge de [`rover_missions.py`](codi/rover_missions/EXPLICACIO.md): com se seleccionen missions amb els botons, i com el **polsador STOP** (P12, pull-up, mateix patró prioritari que `vehicle_seguretat.py` de la SA6) es comprova **sempre primer**. | Prenen notes; identifiquen per què cal comprovar el STOP dins de cada missió, no només al bucle principal. |
 | Repte | 75' | Acompanya la integració individual: el comportament triat (línia i/o obstacles) amb **millores** (velocitat variable, marge de seguretat) sobre una pista de proves. | Integren i milloren el seu comportament autònom (Activitat 4 de la fitxa, producte). Proven amb obstacles i/o circuit reals. |
 | Tancament | 20' | Recull dubtes; **mini-defensa breu** de cada alumne/a (2-3', R4·DO): una decisió de disseny justificada. | Mini-defensa; anoten al quadern la millora aplicada i per què. |

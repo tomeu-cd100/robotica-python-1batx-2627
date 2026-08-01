@@ -41,7 +41,7 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Repartir Micro:shield + Kit 1; encaixar la micro:bit al shield. Pregunta: *"com fa un robot per parpellejar?"* | Encaixen el shield; observen els connectors *block*. |
+| Activació | 10' | Repartir Micro:shield + Kit 1; encaixar la micro:bit al shield. Pregunta: *"com fa un robot per parpellejar?"* 🥋 **Kata del dia:** K01 (if/while) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Encaixen el shield; observen els connectors *block*. |
 | Explicació | 25' | `display.show()`/`display.scroll()` amb bucles `for` (repetir una animació N vegades); acumuladors per comptar repeticions. Introdueix `pin1.write_digital(1/0)` per al LED extern. | Prenen notes; prediuen la sortida d'un bucle `for` senzill. |
 | Pràctica | 55' | Modelatge de [`led_parpelleig.py`](codi/led_parpelleig/led_parpelleig.py): LED extern a P1, `while True:` + comptador de parpellejos mostrat al display cada 10 cicles. | Munten el LED al Micro:shield ([esquemes](SA2_esquemes_connexions.md)) i escriuen/proven el programa (Activitat 1). |
 | Tancament | 20' | Recull dubtes de cablatge; anticipa la Sessió 2 (PWM). | Entrada del quadern: primer muntatge fora de la placa sola. |
@@ -88,7 +88,7 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Presenta l'encàrrec: *"un semàfor o una llum d'ambient que reacciona sola"*. Mostra [`semafor_rele.py`](codi/semafor_rele/semafor_rele.py) **sense executar-lo** (PRIMM). | Prediuen la seqüència de colors i temps. |
+| Activació | 10' | Presenta l'encàrrec: *"un semàfor o una llum d'ambient que reacciona sola"*. Mostra [`semafor_rele.py`](codi/semafor_rele/semafor_rele.py) **sense executar-lo** (PRIMM). 🥋 **Kata del dia:** K02 (variables) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen la seqüència de colors i temps. |
 | Explicació | 15' | Introdueix el **relé** (Kit 3): commuta un circuit extern (p. ex. un llum de 5-12 V aliè a la micro:bit) amb un senyal digital de control; **seguretat**: el relé aïlla el circuit extern, no es toca mai el costat d'alta tensió. | Anoten com es cablegen la bobina i els contactes del relé. |
 | Repte | 75' | Acompanya el muntatge i la programació individual: seqüència de LED/RGB/brunzidor amb bucles i temporitzacions + relé per commutar el circuit extern. | Munten i programen el seu repte (Activitat 3, producte). |
 | Mini-defensa + tancament | 20' | **Mini-defensa oral (1', R4·DO):** cada alumne/a explica en veu alta **què fa** el seu semàfor i **una decisió** presa (per exemple, per què aquest ordre de colors o aquests temps). No cal acabar-lo del tot per defensar-lo. | Fan la mini-defensa; anoten al quadern la decisió que han justificat. |
@@ -114,7 +114,7 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Reparteix les peces pretallades (personalitzades per alumne/a, tallades fora d'horari) i la llista de peces del dossier. | Comproven que tenen totes les peces (§ Llista de peces del dossier). |
+| Activació | 10' | Reparteix les peces pretallades (personalitzades per alumne/a, tallades fora d'horari) i la llista de peces del dossier. 🥋 **Kata del dia:** K03 (for-range) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Comproven que tenen totes les peces (§ Llista de peces del dossier). |
 | Muntatge | 80' | Acompanya el muntatge pas a pas (§ Muntatge del dossier): base i laterals, fixació de la micro:bit + Micro:shield, servo a la tapa, LED i brunzidor a la boca, cablatge segons la taula de pins del dossier. | Munten la carcassa i cablegen els components, seguint la taula de pins. |
 | Prova d'encesa | 20' | Supervisa la **prova d'encesa** (§ del dossier): carregar `led_parpelleig.py` per comprovar que el LED de P1 de la mascota respon i `musica_altaveu.py` per validar el brunzidor/altaveu; comprovar que el servo es mou lliurement a mà (**no es programa encara**). | Carreguen `led_parpelleig.py` i `musica_altaveu.py` per validar el cablatge del LED i del so; deixen la tapa sense encolar. |
 | Tancament | 10' | Checklist de muntatge i **retorn ordenat del material** (cargols, retalls sobrants). Anuncia la SA3 (sensors de la mascota). | Omplen el [checklist alumnat](SA2_checklist_alumnat.md) §muntatge i entreguen el material sobrant. |
