@@ -80,7 +80,7 @@ DOC_EXT = {".pdf", ".xlsx", ".xls", ".pptx", ".ppt", ".docx", ".doc",
 # el docent l'ha de substituir pel repositori real abans de publicar, o bé
 # generar el web amb la variable d'entorn REPO_SLUG="usuari/repo" py ....
 # Vegeu GUIA_INICI_DOCENT.md § «Abans de publicar a GitHub Pages».
-REPO_SLUG = os.environ.get("REPO_SLUG", "PENDENT-DOCENT/robotica-python-1batx-2627")
+REPO_SLUG = os.environ.get("REPO_SLUG", "tomeu-cd100/robotica-python-1batx-2627")
 REPO_URL = f"https://github.com/{REPO_SLUG}"
 PAGES_BASE = f"https://{REPO_SLUG.split('/')[0]}.github.io/{REPO_SLUG.split('/')[1]}"
 RAW_BASE = f"https://raw.githubusercontent.com/{REPO_SLUG}/main/"
