@@ -11,7 +11,7 @@ Primera situació d'aprenentatge del curs (1r trimestre). Introdueix el concepte
 | S1 | Taula entrada-procés-sortida ([Activitat 1](SA1_fitxa_alumnat.md#1--entrada--proces--sortida)) i la [prova diagnòstica](SA1_prova_diagnostica.md) (no qualifica) | Full/document propi (el docent indica el format) |
 | S2 | Esquema etiquetat de la placa ([Activitat 2](SA1_fitxa_alumnat.md#2--la-placa-microbit)) i el full de [normes de seguretat](SA1_normes_seguretat.md) **signat** | Full en paper (es guarda a la carpeta del grup) |
 | S3 | [Activitat 4 · El teu primer programa](SA1_fitxa_alumnat.md#4--el-teu-primer-programa-primm) i la **fitxa-pòster** (producte de la SA — es comença avui) | Quadern tècnic + tasca del docent |
-| ⭐ | [Repte triat](../../Reptes/Reptes_SA1.md) | El docent el valida |
+| ⭐ | [Repte ⭐ de Reptes_SA1.md](../../Reptes/Reptes_SA1.md) (nucli obligatori) | El docent el valida → compta R1, Projectes (45 %) |
 | 📓 | Full del quadern tècnic de cada sessió | En acabar cada sessió |
 
 ## Itinerari per sessions
@@ -30,7 +30,7 @@ Si un dia no tens la micro:bit física a mà, tot el codi d'aquesta SA es pot fe
 - [Fitxa ampliada](SA1_fitxa_ampliada.md) — pensament computacional, ODS i ampliacions.
 - [Qüestionari de conceptes](SA1_questionari_conceptes.md) — per repassar.
 - [Exemple resolt](SA1_exemple_resolt.md) — com es pensa un problema semblant.
-- [Reptes de la SA1](../../Reptes/Reptes_SA1.md) — quan tinguis el nucli al dia.
+- [Reptes ⭐⭐/⭐⭐⭐ de la SA1](../../Reptes/Reptes_SA1.md) — ampliació opcional, per a qui va sobrat de temps (el ⭐ ja és nucli obligatori, vegeu «Què has d'entregar»).
 
 ## Producte i avaluació
 

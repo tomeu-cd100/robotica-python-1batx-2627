@@ -66,4 +66,4 @@ def missio_linia():
 - **SA8:** hi afegiràs telemetria per ràdio sobre aquest mateix rover, sense tocar les funcions de moviment ni de sensors.
 - **Simulador:** python.microbit.org **no** simula motors, HC-SR04 ni seguidor de línia: aquest programa es prova **només** amb el rover real sobre la pista.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA7](../../../../Reptes/Reptes_SA7.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA7](../../../../Reptes/Reptes_SA7.md)**.

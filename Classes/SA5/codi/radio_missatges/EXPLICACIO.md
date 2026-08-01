@@ -77,4 +77,4 @@ Ja coneixies el `for amb range(...)` (SA2): aquí el `for` recorre els **element
 - **Sessió 3:** [`receptor_vehicle.py`](../receptor_vehicle/EXPLICACIO.md) és el **producte**: rep ordres per ràdio i mou el vehicle.
 - **Simulador:** python.microbit.org **sí** simula la ràdio, però només entre instàncies obertes del simulador (no amb una placa física real): és una via de pràctica individual a casa.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA5](../../../../Reptes/Reptes_SA5.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA5](../../../../Reptes/Reptes_SA5.md)**.

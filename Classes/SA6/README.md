@@ -14,7 +14,7 @@ Sisena situació d'aprenentatge del curs (2n trimestre, l'última): fins ara el 
 | S2 | Mini-check individual (no qualifica) i `vehicle_seguretat.py` amb l'STOP prioritari ([Activitat 2](SA6_fitxa_alumnat.md#2--aturada-demergència-prioritària-sessió-2)) | Es mostra al docent / quadern tècnic |
 | S3 | Repte **«vehicle amb aturada d'emergència»** ([Activitat 3](SA6_fitxa_alumnat.md#3--repte-vehicle-amb-aturada-demergència-sessió-3--producte), producte de la SA — tanca el Projecte T2) + mini-defensa breu | El docent el valida a l'aula |
 | S4 | **Prova pràctica T2** (individual, sessió sencera) | Es realitza a l'aula |
-| ⭐ | [Repte triat](../../Reptes/Reptes_SA6.md) | El docent el valida |
+| ⭐ | [Repte ⭐ de Reptes_SA6.md](../../Reptes/Reptes_SA6.md) (nucli obligatori) | El docent el valida → compta R1 |
 | 📓 | Full del quadern tècnic de cada sessió | En acabar cada sessió |
 | 🤖 | Vehicle T2 amb màquina d'estats i STOP prioritari (repte «vehicle amb aturada d'emergència») | Es mostra al docent a la S3 |
 
@@ -35,7 +35,7 @@ Si un dia no tens el vehicle muntat a mà, la **lògica** de la màquina d'estat
 - [Fitxa ampliada](SA6_fitxa_ampliada.md) — pensament computacional, ODS i ampliacions.
 - [Qüestionari de conceptes](SA6_questionari_conceptes.md) — per repassar.
 - [Exemple resolt](SA6_exemple_resolt.md) — com es pensa un problema semblant.
-- [Reptes de la SA6](../../Reptes/Reptes_SA6.md) — quan tinguis el nucli al dia.
+- [Reptes ⭐⭐/⭐⭐⭐ de la SA6](../../Reptes/Reptes_SA6.md) — ampliació opcional, per a qui va sobrat de temps (el ⭐ ja és nucli obligatori, vegeu «Què has d'entregar»).
 
 ## Producte i avaluació
 

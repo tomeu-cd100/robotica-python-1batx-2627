@@ -95,4 +95,4 @@ Tres passos, en aquest ordre, a cada volta: primer **percep** (què hi ha), desp
 - **SA9:** `plantilla_projecte.py` fa servir aquesta mateixa arquitectura `percep()`/`decideix()`/`actua()` per al teu repte final; avui n'has vist un exemple complet i funcional.
 - **Simulador:** python.microbit.org **no** simula cap component d'aquest programa: es prova **només** amb el rover real.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA8](../../../../Reptes/Reptes_SA8.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA8](../../../../Reptes/Reptes_SA8.md)**.

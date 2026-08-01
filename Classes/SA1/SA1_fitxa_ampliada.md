@@ -90,7 +90,7 @@ Tria un **robot real** i analitza'l amb la plantilla [`SA1_poster_robot_plantill
 
 ## Vols més?
 
-- **Reptes ⭐:** tria'n un a [`Reptes/Reptes_SA1.md`](../../Reptes/Reptes_SA1.md) i amplia el teu producte.
+- **Reptes ⭐⭐/⭐⭐⭐:** tria'n un a [`Reptes/Reptes_SA1.md`](../../Reptes/Reptes_SA1.md) i amplia el teu producte (el ⭐ ja és nucli obligatori, fet a la fitxa base).
 - **Simulador:** prova-ho sense maquinari a [python.microbit.org](https://python.microbit.org) (vegeu [`00_Entorns_de_treball.md`](../00_General/00_Entorns_de_treball.md)).
 
 ---

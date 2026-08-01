@@ -111,7 +111,7 @@ La SA1 no només respon *"què és un robot?"*: també presenta **com treballare
 
 > 🎯 **Repte ⭐ (nucli obligatori, mateix temps de pràctica ja previst):** després de la fase «Crea» (`emocions_botons`), tothom fa el repte **⭐ · Targeta de benvinguda digital** de [`Reptes_SA1.md`](../../Reptes/Reptes_SA1.md) — parteix de `hola_mon.py`, mostra el nom (`scroll`) i una imatge que el representi (`show`). Ensenya'l al docent perquè el validi. Qui acaba aviat pot continuar amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional, `dau_sacseig` inclòs).
 
-> 🎯 **Mini-check individual (10', a l'inici d'aquesta sessió; no qualifica).** Abans de començar el bloc PRIMM, passa el mini-check de la SA1: banc complet a [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md#sa1--mini-check-inici-de-la-sessió-3). Llegeix un programa curt (`display.scroll`/`display.show`/`sleep`) sense executar-lo i explica-hi línia a línia. Serveix de radar formatiu, no de nota.
+> 🎯 **Mini-check individual (10', a l'inici d'aquesta sessió).** Abans de començar el bloc PRIMM, passa el mini-check de la SA1: banc complet a [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md#sa1--mini-check-inici-de-la-sessió-3). Sense mirar `hola_mon.py`, l'alumnat **escriu de zero** un programa curt (`display.scroll`/`sleep`/`display.show`/`sleep`) que mostri el seu nom i després una imatge fixa. No qualifica el dia que es fa (radar formatiu), però el millor mini-check del trimestre sí compta un 5 % — vegeu el banc complet.
 
 **Errors freqüents i solució:**
 | Error | Causa | Solució |

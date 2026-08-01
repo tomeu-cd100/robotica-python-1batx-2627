@@ -71,4 +71,4 @@ Sense funcions, per saludar 2 vegades i després 3, hauries de **copiar i enganx
 - **Sessió 1-2:** [`coreografia.py`](../coreografia/EXPLICACIO.md) combina aquestes mateixes idees amb so i display.
 - **Simulador:** la **lògica** de les funcions (bucles, `range`, paràmetres) es pot escriure i revisar al simulador, però el moviment real del servo només es veu amb maquinari.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA4](../../../../Reptes/Reptes_SA4.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA4](../../../../Reptes/Reptes_SA4.md)**.

@@ -79,4 +79,4 @@ El vehicle **no** torna a RUN tot sol: cal una ordre de moviment explícita per 
 - **+ Ampliació:** l'estat **ALERTA** (reservat però no usat al nucli) es pot activar amb un sensor d'ultrasons o de temperatura, sense canviar l'estructura de la màquina d'estats — vegeu [`SA6_fitxa_ampliada.md`](../../SA6_fitxa_ampliada.md).
 - **Simulador:** python.microbit.org **no** simula motors ni el relé; només es pot revisar la **lògica** de la màquina d'estats i del protocol de ràdio.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA6](../../../../Reptes/Reptes_SA6.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA6](../../../../Reptes/Reptes_SA6.md)**.

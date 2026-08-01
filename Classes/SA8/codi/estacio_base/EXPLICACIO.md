@@ -78,4 +78,4 @@ Mateix mòdul `log` natiu de la V2 que `registre_dades.py` (SA6): cada lectura q
 - **Sessió 3:** les dades registrades (`MY_DATA.HTM`) són la base de la reflexió sobre ètica de dades i IA de la fitxa ampliada.
 - **Simulador:** la **ràdio i el mòdul `log`** SÍ es simulen a python.microbit.org (2 instàncies per assajar l'enviament/recepció).
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA8](../../../../Reptes/Reptes_SA8.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA8](../../../../Reptes/Reptes_SA8.md)**.

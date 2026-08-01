@@ -69,7 +69,7 @@ ___________________________________________________________________
 
 ## Vols més?
 
-- **Reptes ⭐:** tria'n un a [`Reptes/Reptes_SA4.md`](../../Reptes/Reptes_SA4.md) i amplia el teu producte.
+- **Reptes ⭐⭐/⭐⭐⭐:** tria'n un a [`Reptes/Reptes_SA4.md`](../../Reptes/Reptes_SA4.md) i amplia el teu producte (el ⭐ ja és nucli obligatori, fet a la fitxa base).
 - **Simulador:** el de [python.microbit.org](https://python.microbit.org) **no** reprodueix ni el servo ni els motoreductors (vegeu [`SA4_esquemes_connexions.md`](SA4_esquemes_connexions.md) §Simulació); només botons, display i so sense `pin=`.
 
 ---

@@ -61,4 +61,4 @@ Els gestos (`"left"`, `"right"`, `"shake"`) són una **segona via d'entrada**, i
 - **Sessió 3:** el mateix protocol (`"CMD:" + ordre`) és el que interpreta [`receptor_vehicle.py`](../receptor_vehicle/EXPLICACIO.md), el **producte** de la SA5.
 - **SA6:** aquest mateix comandament es reutilitzarà com a base del control remot complet del vehicle.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA5](../../../../Reptes/Reptes_SA5.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA5](../../../../Reptes/Reptes_SA5.md)**.

@@ -43,4 +43,4 @@ Cada element és `"NotaOctava:Durada"` (Do4, durada 4 "temps"). `music.play(...)
 - **Sessió 3 (repte):** [`semafor_rele`](../semafor_rele/EXPLICACIO.md) fa sonar un avís a la fase ambre amb `music.pitch()`.
 - **Sessió 4:** les melodies d'estat de la **mascota** (el seu "somriure sonor") parteixen d'aquest mateix codi.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA2](../../../../Reptes/Reptes_SA2.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA2](../../../../Reptes/Reptes_SA2.md)**.

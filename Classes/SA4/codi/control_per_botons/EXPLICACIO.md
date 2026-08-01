@@ -81,4 +81,4 @@ Aquesta idea —una entrada que **sempre** interromp el que s'estigui fent, sens
 - **SA6:** el botó B d'avui («sempre atura») es formalitza com a estat **STOP prioritari** amb un polsador dedicat al xassís.
 - **Simulador:** els botons A/B es simulen, però com que les funcions de moviment criden `write_analog`/`write_digital` sobre motors reals, substitueix-les temporalment per `display.scroll(...)` per validar la **lògica** de la seqüència sense maquinari.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA4](../../../../Reptes/Reptes_SA4.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA4](../../../../Reptes/Reptes_SA4.md)**.

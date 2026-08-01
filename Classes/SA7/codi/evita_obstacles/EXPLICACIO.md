@@ -65,4 +65,4 @@ Primer **s'atura** (mai gira directament sense aturar-se abans: evitaria un cop 
 - **Sessió 4 (producte):** [`rover_missions`](../rover_missions/EXPLICACIO.md) integra aquesta mateixa funció `mesura_distancia()` a les missions «paret» i «línia».
 - **Simulador:** python.microbit.org **no** simula cap sensor extern, i molt menys el temps de vol de l'HC-SR04: aquesta pràctica es fa **només** amb maquinari real.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA7](../../../../Reptes/Reptes_SA7.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA7](../../../../Reptes/Reptes_SA7.md)**.

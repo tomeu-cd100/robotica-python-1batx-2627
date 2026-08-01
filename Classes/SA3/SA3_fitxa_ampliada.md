@@ -71,7 +71,7 @@ ___________________________________________________________________
 
 ## Vols més?
 
-- **Reptes ⭐:** tria'n un a [`Reptes/Reptes_SA3.md`](../../Reptes/Reptes_SA3.md) i amplia el teu producte.
+- **Reptes ⭐⭐/⭐⭐⭐:** tria'n un a [`Reptes/Reptes_SA3.md`](../../Reptes/Reptes_SA3.md) i amplia el teu producte (el ⭐ ja és nucli obligatori, fet a la fitxa base).
 - **Simulador:** el de [python.microbit.org](https://python.microbit.org) **no** reprodueix cap sensor extern (vegeu [`SA3_esquemes_connexions.md`](SA3_esquemes_connexions.md) §Simulació); només els sensors interns (llum, temperatura, so, acceleròmetre) i els botons.
 
 ---

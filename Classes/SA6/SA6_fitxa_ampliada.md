@@ -79,7 +79,7 @@ ___________________________________________________________________
 
 ## Vols més?
 
-- **Reptes ⭐:** tria'n un a [`Reptes/Reptes_SA6.md`](../../Reptes/Reptes_SA6.md) i amplia el teu producte.
+- **Reptes ⭐⭐/⭐⭐⭐:** tria'n un a [`Reptes/Reptes_SA6.md`](../../Reptes/Reptes_SA6.md) i amplia el teu producte (el ⭐ ja és nucli obligatori, fet a la fitxa base).
 - **Simulador:** el de [python.microbit.org](https://python.microbit.org) **sí** simula `temperature()`, els botons i el mòdul `log`, però **NO** simula motors ni relé (vegeu [`SA6_esquemes_connexions.md`](SA6_esquemes_connexions.md) §Simulació): és una bona via de pràctica individual a casa per a la part de lògica.
 
 ---

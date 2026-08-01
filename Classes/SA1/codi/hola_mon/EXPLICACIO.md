@@ -64,4 +64,4 @@ Fixa't que **canviant només el text de `scroll()` o la imatge de `show()`** can
 - **Si vas sobrat:** l'ampliació [`dau_sacseig`](../dau_sacseig/EXPLICACIO.md) (acceleròmetre + nombres aleatoris).
 - **Tot el curs:** `from microbit import *` és la primera línia de **tots** els programes de micro:bit que faràs; a la SA2 hi afegiràs sortides connectades al Micro:shield (LED, brunzidor, servo).
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA1](../../../../Reptes/Reptes_SA1.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA1](../../../../Reptes/Reptes_SA1.md)**.

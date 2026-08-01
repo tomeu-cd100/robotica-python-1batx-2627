@@ -56,4 +56,4 @@ if comptador % 10 == 0:
 - **Ara mateix:** el mateix pin P1 torna a la Sessió 2 amb PWM ([`pwm_led_rgb`](../pwm_led_rgb/EXPLICACIO.md)): passaràs d'encès/apagat a intensitats intermèdies.
 - **Sessió 4:** aquest mateix codi (o el de `pwm_led_rgb`) és el que faràs servir per validar el cablatge del LED indicador de la **mascota** en muntar-la.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA2](../../../../Reptes/Reptes_SA2.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA2](../../../../Reptes/Reptes_SA2.md)**.

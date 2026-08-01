@@ -62,4 +62,4 @@ Fixa't que **no** són la mateixa escala: el sensor intern dona 0-255, el de P0 
 - **Sessió 3:** [`mascota_reactiva`](../mascota_reactiva/EXPLICACIO.md) fa servir `display.read_light_level()` per decidir quan la mascota "s'adorm".
 - **Simulador:** python.microbit.org simula el sensor de llum **intern** (`display.read_light_level()`), però **no** el sensor extern del Kit 2 (`pin0.read_analog()`): la part de barres només es veu sencera amb maquinari real.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA3](../../../../Reptes/Reptes_SA3.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA3](../../../../Reptes/Reptes_SA3.md)**.

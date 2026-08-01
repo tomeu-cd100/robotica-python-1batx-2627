@@ -53,4 +53,4 @@ El relé es commuta a partir de la **variable d'estat** (`actiu`), que només ca
 - **Ara mateix:** primer contacte amb un **llaç de control tancat** amb realimentació (la lectura del sensor decideix l'actuador).
 - **Sessió 3:** el mateix principi de "no canviar d'estat sense una condició clara" és el que fa que l'**STOP prioritari** del vehicle funcioni sense ambigüitat.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA6](../../../../Reptes/Reptes_SA6.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA6](../../../../Reptes/Reptes_SA6.md)**.

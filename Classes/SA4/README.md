@@ -12,7 +12,7 @@ Quarta situació d'aprenentatge del curs (2n trimestre, primera de tres). La mic
 | S2 | `velocitat_pwm.py` provat ([Activitat 2](SA4_fitxa_alumnat.md#2--funcions-de-moviment-del-motoreductor-sessió-2)) i mini-check individual (no qualifica) | Es mostra al docent / quadern tècnic |
 | S3 | 🤖 Repte **«control per botons»** ([Activitat 3](SA4_fitxa_alumnat.md#3--repte-control-per-botons-sessió-3--producte), producte de la SA) + mini-defensa breu | El docent el valida a l'aula |
 | S4 | Vehicle T2 muntat i prova d'encesa feta | Es mostra al docent |
-| ⭐ | [Repte triat](../../Reptes/Reptes_SA4.md) | El docent el valida |
+| ⭐ | [Repte ⭐ de Reptes_SA4.md](../../Reptes/Reptes_SA4.md) (nucli obligatori) | El docent el valida → compta R1 |
 | 📓 | Full del quadern tècnic de cada sessió | En acabar cada sessió |
 | 🤖 | Vehicle T2 muntat (xassís, motors i roda boja fixats, cablatge exacte, prova de moviment feta) | Es porta a la SA5 per treballar-hi la ràdio |
 
@@ -33,7 +33,7 @@ Si un dia no tens el Micro:shield o els kits a mà, la **lògica** dels programe
 - [Fitxa ampliada](SA4_fitxa_ampliada.md) — pensament computacional, ODS i ampliacions.
 - [Qüestionari de conceptes](SA4_questionari_conceptes.md) — per repassar.
 - [Exemple resolt](SA4_exemple_resolt.md) — com es pensa un problema semblant.
-- [Reptes de la SA4](../../Reptes/Reptes_SA4.md) — quan tinguis el nucli al dia.
+- [Reptes ⭐⭐/⭐⭐⭐ de la SA4](../../Reptes/Reptes_SA4.md) — ampliació opcional, per a qui va sobrat de temps (el ⭐ ja és nucli obligatori, vegeu «Què has d'entregar»).
 
 ## Producte i avaluació
 

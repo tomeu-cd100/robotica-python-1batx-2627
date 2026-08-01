@@ -76,7 +76,7 @@ ___________________________________________________________________
 
 ## Vols més?
 
-- **Reptes ⭐:** tria'n un a [`Reptes/Reptes_SA8.md`](../../Reptes/Reptes_SA8.md) i amplia el teu producte.
+- **Reptes ⭐⭐/⭐⭐⭐:** tria'n un a [`Reptes/Reptes_SA8.md`](../../Reptes/Reptes_SA8.md) i amplia el teu producte (el ⭐ ja és nucli obligatori, fet a la fitxa base).
 - **Simulador:** la **ràdio i el mòdul `log`** SÍ es simulen a python.microbit.org (2 instàncies); **cap** sensor (DHT11, IMU) ni els motors s'hi simulen (vegeu [`SA8_esquemes_connexions.md`](SA8_esquemes_connexions.md) §Simulació).
 
 ---

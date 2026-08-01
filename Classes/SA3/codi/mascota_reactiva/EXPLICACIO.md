@@ -84,4 +84,4 @@ Si fa `TEMPS_CALMA` mil·lisegons que no passa res, la mascota torna sola a l'es
 - **Simulador:** python.microbit.org simula l'acceleròmetre, els botons i la llum/so **interns**, però **no** el PIR ni el polsador externs (Kit 2/Kit 1): substitueix-los temporalment per `button_a.is_pressed()` per validar la lògica, i recalibra amb el maquinari real.
 - **SA4:** el servo (P0) ja és a la mascota però **no** es programa fins llavors.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA3](../../../../Reptes/Reptes_SA3.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA3](../../../../Reptes/Reptes_SA3.md)**.

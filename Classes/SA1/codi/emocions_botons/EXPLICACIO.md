@@ -101,4 +101,4 @@ while True:
 - **Si vas sobrat:** l'ampliació [`dau_sacseig`](../dau_sacseig/EXPLICACIO.md) (acceleròmetre + nombres aleatoris, amb `if` dins d'un `while True:` igual que aquí).
 - **SA2 i tot el curs:** l'estructura `while True:` + `if/elif/else` torna a sortir a **pràcticament tots** els programes que faràs (llegir un sensor i decidir què fer).
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA1](../../../../Reptes/Reptes_SA1.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA1](../../../../Reptes/Reptes_SA1.md)**.

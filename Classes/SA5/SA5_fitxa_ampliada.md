@@ -75,7 +75,7 @@ ___________________________________________________________________
 
 ## Vols més?
 
-- **Reptes ⭐:** tria'n un a [`Reptes/Reptes_SA5.md`](../../Reptes/Reptes_SA5.md) i amplia el teu producte.
+- **Reptes ⭐⭐/⭐⭐⭐:** tria'n un a [`Reptes/Reptes_SA5.md`](../../Reptes/Reptes_SA5.md) i amplia el teu producte (el ⭐ ja és nucli obligatori, fet a la fitxa base).
 - **Simulador:** el de [python.microbit.org](https://python.microbit.org) **sí** simula la ràdio, però només **entre instàncies del simulador** (vegeu [`SA5_esquemes_connexions.md`](SA5_esquemes_connexions.md) §Simulació): és una bona via de pràctica individual a casa, encara que no reprodueixi el moviment real del vehicle.
 
 ---

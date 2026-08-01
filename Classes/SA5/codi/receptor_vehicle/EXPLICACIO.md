@@ -58,4 +58,4 @@ Cada entrada de l'historial és una **tupla** `(ordre, instant)`: una parella de
 - **SA6:** el vehicle passarà d'obeir ordres puntuals a un **llaç de control** (esdeveniments encadenats, histèresi), reutilitzant aquest mateix esquema de recepció.
 - **Simulador:** la lògica del protocol (separar prefix i ordre) es pot revisar al simulador de python.microbit.org, però el moviment real dels motors necessita el vehicle muntat.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA5](../../../../Reptes/Reptes_SA5.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA5](../../../../Reptes/Reptes_SA5.md)**.

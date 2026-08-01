@@ -61,4 +61,4 @@ display.clear()             # Apaga el display, a punt per al seguent sacseig
 - **Ara mateix:** els [reptes ⭐⭐⭐ de la SA1](../../../../Reptes/Reptes_SA1.md) reprenen aquest programa per fer un dau més complet.
 - **SA3 i tot el curs:** llegir un sensor dins d'un `if` que forma part d'un `while True:` és el patró que faràs servir amb **tots** els sensors del Micro:shield (llum, distància, so...).
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA1](../../../../Reptes/Reptes_SA1.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA1](../../../../Reptes/Reptes_SA1.md)**.

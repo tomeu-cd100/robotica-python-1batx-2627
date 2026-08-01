@@ -76,4 +76,4 @@ El bucle de moviment corre cada ~20 ms (perquè el rover reaccioni de pressa), p
 - **Sessió 3:** la reflexió sobre IA (Teachable Machine) parteix de la mateixa idea que `mpu_orientacio()` fa "a mà" (un llindar sobre la magnitud d'acceleració): un classificador entrenat faria el mateix, però après de dades enlloc de programat.
 - **Simulador:** la **ràdio sí** es simula (2 instàncies obertes alhora, per assajar el format del missatge); **cap** sensor ni motor d'aquest programa es simula.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA8](../../../../Reptes/Reptes_SA8.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA8](../../../../Reptes/Reptes_SA8.md)**.

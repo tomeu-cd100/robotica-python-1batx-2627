@@ -96,4 +96,4 @@ Aquesta és la primera funció **amb valor de retorn que escrius tu** (a la S1 v
 - **Sessió 4:** aquests mateixos pins (M1/M2) es fixen **definitivament** en muntar el xassís del vehicle T2 i no es tornen a tocar a T3 (vegeu `00_Projecte_T2_Vehicle.md`).
 - **Simulador:** python.microbit.org **no** simula els motoreductors: cal maquinari real des del primer moment.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA4](../../../../Reptes/Reptes_SA4.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA4](../../../../Reptes/Reptes_SA4.md)**.

@@ -81,4 +81,4 @@ Un cop et surti bé, torna a la versió amb `TRANSICIONS` (bloc 2): fa exactamen
 - **Sessió 2:** el vehicle tindrà la seva pròpia FSM (RUN/STOP/ALERTA), amb la mateixa idea de «un únic lloc que canvia l'estat» però amb l'STOP com a transició **prioritària**.
 - **Sessió 3:** `vehicle_seguretat.py` reutilitza exactament aquest patró a `actualitza_estat()`.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA6](../../../../Reptes/Reptes_SA6.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA6](../../../../Reptes/Reptes_SA6.md)**.
