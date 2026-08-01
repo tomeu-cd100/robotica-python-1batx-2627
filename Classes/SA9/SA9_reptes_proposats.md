@@ -31,6 +31,8 @@
 
 **Maquinari necessari (Kit 2).** Rover de SA7-SA8 (motors, seguidor de línia, HC-SR04); brunzidor o LED (Kit 1/3) per confirmar l'entrega; segona micro:bit com a comandament (d'un company, per torns, o del docent, com a SA5/SA8).
 
+> 🎛️ **Dues plaques, treball individual.** Com a SA5/SA8: el codi de les **dues** plaques l'escriu **cada alumne**; la segona placa (comandament) s'obté per **emparellament puntual** amb un company (per torns) o amb el docent — és només un **banc de proves**, mai un producte compartit.
+
 **Esquema de components.** Sense pins nous respecte al rover heretat; el comandament envia ordres per ràdio amb un protocol propi (`"CMD:"`, com a SA5/SA6); el rover confirma l'entrega amb el brunzidor/LED ja cablejat i, opcionalment, envia telemetria de tornada (`"TEL:"`, com a SA8).
 
 **Criteris d'èxit.**

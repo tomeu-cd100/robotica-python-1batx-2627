@@ -75,7 +75,7 @@ def decideix(dades):
 # --- 6. ACTUA --------------------------------------------------------------
 def actua():
     # TODO: activa aqui els actuadors del teu repte (motors, rele,
-    # display, ràdio...) segons l'estat actual.
+    # display, radio...) segons l'estat actual.
     pass
 
 
