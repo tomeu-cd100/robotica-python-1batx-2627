@@ -18,29 +18,31 @@
 
 - **Mínim de pistes per a un grup de 20 alumnes: 2** (marge ajustat, ~10'). Amb grups de **més de 22 alumnes cal una tercera pista**: amb 2 pistes, 24 alumnes necessitarien ⌈24/2⌉×9' = 108', que ja no caben en ~100' efectius.
 - Cada grup fa la Part B (taula) **mentre espera** el seu torn de pista, no com un bloc separat abans o després; mentre no li toca pista, **verifica el codi de la Part A** al banc o al simulador (només la lògica de ràdio/protocol; motors i sensors **no** es simulen).
+- L'ítem obligatori «comportament nou» (P3.9) també es fa **a la taula**, dins del mateix temps de la Part B: no afegeix cap minut a la rotació de la pista (l'aritmètica de dalt queda intacta).
 - Ordre de torns publicat a l'inici; qui ha passat per la pista completa la documentació del quadern.
 - El docent només observa i cronometra a la pista; la correcció de codi es fa després amb el quadern i el codi lliurat.
 
 ### Competències i criteris avaluats
-- **CE-R4** (robots) → CA4.1, CA4.2 · **CE-R3** (control) → CA3.1
+- **CE-R4** (robots) → CA4.1, CA4.2 · **CE-R3** (control) → CA3.1 · **CE-R1** (programar) → CA1.1
 - Rúbriques: **R1** (codi), **R3** (robot/control), **R4** (documentació).
 
 ---
 
 ## Enunciat (per nivells)
 
-### PART A — Rover a la pista (6 punts)
+### PART A — Rover a la pista (4 punts)
 Programa el rover perquè, sobre la pista marcada:
 1. **Nivell satisfactori (nucli):** faci un **recorregut definit i calibrat** (recte + gir de 90° + recte) de manera fiable, compensant la diferència entre motors (com a `calibratge_motors.py`).
 2. **Ampliació (notable):** **reaccioni a un obstacle** amb l'HC-SR04 (trigger P1, echo P2): s'atura i l'esquiva.
 3. **Ampliació (excel·lent):** **segueixi una línia** amb el sensor KS0050 (P0), corregint la trajectòria cap al costat on la perd.
 
-### PART B — Telemetria a la taula (4 punts)
+### PART B — Telemetria i comportament nou a la taula (5 punts)
 4. **Nivell satisfactori (nucli):** programa (**sense rover, només la placa**) l'enviament d'una **lectura per ràdio** amb el prefix **`TEL:`** (format clau:valor separat per `;`, com a `telemetria_radio.py`/`estacio_base.py`).
 5. **Ampliació:** integra una **decisió a partir d'una ordre rebuda** amb un prefix diferent (**`CMD:`**), de manera que una acció (per exemple, prémer un botó) dispari un comportament (com aturar el rover en un sistema real). *(Repàs d'integració: el protocol `CMD:` és contingut de la SA5-SA6, no de la SA7-SA8; aquí es reutilitza per integrar-lo amb la telemetria nova, no s'hi introdueix res nou.)*
+6. **Ítem obligatori (2 punts): programa un comportament NOU del rover.** Escriu, en una **funció pròpia**, un comportament del rover **no treballat a cap sessió del curs** — per exemple: «aparca (s'atura) quan el sensor de línia l'ha detectat **dues vegades seguides**», o un enunciat equivalent que et proposi el docent. Redacta'l **a la taula** (mateix bloc horari que la resta de la Part B: **no necessita temps addicional de pista** ni trenca la rotació contínua): es valora la **lògica i l'estructura de la funció** (paràmetre i/o valor de retorn, segons calgui), verificable traçant el codi o amb el REPL/simulador. Si et toca torn de pista abans que s'acabi la sessió pots provar-lo amb el rover real, però **no cal** per obtenir la puntuació.
 
 ### Lliurament
-Demostració a la pista (Part A) + programa de telemetria (Part B) + **explicació al quadern**: estratègia del recorregut/comportament (Part A) i descripció del protocol `TEL:`/`CMD:` (Part B).
+Demostració a la pista (Part A) + programa de telemetria (Part B) + **codi del comportament nou** (funció pròpia, ítem obligatori) + **explicació al quadern**: estratègia del recorregut/comportament (Part A) i descripció del protocol `TEL:`/`CMD:` i de la funció del comportament nou (Part B).
 
 ### Reflexió final de curs (3 línies, no puntua)
 > Última entrada del quadern: **(1)** la competència de què estic més orgullós/osa aquest curs · **(2)** el que encara em costa · **(3)** on ho continuaré (batxillerat tecnològic, Treball de Recerca, projecte propi, competició…). Tanca el quadern com el vas obrir: mirant el procés, no només la nota.
@@ -51,14 +53,16 @@ Demostració a la pista (Part A) + programa de telemetria (Part B) + **explicaci
 
 | Criteri | Punts | CA | Rúbrica |
 |---|---|---|---|
-| Part A: recorregut fix calibrat i fiable (nucli) | 3 | CA4.1 | R1, R3 |
-| Part A: reacció a obstacle amb HC-SR04 (ampliació) | 1,5 | CA4.1, CA3.1 | R3 |
-| Part A: seguidor de línia (ampliació) | 1,5 | CA4.1, CA3.1 | R3 |
+| Part A: recorregut fix calibrat i fiable (nucli) | 2 | CA4.1 | R1, R3 |
+| Part A: reacció a obstacle amb HC-SR04 (ampliació) | 1 | CA4.1, CA3.1 | R3 |
+| Part A: seguidor de línia (ampliació) | 1 | CA4.1, CA3.1 | R3 |
 | Part B: telemetria per ràdio amb prefix `TEL:` (nucli) | 2 | CA4.2 | R1 |
 | Part B: integració decisió/ordre `CMD:` (ampliació, repàs SA5-SA6) | 1 | CA4.2, CA3.1 | R1, R3 |
+| **Part B: comportament nou del rover, funció pròpia (obligatori)** | **2** | **CA1.1** | **R1** |
 | Documentació (estratègia del recorregut + protocol de ràdio) | 1 | CA3.1 | R4 |
 
-> Orientació: nucli de les dues parts ben fet ≈ 5-6; amb una ampliació ≈ 7-8; amb totes i bona documentació ≈ 9-10.
+> Orientació: nucli + ítem obligatori de les dues parts ben fet ≈ 5-6; amb una ampliació ≈ 7-8; amb totes i bona documentació ≈ 9-10.
+> Reequilibri de barem (P3.9): el «comportament nou» és **obligatori**, no una ampliació — puntua encara que no es facin les ampliacions de pista. Per fer-hi lloc sense superar els 10 punts, el recorregut calibrat baixa de 3 a 2 punts i les dues ampliacions de pista baixen de 1,5 a 1 punt cada una; el nucli de telemetria `TEL:` es manté intacte.
 
 ---
 
@@ -292,5 +296,86 @@ while True:
 </details>
 
 **Què mirar en corregir el nucli:** (1) el missatge de telemetria porta el prefix `TEL:` i camps `clau:valor` separats per `;`; (2) l'enviament es llença **a intervals** (`running_time()`), no a cada volta del bucle; (3) el prefix `CMD:` de l'ampliació és **diferent** del `TEL:`, perquè la placa receptora no confongui una ordre amb una dada — recorda que aquest protocol `CMD:` ja es va ensenyar a la SA5-SA6: aquí **no s'avalua contingut nou de SA7-SA8**, sinó la capacitat d'integrar-lo amb la telemetria.
+
+### Ítem obligatori — comportament nou del rover (funció pròpia)
+
+<details markdown="1">
+<summary>Desplega el codi complet (<code>prova_t3_comportament_nou.py</code>)</summary>
+
+```python
+# Prova practica T3 - ITEM NOU (obligatori, 2 punts) - SOLUCIO ORIENTATIVA
+# (docent, NO es lliura). Comportament NOU del rover, NO treballat a cap
+# sessio del curs: "aparca quan detecta la linia DUES vegades seguides".
+# Es redacta a la TAULA (mateix bloc horari que la Part B): no necessita
+# temps addicional de pista de la rotacio continua. Es valora la logica i
+# l'estructura de la funcio (parametre + retorn); si toca torn de pista
+# abans d'acabar la sessio es pot provar amb el rover real, pero no cal
+# per obtenir la puntuacio.
+# Cablatge (00_Fil_conductor_construccions.md #1b, rover T3, igual que
+# prova_t3_rover.py): M1=P13/P14, M2=P15/P16, seguidor de linia=P0.
+# Simulador: aquest comportament necessita el rover real (motors i sensor
+# de linia no es simulen); la funcio cal_aparcar() si es pot provar sola
+# al REPL amb valors enters (0, 1, 2...).
+
+from microbit import *
+
+M1_ENDAVANT = pin13
+M1_ENRERE = pin14
+M2_ENDAVANT = pin15
+M2_ENRERE = pin16
+SEGUIDOR_LINIA = pin0
+
+VELOCITAT_AVANCAR = 400
+LLINDAR_LINIA = 500
+
+
+def avancar(velocitat):
+    M1_ENDAVANT.write_analog(velocitat)
+    M1_ENRERE.write_digital(0)
+    M2_ENDAVANT.write_analog(velocitat)
+    M2_ENRERE.write_digital(0)
+
+
+def aturar():
+    M1_ENDAVANT.write_digital(0)
+    M1_ENRERE.write_digital(0)
+    M2_ENDAVANT.write_digital(0)
+    M2_ENRERE.write_digital(0)
+
+
+def cal_aparcar(deteccions_consecutives):
+    # FUNCIO NOVA (item obligatori): UN PARAMETRE i VALOR DE RETORN.
+    # Comportament no vist a classe: cal aparcar quan la linia s'ha
+    # detectat DUES vegades SEGUIDES (no nomes un cop, per evitar un fals
+    # positiu d'un sol instant de lectura sorollosa).
+    return deteccions_consecutives >= 2
+
+
+deteccions = 0
+aparcat = False
+
+while not aparcat:
+    lectura = SEGUIDOR_LINIA.read_analog()
+    detecta_linia = lectura < LLINDAR_LINIA
+
+    if detecta_linia:
+        deteccions += 1
+    else:
+        deteccions = 0   # nomes compten deteccions SEGUIDES, sense talls
+
+    if cal_aparcar(deteccions):
+        aturar()
+        display.show(Image.YES)
+        aparcat = True
+    else:
+        avancar(VELOCITAT_AVANCAR)
+        display.show(Image.ARROW_N)
+
+    sleep(50)
+```
+
+</details>
+
+**Què mirar en corregir l'ítem obligatori (2 punts):** (1) el comportament és **realment nou** (no una simple còpia de `recorregut_fix()`/`evita_obstacles()`/`segueix_linia()` de la Part A); (2) hi ha una **funció pròpia** amb un paràmetre que decideix el comportament (aquí, `cal_aparcar()`) i, si escau, un valor de retorn utilitzat de veritat; (3) la lògica compta ocurrències **seguides**, no acumulades sense reiniciar-se. Qualsevol enunciat equivalent proposat pel docent és vàlid: l'important és que sigui codi **no assajat prèviament** i amb una funció pròpia identificable. No es penalitza no haver-lo pogut provar amb el rover real si el torn de pista no ha arribat a temps.
 
 > Avaluació global del trimestre: combinar el resultat d'aquesta prova amb la rúbrica del **projecte final (SA9)**, defensat a la S4 — instruments separats, cap evidència no compta dues vegades.

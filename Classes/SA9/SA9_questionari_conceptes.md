@@ -36,17 +36,40 @@
    - c) **Perquè el relé commuta l'alimentació externa de la bomba de manera segura; el Micro:shield no pot alimentar-la directament.**
    - d) Perquè el relé substitueix el sensor d'humitat.
 
-5. Per què cada repte del banc de la SA9 té criteris ⭐/⭐⭐/⭐⭐⭐, igual que els reptes de SA1-SA8?
-   - a) Perquè només compta l'ampliació ⭐⭐⭐; el nucli ⭐ no puntua.
-   - b) **Perquè el nucli ⭐ és assolible per a tothom i les ampliacions permeten diferenciar sense excloure ningú.**
-   - c) Els nivells són només decoratius, no tenen relació amb la nota.
-   - d) ⭐⭐⭐ vol dir que cal fer els tres reptes diferents.
+5. Observa aquest fragment del bucle principal d'un projecte de la SA9 (variant **no recomanada** de `plantilla_projecte.py`):
+   ```python
+   while True:
+       if polsador_premut():
+           display.show(Image.NO)
+           continue
+       humitat = HUMITAT.read_analog()
+       if humitat < LLINDAR_SEC:
+           RELE_BOMBA.write_digital(1)
+       else:
+           RELE_BOMBA.write_digital(0)
+       sleep(20)
+   ```
+   Quin és el problema principal d'aquest codi, segons l'arquitectura del curs?
+   - a) No hi ha cap problema real: separar-ho en `percep()`/`decideix()`/`actua()` és només estètica.
+   - b) **Barreja lectura del sensor, decisió i acció sobre el relé, totes dins del `while True`, sense separar `percep()`/`decideix()`/`actua()`; si el sistema falla, costa més saber si el problema és de lectura, decisió o acció.**
+   - c) El problema és que `humitat` s'hauria de llegir amb `read_digital()` en lloc de `read_analog()`.
+   - d) El problema és que falta un `sleep(20)` al final del bucle.
 
-6. Segons la R4·DO (mini-rúbrica de la defensa oral), quins són els 3 indicadors que s'avaluen a la defensa de la SA9?
-   - a) Volum de veu, durada i nombre de diapositives.
-   - b) Quantitat de codi escrit, nombre de sensors i preu del maquinari.
-   - c) Només la claredat; la resta no compta a la SA9.
-   - d) **Claredat (què fa el sistema), decisió tècnica justificada (el per què) i resposta a preguntes.**
+6. Aquest fragment és la `decideix()` d'un repte de reg automàtic (Kit 3: sensor d'humitat + bomba amb relé). Quina línia falta perquè el sistema comenci a regar quan el terra estigui sec?
+   ```python
+   def decideix(dades):
+       global estat
+       if estat == ESPERA:
+           if dades["humitat"] < LLINDAR_SEC:
+               ____  # <-- que hi va aqui?
+       elif estat == REGANT:
+           if dades["humitat"] >= LLINDAR_SEC:
+               actualitza_estat(ESPERA)
+   ```
+   - a) **`actualitza_estat(REGANT)`**
+   - b) `RELE_BOMBA.write_digital(1)`
+   - c) `estat = ESPERA`
+   - d) `return REGANT`
 
 7. Per què la Sessió 5 (prova pràctica T3) **no reavalua** el projecte de la SA9?
    - a) Perquè la S5 no compta per a la nota final.
@@ -66,11 +89,22 @@
    - c) Perquè la IA no es pot fer servir mai en aquest curs.
    - d) Perquè declarar-ho és obligatori només si el docent ho demana explícitament.
 
-10. Un repte que combina "temperatura alta" **i** "CO₂ alt" alhora per generar una alerta combinada, integra quins dos blocs del curs com a mínim?
-    - a) Cap, és un sol bloc (sensors).
-    - b) Només robòtica mòbil.
-    - c) **Sensors avançats/telemetria (lectura i protocol) i control (condicionals combinats per decidir l'alerta).**
-    - d) Fabricació digital i electrònica bàsica.
+10. Un repte d'estació ambiental combina "temperatura alta" i "CO₂ alt" per generar una alerta. Observa aquest fragment de `decideix()`:
+    ```python
+    def decideix(dades):
+        global estat
+        if estat == NORMAL:
+            if dades["temp"] > LLINDAR_TEMP and dades["co2"] > LLINDAR_CO2:
+                actualitza_estat(ALERTA)
+        elif estat == ALERTA:
+            if dades["temp"] <= LLINDAR_TEMP and dades["co2"] <= LLINDAR_CO2:
+                actualitza_estat(NORMAL)
+    ```
+    Què fa exactament aquest fragment?
+    - a) Canvia a ALERTA si la temperatura és alta, encara que el CO₂ sigui normal.
+    - b) **Canvia a ALERTA només quan la temperatura I el CO₂ superen alhora els seus llindars, i torna a NORMAL només quan totes dues magnituds han baixat alhora.**
+    - c) Canvia a ALERTA si la temperatura és alta O el CO₂ és alt (n'hi ha prou amb una de les dues condicions).
+    - d) Actua directament sobre els motors segons la temperatura, sense passar per cap estat.
 
 ---
 
@@ -88,9 +122,15 @@ ___________________________________________________________________
 
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|
-| b | a | b | c | b | d | b | a | b | c |
+| b | a | b | c | b | a | b | a | b | b |
 
 La pregunta 11 és oberta: valora que expliqui que a la SA9 no s'introdueix cap component "nou i obligatori per a tothom" (com el DHT11 a SA6 o l'IMU a SA8), sinó que cada alumne **combina** components i tècniques ja après en SA anteriors (sensors, FSM, motors, ràdio) en una solució pròpia coherent: el saber nou és **com integrar-los**, no un component concret.
+
+La pregunta 5 (CORREGIR) substitueix l'antiga pregunta sobre els nivells ⭐/⭐⭐/⭐⭐⭐ (record purament memorístic) per un error real recollit a la guia docent (Sessió 2: "el prototip barreja tota la lògica dins del `while True`, sense `percep()`/`decideix()`/`actua()`"): cal que l'alumnat sàpiga identificar-lo llegint codi, no només recitar-ne el motiu.
+
+La pregunta 6 (COMPLETAR) substitueix l'antiga pregunta sobre els indicadors de la R4·DO (fet aïllat, sense codi) per una traça de la FSM del repte de reg: cal saber que `decideix()` només canvia d'estat i mai actua directament sobre el relé (aquest matís és el que distingeix la resposta correcta de la distractora b).
+
+La pregunta 10 (TRAÇA) manté el tema original (integrar temperatura i CO₂ en una alerta combinada) però ara amb codi real: cal distingir una condició `and` d'una `or` llegint `decideix()`, en lloc de triar entre frases abstractes sobre "quins blocs s'integren".
 
 ---
 

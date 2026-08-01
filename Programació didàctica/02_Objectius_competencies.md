@@ -40,7 +40,10 @@ Gestionar, **individualment**, un **projecte tecnològic** complet amb metodolog
 En finalitzar el curs, l'alumnat ha de ser capaç de, **individualment**:
 
 1. Explicar l'arquitectura d'un **sistema embegut** (microcontrolador, entrades, sortides, alimentació) i el flux de senyal, exemplificat amb la micro:bit V2.
-2. Escriure programes en **MicroPython** amb variables, tipus, bucles, condicionals i funcions.
+2. Escriure programes en **MicroPython**, depurar-los i definir-hi funcions pròpies, desglossat en tres resultats d'aprenentatge observables (P3.12):
+   - **2a.** Escriure programes amb **variables, bucles i condicionals** per resoldre un problema donat. *S'avalua a:* els mini-checks d'escriptura (`00_Mini_checks_individuals.md`), les proves trimestrals T1-T3 i les katas del banc de repàs espaiat (`00_Banc_activacio_repas.md`).
+   - **2b.** Definir i utilitzar **funcions pròpies amb paràmetres i valor de retorn**. *S'avalua a:* el mini-check d'escriptura de la SA4 (`avancar(velocitat)`, `00_Mini_checks_individuals.md`) i l'ítem obligatori «escriu una funció nova» de les proves T2 i T3 (`Avaluació/Prova_practica_T2.md`, `T3.md`).
+   - **2c.** **Depurar programes** amb el REPL/simulador, identificant i corrigint errors. *S'avalua a:* el criteri «Depuració» de la rúbrica R1 (R1-Depuració) i la pràctica autònoma d'aula (ús del REPL documentat al quadern tècnic).
 3. Dissenyar i connectar **circuits** amb sensors (digitals i analògics) i actuadors Keyestudio al Micro:shield, de manera segura.
 4. Implementar **sistemes de control** senzills (llaç obert/tancat, màquines d'estats).
 5. Programar un **rover individual** perquè segueixi trajectòries, eviti obstacles o segueixi una línia mitjançant algorismes.

@@ -42,6 +42,7 @@
 
 ## 📊 3. Avaluació i evidències (a recollir)
 - [ ] Repte **«vehicle amb aturada d'emergència»** (S3) → **R1**, **R3** (compta, Projectes 45 %)
+- [ ] **Repte ⭐** (`Reptes_SA6.md`) fet i validat → **R1** (compta, Projectes 45 %)
 - [ ] **Mini-defensa** (S3, R4·DO) → **R4** (fila «Defensa oral»)
 - [ ] **Quadern tècnic** → **R4** (Quadern tècnic i pràctiques 25 %)
 - [ ] **Observació d'aula** (seguretat amb el relé, autonomia) → **R5** (Actitud 10 %)
@@ -51,5 +52,5 @@
 
 ## 🪜 4. Atenció a la diversitat (previst per aquesta SA)
 - [ ] **Bastida:** diagrama d'estats model (RUN/STOP/ALERTA) amb transicions ja indicades · esquelet de `actualitza_estat()` ja escrit (vegeu l'esquelet de [`00_Projecte_T2_Vehicle.md`](../00_General/00_Projecte_T2_Vehicle.md))
-- [ ] **+ Ampliació:** tercer estat ALERTA (temperatura/obstacle) · realimentació proporcional (vegeu `Reptes_SA6.md`)
+- [ ] **+ Ampliació (només reptes ⭐⭐/⭐⭐⭐, un cop fet el ⭐ obligatori):** semàfor amb botó prioritari · vehicle amb alerta de temperatura i registre de bord (vegeu `Reptes_SA6.md`)
 - [ ] **Sense vehicle a punt:** la lògica de FSM/histèresi es treballa al simulador (`maquina_estats_semafor.py`, `termostat_histeresi.py`); `vehicle_seguretat.py` necessita el vehicle físic per als motors i el relé

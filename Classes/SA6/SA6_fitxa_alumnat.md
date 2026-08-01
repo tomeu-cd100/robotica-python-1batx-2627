@@ -19,6 +19,7 @@
 | Què lliuro | Rúbrica | On compta |
 |---|---|---|
 | Repte **«vehicle amb aturada d'emergència»** (producte, S3) | **R1**, **R3** | Projectes (45 %) |
+| Repte **⭐** de [Reptes_SA6.md](../../Reptes/Reptes_SA6.md) (nucli obligatori) | **R1** | Projectes (45 %) |
 | Mini-defensa breu (S3, R4·DO) | **R4** | Projectes (45 %) |
 | Quadern tècnic | **R4** | Quadern tècnic i pràctiques (25 %) |
 | Treball a l'aula (seguretat amb el relé, autonomia) | **R5** | Actitud (10 %) |
@@ -57,6 +58,10 @@ Parteix de [`vehicle_seguretat.py`](codi/vehicle_seguretat/vehicle_seguretat.py)
 
 **Mini-defensa (breu, davant el docent):** explica **una decisió** de disseny (per exemple, per què el polsador es comprova abans que la ràdio a cada volta del bucle, o com has organitzat `actualitza_estat()`).
 
+### 4 · Repte ⭐ (nucli obligatori) (Sessió 3, en acabar el producte)
+
+Un cop tancat el repte «vehicle amb aturada d'emergència», fes el **repte ⭐** de [`Reptes_SA6.md`](../../Reptes/Reptes_SA6.md) (termòstat de dues zones): és **nucli obligatori** —no una ampliació opcional— i s'aprofita el mateix temps de pràctica de la Sessió 3. Ensenya'l al docent perquè el validi.
+
 ## Producte · Repte «vehicle amb aturada d'emergència»
 
 Es tanca i s'avalua a la **Sessió 3** amb les rúbriques **R1** (codi, funcionament) i **R3** (autonomia/control). La mini-defensa hi suma **R4**. **Tanca el Projecte T2**: la Sessió 4 és la prova pràctica T2 individual.
@@ -84,4 +89,4 @@ Es tanca i s'avalua a la **Sessió 3** amb les rúbriques **R1** (codi, funciona
 
 <!-- /web:only-github -->
 
-> 📌 **Vols més?** Ampliació, [reptes ⭐](../../Reptes/Reptes_SA6.md), pensament computacional, exit ticket i ODS → **[SA6_fitxa_ampliada.md](SA6_fitxa_ampliada.md)**
+> 📌 **Vols més?** Ampliació, [reptes ⭐⭐/⭐⭐⭐](../../Reptes/Reptes_SA6.md), pensament computacional, exit ticket i ODS → **[SA6_fitxa_ampliada.md](SA6_fitxa_ampliada.md)**

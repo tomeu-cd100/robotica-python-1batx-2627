@@ -59,4 +59,4 @@ El mateix patró de `nivell_llum` (llegir → comparar amb un llindar → decidi
 - **Sessió 3:** el patró "llegir → comparar amb un llindar → decidir" és exactament el que fa servir [`mascota_reactiva`](../mascota_reactiva/EXPLICACIO.md) per a cada sensor.
 - **Simulador:** python.microbit.org simula `temperature()` (sensor intern), però **no** el sensor extern del Kit 1: valida la interpretació amb condicionals a la placa real.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA3](../../../../Reptes/Reptes_SA3.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA3](../../../../Reptes/Reptes_SA3.md)**.

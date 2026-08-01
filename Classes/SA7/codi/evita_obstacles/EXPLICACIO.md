@@ -25,6 +25,19 @@ durada_us = machine.time_pulse_us(ECHO, 1, 30000)
 
 Exactament el mateix codi que `distancia_cm()` de `alarma_ultrasons.py` (SA3), amb `TRIGGER = pin1` i `ECHO = pin2` en lloc de `pin14`/`pin15`. El pols de 10 µs al trigger i el `timeout` de 30000 µs a l'echo no canvien: és el mateix sensor, només canvia on està connectat.
 
+### Bloc 1b — ACTIVITAT NUCLI: lectura robusta amb `try`/`except`
+
+```python
+try:
+    durada_us = machine.time_pulse_us(ECHO, 1, 30000)
+except OSError:
+    return None
+```
+
+> 🔑 **Què fa `try`/`except`:** el codi dins de `try:` s'executa normalment; si en algun punt **peta** amb un error del tipus indicat a `except` (aquí, `OSError`), Python **no atura tot el programa**: salta directament al cos de l'`except` i continua des d'allà. `try` diu "intenta fer això"; `except OSError:` diu "si peta amb aquest tipus d'error concret, fes això altre en lloc de petar".
+
+Un sensor d'ultrasons real **no sempre** troba l'eco que espera (obstacle massa lluny, absorbent, o fora de l'abast dels 30 ms de marge): segons la placa i la versió de MicroPython, `machine.time_pulse_us` pot avisar-ho de dues maneres diferents — retornant un número negatiu (ja el comprovàvem amb `if durada_us < 0:`) o **llançant una excepció** `OSError`. Sense el `try`/`except`, aquesta segona possibilitat aturaria tot el programa del rover (`while True:` inclòs) per una única lectura dolenta. Amb el `try`/`except`, `mesura_distancia()` simplement retorna `None` aquell cop, exactament com fa amb el cas del valor negatiu, i el rover ho tracta igual que ja feia: `if distancia is not None and distancia < LLINDAR_OBSTACLE_CM:`.
+
 ### Bloc 2 — Decidir i actuar: aturar, girar, seguir
 
 ```python
@@ -52,4 +65,4 @@ Primer **s'atura** (mai gira directament sense aturar-se abans: evitaria un cop 
 - **Sessió 4 (producte):** [`rover_missions`](../rover_missions/EXPLICACIO.md) integra aquesta mateixa funció `mesura_distancia()` a les missions «paret» i «línia».
 - **Simulador:** python.microbit.org **no** simula cap sensor extern, i molt menys el temps de vol de l'HC-SR04: aquesta pràctica es fa **només** amb maquinari real.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA7](../../../../Reptes/Reptes_SA7.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA7](../../../../Reptes/Reptes_SA7.md)**.

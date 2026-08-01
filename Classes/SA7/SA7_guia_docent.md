@@ -24,6 +24,7 @@
 | [`SA7_fitxa_alumnat.md`](SA7_fitxa_alumnat.md) | Totes les sessions (Activitats 1-4 + producte + quadern). |
 | [`SA7_esquemes_connexions.md`](SA7_esquemes_connexions.md) | Sessions 1-4 (pins de M1/M2 heretats + HC-SR04 + seguidor de línia). |
 | `codi/` | `calibratge_motors`, `segueix_linia`, `evita_obstacles` i el producte `rover_missions`. |
+| [`Reptes_SA7.md`](../../Reptes/Reptes_SA7.md) | Sessió 4 (fase «Repte», mateix temps de pràctica): repte **⭐** ara **nucli obligatori**; reptes ⭐⭐/⭐⭐⭐ continuen sent ampliació opcional. |
 
 > Cada programa de `codi/` té la seva **pàgina de pràctica** (per què es fa + codi explicat per blocs, l'`EXPLICACIO.md` de la seva carpeta). El «Guió de modelatge» oral de sota continua sent teu.
 
@@ -50,7 +51,7 @@
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Repte inicial: *"Com fa un robot per seguir una línia pintada a terra o esquivar un obstacle sense que ningú el guiï?"* Revisió ràpida del rover muntat a la Sessió 0. | Formulen hipòtesis: què necessita "saber" el rover per decidir sol? |
+| Activació | 10' | Repte inicial: *"Com fa un robot per seguir una línia pintada a terra o esquivar un obstacle sense que ningú el guiï?"* Revisió ràpida del rover muntat a la Sessió 0. 🥋 **Kata del dia:** K12 (FSM/diccionari) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis: què necessita "saber" el rover per decidir sol? |
 | Explicació | 30' | **Cinemàtica diferencial**: el rover gira variant la velocitat/sentit relatiu de cada roda (dues rodes motrius + roda boja). Recorda que `avancar()`/`retrocedir()`/`girar()`/`aturar()` són **exactament** les de la SA4: cap pin nou. Modelatge de [`calibratge_motors.py`](codi/calibratge_motors/EXPLICACIO.md): per què cal compensar la velocitat entre M1 i M2. | Prenen notes; relacionen exemples propis (un cotxe de joguina, una cadira de rodes elèctrica) amb la cinemàtica diferencial. |
 | Pràctica | 60' | Acompanya el calibratge individual (proves curtes, ajustar `FACTOR_M1`/`FACTOR_M2`) i les primeres proves de trajectòria (quadrat, gir tancat) amb temps fixos. | Calibren el seu rover perquè vagi recte; proven una trajectòria en quadrat amb girs i avanços temporitzats (Activitat 1 de la fitxa). |
 | Tancament | 20' | Recull dubtes; anticipa que la S2 afegeix el primer sensor propi del rover (seguidor de línia). | Entrada del quadern: factors de calibratge propis + croquis de la trajectòria en quadrat provada. |
@@ -72,14 +73,14 @@
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Mini-check | 10' | **Mini-check individual** (10', sense apunts; banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md#sa7--mini-check-inici-de-la-sessió-2)). Comprova el cicle general **llegir → decidir → actuar** aplicat a un sensor del rover, base comuna del seguidor de línia d'avui i de l'evita-obstacles de la S3. | Fan el mini-check (no qualifica). |
+| Mini-check | 10' | **Mini-check individual** (10', sense apunts; banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md#sa7--mini-check-inici-de-la-sessió-2)). Deliberadament **no** demana el seguidor de línia (tema d'avui, encara no explicat): comprova el cicle general **llegir → decidir → actuar** amb un sensor analògic genèric, ja après a la SA3. | Fan el mini-check (no qualifica). |
 | Explicació | 25' | Sensor **seguidor de línia** KS0050 (Kit 2): lectura amb `read_analog()` (0-1023, com qualsevol entrada analògica de la SA3) i **llindar de detecció**, que cal calibrar sobre el circuit real de l'aula. Modelatge de [`segueix_linia.py`](codi/segueix_linia/EXPLICACIO.md): algorisme de correcció de rumb (girar cap al costat on es perd la línia). | Prenen notes; relacionen el llindar amb el de `nivell_llum.py`/`termometre.py` (SA3). |
-| Pràctica | 55' | Acompanya la calibració del llindar taula per taula (cada circuit i cada llum d'aula són una mica diferents) i les proves sobre el circuit de línia. | Calibren `LLINDAR_LINIA` al REPL sobre el seu circuit; proven `segueix_linia.py` (Activitat 2 de la fitxa). |
+| Pràctica | 65' | Acompanya la calibració del llindar taula per taula (cada circuit i cada llum d'aula són una mica diferents) i les proves sobre el circuit de línia. | Calibren `LLINDAR_LINIA` al REPL sobre el seu circuit; proven `segueix_linia.py` (Activitat 2 de la fitxa). |
 | Tancament | 20' | Recull dubtes; anticipa l'evita-obstacles de la S3. | Documenten al quadern el llindar triat i una foto/captura del circuit de proves. |
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: el nombre de circuits provats (deixa'n un de sol per taula, ben calibrat, en lloc de provar-ne diversos).
 
-**Punts clau:** el seguidor de línia és un altre **llaç tancat** (com la histèresi de la SA6): el rover llegeix, decideix i actua a cada volta del bucle, sense cap ordre externa. Amb un **únic** sensor no es pot saber cap a quin costat s'ha desviat de veritat el rover: cal triar una estratègia de cerca fixa (per exemple, girar sempre cap a l'esquerra quan es perd la línia).
+**Punts clau:** el seguidor de línia és un altre **llaç tancat** (com la histèresi de la SA6): el rover llegeix, decideix i actua a cada volta del bucle, sense cap ordre externa. Amb un **únic** sensor no es pot saber cap a quin costat s'ha desviat de veritat el rover: cal triar una estratègia de cerca fixa (per exemple, girar sempre cap a l'esquerra quan es perd la línia). Pregunta oberta per obrir la S3: *"i si el sensor, algun cop, no pogués donar cap lectura vàlida — què hauria de fer el programa?"* (es respon amb `try`/`except` a `evita_obstacles.py`).
 
 **Errors freqüents i solució:**
 | Error | Causa | Solució |
@@ -96,14 +97,14 @@
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Mostra [`evita_obstacles.py`](codi/evita_obstacles/EXPLICACIO.md) **sense executar-lo** (PRIMM): pregunta què passa si el rover avança i la distància baixa de 15 cm de cop. | Prediuen el comportament davant d'un obstacle sobtat. |
-| Explicació | 25' | Sensor d'**ultrasons HC-SR04**: mesura de distància amb `machine.time_pulse_us`, **exactament** el patró de `alarma_ultrasons.py` (SA3), només canviant de pins (trigger **P1**, echo **P2**; a la SA3 es practicava a P14/P15, ara ocupats pels motors). Funció `mesura_distancia()`. Algorisme d'evita-obstacles: aturar, girar, tornar a mesurar. | Prenen notes; comparen amb el patró de la SA3 i identifiquen què canvia (només els pins) i què no (la lògica del time-of-flight). |
+| Activació | 10' | Mostra [`evita_obstacles.py`](codi/evita_obstacles/EXPLICACIO.md) **sense executar-lo** (PRIMM): pregunta què passa si el rover avança i la distància baixa de 15 cm de cop. 🥋 **Kata del dia:** K13 (for sobre col·lecció) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen el comportament davant d'un obstacle sobtat. |
+| Explicació | 25' | Sensor d'**ultrasons HC-SR04**: mesura de distància amb `machine.time_pulse_us`, **exactament** el patró de `alarma_ultrasons.py` (SA3), només canviant de pins (trigger **P1**, echo **P2**; a la SA3 es practicava a P14/P15, ara ocupats pels motors). Funció `mesura_distancia()`, ara amb `try`/`except OSError` per si la lectura falla (activitat nucli: lectura robusta d'un sensor). Algorisme d'evita-obstacles: aturar, girar, tornar a mesurar. | Prenen notes; comparen amb el patró de la SA3 i identifiquen què canvia (pins + `try`/`except`) i què no (la lògica del time-of-flight). |
 | Repte | 65' | Acompanya el repte **"tria un comportament autònom"**: segons el material disponible a cada taula, cada alumne/a tria seguidor de línia i/o evita-obstacles i el prova a fons. | Trien i proven el seu comportament (Activitat 3 de la fitxa); si sobra temps, proven l'altre. |
 | Tancament | 20' | Recull dubtes; anticipa la integració de la S4. | Documenten al quadern quin comportament han triat i per què. |
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: deixa que cadascú tanqui **només un** comportament (línia o obstacles), l'altre queda com a deures/simulador de lògica.
 
-**Punts clau:** el sensor d'ultrasons **no** llegeix una distància directament: envia un pols i mesura el temps de vol de l'eco, exactament com a la SA3. El canvi de pins (de P14/P15 a P1/P2) és **deliberat**: al rover, P14/P15 són ara dels motoreductors (fixats des de la SA4), i el fil conductor del curs documenta aquest canvi explícitament perquè no sembli un error.
+**Punts clau:** el sensor d'ultrasons **no** llegeix una distància directament: envia un pols i mesura el temps de vol de l'eco, exactament com a la SA3. El canvi de pins (de P14/P15 a P1/P2) és **deliberat**: al rover, P14/P15 són ara dels motoreductors (fixats des de la SA4), i el fil conductor del curs documenta aquest canvi explícitament perquè no sembli un error. `try`/`except OSError` al voltant de `machine.time_pulse_us(...)` és la primera vegada que l'alumnat **escriu** un `try`/`except`: quan un timeout es manifesta com a excepció (en lloc d'un valor negatiu), sense atrapar-la tot el programa s'aturaria per una única lectura dolenta.
 
 **Errors freqüents i solució:**
 | Error | Causa | Solució |
@@ -111,18 +112,24 @@
 | `mesura_distancia()` retorna sempre `None` | Cablatge de trigger/echo intercanviat, o als pins vells (P14/P15) en lloc dels nous (P1/P2) | Revisar [`SA7_esquemes_connexions.md`](SA7_esquemes_connexions.md): trigger **P1**, echo **P2** |
 | El rover xoca abans d'aturar-se | `LLINDAR_OBSTACLE_CM` massa baix per a la velocitat d'avanç | Pujar el llindar o reduir la velocitat d'avanç |
 | El rover gira i torna a topar amb el mateix obstacle | Temps de gir massa curt per a l'amplada real de l'obstacle | Allargar el `sleep()` del gir, provant amb obstacles reals de l'aula |
+| El `try`/`except` "amaga" un error real de cablatge | L'`except OSError` només hauria d'atrapar el timeout del sensor, no un error de programació | Provar primer sense `try`/`except` amb el REPL per veure l'error real, i tornar-lo a afegir després |
 
 ---
 
 ## SESSIÓ 4 (2 h) — Integració: missions del rover (producte de la SA)
 
 > 🎯 **Producte de la SA7.** Aquest programa **tanca** la SA: s'avalua amb **R1** (funcionament), **R3** (criteri "Autonomia/control") i **R4** (documentació i defensa).
+>
+> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
+>
+> ⭐ **Repte nucli obligatori.** Un cop tancat el comportament autònom, tothom ha de fer el **repte ⭐ · Carret de magatzem amb velocitat variable** de [`Reptes_SA7.md`](../../Reptes/Reptes_SA7.md) (fila pròpia a la taula, més avall). Els reptes ⭐⭐/⭐⭐⭐ continuen sent ampliació opcional per a qui vagi sobrat.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Recorda el comportament triat a la S3; introdueix la idea de **missió**: combinar més d'un comportament (o afegir-hi millores) sobre una pista real. | Recuperen el seu comportament de la S3. |
+| Activació | 10' | Recorda el comportament triat a la S3; introdueix la idea de **missió**: combinar més d'un comportament (o afegir-hi millores) sobre una pista real. 🥋 **Kata del dia:** K14 (try/except) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Recuperen el seu comportament de la S3. |
 | Explicació | 15' | Modelatge de [`rover_missions.py`](codi/rover_missions/EXPLICACIO.md): com se seleccionen missions amb els botons, i com el **polsador STOP** (P12, pull-up, mateix patró prioritari que `vehicle_seguretat.py` de la SA6) es comprova **sempre primer**. | Prenen notes; identifiquen per què cal comprovar el STOP dins de cada missió, no només al bucle principal. |
-| Repte | 75' | Acompanya la integració individual: el comportament triat (línia i/o obstacles) amb **millores** (velocitat variable, marge de seguretat) sobre una pista de proves. | Integren i milloren el seu comportament autònom (Activitat 4 de la fitxa, producte). Proven amb obstacles i/o circuit reals. |
+| Repte | 60' | Acompanya la integració individual: el comportament triat (línia i/o obstacles) amb **millores** (velocitat variable, marge de seguretat) sobre una pista de proves. | Integren i milloren el seu comportament autònom (Activitat 4 de la fitxa, producte). Proven amb obstacles i/o circuit reals. |
+| **Repte ⭐ (nucli obligatori)** | 15' | Un cop tancat el comportament autònom, repte **⭐ · Carret de magatzem amb velocitat variable** de [`Reptes_SA7.md`](../../Reptes/Reptes_SA7.md). | Fan el repte ⭐; 🤝 **parella de lectura (5')** abans de lliurar-lo; l'ensenyen al docent perquè el validi (**R1**). Qui vagi sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
 | Tancament | 20' | Recull dubtes; **mini-defensa breu** de cada alumne/a (2-3', R4·DO): una decisió de disseny justificada. | Mini-defensa; anoten al quadern la millora aplicada i per què. |
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: l'ampliació "combinar línia I obstacles en una sola missió" (deixa-la per a qui vagi sobrat; un únic comportament ben integrat i documentat és el nucli innegociable).
@@ -146,6 +153,7 @@
 | Mini-check (S2) | Cicle llegir → decidir → actuar aplicat a un sensor del rover | CA1.1 | — | **No** (radar formatiu) |
 | Fitxa d'alumnat (Act. 1-3) | Cinemàtica diferencial, seguidor de línia, evita-obstacles | CA1.1, CA3.1, CA4.1 | R1 | Formativa |
 | Producte «comportament autònom del rover» (S4) | Comportament integrat funcional (línia i/o obstacles) | CA1.1, CA3.1, CA4.1 | **R1**, **R3** | Sí |
+| Repte **⭐** (`Reptes_SA7.md`, S4, nucli obligatori) | Velocitat variable de correcció aplicada al seguidor de línia | CA1.1 | **R1** | Sí |
 | Mini-defensa (S4, R4·DO) | Claredat + justificació d'una decisió de disseny/millora | CA3.1 | **R4** (fila «Defensa oral») | Sí |
 | Quadern tècnic | Factors de calibratge, llindars, proves de trajectòria | CA4.1 | **R4** | Sí |
 | Observació d'aula | Autonomia i seguretat en manipular el rover | — | **R5** | Sí |
@@ -180,7 +188,7 @@ A la SA7 el rover deixa de ser un vehicle teledirigit (T2) i es converteix en un
 | Necessitat | Mesura |
 |---|---|
 | **Bastida (qui ho necessita)** | Llindars de partida ja indicats (`LLINDAR_LINIA = 500`, `LLINDAR_OBSTACLE_CM = 15`) per calibrar-los a partir d'aquí, no de zero; esquelet de `mesura_distancia()` ja escrit (vegeu l'esquelet de [`00_Projecte_T3_Rover.md`](../00_General/00_Projecte_T3_Rover.md)). |
-| **+ Ampliació (qui va sobrat)** | Combinar seguidor de línia I evita-obstacles en un mateix comportament amb prioritats; ajustar la velocitat segons la proximitat (control proporcional bàsic, sense ser el nucli avaluable); vegeu [Reptes de la SA7](../../Reptes/Reptes_SA7.md). |
+| **+ Ampliació (qui va sobrat)** | Combinar seguidor de línia I evita-obstacles en un mateix comportament amb prioritats; ajustar la velocitat segons la proximitat (control proporcional bàsic, sense ser el nucli avaluable); vegeu els reptes **⭐⭐/⭐⭐⭐** de [Reptes_SA7.md](../../Reptes/Reptes_SA7.md) (el ⭐ ja és nucli obligatori, no ampliació). |
 | **Diversitat lingüística/lectora** | Diagrama del cicle llegir→decidir→actuar amb icones (fletxes, colors) en lloc de només text; glossari a [`00_Glossari_tecnic.md`](../00_General/00_Glossari_tecnic.md). |
 | **Sense rover a punt** | Es treballa la lògica al **simulador**, sobre la mateixa estructura de codi però sense el maquinari (pla B: codi per parts amb el rover **alçat** sobre un suport, rodes lliures, per veure els motors respondre sense desplaçar-se); vegeu §Simulació de [`SA7_esquemes_connexions.md`](SA7_esquemes_connexions.md). |
 

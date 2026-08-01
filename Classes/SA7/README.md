@@ -16,7 +16,7 @@ Setena situació d'aprenentatge del curs (3r trimestre, la primera): el vehicle 
 | S2 | Mini-check individual (no qualifica) i `segueix_linia.py` calibrat ([Activitat 2](SA7_fitxa_alumnat.md#2--seguidor-de-línia-sessió-2)) | Es mostra al docent / quadern tècnic |
 | S3 | Repte **«tria un comportament autònom»** amb `evita_obstacles.py` i/o `segueix_linia.py` ([Activitat 3](SA7_fitxa_alumnat.md#3--evita-obstacles-i-tria-un-comportament-autònom-sessió-3)) | El docent el valida a l'aula |
 | S4 | **Comportament autònom del rover** ([Activitat 4](SA7_fitxa_alumnat.md#4--integració-missions-del-rover-sessió-4--producte), producte de la SA) + mini-defensa breu | El docent el valida a l'aula |
-| ⭐ | [Repte triat](../../Reptes/Reptes_SA7.md) | El docent el valida |
+| ⭐ | [Repte ⭐ de Reptes_SA7.md](../../Reptes/Reptes_SA7.md) (nucli obligatori) | El docent el valida → compta R1 |
 | 📓 | Full del quadern tècnic de cada sessió | En acabar cada sessió |
 | 🤖 | Rover T3 amb comportament autònom (seguidor de línia i/o evita-obstacles) | Es mostra al docent a la S4 |
 
@@ -38,7 +38,7 @@ Si un dia no tens el rover muntat a mà, pots treballar la **lògica** al simula
 - [Fitxa ampliada](SA7_fitxa_ampliada.md) — pensament computacional, ODS i ampliacions.
 - [Qüestionari de conceptes](SA7_questionari_conceptes.md) — per repassar.
 - [Exemple resolt](SA7_exemple_resolt.md) — com es pensa un problema semblant.
-- [Reptes de la SA7](../../Reptes/Reptes_SA7.md) — quan tinguis el nucli al dia.
+- [Reptes ⭐⭐/⭐⭐⭐ de la SA7](../../Reptes/Reptes_SA7.md) — ampliació opcional, per a qui va sobrat de temps (el ⭐ ja és nucli obligatori, vegeu «Què has d'entregar»).
 
 ## Producte i avaluació
 

@@ -14,6 +14,7 @@
 - [ ] Programar `telemetria_radio.py` i el meu propi `estacio_base.py` (Act. 2)
 - [ ] Fer la **pràctica guiada d'IA** (classificació de patrons) i escriure la reflexió d'IA i ètica de dades
 - [ ] Tancar el **sistema de telemetria del rover** (Act. 3, producte) → *compta amb R1 i R3*
+- [ ] Fer el **repte ⭐** de `Reptes/Reptes_SA8.md` (nucli obligatori) i ensenyar-lo al docent → *compta amb R1*
 - [ ] Fer la **mini-defensa breu** (una decisió justificada) → *compta amb R4*
 - [ ] Tenir l'entrada del **quadern tècnic** de la SA8 (què he après · el repte · un error · el meu format de missatge · reflexió d'IA)
 - [ ] Recordar que el rover reutilitza els motors/sensors de la SA7 (`avancar/retrocedir/girar/aturar`, HC-SR04, seguidor de línia); a la SA8 s'hi afegeixen només el DHT11, l'IMU i la ràdio de telemetria

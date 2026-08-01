@@ -29,6 +29,7 @@
 | [`SA8_fitxa_alumnat.md`](SA8_fitxa_alumnat.md) | Totes les sessions (Activitats 1-3 + producte + quadern). |
 | [`SA8_esquemes_connexions.md`](SA8_esquemes_connexions.md) | Sessions 1-3 (pins heretats + DHT11 + IMU MPU6050 + ràdio). |
 | `codi/` | `comportaments`, `telemetria_radio` i `estacio_base` (producte). |
+| [`Reptes_SA8.md`](../../Reptes/Reptes_SA8.md) | Sessió 3 (fase «Repte», mateix temps de pràctica): repte **⭐** ara **nucli obligatori**; reptes ⭐⭐/⭐⭐⭐ continuen sent ampliació opcional. |
 
 > Cada programa de `codi/` té la seva **pàgina de pràctica** (l'`EXPLICACIO.md` de la seva carpeta). El «Guió de modelatge» oral de sota continua sent teu.
 
@@ -46,14 +47,14 @@ Si el calendari real obliga a comprimir la SA8 de 6 h a 4 h, **fusiona la S1 i l
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Repte inicial: *"Com sap algú, des d'una altra taula, què està 'sentint' el rover en aquest moment?"* | Formulen hipòtesis: què caldria per "explicar" el rover a distància? |
-| Explicació | 30' | Presenta els 4 sensors avançats del Kit 3 (IMU MPU6050, DHT11, BMP280, CCS811) i les seves magnituds; explica per què el **nucli** d'aquesta SA programa només IMU+DHT11 (I2C de registres i time-of-flight, ja coneguts) i deixa BMP280/CCS811 com a ampliació. Modelatge de [`comportaments.py`](codi/comportaments/EXPLICACIO.md): repàs de la FSM SEGUIR/ESQUIVAR/RECUPERAR (generalització de la SA7). | Prenen notes; relacionen l'IMU amb l'acceleròmetre intern (SA1-SA3) i el DHT11 amb el termòstat (SA6). |
+| Activació | 10' | Repte inicial: *"Com sap algú, des d'una altra taula, què està 'sentint' el rover en aquest moment?"* 🥋 **Kata del dia:** K15 (log) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis: què caldria per "explicar" el rover a distància? |
+| Explicació | 30' | Presenta els 4 sensors avançats del Kit 3 (IMU MPU6050, DHT11, BMP280, CCS811) i les seves magnituds; explica per què el **nucli** d'aquesta SA programa només IMU+DHT11 (I2C de registres i time-of-flight, ja coneguts) i deixa BMP280/CCS811 com a ampliació. Modelatge de [`comportaments.py`](codi/comportaments/EXPLICACIO.md): repàs de la FSM SEGUIR/ESQUIVAR/RECUPERAR (generalització de la SA7), estructurada explícitament en **`percep()`/`decideix()`/`actua()`**. Verbalitza: **aquest patró és exactament el que farà servir cada repte individual a la SA9** (`plantilla_projecte.py`): avui el veieu funcionar abans d'haver-lo d'escriure de zero. | Prenen notes; relacionen l'IMU amb l'acceleròmetre intern (SA1-SA3) i el DHT11 amb el termòstat (SA6); identifiquen quina funció fa cadascuna de les tres. |
 | Pràctica | 60' | Acompanya el muntatge del DHT11 (P8) i l'IMU (I2C, P19/P20) sobre el rover, i la prova de `comportaments.py` sobre el circuit/obstacles ja coneguts. Introdueix el disseny del **format de missatge** de telemetria (quins camps, amb quin prefix). | Munten els dos sensors nous; proven `comportaments.py`; dissenyen el seu format de missatge (Activitat 1 de la fitxa). |
 | Tancament | 20' | Recull dubtes; anticipa que la S2 hi afegeix la ràdio. | Entrada del quadern: format de missatge triat + esquema dels 3 estats de la FSM. |
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: deixa `comportaments.py` com a demostració oral breu (sense que tothom l'executi) i centra el temps en el muntatge dels sensors nous.
 
-**Punts clau:** l'IMU MPU6050 es llegeix per **I2C** (un bus compartit, adreces diferents per sensor), diferent de tots els components anteriors del curs (cadascun al seu pin dedicat). El DHT11 reutilitza el mateix mecanisme de **mesura de temps de vol** (`machine.time_pulse_us`) que ja coneixeu de l'HC-SR04, només que amb 40 polsos consecutius en lloc d'un de sol.
+**Punts clau:** l'IMU MPU6050 es llegeix per **I2C** (un bus compartit, adreces diferents per sensor), diferent de tots els components anteriors del curs (cadascun al seu pin dedicat). El DHT11 reutilitza el mateix mecanisme de **mesura de temps de vol** (`machine.time_pulse_us`) que ja coneixeu de l'HC-SR04, només que amb 40 polsos consecutius en lloc d'un de sol. `percep()` (llegeix), `decideix()` (canvia d'estat) i `actua()` (mou) són el **mateix esquema** que tancarà el curs a la SA9: separar-los en tres funcions fa que sigui fàcil trobar on toca afegir un sensor nou (a `percep()`) sense tocar la lògica de moviment.
 
 **Errors freqüents i solució:**
 | Error | Causa | Solució |
@@ -89,12 +90,17 @@ Si el calendari real obliga a comprimir la SA8 de 6 h a 4 h, **fusiona la S1 i l
 ## SESSIÓ 3 (2 h) — IA aplicada al control i producte: sistema de telemetria
 
 > 🎯 **Producte de la SA8.** Es tanca i s'avalua amb **R1** (codi, funcionament), **R3** (criteri "Integració") i **R4** (documentació).
+>
+> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
+>
+> ⭐ **Repte nucli obligatori.** Un cop tancat el producte, tothom ha de fer el **repte ⭐ · Estació meteorològica escolar amb alertes** de [`Reptes_SA8.md`](../../Reptes/Reptes_SA8.md) (fila pròpia a la taula, més avall). Els reptes ⭐⭐/⭐⭐⭐ continuen sent ampliació opcional per a qui vagi sobrat.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Recorda `mpu_orientacio()` de `telemetria_radio.py`: un llindar fet a mà sobre la magnitud d'acceleració. Pregunta: *"i si, en lloc d'escriure jo el llindar, li ensenyés exemples perquè ell mateix el trobés?"* | Formulen hipòtesis sobre què canviaria. |
+| Activació | 10' | Recorda `mpu_orientacio()` de `telemetria_radio.py`: un llindar fet a mà sobre la magnitud d'acceleració. Pregunta: *"i si, en lloc d'escriure jo el llindar, li ensenyés exemples perquè ell mateix el trobés?"* 🥋 **Kata del dia:** K16 (funcions/paràmetres) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis sobre què canviaria. |
 | Explicació/demo | 35' | **Introducció a la IA aplicada al control**: regles fetes a mà vs aprenentatge automàtic (dades → model → decisió); demostració/pràctica guiada amb **Teachable Machine** (o l'extensió ML de MakeCode) sobre dades d'acceleròmetre/so, a nivell de demostració; bloc «Ètica de dades i IA» (RGPD, biaix, consentiment) aplicat a la telemetria del propi rover. | Segueixen la demo; si hi ha ordinadors/navegador disponibles, proven de recollir 2-3 exemples i entrenar un classificador senzill; identifiquen el **biaix** si entrenen amb poques dades. |
-| Repte | 55' | Acompanya el tancament del **producte: sistema de telemetria del rover** (mínim dos sensors, ràdio, registre amb el propi `estacio_base.py`), amb una reflexió breu sobre l'ús de la IA com a tecnologia emergent. | Tanquen i documenten el producte; escriuen la reflexió d'IA al quadern. |
+| Repte | 40' | Acompanya el tancament del **producte: sistema de telemetria del rover** (mínim dos sensors, ràdio, registre amb el propi `estacio_base.py`), amb una reflexió breu sobre l'ús de la IA com a tecnologia emergent. | Tanquen i documenten el producte; escriuen la reflexió d'IA al quadern. |
+| **Repte ⭐ (nucli obligatori)** | 15' | Un cop tancat el producte, repte **⭐ · Estació meteorològica escolar amb alertes** de [`Reptes_SA8.md`](../../Reptes/Reptes_SA8.md). | Fan el repte ⭐; 🤝 **parella de lectura (5')** abans de lliurar-lo; l'ensenyen al docent perquè el validi (**R1**). Qui vagi sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
 | Tancament | 20' | Recull dubtes; **mini-defensa breu** de cada alumne/a (2-3', R4·DO): una decisió de disseny justificada. | Mini-defensa; anoten al quadern la reflexió sobre ètica de dades i IA. |
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: la pràctica pràctica de Teachable Machine (deixa-la com a **demostració del docent** en lloc que tothom entreni el seu propi classificador; la reflexió escrita es manté igual).
@@ -119,6 +125,7 @@ Si el calendari real obliga a comprimir la SA8 de 6 h a 4 h, **fusiona la S1 i l
 | Mini-check (S2) | Enviar un valor de sensor per ràdio amb protocol propi | CA1.1 | — | **No** (radar formatiu) |
 | Fitxa d'alumnat (Act. 1-3) | Sensors avançats, protocol de telemetria, IA aplicada al control | CA1.1, CA3.1, CA4.2 | R1 | Formativa |
 | Producte «sistema de telemetria del rover» (S3) | Mínim dos sensors del Kit 3, ràdio, registre amb `estacio_base.py` propi | CA1.1, CA3.1, CA4.2 | **R1**, **R3** (Integració) | Sí |
+| Repte **⭐** (`Reptes_SA8.md`, S3, nucli obligatori) | Llindar de temperatura amb alerta afegit al protocol de telemetria | CA1.1 | **R1** | Sí |
 | Mini-defensa (S3, R4·DO) | Claredat + justificació d'una decisió de disseny | CA3.1 | **R4** (fila «Defensa oral») | Sí |
 | Quadern tècnic | Format de missatge, llindars de sensors, reflexió d'IA i ètica de dades | CA4.2 | **R4** | Sí |
 | Observació d'aula | Autonomia i responsabilitat en manipular sensors i dades | — | **R5** | Sí |
@@ -154,7 +161,7 @@ A la SA8, el rover autònom de la SA7 aprèn a **explicar-se**: envia el que "se
 | Necessitat | Mesura |
 |---|---|
 | **Bastida (qui ho necessita)** | Format de missatge de telemetria model ja donat (p. ex. `"TEL:T:23.5"`); esquelet de la funció `envia_lectura()`/`analitza()` ja escrit (vegeu SA8_fitxa_alumnat.md). |
-| **+ Ampliació (qui va sobrat)** | Enviar més d'un sensor combinat (BMP280/CCS811, protocol propi més ric); comparar dades classificades manualment vs amb Teachable Machine; vegeu [Reptes de la SA8](../../Reptes/Reptes_SA8.md). |
+| **+ Ampliació (qui va sobrat)** | Enviar més d'un sensor combinat (BMP280/CCS811, protocol propi més ric); comparar dades classificades manualment vs amb Teachable Machine; vegeu els reptes **⭐⭐/⭐⭐⭐** de [Reptes_SA8.md](../../Reptes/Reptes_SA8.md) (el ⭐ ja és nucli obligatori, no ampliació). |
 | **Diversitat lingüística/lectora** | Diagrama del protocol de telemetria amb icones (emissor → ràdio → receptor) en lloc de només text; glossari a [`00_Glossari_tecnic.md`](../00_General/00_Glossari_tecnic.md). |
 | **Sense rover/Kit 3 a punt** | Es treballa la lògica del protocol al **simulador** (ràdio i `log` sí es simulen), amb valors de sensor simulats en variables en lloc de lectures reals; vegeu §Simulació de [`SA8_esquemes_connexions.md`](SA8_esquemes_connexions.md). |
 

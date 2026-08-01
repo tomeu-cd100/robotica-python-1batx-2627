@@ -41,6 +41,7 @@
 - [ ] Repte **«semàfor o llum d'ambient»** (S3) → **R1** + **R2** (compta, Projectes 45 %)
 - [ ] **Mini-defensa** (S3, R4·DO) → **R4** (fila «Defensa oral»)
 - [ ] **Muntatge de la mascota** (S4) → **R2** (compta, Projectes 45 %)
+- [ ] **Repte ⭐** (`Reptes_SA2.md`) fet i validat → **R1** (compta, Projectes 45 %)
 - [ ] **Quadern tècnic** → **R4** (Quadern tècnic i pràctiques 25 %)
 - [ ] **Observació d'aula** (autonomia, seguretat) → **R5** (Actitud 10 %)
 - [ ] Recollir **exit tickets** de la fitxa ampliada
@@ -48,5 +49,5 @@
 
 ## 🪜 4. Atenció a la diversitat (previst per aquesta SA)
 - [ ] **Bastida:** esquelet «Si t'encalles» a la pàgina de la pràctica de `semafor_rele` · temps de `sleep()` ja proposats a la fitxa
-- [ ] **+ Ampliació:** llums sincronitzades amb el so · relé + LED RGB en un patró propi (vegeu `Reptes_SA2.md`)
+- [ ] **+ Ampliació (⭐⭐/⭐⭐⭐):** llums sincronitzades amb el so · relé + LED RGB en un patró propi (vegeu `Reptes_SA2.md`)
 - [ ] **Sense maquinari per a tothom:** simulador limitat (només matriu/botons/so integrat); torns amb la placa física per als components externs

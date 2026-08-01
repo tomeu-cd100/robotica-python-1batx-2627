@@ -19,6 +19,7 @@
 | Què lliuro | Rúbrica | On compta |
 |---|---|---|
 | Comportament autònom del rover (producte, S4) | **R1**, **R3** | Projectes (45 %) |
+| Repte **⭐** de [Reptes_SA7.md](../../Reptes/Reptes_SA7.md) (nucli obligatori, S4) | **R1** | Projectes (45 %) |
 | Mini-defensa breu (S4, R4·DO) | **R4** | Projectes (45 %) |
 | Quadern tècnic | **R4** | Quadern tècnic i pràctiques (25 %) |
 | Treball a l'aula (autonomia, seguretat amb el rover) | **R5** | Actitud (10 %) |
@@ -49,6 +50,8 @@ Sensor **seguidor de línia** KS0050 a P0: lectura amb `read_analog()` i **llind
 
 Sensor d'**ultrasons HC-SR04** (trigger P1, echo P2): mesura de distància amb `mesura_distancia()`, **exactament** el mètode de `alarma_ultrasons.py` (SA3), només amb pins nous. Prova [`evita_obstacles.py`](codi/evita_obstacles/evita_obstacles.py): aturar/girar en detectar un obstacle proper.
 
+**Activitat nucli · lectura robusta amb `try`/`except`.** `mesura_distancia()` pot no trobar mai l'eco (obstacle massa lluny o fora d'abast): a més de comprovar que el valor no sigui negatiu, envolta la crida a `machine.time_pulse_us(...)` amb `try:`/`except OSError:` perquè una lectura puntual dolenta **no aturi tot el programa** del rover. Vegeu la [pàgina de pràctica](codi/evita_obstacles/EXPLICACIO.md#bloc-1b--activitat-nucli-lectura-robusta-amb-tryexcept).
+
 **Repte "tria un comportament autònom":** decideix, segons el material disponible a la teva taula, si tanques **seguidor de línia**, **evita-obstacles**, o tots dos. Aquest repte pot fer de producte de la SA si el docent t'ho indica.
 
 ### 4 · Integració: missions del rover (Sessió 4 — producte)
@@ -56,6 +59,10 @@ Sensor d'**ultrasons HC-SR04** (trigger P1, echo P2): mesura de distància amb `
 Parteix de [`rover_missions.py`](codi/rover_missions/rover_missions.py) i **integra** el comportament triat amb petites millores (velocitat variable, marge de seguretat). **Producte: comportament autònom del rover** funcional i documentat.
 
 **Mini-defensa (breu, davant el docent):** explica **una decisió** de disseny (per exemple, per què has triat aquest llindar, o com has integrat els dos sensors).
+
+### 5 · Repte ⭐ (nucli obligatori, mateixa Sessió 4)
+
+Amb el temps de pràctica de la Sessió 4 (el que abans es dedicava opcionalment als reptes), fes el **repte ⭐ · Carret de magatzem amb velocitat variable** de [Reptes_SA7.md](../../Reptes/Reptes_SA7.md): ara és **NUCLI OBLIGATORI**, no una ampliació — no s'hi afegeixen hores noves. **Ensenya'l al docent perquè el validi.**
 
 ## Producte · Comportament autònom del rover
 
@@ -84,4 +91,4 @@ Es tanca i s'avalua a la **Sessió 4** amb les rúbriques **R1** (codi, funciona
 
 <!-- /web:only-github -->
 
-> 📌 **Vols més?** Ampliació, [reptes ⭐](../../Reptes/Reptes_SA7.md), pensament computacional, exit ticket i ODS → **[SA7_fitxa_ampliada.md](SA7_fitxa_ampliada.md)**
+> 📌 **Vols més?** Ampliació, [reptes ⭐⭐/⭐⭐⭐](../../Reptes/Reptes_SA7.md), pensament computacional, exit ticket i ODS → **[SA7_fitxa_ampliada.md](SA7_fitxa_ampliada.md)**

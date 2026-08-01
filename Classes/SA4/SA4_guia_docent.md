@@ -24,6 +24,7 @@
 | [`SA4_esquemes_connexions.md`](SA4_esquemes_connexions.md) | Sessions 1-4 (servo, motoreductors, pins definitius de tot el curs). |
 | `codi/` | `funcions_moviments`, `coreografia`, `velocitat_pwm` i el repte-producte `control_per_botons`. |
 | [`00_Projecte_T2_Vehicle.md`](../00_General/00_Projecte_T2_Vehicle.md) | Sessió 4 (muntatge vinculant del xassís). |
+| [`Reptes/Reptes_SA4.md`](../../Reptes/Reptes_SA4.md) | Sessió 3, en acabar «control per botons» (repte **⭐ nucli obligatori**, diferent del «control per botons»; ⭐⭐/⭐⭐⭐ opcionals). |
 
 > Cada programa de `codi/` té la seva **pàgina de pràctica** (per què es fa + codi explicat per blocs, l'`EXPLICACIO.md` de la seva carpeta). El «Guió de modelatge» oral de sota continua sent teu.
 
@@ -39,7 +40,7 @@
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Pregunta del repte inicial: *"com organitzaries el codi perquè 'avançar', 'girar' i 'aturar' es puguin cridar com si fossin ordres pròpies?"* Mostra un fragment repetitiu (3 còpies del mateix bloc amb un valor diferent cada cop). | Formulen hipòtesis: com evitarien la repetició? |
+| Activació | 10' | Pregunta del repte inicial: *"com organitzaries el codi perquè 'avançar', 'girar' i 'aturar' es puguin cridar com si fossin ordres pròpies?"* Mostra un fragment repetitiu (3 còpies del mateix bloc amb un valor diferent cada cop). 🥋 **Kata del dia:** K06 (if/while) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis: com evitarien la repetició? |
 | Explicació | 30' | Sintaxi de `def nom(parametre):`, com es criden les funcions i què és un **valor de retorn** (`return`). Repassa en veu alta `mapa()` (SA3) i `respira()` (SA2) com a funcions que ja coneixien sense el nom. Introdueix el **servomotor**: `pin0.set_analog_period(20)` i `write_analog(26-128)` per a 0-180°. | Prenen notes; identifiquen paràmetre i valor de retorn a `mapa()`. |
 | Pràctica | 60' | Modelatge de [`funcions_moviments.py`](codi/funcions_moviments/funcions_moviments.py): `graus_a_pwm(angle)` (retorna un valor), `mou_servo(angle)` (un paràmetre), `saluda(vegades)` i `escombra(angle_maxim)` (reutilització del mateix codi amb arguments diferents). | Escriuen i proven `funcions_moviments.py` amb el servo de la mascota (P0, [esquemes](SA4_esquemes_connexions.md)); fan l'Activitat 1 de la fitxa. |
 | Tancament | 20' | Recull dubtes; anticipa `coreografia.py` (combinar funcions). | Entrada del quadern: què és un paràmetre, què és un valor de retorn. |
@@ -61,14 +62,15 @@
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Recorda el servo (angle fix); pregunta: *"i si un motor no ha d'anar a un angle, sinó girar sense parar?"* | Formulen hipòtesis sobre com es controlaria la velocitat. |
+| Activació | 10' | Recorda el servo (angle fix); pregunta: *"i si un motor no ha d'anar a un angle, sinó girar sense parar?"* 🥋 **Kata del dia:** K20 (condicionals amb sensors/llindar) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis sobre com es controlaria la velocitat. |
 | Explicació | 25' | **Motoreductors** del Kit 2: cada motor porta **dos** pins (un per sentit), i la velocitat és PWM (`write_analog`, com el LED de la SA2). Introdueix els pins **definitius** M1/M2 ([esquemes](SA4_esquemes_connexions.md)): a partir d'avui no es tornen a tocar en tot el curs. | Prenen notes; munten els dos motoreductors seguint l'esquema. |
-| Pràctica | 55' | Modelatge de [`velocitat_pwm.py`](codi/velocitat_pwm/velocitat_pwm.py): `avancar(velocitat)`, `retrocedir(velocitat)`, `girar(costat)`, `aturar()`. | Proven `velocitat_pwm.py` amb els motors alimentats per portapiles (**mai** USB); fan l'Activitat 2 de la fitxa. |
+| Pràctica | 45' | Modelatge de [`velocitat_pwm.py`](codi/velocitat_pwm/velocitat_pwm.py): `avancar(velocitat)`, `retrocedir(velocitat)`, `girar(costat)`, `aturar()`. | Proven `velocitat_pwm.py` amb els motors alimentats per portapiles (**mai** USB); fan l'Activitat 2 de la fitxa. |
+| Activitat nucli · `return` | 10' | **Escriptura guiada:** demana que cadascú escrigui `temps_per_recorregut(cm)` (paràmetre `cm`, `return` dels ms calculats a partir d'una velocitat calibrada) ABANS de mirar la solució, i que la facin servir amb `sleep(temps_per_recorregut(30))`. És la primera funció amb valor de retorn que **escriu** l'alumnat (a S1 només la van llegir a `graus_a_pwm()`). | Escriuen `temps_per_recorregut(cm)`, la proven i la comparen amb [`velocitat_pwm.py`](codi/velocitat_pwm/EXPLICACIO.md#bloc-5--activitat-nucli-sessió-2-escriu-tu-una-funció-amb-valor-de-retorn). |
 | Mini-check + Tancament | 30' | **Mini-check individual** (10', escriure una funció amb paràmetre sense apunts; banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md)). Recull dubtes. | Fan el mini-check (no qualifica); anoten al quadern un comentari de cada paràmetre de les seves funcions de moviment. |
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: **`girar()`** (deixa `avancar()`/`retrocedir()`/`aturar()`; `girar()` reapareix igualment a `control_per_botons.py`, S3).
 
-**Punts clau:** un motoreductor **no** va a un angle: gira contínuament, i el **sentit** es decideix triant a quin dels dos pins del motor s'envia el PWM (l'altre a `0`); mai als dos alhora. La **velocitat** és el mateix concepte de PWM que ja coneixies (`write_analog`, 0-1023), aplicat a un motor en lloc d'un LED.
+**Punts clau:** un motoreductor **no** va a un angle: gira contínuament, i el **sentit** es decideix triant a quin dels dos pins del motor s'envia el PWM (l'altre a `0`); mai als dos alhora. La **velocitat** és el mateix concepte de PWM que ja coneixies (`write_analog`, 0-1023), aplicat a un motor en lloc d'un LED. `temps_per_recorregut(cm)` és la primera funció amb `return` que **escriu** l'alumnat (no només la llegeix): calcula un temps a partir d'una distància, no mou res per si sola.
 
 **Errors freqüents i solució:**
 | Error | Causa | Solució |
@@ -76,21 +78,27 @@
 | El motor no es mou | Micro:shield alimentat només per USB | Alimentar sempre els motors des del portapiles. |
 | Un motor gira al revés del que esperaves | Sentit del cablatge del canal invertit | Inverteix el signe al codi (`avancar()`/`retrocedir()`), no recablis. |
 | Els dos pins d'un motor reben PWM alhora | Error de programació (bloqueja o vibra sense girar) | Revisar que l'altre pin es posi sempre a `0`. |
+| `temps_per_recorregut()` no fa avançar res | Confon una funció amb `return` (calcula) amb una que **fa** alguna cosa; li falta cridar `avancar()`/`sleep()` amb el resultat | Repassar amb `graus_a_pwm()` (S1): el `return` calcula, la crida a `avancar(...)`/`sleep(...)` és qui actua. |
 
 ---
 
 ## SESSIÓ 3 (2 h) — Repte «control per botons» (producte de la SA)
 
 > 🎯 **Producte de la SA.** Aquest repte **fa de producte** de la SA4: s'avalua amb **R1** (codi, criteri "Estructura"/modularitat) i **R2** (bases del muntatge). Aquesta S3 **allibera la S4** per a la fabricació (primera retallada del pla de contingència si cal): si el repte no es tanca del tot, es completa com a deures.
+>
+> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
+>
+> 🌟 **Nucli obligatori addicional (diferent de «control per botons»).** En acabar i tancar «control per botons», tothom fa el **repte ⭐** de [`Reptes_SA4.md`](../../Reptes/Reptes_SA4.md) (fila pròpia a la taula, més avall). Els reptes ⭐⭐/⭐⭐⭐ continuen sent ampliació opcional per a qui va sobrat.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Mostra [`control_per_botons.py`](codi/control_per_botons/control_per_botons.py) **sense executar-lo** (PRIMM): pregunta què farà cada botó. | Prediuen el comportament dels botons A/B. |
+| Activació | 10' | Mostra [`control_per_botons.py`](codi/control_per_botons/control_per_botons.py) **sense executar-lo** (PRIMM): pregunta què farà cada botó. 🥋 **Kata del dia:** K07 (funcions/paràmetres) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen el comportament dels botons A/B. |
 | Explicació | 20' | Modelatge de la **seqüència amb estat** (`PAS`, `seguent_moviment()`) i de per què el botó B **sempre** atura, es processi on es processi (anticipa l'estat STOP de la SA6). | Prenen notes; identifiquen quines funcions ja coneixen (`avancar`, `girar`...) i quines són noves (seqüència, botons). |
-| Repte | 70' | Acompanya la programació individual del repte: seqüència **pròpia** de moviments encadenada amb les funcions de moviment, activada amb els botons A/B. | Programen la seva pròpia seqüència a partir de `control_per_botons.py` (Activitat 3, producte). |
+| Repte | 55' | Acompanya la programació individual del repte: seqüència **pròpia** de moviments encadenada amb les funcions de moviment, activada amb els botons A/B. | Programen la seva pròpia seqüència a partir de `control_per_botons.py` (Activitat 3, producte). |
+| **Repte ⭐ (nucli obligatori, diferent de «control per botons»)** | 15' | En acabar i tancar «control per botons», repte **⭐** de [`Reptes_SA4.md`](../../Reptes/Reptes_SA4.md) («Salutació programable per a un aparador», a partir de `funcions_moviments.py`). Si algú no l'acaba dins la sessió, el tanca com a **deures** abans de la S4. | Fan el repte ⭐; 🤝 **parella de lectura (5')** abans de lliurar-lo; l'ensenyen al docent perquè el validi (**R1**). Qui va sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
 | Tancament | 20' | Recull dubtes; anuncia la fabricació de la S4. | Anoten al quadern la seqüència triada i per què. |
 
-> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: la **variació personal** de la seqüència (deixa la de `control_per_botons.py` tal qual; la personalització reapareix com a ampliació ⭐).
+> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: la **variació personal** de la seqüència (deixa la de `control_per_botons.py` tal qual; la personalització reapareix com a ampliació ⭐⭐/⭐⭐⭐).
 
 **Punts clau:** una **seqüència** és una sèrie de crides a funcions ja fetes, controlada per una variable d'estat (`PAS`) que recorda on som; una entrada que **sempre interromp** el que s'estigui fent (el botó B) és la primera versió d'un concepte que la SA6 formalitzarà com a **STOP prioritari**.
 
@@ -116,7 +124,7 @@
 
 **Punts clau:** el muntatge físic **no** és una activitat nova de programació: és **mecànic**, i valida amb maquinari real tot el que ja es va provar per separat a la S2-S3 (els pins de motor **no canvien**). El vehicle es porta muntat a la SA5 per treballar-hi el control remot per ràdio.
 
-**Producte de la SA:** repte «control per botons» (avançar/retrocedir/girar/aturar amb funcions pròpies, activat per botons), tancat i avaluat a la **S3**. Muntatge físic del **vehicle** a la **S4** (fabricació, avaluada amb la rúbrica de muntatge). Mini-defensa breu (1-2') del repte de la S3 (R4·DO).
+**Producte de la SA:** repte «control per botons» (avançar/retrocedir/girar/aturar amb funcions pròpies, activat per botons), tancat i avaluat a la **S3**. El repte **⭐** de `Reptes_SA4.md` (nucli obligatori) es fa tot seguit, dins la S3 o com a deures abans de la S4. Muntatge físic del **vehicle** a la **S4** (fabricació, avaluada amb la rúbrica de muntatge). Mini-defensa breu (1-2') del repte de la S3 (R4·DO).
 
 ### Mapa d'avaluació (traçabilitat)
 
@@ -125,6 +133,7 @@
 | Mini-check (S2) | Funció amb paràmetre sense apunts | CA1.1 | — | **No** (radar formatiu) |
 | Fitxa d'alumnat (Act. 1-2) | Funcions amb paràmetres i valor de retorn; servo i motoreductor | CA1.1, CA2.1 | R1 | Formativa |
 | Repte «control per botons» (S3, producte) | Modularitat: moviment del vehicle encapsulat en funcions pròpies | CA1.1, CA2.1 | **R1**, **R2** | Sí |
+| Repte **⭐** `Reptes_SA4.md` (S3, en acabar «control per botons» — nucli obligatori) | Funció amb dos paràmetres (`salutacio(estil, vegades)`) sobre `funcions_moviments.py` | CA1.1 | **R1** | Sí |
 | Mini-defensa (S3, R4·DO) | Claredat + justificació d'una decisió de disseny de la seqüència | CA5.2 | **R4** (fila «Defensa oral») | Sí |
 | Muntatge del vehicle (S4) | Fabricació física correcta i segura | CA2.1 | **R2** (muntatge) | Sí |
 | Quadern tècnic | Documentació, paràmetres comentats | CA5.2 | **R4** | Sí |
@@ -159,7 +168,7 @@ A la SA4 hem après a **moure't** amb funcions pròpies (servo, motoreductors) i
 | Necessitat | Mesura |
 |---|---|
 | **Bastida (qui ho necessita)** | Plantilla de funció de moviment amb el nom i els paràmetres ja definits (`def avancar(velocitat):` amb el cos buit); esquema de connexió del motoreductor ja fet. |
-| **+ Ampliació (qui va sobrat)** | Funció de moviment amb velocitat variable i acceleració progressiva; seqüència coreografiada de moviments (vegeu [Reptes de la SA4](../../Reptes/Reptes_SA4.md)). |
+| **+ Ampliació (qui va sobrat)** | Funció de moviment amb velocitat variable i acceleració progressiva; seqüència coreografiada de moviments; reptes **⭐⭐/⭐⭐⭐** (opcionals) de [Reptes de la SA4](../../Reptes/Reptes_SA4.md) — el repte ⭐ ja **no** és aquí: és nucli obligatori per a tothom (vegeu Sessió 3). |
 | **Diversitat lingüística/lectora** | Taula de pins amb icones de component; glossari a [`00_Glossari_tecnic.md`](../00_General/00_Glossari_tecnic.md). |
 | **Sense maquinari per a tothom** | El simulador de python.microbit.org **no** reprodueix ni el servo ni els motoreductors: qui no tingui placa treballa per torns o substitueix temporalment les crides de moviment per `display.scroll(...)` per validar la **lògica**. |
 

@@ -55,4 +55,4 @@ return (durada_us * VELOCITAT_SO_CM_US) / 2
 - **Sessió 3 (producte):** [`mascota_reactiva`](../mascota_reactiva/EXPLICACIO.md) **no** incorpora l'ultrasò (el cablatge final de la mascota no en té; fa servir el PIR per detectar presència), però el mètode "mesurar temps → calcular → decidir" hi reapareix igualment.
 - **Simulador:** python.microbit.org **no** simula cap sensor extern, i molt menys el temps de vol de l'HC-SR04: aquesta pràctica es fa **només** amb maquinari real.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA3](../../../../Reptes/Reptes_SA3.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA3](../../../../Reptes/Reptes_SA3.md)**.

@@ -1,6 +1,6 @@
 # Reptes SA4 · Funcions i moviment
 
-> 🧑‍🎓 **Quan toca fer-ne un?** És l'**ampliació ⭐** de la SA: comença'l quan tinguis el **nucli al dia** (el repte «control per botons» de la S3, tancat). Ensenya'l al docent perquè el validi.
+> 🧑‍🎓 **Quan toca fer-ne un?** El repte **⭐ és NUCLI OBLIGATORI — forma part del producte de la SA**: comença'l quan tinguis el **nucli al dia** (el repte «control per botons» de la S3, tancat). Els reptes **⭐⭐/⭐⭐⭐ resten opcionals** (ampliació), per a qui vagi sobrat de temps. Ensenya el ⭐ al docent perquè el validi.
 
 **Fes els reptes en ordre de dificultat: comença per ⭐, i si arribes a ⭐⭐⭐ hauràs passat pels tres.** Tots parteixen dels programes de `Classes/SA4/codi/` i fan servir el Micro:shield. Es fan amb **maquinari real**: el simulador de python.microbit.org **no** reprodueix ni el servo ni els motoreductors (vegeu [`SA4_esquemes_connexions.md`](../Classes/SA4/SA4_esquemes_connexions.md) §Simulació), tot i que la **lògica** es pot escriure i revisar-hi abans de provar-la a la placa.
 
@@ -10,7 +10,7 @@
 
 ---
 
-## ⭐ Repte 1 · Salutació programable per a un aparador
+## ⭐ Repte 1 · Salutació programable per a un aparador (NUCLI OBLIGATORI)
 
 **Context.** Una botiga vol una figura d'aparador que saludi els vianants de manera diferent segons el moment del dia (matí animat, tarda tranquil·la), sense que calgui reprogramar-la cada cop.
 
@@ -35,7 +35,7 @@
 
 ---
 
-## ⭐⭐ Repte 2 · Aparcament automàtic de precisió
+## ⭐⭐ Repte 2 · Aparcament automàtic de precisió (ampliació opcional)
 
 **Context.** Un fabricant de robots de neteja vol que el seu prototip s'aproximi lentament a la seva base de càrrega i s'aturi amb suavitat, en lloc de frenar de cop.
 
@@ -60,7 +60,7 @@
 
 ---
 
-## ⭐⭐⭐ Repte 3 · Coreografia de benvinguda amb servo, so i motors
+## ⭐⭐⭐ Repte 3 · Coreografia de benvinguda amb servo, so i motors (ampliació opcional)
 
 **Context.** Una empresa d'esdeveniments vol un petit robot de benvinguda per a una fira: quan s'acosta algú, fa una petita coreografia (moviment + so) i després avança uns instants cap al visitant.
 

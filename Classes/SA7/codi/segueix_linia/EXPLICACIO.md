@@ -45,4 +45,4 @@ Mentre el sensor "veu" la línia (lectura per sota del llindar), el rover avanç
 - **Sessió 4 (producte):** [`rover_missions`](../rover_missions/EXPLICACIO.md) integra aquest mateix llindar a la missió «línia».
 - **Simulador:** python.microbit.org **no** simula el seguidor de línia ni els motors: aquesta pràctica es fa **només** amb maquinari real, sobre un circuit de línia a terra.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA7](../../../../Reptes/Reptes_SA7.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA7](../../../../Reptes/Reptes_SA7.md)**.

@@ -39,7 +39,7 @@ except ValueError:
     distancia = -1
 ```
 
-> 🔑 **Què fa `try`/`except`:** `int(...)` peta amb un `ValueError` si el text no és un número vàlid (per exemple, un camp de ràdio arribat a mig escriure). `try` diu "intenta fer això"; si peta, en lloc d'aturar tot el programa, `except ValueError` **atrapa** l'error i executa una alternativa (aquí, `distancia = -1`, un valor sentinella que es descarta més endavant). S'usa aquí perquè una lectura de ràdio corrupta puntual **no ha de tombar** l'estació base sencera.
+Ja vas escriure un `try`/`except` a `evita_obstacles.py` (SA7-S3, lectura robusta de l'HC-SR04): mateixa idea, ara amb `except ValueError` en lloc de `except OSError`, perquè aquí el que pot fallar és `int(...)` sobre un text que arriba mig escrit (una lectura de ràdio corrupta), no un timeout de sensor. `distancia = -1` és el valor sentinella que es descarta més endavant, exactament com `mesura_distancia()` retornava `None`.
 
 ### Bloc 2 — Llista + mitjana simple (objectiu 3 de la fitxa 17)
 
@@ -78,4 +78,4 @@ Mateix mòdul `log` natiu de la V2 que `registre_dades.py` (SA6): cada lectura q
 - **Sessió 3:** les dades registrades (`MY_DATA.HTM`) són la base de la reflexió sobre ètica de dades i IA de la fitxa ampliada.
 - **Simulador:** la **ràdio i el mòdul `log`** SÍ es simulen a python.microbit.org (2 instàncies per assajar l'enviament/recepció).
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA8](../../../../Reptes/Reptes_SA8.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA8](../../../../Reptes/Reptes_SA8.md)**.

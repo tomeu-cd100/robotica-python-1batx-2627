@@ -53,6 +53,16 @@ if missatge_rebut is not None:
 
 `radio.receive()` **no espera**: torna `None` si no ha arribat res des de l'última volta del bucle. Per això cal cridar-lo dins de `while True:`, no un sol cop.
 
+### Bloc 5 — ACTIVITAT NUCLI: recórrer la llista sencera amb `for`
+
+```python
+def mostra_historic():
+    for missatge in historic:
+        display.scroll(missatge)
+```
+
+Ja coneixies el `for amb range(...)` (SA2): aquí el `for` recorre els **elements** d'una llista **directament**, sense passar per cap índex ni `range(len(historic))`. `missatge` va agafant, un darrere l'altre, cada element de `historic` (del més antic al més nou), i el cos del bucle s'executa un cop per cadascun. Prem **A+B alhora** per veure tot l'històric desplaçar-se pel display.
+
 ## ⚠️ Errors que veuràs segur
 
 | Símptoma | Causa probable |
@@ -67,4 +77,4 @@ if missatge_rebut is not None:
 - **Sessió 3:** [`receptor_vehicle.py`](../receptor_vehicle/EXPLICACIO.md) és el **producte**: rep ordres per ràdio i mou el vehicle.
 - **Simulador:** python.microbit.org **sí** simula la ràdio, però només entre instàncies obertes del simulador (no amb una placa física real): és una via de pràctica individual a casa.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA5](../../../../Reptes/Reptes_SA5.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA5](../../../../Reptes/Reptes_SA5.md)**.

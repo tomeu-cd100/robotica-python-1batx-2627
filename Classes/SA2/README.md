@@ -12,7 +12,7 @@ Segona situació d'aprenentatge del curs (1r trimestre). La micro:bit s'encaixa 
 | S2 | LED RGB i brunzidor provats ([Activitat 2](SA2_fitxa_alumnat.md#2--sortides-pwm-i-so-sessió-2)) i mini-check individual (no qualifica) | Es mostra al docent / quadern tècnic |
 | S3 | Repte **«semàfor o llum d'ambient»** ([Activitat 3](SA2_fitxa_alumnat.md#3--repte-semàfor-o-llum-dambient-sessió-3--producte), producte de la SA) + mini-defensa oral (1') | El docent el valida a l'aula |
 | S4 | 🤖 Muntatge físic de la **mascota** ([Activitat 4](SA2_fitxa_alumnat.md#4--muntatge-de-la-mascota-sessió-4)) | Es queda a l'aula/casa fins a la SA3 |
-| ⭐ | [Repte triat](../../Reptes/Reptes_SA2.md) | El docent el valida |
+| ⭐ | [Repte ⭐ de Reptes_SA2.md](../../Reptes/Reptes_SA2.md) (nucli obligatori) | El docent el valida → compta R1, Projectes (45 %) |
 | 📓 | Full del quadern tècnic de cada sessió | En acabar cada sessió |
 | 🤖 | Mascota muntada (LED de P1 i so validats amb `led_parpelleig.py`/`musica_altaveu.py`, servo muntat) | Es porta a la SA3 |
 
@@ -33,7 +33,7 @@ Si un dia no tens el Micro:shield o els kits a mà, la **lògica** dels programe
 - [Fitxa ampliada](SA2_fitxa_ampliada.md) — pensament computacional, ODS i ampliacions.
 - [Qüestionari de conceptes](SA2_questionari_conceptes.md) — per repassar.
 - [Exemple resolt](SA2_exemple_resolt.md) — com es pensa un problema semblant.
-- [Reptes de la SA2](../../Reptes/Reptes_SA2.md) — quan tinguis el nucli al dia.
+- [Reptes ⭐⭐/⭐⭐⭐ de la SA2](../../Reptes/Reptes_SA2.md) — ampliació opcional, per a qui va sobrat de temps (el ⭐ ja és nucli obligatori, vegeu «Què has d'entregar»).
 
 ## Producte i avaluació
 

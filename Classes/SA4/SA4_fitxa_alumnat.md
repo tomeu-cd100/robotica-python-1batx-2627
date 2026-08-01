@@ -19,6 +19,7 @@
 | Què lliuro | Rúbrica | On compta |
 |---|---|---|
 | Repte **«control per botons»** (producte, S3) | **R1**, **R2** | Projectes (45 %) |
+| Repte **⭐** de [Reptes_SA4.md](../../Reptes/Reptes_SA4.md) (nucli obligatori, en acabar «control per botons») | **R1** | Projectes (45 %) |
 | Mini-defensa breu (S3, R4·DO) | **R4** | Projectes (45 %) |
 | Muntatge del vehicle T2 (S4) | **R2** | Projectes (45 %) |
 | Quadern tècnic | **R4** | Quadern tècnic i pràctiques (25 %) |
@@ -45,13 +46,19 @@ Munta els dos motoreductors ([esquema](SA4_esquemes_connexions.md), pins **M1**/
 
 **Comenta cada paràmetre** de les teves funcions de moviment (per exemple, `# velocitat: 0-1023, com mes alt mes rapid`): ______________________
 
-> 🎯 **Mini-check individual (10', a l'inici d'aquesta sessió; no qualifica).** Escriu una funció amb paràmetre sense apunts. Banc complet: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md).
+**Activitat nucli · funció amb valor de retorn.** Abans de mirar la solució, escriu tu mateix `temps_per_recorregut(cm)`: una funció **amb un paràmetre** (`cm`) que **RETORNI** (amb `return`) els mil·lisegons que cal mantenir el motor engegat per recórrer aquests centímetres, a partir d'una velocitat de referència calibrada (per exemple, `CM_PER_SEGON = 20`). No ha de moure res: només calcula i retorna un número, com `graus_a_pwm()` de la S1. **Usa-la** després per fer avançar el vehicle una distància triada per tu, per exemple: `avancar(400); sleep(temps_per_recorregut(30)); aturar()`. Compara amb la solució a [`velocitat_pwm.py`](codi/velocitat_pwm/velocitat_pwm.py).
+
+> 🎯 **Mini-check individual (10', al final d'aquesta sessió, combinat amb el tancament; no qualifica).** Escriu una funció amb paràmetre sense apunts. Banc complet: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md).
 
 ### 3 · Repte «control per botons» (Sessió 3 — producte)
 
 Parteix de [`control_per_botons.py`](codi/control_per_botons/control_per_botons.py) i programa la **teva** seqüència de moviments (avançar/girar/retrocedir/aturar) activada amb els botons A/B.
 
 **Mini-defensa (breu, davant el docent):** explica **quina seqüència** has triat i **una decisió** de disseny (per exemple, per què aquest ordre de moviments o aquesta velocitat).
+
+### 4 · Repte ⭐ «Salutació programable per a un aparador» (Sessió 3, en acabar «control per botons» — NUCLI OBLIGATORI)
+
+En acabar i tancar el repte «control per botons», fes el **repte ⭐** de [Reptes_SA4.md](../../Reptes/Reptes_SA4.md): parteix de `funcions_moviments.py` (Activitat 1) i escriu una funció `salutacio(estil, vegades)` amb dos paràmetres. Si no t'hi arribes dins la Sessió 3, acaba'l com a **deures** abans de la Sessió 4. **Ensenya'l al docent perquè el validi.** (No confonguis aquest repte amb «control per botons»: són dos productes diferents.)
 
 ## Producte · Repte «control per botons»
 
@@ -83,4 +90,4 @@ Fabricació i muntatge físic segons el [dossier del vehicle T2](../00_General/0
 
 <!-- /web:only-github -->
 
-> 📌 **Vols més?** Ampliació, [reptes ⭐](../../Reptes/Reptes_SA4.md), pensament computacional, exit ticket i ODS → **[SA4_fitxa_ampliada.md](SA4_fitxa_ampliada.md)**
+> 📌 **Vols més?** Ampliació, [reptes ⭐⭐/⭐⭐⭐](../../Reptes/Reptes_SA4.md), pensament computacional, exit ticket i ODS → **[SA4_fitxa_ampliada.md](SA4_fitxa_ampliada.md)**

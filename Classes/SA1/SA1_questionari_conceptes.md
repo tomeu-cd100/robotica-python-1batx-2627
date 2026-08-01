@@ -13,11 +13,22 @@
 
 ## Preguntes (tria una resposta)
 
-1. Què distingeix un **robot** d'una màquina qualsevol (per exemple, un martell)?
-   - a) Que percep l'entorn, decideix i hi actua (té sensors, un "cervell" i actuadors).
-   - b) Que és més gran i pesa més.
-   - c) Que sempre té forma humana.
-   - d) Que funciona sense electricitat.
+1. Observa aquest programa de micro:bit i respon: **què mostra?**
+
+   ```python
+   from microbit import *
+
+   while True:
+       if button_a.is_pressed():
+           display.show(Image.HAPPY)
+       else:
+           display.show(Image.SAD)
+       sleep(200)
+   ```
+   - a) Sempre mostra la cara SAD; no reacciona mai als botons.
+   - b) Mentre es prem el botó A mostra la cara HAPPY; si no es prem, mostra la cara SAD, i ho repeteix contínuament.
+   - c) Mostra la cara HAPPY una sola vegada i després el programa s'atura.
+   - d) Alterna HAPPY i SAD cada 200 ms sense tenir en compte el botó.
 
 2. En el model **entrada → procés → sortida**, un **sensor** correspon a…
    - a) La sortida (la placa actua).
@@ -25,11 +36,19 @@
    - c) L'entrada (la placa percep l'entorn).
    - d) L'alimentació de la placa.
 
-3. Un **sistema embegut** és…
-   - a) Un ordinador de sobretaula amb pantalla i teclat.
-   - b) Un tipus de bateria recarregable.
-   - c) Un programa que només funciona a internet.
-   - d) Un petit ordinador integrat dins un aparell per controlar-lo (rentadora, dron, semàfor).
+3. Aquest programa hauria de mostrar el nom **"ALEX"** desplaçant-se i, en acabar, deixar fixa una cara contenta a la pantalla. Falta una línia:
+
+   ```python
+   from microbit import *
+
+   display.scroll("ALEX")
+   # <-- que hi va aqui?
+   ```
+   Quina línia cal afegir on diu el comentari?
+   - a) `display.show(Image.HAPPY)`
+   - b) `sleep(1000)`
+   - c) `display.scroll(Image.HAPPY)`
+   - d) `button_a.is_pressed()`
 
 4. Quin d'aquests elements és un **actuador** (sortida)?
    - a) Un sensor de temperatura.
@@ -67,11 +86,20 @@
    - c) Esborra el display.
    - d) Reinicia el programa.
 
-10. El **mètode de projecte** que farem servir tot el curs segueix aquest ordre de fases:
-    - a) Provar → millorar → analitzar → dissenyar → programar.
-    - b) Analitzar → dissenyar → programar/prototipar → provar → millorar.
-    - c) Programar → analitzar → provar → dissenyar → millorar.
-    - d) Dissenyar → provar → analitzar → millorar → programar.
+10. Aquest programa hauria de comprovar **contínuament** el botó A i canviar la cara en conseqüència, però a la placa real només ho fa un instant en arrencar i es queda així. Quin és l'error?
+
+    ```python
+    from microbit import *
+
+    if button_a.is_pressed():
+        display.show(Image.HAPPY)
+    else:
+        display.show(Image.SAD)
+    ```
+    - a) Falta `from microbit import *` a la primera línia.
+    - b) Falta envoltar el codi amb un `while True:` que ho repeteixi contínuament.
+    - c) `button_a.is_pressed()` hauria de ser `button_a.was_pressed()`.
+    - d) Falta un `sleep()` abans de l'`if`.
 
 ---
 
@@ -91,7 +119,13 @@ ___________________________________________________________________
 
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|
-| a | c | d | b | a | c | b | a | b | b |
+| b | c | a | b | a | c | b | a | b | b |
+
+La pregunta 1 (traça) es corregeix perquè cal llegir el codi sencer (bucle, condicional i `sleep`) i deduir el comportament real, no recordar una definició de "robot".
+
+La pregunta 3 (completar) es corregeix perquè demana identificar quina instrucció (`display.show`) produeix l'efecte descrit —una imatge fixa després del text—, en lloc de repetir de memòria la definició de "sistema embegut".
+
+La pregunta 10 (corregir) es corregeix perquè reprodueix l'error freqüent real d'aquesta SA (falta el `while True:`, vegeu `SA1_guia_docent.md`, taula «Errors freqüents») i obliga a raonar sobre l'execució del codi, no a recitar les fases del mètode de projecte.
 
 La pregunta 11 és oberta: valora que aparegui **un** sensor, **una** decisió i **un** actuador coherents amb l'aparell triat.
 

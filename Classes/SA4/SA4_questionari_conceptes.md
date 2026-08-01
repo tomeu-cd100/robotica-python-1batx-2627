@@ -13,11 +13,33 @@
 
 ## Preguntes (tria una resposta)
 
-1. Què és una **funció** en programació?
-   - a) Una variable que no canvia mai.
-   - b) Un bloc de codi amb nom que es pot cridar tantes vegades com calgui.
-   - c) Un tipus de bucle especial.
-   - d) Un component del Micro:shield.
+1. **[TRAÇA el codi]** Aquest fragment fa servir les funcions de moviment (com a `velocitat_pwm.py`). Quin és l'estat final de `pin13` en acabar d'executar-lo?
+
+   ```python
+   from microbit import *
+
+   def avancar(velocitat):
+       pin13.write_analog(velocitat)
+       pin14.write_digital(0)
+       pin15.write_analog(velocitat)
+       pin16.write_digital(0)
+
+   def girar(costat):
+       if costat == 'dreta':
+           pin13.write_analog(300)
+           pin14.write_digital(0)
+       elif costat == 'esquerra':
+           pin14.write_analog(300)
+           pin13.write_digital(0)
+
+   avancar(700)
+   girar('dreta')
+   ```
+
+   - a) `pin13` queda amb PWM 300, perquè `girar('dreta')` torna a escriure-hi després d'`avancar()`.
+   - b) `pin13` queda amb PWM 700, el valor que li va donar `avancar()`.
+   - c) `pin13` queda a 0, perquè `girar()` sempre reinicia els pins abans de moure's.
+   - d) No es pot saber sense executar-ho al maquinari real.
 
 2. A `def mou_servo(angle):`, què és `angle`?
    - a) Un valor de retorn.
@@ -49,11 +71,24 @@
    - c) És un caprici del fabricant, no té cap motiu tècnic.
    - d) Perquè cada pin controla un color diferent.
 
-7. Per què no es pot alimentar un motoreductor només des del port USB de l'ordinador?
-   - a) L'USB no subministra prou corrent per moure els motors amb fiabilitat.
-   - b) Els motors no necessiten alimentació externa.
-   - c) L'USB només serveix per carregar programes, mai per alimentar res.
-   - d) No hi ha cap problema a fer-ho.
+7. **[COMPLETA el codi]** A aquest fragment (com a `funcions_moviments.py`, Sessió 1) falta una línia perquè el servo es mogui amb precisió als graus indicats. Quina hi ha d'anar?
+
+   ```python
+   from microbit import *
+
+   ____   # <-- que hi va aqui?
+
+   def mou_servo(angle):
+       valor = 26 + (angle * (128 - 26)) // 180
+       pin0.write_analog(valor)
+
+   mou_servo(90)
+   ```
+
+   - a) `pin0.set_analog_period(20)`, per fixar el període de 20 ms que espera el servo abans d'enviar-hi PWM.
+   - b) `pin0.write_digital(20)`
+   - c) `pin0.read_analog(20)`
+   - d) `sleep(20)`
 
 8. A `control_per_botons.py`, per què el botó B **sempre** atura el vehicle, encara que estigui girant?
    - a) Perquè el codi del botó B es comprova a **cada volta** del bucle `while True:`, no només en punts concrets.
@@ -67,11 +102,20 @@
    - c) `aturar()`, perquè sempre fa el mateix (velocitat 0 als quatre pins).
    - d) Totes en tenen almenys un.
 
-10. Per què els pins dels motoreductors (M1/M2) fixats a la SA4 **no es tornen a tocar** a la resta del curs?
-    - a) Perquè el vehicle de T2 i el rover de T3 reaprofiten el mateix xassís i el mateix cablatge de moviment.
-    - b) Perquè és impossible canviar-los un cop programats.
-    - c) Perquè no té cap importància quins pins s'usin.
-    - d) Perquè la ràdio de la SA5 els necessita lliures.
+10. **[CORREGEIX el codi]** Aquest codi hauria de fer avançar el vehicle en línia recta (com a `velocitat_pwm.py`), però el motor M1 només vibra sense girar. Troba l'error:
+
+    ```python
+    def avancar(velocitat):
+        pin13.write_analog(velocitat)
+        pin14.write_analog(velocitat)
+        pin15.write_analog(velocitat)
+        pin16.write_digital(0)
+    ```
+
+    - a) `pin14` hauria de ser `pin14.write_digital(0)`: els dos pins d'un mateix motor (M1: pin13/pin14) mai poden rebre PWM alhora.
+    - b) `pin13` hauria de ser `pin13.write_digital(0)`.
+    - c) Falta cridar `aturar()` al principi de la funció.
+    - d) `velocitat` hauria de ser un valor negatiu.
 
 ---
 
@@ -89,7 +133,13 @@ ___________________________________________________________________
 
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|
-| b | b | b | b | b | a | a | a | c | a |
+| a | b | b | b | b | a | a | a | c | a |
+
+La pregunta 1 (traça de codi) substitueix una pregunta merament memorística per una de lectura activa: valora que l'alumnat entengui que una crida posterior (`girar('dreta')`) **sobreescriu** l'estat que havia deixat una crida anterior (`avancar()`) sobre el mateix pin, no que els valors "se sumin" ni que quedin fixats per sempre.
+
+La pregunta 7 (completar codi) comprova que l'alumnat sap identificar quina instrucció **falta** perquè un fragment funcioni com cal, no només reconèixer-la quan ja hi és: `set_analog_period(20)` és el pas que sovint s'oblida abans d'un `write_analog` sobre un servo.
+
+La pregunta 10 (corregir codi) es basa en un error freqüent real (guia docent, Sessió 2): enviar PWM als **dos** pins del mateix motor alhora. Valora que l'alumnat sàpiga localitzar l'error concret, no només recitar la norma general.
 
 La pregunta 11 és oberta: valora que expliqui la idea d'**abstracció** (un nom que expressa la intenció, "avançar", amaga el detall de pins i PWM) i que el codi principal (`seguent_moviment()`) es pugui llegir com una seqüència d'ordres senzilles en lloc d'un bloc llarg de `write_analog`/`write_digital`.
 

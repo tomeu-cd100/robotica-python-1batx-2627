@@ -13,7 +13,7 @@ Vuitena situació d'aprenentatge del curs (3r trimestre, la segona): el rover au
 | S1 | `comportaments.py` provat sobre el rover ([Activitat 1](SA8_fitxa_alumnat.md#1--sensors-avançats-i-comportaments-amb-prioritats-sessió-1)) | Es mostra al docent / quadern tècnic |
 | S2 | Mini-check individual (no qualifica) i `telemetria_radio.py` + el meu `estacio_base.py` ([Activitat 2](SA8_fitxa_alumnat.md#2--telemetria-per-ràdio-sessió-2)) | Es mostra al docent / quadern tècnic |
 | S3 | **Sistema de telemetria del rover** ([Activitat 3](SA8_fitxa_alumnat.md#3--ia-aplicada-al-control-i-producte-sessió-3), producte de la SA) + mini-defensa breu + reflexió d'IA | El docent el valida a l'aula |
-| ⭐ | [Repte triat](../../Reptes/Reptes_SA8.md) | El docent el valida |
+| ⭐ | [Repte ⭐ de Reptes_SA8.md](../../Reptes/Reptes_SA8.md) (nucli obligatori) | El docent el valida → compta R1 |
 | 📓 | Full del quadern tècnic de cada sessió | En acabar cada sessió |
 | 🤖 | Rover T3 amb telemetria per ràdio funcionant (Kit 3 + estació base) | Es mostra al docent a la S3 |
 
@@ -33,7 +33,7 @@ Si un dia no tens el rover o el Kit 3 a mà, pots treballar el **protocol** al s
 - [Fitxa ampliada](SA8_fitxa_ampliada.md) — pensament computacional, ODS i ampliacions.
 - [Qüestionari de conceptes](SA8_questionari_conceptes.md) — per repassar.
 - [Exemple resolt](SA8_exemple_resolt.md) — com es pensa un problema semblant.
-- [Reptes de la SA8](../../Reptes/Reptes_SA8.md) — quan tinguis el nucli al dia.
+- [Reptes ⭐⭐/⭐⭐⭐ de la SA8](../../Reptes/Reptes_SA8.md) — ampliació opcional, per a qui va sobrat de temps (el ⭐ ja és nucli obligatori, vegeu «Què has d'entregar»).
 
 ## Producte i avaluació
 

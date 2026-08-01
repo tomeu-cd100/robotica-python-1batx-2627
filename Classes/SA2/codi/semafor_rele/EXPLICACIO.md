@@ -105,4 +105,4 @@ while True:
 - **Sessió 4:** el LED/RGB i el so d'aquest repte reapareixen (sense el relé) dins la **mascota**.
 - **Tot el curs:** el patró "estat → funció que l'aplica" (`tot_apagat()` + una fase per estat) el retrobaràs a la SA6 (sistemes de control).
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA2](../../../../Reptes/Reptes_SA2.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA2](../../../../Reptes/Reptes_SA2.md)**.

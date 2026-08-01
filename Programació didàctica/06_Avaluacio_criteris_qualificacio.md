@@ -23,7 +23,7 @@ L'avaluació és **competencial, contínua, formativa i global**, d'acord amb el
 
 - **Productes/projectes** individuals de cada situació d'aprenentatge (amb rúbrica — vegeu `07_Rubriques.md`).
 - **Quadern tècnic (*logbook*)** individual: registre de pràctiques, codi, errors i millores.
-- **Proves pràctiques** de programació/electrònica (reptes individuals curts, T1/T2/T3).
+- **Proves pràctiques** de programació/electrònica (T1/T2/T3) i el **millor mini-check individual del trimestre** (§6.3).
 - **Defenses orals** i demostracions del producte, individuals.
 - **Observació sistemàtica** (rúbrica d'actitud i autoregulació).
 - **Autoavaluació** (dianes, rúbriques compartides).
@@ -32,12 +32,27 @@ L'avaluació és **competencial, contínua, formativa i global**, d'acord amb el
 
 | Dimensió | Pes | Instruments |
 |---|---|---|
-| **Projectes i productes** | **45 %** | Productes individuals de les SA + defenses (rúbriques). |
-| **Quadern tècnic i pràctiques** | **25 %** | *Logbook* individual, pràctiques guiades i reptes. |
-| **Proves pràctiques** (programació/electrònica) | **20 %** | Reptes individuals curts (T1, T2, T3). |
+| **Projectes i productes** | **45 %** | Productes individuals de les SA + repte **⭐ nucli obligatori** de cada SA (R1) + defenses (rúbriques). |
+| **Quadern tècnic i pràctiques** | **25 %** | *Logbook* individual, pràctiques guiades i reptes **d'ampliació ⭐⭐/⭐⭐⭐** (quan es fan). |
+| **Proves pràctiques** (programació/electrònica) | **20 %** | Prova trimestral (T1, T2, T3) — **15 %** + millor mini-check del trimestre — **5 %** (vegeu més avall). |
 | **Actitud, autonomia i responsabilitat** | **10 %** | Observació, autoavaluació. |
 
 > Recomanació: ponderació **per competències** dins de cada dimensió. La qualificació trimestral i final s'expressa amb un enter **de l'1 al 10 (sense decimals)**, com estableix la normativa de batxillerat (RD 243/2022 i DOIGC — vegeu `../Normativa/01_Normativa_LOMLOE_RoboticaPython_1Batx.md`).
+
+### El millor mini-check del trimestre qualifica (5 % dins «Proves pràctiques»)
+
+Els mini-checks individuals (`../Classes/00_General/00_Mini_checks_individuals.md`) són, segons l'auditoria pedagògica, l'instrument més vàlid per mesurar si l'alumnat sap **escriure** codi sol —i fins ara no qualificaven gens. Per corregir-ho sense trencar la seva funció de radar (que només funciona si ningú té por d'equivocar-s'hi), la dimensió «Proves pràctiques» es desglossa en:
+
+- **15 %** — la prova pràctica trimestral (T1/T2/T3), igual que fins ara.
+- **5 %** — el **millor** dels mini-checks fets aquell trimestre (3 per trimestre: un per SA).
+
+**Mecànica:**
+1. Cada mini-check es guarda (paper o captura) amb el seu semàfor 🟢🟡🟠🔴 i el tipus d'error anotat (sintaxi/concepte/descuit).
+2. **No es fa mitjana** dels tres: en tancar el trimestre, el docent tria el **millor** i el converteix a nota 1-10 amb l'escala: 🟢 = 9-10 · 🟡 = 6-8 · 🟠 = 4-5 · 🔴 = 1-3, amb un **matís qualitatiu** dins de cada tram (per exemple, un 🟡 net i a prop del 🟢 puntua 8; un 🟡 just per sobre del 🟠 puntua 6).
+3. Aquesta nota (0-10) és l'evidència de la dimensió «Proves pràctiques» que pesa el **5 %**; la prova trimestral continua sent l'evidència del **15 %** restant.
+4. **Cada mini-check individual segueix sense qualificar-se el dia que es fa** (segueix sent radar formatiu explícit); només compta, a posteriori, el millor del conjunt del trimestre — així es manté l'incentiu d'escriure sense por i, alhora, es reconeix qui sap escriure codi sol.
+
+La suma global de la ponderació de matèria (45/25/20/10) **no canvia**: només es reparteix internament el 20 % de «Proves pràctiques».
 
 ### Les tres escales que conviuen (i com es relacionen)
 
@@ -77,7 +92,7 @@ La qualificació de la dimensió recuperada **substitueix** l'anterior (no se'n 
 
 - **Retorn freqüent** sobre el codi i el muntatge (durant la pràctica autònoma).
 - **Rúbriques compartides** des de l'inici de cada SA.
-- **Mini-check individual per SA** (10', no qualifica): micro-repte de codi **sense apunts** que detecta dificultats abans que les penalitzi la prova trimestral. Banc complet: `../Classes/00_General/00_Mini_checks_individuals.md`.
+- **Mini-check individual per SA** (10', escriptura de codi curt sense apunts): detecta dificultats abans que les penalitzi la prova trimestral. Cada mini-check **no qualifica individualment** el dia que es fa, però el **millor del trimestre sí compta un 5 %** (§6.3). Banc complet: `../Classes/00_General/00_Mini_checks_individuals.md`.
 - **Graella d'activació amb repàs espaiat** a cada sessió (no qualifica): les errades massives hi fan de termòmetre del grup. Banc: `../Classes/00_General/00_Banc_activacio_repas.md`.
 
 ## 6.6. Transparència

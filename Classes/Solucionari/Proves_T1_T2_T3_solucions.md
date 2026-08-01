@@ -125,7 +125,7 @@ while True:
 
 Enunciat complet, graella i solució raonada: [`Avaluació/Prova_practica_T2.md`](../../Avaluació/Prova_practica_T2.md).
 
-**Resum de correcció Part A:** nucli = FSM RUN/STOP amb ordres per ràdio (`CMD:`), reutilitzant les funcions de moviment de la SA4-SA5; ampliacions = polsador STOP prioritari (P12) i LED indicador (P1).
+**Resum de correcció Part A:** nucli = FSM RUN/STOP amb ordres per ràdio (`CMD:`), reutilitzant les funcions de moviment de la SA4-SA5; ampliacions = polsador STOP prioritari (P12) i LED indicador (P1); **ítem obligatori (2 punts, P3.9):** funció nova pròpia amb paràmetre i retorn (`percentatge_a_velocitat()`) que converteix una magnitud i s'usa realment al programa.
 
 <details markdown="1">
 <summary>Desplega el codi complet (<code>prova_t2_vehicle_fsm.py</code>)</summary>
@@ -140,6 +140,10 @@ Enunciat complet, graella i solució raonada: [`Avaluació/Prova_practica_T2.md`
 # que vehicle_seguretat.py, SA6).
 # Ampliacio (excel-lent): LED indicador d'estat (P1): ences fix = RUN,
 # apagat = STOP.
+# Item NOU (obligatori, 2 punts): funcio propia amb UN PARAMETRE i VALOR DE
+# RETORN que converteix una magnitud (percentatge de velocitat 0-100) al
+# valor PWM que accepta write_analog() (0-1023), i que es fa servir de
+# veritat al programa per fixar VELOCITAT (no nomes definida, tambe usada).
 # Cablatge (00_Fil_conductor_construccions.md #1b, vehicle T2): M1=P13/P14,
 # M2=P15/P16, LED indicador=P1, polsador STOP=P12 (pull-up intern).
 # Simulador: python.microbit.org NO simula els motors; nomes es pot provar
@@ -164,7 +168,16 @@ LED_ESTAT = pin1
 POLSADOR_STOP = pin12
 POLSADOR_STOP.set_pull(POLSADOR_STOP.PULL_UP)   # repos = 1, premut = 0
 
-VELOCITAT = 400
+
+def percentatge_a_velocitat(percentatge):
+    # ITEM NOU (obligatori, 2 punts): funcio NOVA, amb parametre i retorn,
+    # que converteix una magnitud (percentatge 0-100) al rang PWM real
+    # (0-1023) que necessiten write_analog(). Es crida mes avall i el
+    # resultat es fa servir com a VELOCITAT: no nomes es defineix, s'usa.
+    return int(percentatge * 1023 / 100)
+
+
+VELOCITAT = percentatge_a_velocitat(40)   # ~40% de la velocitat maxima
 
 RUN, STOP = range(2)
 estat = STOP
@@ -468,7 +481,7 @@ else:
 
 </details>
 
-**Resum de correcció Part B (taula):** nucli = telemetria per ràdio amb prefix `TEL:`; ampliació = integració d'una ordre `CMD:` en el comportament (repàs d'integració de la SA5-SA6, no contingut nou de SA7-SA8).
+**Resum de correcció Part B (taula):** nucli = telemetria per ràdio amb prefix `TEL:`; ampliació = integració d'una ordre `CMD:` en el comportament (repàs d'integració de la SA5-SA6, no contingut nou de SA7-SA8); **ítem obligatori (2 punts, P3.9):** comportament nou del rover no treballat a classe, escrit en una funció pròpia (`cal_aparcar()`), redactat a la taula sense necessitat de temps addicional de pista.
 
 <details markdown="1">
 <summary>Desplega el codi complet (<code>prova_t3_telemetria.py</code>)</summary>
@@ -533,6 +546,85 @@ while True:
             envia_lectura()
 
     sleep(20)
+```
+
+</details>
+
+### Ítem obligatori T3 — comportament nou del rover (funció pròpia)
+
+<details markdown="1">
+<summary>Desplega el codi complet (<code>prova_t3_comportament_nou.py</code>)</summary>
+
+```python
+# Prova practica T3 - ITEM NOU (obligatori, 2 punts) - SOLUCIO ORIENTATIVA
+# (docent, NO es lliura). Comportament NOU del rover, NO treballat a cap
+# sessio del curs: "aparca quan detecta la linia DUES vegades seguides".
+# Es redacta a la TAULA (mateix bloc horari que la Part B): no necessita
+# temps addicional de pista de la rotacio continua. Es valora la logica i
+# l'estructura de la funcio (parametre + retorn); si toca torn de pista
+# abans d'acabar la sessio es pot provar amb el rover real, pero no cal
+# per obtenir la puntuacio.
+# Cablatge (00_Fil_conductor_construccions.md #1b, rover T3, igual que
+# prova_t3_rover.py): M1=P13/P14, M2=P15/P16, seguidor de linia=P0.
+# Simulador: aquest comportament necessita el rover real (motors i sensor
+# de linia no es simulen); la funcio cal_aparcar() si es pot provar sola
+# al REPL amb valors enters (0, 1, 2...).
+
+from microbit import *
+
+M1_ENDAVANT = pin13
+M1_ENRERE = pin14
+M2_ENDAVANT = pin15
+M2_ENRERE = pin16
+SEGUIDOR_LINIA = pin0
+
+VELOCITAT_AVANCAR = 400
+LLINDAR_LINIA = 500
+
+
+def avancar(velocitat):
+    M1_ENDAVANT.write_analog(velocitat)
+    M1_ENRERE.write_digital(0)
+    M2_ENDAVANT.write_analog(velocitat)
+    M2_ENRERE.write_digital(0)
+
+
+def aturar():
+    M1_ENDAVANT.write_digital(0)
+    M1_ENRERE.write_digital(0)
+    M2_ENDAVANT.write_digital(0)
+    M2_ENRERE.write_digital(0)
+
+
+def cal_aparcar(deteccions_consecutives):
+    # FUNCIO NOVA (item obligatori): UN PARAMETRE i VALOR DE RETORN.
+    # Comportament no vist a classe: cal aparcar quan la linia s'ha
+    # detectat DUES vegades SEGUIDES (no nomes un cop, per evitar un fals
+    # positiu d'un sol instant de lectura sorollosa).
+    return deteccions_consecutives >= 2
+
+
+deteccions = 0
+aparcat = False
+
+while not aparcat:
+    lectura = SEGUIDOR_LINIA.read_analog()
+    detecta_linia = lectura < LLINDAR_LINIA
+
+    if detecta_linia:
+        deteccions += 1
+    else:
+        deteccions = 0   # nomes compten deteccions SEGUIDES, sense talls
+
+    if cal_aparcar(deteccions):
+        aturar()
+        display.show(Image.YES)
+        aparcat = True
+    else:
+        avancar(VELOCITAT_AVANCAR)
+        display.show(Image.ARROW_N)
+
+    sleep(50)
 ```
 
 </details>

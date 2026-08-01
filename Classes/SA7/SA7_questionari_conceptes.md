@@ -12,11 +12,22 @@
 
 ## Preguntes (tria una resposta)
 
-1. Què és la **cinemàtica diferencial**, tal com s'aplica al rover?
-   - a) Un tipus de sensor d'ultrasons.
-   - b) El fet que el rover giri variant la velocitat/sentit relatiu de cada roda motriu.
-   - c) Una funció pròpia del mòdul `radio`.
-   - d) Una manera de calcular la temperatura del motor.
+1. **[TRAÇA]** Fixa't en aquest fragment, adaptat de `missio_quadrat()` (`rover_missions.py`):
+
+   ```python
+   for _ in range(4):
+       avancar(400)
+       sleep(900)
+       girar('dreta')
+       sleep(430)
+   aturar()
+   ```
+
+   Què fa aquest fragment de codi?
+   - a) El rover gira sobre si mateix indefinidament, sense avançar mai.
+   - b) El rover recorre una trajectòria aproximadament en quadrat: repeteix 4 vegades avançar una estona i girar uns 430 ms (aprox. 90°).
+   - c) El rover segueix una línia negra combinant els dos sensors del rover.
+   - d) El rover mesura la distància a un obstacle abans de cada gir.
 
 2. Per què cal **calibrar** els motors (`FACTOR_M1`/`FACTOR_M2`) encara que els dos motoreductors siguin del mateix model?
    - a) Perquè MicroPython ho exigeix per llei del llenguatge.
@@ -30,11 +41,29 @@
    - c) Perquè el KS0050 és analògic i mai dona el mateix valor dues vegades.
    - d) No hi ha cap motiu, es podria fixar un únic valor vàlid per a tothom.
 
-4. Com mesura la distància el sensor d'ultrasons HC-SR04?
-   - a) Llegint un valor analògic directament, com el seguidor de línia.
-   - b) Enviant un pols de so i mesurant el temps que triga a tornar l'eco (*time-of-flight*), amb `machine.time_pulse_us`.
-   - c) Amb un valor fix que no depèn de cap mesura real.
-   - d) Comptant quantes vegades parpelleja un LED intern.
+4. **[COMPLETAR]** Aquest fragment és una versió incompleta de `mesura_distancia()` (d'`evita_obstacles.py`). Hi falta **una línia** (marcada amb `____`):
+
+   ```python
+   def mesura_distancia():
+       TRIGGER.write_digital(0)
+       utime.sleep_us(2)
+       TRIGGER.write_digital(1)
+       utime.sleep_us(10)
+       ____  # <-- que hi va aqui?
+       try:
+           durada_us = machine.time_pulse_us(ECHO, 1, 30000)
+       except OSError:
+           return None
+       if durada_us < 0:
+           return None
+       return (durada_us * VELOCITAT_SO_CM_US) / 2
+   ```
+
+   Quina línia cal perquè el pols de trigger duri només 10 microsegons i després es talli, tal com demana l'HC-SR04?
+   - a) `ECHO.write_digital(0)`
+   - b) `sleep(10)`
+   - c) `TRIGGER.write_digital(0)`
+   - d) `TRIGGER.write_digital(1)`
 
 5. A `evita_obstacles.py`, per què `TRIGGER = pin1` i `ECHO = pin2`, i no `pin14`/`pin15` com a la pràctica `alarma_ultrasons.py` de la SA3?
    - a) Perquè el mètode de mesura ha canviat completament respecte a la SA3.
@@ -66,11 +95,28 @@
    - c) Llegint directament el valor de `girar()`.
    - d) El rover s'atura sempre que perd la línia, mai gira.
 
-10. Per què el simulador de python.microbit.org **no** és suficient per validar cap dels programes d'aquesta SA?
-    - a) Perquè no simula `read_analog()` en absolut.
-    - b) Perquè no simula cap component del rover (motors, HC-SR04, seguidor de línia): només és útil per esbossar pseudocodi de l'estructura d'una trajectòria.
-    - c) Perquè no permet escriure codi amb `machine`.
-    - d) És suficient del tot, no cal cap rover físic.
+10. **[CORREGIR]** Aquest fragment (adaptat de `mesura_distancia()` d'`evita_obstacles.py`) té **un error**. Troba'l:
+
+    ```python
+    def mesura_distancia():
+        TRIGGER.write_digital(0)
+        utime.sleep_us(2)
+        TRIGGER.write_digital(1)
+        utime.sleep_us(10)
+        TRIGGER.write_digital(0)
+        try:
+            durada_us = machine.time_pulse_us(ECHO, 1, 30000)
+        except:
+            return None
+        if durada_us < 0:
+            return None
+        return (durada_us * VELOCITAT_SO_CM_US) / 2
+    ```
+
+    - a) El `except:` sense especificar `OSError` atraparia qualsevol error (fins i tot un error real de programació), en lloc de només el timeout del sensor.
+    - b) Falta el `try` abans del `except`.
+    - c) `machine.time_pulse_us` no accepta tres arguments.
+    - d) `TRIGGER.write_digital(0)` no es pot cridar dues vegades al mateix programa.
 
 ---
 
@@ -88,7 +134,13 @@ ___________________________________________________________________
 
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|
-| b | b | b | b | b | c | b | d | b | b |
+| b | b | b | c | b | c | b | d | b | a |
+
+La pregunta 1 (traça de codi) avalua que l'alumnat sàpiga llegir un fragment real de `missio_quadrat()` i predir el comportament resultant (una trajectòria en quadrat), en lloc de limitar-se a recitar la definició de cinemàtica diferencial.
+
+La pregunta 4 (completar codi) avalua que l'alumnat entengui la seqüència exacta del pols de trigger de l'HC-SR04 (0 → 1 → 0) prou bé com per identificar quina línia hi falta, no només que en sàpiga la definició de manual.
+
+La pregunta 10 (corregir codi) avalua que l'alumnat reconegui un error real i freqüent (un `except:` massa genèric que amaga bugs de programació, en lloc de capturar només el timeout amb `except OSError:`), tal com es descriu a la guia docent de la S3.
 
 La pregunta 11 és oberta: valora que expliqui que el mètode de mesura (pols de trigger + `machine.time_pulse_us` a l'echo + càlcul distància = temps × velocitat del so / 2) és **idèntic** als dos programes; només canvien els pins concrets (P14/P15 a la SA3, P1/P2 al rover), perquè al rover aquests dos pins vells ja estan ocupats pels motoreductors.
 

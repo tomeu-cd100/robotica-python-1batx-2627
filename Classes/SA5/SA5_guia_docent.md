@@ -23,6 +23,7 @@
 | [`SA5_fitxa_alumnat.md`](SA5_fitxa_alumnat.md) | Totes les sessions (Activitats 1-3 + producte + quadern). |
 | [`SA5_esquemes_connexions.md`](SA5_esquemes_connexions.md) | Sessions 1-3 (configuració de ràdio i pins reutilitzats del vehicle). |
 | `codi/` | `radio_missatges`, `comandament` i el repte-producte `receptor_vehicle`. |
+| [`Reptes_SA5.md`](../../Reptes/Reptes_SA5.md) | Sessió 3, en acabar el producte: repte **⭐** (nucli obligatori, mateix temps de pràctica que ja hi havia). Reptes ⭐⭐/⭐⭐⭐, ampliació opcional. |
 
 > Cada programa de `codi/` té la seva **pàgina de pràctica** (per què es fa + codi explicat per blocs, l'`EXPLICACIO.md` de la seva carpeta). El «Guió de modelatge» oral de sota continua sent teu.
 
@@ -52,14 +53,15 @@ Assigna els **grups de ràdio per parelles de números de llista** (rotant si el
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Pregunta del repte inicial: *"com envies una ordre a un robot sense fils, i com fas perquè no es 'perdi' cap missatge?"* Reparteix la taula de grups de ràdio. | Formulen hipòtesis: com es "sentirien" dues plaques sense fil físic? |
+| Activació | 10' | Pregunta del repte inicial: *"com envies una ordre a un robot sense fils, i com fas perquè no es 'perdi' cap missatge?"* Reparteix la taula de grups de ràdio. 🥋 **Kata del dia:** K08 (return) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis: com es "sentirien" dues plaques sense fil físic? |
 | Explicació | 30' | `radio.on()`, `radio.config(group=N, power=...)` i per què el `group` evita interferències entre 20 plaques a la vegada. Introdueix `radio.send()`/`radio.receive()` i que **`receive()` no espera**: torna `None` si no ha arribat res. | Prenen notes; identifiquen per què cal cridar `receive()` dins d'un bucle. |
-| Pràctica | 60' | Modelatge de [`radio_missatges.py`](codi/radio_missatges/radio_missatges.py): enviar amb remitent (`MEU_NOM + ":" + text`), guardar els missatges rebuts en una **llista** (`historic`, xat "5×5"). | Escriuen el **seu propi** codi d'emissor i de receptor; s'aparellen **puntualment** (banc de proves) amb la placa d'un company (mateix grup de la taula) i intercanvien breument el rol d'emissor/receptor. Fan l'Activitat 1 de la fitxa. |
+| Pràctica | 50' | Modelatge de [`radio_missatges.py`](codi/radio_missatges/radio_missatges.py): enviar amb remitent (`MEU_NOM + ":" + text`), guardar els missatges rebuts en una **llista** (`historic`, xat "5×5"). | Escriuen el **seu propi** codi d'emissor i de receptor; s'aparellen **puntualment** (banc de proves) amb la placa d'un company (mateix grup de la taula) i intercanvien breument el rol d'emissor/receptor. Fan l'Activitat 1 de la fitxa. |
+| Activitat nucli · `for` sobre col·lecció | 10' | Modelatge de `mostra_historic()` (A+B): `for missatge in historic:` recorre els **elements** de la llista directament (no `range(len(historic))`). És el primer `for` del curs sobre una col·lecció (fins ara, `for` sempre amb `range`, SA2). | Proven `mostra_historic()` amb 3-4 missatges enviats; identifiquen la diferència amb el `for i in range(...)` de la SA2. |
 | Tancament | 20' | Recull dubtes; anticipa el protocol de comandes de la Sessió 2. | Entrada del quadern: què és el `group`, com es guarda un missatge a una llista. |
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: l'**intercanvi de rols** emissor/receptor (deixa que cadascú provi només el seu; l'intercanvi complet reapareix igualment a la Sessió 2 amb comandament/receptor separats).
 
-**Punts clau:** la **ràdio** de la micro:bit V2 permet enviar i rebre text pla entre plaques properes; el **grup** (`radio.config(group=N)`) és com un "canal" que separa parelles diferents perquè no es sentin entre elles; `radio.receive()` **no bloqueja**: cal cridar-lo repetidament dins del bucle principal per no perdre cap missatge.
+**Punts clau:** la **ràdio** de la micro:bit V2 permet enviar i rebre text pla entre plaques properes; el **grup** (`radio.config(group=N)`) és com un "canal" que separa parelles diferents perquè no es sentin entre elles; `radio.receive()` **no bloqueja**: cal cridar-lo repetidament dins del bucle principal per no perdre cap missatge. `for missatge in historic:` recorre els **elements** de la llista directament: és el mateix `for` de la SA2, ara sense `range`.
 
 **Errors freqüents i solució:**
 | Error | Causa | Solució |
@@ -74,12 +76,12 @@ Assigna els **grups de ràdio per parelles de números de llista** (rotant si el
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Recorda el xat lliure de la S1; pregunta: *"com distingiries una ORDRE d'un missatge qualsevol si les dues coses viatgen igual, com a text?"* | Formulen hipòtesis: un prefix, una paraula clau... |
+| Activació | 10' | Recorda el xat lliure de la S1; pregunta: *"com distingiries una ORDRE d'un missatge qualsevol si les dues coses viatgen igual, com a text?"* 🥋 **Kata del dia:** K21 (funcions/paràmetres) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis: un prefix, una paraula clau... |
 | Explicació | 25' | Introdueix la idea de **protocol**: prefix fix (`"CMD:"`) + una ordre curta d'una lletra (`F`/`B`/`L`/`R`/`S`). Modelatge de [`comandament.py`](codi/comandament/comandament.py): botons A/B/A+B i gestos (`accelerometer.was_gesture(...)`) com a entrades diferents que envien el **mateix** protocol de sortida. | Prenen notes; dissenyen la seva pròpia llista de 4-5 comandes (poden reutilitzar F/B/L/R/S o triar-ne d'altres). |
 | Pràctica | 55' | Acompanya la connexió amb les funcions de moviment de la SA4 (`avancar`/`retrocedir`/`girar`/`aturar`): la recepció crida la funció que toca segons el missatge rebut. Primeres proves amb el propi vehicle com a receptor, aparellat puntualment amb la placa d'un company o del docent com a emissor de proves. | Programen `comandament.py` (emissor) i comencen `receptor_vehicle.py` (receptor); proven l'aparellament (el codi que s'avalua és sempre el propi). Fan l'Activitat 2 de la fitxa. |
 | Mini-check + Tancament | 30' | **Mini-check individual** (10', enviar/rebre un missatge i actuar-hi sense apunts; banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md)). Recull dubtes. | Fan el mini-check (no qualifica); documenten el protocol al quadern (taula comanda → acció). |
 
-> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: els **gestos** de `comandament.py` (deixa només els botons A/B/A+B; els gestos reapareixen igualment com a ampliació ⭐).
+> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: els **gestos** de `comandament.py` (deixa només els botons A/B/A+B; els gestos reapareixen igualment com a ampliació ⭐⭐/⭐⭐⭐).
 
 **Punts clau:** un **protocol** és un acord tancat sobre com s'escriuen els missatges perquè qui els rep sàpiga interpretar-los sense ambigüitat; un **prefix** (`"CMD:"`) permet distingir les ordres d'un altre trànsit de ràdio; la combinació de botons (A+B) es comprova **abans** que els botons per separat perquè tingui prioritat (com el botó B a `control_per_botons.py`, SA4).
 
@@ -95,12 +97,17 @@ Assigna els **grups de ràdio per parelles de números de llista** (rotant si el
 ## SESSIÓ 3 (2 h) — Repte «control remot bàsic» (producte de la SA)
 
 > 🎯 **Producte de la SA.** Aquest repte **fa de producte** de la SA5: s'avalua amb **R1** (codi, criteri "Funcionament") i **R4** (documentació). Introdueix, com a **+ampliació**, l'historial de comandes amb llistes/tuples (es completa a la SA6).
+>
+> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
+
+> ⭐ **Repte nucli obligatori.** Un cop tancat el producte, tothom fa el repte **⭐** de [`Reptes_SA5.md`](../../Reptes/Reptes_SA5.md) (fila pròpia a la taula, més avall). Els reptes **⭐⭐/⭐⭐⭐** continuen sent ampliació opcional per a qui vagi sobrat.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Mostra [`receptor_vehicle.py`](codi/receptor_vehicle/receptor_vehicle.py) **sense executar-lo** (PRIMM): pregunta què farà cada ordre rebuda. | Prediuen el comportament del vehicle davant de cada comanda. |
+| Activació | 10' | Mostra [`receptor_vehicle.py`](codi/receptor_vehicle/receptor_vehicle.py) **sense executar-lo** (PRIMM): pregunta què farà cada ordre rebuda. 🥋 **Kata del dia:** K09 (global) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen el comportament del vehicle davant de cada comanda. |
 | Explicació | 20' | Modelatge de la funció `actua(ordre)` (esdeveniment → acció) i de per què reutilitza **exactament** les funcions `avancar`/`retrocedir`/`girar`/`aturar` de la SA4 sense reescriure-les. Introdueix l'historial amb **tuples** (`(ordre, instant)`) com a estructura de dades nova. | Prenen notes; identifiquen quines parts del programa ja coneixien (funcions de moviment) i quines són noves (protocol per ràdio, tuples). |
-| Repte | 70' | Acompanya el tancament individual del repte «control remot bàsic»: cadascú prova el **seu** receptor aparellat puntualment amb el comandament d'un company o del docent. | Tanquen `receptor_vehicle.py`, proven el vehicle amb ràdio real (Activitat 3, producte). |
+| Repte | 55' | Acompanya el tancament individual del repte «control remot bàsic»: cadascú prova el **seu** receptor aparellat puntualment amb el comandament d'un company o del docent. | Tanquen `receptor_vehicle.py`, proven el vehicle amb ràdio real (Activitat 3, producte). |
+| **Repte ⭐ (nucli obligatori)** | 15' | Un cop tancat el producte, repte **⭐** de [`Reptes_SA5.md`](../../Reptes/Reptes_SA5.md) (xat de classe amb identificació). | Fan el repte ⭐; 🤝 **parella de lectura (5')** abans de lliurar-lo; l'ensenyen al docent perquè el validi. Qui vagi sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
 | Tancament | 20' | Recull dubtes; mini-defensa breu de cada alumne/a. | Anoten al quadern el protocol final i un exemple de l'historial de comandes. |
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: l'**historial amb tuples** (deixa el receptor funcionant sense historial; les tuples reapareixen igualment a la SA6).
@@ -125,6 +132,7 @@ Assigna els **grups de ràdio per parelles de números de llista** (rotant si el
 | Mini-check (S2) | Enviar/rebre un missatge i actuar-hi sense apunts | CA1.1, CA1.2 | — | **No** (radar formatiu) |
 | Fitxa d'alumnat (Act. 1-2) | Ràdio (`radio.on`/`config`/`send`/`receive`); disseny del protocol propi | CA1.1, CA1.2 | R1 | Formativa |
 | Repte «control remot bàsic» (S3, producte) | Vehicle controlat per ràdio amb protocol propi (mínim 4 comandes) | CA1.1, CA1.2 | **R1** | Sí |
+| Repte **⭐** (`Reptes_SA5.md`, S3, nucli obligatori) | Xat de classe amb identificació i historial, validat pel docent | CA1.1 | **R1** | Sí |
 | Mini-defensa (S3, R4·DO) | Claredat + justificació del protocol triat | CA1.2 | **R4** (fila «Defensa oral») | Sí |
 | Quadern tècnic | Documentació, taula comanda → acció, historial de comandes | CA1.2 | **R4** | Sí |
 | Observació d'aula | Autonomia i respecte de la regla d'individualitat de la ràdio | — | **R5** | Sí |
@@ -158,7 +166,7 @@ A la SA5 hem après a fer que dues plaques **es parlin** per ràdio amb un proto
 | Necessitat | Mesura |
 |---|---|
 | **Bastida (qui ho necessita)** | Protocol de comandes model (taula comanda → acció) proporcionat; funció `rep_i_actua()`/`actua()` amb l'esquelet ja escrit. |
-| **+ Ampliació (qui va sobrat)** | Ampliar el protocol amb comandes de velocitat variable o seqüències; registrar l'historial de comandes en una llista i mostrar-lo per REPL (vegeu [Reptes de la SA5](../../Reptes/Reptes_SA5.md)). |
+| **+ Ampliació (qui va sobrat)** | Un cop fet el repte ⭐ obligatori: reptes **⭐⭐/⭐⭐⭐** (comandament amb gestos, historial amb estadístiques) — vegeu [Reptes de la SA5](../../Reptes/Reptes_SA5.md). |
 | **Diversitat lingüística/lectora** | Taula de comandes amb icones de direcció; glossari a [`00_Glossari_tecnic.md`](../00_General/00_Glossari_tecnic.md). |
 | **Sense segona placa disponible** | El docent pot fer d'emissor de proves per torns; el simulador de python.microbit.org **sí** simula la ràdio entre instàncies del simulador (pràctica individual a casa). |
 

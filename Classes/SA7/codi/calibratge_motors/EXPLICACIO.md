@@ -45,4 +45,4 @@ M2_ENDAVANT.write_analog(int(velocitat * FACTOR_M2))
 - **Sessió 4 (producte):** [`rover_missions`](../rover_missions/EXPLICACIO.md) fa servir la mateixa idea de moviment calibrat a la missió «quadrat».
 - **Simulador:** python.microbit.org **no** simula els motoreductors: aquesta pràctica es fa **només** amb maquinari real.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA7](../../../../Reptes/Reptes_SA7.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA7](../../../../Reptes/Reptes_SA7.md)**.

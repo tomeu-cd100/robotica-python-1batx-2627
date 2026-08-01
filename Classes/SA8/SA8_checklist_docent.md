@@ -39,6 +39,7 @@
 
 ## 📊 3. Avaluació i evidències (a recollir)
 - [ ] **Sistema de telemetria del rover** (S3) → **R1**, **R3** (Integració) (compta, Projectes 45 %)
+- [ ] **Repte ⭐** (`Reptes_SA8.md`) fet i validat → **R1** (compta, Projectes 45 %)
 - [ ] **Mini-defensa** (S3, R4·DO) → **R4** (fila «Defensa oral»)
 - [ ] **Quadern tècnic** (format de missatge, reflexió d'IA i ètica de dades) → **R4** (Quadern tècnic i pràctiques 25 %)
 - [ ] **Observació d'aula** (autonomia i responsabilitat amb sensors i dades) → **R5** (Actitud 10 %)
@@ -47,5 +48,5 @@
 
 ## 🪜 4. Atenció a la diversitat (previst per aquesta SA)
 - [ ] **Bastida:** format de missatge de telemetria model ja donat (p. ex. `"TEL:T:23.5"`); esquelet de `envia_lectura()`/`analitza()` ja escrit
-- [ ] **+ Ampliació:** BMP280/CCS811 al mateix bus I2C, protocol propi més ric, comparació classificació manual vs IA (vegeu `Reptes_SA8.md`)
+- [ ] **+ Ampliació:** BMP280/CCS811 al mateix bus I2C, protocol propi més ric, comparació classificació manual vs IA (vegeu els reptes **⭐⭐/⭐⭐⭐** de `Reptes_SA8.md`; el ⭐ ja és nucli obligatori, no ampliació)
 - [ ] **Sense rover/Kit 3 a punt:** lògica del protocol al simulador (ràdio i `log` sí es simulen) amb valors de sensor simulats en variables

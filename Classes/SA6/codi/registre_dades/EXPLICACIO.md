@@ -45,4 +45,4 @@ Un cop la placa ha registrat dades, connecta-la per USB (com per programar-la) i
 - **Context real:** estacions meteorològiques escolars, registres de temperatura d'un hivernacle, quaderns de camp digitals: totes fan servir la mateixa idea, desar dades localment i revisar-les després.
 - **Simulador:** python.microbit.org **sí** simula el mòdul `log` (es pot descarregar el registre simulat des del propi simulador), però la lectura real per USB només es pot provar amb la placa física.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA6](../../../../Reptes/Reptes_SA6.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA6](../../../../Reptes/Reptes_SA6.md)**.

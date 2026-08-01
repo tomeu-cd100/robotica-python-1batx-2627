@@ -61,6 +61,25 @@ def aturar():
 
 No totes les funcions necessiten paràmetres: `aturar()` sempre fa el mateix (velocitat 0 als quatre pins), així que no en rep cap.
 
+### Bloc 5 — ACTIVITAT NUCLI (Sessió 2): escriu tu una funció AMB VALOR DE RETORN
+
+> ✍️ **Abans de mirar aquest bloc:** intenta escriure tu mateix `temps_per_recorregut(cm)`. Pista: no ha de moure res (com `mou_servo()`), ha de **calcular i retornar** un número (com `graus_a_pwm()` a la SA4-S1).
+
+```python
+CM_PER_SEGON = 20
+
+
+def temps_per_recorregut(cm):
+    return int((cm / CM_PER_SEGON) * 1000)
+
+
+avancar(400)
+sleep(temps_per_recorregut(30))   # avanca uns 30 cm i para
+aturar()
+```
+
+Aquesta és la primera funció **amb valor de retorn que escrius tu** (a la S1 vas veure `graus_a_pwm()` ja feta): `temps_per_recorregut(cm)` no mou el vehicle, només **calcula** quants mil·lisegons cal mantenir el motor engegat per recórrer els centímetres que li demanis, a partir d'una velocitat de referència calibrada (`CM_PER_SEGON`, ajusta-la cronometrant el teu propi vehicle). Fixa't com **s'usa** el resultat: `sleep(temps_per_recorregut(30))` en lloc d'un `sleep(1500)` fix — si canvies `CM_PER_SEGON` (per exemple perquè has canviat les piles), el `30` continua volent dir "30 cm", el càlcul s'adapta sol.
+
 ## ⚠️ Errors que veuràs segur
 
 | Símptoma | Causa probable |
@@ -77,4 +96,4 @@ No totes les funcions necessiten paràmetres: `aturar()` sempre fa el mateix (ve
 - **Sessió 4:** aquests mateixos pins (M1/M2) es fixen **definitivament** en muntar el xassís del vehicle T2 i no es tornen a tocar a T3 (vegeu `00_Projecte_T2_Vehicle.md`).
 - **Simulador:** python.microbit.org **no** simula els motoreductors: cal maquinari real des del primer moment.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA4](../../../../Reptes/Reptes_SA4.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA4](../../../../Reptes/Reptes_SA4.md)**.

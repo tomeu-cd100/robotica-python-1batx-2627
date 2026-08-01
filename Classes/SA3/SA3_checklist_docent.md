@@ -32,6 +32,7 @@
 - [ ] Introduir el PIR: temps d'estabilització (30-60 s)
 - [ ] Acompanyar el cablatge **EXACTE** de la mascota (P1, P2, P8, P12) i la programació individual
 - [ ] **Mini-defensa breu (R4·DO)** de cada alumne/a: reaccions + una decisió justificada
+- [ ] **Repte ⭐** de `Reptes_SA3.md` (nucli obligatori, en acabar la mascota): dins la S3 o com a deures abans de la S4
 - [ ] Checklist de **tancament del Projecte T1**
 - ⚠️ *Mantra:* el cablatge de la mascota és **vinculant**: cap component nou fora de la taula del dossier
 
@@ -42,6 +43,7 @@
 
 ## 📊 3. Avaluació i evidències (a recollir)
 - [ ] Repte **«mascota reactiva»** (S3) → **R1** + **R2** + **R3** (compta, Projectes 45 %)
+- [ ] **Repte ⭐** (`Reptes_SA3.md`) fet i validat → **R1** (compta, Projectes 45 %)
 - [ ] **Mini-defensa** (S3, R4·DO) → **R4** (fila «Defensa oral»)
 - [ ] **Quadern tècnic** → **R4** (Quadern tècnic i pràctiques 25 %)
 - [ ] **Observació d'aula** (autonomia, seguretat) → **R5** (Actitud 10 %)
@@ -51,5 +53,5 @@
 
 ## 🪜 4. Atenció a la diversitat (previst per aquesta SA)
 - [ ] **Bastida:** esquelet «Si t'encalles» del [dossier de la mascota](../00_General/00_Projecte_T1_Mascota.md#-si-tencalles-lesquelet-del-programa) · funció `mapa()` ja proposada a la fitxa
-- [ ] **+ Ampliació:** calibratge fi de llindars · combinar 3+ sensors a la mascota (vegeu `Reptes_SA3.md`)
+- [ ] **+ Ampliació:** calibratge fi de llindars · combinar 3+ sensors a la mascota · reptes **⭐⭐/⭐⭐⭐** opcionals (vegeu `Reptes_SA3.md`) — el ⭐ ja no hi és: és nucli obligatori (§3)
 - [ ] **Sense maquinari per a tothom:** simulador limitat (només llum/temperatura/so interns, acceleròmetre, botons); torns amb la placa física per als sensors externs

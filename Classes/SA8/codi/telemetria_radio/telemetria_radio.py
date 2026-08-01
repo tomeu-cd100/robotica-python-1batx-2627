@@ -98,12 +98,18 @@ def polsador_premut():
 
 
 def mesura_distancia():
+    # Mateixa lectura robusta que evita_obstacles.py (SA7-S3): time_pulse_us
+    # pot senyalar timeout amb un valor negatiu O amb una excepcio OSError
+    # (depen de placa/versio); el try/except cobreix el segon cas.
     TRIGGER.write_digital(0)
     utime.sleep_us(2)
     TRIGGER.write_digital(1)
     utime.sleep_us(10)
     TRIGGER.write_digital(0)
-    durada_us = machine.time_pulse_us(ECHO, 1, 30000)
+    try:
+        durada_us = machine.time_pulse_us(ECHO, 1, 30000)
+    except OSError:
+        return None
     if durada_us < 0:
         return None
     return (durada_us * VELOCITAT_SO_CM_US) / 2
@@ -148,24 +154,30 @@ def llegeix_dht11():
     # Protocol DHT11: 40 bits mesurats amb machine.time_pulse_us, EXACTAMENT
     # el mateix mecanisme que mesura_distancia() (temps de vol de l'HC-SR04),
     # nomes que aqui es mesuren 40 polsos consecutius en lloc d'un de sol.
+    # Mateixa lectura robusta que evita_obstacles.py (SA7-S3): un try/except
+    # OSError embolica TOTS els time_pulse_us, perque un sol timeout aturat
+    # com a excepcio (en lloc de valor negatiu) no faci petar el programa.
     # Retorna (temperatura, humitat) o None si la lectura/checksum falla
     # (pot passar per pauses del recol.lector d'escombraries: es normal,
     # simplement es descarta aquesta lectura i es reintenta a la seguent).
     DHT_PIN.write_digital(0)
     sleep(20)                       # senyal de start (minim 18 ms)
     DHT_PIN.set_pull(DHT_PIN.PULL_UP)
-    if machine.time_pulse_us(DHT_PIN, 0, 1000) < 0:
-        return None
-    if machine.time_pulse_us(DHT_PIN, 1, 1000) < 0:
-        return None
-    bits = []
-    for _ in range(40):
+    try:
         if machine.time_pulse_us(DHT_PIN, 0, 1000) < 0:
             return None
-        durada = machine.time_pulse_us(DHT_PIN, 1, 1000)
-        if durada < 0:
+        if machine.time_pulse_us(DHT_PIN, 1, 1000) < 0:
             return None
-        bits.append(1 if durada > 40 else 0)   # >40us alt = bit '1'
+        bits = []
+        for _ in range(40):
+            if machine.time_pulse_us(DHT_PIN, 0, 1000) < 0:
+                return None
+            durada = machine.time_pulse_us(DHT_PIN, 1, 1000)
+            if durada < 0:
+                return None
+            bits.append(1 if durada > 40 else 0)   # >40us alt = bit '1'
+    except OSError:
+        return None
     bytes_dades = []
     for i in range(5):
         valor = 0

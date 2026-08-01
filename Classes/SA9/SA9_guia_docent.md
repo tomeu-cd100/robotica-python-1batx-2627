@@ -62,7 +62,7 @@ Amb 15-20 alumnes, una sola sessió de defenses no dona: 5' + preguntes + canvi 
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Repte inicial: *"Quin problema real i senzill del teu entorn pots resoldre ampliant el teu rover?"* Recorda el mètode de disseny (represa de SA1). | Formulen hipòtesis sobre possibles reptes. |
+| Activació | 10' | Repte inicial: *"Quin problema real i senzill del teu entorn pots resoldre ampliant el teu rover?"* Recorda el mètode de disseny (represa de SA1). 🥋 **Kata del dia:** K17 (return) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis sobre possibles reptes. |
 | Explicació | 20' | Presenta el [banc de reptes](SA9_reptes_proposats.md) (6 reptes, ⭐/⭐⭐/⭐⭐⭐) i el maquinari de reserva (bomba+relé, PIR, NeoPixel). Explica que **el repte és el projecte**: no hi ha un repte "extra" després. | Escolten i comparen reptes; identifiquen quin maquinari de `09c` ja tenen muntat i quin els caldria afegir. |
 | Pràctica | 60' | Acompanya la tria individual del repte i la definició dels **requisits mínims**; ronda per taules resolent dubtes de viabilitat (maquinari disponible, temps). | Trien repte (Activitat 1 de la fitxa), en defineixen els requisits mínims i fan un esbós de la solució; comencen la planificació per sessió. |
 | Tancament | 30' | Recull els reptes triats (assegura't que hi ha diversitat i que ningú s'ha quedat sense repte viable); anticipa la S2. | Acaben l'esbós i la planificació si no ho han fet; entrada del quadern: repte triat + requisits. |

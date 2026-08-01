@@ -77,4 +77,4 @@ Llegeix `ball_complet()` com una **recepta**: cada línia és un pas ja resolt p
 - **Sessió 2:** [`velocitat_pwm.py`](../velocitat_pwm/EXPLICACIO.md) aplica exactament la mateixa idea (funcions amb paràmetres) al moviment del vehicle.
 - **Simulador:** el so i el display es poden provar a python.microbit.org; el servo no.
 
-> ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA4](../../../../Reptes/Reptes_SA4.md)**.
+> ⭐⭐/⭐⭐⭐ **Has acabat abans?** El repte ⭐ ja és nucli obligatori (vegeu la fitxa base). Si vols anar més enllà, tria un repte ⭐⭐/⭐⭐⭐ a **[Reptes de la SA4](../../../../Reptes/Reptes_SA4.md)**.

@@ -91,7 +91,7 @@ ___________________________________________________________________
 
 ## Vols més?
 
-- **Reptes ⭐:** tria'n un a [`Reptes/Reptes_SA7.md`](../../Reptes/Reptes_SA7.md) i amplia el teu producte.
+- **Reptes ⭐⭐/⭐⭐⭐:** tria'n un a [`Reptes/Reptes_SA7.md`](../../Reptes/Reptes_SA7.md) i amplia el teu producte (el ⭐ ja és nucli obligatori, fet a la fitxa base).
 - **Simulador:** el de [python.microbit.org](https://python.microbit.org) **NO** simula cap component del rover (ni motors, ni HC-SR04, ni seguidor de línia): vegeu [`SA7_esquemes_connexions.md`](SA7_esquemes_connexions.md) §Simulació. Útil només per esbossar en pseudocodi la **lògica** d'una trajectòria, no per provar-la.
 
 ---

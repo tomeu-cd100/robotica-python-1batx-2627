@@ -23,6 +23,7 @@
 | [`SA6_fitxa_alumnat.md`](SA6_fitxa_alumnat.md) | Totes les sessions (Activitats 1-3 + producte + quadern). |
 | [`SA6_esquemes_connexions.md`](SA6_esquemes_connexions.md) | Sessions 1-3 (pins reutilitzats del vehicle + relé/DHT11 de l'ampliació). |
 | `codi/` | `maquina_estats_semafor`, `termostat_histeresi`, `registre_dades` i el repte-producte `vehicle_seguretat`. |
+| [`Reptes_SA6.md`](../../Reptes/Reptes_SA6.md) | Sessió 3, en acabar el producte: repte **⭐** (nucli obligatori, mateix temps de pràctica que ja hi havia). Reptes ⭐⭐/⭐⭐⭐, ampliació opcional. |
 
 > Cada programa de `codi/` té la seva **pàgina de pràctica** (per què es fa + codi explicat per blocs, l'`EXPLICACIO.md` de la seva carpeta). El «Guió de modelatge» oral de sota continua sent teu.
 
@@ -32,7 +33,7 @@
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Repte inicial: *"Com fas que un vehicle teledirigit s'aturi SEMPRE que calgui, encara que estigui fent una altra cosa?"* | Formulen hipòtesis: què fa que una ordre "guanyi" sempre a les altres? |
+| Activació | 10' | Repte inicial: *"Com fas que un vehicle teledirigit s'aturi SEMPRE que calgui, encara que estigui fent una altra cosa?"* 🥋 **Kata del dia:** K10 (ràdio) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis: què fa que una ordre "guanyi" sempre a les altres? |
 | Explicació | 30' | **Llaç obert** (el vehicle segueix una comanda fixa, sense comprovar res) vs **llaç tancat** (el sistema comprova un sensor i hi reacciona: consigna, error, realimentació). Introdueix la **màquina d'estats finits (FSM)**: una variable d'estat + transicions. Modelatge de [`maquina_estats_semafor.py`](codi/maquina_estats_semafor/EXPLICACIO.md). | Prenen notes; distingeixen exemples propis de llaç obert i llaç tancat al vehicle (SA4-SA5). |
 | Pràctica | 50' | Acompanya el disseny del **diagrama RUN/STOP/ALERTA** (paper o pissarra) abans d'escriure cap codi (Predicció → disseny). Modelatge de [`termostat_histeresi.py`](codi/termostat_histeresi/EXPLICACIO.md) com a primer exemple de **llaç tancat amb realimentació**: per què un únic llindar fa "clic-clic" i com ho resol la **histèresi** (dos llindars). | Dissenyen el seu diagrama d'estats; proven `maquina_estats_semafor.py` i `termostat_histeresi.py` (Activitat 1 de la fitxa). |
 | Tancament | 20' | Recull dubtes; anticipa que la Sessió 2 converteix el diagrama en un STOP real i prioritari. | Entrada del quadern: diagrama d'estats propi + per què calen dos llindars a un termòstat. |
@@ -75,12 +76,17 @@
 ## SESSIÓ 3 (2 h) — Repte «vehicle amb aturada d'emergència» (producte de la SA — es tanca el Projecte T2)
 
 > 🎯 **Producte de la SA6.** Aquest repte **tanca el Projecte T2**: s'avalua amb **R1** (funcionament), **R3** (criteri "Autonomia/control") i **R4** (documentació i defensa). El sensor de temperatura/relé i l'estat ALERTA són **+ampliació**, no nucli.
+>
+> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
+
+> ⭐ **Repte nucli obligatori.** Un cop tancat el producte, tothom fa el repte **⭐** de [`Reptes_SA6.md`](../../Reptes/Reptes_SA6.md) (fila pròpia a la taula, més avall). Els reptes **⭐⭐/⭐⭐⭐** continuen sent ampliació opcional per a qui vagi sobrat.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Mostra [`vehicle_seguretat.py`](codi/vehicle_seguretat/EXPLICACIO.md) **sense executar-lo** (PRIMM): pregunta què passa si arriba `"X"` mentre el vehicle avança. | Prediuen el comportament davant de cada comanda, amb èmfasi en la prioritat de l'STOP. |
+| Activació | 10' | Mostra [`vehicle_seguretat.py`](codi/vehicle_seguretat/EXPLICACIO.md) **sense executar-lo** (PRIMM): pregunta què passa si arriba `"X"` mentre el vehicle avança. 🥋 **Kata del dia:** K11 (llistes) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen el comportament davant de cada comanda, amb èmfasi en la prioritat de l'STOP. |
 | Explicació | 20' | Sensor de temperatura (Kit 2 / intern) i **DHT11** (Kit 3) com a **+ampliació**: exemple de "termòstat" integrat amb la màquina d'estats del vehicle (mateix esquema d'histèresi de la Sessió 1, ara amb el relé del Kit 3). Recorda que **no** és control proporcional. | Prenen notes; qui vagi sobrat integra el sensor com a tercer estat ALERTA (opcional). |
-| Repte | 70' | Acompanya el tancament individual del repte «vehicle amb aturada d'emergència»: cadascú prova el **seu** protocol complet (F/B/L/R/S/X) amb el comandament d'un company o del docent. | Tanquen `vehicle_seguretat.py`: protocol de ràdio + màquina d'estats + STOP prioritari + LED. Proven l'STOP amb el polsador i amb `"X"` per ràdio. |
+| Repte | 55' | Acompanya el tancament individual del repte «vehicle amb aturada d'emergència»: cadascú prova el **seu** protocol complet (F/B/L/R/S/X) amb el comandament d'un company o del docent. | Tanquen `vehicle_seguretat.py`: protocol de ràdio + màquina d'estats + STOP prioritari + LED. Proven l'STOP amb el polsador i amb `"X"` per ràdio. |
+| **Repte ⭐ (nucli obligatori)** | 15' | Un cop tancat el producte, repte **⭐** de [`Reptes_SA6.md`](../../Reptes/Reptes_SA6.md) (termòstat de dues zones). | Fan el repte ⭐; 🤝 **parella de lectura (5')** abans de lliurar-lo; l'ensenyen al docent perquè el validi. Qui vagi sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
 | Tancament | 20' | Recull dubtes; **mini-defensa breu** de cada alumne/a (2-3', R4·DO): decisió de disseny justificada. | Mini-defensa; anoten al quadern el diagrama d'estats final i una decisió justificada. |
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: l'ampliació del sensor de temperatura/DHT11 (deixa-la com a **+ampliació** per a qui vagi sobrat; l'STOP prioritari amb polsador i ràdio és el nucli innegociable).
@@ -117,6 +123,7 @@
 | Mini-check (S2) | Detectar i corregir l'oscil·lació d'un termòstat sense histèresi | CA3.1 | — | **No** (radar formatiu) |
 | Fitxa d'alumnat (Act. 1-2) | FSM, llaç obert/tancat, histèresi, STOP prioritari | CA1.1, CA3.1 | R1 | Formativa |
 | Repte «vehicle amb aturada d'emergència» (S3, producte) | Vehicle amb màquina d'estats i STOP prioritari (polsador + ràdio) | CA1.1, CA2.1, CA3.1 | **R1**, **R3** | Sí |
+| Repte **⭐** (`Reptes_SA6.md`, S3, nucli obligatori) | Termòstat de dues zones amb histèresi, validat pel docent | CA3.1 | **R1** | Sí |
 | Mini-defensa (S3, R4·DO) | Claredat + justificació d'una decisió de disseny de la FSM | CA3.1 | **R4** (fila «Defensa oral») | Sí |
 | Quadern tècnic | Diagrames d'estats, taula d'histèresi, registre de dades | CA3.1 | **R4** | Sí |
 | Observació d'aula | Autonomia i seguretat en manipular relé/actuadors | — | **R5** | Sí |
@@ -151,7 +158,7 @@ A la SA6 el vehicle ha passat d'obeir ordres puntuals (SA5) a un **sistema de co
 | Necessitat | Mesura |
 |---|---|
 | **Bastida (qui ho necessita)** | Diagrama d'estats model (RUN/STOP/ALERTA) amb transicions ja indicades; esquelet de funció `actualitza_estat()` ja escrit (vegeu l'esquelet de [`00_Projecte_T2_Vehicle.md`](../00_General/00_Projecte_T2_Vehicle.md)). |
-| **+ Ampliació (qui va sobrat)** | Tercer estat ALERTA (temperatura o obstacle) amb transició pròpia; realimentació proporcional en lloc de tot/res; vegeu [Reptes de la SA6](../../Reptes/Reptes_SA6.md). |
+| **+ Ampliació (qui va sobrat)** | Un cop fet el repte ⭐ obligatori: reptes **⭐⭐/⭐⭐⭐** (semàfor amb botó prioritari, vehicle amb alerta de temperatura i registre de bord) — vegeu [Reptes de la SA6](../../Reptes/Reptes_SA6.md). |
 | **Diversitat lingüística/lectora** | Diagrama d'estats amb icones (fletxes, colors) en lloc de només text; glossari a [`00_Glossari_tecnic.md`](../00_General/00_Glossari_tecnic.md). |
 | **Sense vehicle a punt** | Es treballa la lògica de la FSM i de la histèresi al **simulador** (`maquina_estats_semafor.py`, `termostat_histeresi.py`); `vehicle_seguretat.py` necessita el vehicle físic per als motors, però la part de protocol/estats es pot revisar igualment. |
 

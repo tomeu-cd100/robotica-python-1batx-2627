@@ -1,6 +1,6 @@
 # Reptes SA2 · Sortides: el robot actua
 
-> 🧑‍🎓 **Quan toca fer-ne un?** És l'**ampliació ⭐** de la SA: comença'l quan tinguis el **nucli al dia** (el repte «semàfor o llum d'ambient» de la S3 i el muntatge de la mascota de la S4). Ensenya'l al docent perquè el validi.
+> 🧑‍🎓 **Quan toca fer-ne un?** El repte **⭐ és NUCLI OBLIGATORI — forma part del producte de la SA**: comença'l quan tinguis el **nucli al dia** (el repte «semàfor o llum d'ambient» de la S3 i el muntatge de la mascota de la S4). Els reptes **⭐⭐/⭐⭐⭐ resten opcionals** (ampliació), per a qui vagi sobrat de temps. Ensenya el ⭐ al docent perquè el validi.
 
 **Fes els reptes en ordre de dificultat: comença per ⭐, i si arribes a ⭐⭐⭐ hauràs passat pels tres.** Tots parteixen dels programes de `Classes/SA2/codi/` i fan servir el Micro:shield. Es fan amb **maquinari real**: el simulador de python.microbit.org no reprodueix el LED extern, el LED RGB, el brunzidor ni el relé (vegeu [`SA2_esquemes_connexions.md`](../Classes/SA2/SA2_esquemes_connexions.md) §Simulació), tot i que la **lògica** es pot escriure i revisar-hi abans de provar-la a la placa.
 
@@ -10,7 +10,7 @@
 
 ---
 
-## ⭐ Repte 1 · Llum de seguretat per a motxilla
+## ⭐ Repte 1 · Llum de seguretat per a motxilla (NUCLI OBLIGATORI)
 
 **Context.** Una marca de motxilles vol un pilot LED d'emergència per a ciclistes/vianants: fix mentre tot va bé, parpelleig ràpid en "mode alerta".
 
@@ -35,7 +35,7 @@
 
 ---
 
-## ⭐⭐ Repte 2 · Ambientador de llum i so per a una habitació
+## ⭐⭐ Repte 2 · Ambientador de llum i so per a una habitació (ampliació opcional)
 
 **Context.** Una empresa de decoració *smart home* vol un petit dispositiu que combini un **color ambient** (LED RGB) amb una **melodia curta** en encendre's, com un altaveu intel·ligent d'entrada.
 
@@ -60,7 +60,7 @@
 
 ---
 
-## ⭐⭐⭐ Repte 3 · Semàfor intel·ligent d'encreuament
+## ⭐⭐⭐ Repte 3 · Semàfor intel·ligent d'encreuament (ampliació opcional)
 
 **Context.** L'ajuntament vol un prototip de semàfor "intel·ligent" per a un encreuament amb poc trànsit: normalment fa el cicle habitual, però un **relé addicional** simula l'enllumenat d'emergència que s'activa en mode "alerta".
 
