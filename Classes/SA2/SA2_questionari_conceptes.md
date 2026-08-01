@@ -13,11 +13,27 @@
 
 ## Preguntes (tria una resposta)
 
-1. Quina instrucció fa parpellejar un LED extern connectat al pin P1?
-   - a) `pin1.read_digital()`
-   - b) `pin1.write_digital(1)` i `pin1.write_digital(0)` alternats
-   - c) `display.show(Image.HEART)`
-   - d) `music.play(['C4:4'])`
+1. Quina és la sortida d'aquest programa? (TRAÇA)
+
+   ```python
+   from microbit import *
+
+   comptador = 0
+
+   while True:
+       pin1.write_digital(1)
+       sleep(300)
+       pin1.write_digital(0)
+       sleep(300)
+       comptador = comptador + 1
+       if comptador % 5 == 0:
+           display.scroll(str(comptador))
+   ```
+
+   - a) Puja i baixa la intensitat del LED de P1 amb PWM (efecte de respiració).
+   - b) Fa parpellejar el LED de P1 (300 ms encès, 300 ms apagat) i mostra el comptador de parpellejos al display cada 5 vegades.
+   - c) Reprodueix una melodia pel brunzidor connectat a P1.
+   - d) Encén el LED de P1 de manera fixa i no l'apaga mai.
 
 2. Una sortida **PWM** (`write_analog`) es diferencia d'una **digital** (`write_digital`) perquè…
    - a) Fa servir més corrent.
@@ -43,11 +59,25 @@
    - c) Llegeix el volum del micròfon.
    - d) Fa parpellejar la matriu de LED.
 
-6. Un **acumulador** en programació (com `comptador = comptador + 1`) serveix per…
-   - a) Esborrar una variable.
-   - b) Anar sumant/actualitzant un valor a partir del seu valor anterior, cada volta d'un bucle.
-   - c) Definir una funció.
-   - d) Llegir un sensor.
+6. Aquest programa hauria de comptar parpellejos i mostrar-ne el total cada volta, però sempre mostra `1`. On és l'error? (CORREGIR)
+
+   ```python
+   from microbit import *
+
+   while True:
+       comptador = 0
+       pin1.write_digital(1)
+       sleep(500)
+       pin1.write_digital(0)
+       sleep(500)
+       comptador = comptador + 1
+       display.scroll(str(comptador))
+   ```
+
+   - a) `comptador = 0` hauria d'anar **abans** del `while True:`, no dins.
+   - b) Falta un `pin1.write_digital(0)` per apagar el LED.
+   - c) `sleep(500)` hauria de ser `sleep(0.5)`.
+   - d) `display.scroll()` no pot mostrar nombres, cal `display.show()`.
 
 7. Per què s'inicialitza un acumulador **abans** del `while True:` i no a dins?
    - a) És igual, no importa on.
@@ -55,11 +85,23 @@
    - c) Perquè Python no ho permet dins d'un bucle.
    - d) Perquè els acumuladors només funcionen amb `for`.
 
-8. Un **relé** connectat a la micro:bit serveix per…
-   - a) Amplificar el so de l'altaveu.
-   - b) Llegir un senyal analògic.
-   - c) Commutar (obrir/tancar), amb un senyal de baixa tensió, un circuit extern que porta la seva pròpia alimentació.
-   - d) Carregar la bateria de la placa.
+8. Aquest fragment ha de commutar el relé del pin P13 per encendre un llum extern quan es prem el botó A, i tornar-lo a apagar 3 segons després. Quina línia falta? (COMPLETAR)
+
+   ```python
+   from microbit import *
+
+   while True:
+       if button_a.is_pressed():
+           pin13.write_digital(1)   # tanca el rele: engega el llum extern
+           sleep(3000)
+           ____                     # <-- quina linia hi va aqui?
+       sleep(100)
+   ```
+
+   - a) `pin13.write_digital(0)`
+   - b) `pin13.write_analog(0)`
+   - c) `pin13.write_digital(1)`
+   - d) `sleep(0)`
 
 9. Per seguretat, el costat del **circuit extern** d'un relé…
    - a) Es pot connectar directament a un pin de la micro:bit.
@@ -90,7 +132,13 @@ ___________________________________________________________________
 
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|
-| b | c | c | b | b | b | b | c | b | b |
+| b | c | c | b | b | a | b | a | b | b |
+
+La pregunta 1 (TRAÇA) substitueix una pregunta de pur record de la instrucció; ara cal llegir un bucle real amb `write_digital` i un acumulador i predir què mostra, no només recordar el nom de la funció.
+
+La pregunta 6 (CORREGIR) substitueix la definició memorística d'"acumulador" per l'error freqüent documentat a la guia docent ("el comptador no avança perquè s'inicialitza dins del bucle"): l'alumnat ha de localitzar-lo en codi, no repetir-ne la definició.
+
+La pregunta 8 (COMPLETAR) substitueix la definició memorística de "relé" per la necessitat de completar la línia que el torna a obrir (`write_digital(0)`), aplicant directament el patró tanca/obre del repte «semàfor o llum d'ambient».
 
 La pregunta 11 és oberta: valora que la diferència digital/PWM sigui correcta (dos estats vs valors intermedis) i que els dos exemples siguin coherents amb components reals de la SA2 (per exemple, LED verd/ambre/vermell = digital; respiració o intensitat = PWM).
 

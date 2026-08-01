@@ -54,23 +54,57 @@
    - c) No hi ha cap motiu especial, és només estil.
    - d) Perquè `estat` és una constant, no es pot canviar enlloc més.
 
-8. On desa les dades el mòdul `log` de la micro:bit V2?
-   - a) A un servidor al núvol.
-   - b) A la memòria flash interna de la pròpia placa; es llegeixen després per USB.
-   - c) Només a la RAM, es perden en apagar la placa.
-   - d) En un fitxer al núvol de Microsoft.
+8. **[TRAÇA]** Quin és el valor de `estat` que imprimeix aquest codi?
+   ```python
+   estat = "FRED"
+   temp = 23
 
-9. Quin fitxer apareix a la unitat MICROBIT quan connectes per USB una placa que ha registrat dades amb `log.add()`?
-   - a) `LOG.TXT`.
-   - b) `DATA.CSV`.
-   - c) `MY_DATA.HTM`.
-   - d) Cap, cal un programa extra per veure les dades.
+   if estat == "FRED" and temp > 26:
+       estat = "CALENT"
+   elif estat == "CALENT" and temp < 24:
+       estat = "FRED"
 
-10. Per què el simulador de python.microbit.org **no** és suficient per validar del tot `vehicle_seguretat.py`?
-    - a) Perquè no simula `temperature()`.
-    - b) Perquè no simula els motors ni el relé, encara que sí simuli la lògica de la màquina d'estats i de la ràdio.
-    - c) Perquè no permet escriure codi amb `radio`.
-    - d) És suficient del tot, no cal cap vehicle físic.
+   print(estat)
+   ```
+   - a) `CALENT`
+   - b) `FRED`
+   - c) Dona error perquè `estat` no és una variable global.
+   - d) No imprimeix res perquè manca un `else`.
+
+9. **[COMPLETAR]** Aquesta funció ha de canviar la variable `estat` "de debò" (que el canvi es vegi també fora de la funció). Tal com està escrit ara (sense la línia que falta), el `print(estat)` final mostra `STOP`, no `RUN`. Quina línia falta on diu el comentari?
+   ```python
+   estat = "STOP"
+
+   def actualitza_estat(nou):
+       # <-- quina linia falta aqui?
+       estat = nou
+
+   actualitza_estat("RUN")
+   print(estat)
+   ```
+   - a) `global estat`
+   - b) `estat = "STOP"`
+   - c) `return estat`
+   - d) `import estat`
+
+10. **[CORREGIR]** Aquest fragment de `vehicle_seguretat.py` té un error real: el vehicle a vegades "no respon" al polsador STOP encara que se'l premi ben clarament. On és l'error?
+    ```python
+    while True:
+        missatge = radio.receive()
+        if missatge is not None and missatge.startswith(PREFIX):
+            ordre = missatge[len(PREFIX):]
+            if ordre == "S":
+                actualitza_estat(STOP)
+
+        if not POLSADOR_STOP.read_digital():
+            actualitza_estat(STOP)
+
+        sleep(20)
+    ```
+    - a) El polsador es comprova DESPRÉS de processar la ràdio, no al principi del bucle: hi ha una finestra en què el vehicle pot "ignorar" el polsador si encara està tractant un missatge.
+    - b) Falta un `import radio` al principi del programa.
+    - c) `sleep(20)` fa que el programa vagi massa ràpid.
+    - d) `read_digital()` no es pot fer servir amb un polsador, només amb un sensor.
 
 ---
 
@@ -88,9 +122,15 @@ ___________________________________________________________________
 
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|
-| b | c | b | b | b | b | b | b | c | b |
+| b | c | b | b | b | b | b | b | a | a |
 
 La pregunta 11 és oberta: valora que expliqui que l'STOP s'ha de comprovar **abans que res** a cada volta del bucle i que **totes** les vies (polsador i ràdio) criden la mateixa funció, de manera que mai hi ha un moment en què el vehicle pugui "ignorar" una ordre d'aturada perquè estava processant-ne una altra.
+
+La pregunta 8 és de **traça de codi**: valora que sàpiga seguir pas a pas una transició d'estat condicionada (el mateix patró que `termostat_histeresi.py`), sense executar-lo, no només recordar-ne la definició de memòria.
+
+La pregunta 9 és de **completar codi**: valora que identifiqui que sense `global estat` la funció crea una variable local pròpia i el canvi no es propaga a la variable de fora, tal com passa a `actualitza_estat()` de `vehicle_seguretat.py`.
+
+La pregunta 10 és de **corregir codi**: valora que reconegui l'error real "el polsador es comprova després de la ràdio, no al principi del bucle" (recollit a "Errors freqüents i solució" de la guia docent) i no el confongui amb un simple detall d'estil.
 
 ---
 

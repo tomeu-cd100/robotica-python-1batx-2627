@@ -12,11 +12,27 @@
 
 ## Preguntes (tria una resposta)
 
-1. Com es connecta l'IMU MPU6050 al Micro:shield?
-   - a) Un pin analògic dedicat, com el seguidor de línia.
-   - b) Un bus **I2C** compartit (SCL a P19, SDA a P20), amb una adreça pròpia dins del bus.
-   - c) Directament per ràdio, sense cap cable.
-   - d) Amb el mateix pin que el DHT11.
+1. Aquest codi ha de llegir l'acceleració de l'IMU MPU6050 per I2C, però el sensor no respon (segueix "adormit") fins que no s'hi afegeix una línia abans del bucle. Quina línia falta? (COMPLETAR)
+
+   ```python
+   from microbit import *
+
+   MPU_ADR = 0x68
+   MPU_REG_PWR = 0x6B
+   MPU_REG_ACCEL = 0x3B
+
+   ____                     # <-- quina linia hi va aqui?
+
+   while True:
+       i2c.write(MPU_ADR, bytes([MPU_REG_ACCEL]), repeat=True)
+       dades = i2c.read(MPU_ADR, 6)
+       sleep(100)
+   ```
+
+   - a) `i2c.write(MPU_ADR, bytes([MPU_REG_PWR, 0x00]))`
+   - b) `i2c.read(MPU_ADR, 1)`
+   - c) `radio.on()`
+   - d) `display.show(Image.YES)`
 
 2. Per què `telemetria_radio.py` fa servir el prefix `"TEL:"` i no el `"CMD:"` de la SA5/SA6?
    - a) Perquè `"CMD:"` ja no funciona a la micro:bit V2.
@@ -24,11 +40,23 @@
    - c) No hi ha cap motiu, és arbitrari.
    - d) Perquè el mòdul `radio` obliga a canviar de prefix a cada SA.
 
-3. Com es llegeix el DHT11 amb MicroPython en aquest curs?
-   - a) Amb `read_analog()`, com el seguidor de línia.
-   - b) Mesurant una seqüència de 40 polsos amb `machine.time_pulse_us`, el mateix mecanisme que l'HC-SR04.
-   - c) Directament per ràdio.
-   - d) No es pot llegir amb MicroPython pur.
+3. Aquest codi hauria de mostrar la temperatura del DHT11 a cada volta, però `lectura` és gairebé sempre `None`. On és l'error? (CORREGIR)
+
+   ```python
+   from microbit import *
+
+   while True:
+       lectura = llegeix_dht11()
+       if lectura is not None:
+           temperatura = lectura[0]
+           display.scroll(str(temperatura))
+       sleep(20)
+   ```
+
+   - a) `sleep(20)` és massa curt: el DHT11 necessita 1-2 s entre lectures, si no, sovint torna `None`.
+   - b) `lectura[0]` hauria de ser `lectura[1]`.
+   - c) Falta cridar `radio.on()` abans del bucle.
+   - d) `display.scroll()` no pot mostrar nombres.
 
 4. Per què `telemetria_radio.py` envia un missatge nou només cada `INTERVAL_TELEMETRIA_MS` (500 ms) i no a cada volta del bucle principal (~20 ms)?
    - a) Perquè la ràdio de la micro:bit només pot enviar un missatge cada mitja hora.
@@ -42,11 +70,27 @@
    - c) Perquè la ràdio només funciona amb un únic programa a tot el curs.
    - d) Perquè `estacio_base.py` és opcional i no s'avalua.
 
-6. Quants estats pot tenir, alhora, la FSM de `comportaments.py`?
-   - a) Tants com calgui, es poden combinar diversos alhora.
-   - b) Sempre dos, com a mínim.
-   - c) Un de sol, en cada instant (igual que la variable d'estat de la SA6/SA7).
-   - d) Cap, `comportaments.py` no fa servir cap variable d'estat.
+6. Quin és el resultat d'executar aquest codi (mateixa FSM que `comportaments.py`, amb `distancia = 10`)? (TRAÇA)
+
+   ```python
+   SEGUIR, ESQUIVAR, RECUPERAR = range(3)
+   NOMS_ESTAT = {SEGUIR: "SEGUIR", ESQUIVAR: "ESQUIVAR", RECUPERAR: "RECUPERAR"}
+   estat = SEGUIR
+
+   distancia = 10
+   LLINDAR_OBSTACLE_CM = 15
+
+   if estat == SEGUIR:
+       if distancia is not None and distancia < LLINDAR_OBSTACLE_CM:
+           estat = ESQUIVAR
+
+   print(NOMS_ESTAT[estat])
+   ```
+
+   - a) `SEGUIR`
+   - b) `ESQUIVAR`
+   - c) `RECUPERAR`
+   - d) Error, perquè `estat` no es pot reassignar.
 
 7. Segons el marc conceptual mínim d'aquesta SA, què distingeix una **regla feta a mà** (com `mpu_orientacio()`) d'un model d'**aprenentatge automàtic**?
    - a) No hi ha cap diferència real, són el mateix concepte amb noms diferents.
@@ -88,7 +132,13 @@ ___________________________________________________________________
 
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|
-| b | b | b | b | a | c | b | b | b | b |
+| a | b | a | b | a | b | b | b | b | b |
+
+La pregunta 1 (COMPLETAR) substitueix el record memorístic de "com es connecta l'IMU per I2C" per la necessitat de completar la línia que el desperta (`i2c.write(MPU_ADR, bytes([MPU_REG_PWR, 0x00]))`), aplicant directament el patró d'inicialització de `mpu_inicia()`.
+
+La pregunta 3 (CORREGIR) substitueix la definició memorística del mecanisme de lectura del DHT11 per l'error freqüent documentat a la guia docent ("el DHT11 retorna sempre `None` perquè es llegeix massa sovint"): l'alumnat ha de localitzar-lo en codi, no repetir-ne la definició.
+
+La pregunta 6 (TRAÇA) substitueix la pregunta de pur record ("quants estats alhora") per haver de llegir un fragment real de la FSM i predir quin és l'estat final, reforçant que `estat` és una variable de decisió pròpia (no una lectura de sensor) i que només en pren un valor cada volta.
 
 La pregunta 11 és oberta: valora que expliqui que totes dues funcions fan servir `machine.time_pulse_us` per mesurar **quant de temps** dura un senyal digital (un pols) i que, a partir d'aquesta durada, en dedueixen una magnitud (distància o bit de dades): el mecanisme de mesura és el mateix, encara que el que se'n dedueix i el nombre de polsos mesurats (1 a l'HC-SR04, 40 al DHT11) sigui diferent.
 

@@ -13,11 +13,24 @@
 
 ## Preguntes (tria una resposta)
 
-1. Quina instrucció llegeix si el botó A de la micro:bit està premut?
-   - a) `button_a.write_digital(1)`
-   - b) `button_a.is_pressed()`
-   - c) `pin_a.read_analog()`
-   - d) `display.show(Image.YES)`
+1. **[TRAÇA]** Llegeix aquest codi (sense executar-lo) i respon: què fa?
+
+   ```python
+   from microbit import *
+
+   comptador = 0
+   pin0.set_pull(pin0.PULL_UP)
+
+   while True:
+       if pin0.read_digital() == 0:
+           comptador += 1
+           display.show(comptador)
+       sleep(200)
+   ```
+   - a) Compta i mostra al display el nombre de vegades que el pin P0 es posa a `1` (nivell alt).
+   - b) Compta i mostra al display el nombre de vegades que es prem un polsador connectat a P0 (amb *pull-up*, `0` = premut).
+   - c) Llegeix la temperatura ambiental cada 200 ms.
+   - d) Fa pampallugar el display cada 200 ms sense comptar res.
 
 2. Una entrada **analògica** (`read_analog()`) es diferencia d'una **digital** (`read_digital()`/`is_pressed()`) perquè…
    - a) Només serveix per als botons.
@@ -25,11 +38,25 @@
    - c) No es pot fer servir amb sensors.
    - d) Sempre dona el mateix valor.
 
-3. Quins pins de la micro:bit V2 tenen conversor analògic-digital (ADC) per llegir senyals analògics?
-   - a) Tots els pins.
-   - b) Només P0 i P1.
-   - c) P0, P1, P2, P3, P4 i P10.
-   - d) Només els pins connectats al Micro:shield.
+3. **[COMPLETAR]** A aquesta funció `mapa()` li falta la línia final (marcada `____`). Quina línia cal perquè `n` doni un valor de sortida ben calculat dins el rang 0-5?
+
+   ```python
+   from microbit import *
+
+   def mapa(valor, e_min, e_max, s_min, s_max):
+       rang_e = e_max - e_min
+       rang_s = s_max - s_min
+       proporcio = (valor - e_min) / rang_e
+       ____
+
+   llum = pin0.read_analog()
+   n = mapa(llum, 0, 1023, 0, 5)
+   display.show(n)
+   ```
+   - a) `return s_min + proporcio * rang_s`
+   - b) `print(proporcio)`
+   - c) `return valor`
+   - d) `return rang_e`
 
 4. Per què cal un *pull-up* (`pin.set_pull(pin.PULL_UP)`) en un polsador extern?
    - a) Perquè el LED s'encengui més fort.
@@ -61,11 +88,25 @@
    - c) Són exactament el mateix.
    - d) `time_pulse_us()` només funciona amb LED.
 
-9. Per què el sensor **PIR** necessita 30-60 segons d'estabilització abans d'usar-lo?
-   - a) No en necessita, funciona a l'instant.
-   - b) Perquè si no s'espera, sol donar falsos positius mentre el mòdul s'ajusta a l'entorn.
-   - c) Perquè necessita carregar-se com una bateria.
-   - d) Perquè és més lent que un botó.
+9. **[CORREGIR]** Aquest codi hauria de mostrar una cara de son (`Image.ASLEEP`) quan l'entorn és fosc, però gairebé sempre mostra `Image.HAPPY`, fins i tot a les fosques. On és l'error?
+
+   ```python
+   from microbit import *
+
+   LLINDAR_FOSCOR = 50
+
+   while True:
+       llum = pin0.read_analog()   # 0-1023, sensor extern
+       if llum < LLINDAR_FOSCOR:
+           display.show(Image.ASLEEP)
+       else:
+           display.show(Image.HAPPY)
+       sleep(200)
+   ```
+   - a) `LLINDAR_FOSCOR = 50` és un llindar pensat per a l'escala 0-255 (sensors integrats), però `pin0.read_analog()` dona valors en escala 0-1023: cal un llindar molt més alt (o usar `display.read_light_level()`).
+   - b) `Image.ASLEEP` no existeix a MicroPython.
+   - c) El bucle `while True:` està mal escrit i no s'executa mai.
+   - d) `sleep(200)` fa que el programa vagi massa ràpid per detectar la foscor.
 
 10. A `mascota_reactiva.py`, per què cada branca de `llegeix_sensors()` acaba amb un `return`?
     - a) És obligatori a MicroPython, sense excepcions.
@@ -89,7 +130,13 @@ ___________________________________________________________________
 
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|
-| b | b | c | b | b | b | b | b | b | b |
+| b | b | a | b | b | b | b | b | a | b |
+
+La pregunta 1 (**TRAÇA**) substitueix una pregunta merament memorística per exigir seguir l'execució d'un codi real (comptador amb *pull-up* i antirebot implícit) i triar què fa, no només reconèixer una instrucció aïllada.
+
+La pregunta 3 (**COMPLETAR**) substitueix la llista memorística de pins ADC per demanar completar la línia que falta a `mapa()`, comprovant que l'alumnat entén per què cal un `return` amb la regla de tres, no només que existeix la funció.
+
+La pregunta 9 (**CORREGIR**) substitueix el fet aïllat del PIR per un error real i freqüent (confondre l'escala 0-255 dels sensors integrats amb la 0-1023 dels pins ADC, documentat a la guia docent), i obliga a diagnosticar-lo sobre codi complet.
 
 La pregunta 11 és oberta: valora que expliqui que un llindar "inventat" pot no funcionar amb les condicions reals de l'aula (llum ambiental, soroll de fons...) i que l'exemple sigui coherent amb un component real de la SA3 (llindar de foscor, de temperatura, de so o de distància).
 
