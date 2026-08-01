@@ -1,6 +1,6 @@
 # Reptes SA8 · Autonomia i telemetria
 
-> 🧑‍🎓 **Quan toca fer-ne un?** És l'**ampliació ⭐** de la SA: comença'l quan tinguis el **nucli al dia** (el sistema de telemetria de la S3, tancat). Ensenya'l al docent perquè el validi.
+> 🧑‍🎓 **Quan toca fer-ne un?** El repte **⭐ és NUCLI OBLIGATORI — forma part del producte de la SA**: comença'l quan tinguis el **nucli al dia** (el sistema de telemetria de la S3, tancat). Els reptes **⭐⭐/⭐⭐⭐ resten opcionals** (ampliació), per a qui vagi sobrat de temps. Ensenya el ⭐ al docent perquè el validi.
 
 **Fes els reptes en ordre de dificultat: comença per ⭐, i si arribes a ⭐⭐⭐ hauràs passat pels tres.** Tots parteixen dels programes de `Classes/SA8/codi/` i fan servir el concepte de protocol de telemetria amb prefix propi, sensors del Kit 3 (IMU MPU6050, DHT11) i registre amb llista/mitjana o amb `log`. Es fan **sempre amb maquinari real** (el rover i una segona placa): el simulador de python.microbit.org **sí** simula la ràdio i el mòdul `log` (entre dues instàncies obertes alhora), però **cap** sensor del Kit 3, vegeu [`SA8_esquemes_connexions.md`](../Classes/SA8/SA8_esquemes_connexions.md) §Simulació.
 
@@ -12,7 +12,7 @@
 
 ---
 
-## ⭐ Repte 1 · Estació meteorològica escolar amb alertes
+## ⭐ Repte 1 · Estació meteorològica escolar amb alertes (NUCLI OBLIGATORI)
 
 **Context.** La coordinació de manteniment d'un institut vol un petit sensor mòbil que avisi quan la temperatura d'una aula o d'un magatzem surt d'un rang segur, sense haver de mirar constantment cap pantalla.
 
@@ -37,7 +37,7 @@
 
 ---
 
-## ⭐⭐ Repte 2 · Estació base multisensor amb registre avançat
+## ⭐⭐ Repte 2 · Estació base multisensor amb registre avançat (ampliació opcional)
 
 **Context.** Un projecte de ciència ciutadana d'un institut vol una petita estació receptora que no només mostri l'última lectura rebuda, sinó també els valors màxim i mínim registrats durant tota la sessió, per detectar variacions extremes.
 
@@ -62,7 +62,7 @@
 
 ---
 
-## ⭐⭐⭐ Repte 3 · Missió telemetrada amb alerta d'emergència per gest
+## ⭐⭐⭐ Repte 3 · Missió telemetrada amb alerta d'emergència per gest (ampliació opcional)
 
 **Context.** Una empresa de logística interna vol un rover de repartiment que, a més d'informar contínuament del seu estat, permeti a l'operari aturar-lo d'emergència amb una simple sacsejada del comandament (sense necessitat d'un polsador físic al rover), i que quedi constància de cada aturada d'emergència al registre.
 

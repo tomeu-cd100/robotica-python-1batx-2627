@@ -1,43 +1,57 @@
 # 00 · Mini-checks individuals (radar formatiu de cada SA)
 
-> **Per a qui és?** Per al **docent**. Un **micro-repte individual de 10 minuts** per SA (SA1–SA9), a fer **en solitari, sense apunts i sense IA**. **No qualifica**: és un radar formatiu.
+> **Per a qui és?** Per al **docent**. Un **micro-repte individual de 10 minuts** per SA (SA1–SA9), sempre d'**escriptura de codi curt (5-10 línies)**, a fer **en solitari, sense apunts i sense IA**. **Cap mini-check individual no es puntua en el moment de fer-lo** (és un radar formatiu i cal dir-ho explícitament a l'alumnat), però **el millor mini-check del trimestre sí que compta** un 5 % dins la dimensió «Proves pràctiques» — vegeu §«El millor mini-check qualifica» més avall i `Programació didàctica/06_Avaluacio_criteris_qualificacio.md` §6.3.
 > **Quan es passa?** A l'**inici de la sessió que indica cada fitxa** (normalment la Sessió 2; a SA1 i a les SA que tanquen trimestre —SA3, SA6, SA9— es reubica perquè la darrera sessió és la prova pràctica): prou aviat per reaccionar, prou tard perquè hi hagi hagut pràctica.
 
 ## El problema que resol
 
-Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.3): no hi ha parella que «arrossegui» ningú, però sí altres maneres d'arribar a la prova trimestral sense saber-ho fer sol —copiar un esquelet sense entendre'l, demanar-ho a una IA sense passar per DEPURA, o anar acumulant retard sense que ningú se n'adoni fins que és tard. Sense aquest radar, el primer moment en què es detectaria seria la **prova trimestral** — massa tard per reaccionar. El mini-check dona **10 minuts de veritat, sense ajuda de cap tipus**, cada SA.
+Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.3): no hi ha parella que «arrossegui» ningú, però sí altres maneres d'arribar a la prova trimestral sense saber-ho fer sol —copiar un esquelet sense entendre'l, demanar-ho a una IA sense passar per DEPURA, o anar acumulant retard sense que ningú se n'adoni fins que és tard. Sense aquest radar, el primer moment en què es detectaria seria la **prova trimestral** — massa tard per reaccionar. El mini-check dona **10 minuts de veritat, escrivint codi de zero i sense ajuda de cap tipus**, cada SA.
 
 ## Rutina (10 minuts)
 
 1. **Quan:** a l'**inici de la sessió indicada** de cada SA. **Aquell dia el mini-check substitueix la graella d'activació** (`00_Banc_activacio_repas.md`): també és recuperació.
-2. **Com:** individual, **sense apunts, sense IA i sense connexió a internet**, en paper o a l'editor amb el projector apagat. 10' clavats.
-3. **Correcció:** no es puntua. El docent fa una passada ràpida amb **semàfor**:
+2. **Com:** individual, **sense apunts, sense IA i sense connexió a internet**, en paper o a l'editor amb el projector apagat. 10' clavats. Es demana sempre **escriure** un programa curt (5-10 línies) de zero, mai només llegir-lo o triar una opció.
+3. **Correcció:** no es puntua individualment (excepte l'ús retrospectiu del §«El millor mini-check qualifica»). El docent fa una passada ràpida amb **semàfor**:
    - 🟢 **Ho fa sol** (errors de detall com a molt).
    - 🟡 **Se'n surt amb dubtes** (estructura bé, sintaxi o conceptes coixos).
    - 🟠🔴 **No se'n surt sol** (no distingeix les estructures bàsiques).
-4. **Acció amb els 🔴 (el sentit de tot plegat):**
+4. **Registre del tipus d'error (junt amb el semàfor).** Quan el resultat no és 🟢, el docent anota també **quin tipus d'error predomina**, amb una lletra enganxada al semàfor (p. ex. `🟡-C`):
+   - **S · Sintaxi** — indentació, falten `:` o parèntesis, noms mal escrits, `=` per `==`: **sap què ha de fer però no ho escriu bé**.
+   - **C · Concepte** — no sap quina estructura cal (bucle, condició, paràmetre, `return`...) o la fa servir amb el sentit canviat: **no té clar què ha de fer**.
+   - **D · Descuit** — la solució és correcta en l'essencial però hi falta un detall menor (un `import`, una `sleep()`, un cas límit): **ho sap fer, s'ha distret**.
+   - Aquesta lletra és la que orienta el reforç: **S** → practicar dictats/Parsons de sintaxi; **C** → tornar a la secció indicada de `SA0/SA0_guia_programacio.md`; **D** → revisió pausada abans d'entregar (autocorrecció), no repàs de contingut.
+5. **Acció amb els 🟠/🔴 (el sentit de tot plegat):**
    - Deriva a la secció de `SA0/SA0_guia_programacio.md` indicada a cada check.
    - Reforç individual a la sessió següent (bastida addicional, atenció prioritària a la pràctica guiada).
    - Si es repeteix dues SA seguides, activa mesures addicionals (`Programació didàctica/05_Atencio_a_la_diversitat.md` §5.2).
-5. **Registre:** un semàfor per alumne al full de seguiment (`Avaluació/Full_qualificacio_competencies.md`). En acabar el trimestre, la sèrie de semàfors és evidència d'evolució (no de nota).
+6. **Registre:** un semàfor **+ tipus d'error** per alumne al full de seguiment (`Avaluació/Full_seguiment_grup.md`, columna «Mini-check SA__») i al full de qualificació (`Avaluació/Full_qualificacio_competencies.md`). En acabar el trimestre, la sèrie de semàfors és evidència d'evolució **i** la base per triar el millor mini-check qualificable.
 
-> ⚖️ **No qualifica, i s'ha de dir explícitament a l'alumnat.** L'objectiu és que escriguin sense por: el mini-check només funciona com a radar si ningú té incentius per dissimular.
+> ⚖️ **Cap mini-check individual no qualifica el dia que es fa, i s'ha de dir explícitament a l'alumnat.** L'objectiu és que escriguin sense por: el mini-check només funciona com a radar si ningú té incentius per dissimular. Que el **millor** del trimestre compti a posteriori (§ següent) no ho canvia: com no se sap per endavant quin serà el millor, cal seguir fent-los tots amb honestedat.
+
+## El millor mini-check del trimestre qualifica (5 %)
+
+- **Es guarden totes les evidències** de cada mini-check del trimestre (paper arxivat o captura de l'editor), amb el semàfor i el tipus d'error anotats.
+- **En tancar el trimestre**, el docent selecciona, per a cada alumne/a, el **mini-check amb millor resultat** d'entre els fets aquell trimestre i li assigna una nota **1-10** amb l'escala:
+
+  | Semàfor | Nota orientativa | Matís del docent |
+  |---|---|---|
+  | 🟢 | 9-10 | 10 si és net a la primera; 9 si hi ha algun detall menor. |
+  | 🟡 | 6-8 | Més amunt (8) com més a prop de 🟢; més avall (6) com més a prop de 🟠. |
+  | 🟠 | 4-5 | 5 si hi ha intent estructurat encara que incomplet; 4 si és molt parcial. |
+  | 🔴 | 1-3 | 3 si hi ha almenys una línia correcta; 1 si és en blanc o incoherent. |
+
+- Aquesta nota s'incorpora a la dimensió **«Proves pràctiques» (20 %)** com el seu tram de **5 %** (l'altre 15 % és la prova trimestral T1/T2/T3): vegeu `Programació didàctica/06_Avaluacio_criteris_qualificacio.md` §6.3.
+- **No es fa mitjana** dels mini-checks del trimestre: qualifica el **millor**, no el conjunt — així ningú perd per un dia fluix, i la funció de radar (detectar dificultats sense por) es manté intacta a la resta.
 
 ---
 
 ## SA1 · Mini-check (inici de la Sessió 3)
 
 **Enunciat (projectar):**
-> Llegeix aquest programa **sense executar-lo** i explica, línia per línia, què fa:
-> ```python
-> from microbit import *
-> display.scroll("HOLA")
-> sleep(1000)
-> display.show(Image.HAPPY)
-> ```
+> Sense mirar `hola_mon.py`, **escriu de zero** un programa curt que: **(1)** mostri el teu nom lletra a lletra, **(2)** esperi mig segon, i **(3)** mostri fixa una imatge `Image.HAPPY` durant 2 segons.
 
-**Què mires:** identifica l'`import` com a requisit · sap que `scroll` mostra text lletra a lletra i `show` una imatge fixa · entén `sleep()` com una pausa en mil·lisegons.
-**🟢** explica les 4 línies amb precisió · **🟡** explica el que fa però no per què cal l'`import` · **🔴** no distingeix `scroll` de `show`.
+**Què mires:** primera línia `from microbit import *` present · `display.scroll("...")` per al nom · `sleep(500)` entremig · `display.show(Image.HAPPY)` · `sleep(2000)` final.
+**🟢** les 5 línies completes i en l'ordre correcte · **🟡** l'estructura hi és però falta l'`import` o confon `scroll`/`show` · **🔴** no sap escriure cap de les dues instruccions de display.
 **Reforç 🔴:** `SA0_guia_programacio.md` A1-A2 (primer programa, estructura d'un fitxer `.py`).
 
 ## SA2 · Mini-check (inici de la Sessió 2)
@@ -70,18 +84,10 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 ## SA5 · Mini-check (inici de la Sessió 2)
 
 **Enunciat (projectar):**
-> Anota què fa **cada línia** d'aquest programa:
-> ```python
-> import radio
-> radio.config(group=10)
-> radio.on()
-> missatge = radio.receive()
-> if missatge == 'F':
->     avancar(400)
-> ```
+> **Escriu de zero** el bucle receptor: configura la ràdio en el canal (`group`) **10**, activa-la, i a cada volta comprova si ha arribat el missatge exacte `'F'`; si és així, crida `avancar(400)`.
 
-**Què mires:** `group` = canal compartit (l'altra placa ha de tenir el mateix) · `radio.on()` obligatori · `receive()` pot retornar `None` si no ha arribat res · comparació de text amb `==`.
-**🟢** explica `group` i el possible `None` · **🟡** descriu línies però no el paper del `group` · **🔴** no distingeix emissor de receptor.
+**Què mires:** `import radio` · `radio.config(group=10)` · `radio.on()` obligatori (abans del bucle) · dins el `while True:`, `missatge = radio.receive()` i `if missatge == 'F':` amb `==` (no `=`).
+**🟢** les 6-7 línies completes, `on()` fora del bucle i la comparació ben feta · **🟡** l'estructura hi és però oblida `radio.on()` o el `group` · **🔴** no distingeix `receive()` d'una simple lectura de botó.
 **Reforç 🔴:** repassar el bloc de ràdio de `SA0_guia_programacio.md` Part B.
 
 ## SA6 · Mini-check (inici de la Sessió 2)
@@ -105,18 +111,10 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 ## SA8 · Mini-check (inici de la Sessió 2)
 
 **Enunciat (projectar):**
-> Anota què fa **cada línia** d'aquest emissor de telemetria:
-> ```python
-> import radio
-> radio.config(group=10)
-> radio.on()
-> while True:
->     radio.send('T:' + str(temperature()))
->     sleep(2000)
-> ```
+> **Escriu de zero** un emissor de telemetria: configura la ràdio en el canal **10**, activa-la, i cada **2 segons** envia la temperatura llegida amb `temperature()`, en forma de text que comenci per `'T:'`.
 
-**Què mires:** `group` = canal compartit amb l'estació base · `radio.on()` obligatori · `send()` envia text (per això cal `str(...)`) · `sleep` marca la cadència de mostreig.
-**🟢** explica `group` i la conversió a text · **🟡** descriu línies però no per què cal `str()` · **🔴** no distingeix rover d'estació base.
+**Què mires:** `import radio` · `radio.config(group=10)` · `radio.on()` · dins `while True:`, `radio.send('T:' + str(temperature()))` (cal `str(...)` perquè `send` envia text) · `sleep(2000)` marca la cadència.
+**🟢** les 6 línies completes amb el `str(...)` ben col·locat · **🟡** l'estructura hi és però oblida `str(...)` o el `sleep` · **🔴** no sap muntar l'emissor (falta `config`/`on`/`send`).
 **Reforç 🔴:** repassar l'esquelet de telemetria de `00_Projecte_T3_Rover.md`.
 
 ## SA9 · Mini-check (inici de la Sessió 2)

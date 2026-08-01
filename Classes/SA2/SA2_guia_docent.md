@@ -24,6 +24,7 @@
 | [`SA2_esquemes_connexions.md`](SA2_esquemes_connexions.md) | Sessions 1-3 (pins del Micro:shield per a cada component). |
 | `codi/` | `led_parpelleig`, `pwm_led_rgb`, `musica_altaveu` i el repte-producte `semafor_rele`. |
 | [`00_Projecte_T1_Mascota.md`](../00_General/00_Projecte_T1_Mascota.md) | Sessió 4 (fabricació i muntatge). |
+| [`Reptes_SA2.md`](../../Reptes/Reptes_SA2.md) | Un cop tancats el repte de la S3 i la mascota de la S4: repte **⭐ nucli obligatori** (mateix temps de pràctica ja previst); reptes ⭐⭐/⭐⭐⭐ com a ampliació opcional. |
 
 > Cada programa de `codi/` té la seva **pàgina de pràctica** (per què es fa + codi explicat per blocs, l'`EXPLICACIO.md` de la seva carpeta). El «Guió de modelatge» oral de sota continua sent teu.
 
@@ -121,6 +122,8 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 
 > ⏱️ **Marge:** aquesta sessió **es pot alliberar sencera** (pla de contingència, `08_Sequenciacio_temporal_anual.md`): si cal recuperar temps, el repte de la S3 ja fa de producte avaluable i la fabricació es reprograma a la primera sessió lliure sense penalitzar la nota.
 
+> 🎯 **Repte ⭐ (nucli obligatori, mateix temps de pràctica ja previst):** un cop tancats el repte de la S3 i el muntatge de la mascota, tothom fa el repte **⭐ · Llum de seguretat per a motxilla** de [`Reptes_SA2.md`](../../Reptes/Reptes_SA2.md) — amplia `led_parpelleig.py` (el mateix LED de P1 ja muntat a la mascota) amb un segon mode «alerta» més ràpid controlat pel botó A. Cal ensenyar-lo al docent perquè el validi. Qui acaba aviat pot continuar amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional).
+
 **Punts clau:** el LED i el so de la mascota **ja funcionen** perquè són el mateix codi de `codi/led_parpelleig` i `codi/musica_altaveu` adaptat als pins del dossier (només P1 i P2: la mascota **no** fa servir el LED RGB de `pwm_led_rgb`, perquè al seu cablatge complet P8 i P12 ja són el PIR i el polsador de la SA3, i escriure-hi PWM ara entraria en conflicte amb aquests sensors); el que hi ha de nou avui és **mecànic** (muntatge físic), no de programació. El servo es mourà de manera programada a la **SA4**.
 
 **Producte de la SA:** repte «semàfor o llum d'ambient» (LED/RGB/brunzidor/relé amb bucles i PWM), tancat i avaluat a la **S3**. Muntatge físic de la **mascota** a la **S4** (avaluat amb la rúbrica de muntatge del dossier, R2).
@@ -134,6 +137,7 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 | Repte «semàfor/llum d'ambient» (S3, producte) | Integració de sortides amb bucles i PWM | CA1.1, CA2.1, CA2.2 | **R1**, **R2** | Sí |
 | Mini-defensa (S3, R4·DO) | Claredat + inici de justificació d'una decisió | CA5.2 | **R4** (fila «Defensa oral») | Sí |
 | Muntatge de la mascota (S4) | Muntatge físic i cablatge segur | CA2.1 | **R2** (criteri «Muntatge») | Sí |
+| Repte ⭐ (Reptes_SA2.md) | Segon mode de sortida digital controlat per botó | CA1.1 | **R1** | Sí |
 | Quadern tècnic | Documentació i reflexió del procés | CA5.2 | **R4** | Sí |
 | Observació d'aula | Autonomia i seguretat amb el maquinari | CA5.3 | **R5** | Sí |
 
@@ -166,7 +170,7 @@ A la SA2 hem **actuat** sobre el món exterior (LED, so, relé). A la **SA3** fa
 | Necessitat | Mesura |
 |---|---|
 | **Bastida (qui ho necessita)** | Esquelet `# TODO` a la secció «Si t'encalles» de la pàgina de pràctica de [`semafor_rele`](codi/semafor_rele/EXPLICACIO.md); temps de `sleep()` ja proposats a la fitxa. |
-| **+ Ampliació (qui va sobrat)** | Seqüència de llums sincronitzada amb el so (`pwm_led_rgb` + `musica_altaveu` combinats); ús combinat de relé i LED RGB en un patró propi (vegeu [Reptes de la SA2](../../Reptes/Reptes_SA2.md)). |
+| **+ Ampliació (qui va sobrat)** | Seqüència de llums sincronitzada amb el so (`pwm_led_rgb` + `musica_altaveu` combinats); ús combinat de relé i LED RGB en un patró propi (vegeu els reptes **⭐⭐/⭐⭐⭐** de [Reptes de la SA2](../../Reptes/Reptes_SA2.md)). |
 | **Diversitat lingüística/lectora** | Taula de pins amb icones de component (no només noms); glossari a [`00_Glossari_tecnic.md`](../00_General/00_Glossari_tecnic.md). |
 | **Sense maquinari per a tothom** | El simulador de python.microbit.org **no** reprodueix el LED extern, el LED RGB, el brunzidor ni el relé (només matriu, botons i so intern): qui no tingui placa treballa per torns o simula la **lògica** del programa (comentaris de "aquí s'encendria el LED verd") per validar-la després amb maquinari real. |
 

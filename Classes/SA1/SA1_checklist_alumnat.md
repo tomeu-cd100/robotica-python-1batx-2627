@@ -11,6 +11,7 @@
 - [ ] Etiquetar les parts de la **micro:bit** i saber dir digital vs analògic (Act. 2)
 - [ ] Llegir i **signar** el full de normes de seguretat (Act. 3)
 - [ ] **Predir, provar i modificar** el primer programa; intentar `emocions_botons` (Act. 4)
+- [ ] Fer el **repte ⭐** de `Reptes/Reptes_SA1.md` (nucli obligatori) i ensenyar-lo al docent → *compta amb R1*
 - [ ] Lliurar la **fitxa-pòster** d'un robot real (amb el dilema ètic) → *compta amb R4*
 - [ ] Tenir la **1a entrada del quadern tècnic** (què he après · el repte · un error i com l'he resolt)
 

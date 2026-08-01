@@ -19,6 +19,7 @@
 | Què lliuro | Rúbrica | On compta |
 |---|---|---|
 | Comportament autònom del rover (producte, S4) | **R1**, **R3** | Projectes (45 %) |
+| Repte **⭐** de [Reptes_SA7.md](../../Reptes/Reptes_SA7.md) (nucli obligatori, S4) | **R1** | Projectes (45 %) |
 | Mini-defensa breu (S4, R4·DO) | **R4** | Projectes (45 %) |
 | Quadern tècnic | **R4** | Quadern tècnic i pràctiques (25 %) |
 | Treball a l'aula (autonomia, seguretat amb el rover) | **R5** | Actitud (10 %) |
@@ -59,6 +60,10 @@ Parteix de [`rover_missions.py`](codi/rover_missions/rover_missions.py) i **inte
 
 **Mini-defensa (breu, davant el docent):** explica **una decisió** de disseny (per exemple, per què has triat aquest llindar, o com has integrat els dos sensors).
 
+### 5 · Repte ⭐ (nucli obligatori, mateixa Sessió 4)
+
+Amb el temps de pràctica de la Sessió 4 (el que abans es dedicava opcionalment als reptes), fes el **repte ⭐ · Carret de magatzem amb velocitat variable** de [Reptes_SA7.md](../../Reptes/Reptes_SA7.md): ara és **NUCLI OBLIGATORI**, no una ampliació — no s'hi afegeixen hores noves. **Ensenya'l al docent perquè el validi.**
+
 ## Producte · Comportament autònom del rover
 
 Es tanca i s'avalua a la **Sessió 4** amb les rúbriques **R1** (codi, funcionament) i **R3** (autonomia/control). La mini-defensa hi suma **R4**.
@@ -86,4 +91,4 @@ Es tanca i s'avalua a la **Sessió 4** amb les rúbriques **R1** (codi, funciona
 
 <!-- /web:only-github -->
 
-> 📌 **Vols més?** Ampliació, [reptes ⭐](../../Reptes/Reptes_SA7.md), pensament computacional, exit ticket i ODS → **[SA7_fitxa_ampliada.md](SA7_fitxa_ampliada.md)**
+> 📌 **Vols més?** Ampliació, [reptes ⭐⭐/⭐⭐⭐](../../Reptes/Reptes_SA7.md), pensament computacional, exit ticket i ODS → **[SA7_fitxa_ampliada.md](SA7_fitxa_ampliada.md)**

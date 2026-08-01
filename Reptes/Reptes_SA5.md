@@ -1,6 +1,6 @@
 # Reptes SA5 · Ràdio: robots que parlen
 
-> 🧑‍🎓 **Quan toca fer-ne un?** És l'**ampliació ⭐** de la SA: comença'l quan tinguis el **nucli al dia** (el repte «control remot bàsic» de la S3, tancat). Ensenya'l al docent perquè el validi.
+> 🧑‍🎓 **Quan toca fer-ne un?** El repte **⭐ és NUCLI OBLIGATORI — forma part del producte de la SA**: comença'l quan tinguis el **nucli al dia** (el repte «control remot bàsic» de la S3, tancat). Els reptes **⭐⭐/⭐⭐⭐ resten opcionals** (ampliació), per a qui vagi sobrat de temps. Ensenya el ⭐ al docent perquè el validi.
 
 **Fes els reptes en ordre de dificultat: comença per ⭐, i si arribes a ⭐⭐⭐ hauràs passat pels tres.** Tots parteixen dels programes de `Classes/SA5/codi/` i fan servir la ràdio de la micro:bit. Es fan amb **maquinari real** (dues plaques aparellades puntualment): el simulador de python.microbit.org **sí simula la ràdio**, però només entre instàncies del simulador (vegeu [`SA5_esquemes_connexions.md`](../Classes/SA5/SA5_esquemes_connexions.md) §Simulació), útil per revisar la lògica del protocol.
 
@@ -12,7 +12,7 @@
 
 ---
 
-## ⭐ Repte 1 · Xat de classe amb identificació
+## ⭐ Repte 1 · Xat de classe amb identificació (NUCLI OBLIGATORI)
 
 **Context.** Un club de robòtica vol un petit "walkie-talkie" digital: cada membre s'identifica amb un nom curt en cada missatge, perquè es pugui saber sempre qui ha enviat què.
 
@@ -37,7 +37,7 @@
 
 ---
 
-## ⭐⭐ Repte 2 · Comandament amb gestos per a un joc
+## ⭐⭐ Repte 2 · Comandament amb gestos per a un joc (ampliació opcional)
 
 **Context.** Una empresa d'oci vol un comandament sense botons visibles per a una atracció interactiva: els jugadors el controlen només inclinant-lo i sacsejant-lo.
 
@@ -62,7 +62,7 @@
 
 ---
 
-## ⭐⭐⭐ Repte 3 · Historial de comandes amb estadístiques
+## ⭐⭐⭐ Repte 3 · Historial de comandes amb estadístiques (ampliació opcional)
 
 **Context.** Un fabricant de robots de magatzem vol poder revisar, després d'una jornada de proves, quines ordres ha rebut més un robot teledirigit, per detectar si algun sensor o comandament falla.
 

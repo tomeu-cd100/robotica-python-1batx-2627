@@ -12,6 +12,7 @@
 - [ ] Fer el **mini-check** individual (Sessió 2, no qualifica)
 - [ ] Cablejar la **mascota** amb el cablatge exacte del dossier (P1, P2, P8, P12) i programar **almenys 2 reaccions** (Act. 3) → *compta amb R1, R2 i R3*
 - [ ] Fer la **mini-defensa breu** (una decisió justificada) → *compta amb R4*
+- [ ] Fer el **repte ⭐** de `Reptes/Reptes_SA3.md` (nucli obligatori) i ensenyar-lo al docent → *compta amb R1*
 - [ ] Tenir l'entrada del **quadern tècnic** de la SA3 (què he après · el repte · un error · mascota)
 - [ ] Presentar-me a la **prova pràctica T1** (Sessió 4)
 

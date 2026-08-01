@@ -1,6 +1,6 @@
 # Reptes SA1 · Hola, robot!
 
-> 🧑‍🎓 **Quan toca fer-ne un?** És l'**ampliació ⭐** de la SA: comença'l quan tinguis el **nucli al dia** (les activitats de la fitxa). Ensenya'l al docent perquè el validi.
+> 🧑‍🎓 **Quan toca fer-ne un?** El repte **⭐ és NUCLI OBLIGATORI — forma part del producte de la SA**: comença'l quan tinguis el **nucli al dia** (les activitats de la fitxa). Els reptes **⭐⭐/⭐⭐⭐ resten opcionals** (ampliació), per a qui vagi sobrat de temps. Ensenya el ⭐ al docent perquè el validi.
 
 **Fes els reptes en ordre de dificultat: comença per ⭐, i si arribes a ⭐⭐⭐ hauràs passat pels tres.** Tots parteixen dels programes de `Classes/SA1/codi/` i del model **entrada→procés→sortida**. Es poden fer al simulador de [python.microbit.org](https://python.microbit.org) o a la placa física.
 
@@ -10,7 +10,7 @@
 
 ---
 
-## ⭐ Repte 1 · Targeta de benvinguda digital
+## ⭐ Repte 1 · Targeta de benvinguda digital (NUCLI OBLIGATORI)
 
 **Context.** L'escola vol una petita "targeta" digital de presentació per al dia de portes obertes: cada alumne/a en fa una amb el seu nom.
 
@@ -34,7 +34,7 @@
 
 ---
 
-## ⭐⭐ Repte 2 · Semàfor d'humor amb tres estats
+## ⭐⭐ Repte 2 · Semàfor d'humor amb tres estats (ampliació opcional)
 
 **Context.** Una joguina educativa expressa el seu "humor" segons com la toquis: en repòs, contenta o sorpresa.
 
@@ -58,7 +58,7 @@
 
 ---
 
-## ⭐⭐⭐ Repte 3 · Dau doble sense repeticions
+## ⭐⭐⭐ Repte 3 · Dau doble sense repeticions (ampliació opcional)
 
 **Context.** Un joc de taula necessita un "dau electrònic" que llanci dos daus alhora i eviti que surti dues vegades seguides el mateix resultat (per fer el joc més imprevisible).
 

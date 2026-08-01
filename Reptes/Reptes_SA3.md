@@ -1,6 +1,6 @@
 # Reptes SA3 · Entrades: el robot percep
 
-> 🧑‍🎓 **Quan toca fer-ne un?** És l'**ampliació ⭐** de la SA: comença'l quan tinguis el **nucli al dia** (el repte «mascota reactiva» de la S3, tancat). Ensenya'l al docent perquè el validi.
+> 🧑‍🎓 **Quan toca fer-ne un?** El repte **⭐ és NUCLI OBLIGATORI — forma part del producte de la SA**: comença'l quan tinguis el **nucli al dia** (el repte «mascota reactiva» de la S3, tancat). Els reptes **⭐⭐/⭐⭐⭐ resten opcionals** (ampliació), per a qui vagi sobrat de temps. Ensenya el ⭐ al docent perquè el validi.
 
 **Fes els reptes en ordre de dificultat: comença per ⭐, i si arribes a ⭐⭐⭐ hauràs passat pels tres.** Tots parteixen dels programes de `Classes/SA3/codi/` i fan servir el Micro:shield. Es fan amb **maquinari real**: el simulador de python.microbit.org **no** reprodueix cap sensor extern (vegeu [`SA3_esquemes_connexions.md`](../Classes/SA3/SA3_esquemes_connexions.md) §Simulació), tot i que la **lògica** es pot escriure i revisar-hi abans de provar-la a la placa.
 
@@ -10,7 +10,7 @@
 
 ---
 
-## ⭐ Repte 1 · Llum automàtica d'estudi
+## ⭐ Repte 1 · Llum automàtica d'estudi (NUCLI OBLIGATORI)
 
 **Context.** Una marca de làmpades d'escriptori vol un prototip que s'encengui sol quan la taula es queda fosca, sense que calgui prémer cap interruptor.
 
@@ -35,7 +35,7 @@
 
 ---
 
-## ⭐⭐ Repte 2 · Aparcament amb sensor de distància
+## ⭐⭐ Repte 2 · Aparcament amb sensor de distància (ampliació opcional)
 
 **Context.** Un taller mecànic vol un petit indicador d'aparcament: com més a prop estàs de la paret, més ràpid avisa, com els sensors d'aparcament dels cotxes reals.
 
@@ -60,7 +60,7 @@
 
 ---
 
-## ⭐⭐⭐ Repte 3 · Estació meteorològica de butxaca
+## ⭐⭐⭐ Repte 3 · Estació meteorològica de butxaca (ampliació opcional)
 
 **Context.** Una empresa d'articles escolars vol un prototip d'estació meteorològica senzilla: llegeix llum i temperatura reals i mostra un "resum del dia" combinant totes dues lectures, com faria una icona de previsió del temps.
 

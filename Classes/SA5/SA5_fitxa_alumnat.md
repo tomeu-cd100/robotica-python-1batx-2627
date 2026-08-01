@@ -19,6 +19,7 @@
 | Què lliuro | Rúbrica | On compta |
 |---|---|---|
 | Repte **«control remot bàsic»** (producte, S3) | **R1** | Projectes (45 %) |
+| Repte **⭐** de [Reptes_SA5.md](../../Reptes/Reptes_SA5.md) (nucli obligatori) | **R1** | Projectes (45 %) |
 | Mini-defensa breu (S3, R4·DO) | **R4** | Projectes (45 %) |
 | Quadern tècnic | **R4** | Quadern tècnic i pràctiques (25 %) |
 | Treball a l'aula (individualitat de la ràdio, autonomia) | **R5** | Actitud (10 %) |
@@ -61,6 +62,10 @@ Parteix de [`receptor_vehicle.py`](codi/receptor_vehicle/receptor_vehicle.py) i 
 
 **Mini-defensa (breu, davant el docent):** explica **quin protocol** has dissenyat i **una decisió** (per exemple, per què has triat aquestes comandes o aquesta manera de guardar l'historial).
 
+### 4 · Repte ⭐ (nucli obligatori) (Sessió 3, en acabar el producte)
+
+Un cop tancat el repte «control remot bàsic», fes el **repte ⭐** de [`Reptes_SA5.md`](../../Reptes/Reptes_SA5.md) (xat de classe amb identificació): és **nucli obligatori** —no una ampliació opcional— i s'aprofita el mateix temps de pràctica de la Sessió 3. Ensenya'l al docent perquè el validi.
+
 ## Producte · Repte «control remot bàsic»
 
 Es tanca i s'avalua a la **Sessió 3** amb la rúbrica **R1** (codi, funcionament). La mini-defensa hi suma **R4**.
@@ -87,4 +92,4 @@ Es tanca i s'avalua a la **Sessió 3** amb la rúbrica **R1** (codi, funcionamen
 
 <!-- /web:only-github -->
 
-> 📌 **Vols més?** Ampliació, [reptes ⭐](../../Reptes/Reptes_SA5.md), pensament computacional, exit ticket i ODS → **[SA5_fitxa_ampliada.md](SA5_fitxa_ampliada.md)**
+> 📌 **Vols més?** Ampliació, [reptes ⭐⭐/⭐⭐⭐](../../Reptes/Reptes_SA5.md), pensament computacional, exit ticket i ODS → **[SA5_fitxa_ampliada.md](SA5_fitxa_ampliada.md)**

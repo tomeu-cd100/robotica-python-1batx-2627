@@ -19,6 +19,7 @@
 | Què lliuro | Rúbrica | On compta |
 |---|---|---|
 | Repte **«control per botons»** (producte, S3) | **R1**, **R2** | Projectes (45 %) |
+| Repte **⭐** de [Reptes_SA4.md](../../Reptes/Reptes_SA4.md) (nucli obligatori, en acabar «control per botons») | **R1** | Projectes (45 %) |
 | Mini-defensa breu (S3, R4·DO) | **R4** | Projectes (45 %) |
 | Muntatge del vehicle T2 (S4) | **R2** | Projectes (45 %) |
 | Quadern tècnic | **R4** | Quadern tècnic i pràctiques (25 %) |
@@ -55,6 +56,10 @@ Parteix de [`control_per_botons.py`](codi/control_per_botons/control_per_botons.
 
 **Mini-defensa (breu, davant el docent):** explica **quina seqüència** has triat i **una decisió** de disseny (per exemple, per què aquest ordre de moviments o aquesta velocitat).
 
+### 4 · Repte ⭐ «Salutació programable per a un aparador» (Sessió 3, en acabar «control per botons» — NUCLI OBLIGATORI)
+
+En acabar i tancar el repte «control per botons», fes el **repte ⭐** de [Reptes_SA4.md](../../Reptes/Reptes_SA4.md): parteix de `funcions_moviments.py` (Activitat 1) i escriu una funció `salutacio(estil, vegades)` amb dos paràmetres. Si no t'hi arribes dins la Sessió 3, acaba'l com a **deures** abans de la Sessió 4. **Ensenya'l al docent perquè el validi.** (No confonguis aquest repte amb «control per botons»: són dos productes diferents.)
+
 ## Producte · Repte «control per botons»
 
 Es tanca i s'avalua a la **Sessió 3** amb les rúbriques **R1** (codi, modularitat) i **R2**. La mini-defensa hi suma **R4**.
@@ -85,4 +90,4 @@ Fabricació i muntatge físic segons el [dossier del vehicle T2](../00_General/0
 
 <!-- /web:only-github -->
 
-> 📌 **Vols més?** Ampliació, [reptes ⭐](../../Reptes/Reptes_SA4.md), pensament computacional, exit ticket i ODS → **[SA4_fitxa_ampliada.md](SA4_fitxa_ampliada.md)**
+> 📌 **Vols més?** Ampliació, [reptes ⭐⭐/⭐⭐⭐](../../Reptes/Reptes_SA4.md), pensament computacional, exit ticket i ODS → **[SA4_fitxa_ampliada.md](SA4_fitxa_ampliada.md)**

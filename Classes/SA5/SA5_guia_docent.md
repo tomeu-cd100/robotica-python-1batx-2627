@@ -23,6 +23,7 @@
 | [`SA5_fitxa_alumnat.md`](SA5_fitxa_alumnat.md) | Totes les sessions (Activitats 1-3 + producte + quadern). |
 | [`SA5_esquemes_connexions.md`](SA5_esquemes_connexions.md) | Sessions 1-3 (configuració de ràdio i pins reutilitzats del vehicle). |
 | `codi/` | `radio_missatges`, `comandament` i el repte-producte `receptor_vehicle`. |
+| [`Reptes_SA5.md`](../../Reptes/Reptes_SA5.md) | Sessió 3, en acabar el producte: repte **⭐** (nucli obligatori, mateix temps de pràctica que ja hi havia). Reptes ⭐⭐/⭐⭐⭐, ampliació opcional. |
 
 > Cada programa de `codi/` té la seva **pàgina de pràctica** (per què es fa + codi explicat per blocs, l'`EXPLICACIO.md` de la seva carpeta). El «Guió de modelatge» oral de sota continua sent teu.
 
@@ -97,6 +98,8 @@ Assigna els **grups de ràdio per parelles de números de llista** (rotant si el
 
 > 🎯 **Producte de la SA.** Aquest repte **fa de producte** de la SA5: s'avalua amb **R1** (codi, criteri "Funcionament") i **R4** (documentació). Introdueix, com a **+ampliació**, l'historial de comandes amb llistes/tuples (es completa a la SA6).
 
+> ⭐ **Repte nucli obligatori.** Un cop tancat el producte, tothom fa el repte **⭐** de [`Reptes_SA5.md`](../../Reptes/Reptes_SA5.md) (xat de classe amb identificació), aprofitant el mateix temps de pràctica que abans es destinava opcionalment a l'ampliació, i l'ensenya al docent perquè el validi. Els reptes **⭐⭐/⭐⭐⭐** continuen sent ampliació opcional per a qui vagi sobrat.
+
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
 | Activació | 10' | Mostra [`receptor_vehicle.py`](codi/receptor_vehicle/receptor_vehicle.py) **sense executar-lo** (PRIMM): pregunta què farà cada ordre rebuda. 🥋 **Kata del dia:** K09 (global) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen el comportament del vehicle davant de cada comanda. |
@@ -126,6 +129,7 @@ Assigna els **grups de ràdio per parelles de números de llista** (rotant si el
 | Mini-check (S2) | Enviar/rebre un missatge i actuar-hi sense apunts | CA1.1, CA1.2 | — | **No** (radar formatiu) |
 | Fitxa d'alumnat (Act. 1-2) | Ràdio (`radio.on`/`config`/`send`/`receive`); disseny del protocol propi | CA1.1, CA1.2 | R1 | Formativa |
 | Repte «control remot bàsic» (S3, producte) | Vehicle controlat per ràdio amb protocol propi (mínim 4 comandes) | CA1.1, CA1.2 | **R1** | Sí |
+| Repte **⭐** (`Reptes_SA5.md`, S3, nucli obligatori) | Xat de classe amb identificació i historial, validat pel docent | CA1.1 | **R1** | Sí |
 | Mini-defensa (S3, R4·DO) | Claredat + justificació del protocol triat | CA1.2 | **R4** (fila «Defensa oral») | Sí |
 | Quadern tècnic | Documentació, taula comanda → acció, historial de comandes | CA1.2 | **R4** | Sí |
 | Observació d'aula | Autonomia i respecte de la regla d'individualitat de la ràdio | — | **R5** | Sí |
@@ -159,7 +163,7 @@ A la SA5 hem après a fer que dues plaques **es parlin** per ràdio amb un proto
 | Necessitat | Mesura |
 |---|---|
 | **Bastida (qui ho necessita)** | Protocol de comandes model (taula comanda → acció) proporcionat; funció `rep_i_actua()`/`actua()` amb l'esquelet ja escrit. |
-| **+ Ampliació (qui va sobrat)** | Ampliar el protocol amb comandes de velocitat variable o seqüències; registrar l'historial de comandes en una llista i mostrar-lo per REPL (vegeu [Reptes de la SA5](../../Reptes/Reptes_SA5.md)). |
+| **+ Ampliació (qui va sobrat)** | Un cop fet el repte ⭐ obligatori: reptes **⭐⭐/⭐⭐⭐** (comandament amb gestos, historial amb estadístiques) — vegeu [Reptes de la SA5](../../Reptes/Reptes_SA5.md). |
 | **Diversitat lingüística/lectora** | Taula de comandes amb icones de direcció; glossari a [`00_Glossari_tecnic.md`](../00_General/00_Glossari_tecnic.md). |
 | **Sense segona placa disponible** | El docent pot fer d'emissor de proves per torns; el simulador de python.microbit.org **sí** simula la ràdio entre instàncies del simulador (pràctica individual a casa). |
 

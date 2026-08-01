@@ -19,6 +19,7 @@
 | Què lliuro | Rúbrica | On compta |
 |---|---|---|
 | Sistema de telemetria del rover (producte, S3) | **R1**, **R3** | Projectes (45 %) |
+| Repte **⭐** de [Reptes_SA8.md](../../Reptes/Reptes_SA8.md) (nucli obligatori, S3) | **R1** | Projectes (45 %) |
 | Mini-defensa breu (S3, R4·DO) | **R4** | Projectes (45 %) |
 | Quadern tècnic | **R4** | Quadern tècnic i pràctiques (25 %) |
 | Treball a l'aula (autonomia, responsabilitat amb les dades) | **R5** | Actitud (10 %) |
@@ -54,6 +55,10 @@ Practica una **classificació de patrons** amb dades de sensors (p. ex. Teachabl
 
 **Reflexió d'IA i ètica de dades:** si volguessis que un model d'IA "aprengués" a decidir en lloc del teu llindar fet a mà, quines dades li caldrien i per què cal tenir cura amb la privadesa d'aquestes dades? ______________________
 
+### 4 · Repte ⭐ (nucli obligatori, mateixa Sessió 3)
+
+Amb el temps de pràctica de la Sessió 3 (el que abans es dedicava opcionalment als reptes), fes el **repte ⭐ · Estació meteorològica escolar amb alertes** de [Reptes_SA8.md](../../Reptes/Reptes_SA8.md): ara és **NUCLI OBLIGATORI**, no una ampliació — no s'hi afegeixen hores noves. **Ensenya'l al docent perquè el validi.**
+
 ## Producte · Sistema de telemetria del rover
 
 Es tanca i s'avalua a la **Sessió 3** amb les rúbriques **R1** (codi, funcionament) i **R3** (criteri "Integració"). La mini-defensa hi suma **R4**.
@@ -82,4 +87,4 @@ Es tanca i s'avalua a la **Sessió 3** amb les rúbriques **R1** (codi, funciona
 
 <!-- /web:only-github -->
 
-> 📌 **Vols més?** Ampliació, [reptes ⭐](../../Reptes/Reptes_SA8.md), pensament computacional, exit ticket i ODS → **[SA8_fitxa_ampliada.md](SA8_fitxa_ampliada.md)**
+> 📌 **Vols més?** Ampliació, [reptes ⭐⭐/⭐⭐⭐](../../Reptes/Reptes_SA8.md), pensament computacional, exit ticket i ODS → **[SA8_fitxa_ampliada.md](SA8_fitxa_ampliada.md)**

@@ -19,6 +19,7 @@
 | Què lliuro | Rúbrica | On compta |
 |---|---|---|
 | **Fitxa-pòster** d'un robot real (amb dilema ètic) | **R4** | Projectes (45 %) |
+| Repte **⭐** de [Reptes_SA1.md](../../Reptes/Reptes_SA1.md) (nucli obligatori) | **R1** | Projectes (45 %) |
 | **Quadern tècnic** (primera entrada) | **R4** | Quadern tècnic i pràctiques (25 %) |
 | Treball a l'aula (seguretat, autonomia) | **R5** | Actitud (10 %) |
 | Prova diagnòstica | — | **No qualifica** (orienta el ritme de la SA) |
@@ -63,6 +64,10 @@ Llegeix [`SA1_normes_seguretat.md`](SA1_normes_seguretat.md) i **signa** el full
 
 > 💡 Si t'encalles escrivint el teu programa, parteix de l'**esquelet** de la secció «Si t'encalles» de la [pàgina de la pràctica d'`emocions_botons`](codi/emocions_botons/EXPLICACIO.md): l'estructura `while True:` i el `from microbit import *` ja hi són; tu omples els `# TODO`.
 
+### 5 · Repte ⭐ (nucli obligatori)
+
+Fes el **repte ⭐ · Targeta de benvinguda digital** de [`Reptes_SA1.md`](../../Reptes/Reptes_SA1.md) (a la Sessió 3, en el mateix temps de pràctica que ja tenies previst després de la fase «Crea»): parteix de `hola_mon.py` perquè el display mostri el teu **nom** (`scroll`) i, després, una **imatge fixa** que et representi (`show`). És **nucli obligatori** — forma part del producte d'aquesta SA, no és una ampliació. Quan l'acabis, **ensenya'l al docent** perquè el validi.
+
 ## Producte · Fitxa-pòster
 
 Tria un **robot real** i analitza'l amb [`SA1_poster_robot_plantilla.md`](SA1_poster_robot_plantilla.md) (entrada-procés-sortida + dilema ètic). Es **comença a la sessió 3**, després de l'Activitat 4, i s'avalua amb la rúbrica **R4**.
@@ -88,4 +93,4 @@ Tria un **robot real** i analitza'l amb [`SA1_poster_robot_plantilla.md`](SA1_po
 
 <!-- /web:only-github -->
 
-> 📌 **Vols més?** Ampliació (`dau_sacseig`), [reptes ⭐](../../Reptes/Reptes_SA1.md), pensament computacional, exit ticket i ODS → **[SA1_fitxa_ampliada.md](SA1_fitxa_ampliada.md)**
+> 📌 **Vols més?** Ampliació (`dau_sacseig`), [reptes ⭐⭐/⭐⭐⭐](../../Reptes/Reptes_SA1.md), pensament computacional, exit ticket i ODS → **[SA1_fitxa_ampliada.md](SA1_fitxa_ampliada.md)**

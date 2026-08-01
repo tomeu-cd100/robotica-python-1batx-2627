@@ -35,6 +35,7 @@
 
 ## 📊 3. Avaluació i evidències (a recollir)
 - [ ] Repte **«control remot bàsic»** (S3) → **R1** (compta, Projectes 45 %)
+- [ ] **Repte ⭐** (`Reptes_SA5.md`) fet i validat → **R1** (compta, Projectes 45 %)
 - [ ] **Mini-defensa** (S3, R4·DO) → **R4** (fila «Defensa oral»)
 - [ ] **Quadern tècnic** → **R4** (Quadern tècnic i pràctiques 25 %)
 - [ ] **Observació d'aula** (individualitat de la ràdio, autonomia) → **R5** (Actitud 10 %)
@@ -43,5 +44,5 @@
 
 ## 🪜 4. Atenció a la diversitat (previst per aquesta SA)
 - [ ] **Bastida:** protocol de comandes model (taula comanda → acció) proporcionat · esquelet de `actua()`/`rep_i_actua()` ja escrit
-- [ ] **+ Ampliació:** comandes de velocitat variable o seqüències · historial de comandes amb llista/tupla mostrat per REPL (vegeu `Reptes_SA5.md`)
+- [ ] **+ Ampliació (només reptes ⭐⭐/⭐⭐⭐, un cop fet el ⭐ obligatori):** comandes de velocitat variable o seqüències · historial de comandes amb llista/tupla mostrat per REPL (vegeu `Reptes_SA5.md`)
 - [ ] **Sense segona placa disponible:** el docent fa d'emissor de proves per torns; simulador de python.microbit.org **sí** simula la ràdio entre instàncies del simulador

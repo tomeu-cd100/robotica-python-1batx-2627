@@ -25,6 +25,7 @@
 | [`SA1_esquemes_connexions.md`](SA1_esquemes_connexions.md) | Sessió 2 (anatomia de la placa, Activitat 2). |
 | [`SA1_normes_seguretat.md`](SA1_normes_seguretat.md) | Sessió 2 (lectura i **signatura**). |
 | [`SA1_poster_robot_plantilla.md`](SA1_poster_robot_plantilla.md) | Producte de la SA (es comença a la Sessió 3). |
+| [`Reptes_SA1.md`](../../Reptes/Reptes_SA1.md) | Sessió 3 (fase «Crea»): repte **⭐ nucli obligatori** (mateix temps de pràctica ja previst); reptes ⭐⭐/⭐⭐⭐ com a ampliació opcional. |
 | `codi/` | `hola_mon`, `emocions_botons` i l'ampliació `dau_sacseig`. |
 
 > Cada programa de `codi/` té la seva **pàgina de pràctica** (per què es fa + codi explicat per blocs, l'`EXPLICACIO.md` de la seva carpeta): és el text que l'alumnat pot rellegir si falta a classe o repassa a casa. El «Guió de modelatge» oral de sota continua sent teu.
@@ -106,7 +107,9 @@ La SA1 no només respon *"què és un robot?"*: també presenta **com treballare
 | **Crea** | 30' | Proposa el programa **`emocions_botons`**: els botons A/B canvien la cara del display. Per a qui acaba aviat, l'ampliació `dau_sacseig`. | Escriuen/proven; comparen solucions. |
 | **Debat + tancament** | 20' | Mini-debat **ètica de l'automatització** (ODS); presenta la **fitxa-pòster** ([`SA1_poster_robot_plantilla.md`](SA1_poster_robot_plantilla.md)). | Reflexió escrita al quadern; trien el robot del pòster. |
 
-> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: **l'ampliació `dau_sacseig` de la fase «Crea»** (queda com a feina per als reptes ⭐).
+> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: **els reptes ⭐⭐/⭐⭐⭐ de `Reptes_SA1.md`** (inclosa l'ampliació `dau_sacseig`), que queden com a feina opcional; el repte **⭐ (nucli obligatori)** s'ha de mantenir, encara que calgui acabar-lo fora de sessió.
+
+> 🎯 **Repte ⭐ (nucli obligatori, mateix temps de pràctica ja previst):** després de la fase «Crea» (`emocions_botons`), tothom fa el repte **⭐ · Targeta de benvinguda digital** de [`Reptes_SA1.md`](../../Reptes/Reptes_SA1.md) — parteix de `hola_mon.py`, mostra el nom (`scroll`) i una imatge que el representi (`show`). Ensenya'l al docent perquè el validi. Qui acaba aviat pot continuar amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional, `dau_sacseig` inclòs).
 
 > 🎯 **Mini-check individual (10', a l'inici d'aquesta sessió; no qualifica).** Abans de començar el bloc PRIMM, passa el mini-check de la SA1: banc complet a [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md#sa1--mini-check-inici-de-la-sessió-3). Llegeix un programa curt (`display.scroll`/`display.show`/`sleep`) sense executar-lo i explica-hi línia a línia. Serveix de radar formatiu, no de nota.
 
@@ -128,6 +131,7 @@ La SA1 no només respon *"què és un robot?"*: també presenta **com treballare
 | Mini-check (S3) | Lectura bàsica de codi MicroPython | CA1.2 | — | **No** (radar formatiu) |
 | Fitxa d'alumnat (Act. 1-3) | Comprensió E-P-S, placa, codi | CA5.3 | R4 | Formativa |
 | Fitxa-pòster | Anàlisi d'un sistema + dilema ètic (ODS) | CA5.3 | **R4** | Sí |
+| Repte ⭐ (Reptes_SA1.md) | Aplicació de `display`/`Image`/`sleep` en un producte propi | CA1.2 | **R1** | Sí |
 | Quadern tècnic | Documentació i reflexió del procés | CA5.3 | **R4** | Sí |
 | Observació d'aula | Autonomia, seguretat, responsabilitat | CA5.3 | **R5** | Sí |
 
@@ -162,7 +166,7 @@ A la SA1 hem fet aparèixer **text i imatges** al display (una sortida senzilla)
 | Necessitat | Mesura |
 |---|---|
 | **Bastida (qui ho necessita)** | Apartats guiats de la fitxa i de la plantilla del pòster; taula E-P-S amb un exemple ja resolt de model; l'esquelet amb `# TODO` de la secció «Si t'encalles» de la [pàgina de la pràctica d'`emocions_botons`](codi/emocions_botons/EXPLICACIO.md). |
-| **+ Ampliació (qui va sobrat)** | Programa `dau_sacseig.py` (acceleròmetre + nombres aleatoris); investigar un robot real amb IA o autonomia avançada i preparar una defensa breu. |
+| **+ Ampliació (qui va sobrat)** | Reptes **⭐⭐/⭐⭐⭐** de `Reptes_SA1.md` (per exemple, `dau_sacseig.py`, acceleròmetre + nombres aleatoris); investigar un robot real amb IA o autonomia avançada i preparar una defensa breu. |
 | **Diversitat lingüística/lectora** | Glossari mínim a la pissarra (sensor, actuador, procés, embegut; vegeu [`00_Glossari_tecnic.md`](../00_General/00_Glossari_tecnic.md)); diagrames en lloc de text dens. |
 | **Sense maquinari per a tothom** | Tot és reproduïble al **simulador de python.microbit.org**; es pot treballar per torns amb la placa física mentre la resta prova al simulador. |
 

@@ -30,6 +30,7 @@
 - [ ] PRIMM amb `control_per_botons.py` (predicció abans d'executar)
 - [ ] Acompanyar la programació individual de la seqüència pròpia
 - [ ] **Mini-defensa breu (R4·DO)** de cada alumne/a: seqüència + una decisió justificada
+- [ ] **Repte ⭐** de `Reptes_SA4.md` (nucli obligatori, diferent de «control per botons»): dins la S3 o com a deures abans de la S4
 - ⚠️ *Mantra:* el botó B **sempre** atura, es processi on es processi (anticipa l'STOP de la SA6)
 
 **Sessió 4 — Muntatge del vehicle T2 (fabricació)**
@@ -40,6 +41,7 @@
 
 ## 📊 3. Avaluació i evidències (a recollir)
 - [ ] Repte **«control per botons»** (S3) → **R1** + **R2** (compta, Projectes 45 %)
+- [ ] **Repte ⭐** (`Reptes_SA4.md`) fet i validat → **R1** (compta, Projectes 45 %)
 - [ ] **Mini-defensa** (S3, R4·DO) → **R4** (fila «Defensa oral»)
 - [ ] **Muntatge del vehicle** (S4) → **R2** (Projectes 45 %)
 - [ ] **Quadern tècnic** → **R4** (Quadern tècnic i pràctiques 25 %)
@@ -49,5 +51,5 @@
 
 ## 🪜 4. Atenció a la diversitat (previst per aquesta SA)
 - [ ] **Bastida:** plantilla de funció de moviment amb nom i paràmetres ja definits (cos buit) · esquema de connexió del motoreductor ja fet
-- [ ] **+ Ampliació:** velocitat variable i acceleració progressiva · seqüència coreografiada (vegeu `Reptes_SA4.md`)
+- [ ] **+ Ampliació:** velocitat variable i acceleració progressiva · seqüència coreografiada · reptes **⭐⭐/⭐⭐⭐** opcionals (vegeu `Reptes_SA4.md`) — el ⭐ ja no hi és: és nucli obligatori (§2, Sessió 3)
 - [ ] **Sense maquinari per a tothom:** simulador limitat (ni servo ni motoreductors); torns amb la placa física o substitució per `display.scroll(...)` per validar la lògica

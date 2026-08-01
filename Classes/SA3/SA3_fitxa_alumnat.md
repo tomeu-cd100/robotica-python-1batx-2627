@@ -21,6 +21,7 @@
 | Què lliuro | Rúbrica | On compta |
 |---|---|---|
 | Repte **«mascota reactiva»** (producte, S3 — tanca T1) | **R1**, **R2**, **R3** | Projectes (45 %) |
+| Repte **⭐** de [Reptes_SA3.md](../../Reptes/Reptes_SA3.md) (nucli obligatori, en acabar la mascota) | **R1** | Projectes (45 %) |
 | Mini-defensa breu (S3, R4·DO) | **R4** | Projectes (45 %) |
 | Quadern tècnic | **R4** | Quadern tècnic i pràctiques (25 %) |
 | Treball a l'aula (seguretat, autonomia) | **R5** | Actitud (10 %) |
@@ -57,6 +58,10 @@ Cablega la mascota amb el cablatge **exacte** del [dossier del Projecte T1](../0
 
 **Mini-defensa (breu, davant el docent):** explica **quines reaccions** té la teva mascota i **una decisió** que hagis pres (per exemple, per què aquest llindar o aquest ordre de prioritat).
 
+### 4 · Repte ⭐ «Llum automàtica d'estudi» (Sessió 3, en acabar la mascota — NUCLI OBLIGATORI)
+
+En acabar i tancar la mascota reactiva, fes el **repte ⭐** de [Reptes_SA3.md](../../Reptes/Reptes_SA3.md): parteix de `nivell_llum.py` (Activitat 2) i afegeix un LED extern que s'encengui quan la llum estigui per sota del teu llindar de foscor. Si no t'hi arribes dins la Sessió 3, acaba'l com a **deures** abans de la Sessió 4. **Ensenya'l al docent perquè el validi.**
+
 ## Producte · Repte «mascota reactiva» (tanca el Projecte T1)
 
 Es tanca i s'avalua a la **Sessió 3** amb les rúbriques **R1** (codi), **R2** (muntatge) i **R3** (compliment del repte). La mini-defensa hi suma **R4**.
@@ -87,4 +92,4 @@ La Sessió 4 és **sencera** la prova pràctica individual del 1r trimestre. Enu
 
 <!-- /web:only-github -->
 
-> 📌 **Vols més?** Ampliació, [reptes ⭐](../../Reptes/Reptes_SA3.md), pensament computacional, exit ticket i ODS → **[SA3_fitxa_ampliada.md](SA3_fitxa_ampliada.md)**
+> 📌 **Vols més?** Ampliació, [reptes ⭐⭐/⭐⭐⭐](../../Reptes/Reptes_SA3.md), pensament computacional, exit ticket i ODS → **[SA3_fitxa_ampliada.md](SA3_fitxa_ampliada.md)**

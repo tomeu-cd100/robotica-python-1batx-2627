@@ -29,6 +29,7 @@
 | [`SA8_fitxa_alumnat.md`](SA8_fitxa_alumnat.md) | Totes les sessions (Activitats 1-3 + producte + quadern). |
 | [`SA8_esquemes_connexions.md`](SA8_esquemes_connexions.md) | Sessions 1-3 (pins heretats + DHT11 + IMU MPU6050 + ràdio). |
 | `codi/` | `comportaments`, `telemetria_radio` i `estacio_base` (producte). |
+| [`Reptes_SA8.md`](../../Reptes/Reptes_SA8.md) | Sessió 3 (fase «Repte», mateix temps de pràctica): repte **⭐** ara **nucli obligatori**; reptes ⭐⭐/⭐⭐⭐ continuen sent ampliació opcional. |
 
 > Cada programa de `codi/` té la seva **pàgina de pràctica** (l'`EXPLICACIO.md` de la seva carpeta). El «Guió de modelatge» oral de sota continua sent teu.
 
@@ -99,6 +100,8 @@ Si el calendari real obliga a comprimir la SA8 de 6 h a 4 h, **fusiona la S1 i l
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: la pràctica pràctica de Teachable Machine (deixa-la com a **demostració del docent** en lloc que tothom entreni el seu propi classificador; la reflexió escrita es manté igual).
 
+> ⭐ **Repte nucli obligatori.** Un cop tancat el producte (fase «Repte», 55'), amb el mateix temps de pràctica que abans es dedicava opcionalment als reptes, tothom ha de fer el **repte ⭐ · Estació meteorològica escolar amb alertes** de [`Reptes_SA8.md`](../../Reptes/Reptes_SA8.md) i ensenyar-lo al docent perquè el validi (**R1**). No s'hi afegeix cap hora nova. Els reptes ⭐⭐/⭐⭐⭐ continuen sent ampliació opcional per a qui vagi sobrat.
+
 > 🔌 **Pla B sense internet a l'aula.** La IA com a **objecte d'estudi** (regles vs aprenentatge, biaix, ètica de dades) es pot treballar **sense connexió**, amb regles ja programades a la micro:bit (`mpu_orientacio()`) i un debat oral. La pràctica de classificació amb Teachable Machine necessita navegador: fer-la a casa, a l'aula d'informàtica, o com a **demostració del docent** (vídeo/captures) si no hi ha ordinadors disponibles a l'aula de robòtica.
 
 **Punts clau (Ètica de dades i IA):** recollir dades — també la **telemetria del propi rover** — implica **privadesa, consentiment i finalitat** (marc del document [`00_IA_a_la_materia.md`](../00_General/00_IA_a_la_materia.md)). Un model d'IA és el resultat d'**entrenar** amb dades: la qualitat de la decisió depèn de les dades (*garbage in, garbage out*), i si les dades d'entrenament són parcials, les decisions ho seran (**biaix**). La IA **no "entén"**: troba patrons estadístics i pot equivocar-se amb seguretat.
@@ -119,6 +122,7 @@ Si el calendari real obliga a comprimir la SA8 de 6 h a 4 h, **fusiona la S1 i l
 | Mini-check (S2) | Enviar un valor de sensor per ràdio amb protocol propi | CA1.1 | — | **No** (radar formatiu) |
 | Fitxa d'alumnat (Act. 1-3) | Sensors avançats, protocol de telemetria, IA aplicada al control | CA1.1, CA3.1, CA4.2 | R1 | Formativa |
 | Producte «sistema de telemetria del rover» (S3) | Mínim dos sensors del Kit 3, ràdio, registre amb `estacio_base.py` propi | CA1.1, CA3.1, CA4.2 | **R1**, **R3** (Integració) | Sí |
+| Repte **⭐** (`Reptes_SA8.md`, S3, nucli obligatori) | Llindar de temperatura amb alerta afegit al protocol de telemetria | CA1.1 | **R1** | Sí |
 | Mini-defensa (S3, R4·DO) | Claredat + justificació d'una decisió de disseny | CA3.1 | **R4** (fila «Defensa oral») | Sí |
 | Quadern tècnic | Format de missatge, llindars de sensors, reflexió d'IA i ètica de dades | CA4.2 | **R4** | Sí |
 | Observació d'aula | Autonomia i responsabilitat en manipular sensors i dades | — | **R5** | Sí |
@@ -154,7 +158,7 @@ A la SA8, el rover autònom de la SA7 aprèn a **explicar-se**: envia el que "se
 | Necessitat | Mesura |
 |---|---|
 | **Bastida (qui ho necessita)** | Format de missatge de telemetria model ja donat (p. ex. `"TEL:T:23.5"`); esquelet de la funció `envia_lectura()`/`analitza()` ja escrit (vegeu SA8_fitxa_alumnat.md). |
-| **+ Ampliació (qui va sobrat)** | Enviar més d'un sensor combinat (BMP280/CCS811, protocol propi més ric); comparar dades classificades manualment vs amb Teachable Machine; vegeu [Reptes de la SA8](../../Reptes/Reptes_SA8.md). |
+| **+ Ampliació (qui va sobrat)** | Enviar més d'un sensor combinat (BMP280/CCS811, protocol propi més ric); comparar dades classificades manualment vs amb Teachable Machine; vegeu els reptes **⭐⭐/⭐⭐⭐** de [Reptes_SA8.md](../../Reptes/Reptes_SA8.md) (el ⭐ ja és nucli obligatori, no ampliació). |
 | **Diversitat lingüística/lectora** | Diagrama del protocol de telemetria amb icones (emissor → ràdio → receptor) en lloc de només text; glossari a [`00_Glossari_tecnic.md`](../00_General/00_Glossari_tecnic.md). |
 | **Sense rover/Kit 3 a punt** | Es treballa la lògica del protocol al **simulador** (ràdio i `log` sí es simulen), amb valors de sensor simulats en variables en lloc de lectures reals; vegeu §Simulació de [`SA8_esquemes_connexions.md`](SA8_esquemes_connexions.md). |
 

@@ -1,12 +1,14 @@
 # Full de seguiment formatiu de grup (una pàgina per trimestre)
 
-> **Per al docent.** El [`Full_qualificacio_competencies.md`](Full_qualificacio_competencies.md) és per **qualificar** (un full per alumne/a); aquest és per **decidir la sessió següent**: tot el grup d'un cop d'ull, amb els senyals formatius que ja es generen a l'aula. Res del que s'hi anota qualifica.
+> **Per al docent.** El [`Full_qualificacio_competencies.md`](Full_qualificacio_competencies.md) és per **qualificar** (un full per alumne/a); aquest és per **decidir la sessió següent**: tot el grup d'un cop d'ull, amb els senyals formatius que ja es generen a l'aula. Cap senyal d'aquesta graella qualifica **directament**; l'única excepció indirecta és que la columna «Mini-check» és la font per triar, en tancar el trimestre, el millor dels tres (5 % — vegeu més avall).
 
 **Grup:** ________  **Trimestre:** ____
 
 ## 1. Graella (files = alumnat · columnes = senyals)
 
-Codis: mini-checks 🟢🟡🔴 · diana d'autoavaluació (nivell que s'ha posat l'alumne: Insuficient/Suficient-Bé/Notable/Excel·lent (0-10)) · rescat = nivell més alt de targeta usat a la SA (🟢/🟡/🔴 o — si cap) · R5 = incidències o fortaleses d'actitud/autonomia (breu).
+Codis: mini-checks 🟢🟡🔴 **+ tipus d'error si no és 🟢** (enganxat al semàfor, p. ex. `🟡-C`): **S** = sintaxi (sap què fer, no ho escriu bé) · **C** = concepte (no té clar quina estructura cal) · **D** = descuit (correcte en l'essencial, falta un detall) — detall a `Classes/00_General/00_Mini_checks_individuals.md`. · diana d'autoavaluació (nivell que s'ha posat l'alumne: Insuficient/Suficient-Bé/Notable/Excel·lent (0-10)) · rescat = nivell més alt de targeta usat a la SA (🟢/🟡/🔴 o — si cap) · R5 = incidències o fortaleses d'actitud/autonomia (breu).
+
+> 🎯 El **millor** mini-check dels 3 del trimestre acaba qualificant un 5 % (dimensió «Proves pràctiques», `Programació didàctica/06_Avaluacio_criteris_qualificacio.md` §6.3): marca'l amb un ✓ en aquesta graella quan tanquis el trimestre, però la graella en si **segueix sense ser la nota** — només n'és la base de selecció.
 
 | Alumne/a | Mini-check SA__ | Rescat SA__ | Diana SA__ | Mini-check SA__ | Rescat SA__ | Diana SA__ | R5 (observacions) |
 |---|---|---|---|---|---|---|---|

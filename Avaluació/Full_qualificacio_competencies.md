@@ -44,7 +44,7 @@ Conversió única per a totes les rúbriques (vegeu `Programació didàctica/07_
 |---|---|---|---|
 | **Projectes i productes** | **45 %** | Productes individuals de cada SA + defenses orals | R1, R2, R3 |
 | **Quadern tècnic i pràctiques** | **25 %** | *Logbook* individual, pràctiques guiades i reptes | R4 (quadern), R1 |
-| **Proves pràctiques** | **20 %** | Reptes individuals curts (proves T1/T2/T3) | R1, R3 |
+| **Proves pràctiques** | **20 %** | Prova trimestral T1/T2/T3 (**15 %**) + millor mini-check individual del trimestre (**5 %**) | R1, R3 |
 | **Actitud, autonomia i responsabilitat** | **10 %** | Observació, autoavaluació | R5 |
 
 > **Recomanació de l'enfocament:** dins de cada dimensió, **agrega per competència** (mitjana dels CA implicats), no per activitat solta. Així la nota reflecteix el grau d'assoliment competencial, no el nombre de tasques lliurades.
@@ -65,6 +65,7 @@ Anota la **nota (0-10)** de cada evidència. Les files canvien segons el trimest
 | | | | |
 | | | | |
 | | | | |
+| Millor mini-check del trimestre (`00_Mini_checks_individuals.md`) | CA1.1 | — (escala semàfor→nota, `06_Avaluacio_criteris_qualificacio.md` §6.3) | |
 
 ### 4.2. Càlcul per dimensió
 
@@ -95,6 +96,7 @@ Anota la **nota (0-10)** de cada evidència. Les files canvien segons el trimest
 ## 6. Notes d'ús
 
 - **Avaluació contínua:** un CA treballat en diverses SA es pot **reavaluar**; preval l'evidència més recent i consolidada (la millora compta).
+- **Millor mini-check del trimestre (5 %):** els 3 mini-checks del trimestre (un per SA) es guarden amb semàfor i tipus d'error (sintaxi/concepte/descuit — `00_Mini_checks_individuals.md`); en tancar el trimestre s'hi posa nota **el millor dels tres** (no la mitjana) amb l'escala 🟢=9-10/🟡=6-8/🟠=4-5/🔴=1-3. Els altres dos segueixen sense qualificar individualment.
 - **Recuperació:** quan un CA queda **suspès (per sota de 5)**, l'activitat de recuperació és **millorar el producte/codi** (no un examen memorístic), o **repetir la prova** en versió equivalent si la dimensió suspesa és «Proves pràctiques» (vegeu `06_Avaluacio_criteris_qualificacio.md` §6.4). Actualitza el nivell del CA, no afegeixis una nota a part.
 - **R5 (actitud/autoregulació):** es valora **al llarg del trimestre** (acumulant observació de diverses sessions), no sessió a sessió — el treball és individual tot el curs (`04_Metodologia.md` §4.3).
 - **Transparència:** comparteix aquest full i les rúbriques amb l'alumnat **a l'inici** del curs i de cada SA.

@@ -24,6 +24,7 @@
 | [`SA4_esquemes_connexions.md`](SA4_esquemes_connexions.md) | Sessions 1-4 (servo, motoreductors, pins definitius de tot el curs). |
 | `codi/` | `funcions_moviments`, `coreografia`, `velocitat_pwm` i el repte-producte `control_per_botons`. |
 | [`00_Projecte_T2_Vehicle.md`](../00_General/00_Projecte_T2_Vehicle.md) | Sessió 4 (muntatge vinculant del xassís). |
+| [`Reptes/Reptes_SA4.md`](../../Reptes/Reptes_SA4.md) | Sessió 3, en acabar «control per botons» (repte **⭐ nucli obligatori**, diferent del «control per botons»; ⭐⭐/⭐⭐⭐ opcionals). |
 
 > Cada programa de `codi/` té la seva **pàgina de pràctica** (per què es fa + codi explicat per blocs, l'`EXPLICACIO.md` de la seva carpeta). El «Guió de modelatge» oral de sota continua sent teu.
 
@@ -84,6 +85,8 @@
 ## SESSIÓ 3 (2 h) — Repte «control per botons» (producte de la SA)
 
 > 🎯 **Producte de la SA.** Aquest repte **fa de producte** de la SA4: s'avalua amb **R1** (codi, criteri "Estructura"/modularitat) i **R2** (bases del muntatge). Aquesta S3 **allibera la S4** per a la fabricació (primera retallada del pla de contingència si cal): si el repte no es tanca del tot, es completa com a deures.
+>
+> 🌟 **Nucli obligatori addicional (diferent de «control per botons»).** En acabar i tancar «control per botons», tothom fa el **repte ⭐** de [`Reptes_SA4.md`](../../Reptes/Reptes_SA4.md) («Salutació programable per a un aparador», a partir de `funcions_moviments.py`): reaprofita el mateix marge/temps que abans es destinava opcionalment als reptes (no s'afegeixen hores). Si algú no l'acaba dins la sessió, el tanca com a **deures** abans de la S4. Es valida ensenyant-lo al docent → compta amb **R1**. Els reptes ⭐⭐/⭐⭐⭐ continuen sent ampliació opcional per a qui va sobrat.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
@@ -118,7 +121,7 @@
 
 **Punts clau:** el muntatge físic **no** és una activitat nova de programació: és **mecànic**, i valida amb maquinari real tot el que ja es va provar per separat a la S2-S3 (els pins de motor **no canvien**). El vehicle es porta muntat a la SA5 per treballar-hi el control remot per ràdio.
 
-**Producte de la SA:** repte «control per botons» (avançar/retrocedir/girar/aturar amb funcions pròpies, activat per botons), tancat i avaluat a la **S3**. Muntatge físic del **vehicle** a la **S4** (fabricació, avaluada amb la rúbrica de muntatge). Mini-defensa breu (1-2') del repte de la S3 (R4·DO).
+**Producte de la SA:** repte «control per botons» (avançar/retrocedir/girar/aturar amb funcions pròpies, activat per botons), tancat i avaluat a la **S3**. El repte **⭐** de `Reptes_SA4.md` (nucli obligatori) es fa tot seguit, dins la S3 o com a deures abans de la S4. Muntatge físic del **vehicle** a la **S4** (fabricació, avaluada amb la rúbrica de muntatge). Mini-defensa breu (1-2') del repte de la S3 (R4·DO).
 
 ### Mapa d'avaluació (traçabilitat)
 
@@ -127,6 +130,7 @@
 | Mini-check (S2) | Funció amb paràmetre sense apunts | CA1.1 | — | **No** (radar formatiu) |
 | Fitxa d'alumnat (Act. 1-2) | Funcions amb paràmetres i valor de retorn; servo i motoreductor | CA1.1, CA2.1 | R1 | Formativa |
 | Repte «control per botons» (S3, producte) | Modularitat: moviment del vehicle encapsulat en funcions pròpies | CA1.1, CA2.1 | **R1**, **R2** | Sí |
+| Repte **⭐** `Reptes_SA4.md` (S3, en acabar «control per botons» — nucli obligatori) | Funció amb dos paràmetres (`salutacio(estil, vegades)`) sobre `funcions_moviments.py` | CA1.1 | **R1** | Sí |
 | Mini-defensa (S3, R4·DO) | Claredat + justificació d'una decisió de disseny de la seqüència | CA5.2 | **R4** (fila «Defensa oral») | Sí |
 | Muntatge del vehicle (S4) | Fabricació física correcta i segura | CA2.1 | **R2** (muntatge) | Sí |
 | Quadern tècnic | Documentació, paràmetres comentats | CA5.2 | **R4** | Sí |
@@ -161,7 +165,7 @@ A la SA4 hem après a **moure't** amb funcions pròpies (servo, motoreductors) i
 | Necessitat | Mesura |
 |---|---|
 | **Bastida (qui ho necessita)** | Plantilla de funció de moviment amb el nom i els paràmetres ja definits (`def avancar(velocitat):` amb el cos buit); esquema de connexió del motoreductor ja fet. |
-| **+ Ampliació (qui va sobrat)** | Funció de moviment amb velocitat variable i acceleració progressiva; seqüència coreografiada de moviments (vegeu [Reptes de la SA4](../../Reptes/Reptes_SA4.md)). |
+| **+ Ampliació (qui va sobrat)** | Funció de moviment amb velocitat variable i acceleració progressiva; seqüència coreografiada de moviments; reptes **⭐⭐/⭐⭐⭐** (opcionals) de [Reptes de la SA4](../../Reptes/Reptes_SA4.md) — el repte ⭐ ja **no** és aquí: és nucli obligatori per a tothom (vegeu Sessió 3). |
 | **Diversitat lingüística/lectora** | Taula de pins amb icones de component; glossari a [`00_Glossari_tecnic.md`](../00_General/00_Glossari_tecnic.md). |
 | **Sense maquinari per a tothom** | El simulador de python.microbit.org **no** reprodueix ni el servo ni els motoreductors: qui no tingui placa treballa per torns o substitueix temporalment les crides de moviment per `display.scroll(...)` per validar la **lògica**. |
 

@@ -13,6 +13,7 @@
 - [ ] Muntar i programar el **repte «semàfor o llum d'ambient»** (Act. 3) → *compta amb R1 i R2*
 - [ ] Fer la **mini-defensa oral** (1', una decisió justificada) → *compta amb R4*
 - [ ] Muntar la **mascota** físicament (Act. 4, Sessió 4) → *compta amb R2*
+- [ ] Fer el **repte ⭐** de `Reptes/Reptes_SA2.md` (nucli obligatori) i ensenyar-lo al docent → *compta amb R1*
 - [ ] Tenir l'entrada del **quadern tècnic** de la SA2 (què he après · el repte · un error · mascota)
 
 ## 🚦 Com vaig? (pinta el teu nivell)

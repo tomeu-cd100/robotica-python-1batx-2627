@@ -48,6 +48,7 @@
 ## 📊 3. Avaluació i evidències (a recollir)
 - [ ] Checklist de **muntatge** (Sessió 0) → **R2** (formativa, no compta a les hores de SA7)
 - [ ] **Comportament autònom del rover** (S4) → **R1**, **R3** (compta, Projectes 45 %)
+- [ ] **Repte ⭐** (`Reptes_SA7.md`) fet i validat → **R1** (compta, Projectes 45 %)
 - [ ] **Mini-defensa** (S4, R4·DO) → **R4** (fila «Defensa oral»)
 - [ ] **Quadern tècnic** → **R4** (Quadern tècnic i pràctiques 25 %)
 - [ ] **Observació d'aula** (autonomia, seguretat amb el rover) → **R5** (Actitud 10 %)
@@ -56,5 +57,5 @@
 
 ## 🪜 4. Atenció a la diversitat (previst per aquesta SA)
 - [ ] **Bastida:** llindars de partida indicats (`LLINDAR_LINIA = 500`, `LLINDAR_OBSTACLE_CM = 15`) per calibrar-los, no per trobar-los de zero · esquelet de `mesura_distancia()` ja escrit (vegeu l'esquelet de [`00_Projecte_T3_Rover.md`](../00_General/00_Projecte_T3_Rover.md))
-- [ ] **+ Ampliació:** combinar línia I obstacles amb prioritats · control proporcional bàsic (vegeu `Reptes_SA7.md`)
+- [ ] **+ Ampliació:** combinar línia I obstacles amb prioritats · control proporcional bàsic (vegeu els reptes **⭐⭐/⭐⭐⭐** de `Reptes_SA7.md`; el ⭐ ja és nucli obligatori, no ampliació)
 - [ ] **Sense rover a punt:** lògica al simulador (sense cap component real) o codi per parts amb el rover **alçat** sobre un suport, rodes lliures

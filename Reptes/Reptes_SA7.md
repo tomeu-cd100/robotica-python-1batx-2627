@@ -1,6 +1,6 @@
 # Reptes SA7 · Robòtica mòbil: el rover
 
-> 🧑‍🎓 **Quan toca fer-ne un?** És l'**ampliació ⭐** de la SA: comença'l quan tinguis el **nucli al dia** (el comportament autònom de la S4, tancat). Ensenya'l al docent perquè el validi.
+> 🧑‍🎓 **Quan toca fer-ne un?** El repte **⭐ és NUCLI OBLIGATORI — forma part del producte de la SA**: comença'l quan tinguis el **nucli al dia** (el comportament autònom de la S4, tancat). Els reptes **⭐⭐/⭐⭐⭐ resten opcionals** (ampliació), per a qui vagi sobrat de temps. Ensenya el ⭐ al docent perquè el validi.
 
 **Fes els reptes en ordre de dificultat: comença per ⭐, i si arribes a ⭐⭐⭐ hauràs passat pels tres.** Tots parteixen dels programes de `Classes/SA7/codi/` i fan servir el concepte de cinemàtica diferencial, llindar calibrat i/o mesura de distància per temps de vol. Es fan **sempre amb maquinari real** (el rover): el simulador de python.microbit.org **NO** simula cap component del rover (motors, HC-SR04, seguidor de línia), vegeu [`SA7_esquemes_connexions.md`](../Classes/SA7/SA7_esquemes_connexions.md) §Simulació.
 
@@ -12,7 +12,7 @@
 
 ---
 
-## ⭐ Repte 1 · Carret de magatzem amb velocitat variable
+## ⭐ Repte 1 · Carret de magatzem amb velocitat variable (NUCLI OBLIGATORI)
 
 **Context.** Un petit magatzem escolar (el material de robòtica del centre) vol un carret que segueixi un carril pintat entre les prestatgeries, més ràpid als trams rectes i més lent a les corbes, perquè no caigui res del carret.
 
@@ -37,7 +37,7 @@
 
 ---
 
-## ⭐⭐ Repte 2 · Vehicle d'inspecció amb marge de seguretat variable
+## ⭐⭐ Repte 2 · Vehicle d'inspecció amb marge de seguretat variable (ampliació opcional)
 
 **Context.** Una empresa de manteniment d'instal·lacions vol un petit robot d'inspecció que no s'aturi de cop davant de qualsevol obstacle, sinó que vagi frenant progressivament a mesura que s'hi acosta, per no fer moviments bruscos amb l'equip de mesura que porta a sobre.
 
@@ -62,7 +62,7 @@
 
 ---
 
-## ⭐⭐⭐ Repte 3 · Rover de repartiment amb missió completa i registre de bord
+## ⭐⭐⭐ Repte 3 · Rover de repartiment amb missió completa i registre de bord (ampliació opcional)
 
 **Context.** Una empresa de repartiment intern d'un campus vol un rover que faci una ruta completa (sortir, seguir un carril fins a una zona de lliurament marcada amb un obstacle, aturar-se i tornar), i que quedi un registre de cada viatge per revisar-ne l'eficiència.
 

@@ -23,6 +23,7 @@
 | Repte **«semàfor o llum d'ambient»** (producte, S3) | **R1**, **R2** | Projectes (45 %) |
 | Mini-defensa oral (S3, R4·DO) | **R4** | Projectes (45 %) |
 | Muntatge de la **mascota** (S4) | **R2** | Projectes (45 %) |
+| Repte **⭐** de [Reptes_SA2.md](../../Reptes/Reptes_SA2.md) (nucli obligatori) | **R1** | Projectes (45 %) |
 | Quadern tècnic | **R4** | Quadern tècnic i pràctiques (25 %) |
 | Treball a l'aula (seguretat, autonomia) | **R5** | Actitud (10 %) |
 | Mini-check (S2) | — | **No qualifica** (radar formatiu) |
@@ -67,6 +68,10 @@ Munta el semàfor complet (LED verd/ambre/vermell + brunzidor + relé, [esquema]
 
 Segueix el dossier [`00_Projecte_T1_Mascota.md`](../00_General/00_Projecte_T1_Mascota.md): munta la carcassa, cablega el LED (P1) i el brunzidor amb el codi que ja tens fet (`led_parpelleig.py`, `musica_altaveu.py`), i deixa el servo muntat (es programarà a la SA4).
 
+### 5 · Repte ⭐ (nucli obligatori, un cop tancats el semàfor i la mascota)
+
+Fes el **repte ⭐ · Llum de seguretat per a motxilla** de [`Reptes_SA2.md`](../../Reptes/Reptes_SA2.md), en el mateix temps de pràctica que ja tenies previst: amplia `led_parpelleig.py` (el mateix LED de P1 que ja tens muntat a la mascota) perquè, mentre el **botó A** està premut, parpellegi **més ràpid** ("mode alerta"); sense prémer'l, parpelleja al ritme normal. És **nucli obligatori** — forma part del producte d'aquesta SA, no és una ampliació. Quan l'acabis, **ensenya'l al docent** perquè el validi.
+
 ## Producte · Repte «semàfor o llum d'ambient»
 
 Es tanca i s'avalua a la **Sessió 3** amb les rúbriques **R1** (codi) i **R2** (muntatge). La mini-defensa hi suma **R4**.
@@ -93,4 +98,4 @@ Es tanca i s'avalua a la **Sessió 3** amb les rúbriques **R1** (codi) i **R2**
 
 <!-- /web:only-github -->
 
-> 📌 **Vols més?** Ampliació, [reptes ⭐](../../Reptes/Reptes_SA2.md), pensament computacional, exit ticket i ODS → **[SA2_fitxa_ampliada.md](SA2_fitxa_ampliada.md)**
+> 📌 **Vols més?** Ampliació, [reptes ⭐⭐/⭐⭐⭐](../../Reptes/Reptes_SA2.md), pensament computacional, exit ticket i ODS → **[SA2_fitxa_ampliada.md](SA2_fitxa_ampliada.md)**

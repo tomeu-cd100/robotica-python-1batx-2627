@@ -1,6 +1,6 @@
 # Reptes SA6 · Control: el robot decideix
 
-> 🧑‍🎓 **Quan toca fer-ne un?** És l'**ampliació ⭐** de la SA: comença'l quan tinguis el **nucli al dia** (el repte «vehicle amb aturada d'emergència» de la S3, tancat). Ensenya'l al docent perquè el validi.
+> 🧑‍🎓 **Quan toca fer-ne un?** El repte **⭐ és NUCLI OBLIGATORI — forma part del producte de la SA**: comença'l quan tinguis el **nucli al dia** (el repte «vehicle amb aturada d'emergència» de la S3, tancat). Els reptes **⭐⭐/⭐⭐⭐ resten opcionals** (ampliació), per a qui vagi sobrat de temps. Ensenya el ⭐ al docent perquè el validi.
 
 **Fes els reptes en ordre de dificultat: comença per ⭐, i si arribes a ⭐⭐⭐ hauràs passat pels tres.** Tots parteixen dels programes de `Classes/SA6/codi/` i fan servir el concepte de màquina d'estats i/o histèresi. Es fan amb **maquinari real** quan calgui un actuador (relé/LED) o el vehicle: el simulador de python.microbit.org **sí simula** `temperature()`, els botons i el mòdul `log`, però **NO** simula motors ni relé (vegeu [`SA6_esquemes_connexions.md`](../Classes/SA6/SA6_esquemes_connexions.md) §Simulació), útil per revisar la lògica.
 
@@ -12,7 +12,7 @@
 
 ---
 
-## ⭐ Repte 1 · Termòstat de dues zones
+## ⭐ Repte 1 · Termòstat de dues zones (NUCLI OBLIGATORI)
 
 **Context.** Un petit hivernacle escolar té dues zones (semillers i planter) amb necessitats de temperatura diferents. El responsable de l'hort de l'institut vol un sistema que avisi de quina zona necessita escalfor sense que el relé "cliqui" contínuament.
 
@@ -37,7 +37,7 @@
 
 ---
 
-## ⭐⭐ Repte 2 · Semàfor de vianants amb botó prioritari
+## ⭐⭐ Repte 2 · Semàfor de vianants amb botó prioritari (ampliació opcional)
 
 **Context.** Un ajuntament vol millorar un semàfor de vianants perquè, en prémer el botó de sol·licitud de pas, el cicle canviï a vermell per als vehicles **com més aviat millor**, sense esperar tot un cicle sencer si no cal.
 
@@ -62,7 +62,7 @@
 
 ---
 
-## ⭐⭐⭐ Repte 3 · Vehicle amb alerta per temperatura i registre de bord
+## ⭐⭐⭐ Repte 3 · Vehicle amb alerta per temperatura i registre de bord (ampliació opcional)
 
 **Context.** Una empresa de robots de magatzem vol que els seus vehicles teledirigits s'aturin automàticament si detecten una temperatura anòmala (per exemple, prop d'una font de calor), i que quedi un registre de quan ha passat, per revisar-ho després d'una jornada de proves.
 

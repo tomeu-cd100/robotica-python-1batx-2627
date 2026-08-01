@@ -36,6 +36,7 @@
 - ⚠️ *Error:* oblidar `from microbit import *` i no saber interpretar el `NameError`
 
 ## 📊 3. Avaluació i evidències (a recollir)
+- [ ] **Repte ⭐** (`Reptes_SA1.md`) fet i validat → **R1** (compta, Projectes 45 %)
 - [ ] **Fitxa-pòster** d'un robot real → **R4** (compta, Projectes 45 %)
 - [ ] **Quadern tècnic** 1a entrada → **R4** (Quadern tècnic i pràctiques 25 %)
 - [ ] **Observació d'aula** (autonomia, seguretat, responsabilitat) → **R5** (Actitud 10 %)
@@ -44,4 +45,4 @@
 
 ## 🪜 4. Atenció a la diversitat (previst per aquesta SA)
 - [ ] **Bastida:** esquema de la placa de referència · esquelet «Si t'encalles» a la pàgina de la pràctica d'`emocions_botons` · treball amb el simulador si falta placa
-- [ ] **+ Ampliació:** `dau_sacseig` (acceleròmetre + aleatorietat) · investigar un robot amb IA/autonomia avançada i preparar una defensa breu
+- [ ] **+ Ampliació (⭐⭐/⭐⭐⭐):** `dau_sacseig` (acceleròmetre + aleatorietat) · investigar un robot amb IA/autonomia avançada i preparar una defensa breu

@@ -24,6 +24,7 @@
 | [`SA3_esquemes_connexions.md`](SA3_esquemes_connexions.md) | Sessions 1-3 (pins ADC, taula de connexions i pins EXACTES de la mascota). |
 | `codi/` | `nivell_llum`, `termometre`, `alarma_ultrasons` i el repte-producte `mascota_reactiva`. |
 | [`00_Projecte_T1_Mascota.md`](../00_General/00_Projecte_T1_Mascota.md) | Sessió 3 (cablatge vinculant i tancament de la mascota). |
+| [`Reptes/Reptes_SA3.md`](../../Reptes/Reptes_SA3.md) | Sessió 3, en acabar la mascota (repte **⭐ nucli obligatori**; ⭐⭐/⭐⭐⭐ opcionals). |
 | [`../../Avaluació/Prova_practica_T1.md`](../../Avaluació/Prova_practica_T1.md) | Sessió 4 (enunciat de la prova). |
 
 > Cada programa de `codi/` té la seva **pàgina de pràctica** (per què es fa + codi explicat per blocs, l'`EXPLICACIO.md` de la seva carpeta). El «Guió de modelatge» oral de sota continua sent teu.
@@ -85,6 +86,8 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 ## SESSIÓ 3 (2 h) — Repte «mascota reactiva» (producte de la SA — es tanca la mascota T1)
 
 > 🎯 **Producte de la SA.** Aquest repte **fa de producte** de la SA3 i **tanca el projecte T1** (la mascota): s'avalua amb **R1** (codi), **R2** (muntatge) i **R3** (compliment del repte, ≥2 reaccions sensor→resposta). Mini-defensa breu (R4·DO).
+>
+> 🌟 **Nucli obligatori addicional.** En acabar i tancar la mascota, tothom fa el **repte ⭐** de [`Reptes_SA3.md`](../../Reptes/Reptes_SA3.md) («Llum automàtica d'estudi», a partir de `nivell_llum.py`): reaprofita el mateix marge/temps que abans es destinava opcionalment als reptes (no s'afegeixen hores). Si algú no l'acaba dins la sessió, el tanca com a **deures** abans de la S4. Es valida ensenyant-lo al docent → compta amb **R1**. Els reptes ⭐⭐/⭐⭐⭐ continuen sent ampliació opcional per a qui va sobrat.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
@@ -121,7 +124,7 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 
 **Punts clau:** aquesta sessió avalua de manera **individual i tancada** els continguts de tot el trimestre (SA1-SA3): entrades i sortides, condicionals, bucles i el mètode de projecte. Vegeu els criteris i l'enunciat complet a [`Avaluació/Prova_practica_T1.md`](../../Avaluació/Prova_practica_T1.md).
 
-**Producte de la SA:** repte «mascota reactiva» (≥2 reaccions sensor→resposta coherents), tancat i avaluat a la **S3** — **tanca el Projecte T1**. La **S4** és la prova pràctica T1 individual.
+**Producte de la SA:** repte «mascota reactiva» (≥2 reaccions sensor→resposta coherents), tancat i avaluat a la **S3** — **tanca el Projecte T1**. El repte **⭐** de `Reptes_SA3.md` (nucli obligatori) es fa tot seguit, dins la S3 o com a deures abans de la S4. La **S4** és la prova pràctica T1 individual.
 
 ### Mapa d'avaluació (traçabilitat)
 
@@ -130,6 +133,7 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 | Mini-check (S2) | `if/else` amb entrada analògica sense apunts | CA1.1 | — | **No** (radar formatiu) |
 | Fitxa d'alumnat (Act. 1-2) | Entrades digitals i analògiques bàsiques | CA2.1, CA2.2 | R1 | Formativa |
 | Repte «mascota reactiva» (S3, producte) | Integració d'entrades amb condicionals encadenats | CA1.1, CA2.1, CA2.2 | **R1**, **R2**, **R3** | Sí |
+| Repte **⭐** `Reptes_SA3.md` (S3, en acabar la mascota — nucli obligatori) | Llum automàtica amb `read_analog()`/`mapa()` i condicionals | CA1.1 | **R1** | Sí |
 | Mini-defensa (S3, R4·DO) | Claredat + justificació d'una decisió (llindar/prioritat) | CA5.2 | **R4** (fila «Defensa oral») | Sí |
 | Quadern tècnic | Documentació, lectures de sensor i llindars | CA5.2 | **R4** | Sí |
 | Observació d'aula | Autonomia i seguretat amb el maquinari | CA5.3 | **R5** | Sí |
@@ -164,7 +168,7 @@ A la SA3 hem completat el cicle **entrada → decisió → sortida** amb condici
 | Necessitat | Mesura |
 |---|---|
 | **Bastida (qui ho necessita)** | Esquelet `# TODO` a la secció «Si t'encalles» del [dossier de la mascota](../00_General/00_Projecte_T1_Mascota.md#-si-tencalles-lesquelet-del-programa); funció `mapa()` ja donada a la fitxa. |
-| **+ Ampliació (qui va sobrat)** | Calibratge fi de llindars; combinar 3+ sensors a la mascota; sincronitzar l'HC-SR04 amb la mascota malgrat no ser al cablatge oficial (vegeu [Reptes de la SA3](../../Reptes/Reptes_SA3.md)). |
+| **+ Ampliació (qui va sobrat)** | Calibratge fi de llindars; combinar 3+ sensors a la mascota; sincronitzar l'HC-SR04 amb la mascota malgrat no ser al cablatge oficial; reptes **⭐⭐/⭐⭐⭐** (opcionals) de [Reptes de la SA3](../../Reptes/Reptes_SA3.md) — el repte ⭐ ja **no** és aquí: és nucli obligatori per a tothom (vegeu Sessió 3). |
 | **Diversitat lingüística/lectora** | Taula de pins amb icones de component; glossari a [`00_Glossari_tecnic.md`](../00_General/00_Glossari_tecnic.md). |
 | **Sense maquinari per a tothom** | El simulador de python.microbit.org **no** reprodueix cap sensor extern (només llum/temperatura/so interns, acceleròmetre i botons): qui no tingui placa treballa per torns o substitueix temporalment un sensor extern per `button_a.is_pressed()` per validar la **lògica**. |
 
