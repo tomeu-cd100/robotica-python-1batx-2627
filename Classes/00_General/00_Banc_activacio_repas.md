@@ -70,7 +70,7 @@ variables · `while`/`if`/`elif` · `for` amb `range` · condicionals amb sensor
 | S30 | SA9 · S1 | [K17](#k17--s30--return--completar-buits) | return | Completar buits |
 | S31 | SA9 · S2 | — | *(mini-check SA9, la guia no té fase d'Activació aquell dia)* | — |
 | S32 | SA9 · S3 | [K22](#k22--s32--tryexcept--completar-buits) · [K23](#k23--s32--llistes--completar-buits) · [K24](#k24--s32--for-sobre-col·lecció--completar-buits) | try/except · llistes · for sobre col·lecció | Repàs combinat (3 mini-katas), completar buits |
-| S33 | SA9 · S4 | [K25](#k25--s33--ràdio--completar-buits) · [K26](#k26--s33--fsmdiccionari--completar-buits) · [K27](#k27--s33--return--escriure-de-zero) | ràdio · FSM/diccionari · return | Repàs combinat (3 mini-katas), completar buits + escriure de zero |
+| S33 | SA9 · S4 | [K25](#k25--s33--ràdio--completar-buits) · [K26](#k26--s33--fsmdiccionari--completar-buits) · [K27](#k27--s33--return--completar-buits) | ràdio · FSM/diccionari · return | Repàs combinat (3 mini-katas), completar buits |
 | S34 | SA9 · S5 | — | *(prova pràctica T3: repàs lliure)* | — |
 
 ---
@@ -965,12 +965,24 @@ display.show(str(seguent_estat()))
 
 ---
 
-### K27 · S33 — return — Escriure de zero
+### K27 · S33 — return — Completar buits
 
-**Repassa:** 3a aparició d'aquest concepte al banc (K08 Parsons a S16, K17 completar buits a S30): ara, de zero, amb **tres** branques de retorn, com les zones de `termostat_histeresi.py`/`nivell_llum.py`.
+**Repassa:** 3a aparició d'aquest concepte al banc (K08 Parsons a S16, K17 completar buits a S30): repeteix el nivell **completar buits** (mida reduïda a propòsit perquè hi càpiga dins d'un terç d'una fila d'Activació de 10'), ara amb **tres** branques de retorn, com les zones de `termostat_histeresi.py`/`nivell_llum.py`.
 
 **Enunciat per a l'alumnat:**
-> Sense mirar apunts, escriu (4-6 línies) una funció `zona(temp)` que retorni `"FRED"` si `temp < 18`, `"CALOR"` si `temp > 26`, i `"NORMAL"` en la resta de casos. Crida-la amb `22` i mostra el resultat.
+> Completa els `___` perquè la funció retorni `"FRED"` si la temperatura és inferior a 18, `"CALOR"` si és superior a 26, i `"NORMAL"` en la resta de casos.
+> ```python
+> def zona(temp):
+>     if temp ___ 18:
+>         return "FRED"
+>     elif temp ___ 26:
+>         return ___
+>     else:
+>         return "NORMAL"
+>
+>
+> display.scroll(zona(22))
+> ```
 
 **Solució completa:**
 ```python
@@ -986,7 +998,7 @@ def zona(temp):
 display.scroll(zona(22))
 ```
 
-**Correcció ràpida (30''):** cada branca (`if`/`elif`/`else`) té el seu propi `return` amb un text diferent · només **una** branca s'executa per crida · `zona(22)` es crida amb parèntesis; `scroll()` ja accepta text directament (no cal `str()`, ja és una cadena).
+**Correcció ràpida (30''):** `temp < 18` i `temp > 26` són comparacions, no assignacions (`<`/`>`, no `=`) · cada branca (`if`/`elif`/`else`) té el seu propi `return` amb un text diferent · només **una** branca s'executa per crida.
 
 ---
 
