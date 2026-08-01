@@ -13,45 +13,46 @@
   --ff-mono: "Cascadia Code", "JetBrains Mono", "Fira Code", Consolas, "SF Mono", monospace;
 
   --bg: #ffffff;
-  --surface: #f2f8f7;
-  --surface-2: #e8f1f0;
-  --border: #d7e6e5;
-  --border-fort: #b7d0cf;
-  --text: #0e1b1c;
-  --muted: #4f6d6e;
-  --link: var(--accent, #0c6e70);
+  --surface: #f4f7fb;
+  --surface-2: #e9eff7;
+  --border: #d8e2ef;
+  --border-fort: #b9cbe2;
+  --text: #101a26;
+  --muted: #506480;
+  --link: var(--accent, #2b5c8f);
 
   --radi: 14px;
   --radi-s: 9px;
-  --ombra: 0 1px 2px rgba(12, 40, 40, .05), 0 8px 24px rgba(12, 40, 40, .07);
-  --ombra-forta: 0 12px 40px rgba(12, 40, 40, .16);
+  --ombra: 0 1px 2px rgba(20, 35, 60, .05), 0 8px 24px rgba(20, 35, 60, .07);
+  --ombra-forta: 0 12px 40px rgba(20, 35, 60, .16);
   --maxw: 1440px;
 
-  /* accent per defecte — identitat «micro:bit teal + coure» */
-  --accent: #0c6e70;
-  --accent-2: #b85c1a;
-  --accent-soft: #e3f1f0;
+  /* accent per defecte — identitat «blau Python + groc Python»
+     (diferenciada expressament del curs germà, que és teal + coure) */
+  --accent: #2b5c8f;
+  --accent-2: #a06a00;
+  --accent-soft: #e8effa;
 }
 
 html[data-tema="fosc"] {
-  --bg: #0a1516;
-  --surface: #10201f;
-  --surface-2: #0d1c1b;
-  --border: #21332f;
-  --border-fort: #34504b;
-  --text: #e6efee;
-  --muted: #93aeac;
+  --bg: #0b1420;
+  --surface: #101c2c;
+  --surface-2: #0d1826;
+  --border: #22334a;
+  --border-fort: #375072;
+  --text: #e7edf5;
+  --muted: #96abc4;
   --ombra: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .35);
   --ombra-forta: 0 12px 40px rgba(0, 0, 0, .5);
-  --accent: #2dd4bf;
-  --accent-2: #f0a868;
+  --accent: #7fb3ef;
+  --accent-2: #ffd43b;
 }
 
 /* ---------- Accents per apartat ---------- */
-[data-section="inici"]      { --accent: #0c6e70; --accent-2: #b85c1a; --accent-soft: #e3f1f0; }
-[data-section="docent"]     { --accent: #0c6e70; --accent-2: #b85c1a; --accent-soft: #e3f1f0; }
+[data-section="inici"]      { --accent: #2b5c8f; --accent-2: #a06a00; --accent-soft: #e8effa; }
+[data-section="docent"]     { --accent: #2b5c8f; --accent-2: #a06a00; --accent-soft: #e8effa; }
 [data-section="alumnat"]    { --accent: #0891b2; --accent-2: #06b6d4; --accent-soft: #ecfeff; }
-[data-section="programacio"]{ --accent: #0c6e70; --accent-2: #b85c1a; --accent-soft: #e3f1f0; }
+[data-section="programacio"]{ --accent: #2b5c8f; --accent-2: #a06a00; --accent-soft: #e8effa; }
 [data-section="classes"]    { --accent: #0891b2; --accent-2: #06b6d4; --accent-soft: #ecfeff; }
 [data-section="reptes"]     { --accent: #d97706; --accent-2: #f59e0b; --accent-soft: #fffbeb; }
 [data-section="avaluacio"]  { --accent: #e11d48; --accent-2: #f43f5e; --accent-soft: #fff1f2; }
@@ -62,10 +63,10 @@ html[data-tema="fosc"] [data-section] { --accent-soft: rgba(255, 255, 255, .06);
 
 /* Accents en mode fosc: variants clares (sèrie 400) per garantir
    contrast AA (≥ 4.5:1) del text d'accent sobre --bg/--surface */
-html[data-tema="fosc"] [data-section="inici"]       { --accent: #2dd4bf; --accent-2: #f0a868; }
-html[data-tema="fosc"] [data-section="docent"]      { --accent: #2dd4bf; --accent-2: #f0a868; }
+html[data-tema="fosc"] [data-section="inici"]       { --accent: #7fb3ef; --accent-2: #ffd43b; }
+html[data-tema="fosc"] [data-section="docent"]      { --accent: #7fb3ef; --accent-2: #ffd43b; }
 html[data-tema="fosc"] [data-section="alumnat"]     { --accent: #38bdf8; --accent-2: #67e8f9; }
-html[data-tema="fosc"] [data-section="programacio"] { --accent: #2dd4bf; --accent-2: #f0a868; }
+html[data-tema="fosc"] [data-section="programacio"] { --accent: #7fb3ef; --accent-2: #ffd43b; }
 html[data-tema="fosc"] [data-section="classes"]     { --accent: #38bdf8; --accent-2: #67e8f9; }
 html[data-tema="fosc"] [data-section="reptes"]      { --accent: #fbbf24; --accent-2: #fcd34d; }
 html[data-tema="fosc"] [data-section="avaluacio"]   { --accent: #fb7185; --accent-2: #fda4af; }
