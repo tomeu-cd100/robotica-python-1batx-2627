@@ -1,12 +1,12 @@
 # SA4 - Repte 2 (SOLUCIO): aparcament automatic de precisio
 # Nucli + ampliacions 1-3: arrencada progressiva, funcio trajecte() que
 # combina arrencada+avanc+frenada, i dues velocitats segons boto A o A+B.
-# Maquinari: motoreductors M1 (pin8/pin14) i M2 (pin15/pin16), com a
+# Maquinari: motoreductors M1 (pin13/pin14) i M2 (pin15/pin16), com a
 # velocitat_pwm.py. Alimentacio externa (piles), mai per USB.
 
 from microbit import *
 
-M1_ENDAVANT = pin8
+M1_ENDAVANT = pin13
 M1_ENRERE = pin14
 M2_ENDAVANT = pin15
 M2_ENRERE = pin16

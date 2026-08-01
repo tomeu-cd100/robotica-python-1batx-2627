@@ -46,19 +46,23 @@ No hi ha personalització nova ni cua de làser: el xassís i el seu gravat/nom 
 
 ## Cablatge (pins del Micro:shield)
 
+> 🔑 **Font única de pins:** aquesta taula reprodueix la fila «T3 · Rover» del [«Mapa de pins per trimestre»](00_Fil_conductor_construccions.md#1b-mapa-de-pins-per-trimestre-font-unica-vinculant) de `00_Fil_conductor_construccions.md`, que és el document vinculant.
+
 | Component | Pin / canal | Notes |
 |---|---|---|
-| Motoreductor esquerre | M1 | **Ja cablejat a T2; no es toca.** |
-| Motoreductor dret | M2 | **Ja cablejat a T2; no es toca.** |
-| Sensor d'ultrasons HC-SR04, TRIG | P1 | Digital, sortida. *(nou)* |
-| Sensor d'ultrasons HC-SR04, ECHO | P2 | Digital, entrada. *(nou)* |
-| Seguidor de línia KS0050 | P0 (analògic; ADC vàlid: P0/P1/P2/P3/P4/P10) | Llindar de detecció a calibrar sobre el circuit real. *(nou)* |
+| Motoreductor esquerre (M1) | P13/P14 | **Ja cablejat a T2; no es toca.** |
+| Motoreductor dret (M2) | P15/P16 | **Ja cablejat a T2; no es toca.** |
+| Sensor d'ultrasons HC-SR04, TRIG | **P1** | Digital, sortida. *(pin reconvertit, vegeu §Conversió avall)* |
+| Sensor d'ultrasons HC-SR04, ECHO | **P2** | Digital, entrada. *(pin reconvertit, vegeu §Conversió avall)* |
+| Seguidor de línia KS0050 | **P0** (analògic; ADC vàlid: P0/P1/P2/P3/P4/P10) | Llindar de detecció a calibrar sobre el circuit real. *(nou)* |
 | IMU MPU6050 *(SA8)* | P19/P20 (I2C) | Bus I2C compartit amb altres sensors I2C del kit. *(nou, SA8)* |
-| DHT11 *(SA8)* | P13 | Bus digital 1-Wire. *(nou, SA8)* |
+| DHT11 *(SA8)* | P8 | Bus digital 1-Wire. Heretat de l'ampliació SA6 de T2, sense canvi de pin. |
 | BMP280, CCS811 *(SA8)* | P19/P20 (I2C) | Mateix bus I2C que l'IMU. *(nou, SA8)* |
 | Ràdio (SA8, telemetria) | — | Ràdio interna de la micro:bit (`radio`); no necessita cablatge. |
 
-> 🔑 **Continuïtat de pins amb el vehicle (T2):** els canals de motor (M1/M2) **no es tornen a tocar** un cop fixats a SA4 — és l'avantatge de reaprofitar el mateix xassís: el bloc de pins de moviment es fixa una sola vegada per a tot el curs, i a T3 només s'hi afegeixen els pins dels dos sensors nous.
+> 🔑 **Continuïtat de pins amb el vehicle (T2):** els canals de motor (M1/M2, P13/P14 i P15/P16) **no es tornen a tocar** un cop fixats a SA4 — és l'avantatge de reaprofitar el mateix xassís: el bloc de pins de moviment es fixa una sola vegada per a tot el curs, i a T3 només s'hi afegeixen els pins dels sensors nous.
+
+> ➡️ **Conversió T2 → T3 (frase vinculant).** En convertir el vehicle en rover, el **LED indicador i el relé es retiren**: **P1/P2 passen a l'HC-SR04** (TRIG/ECHO) i el **seguidor de línia va a P0** (ADC). Nota didàctica: a la SA3 l'HC-SR04 es va practicar a **P14/P15** (banc de proves de la mascota, exercici sense continuïtat); al rover **canvia de pins** perquè P14/P15 són ara dels motors (M1 enrere / M2 endavant), fixats de manera permanent des de SA4.
 
 ## Comportaments autònoms (SA7)
 

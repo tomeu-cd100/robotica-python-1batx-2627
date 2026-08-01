@@ -9,7 +9,7 @@ import music
 
 pin0.set_analog_period(20)
 
-M1_ENDAVANT = pin8
+M1_ENDAVANT = pin13
 M1_ENRERE = pin14
 M2_ENDAVANT = pin15
 M2_ENRERE = pin16

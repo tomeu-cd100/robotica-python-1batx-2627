@@ -51,14 +51,18 @@ El xassís és **fix** (línies de tall i encaixos calibrats): ningú el toca. L
 
 ## Cablatge (pins del Micro:shield)
 
+> 🔑 **Font única de pins:** aquesta taula reprodueix la fila «T2 · Vehicle» del [«Mapa de pins per trimestre»](00_Fil_conductor_construccions.md#1b-mapa-de-pins-per-trimestre-font-unica-vinculant) de `00_Fil_conductor_construccions.md`, que és el document vinculant (fixat a la SA4). Aquests pins es reutilitzen sense tocar-los a T3 (rover).
+
 | Component | Pin / canal | Notes |
 |---|---|---|
-| Motoreductor esquerre | M1 (canal de motor del Micro:shield) | Sentit i velocitat amb PWM des del canal M1. |
-| Motoreductor dret | M2 (canal de motor del Micro:shield) | Sentit i velocitat amb PWM des del canal M2. |
-| LED indicador d'estat | P1 | Encès fix = RUN, intermitent = ALERTA, apagat = STOP. |
-| Polsador STOP manual | P12 | Digital, *pull-up* intern; prioritat màxima al programa. |
-| Relé (termòstat, ampliació SA6) | P2 | Digital; commuta l'actuador de l'exemple de control amb realimentació. |
-| DHT11 (temperatura, ampliació SA6) | P13 | Bus digital 1-Wire. |
+| Motoreductor esquerre (M1), sentit endavant | **P13** | PWM (`write_analog`) per avançar aquest motor. |
+| Motoreductor esquerre (M1), sentit enrere | **P14** | PWM per recular aquest motor. |
+| Motoreductor dret (M2), sentit endavant | **P15** | PWM per avançar aquest motor. |
+| Motoreductor dret (M2), sentit enrere | **P16** | PWM per recular aquest motor. |
+| LED indicador d'estat | **P1** | Encès fix = RUN, intermitent = ALERTA, apagat = STOP. Reaprofita el pin del LED de la mascota, ja alliberat (vegeu §Transició del mapa de pins). |
+| Polsador STOP manual | **P12** | Digital, *pull-up* intern; prioritat màxima al programa. Reaprofita el pin del polsador de la mascota. |
+| Relé (termòstat, ampliació SA6) | **P2** | Digital; commuta l'actuador de l'exemple de control amb realimentació. Reaprofita el pin del brunzidor de la mascota. |
+| DHT11 (temperatura, ampliació SA6) | **P8** | Bus digital 1-Wire. Reaprofita el pin del PIR de la mascota; **no** P13, ocupat pel motor M1. |
 | Ràdio (SA5) | — | Ràdio interna de la micro:bit (`radio`); no necessita cablatge. |
 
 **Alimentació:** portapiles **4×AA** al Micro:shield (motors) · la micro:bit **no s'alimenta per USB quan els motors funcionen** (només per programar-la o depurar-la aturada).

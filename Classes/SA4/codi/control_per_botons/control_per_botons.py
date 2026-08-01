@@ -1,16 +1,16 @@
 # SA4 - control_per_botons.py  (PRODUCTE de la SA4, Sessio 3)
-# Repte "control per botons": seqüencia de moviments encadenada amb les
+# Repte "control per botons": sequencia de moviments encadenada amb les
 # funcions propies de moviment (avancar/retrocedir/girar/aturar, com a
 # velocitat_pwm.py), activada amb els botons A/B. Es la base del futur
 # control remot per radio (SA5-SA6).
 # Cablatge: els mateixos pins definitius del vehicle (M1/M2), vegeu
 # SA4_esquemes_connexions.md i 00_Projecte_T2_Vehicle.md.
 # NOTA: el simulador NO simula els motoreductors; prova la LOGICA de la
-# seqüencia substituint temporalment cada funcio per un display.scroll().
+# sequencia substituint temporalment cada funcio per un display.scroll().
 
 from microbit import *
 
-M1_ENDAVANT = pin8
+M1_ENDAVANT = pin13
 M1_ENRERE = pin14
 M2_ENDAVANT = pin15
 M2_ENRERE = pin16
@@ -53,7 +53,7 @@ def aturar():
     M2_ENRERE.write_digital(0)
 
 
-# --- Seqüencia propia: el boto A avança un pas cada cop que es prem; ---
+# --- Sequencia propia: el boto A avanca un pas cada cop que es prem; ---
 # --- el boto B atura sempre, es processi on es processi el moviment.  ---
 PAS = 0
 

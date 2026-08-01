@@ -19,15 +19,17 @@
 
 El Kit 2 porta **dos** motoreductors amb roda. Cada motor es connecta al **canal de motor** del Micro:shield mitjançant **dos** pins (un per a cada sentit de gir); el sentit es tria enviant el PWM a un pin o a l'altre, i la velocitat és el valor mateix de `write_analog` (0-1023).
 
+> 🔑 **Font única de pins:** aquesta taula reprodueix la fila «T2 · Vehicle» del [«Mapa de pins per trimestre»](../00_General/00_Fil_conductor_construccions.md#1b-mapa-de-pins-per-trimestre-font-unica-vinculant) de `00_Fil_conductor_construccions.md`. És **aquí, a la Sessió 2-3 de la SA4**, on aquests pins es fixen per **primer** cop; el [dossier del vehicle T2](../00_General/00_Projecte_T2_Vehicle.md) i el [dossier del rover T3](../00_General/00_Projecte_T3_Rover.md) **hi remeten** un cop fixats, no al revés.
+
 | Component | Pin / canal | Tipus | Kit | Programa(es) | Notes |
 |---|---|---|---|---|---|
-| Motoreductor **esquerre** (M1), sentit endavant | **P8** | PWM | Kit 2 | `velocitat_pwm`, `control_per_botons` | `write_analog(velocitat)` per avançar; `0` per aturar aquest sentit. |
+| Motoreductor **esquerre** (M1), sentit endavant | **P13** | PWM | Kit 2 | `velocitat_pwm`, `control_per_botons` | `write_analog(velocitat)` per avançar; `0` per aturar aquest sentit. |
 | Motoreductor **esquerre** (M1), sentit enrere | **P14** | PWM | Kit 2 | `velocitat_pwm`, `control_per_botons` | `write_analog(velocitat)` per recular. |
 | Motoreductor **dret** (M2), sentit endavant | **P15** | PWM | Kit 2 | `velocitat_pwm`, `control_per_botons` | — |
 | Motoreductor **dret** (M2), sentit enrere | **P16** | PWM | Kit 2 | `velocitat_pwm`, `control_per_botons` | — |
 | Alimentació dels motors | Portapiles 4×AA → Micro:shield | — | — | Tots | **Mai** des de l'USB de l'ordinador quan els motors giren. |
 
-> 🔒 **Pins que es fixen avui per a tot el curs.** El [dossier del vehicle T2](../00_General/00_Projecte_T2_Vehicle.md) i el [dossier del rover T3](../00_General/00_Projecte_T3_Rover.md) reutilitzen **exactament** aquests quatre pins («M1»/«M2») sense tornar-los a tocar: un cop cablejats i provats a la Sessió 2-3, aquest bloc de pins de moviment queda fix fins al final del curs.
+> 🔒 **Pins que es fixen avui per a tot el curs.** No s'usa **P8** (pin del PIR a la mascota, alliberat a la transició T1→T2): es deixa lliure de motors expressament, i a T2 hi va el DHT11 de l'ampliació de SA6 (vegeu el mapa de pins). Un cop cablejats i provats a la Sessió 2-3, aquest bloc de quatre pins («M1»/«M2») queda fix i **no es torna a tocar** ni al vehicle T2 (SA5-SA6) ni al rover T3 (SA7-SA9).
 
 ## 3. Pins del repte «control per botons» (Sessió 3 — producte de la SA)
 

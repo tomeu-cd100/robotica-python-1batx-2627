@@ -20,6 +20,56 @@
 
 Cada alumne té el seu **propi exemplar**: no hi ha peces ni codi compartits entre alumnat (vegeu `Programació didàctica/04_Metodologia.md` §4.3). El que **sí** és comú és la **plantilla de tall** (fixa) i les **màquines** (làser i impressora, gestionades pel docent).
 
+## 1b. Mapa de pins per trimestre (font única, vinculant)
+
+> 🔑 **Aquesta taula és la font única de veritat per als pins del Micro:shield de tot el fil conductor.** Els dossiers T1/T2/T3 i els esquemes de connexions de les SA que hi construeixen (SA2-SA3 per T1; SA4 per T2; SA7-SA8 per T3) **remeten aquí**; no es tornen a redefinir pins de manera independent. Si mai hi ha una divergència, **mana aquesta taula**.
+
+**T1 · Mascota (SA2-SA3, es munta i es desmunta dins del 1r trimestre):**
+
+| Component | Pin | Notes |
+|---|---|---|
+| Micro servo (orelles/cua) | **P0** | Es programa a la SA4 (transitòriament sobre la mascota, abans de la conversió al vehicle). |
+| LED / LED RGB (indicador d'humor) | **P1** | — |
+| Brunzidor | **P2** | — |
+| Sensor PIR | **P8** | — |
+| Polsador (carícia) | **P12** | — |
+| Sensor de so (micròfon extern, opcional) | P4 (analògic) | Alternativa: micròfon **intern** de la V2. |
+| DHT11 *(extra opcional)* | P13 | Ampliació, no al nucli. |
+| Bancs de proves temporals de SA3 (`nivell_llum`, `termometre`, `alarma_ultrasons`) | P3, P10, P14/P15 | **Només pràctica de taula**, fora del cablatge final de la mascota; l'HC-SR04 a P14/P15 no forma part de cap producte tancat, és exercici. |
+
+> ➡️ **Transició T1 → T2 (frase vinculant).** La mascota es desmunta a la **S4 de SA4** (sessió de fabricació del vehicle): **tots els pins queden alliberats**. El servo (P0) es reutilitza físicament sobre el vehicle només si el disseny ho demana (no és el cas: el vehicle gira per diferència de velocitat entre motors); la resta de pins (P1, P2, P8, P12...) queden lliures per a un ús completament nou al vehicle, sense cap continuïtat obligada amb el seu paper a la mascota.
+
+**T2 · Vehicle (SA4-SA6, pins de moviment fixats a SA4 per a tot el curs):**
+
+| Component | Pin | Notes |
+|---|---|---|
+| Motoreductor esquerre (M1), sentit endavant | **P13** | PWM (`write_analog`). |
+| Motoreductor esquerre (M1), sentit enrere | **P14** | PWM. |
+| Motoreductor dret (M2), sentit endavant | **P15** | PWM. |
+| Motoreductor dret (M2), sentit enrere | **P16** | PWM. |
+| LED indicador d'estat | **P1** | Reaprofita el pin del LED de la mascota (ja alliberat). |
+| Polsador STOP manual | **P12** | Reaprofita el pin del polsador de la mascota (ja alliberat). |
+| Relé *(termòstat, ampliació SA6)* | **P2** | Reaprofita el pin del brunzidor de la mascota (ja alliberat). |
+| DHT11 *(temperatura, ampliació SA6)* | **P8** | Reaprofita el pin del PIR de la mascota (ja alliberat); **no** P13, ocupat pel motor M1. |
+| Ràdio (SA5) | — | Ràdio interna; no necessita cablatge. |
+
+> ⚠️ **Per què NO P8 per als motors:** P8 era el pin del PIR a la mascota; es deixa lliure de motors expressament (queda disponible per al DHT11 de l'ampliació de SA6) per no barrejar en un sol pin dos papers de maquinari tan diferents.
+
+**T3 · Rover (Sessió 0 + SA7-SA9, conversió del vehicle T2):**
+
+| Component | Pin | Notes |
+|---|---|---|
+| Motoreductor esquerre (M1) | **P13/P14** | **No es toca**, heretat de T2. |
+| Motoreductor dret (M2) | **P15/P16** | **No es toca**, heretat de T2. |
+| Sensor d'ultrasons HC-SR04, TRIG | **P1** | *(nou paper d'aquest pin, vegeu conversió avall)* |
+| Sensor d'ultrasons HC-SR04, ECHO | **P2** | *(nou paper d'aquest pin, vegeu conversió avall)* |
+| Seguidor de línia KS0050 | **P0** (analògic; ADC vàlid) | *(nou)* |
+| DHT11 *(SA8)* | **P8** | Heretat de l'ampliació SA6 de T2, sense canvi de pin. |
+| IMU MPU6050, BMP280, CCS811 *(SA8)* | P19/P20 (I2C) | *(nou)* |
+| Ràdio (SA8, telemetria) | — | Ràdio interna; no necessita cablatge. |
+
+> ➡️ **Conversió T2 → T3 (frase vinculant).** En convertir el vehicle en rover, el **LED indicador i el relé es retiren**: **P1/P2 passen a l'HC-SR04** (TRIG/ECHO) i el **seguidor de línia va a P0** (ADC). Nota didàctica: a la SA3 l'HC-SR04 es va practicar a **P14/P15** (banc de proves de la mascota); al rover **canvia de pins** perquè P14/P15 són ara dels motors (M1 enrere / M2 endavant), fixats de manera permanent des de SA4.
+
 ## 2. Per què el marge del curs és ≈ 0 h (i com es compensa)
 
 Segons `Programació didàctica/08_Sequenciacio_temporal_anual.md`, la fabricació dels tres robots **consumeix per endavant** dues de les tres retallades del pla de contingència temporal:

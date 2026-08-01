@@ -1,6 +1,6 @@
 # Velocitat i sentit del motoreductor amb PWM (Sessió 2)
 
-**Quan es fa:** Sessió 2 · **Fitxer:** `velocitat_pwm.py` · **Maquinari:** [esquemes de connexions](../../SA4_esquemes_connexions.md) — 2 motoreductors del Kit 2, canals **M1** (pin8 endavant / pin14 enrere) i **M2** (pin15 endavant / pin16 enrere) del driver del Micro:shield; alimentació externa (portapiles), **mai** des de l'USB
+**Quan es fa:** Sessió 2 · **Fitxer:** `velocitat_pwm.py` · **Maquinari:** [esquemes de connexions](../../SA4_esquemes_connexions.md) — 2 motoreductors del Kit 2, canals **M1** (pin13 endavant / pin14 enrere) i **M2** (pin15 endavant / pin16 enrere) del driver del Micro:shield; alimentació externa (portapiles), **mai** des de l'USB
 
 > ✋ Aquesta pàgina explica el codi **model**. Munta els motoreductors seguint exactament l'[esquema](../../SA4_esquemes_connexions.md) abans d'alimentar-los.
 
@@ -17,13 +17,13 @@ Cada motor porta **dos** pins (un per a cada sentit). Si `avancar(500)` envia PW
 ### Bloc 1 — Constants amb nom: els quatre pins dels motors
 
 ```python
-M1_ENDAVANT = pin8
+M1_ENDAVANT = pin13
 M1_ENRERE = pin14
 M2_ENDAVANT = pin15
 M2_ENRERE = pin16
 ```
 
-Donar **nom** als pins (en lloc d'escriure `pin8` cada vegada) fa que la resta del codi s'entengui sense haver de consultar l'esquema constantment, i és el mateix truc que ja vas fer servir amb `servo_orelles = pin0` al dossier de la mascota.
+Donar **nom** als pins (en lloc d'escriure `pin13` cada vegada) fa que la resta del codi s'entengui sense haver de consultar l'esquema constantment, i és el mateix truc que ja vas fer servir amb `servo_orelles = pin0` al dossier de la mascota.
 
 ### Bloc 2 — Una funció amb un paràmetre: `avancar(velocitat)`
 

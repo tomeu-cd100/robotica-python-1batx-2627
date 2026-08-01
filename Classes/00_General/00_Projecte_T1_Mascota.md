@@ -56,6 +56,8 @@ Flux (detall del calendari a [`00_Fil_conductor_construccions.md`](00_Fil_conduc
 
 ## Cablatge (pins del Micro:shield)
 
+> 🔑 **Font única de pins:** aquesta taula reprodueix la fila «T1 · Mascota» del [«Mapa de pins per trimestre»](00_Fil_conductor_construccions.md#1b-mapa-de-pins-per-trimestre-font-unica-vinculant) de `00_Fil_conductor_construccions.md`, que és el document vinculant. La mascota es desmunta a la **S4 de SA4**: tots aquests pins queden alliberats per al vehicle T2.
+
 | Component | Pin | Notes |
 |---|---|---|
 | Micro servo (orelles/cua) | P0 | PWM; angle amb `pins.P0.write_analog()` o llibreria de servo. |

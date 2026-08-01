@@ -3,9 +3,9 @@
 # de gir i velocitat amb PWM (write_analog). Aquests son els PINS DEFINITIUS
 # del vehicle T2 (es fixen avui i ja no es tornen a tocar a T2 ni a T3,
 # vegeu 00_Projecte_T2_Vehicle.md i 00_Projecte_T3_Rover.md).
-# Cada motor porta DOS pins (un per sentit): per avançar s'envia PWM al pin
+# Cada motor porta DOS pins (un per sentit): per avancar s'envia PWM al pin
 # "endavant" i 0 al pin "enrere"; per recular, al reves.
-#   Motor esquerre (M1): pin8 (endavant) i pin14 (enrere)
+#   Motor esquerre (M1): pin13 (endavant) i pin14 (enrere)
 #   Motor dret     (M2): pin15 (endavant) i pin16 (enrere)
 # Veure SA4_esquemes_connexions.md pel cablatge complet (alimentacio externa
 # per piles, MAI des de l'USB, quan els motors giren).
@@ -13,7 +13,7 @@
 
 from microbit import *
 
-M1_ENDAVANT = pin8
+M1_ENDAVANT = pin13
 M1_ENRERE = pin14
 M2_ENDAVANT = pin15
 M2_ENRERE = pin16

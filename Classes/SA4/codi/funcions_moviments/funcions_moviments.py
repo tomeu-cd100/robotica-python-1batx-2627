@@ -15,7 +15,7 @@ pin0.set_analog_period(20)   # periode de 20 ms: el que espera un servo estandar
 
 def graus_a_pwm(angle):
     # Converteix un angle (0-180 graus) al valor write_analog (26-128) que
-    # entén el servo. Es una funcio AMB VALOR DE RETORN: no fa res visible,
+    # enten el servo. Es una funcio AMB VALOR DE RETORN: no fa res visible,
     # nomes calcula i torna un numero (com mapa() a la SA3).
     return 26 + (angle * (128 - 26)) // 180
 
