@@ -23,6 +23,48 @@
 - Escriu una funció nova `salutacio(estil, vegades)` amb **dos** paràmetres: `estil` (`'curt'` o `'llarg'`) decideix si crida `saluda()` o `escombra()`.
 - Codi comentat.
 
+<details markdown="1">
+<summary>🧗 Si t'encalles (repte ⭐): pistes esglaonades</summary>
+
+**Nivell 1 — Pista conceptual.** `salutacio()` no fa cap moviment nou: només **decideix**, segons el paràmetre `estil`, quina de les funcions que ja tens (`saluda()` o `escombra()`) crida. És el mateix patró que `mostra_fletxa(costat)`: un `if`/`elif` que compara el paràmetre amb un text entre cometes.
+
+**Nivell 2 — Pseudocodi.**
+```
+defineix salutacio(estil, vegades):
+  si estil es 'curt':
+    crida saluda(vegades)
+  sino si estil es 'llarg':
+    crida escombra(un angle que triis)
+
+crida salutacio('curt', 2)
+```
+
+**Nivell 3 — Esquelet amb TODO.** La capçalera de la funció ja hi és; omple només les crides.
+```python
+# SA4 - Repte 1 (BASTIDA / esquelet per a l'alumnat)
+#
+# QUE JA ESTA FET (no ho toquis):
+#   - saluda(vegades) i escombra(angle_maxim) ja son a funcions_moviments.py.
+#
+# QUE HAS DE FER TU:
+#   - Escriu una funcio NOVA salutacio(estil, vegades) amb DOS parametres.
+#
+# EINES QUE POTS USAR (nomes conceptes de la SA4):
+#   - saluda(vegades)        -> ja feta, la pots cridar
+#   - escombra(angle_maxim)  -> ja feta, la pots cridar
+
+def salutacio(estil, vegades):
+    if estil == 'curt':
+        pass  # TODO 1: crida saluda() amb el parametre que toqui
+    elif estil == 'llarg':
+        pass  # TODO 2: crida escombra() amb el parametre que toqui
+
+
+salutacio('curt', 2)   # TODO 3: prova tambe amb 'llarg'
+```
+
+</details>
+
 **Ampliacions graduades.**
 1. *(bàsica)* Afegeix un **tercer estil** (`'doble'`) que combini `saluda()` i `escombra()` en una sola crida.
 2. *(notable)* Fes que `salutacio()` també mostri una cara diferent al display segons l'`estil` triat.

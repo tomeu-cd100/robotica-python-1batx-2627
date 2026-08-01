@@ -66,7 +66,7 @@ Llegeix [`SA1_normes_seguretat.md`](SA1_normes_seguretat.md) i **signa** el full
 
 ### 5 · Repte ⭐ (nucli obligatori)
 
-Fes el **repte ⭐ · Targeta de benvinguda digital** de [`Reptes_SA1.md`](../../Reptes/Reptes_SA1.md) (a la Sessió 3, en el mateix temps de pràctica que ja tenies previst després de la fase «Crea»): parteix de `hola_mon.py` perquè el display mostri el teu **nom** (`scroll`) i, després, una **imatge fixa** que et representi (`show`). És **nucli obligatori** — forma part del producte d'aquesta SA, no és una ampliació. Quan l'acabis, **ensenya'l al docent** perquè el validi.
+Fes el **repte ⭐ · Targeta de benvinguda digital** de [`Reptes_SA1.md`](../../Reptes/Reptes_SA1.md) en la seva pròpia franja de 25' a la Sessió 3, després de la fase «Crea» (inclou 5' de parella de lectura): parteix de `hola_mon.py` perquè el display mostri el teu **nom** (`scroll`) i, després, una **imatge fixa** que et representi (`show`). És **nucli obligatori** — forma part del producte d'aquesta SA, no és una ampliació. Quan l'acabis, **ensenya'l al docent** perquè el validi.
 
 ## Producte · Fitxa-pòster
 

@@ -79,6 +79,13 @@ Anota la **nota (0-10)** de cada evidència. Les files canvien segons el trimest
 
 > **Exemple de càlcul:** Productes 7,5 × 0,45 = 3,375 · Pràctiques/quadern 8 × 0,25 = 2,0 · Proves 6 × 0,20 = 1,2 · Actitud 9 × 0,10 = 0,9 → **total 7,475 → nota 7**.
 
+### 4.3. Porta mínima de programació (CA1.1) — comprova-la abans de tancar el trimestre
+
+☐ Almenys un dels 3 mini-checks del trimestre amb semàfor ≥ 🟡, **o**
+☐ ítem obligatori «funció nova» de la prova trimestral ≥ meitat (T2/T3: ≥ 1/2 punts) — **a T1**, nucli de condicionals de la prova ≥ meitat (≥ 1,5/3 punts).
+
+Si **cap de les dues caselles** es marca, el trimestre **no es dona per superat** encara que el TOTAL de §4.2 sigui ≥ 5 (vegeu `06_Avaluacio_criteris_qualificacio.md` §6.3): obre la mecànica de recuperació (mini-check equivalent, dues primeres setmanes del trimestre següent o tutoria).
+
 ---
 
 ## 5. Quines competències s'avaluen cada trimestre (guia de farciment)

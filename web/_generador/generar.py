@@ -231,7 +231,7 @@ GENERAL_ALUMNAT = {
     "00_Fil_conductor_construccions.md", "00_Projecte_T1_Mascota.md",
     "00_Projecte_T2_Vehicle.md", "00_Projecte_T3_Rover.md",
     "00_Projecte_T1_portada.md", "00_Projecte_T2_portada.md",
-    "00_Projecte_T3_portada.md",
+    "00_Projecte_T3_portada.md", "00_Vaig_faltar.md",
 }
 
 
@@ -1151,7 +1151,7 @@ def page_shell(*, out_rel, section_key, title, content_html, toc="",
 <a class="skip" href="#contingut">Salta al contingut</a>
 <header class="topbar">
   <button class="menu-btn" aria-label="Obre el menú" aria-expanded="false">☰</button>
-  <a class="brand" href="{prefix}index.html"><span class="brand-mark">◆</span> Robòtica <span class="brand-sub">1r Batx</span></a>
+  <a class="brand" href="{prefix}index.html"><span class="brand-mark">◆</span> Robòtica amb Python <span class="brand-sub">1r de Batxillerat</span></a>
   <nav class="topnav" aria-label="Seccions">
     {topnav_html(out_rel, section_key)}
   </nav>
@@ -1874,7 +1874,7 @@ def render_home(pages: list[Page]) -> str:
 <div class="portada-docent nomes-docent">
 <section class="hero">
   <p class="hero-kicker">// {html.escape(SITE_TAGLINE)}</p>
-  <h1 class="hero-titol">Robòtica a 1r de Batxillerat</h1>
+  <h1 class="hero-titol">Robòtica amb Python · 1r de Batxillerat</h1>
   <p class="hero-lead">9 situacions d'aprenentatge amb micro:bit i Python, en tres trimestres. Tot el material d'aula, la programació didàctica, els reptes i l'avaluació, en un sol lloc.</p>
   <div class="hero-cta">
     <a class="btn btn-primari" href="guia-inici.html">Comença per la guia d'inici</a>
@@ -2025,7 +2025,7 @@ def render_visor() -> str:
 <body data-section="recursos" class="sense-sidebar sense-toc">
 <a class="skip" href="#contingut">Salta al contingut</a>
 <header class="topbar">
-  <a class="brand" href="index.html"><span class="brand-mark">◆</span> Robòtica <span class="brand-sub">1r Batx</span></a>
+  <a class="brand" href="index.html"><span class="brand-mark">◆</span> Robòtica amb Python <span class="brand-sub">1r de Batxillerat</span></a>
   <nav class="topnav" aria-label="Seccions"><a href="index.html">Inici</a></nav>
   <div class="topbar-eines">
     <a class="btn btn-secundari" id="doc-gh" href="#" target="_blank" rel="noopener">Obre a GitHub ↗</a>

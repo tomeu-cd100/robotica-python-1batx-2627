@@ -18,6 +18,8 @@ el contingut de cada document: t'hi porta, en l'ordre que té sentit llegir-lo.
 7. **`Classes/00_General/00_Fil_conductor_construccions.md`** — els tres robots del curs (mascota → vehicle → rover) i el mapa de pins únic que els travessa. Llegeix-lo abans de la primera sessió de muntatge (SA2·S4): és el document que evita haver de rellegir el cablatge cada trimestre.
 8. Per a cada sessió, la **SA corresponent** dins `Classes/SAn/`: comença sempre per la **guia docent**, després la **fitxa d'alumnat**, després **esquemes i codi**, i finalment la **fitxa ampliada i reptes** — és l'ordre de treball fixat a tot el curs.
 
+**Temps de preparació estimat.** La lectura inicial (punts 1-7 d'aquest itinerari, un cop) porta unes **3-4 h**. Un cop rodant, preparar cada SA porta **~20 min** amb el `SAn_checklist_docent.md` (§1 «Logística prèvia») com a guió d'una cara. Per preparar **una sessió concreta** (p. ex. abans d'entrar a classe, o per recuperar un alumne que ha faltat) no cal rellegir res: el **`00_Quadern_sessions_docent.pdf`** (`Classes/00_General/pdf/`, generat per `web/_generador/generar_fulls_imprimibles.py`) reuneix, en una pàgina per sessió, la kata del dia, el mini-check i el repte ⭐ (quan toquen) i el checklist docent d'aquella sessió.
+
 ## 2. Maquinari
 
 **micro:bit V2 + Micro:shield + sensors Keyestudio.** Tot el codi d'alumnat és

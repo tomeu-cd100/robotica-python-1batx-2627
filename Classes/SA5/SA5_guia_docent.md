@@ -97,20 +97,19 @@ Assigna els **grups de ràdio per parelles de números de llista** (rotant si el
 ## SESSIÓ 3 (2 h) — Repte «control remot bàsic» (producte de la SA)
 
 > 🎯 **Producte de la SA.** Aquest repte **fa de producte** de la SA5: s'avalua amb **R1** (codi, criteri "Funcionament") i **R4** (documentació). Introdueix, com a **+ampliació**, l'historial de comandes amb llistes/tuples (es completa a la SA6).
->
-> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
 
 > ⭐ **Repte nucli obligatori.** Un cop tancat el producte, tothom fa el repte **⭐** de [`Reptes_SA5.md`](../../Reptes/Reptes_SA5.md) (fila pròpia a la taula, més avall). Els reptes **⭐⭐/⭐⭐⭐** continuen sent ampliació opcional per a qui vagi sobrat.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
 | Activació | 10' | Mostra [`receptor_vehicle.py`](codi/receptor_vehicle/receptor_vehicle.py) **sense executar-lo** (PRIMM): pregunta què farà cada ordre rebuda. 🥋 **Kata del dia:** K09 (global) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen el comportament del vehicle davant de cada comanda. |
-| Explicació | 20' | Modelatge de la funció `actua(ordre)` (esdeveniment → acció) i de per què reutilitza **exactament** les funcions `avancar`/`retrocedir`/`girar`/`aturar` de la SA4 sense reescriure-les. Introdueix l'historial amb **tuples** (`(ordre, instant)`) com a estructura de dades nova. | Prenen notes; identifiquen quines parts del programa ja coneixien (funcions de moviment) i quines són noves (protocol per ràdio, tuples). |
-| Repte | 55' | Acompanya el tancament individual del repte «control remot bàsic»: cadascú prova el **seu** receptor aparellat puntualment amb el comandament d'un company o del docent. | Tanquen `receptor_vehicle.py`, proven el vehicle amb ràdio real (Activitat 3, producte). |
-| **Repte ⭐ (nucli obligatori)** | 15' | Un cop tancat el producte, repte **⭐** de [`Reptes_SA5.md`](../../Reptes/Reptes_SA5.md) (xat de classe amb identificació). | Fan el repte ⭐; 🤝 **parella de lectura (5')** abans de lliurar-lo; l'ensenyen al docent perquè el validi. Qui vagi sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
-| Tancament | 20' | Recull dubtes; mini-defensa breu de cada alumne/a. | Anoten al quadern el protocol final i un exemple de l'historial de comandes. |
+| Explicació | 10' | Modelatge comprimit de la funció `actua(ordre)` (esdeveniment → acció) i de per què reutilitza **exactament** les funcions `avancar`/`retrocedir`/`girar`/`aturar` de la SA4 sense reescriure-les (el PRIMM de l'Activació ja ha fet mitja feina). Introdueix l'historial amb **tuples** (`(ordre, instant)`) com a estructura de dades nova, en una frase. | Prenen notes; identifiquen quines parts del programa ja coneixien (funcions de moviment) i quines són noves (protocol per ràdio, tuples). |
+| Repte | 45' | Acompanya el tancament individual del repte «control remot bàsic»: cadascú prova el **seu** receptor aparellat puntualment amb el comandament d'un company o del docent. | Tanquen `receptor_vehicle.py`, proven el vehicle amb ràdio real (Activitat 3, producte). |
+| **Repte ⭐ (nucli obligatori)** | 25' | Un cop tancat el producte, repte **⭐** de [`Reptes_SA5.md`](../../Reptes/Reptes_SA5.md) (xat de classe amb identificació). | Fan el repte ⭐; 🤝 **parella de lectura (5', dins d'aquests 25')** abans de lliurar-lo; l'ensenyen al docent perquè el validi. Qui vagi sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
+| Mini-defensa (MOSTREIG) + tancament | 10' | Recull dubtes; **mini-defensa breu, per MOSTREIG rotatiu:** tria **5-6 alumnes** (registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)) perquè expliquin el protocol i una decisió; la resta tanca directament. | Els sortejats fan la mini-defensa; la resta anota al quadern el protocol final i un exemple de l'historial de comandes. |
+| **Marge/imprevistos** | 20' | Coixí per a arrencada i recollida: el temps efectiu real d'aula és ~100' (no 120'); aquesta fila ho fa explícit. | — |
 
-> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: l'**historial amb tuples** (deixa el receptor funcionant sense historial; les tuples reapareixen igualment a la SA6).
+> ⏱️ **Marge:** la fila «Marge/imprevistos» (20') ja recull que el temps efectiu real és ~100'. Si encara vas just, retalla primer: l'**historial amb tuples** (deixa el receptor funcionant sense historial; les tuples reapareixen igualment a la SA6).
 
 **Punts clau:** el vehicle **no aprèn cap funció de moviment nova**: només canvia l'**entrada** (ràdio en lloc de botons), el mateix esquema «esdeveniment → acció» de tot el curs; una **tupla** és una parella (o més) de valors relacionats que, a diferència d'una llista, no es pot modificar un cop creada — útil per registrar «què ha passat i quan» sense risc d'alterar-ho per error.
 

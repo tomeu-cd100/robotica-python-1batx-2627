@@ -32,6 +32,7 @@
 - [ ] Mini-check individual (10', a l'inici — [banc SA1](../00_General/00_Mini_checks_individuals.md#sa1--mini-check-inici-de-la-sessió-3))
 - [ ] Projectar `hola_mon.py` **sense executar-lo** → alumnat prediu (Act. 4)
 - [ ] Executar → Investigar → Modificar → **Crea** `emocions_botons`
+- [ ] **Repte ⭐** (`Reptes_SA1.md`, 25' fila pròpia) + 🤝 parella de lectura (5', dins)
 - [ ] Mini-debat ètic (ODS) + presentar la fitxa-pòster
 - ⚠️ *Error:* oblidar `from microbit import *` i no saber interpretar el `NameError`
 

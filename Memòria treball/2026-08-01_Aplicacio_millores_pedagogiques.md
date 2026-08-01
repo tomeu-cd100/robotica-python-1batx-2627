@@ -11,7 +11,7 @@ prioritats **P1-P4** de l'informe. Aquest document tanca el cicle de millora.
 
 | Prioritat de l'auditoria | Task | Què s'ha creat/modificat | Commits |
 |---|---|---|---|
-| **P1.1** Repàs espaiat i fluïdesa d'escriptura | Task 1 | Banc de 21 katas d'activació (`Classes/00_General/00_Banc_activacio_repas.md`), mapades sessió a sessió S4-S33, amb progressió Parsons → completar buits → escriure de zero. | `5598104`..`0d457af` |
+| **P1.1** Repàs espaiat i fluïdesa d'escriptura | Task 1 | Banc de katas (27 amb les ampliacions de la 3a ronda) d'activació (`Classes/00_General/00_Banc_activacio_repas.md`), mapades sessió a sessió S4-S33, amb progressió Parsons → completar buits → escriure de zero. | `5598104`..`0d457af` |
 | **P2.4-2.8** Forats de la corba (`return`, `global`, `for`, `try/except`, `percep/decideix/actua`) | Task 2 | Activitats nucli afegides a SA4 (return), SA4 (global en prosa), SA2/SA5 (for), SA7 (try/except desplaçat des de SA8 per descarregar S28), SA8 (patró percep/decideix/actua abans de SA9). | `4c0a2d1`..`926acaf` |
 | **P1.2-1.3** Repte ⭐ nucli obligatori i mini-checks qualificables | Task 3 | El repte ⭐ de cada SA (SA2-SA8) passa de la capa opcional al nucli obligatori (mateix temps de pràctica). Mini-checks d'escriptura individuals: el **millor del trimestre qualifica un 5 %** dins «Proves pràctiques» (`06_Avaluacio_criteris_qualificacio.md` §6.3). | `8f52561`..`7262762` |
 | **P3.10** Validesa dels qüestionaris | Task 4 | 27 preguntes noves de traça/completar/corregir codi repartides als 9 qüestionaris de conceptes (abans, 100 % opció múltiple sense codi). | `2791ac7`..`cb4aff2` |

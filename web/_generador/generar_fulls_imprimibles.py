@@ -117,6 +117,10 @@ CSS = """
             padding: 5pt 9pt; margin: 6pt 0; background: #f8fcff;
             page-break-inside: avoid; }
   details > summary { font-weight: 600; margin-bottom: 4pt; list-style: none; }
+  /* Quadern del docent per sessions: una pagina per sessio */
+  .quadern-sessions h2.sessio { page-break-before: always; }
+  .quadern-sessions h2.sessio-first { page-break-before: avoid; }
+  .quadern-sessions h3 { margin-top: 10pt; }
 """
 
 
@@ -261,6 +265,170 @@ def render_norms_body(md: str) -> tuple[str, str]:
     return title, "\n".join(body)
 
 
+# --- Quadern del docent per sessions (full de sessio imprimible, U3) -------
+# La segona auditoria (U3) demana un full imprimible per sessio amb la kata
+# del dia, el mini-check i el repte estrella (quan toquen) i el checklist
+# docent d'aquella sessio, DERIVAT dels documents font (sense duplicar
+# contingut a ma). Generar 34+ PDF individuals ben enllaçats disparava la
+# complexitat (calia tocar el navegador web, els indexs, etc.), aixi que
+# s'adopta l'alternativa que el mateix pla dona per bona: un UNIC PDF
+# "Quadern del docent per sessions", una pagina per sessio, parsejat en
+# temps de generacio a partir de:
+#   - Classes/00_General/00_Banc_activacio_repas.md  (kata del dia)
+#   - Classes/00_General/00_Mini_checks_individuals.md (mini-check)
+#   - Reptes/Reptes_SAn.md                            (repte estrella nucli)
+#   - Classes/SAn/SAn_checklist_docent.md             (checklist per sessio)
+def md_to_fragment(md_text: str) -> str:
+    """Un fragment de Markdown (sense h1 propi) -> HTML de paper, amb el
+    mateix post-proces que la resta de fulls imprimibles."""
+    if not md_text.strip():
+        return ""
+    h = md_lib.markdown(protegeix_camps(md_text), extensions=_EXTENSIONS)
+    h = fora_callouts_de_pdf(h)
+    h = aplana_enllacos(h)
+    h = caselles(h)
+    h = taules(h)
+    return camps_per_omplir(h)
+
+
+REPTES_DIR = REPO / "Reptes"
+BANC_KATES = CLASSES / "00_General" / "00_Banc_activacio_repas.md"
+MINI_CHECKS_MD = CLASSES / "00_General" / "00_Mini_checks_individuals.md"
+QUADERN_SESSIONS_SA = list(range(1, 10))  # SA1..SA9
+
+FONTS_QUADERN_SESSIONS = (
+    [BANC_KATES, MINI_CHECKS_MD]
+    + [REPTES_DIR / f"Reptes_SA{n}.md" for n in range(1, 9)]
+    + [CLASSES / f"SA{n}" / f"SA{n}_checklist_docent.md" for n in QUADERN_SESSIONS_SA]
+)
+
+
+def sessions_quadern_font_text() -> str:
+    """Text combinat de TOTS els documents font del quadern de sessions: la
+    marca de sincronia del PDF es calcula sobre aquest text, aixi que
+    tools/qa.py detecta si qualsevol document font ha canviat sense
+    regenerar el PDF (encara que no hi hagi un unic fitxer "font")."""
+    parts = [p.read_text(encoding="utf-8") for p in FONTS_QUADERN_SESSIONS if p.exists()]
+    return "\n".join(parts)
+
+
+def parse_katas_banc() -> tuple[dict, dict]:
+    """(mapa, enunciats) des del banc de katas.
+    mapa: {(sa, sessio): [id_kata, ...]} · enunciats: {id_kata: markdown}"""
+    text = BANC_KATES.read_text(encoding="utf-8")
+    mapa: dict = {}
+    for m in re.finditer(r"^\|\s*S\d+\s*\|\s*SA(\d+)\s*·\s*S(\d+)\s*\|(.*?)\|[^|]*\|[^|]*\|\s*$",
+                          text, re.M):
+        sa, s = int(m.group(1)), int(m.group(2))
+        ids = re.findall(r"\[(K\d+)\]", m.group(3))
+        if ids:
+            mapa[(sa, s)] = ids
+    enunciats: dict = {}
+    for m in re.finditer(
+            r"^### (K\d+) ·.*?\n+.*?\*\*Enunciat per a l'alumnat:\*\*\n(.*?)\n\*\*Soluci",
+            text, re.S | re.M):
+        enunciats[m.group(1)] = m.group(2).strip()
+    return mapa, enunciats
+
+
+def parse_mini_checks() -> dict:
+    """{sa: (sessio, enunciat_markdown)} des de 00_Mini_checks_individuals.md."""
+    text = MINI_CHECKS_MD.read_text(encoding="utf-8")
+    out: dict = {}
+    for m in re.finditer(
+            r"^## SA(\d+) · Mini-check \([^\n]*?Sessi[oó] (\d+)[^\n]*\)\n+"
+            r".*?\*\*Enunciat \(projectar\):\*\*\n(.*?)\n\*\*Qu",
+            text, re.S | re.M):
+        out[int(m.group(1))] = (int(m.group(2)), m.group(3).strip())
+    return out
+
+
+def parse_reptes_nucli() -> dict:
+    """{sa: (titol, enunciat_markdown, requisits_markdown)} amb el repte
+    estrella (Repte 1, NUCLI OBLIGATORI) de cada Reptes_SAn.md (SA1-SA8)."""
+    out: dict = {}
+    for n in range(1, 9):
+        f = REPTES_DIR / f"Reptes_SA{n}.md"
+        if not f.exists():
+            continue
+        text = f.read_text(encoding="utf-8")
+        m = re.search(
+            r"^## ⭐ Repte 1 · (.+?) \(NUCLI OBLIGATORI\)\n+(.*?)\n\n"
+            r"\*\*Requisit mínim\.\*\*\n(.*?)\n\n<details",
+            text, re.S | re.M)
+        if m:
+            out[n] = (m.group(1).strip(), m.group(2).strip(), m.group(3).strip())
+    return out
+
+
+def parse_checklist_docent_sessions(sa: int) -> dict:
+    """{sessio: (titol, [linies de checklist en markdown])} d'un SAn_checklist_docent.md."""
+    f = CLASSES / f"SA{sa}" / f"SA{sa}_checklist_docent.md"
+    if not f.exists():
+        return {}
+    text = f.read_text(encoding="utf-8")
+    out: dict = {}
+    for m in re.finditer(
+            r"^\*\*Sessió (\d+)(?: \(prèvia\))? — (.+?)\*\*\n((?:- .+\n?)+)",
+            text, re.M):
+        s = int(m.group(1))
+        linies = [l for l in m.group(3).strip("\n").splitlines() if l.strip()]
+        out[s] = (m.group(2).strip(), linies)
+    return out
+
+
+def build_quadern_sessions_body() -> str:
+    """HTML de tot el quadern de sessions (una seccio <h2> per sessio, amb
+    salt de pagina abans de cada una, excepte la primera)."""
+    mapa_katas, enunciats_katas = parse_katas_banc()
+    minichecks = parse_mini_checks()
+    reptes = parse_reptes_nucli()
+
+    parts = [
+        '<div class="quadern-sessions">',
+        "<h1>Quadern del docent per sessions</h1>",
+        '<div class="callout">Un full per sessió lectiva (SA1–SA9) amb la '
+        "kata del dia, el mini-check individual i el repte ⭐ (quan toquen) "
+        "i el checklist docent d'aquella sessió. Generat automàticament dels "
+        "documents font — no els substitueix: si canvia algun d'ells cal "
+        "tornar a executar <code>generar_fulls_imprimibles.py</code>.</div>",
+    ]
+    primera = True
+    for sa in QUADERN_SESSIONS_SA:
+        checklist = parse_checklist_docent_sessions(sa)
+        repte_sa = reptes.get(sa)
+        for s in sorted(checklist):
+            titol, linies = checklist[s]
+            cls = "sessio-first" if primera else "sessio"
+            primera = False
+            parts.append(f'<h2 class="{cls}">SA{sa} · Sessió {s} — {html.escape(titol)}</h2>')
+
+            parts.append("<h3>📋 Checklist docent</h3>")
+            parts.append(md_to_fragment("\n".join(linies)))
+
+            ids = mapa_katas.get((sa, s))
+            if ids:
+                parts.append("<h3>✍️ Kata del dia</h3>")
+                for kid in ids:
+                    enun = enunciats_katas.get(kid)
+                    if enun:
+                        parts.append(f"<p><strong>{kid}</strong></p>")
+                        parts.append(md_to_fragment(enun))
+
+            mc = minichecks.get(sa)
+            if mc and mc[0] == s:
+                parts.append("<h3>🔎 Mini-check individual</h3>")
+                parts.append(md_to_fragment(mc[1]))
+
+            if repte_sa and any("Repte ⭐" in l or "Reptes_SA" in l for l in linies):
+                titol_r, enunciat_r, requisits_r = repte_sa
+                parts.append(f"<h3>⭐ Repte ⭐ — {html.escape(titol_r)}</h3>")
+                parts.append(md_to_fragment(enunciat_r))
+                parts.append(md_to_fragment("**Requisit mínim.**\n" + requisits_r))
+    parts.append("</div>")
+    return "\n".join(parts)
+
+
 def wrap(title: str, body: str) -> str:
     return (f'<!doctype html><html lang="ca"><head><meta charset="utf-8">'
             f"<title>{html.escape(title)}</title><style>{CSS}</style></head>"
@@ -346,6 +514,21 @@ def main():
             else:
                 print(f"  ⚠ no generat: {rel}")
                 fail += 1
+        # Quadern del docent per sessions (U3): un sol PDF, una pagina per
+        # sessio, sintetitzat dels documents font (vegeu funcions mes amunt).
+        body_html = build_quadern_sessions_body()
+        html_doc = wrap("Quadern del docent per sessions", body_html)
+        tmp_html = Path(htmldir) / "00_Quadern_sessions_docent.html"
+        tmp_html.write_text(html_doc, encoding="utf-8")
+        pdf_path = CLASSES / "00_General" / "pdf" / "00_Quadern_sessions_docent.pdf"
+        if print_pdf(browser, tmp_html, pdf_path, profile, budget=8000):
+            escriu_marca(pdf_path, hash_font(sessions_quadern_font_text()))
+            print(f"  ✓ {pdf_path.relative_to(REPO)}")
+            ok += 1
+        else:
+            print("  ⚠ no generat: quadern del docent per sessions")
+            fail += 1
+
     print(f"Fet. {ok} PDF generats" + (f", {fail} amb error." if fail else "."))
     if fail:
         sys.exit(1)

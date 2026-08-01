@@ -58,11 +58,11 @@ Sensor d'**ultrasons HC-SR04** (trigger P1, echo P2): mesura de distància amb `
 
 Parteix de [`rover_missions.py`](codi/rover_missions/rover_missions.py) i **integra** el comportament triat amb petites millores (velocitat variable, marge de seguretat). **Producte: comportament autònom del rover** funcional i documentat.
 
-**Mini-defensa (breu, davant el docent):** explica **una decisió** de disseny (per exemple, per què has triat aquest llindar, o com has integrat els dos sensors).
+**Mini-defensa (breu, davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)):** si et toca, explica **una decisió** de disseny (per exemple, per què has triat aquest llindar, o com has integrat els dos sensors). Si no et toca, escriu-ho al quadern.
 
 ### 5 · Repte ⭐ (nucli obligatori, mateixa Sessió 4)
 
-Amb el temps de pràctica de la Sessió 4 (el que abans es dedicava opcionalment als reptes), fes el **repte ⭐ · Carret de magatzem amb velocitat variable** de [Reptes_SA7.md](../../Reptes/Reptes_SA7.md): ara és **NUCLI OBLIGATORI**, no una ampliació — no s'hi afegeixen hores noves. **Ensenya'l al docent perquè el validi.**
+Fes el **repte ⭐ · Carret de magatzem amb velocitat variable** de [Reptes_SA7.md](../../Reptes/Reptes_SA7.md) en la seva pròpia franja de 25' de la Sessió 4 (inclou 5' de parella de lectura): és **NUCLI OBLIGATORI**, no una ampliació. **Ensenya'l al docent perquè el validi.**
 
 ## Producte · Comportament autònom del rover
 

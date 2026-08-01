@@ -31,8 +31,8 @@
 - [ ] Modelatge de `alarma_ultrasons.py`: trigger/echo, `machine.time_pulse_us`, seguretat 5 V
 - [ ] Introduir el PIR: temps d'estabilització (30-60 s)
 - [ ] Acompanyar el cablatge **EXACTE** de la mascota (P1, P2, P8, P12) i la programació individual
-- [ ] **Mini-defensa breu (R4·DO)** de cada alumne/a: reaccions + una decisió justificada
-- [ ] **Repte ⭐** de `Reptes_SA3.md` (nucli obligatori, en acabar la mascota): dins la S3 o com a deures abans de la S4
+- [ ] **Repte ⭐** de `Reptes_SA3.md` (nucli obligatori, en acabar la mascota, 25' fila pròpia): dins la S3 o com a deures abans de la S4
+- [ ] **Mini-defensa breu (R4·DO), per MOSTREIG rotatiu:** 5-6 alumnes (reaccions + una decisió justificada; registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8))
 - [ ] Checklist de **tancament del Projecte T1**
 - ⚠️ *Mantra:* el cablatge de la mascota és **vinculant**: cap component nou fora de la taula del dossier
 

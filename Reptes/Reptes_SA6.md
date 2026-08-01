@@ -25,6 +25,48 @@
 - Simula una **segona zona** amb una segona parella de llindars (per exemple, `LLINDAR_BAIX_2`/`LLINDAR_ALT_2`) i un segon "actuador" (un altre pin digital o el display mostrant quina zona està activa).
 - Codi comentat.
 
+<details markdown="1">
+<summary>🧗 Si t'encalles (repte ⭐): pistes esglaonades</summary>
+
+**Nivell 1 — Pista conceptual.** No has de reescriure la histèresi: **copia** la mateixa estructura (`LLINDAR_BAIX`/`LLINDAR_ALT`/variable d'estat) amb noms nous (`_2`) i un segon llindar diferent. Les dues zones són independents: cap variable de la zona 1 s'ha de tocar dins de la lògica de la zona 2.
+
+**Nivell 2 — Pseudocodi.**
+```
+defineix LLINDAR_BAIX_2, LLINDAR_ALT_2, actiu_2 = False
+dins del while True (a mes de la logica de la zona 1):
+  si zona 2 inactiva i temp < LLINDAR_BAIX_2:
+    activa la zona 2
+  sino si zona 2 activa i temp > LLINDAR_ALT_2:
+    desactiva la zona 2
+```
+
+**Nivell 3 — Esquelet amb TODO.** La zona 1 ja funciona (no la toquis); completa només la zona 2.
+```python
+# SA6 - Repte 1 (BASTIDA / esquelet per a l'alumnat)
+#
+# QUE JA ESTA FET (no ho toquis):
+#   - La histeresi de la zona 1 (LLINDAR_BAIX / LLINDAR_ALT / actiu) ja hi es.
+#
+# QUE HAS DE FER TU:
+#   - Afegeix una SEGONA parella de llindars i un segon estat "actiu_2".
+#
+# EINES QUE POTS USAR (nomes conceptes de la SA6):
+#   - temperature()
+#   - variables d'estat (True/False), com "actiu" a termostat_histeresi.py
+
+LLINDAR_BAIX_2 = ___   # TODO 1: tria un llindar baix per a la zona 2
+LLINDAR_ALT_2 = ___    # TODO 2: tria un llindar alt (mes gran que el baix)
+actiu_2 = False
+
+# ... dins del while True, amb la mateixa logica que "actiu":
+if not actiu_2 and temp < LLINDAR_BAIX_2:
+    pass  # TODO 3: activa la zona 2 (actiu_2 = True)
+elif actiu_2 and temp > LLINDAR_ALT_2:
+    pass  # TODO 4: desactiva la zona 2 (actiu_2 = False)
+```
+
+</details>
+
 **Ampliacions graduades.**
 1. *(bàsica)* Mostra al display, amb `display.show()`, una lletra diferent segons quina zona (o zones) té l'actuador activat en cada moment.
 2. *(notable)* Registra amb una llista quantes vegades ha canviat d'estat cada zona durant la sessió de proves, i mostra-ho amb `print()` en prémer A+B.

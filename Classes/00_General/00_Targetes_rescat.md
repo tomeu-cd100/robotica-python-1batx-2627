@@ -10,6 +10,8 @@
 
 Si després del nivell 3 encara estàs encallat: crida el docent (senyal de la classe) o consulta el glossari (`00_Glossari_tecnic.md`).
 
+> Has faltat a la sessió i no saps per on començar? Això no és per a tu: vés a [`00_Vaig_faltar.md`](00_Vaig_faltar.md).
+
 ---
 
 ## SA1 · Introducció a la robòtica

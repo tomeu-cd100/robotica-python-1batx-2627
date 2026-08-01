@@ -56,7 +56,7 @@ Cablega la mascota amb el cablatge **exacte** del [dossier del Projecte T1](../0
 
 > 💡 Si t'encalles, parteix de l'**esquelet** del [dossier de la mascota](../00_General/00_Projecte_T1_Mascota.md#-si-tencalles-lesquelet-del-programa).
 
-**Mini-defensa (breu, davant el docent):** explica **quines reaccions** té la teva mascota i **una decisió** que hagis pres (per exemple, per què aquest llindar o aquest ordre de prioritat).
+**Mini-defensa (breu, davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)):** si et toca, explica **quines reaccions** té la teva mascota i **una decisió** que hagis pres (per exemple, per què aquest llindar o aquest ordre de prioritat). Si no et toca, escriu-ho al quadern.
 
 ### 4 · Repte ⭐ «Llum automàtica d'estudi» (Sessió 3, en acabar la mascota — NUCLI OBLIGATORI)
 

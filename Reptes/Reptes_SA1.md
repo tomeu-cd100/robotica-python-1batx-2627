@@ -22,6 +22,44 @@
 - El display mostra el teu **nom** (`scroll`) i, després, una **imatge fixa** que et representi (`show` amb una `Image` predefinida).
 - Codi comentat, partint de `hola_mon.py`.
 
+<details markdown="1">
+<summary>🧗 Si t'encalles (repte ⭐): pistes esglaonades</summary>
+
+**Nivell 1 — Pista conceptual.** `hola_mon.py` ja et mostra el patró: un text amb `display.scroll()`, una pausa amb `sleep()` i després una imatge fixa amb `display.show()`. Al teu repte només cal canviar **quin** text i **quina** imatge — l'estructura (scroll → sleep → show) es manté igual.
+
+**Nivell 2 — Pseudocodi.**
+```
+importa microbit
+mostra el TEU NOM en desplacament (scroll)
+espera una mica perque es vegi sencer
+mostra una imatge fixa que et representi (show)
+```
+
+**Nivell 3 — Esquelet amb TODO.** Copia'l a un programa nou i completa'l; l'esquelet **no és la solució**, encara has de triar el nom i la imatge.
+```python
+# SA1 - Repte 1 (BASTIDA / esquelet per a l'alumnat)
+#
+# QUE JA ESTA FET (no ho toquis):
+#   - L'import de microbit ja hi es.
+#
+# QUE HAS DE FER TU:
+#   - Substitueix "NOM" pel teu nom (entre cometes).
+#   - Tria una Image predefinida que et representi.
+#
+# EINES QUE POTS USAR (nomes conceptes de la SA1):
+#   - display.scroll(text)    -> mostra text desplacant-se
+#   - sleep(ms)                -> pausa en mil.lisegons
+#   - display.show(Image....)  -> mostra una imatge fixa
+
+from microbit import *
+
+display.scroll("NOM")     # TODO 1: posa el teu nom
+sleep(500)
+display.show(Image.___)   # TODO 2: tria una imatge que et representi
+```
+
+</details>
+
 **Ampliacions graduades.**
 1. *(bàsica)* Afegeix una **segona imatge** (per exemple, alterna dues cares o símbols amb un `sleep()` entre totes dues).
 2. *(notable)* Repeteix el cicle nom→imatge **tres vegades seguides** amb un `while` (sense copiar i enganxar el mateix bloc tres cops).

@@ -4,8 +4,9 @@
 
 > **Ús.** Comprovació breu dels conceptes clau de la SA5: mòdul `radio` (`on`, `config`, `send`, `receive`),
 > grup de ràdio, protocol de missatges amb prefix, i relació esdeveniment → acció.
-> Es pot fer servir com a **repàs formatiu** o com a **prova curta qualificable**
-> (10 preguntes × 1 punt = **nota 0-10**). Durada orientativa: **15-20 min**, individual, sense apunts.
+> **Repàs formatiu (autocorregible); es fa com a deures en acabar la SA.** No qualifica mai
+> (vegeu `../../Programació%20didàctica/06_Avaluacio_criteris_qualificacio.md` §6.2): 10
+> preguntes per autocorregir-te. Durada orientativa: **15-20 min**, individual, sense apunts.
 
 **Nom:** ______________________  **Data:** __________
 

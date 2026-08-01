@@ -30,6 +30,16 @@ Els **3 indicadors** de la R4·DO (claredat, decisió tècnica justificada, resp
 4. **Demostració** — el requisit principal funcionant, amb el propi maquinari.
 5. *(SA9)* **Preguntes** — respondre amb criteri; "no ho sé, però ho comprovaria així" és una resposta vàlida.
 
+## Mostreig rotatiu de la mini-defensa (repte ⭐, SA1-SA8)
+
+> A partir de la tercera ronda de millores, la mini-defensa de la fila «Repte ⭐» de cada guia docent (SA1-SA8) **no la fa tota la classe cada sessió**: amb 20 alumnes i ~10' de franja real, no hi cap. Es fa per **mostreig rotatiu**.
+
+- Cada sessió amb mini-defensa, el docent **tria 5-6 alumnes** (a l'atzar o per llista) perquè la facin davant seu; la resta tanca directament fitxa i quadern.
+- **Registre rotatiu:** el docent porta un tick a la llista de classe (paper o full de càlcul) amb qui ja ha passat aquest trimestre. Mai es torna a triar algú que ja hi ha passat **fins que tothom del grup hi hagi passat**.
+- **Garantia mínima:** l'objectiu és que **tothom passi almenys un cop per trimestre**. Cada trimestre hi ha diverses sessions amb mini-defensa (T1: SA2, SA3; T2: SA4, SA5, SA6; T3: SA7, SA8, i la defensa final de grup classe de la SA9), prou perquè el mostreig de 5-6 alumnes/sessió cobreixi tot el grup. Si a la **darrera oportunitat** del trimestre encara queden alumnes sense passar, tenen **prioritat** en el mostreig d'aquella sessió.
+- Els alumnes **no sortejats** no es queden sense res: apliquen el mateix guió de defensa per escrit al quadern tècnic (problema → solució → decisió justificada), que el docent pot repassar puntualment.
+- Aquest mostreig **no canvia** la SA9 (defensa final, grup classe): allà **tothom** defensa, sense mostreig.
+
 ## Errors típics (i com evitar-los)
 
 | Error | Antídot |

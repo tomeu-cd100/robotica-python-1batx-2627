@@ -22,6 +22,7 @@
 | Dossier tècnic (S4) | **R4** | Quadern tècnic i pràctiques (25 %) |
 | Defensa oral individual, nivell alt (S4, R4·DO) | **R4** | Projectes (45 %) |
 | Treball a l'aula (autonomia, gestió de l'error, responsabilitat) | **R5** | Actitud (10 %) |
+| Mini-check (S2) | — | **No qualifica** (radar formatiu) |
 | Prova pràctica T3 (S5, individual) | — | Proves pràctiques (20 %); **no** reavalua el projecte |
 
 > 🪜 **Versió nucli (ja és assoliment satisfactori):** un repte del [banc](SA9_reptes_proposats.md) amb el seu criteri ⭐ complert, dossier amb les 9 seccions omplertes i defensa amb els 3 indicadors al nivell «Suficient/Notable». **Versió completa:** criteri ⭐⭐/⭐⭐⭐ del repte, iteració documentada, defensa amb decisions justificades i alternatives descartades.
@@ -45,6 +46,8 @@ Tria el teu **repte lliure** al [banc de reptes](SA9_reptes_proposats.md) (o pro
 | S4 | |
 
 ### 2 · Prototipar (Sessió 2)
+
+> 🎯 **Mini-check individual (10', a l'inici d'aquesta sessió; no qualifica).** Integrar sensor + condicional + ràdio en una sola funció pròpia, sense apunts. Banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md).
 
 Munta i programa un **prototip mínim viable**: parteix de la [plantilla de projecte](codi/plantilla_projecte/plantilla_projecte.py) i integra-hi almenys **un element nou** (sensor, actuador o comunicació) sobre el que ja tenies a SA7-SA8. Consulta el [banc de reptes](SA9_reptes_proposats.md) per al maquinari i l'esquema de components del teu repte.
 

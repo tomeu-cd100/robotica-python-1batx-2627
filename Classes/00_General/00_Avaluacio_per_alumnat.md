@@ -12,7 +12,7 @@ Treballes amb el teu **propi micro:bit V2, Micro:shield i kits Keyestudio**, i c
 
 | Part | Pes | Què hi entra | Com anar-hi bé |
 |---|---|---|---|
-| **Projectes i productes** | **45 %** | El producte individual de cada SA (mascota, vehicle, sistema de control, rover…) i la seva defensa. | Fes-lo funcionar, però sobretot **entén-lo**: a la defensa t'ho preguntaran. |
+| **Projectes i productes** | **45 %** | El producte individual de cada SA (mascota, vehicle, sistema de control, rover…) i la seva defensa, **més el repte ⭐** (nucli obligatori) de cada SA1-SA8, que forma part del mateix producte i qualifica igual (R1). | Fes-lo funcionar, però sobretot **entén-lo**: a la defensa t'ho preguntaran. |
 | **Quadern tècnic i pràctiques** | **25 %** | El teu [**quadern digital**](00_Quadern_tecnic.md) (una entrada per SA): esquemes, pseudocodi, codi comentat, errors i com els has resolt, reflexions. | **Escriu-hi cada sessió** (no tot al final). Un error ben documentat hi suma. |
 | **Proves pràctiques** | **20 %** | Una prova individual per trimestre (T1, T2, T3), integrada a l'última sessió de SA3, SA6 i SA9 (**15 %**) + el **millor** dels teus 3 mini-checks del trimestre (**5 %**, vegeu §5). | Practica **tot sol** abans: els mini-checks t'avisen a temps de com vas, i el millor et puja nota. |
 | **Actitud, autonomia i responsabilitat** | **10 %** | Com gestiones el teu treball, els errors, el material propi i els terminis. | Aplica DEPURA abans de rendir-te i té cura del teu maquinari. |
@@ -40,7 +40,7 @@ Les 5 rúbriques del curs, en una línia cadascuna:
 | Activitat | Per a què serveix |
 |---|---|
 | **Prova diagnòstica** (SA1) | Saber d'on parteixes i com adaptar-te el ritme. |
-| **Graella d'activació** (cada sessió) | Recordar el que vas aprendre fa setmanes perquè no s'esborri. Respondre-la malament **no penalitza**: avisa. |
+| **Kata d'activació** (cada sessió, des de la S4) | Un exercici curt d'escriure codi sobre un concepte de fa 1-2 setmanes, perquè no s'esborri. Fer-la malament **no penalitza**: avisa. |
 | **Mini-check individual** (un per SA, SA1-SA9) | 10 minuts **escrivint codi** tot sol, sense IA. És el teu **radar**: et diu si vas bé abans que ho digui una prova. Cap no puntua **el dia que el fas** — però compte: el **millor dels 3 d'un trimestre sí que compta un 5 %** (vegeu §5). |
 | **Diana, exit ticket, coavaluació de la defensa final** | Saber on ets i donar/rebre retorn. Serveixen per millorar, no per puntuar. |
 
@@ -61,6 +61,15 @@ En aquesta matèria **equivocar-se és part del contingut**: tot falla la primer
 - Estan **per nivells**: el nucli ben fet és un 5-6; cada ampliació puja cap al 7-10. Tria fins on arribes.
 - Després de cada prova escriuràs el **pla de millora personal** (3 línies): què m'ha fallat, què practicaré, com ho comprovaré. Es reprèn a l'inici de la SA següent.
 - El **5 %** restant de «Proves pràctiques» surt del **millor dels 3 mini-checks** del trimestre (un per SA, sense apunts): en tancar el trimestre, el docent tria el més ben resolt i li posa nota amb l'escala del semàfor (🟢=9-10 · 🟡=6-8 · 🟠=4-5 · 🔴=1-3). **No es fa mitjana** dels tres: només el millor compta, així que fer-los tots amb honestedat només et pot beneficiar.
+
+### 5b · La porta mínima: cal demostrar que saps escriure codi tot sol
+
+Encara que la mitjana de les 4 parts et doni un 5 o més, **el trimestre només es dona per superat si, a més, compleixes UNA d'aquestes dues condicions** (és la manera d'assegurar que ningú aprova sense haver escrit mai codi sol):
+
+- **almenys un dels teus 3 mini-checks del trimestre surt 🟡 o millor** (no cal que sigui el que qualifica: n'hi ha prou que un dels tres surti almenys 🟡), **o**
+- **treus almenys la meitat de l'ítem obligatori de la prova trimestral que et demana escriure una funció nova** (a T2 i T3: almenys 1 dels 2 punts). **A T1** (que encara no té funcions), l'equivalent és treure almenys **la meitat dels punts dels condicionals del nucli** de la prova.
+
+**Si no arribes a cap de les dues:** no perds el trimestre per sempre. El docent et proposa un **mini-check equivalent** (mateix tipus, enunciat diferent) per fer-lo sol i sense apunts, dins les dues primeres setmanes del trimestre següent o en una tutoria. Si aquest surt 🟡 o millor, la porta queda oberta i el trimestre es dona per superat amb efecte retroactiu.
 
 ## 6 · Si una SA no et surt bé
 

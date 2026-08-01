@@ -28,6 +28,8 @@ L'avaluació és **competencial, contínua, formativa i global**, d'acord amb el
 - **Observació sistemàtica** (rúbrica d'actitud i autoregulació).
 - **Autoavaluació** (dianes, rúbriques compartides).
 
+> **Instruments formatius sense pes en la nota:** la prova diagnòstica (SA1), la graella d'activació i els 9 `SAn_questionari_conceptes.md` (repàs autocorregible de final de SA, fet com a deures) **no qualifiquen mai**: són retorn per a l'alumnat i el docent, no evidència de la ponderació de §6.3.
+
 ## 6.3. Ponderació de la qualificació
 
 | Dimensió | Pes | Instruments |
@@ -53,6 +55,22 @@ Els mini-checks individuals (`../Classes/00_General/00_Mini_checks_individuals.m
 4. **Cada mini-check individual segueix sense qualificar-se el dia que es fa** (segueix sent radar formatiu explícit); només compta, a posteriori, el millor del conjunt del trimestre — així es manté l'incentiu d'escriure sense por i, alhora, es reconeix qui sap escriure codi sol.
 
 La suma global de la ponderació de matèria (45/25/20/10) **no canvia**: només es reparteix internament el 20 % de «Proves pràctiques».
+
+### Porta mínima de programació per superar el trimestre
+
+La ponderació 45/25/20/10 permet, en teoria, compensar una escriptura de codi feble amb altres dimensions (quadern, actitud, ampliacions guiades). Per tancar aquesta escletxa —que un «adaptador hàbil» tregui una nota aprovada sense haver escrit mai codi tot sol— s'hi afegeix un **criteri d'assoliment mínim competencial** (CA1.1), independent de la ponderació i que no la substitueix:
+
+> **Per superar el trimestre cal, com a mínim, UNA** de les dues evidències següents d'escriptura autònoma de codi:
+> 1. **almenys un dels 3 mini-checks del trimestre amb semàfor ≥ 🟡** («se'n surt amb dubtes» o millor), o
+> 2. **l'ítem obligatori «funció nova» de la prova trimestral ≥ la meitat de la seva puntuació** (a T2/T3: ≥ 1 dels 2 punts de l'ítem «escriu una funció nova» — vegeu `Avaluació/Prova_practica_T2.md`/`T3.md`). **A T1**, on encara no hi ha funcions pròpies al nucli, el criteri equivalent és el **nucli de condicionals de la prova** (ítems 2-3 de la graella de `Avaluació/Prova_practica_T1.md`, 3 punts) **≥ la meitat** (≥ 1,5 punts).
+
+Si cap de les dues evidències s'assoleix, el trimestre **no es dona per superat** encara que la mitjana ponderada de les 4 dimensions arribi a 5: és una porta mínima competencial, no una nota afegida ni restada. La qualificació numèrica de les dimensions es manté sense rebaixar-la artificialment; el que canvia és que el trimestre queda **pendent de la porta mínima** fins que es resol amb la mecànica de recuperació.
+
+**Mecànica de recuperació de la porta mínima:** el docent proposa a l'alumne/a un **mini-check equivalent** triat del banc de `../Classes/00_General/00_Mini_checks_individuals.md` (mateixa estructura, enunciat variat), fet **individualment i sense apunts** com l'original, en un d'aquests dos moments:
+- dins de les **dues primeres setmanes** del trimestre següent (s'hi suma al pla de recuperació individual de §6.4 si el trimestre també queda suspès per ponderació), o
+- en una **sessió de tutoria** dedicada, si el trimestre ja ha estat superat per ponderació i només falta la porta mínima.
+
+Si el resultat del mini-check de recuperació és ≥ 🟡, la porta mínima queda **oberta amb efecte retroactiu** sobre el trimestre afectat. Aquesta mecànica és independent de si el trimestre necessita també recuperació d'alguna dimensió ponderada (§6.4): les dues es poden donar alhora, però es resolen amb instruments diferents.
 
 ### Les tres escales que conviuen (i com es relacionen)
 

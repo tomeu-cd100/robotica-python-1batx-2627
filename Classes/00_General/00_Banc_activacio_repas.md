@@ -27,7 +27,7 @@ La taula de la secció «Mapa sessió → kata» indica, per a cada kata, quina 
 3. Correcció **a mà alçada** en 30 segons per alumne, amb el criteri de la fitxa (no es puntua ni es registra com a nota).
 4. Si un concepte falla de manera massiva (més d'un terç de la classe), és un avís per revisar-lo abans de la propera prova (`06_Avaluacio_criteris_qualificacio.md`).
 
-> ⚠️ **Dies sense kata.** No hi ha kata els dies de **prova pràctica** (S11, S22, S34: l'activació d'aquell dia és repàs lliure/dubtes). Als dies amb **mini-check individual**, cal mirar la guia docent sessió a sessió: a la majoria la fila **Activació (10')** és **independent** de la fila «Mini-check» (SA2-S2, SA3-S2, SA4-S2, SA5-S2), així que **sí que hi ha kata**. Només a **S20 (SA6-S2), S24 (SA7-S2) i S28 (SA8-S2)** la guia docent té **una única fila «Mini-check»** que ocupa tota la franja inicial, sense cap fila «Activació» separada: només aquests tres dies **no** tenen kata per aquest motiu (`00_Mini_checks_individuals.md` §Rutina, punt 1). Tampoc n'hi ha els altres dies sense fase d'Activació pròpia a la guia docent: S15 (fabricació pura del vehicle) i S31-S33 (sessions de projecte obert/proves/defensa de SA9). Aquests dies es marquen a la taula amb el motiu.
+> ⚠️ **Dies sense kata.** No hi ha kata els dies de **prova pràctica** (S11, S22, S34: l'activació d'aquell dia és repàs lliure/dubtes). Als dies amb **mini-check individual**, cal mirar la guia docent sessió a sessió: a la majoria la fila **Activació (10')** és **independent** de la fila «Mini-check» (SA2-S2, SA3-S2, SA4-S2, SA5-S2), així que **sí que hi ha kata**. Només a **S20 (SA6-S2), S24 (SA7-S2), S28 (SA8-S2) i S31 (SA9-S2)** la guia docent té **una única fila «Mini-check»** que ocupa tota la franja inicial, sense cap fila «Activació» separada: només aquests quatre dies **no** tenen kata per aquest motiu (`00_Mini_checks_individuals.md` §Rutina, punt 1). Tampoc n'hi ha a **S15** (fabricació pura del vehicle, sense fase d'Activació pròpia a la guia). **S32 i S33** (SA9-S3/S4) sí que tenen kata des de la tercera ronda de millores: com que són les últimes sessions abans de la prova pràctica T3 (S34) i cap concepte post-SA4 (return, try/except, for-col·lecció, FSM, ràdio, llistes) arribava mai al nivell «escriure de zero», s'hi ha afegit una fila **Activació (10')** de **repàs combinat** (3 mini-katas curtes en lloc d'una), retallant 10' d'una altra fase de la mateixa sessió perquè el total no superi les 2 h (vegeu `SA9_guia_docent.md`).
 
 ## Conceptes coberts
 
@@ -69,8 +69,8 @@ variables · `while`/`if`/`elif` · `for` amb `range` · condicionals amb sensor
 | S29 | SA8 · S3 | [K16](#k16--s29--funcionsparametres--escriure-de-zero) | funcions/paràmetres | Escriure de zero |
 | S30 | SA9 · S1 | [K17](#k17--s30--return--completar-buits) | return | Completar buits |
 | S31 | SA9 · S2 | — | *(mini-check SA9, la guia no té fase d'Activació aquell dia)* | — |
-| S32 | SA9 · S3 | — | *(sessió de proves/defenses esglaonades: sense fase d'Activació a la guia)* | — |
-| S33 | SA9 · S4 | — | *(sessió de comunicació/defensa: sense fase d'Activació a la guia)* | — |
+| S32 | SA9 · S3 | [K22](#k22--s32--tryexcept--completar-buits) · [K23](#k23--s32--llistes--completar-buits) · [K24](#k24--s32--for-sobre-col·lecció--completar-buits) | try/except · llistes · for sobre col·lecció | Repàs combinat (3 mini-katas), completar buits |
+| S33 | SA9 · S4 | [K25](#k25--s33--ràdio--completar-buits) · [K26](#k26--s33--fsmdiccionari--completar-buits) · [K27](#k27--s33--return--completar-buits) | ràdio · FSM/diccionari · return | Repàs combinat (3 mini-katas), completar buits |
 | S34 | SA9 · S5 | — | *(prova pràctica T3: repàs lliure)* | — |
 
 ---
@@ -717,22 +717,27 @@ while True:
 
 ### K16 · S29 — funcions/paràmetres — Escriure de zero
 
-**Repassa:** 3a aparició d'aquest concepte al banc (K07 Parsons a S14, K21 completar buits a S17): funció amb paràmetre per moure un motor, com `avancar(velocitat)` de `velocitat_pwm.py`/`rover_missions.py`.
+**Repassa:** 3a aparició d'aquest concepte al banc (K07 Parsons a S14, K21 completar buits a S17): funció amb **dos** paràmetres, un d'ells amb **valor per defecte**, com `girar(costat, velocitat=300)` de `segueix_linia.py`/`telemetria_radio.py`. **Variant a propòsit** del mini-check individual de la SA4 (que demana `avancar(velocitat)`, un sol paràmetre sense valor per defecte): aquí es repassa un cas diferent, no el mateix ítem.
 
 **Enunciat per a l'alumnat:**
-> Sense mirar apunts, escriu (2-4 línies) una funció `avancar(velocitat)` que faci avançar el motor M1 (pins P13/P14) a la velocitat rebuda com a paràmetre, i crida-la amb el valor 500.
+> Sense mirar apunts, escriu (4-6 línies) una funció `girar(costat, velocitat=300)` que faci girar el motor M1 (pins P13/P14) a la velocitat rebuda si `costat` val `'esquerra'`, i el motor M2 (pins P15/P16) si val `'dreta'`. Crida-la un cop passant els dos arguments, i un altre cop **sense** indicar la velocitat (per comprovar que fa servir el valor per defecte).
 
 **Solució completa:**
 ```python
-def avancar(velocitat):
-    pin13.write_analog(velocitat)
-    pin14.write_digital(0)
+def girar(costat, velocitat=300):
+    if costat == 'esquerra':
+        pin13.write_analog(velocitat)
+        pin14.write_digital(0)
+    elif costat == 'dreta':
+        pin15.write_analog(velocitat)
+        pin16.write_digital(0)
 
 
-avancar(500)
+girar('esquerra', 400)
+girar('dreta')
 ```
 
-**Correcció ràpida (30''):** `def avancar(velocitat):` amb dos punts · el nom del paràmetre (`velocitat`) es fa servir **igual** dins de la funció, no un número fix · l'altre pin del motor (P14) es posa sempre a `0` · la crida final és `avancar(500)`, amb parèntesis, fora de la funció.
+**Correcció ràpida (30''):** `def girar(costat, velocitat=300):` amb el valor per defecte **al paràmetre**, no a la crida · `if`/`elif` compara `costat` amb un text entre cometes · `girar('dreta')` (sense segon argument) fa servir automàticament `300`, no peta ni cal repetir-lo.
 
 ---
 
@@ -768,6 +773,232 @@ display.scroll(str(resultat))
 ```
 
 **Correcció ràpida (30''):** cada branca (`if` i `else`) té el seu propi `return` amb un text diferent · la crida `classifica(10)` es fa amb parèntesis i s'assigna a `resultat` · `str(resultat)` abans de `scroll()`.
+
+---
+
+## Repàs combinat pre-T3 (K22-K27)
+
+Sis katas noves, afegides a la tercera ronda de millores perquè cap concepte post-SA4 arribava mai al nivell «escriure de zero» (return, try/except, for-col·lecció, FSM, ràdio i llistes es quedaven a Parsons o completar buits). Es fan a **S32 i S33** (SA9-S3/S4), les dues últimes sessions abans de la prova pràctica T3: **tres mini-katas molt curtes** (2-3' cadascuna) en una única fila «Activació (10')», en lloc d'una de sola, com a repàs espaiat intensiu de tancament de curs.
+
+### K22 · S32 — try/except — Completar buits
+
+**Repassa:** 2a aparició d'aquest concepte al banc (K14 Parsons a S26): ara convertint a número un missatge rebut per ràdio, com `llegeix_dht11()`/`mesura_distancia()`.
+
+**Enunciat per a l'alumnat:**
+> Completa els `___` perquè el programa intenti convertir a número el missatge rebut per ràdio i, si no ho aconsegueix, mostri `"E"` en lloc d'aturar-se.
+> ```python
+> missatge = radio.receive()
+> if missatge is not None:
+>     ___:
+>         valor = int(missatge)
+>         display.scroll(str(valor))
+>     except ___:
+>         display.show("E")
+> ```
+
+**Solució completa:**
+```python
+missatge = radio.receive()
+if missatge is not None:
+    try:
+        valor = int(missatge)
+        display.scroll(str(valor))
+    except ValueError:
+        display.show("E")
+```
+
+**Correcció ràpida (30''):** `try:` i `except ValueError:` van al **mateix** nivell d'indentació, dins de l'`if` · `int(missatge)` (que pot fallar) va dins del `try` · `display.show("E")` només s'executa si la conversió falla.
+
+---
+
+### K23 · S32 — llistes — Completar buits
+
+**Repassa:** 2a aparició d'aquest concepte al banc (K11 Parsons a S21): ara buscant el valor màxim d'una llista de temperatures, com el seguiment de màxim/mínim d'`estacio_base.py` (SA8).
+
+**Enunciat per a l'alumnat:**
+> Completa els `___` perquè la funció retorni el valor més alt d'una llista de temperatures.
+> ```python
+> def maxim(llista):
+>     valor_maxim = llista[0]
+>     for valor in ___:
+>         if valor > ___:
+>             valor_maxim = valor
+>     return ___
+>
+>
+> temperatures = [21, 25, 19, 28, 22]
+> display.scroll(str(maxim(___)))
+> ```
+
+**Solució completa:**
+```python
+def maxim(llista):
+    valor_maxim = llista[0]
+    for valor in llista:
+        if valor > valor_maxim:
+            valor_maxim = valor
+    return valor_maxim
+
+
+temperatures = [21, 25, 19, 28, 22]
+display.scroll(str(maxim(temperatures)))
+```
+
+**Correcció ràpida (30''):** `valor_maxim` s'inicialitza amb el **primer** element (`llista[0]`), no amb `0` (una llista de negatius fallaria) · `for valor in llista:` recorre els **valors**, no índexs · `return valor_maxim` és la darrera línia de la funció.
+
+---
+
+### K24 · S32 — for sobre col·lecció — Completar buits
+
+**Repassa:** 2a aparició d'aquest concepte al banc (K13 Parsons a S25): ara comptant quantes distàncies d'una llista són de perill, en lloc de només mostrar un avís.
+
+**Enunciat per a l'alumnat:**
+> Completa els `___` perquè la funció compti quantes distàncies d'una llista són inferiors a 10.
+> ```python
+> def compta_perill(distancies):
+>     comptador = ___
+>     for d in ___:
+>         if d < ___:
+>             comptador = comptador + 1
+>     return comptador
+>
+>
+> mesures = [12, 8, 5, 20, 9]
+> display.scroll(str(compta_perill(___)))
+> ```
+
+**Solució completa:**
+```python
+def compta_perill(distancies):
+    comptador = 0
+    for d in distancies:
+        if d < 10:
+            comptador = comptador + 1
+    return comptador
+
+
+mesures = [12, 8, 5, 20, 9]
+display.scroll(str(compta_perill(mesures)))
+```
+
+**Correcció ràpida (30''):** `comptador = 0` **abans** del `for` (acumulador, un sol cop) · `for d in distancies:` recorre els valors directament · `comptador = comptador + 1` només dins de l'`if`.
+
+---
+
+### K25 · S33 — ràdio — Completar buits
+
+**Repassa:** 2a aparició d'aquest concepte al banc (K10 Parsons a S19): ara amb un protocol amb prefix `"CMD:"`, com `semafor_rele.py`/`vehicle_seguretat.py` (SA6), en lloc del xat sense protocol.
+
+**Enunciat per a l'alumnat:**
+> Completa els `___` perquè el programa enviï una ordre d'aturada amb prefix `"CMD:"` en prémer A, i la reconegui correctament en rebre-la.
+> ```python
+> PREFIX = "CMD:"
+>
+> if button_a.was_pressed():
+>     radio.send(___ + "S")
+>
+> missatge = radio.receive()
+> if missatge is not None and missatge.___(PREFIX):
+>     ordre = missatge[___:]
+>     if ordre == "S":
+>         aturar()
+> ```
+
+**Solució completa:**
+```python
+PREFIX = "CMD:"
+
+if button_a.was_pressed():
+    radio.send(PREFIX + "S")
+
+missatge = radio.receive()
+if missatge is not None and missatge.startswith(PREFIX):
+    ordre = missatge[len(PREFIX):]
+    if ordre == "S":
+        aturar()
+```
+
+**Correcció ràpida (30''):** `radio.send(PREFIX + "S")` concatena el prefix davant l'ordre · `startswith(PREFIX)` comprova que el missatge és del protocol esperat **abans** de fer-hi res · `missatge[len(PREFIX):]` talla el prefix per quedar-se amb l'ordre.
+
+---
+
+### K26 · S33 — FSM/diccionari — Completar buits
+
+**Repassa:** 2a aparició d'aquest concepte al banc (K12 Parsons a S23): ara amb **tres** estats (SEGUIR/ESQUIVAR/RECUPERAR, com `comportaments.py`/`telemetria_radio.py`) en lloc de dos.
+
+**Enunciat per a l'alumnat:**
+> Completa els `___` perquè la funció canviï d'estat segons el diccionari de transicions de tres estats.
+> ```python
+> SEGUIR, ESQUIVAR, RECUPERAR = range(3)
+> estat = SEGUIR
+>
+> TRANSICIONS = {SEGUIR: ___, ESQUIVAR: RECUPERAR, RECUPERAR: ___}
+>
+>
+> def seguent_estat():
+>     global estat
+>     estat = TRANSICIONS[___]
+>     return estat
+>
+>
+> display.show(str(seguent_estat()))
+> ```
+
+**Solució completa:**
+```python
+SEGUIR, ESQUIVAR, RECUPERAR = range(3)
+estat = SEGUIR
+
+TRANSICIONS = {SEGUIR: ESQUIVAR, ESQUIVAR: RECUPERAR, RECUPERAR: SEGUIR}
+
+
+def seguent_estat():
+    global estat
+    estat = TRANSICIONS[estat]
+    return estat
+
+
+display.show(str(seguent_estat()))
+```
+
+**Correcció ràpida (30''):** `TRANSICIONS` té una entrada per a **cada** estat, sense buits · `TRANSICIONS[estat]` fa servir l'estat **actual** per trobar el següent · `global estat` abans de reassignar-la dins de la funció.
+
+---
+
+### K27 · S33 — return — Completar buits
+
+**Repassa:** 3a aparició d'aquest concepte al banc (K08 Parsons a S16, K17 completar buits a S30): repeteix el nivell **completar buits** (mida reduïda a propòsit perquè hi càpiga dins d'un terç d'una fila d'Activació de 10'), ara amb **tres** branques de retorn, com les zones de `termostat_histeresi.py`/`nivell_llum.py`.
+
+**Enunciat per a l'alumnat:**
+> Completa els `___` perquè la funció retorni `"FRED"` si la temperatura és inferior a 18, `"CALOR"` si és superior a 26, i `"NORMAL"` en la resta de casos.
+> ```python
+> def zona(temp):
+>     if temp ___ 18:
+>         return "FRED"
+>     elif temp ___ 26:
+>         return ___
+>     else:
+>         return "NORMAL"
+>
+>
+> display.scroll(zona(22))
+> ```
+
+**Solució completa:**
+```python
+def zona(temp):
+    if temp < 18:
+        return "FRED"
+    elif temp > 26:
+        return "CALOR"
+    else:
+        return "NORMAL"
+
+
+display.scroll(zona(22))
+```
+
+**Correcció ràpida (30''):** `temp < 18` i `temp > 26` són comparacions, no assignacions (`<`/`>`, no `=`) · cada branca (`if`/`elif`/`else`) té el seu propi `return` amb un text diferent · només **una** branca s'executa per crida.
 
 ---
 

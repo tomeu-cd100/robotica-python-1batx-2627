@@ -12,7 +12,7 @@
 - [ ] Fer el **mini-check** individual (Sessió 2, no qualifica)
 - [ ] Programar el repte **«control remot bàsic»** amb `receptor_vehicle.py` i el meu protocol (Act. 3) → *compta amb R1*
 - [ ] Fer el **repte ⭐** de `Reptes/Reptes_SA5.md` (nucli obligatori) i ensenyar-lo al docent → *compta amb R1*
-- [ ] Fer la **mini-defensa breu** (una decisió justificada) → *compta amb R4*
+- [ ] Fer la **mini-defensa breu** (una decisió justificada; per mostreig — si no et toca, escriu-ho al quadern) → *compta amb R4*
 - [ ] Tenir l'entrada del **quadern tècnic** de la SA5 (què he après · el repte · un error · la meva taula de comandes)
 - [ ] Recordar que el codi i el producte que lliuro són **sempre meus**, encara que hagi provat la ràdio amb un company
 

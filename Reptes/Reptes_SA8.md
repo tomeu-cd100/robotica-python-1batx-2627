@@ -25,6 +25,45 @@
 - Afegeix un **llindar de temperatura** (`LLINDAR_TEMP_ALTA`) i un nou camp al missatge de telemetria (`"AL:1"` si se supera, `"AL:0"` si no).
 - Codi comentat.
 
+<details markdown="1">
+<summary>🧗 Si t'encalles (repte ⭐): pistes esglaonades</summary>
+
+**Nivell 1 — Pista conceptual.** El missatge de telemetria ja és una cadena de text que vas construint amb `+`. Només has d'afegir-hi un tros més: un camp `"AL:1"` o `"AL:0"` segons si la temperatura llegida supera el teu llindar — la mateixa comparació `>` que ja fas servir a altres SA amb llindars.
+
+**Nivell 2 — Pseudocodi.**
+```
+defineix LLINDAR_TEMP_ALTA
+en construir el missatge:
+  si temp > LLINDAR_TEMP_ALTA:
+    alerta val "1"
+  sino:
+    alerta val "0"
+  afegeix ";AL:" + alerta al missatge
+```
+
+**Nivell 3 — Esquelet amb TODO.** La lectura i el missatge base ja hi són; omple només el llindar i el camp d'alerta.
+```python
+# SA8 - Repte 1 (BASTIDA / esquelet per a l'alumnat)
+#
+# QUE JA ESTA FET (no ho toquis):
+#   - La lectura del DHT11 i el missatge "TEL:" ja hi son.
+#
+# QUE HAS DE FER TU:
+#   - Afegeix LLINDAR_TEMP_ALTA i el camp "AL:" al missatge.
+#
+# EINES QUE POTS USAR (nomes conceptes de la SA8, sense res nou):
+#   - comparacio simple (>) amb el llindar
+#   - concatenacio de text amb +
+
+LLINDAR_TEMP_ALTA = ___   # TODO 1: un llindar de temperatura raonable
+
+# ... en construir el missatge, abans de radio.send(missatge):
+alerta = "1" if temp > ___ else "0"   # TODO 2: compara amb el llindar
+missatge = missatge + ";AL:" + alerta
+```
+
+</details>
+
 **Ampliacions graduades.**
 1. *(bàsica)* Mostra al display, amb `display.show()`, una icona diferent quan hi ha alerta activa i quan no n'hi ha.
 2. *(notable)* Compta amb una variable quantes vegades s'ha activat l'alerta des que es va engegar la placa, i mostra-ho per REPL amb `print()` en prémer A+B.

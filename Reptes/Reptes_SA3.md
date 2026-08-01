@@ -23,6 +23,52 @@
 - Afegeix un **LED extern** (pin lliure) que s'encengui quan la llum estigui **per sota** del teu `LLINDAR_FOSCOR`, i s'apagui altrament.
 - Codi comentat.
 
+<details markdown="1">
+<summary>🧗 Si t'encalles (repte ⭐): pistes esglaonades</summary>
+
+**Nivell 1 — Pista conceptual.** `nivell_llum.py` ja et dona la lectura de llum a cada volta del bucle. Tu només necessites comparar aquesta lectura amb `LLINDAR_FOSCOR` i escriure `1` o `0` a un pin digital lliure (per exemple P1) segons el resultat — exactament el mateix patró que un `if`/`else` amb un llindar de la SA3.
+
+**Nivell 2 — Pseudocodi.**
+```
+importa microbit
+defineix LLINDAR_FOSCOR
+mentre sempre:
+  llegeix la llum externa (pin analogic)
+  si la llum es per sota del llindar:
+    encen el LED extern
+  sino:
+    apaga el LED extern
+```
+
+**Nivell 3 — Esquelet amb TODO.** El llindar i el bucle ja hi són; omple només l'encès/apagat del LED.
+```python
+# SA3 - Repte 1 (BASTIDA / esquelet per a l'alumnat)
+#
+# QUE JA ESTA FET (no ho toquis):
+#   - LLINDAR_FOSCOR i el while True: ja hi son.
+#
+# QUE HAS DE FER TU:
+#   - Encen/apaga el LED extern segons la lectura de llum.
+#
+# EINES QUE POTS USAR (nomes conceptes de la SA3):
+#   - pin0.read_analog()          -> 0-1023, sensor de llum extern
+#   - pin1.write_digital(1 o 0)   -> LED extern (P1) ences/apagat
+
+from microbit import *
+
+LLINDAR_FOSCOR = 300
+
+while True:
+    llum = pin0.read_analog()
+    if llum < LLINDAR_FOSCOR:
+        pass  # TODO 1: pin1.write_digital(...)
+    else:
+        pass  # TODO 2: pin1.write_digital(...)
+    sleep(200)
+```
+
+</details>
+
 **Ampliacions graduades.**
 1. *(bàsica)* Afegeix un **segon llindar** ("molt fosc") que faci parpellejar el LED en lloc de quedar-se fix.
 2. *(notable)* Fes que la **intensitat** del LED (PWM, `write_analog`) sigui proporcional a la foscor (com més fosc, més intensitat), amb la funció `mapa()`.

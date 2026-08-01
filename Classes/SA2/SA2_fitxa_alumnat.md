@@ -6,6 +6,8 @@
 
 <!-- /web:only-github -->
 
+> **Per què ara el Micro:shield?** A la SA1 vas fer aparèixer text i imatges al **display** (una sortida senzilla, integrada a la placa) i vas reaccionar a botons. Ara connectaràs el **Micro:shield** i faràs que la micro:bit **actuï sobre el món exterior**: LED, LED RGB, brunzidor i relé. És el mateix salt que fa un sistema embegut real (SA1): passar de mostrar informació a **actuar-hi a sobre**.
+
 > Connectaràs el Micro:shield i faràs que la micro:bit **actuï** sobre components externs: LED, LED RGB, brunzidor i relé. Acabaràs muntant la **mascota** del fil conductor. Tot el treball d'aquesta fitxa és **individual**.
 
 > 🔎 Veuràs `def` en algun exemple o repte d'ampliació: de moment les **funcions** només les **llegim** (per entendre-les), no cal saber escriure-les encara — les aprendrem a la **SA4**.
@@ -62,15 +64,15 @@ Munta el semàfor complet (LED verd/ambre/vermell + brunzidor + relé, [esquema]
 
 > 💡 Si t'encalles, parteix de l'**esquelet** de la secció «Si t'encalles» de la [pàgina de la pràctica de `semafor_rele`](codi/semafor_rele/EXPLICACIO.md).
 
-**Mini-defensa (1', davant el docent):** explica **què fa** el teu semàfor i **una decisió** que hagis pres (per exemple, per què aquest ordre o aquests temps).
+**Mini-defensa (1', davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)):** si et toca, explica **què fa** el teu semàfor i **una decisió** que hagis pres (per exemple, per què aquest ordre o aquests temps). Si no et toca aquesta sessió, escriu la mateixa resposta al quadern.
 
-### 4 · Muntatge de la mascota (Sessió 4)
+### 4 · Repte ⭐ (nucli obligatori, un cop tancat el semàfor)
+
+Fes el **repte ⭐ · Llum de seguretat per a motxilla** de [`Reptes_SA2.md`](../../Reptes/Reptes_SA2.md), en la seva pròpia franja de 25' (Sessió 3, un cop tancat el semàfor; inclou 5' de parella de lectura): amplia `led_parpelleig.py` (el LED de P1 que ja tens muntat des de la Sessió 1 — el mateix que muntaràs dins la mascota a la S4) perquè, mentre el **botó A** està premut, parpellegi **més ràpid** ("mode alerta"); sense prémer'l, parpelleja al ritme normal. És **nucli obligatori** — forma part del producte d'aquesta SA, no és una ampliació. Quan l'acabis, **ensenya'l al docent** perquè el validi.
+
+### 5 · Muntatge de la mascota (Sessió 4)
 
 Segueix el dossier [`00_Projecte_T1_Mascota.md`](../00_General/00_Projecte_T1_Mascota.md): munta la carcassa, cablega el LED (P1) i el brunzidor amb el codi que ja tens fet (`led_parpelleig.py`, `musica_altaveu.py`), i deixa el servo muntat (es programarà a la SA4).
-
-### 5 · Repte ⭐ (nucli obligatori, un cop tancats el semàfor i la mascota)
-
-Fes el **repte ⭐ · Llum de seguretat per a motxilla** de [`Reptes_SA2.md`](../../Reptes/Reptes_SA2.md), en el mateix temps de pràctica que ja tenies previst: amplia `led_parpelleig.py` (el mateix LED de P1 que ja tens muntat a la mascota) perquè, mentre el **botó A** està premut, parpellegi **més ràpid** ("mode alerta"); sense prémer'l, parpelleja al ritme normal. És **nucli obligatori** — forma part del producte d'aquesta SA, no és una ampliació. Quan l'acabis, **ensenya'l al docent** perquè el validi.
 
 ## Producte · Repte «semàfor o llum d'ambient»
 

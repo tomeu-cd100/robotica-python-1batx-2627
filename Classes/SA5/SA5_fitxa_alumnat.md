@@ -60,11 +60,11 @@ Dissenya **4-5 comandes pròpies** (per exemple `F`, `B`, `L`, `R`, `S`) amb un 
 
 Parteix de [`receptor_vehicle.py`](codi/receptor_vehicle/receptor_vehicle.py) i tanca el teu vehicle controlat per ràdio amb el **teu** protocol.
 
-**Mini-defensa (breu, davant el docent):** explica **quin protocol** has dissenyat i **una decisió** (per exemple, per què has triat aquestes comandes o aquesta manera de guardar l'historial).
+**Mini-defensa (breu, davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)):** si et toca, explica **quin protocol** has dissenyat i **una decisió** (per exemple, per què has triat aquestes comandes o aquesta manera de guardar l'historial). Si no et toca, escriu-ho al quadern.
 
 ### 4 · Repte ⭐ (nucli obligatori) (Sessió 3, en acabar el producte)
 
-Un cop tancat el repte «control remot bàsic», fes el **repte ⭐** de [`Reptes_SA5.md`](../../Reptes/Reptes_SA5.md) (xat de classe amb identificació): és **nucli obligatori** —no una ampliació opcional— i s'aprofita el mateix temps de pràctica de la Sessió 3. Ensenya'l al docent perquè el validi.
+Un cop tancat el repte «control remot bàsic», fes el **repte ⭐** de [`Reptes_SA5.md`](../../Reptes/Reptes_SA5.md) (xat de classe amb identificació): és **nucli obligatori** —no una ampliació opcional— i té la seva pròpia franja de 25' a la Sessió 3 (inclou 5' de parella de lectura). Ensenya'l al docent perquè el validi.
 
 ## Producte · Repte «control remot bàsic»
 
