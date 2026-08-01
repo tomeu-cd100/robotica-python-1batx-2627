@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<title>Peces per muntar diagrames de flux</title>
+<style>
+  @page { size: A4; margin: 12mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Arial, sans-serif; color: #111; margin: 0; }
+  h1 { font-size: 15pt; margin: 0 0 3pt; }
+  p.lead { font-size: 9.5pt; color: #333; margin: 0 0 6pt; }
+  h2 { font-size: 10.5pt; margin: 10pt 0 4pt; border-bottom: 1px solid #ccc; padding-bottom: 2pt; }
+  .fila { display: flex; flex-wrap: wrap; gap: 8pt; align-items: center; }
+  .peca { border: 1.4px dashed #888; display: flex; align-items: center; justify-content: center;
+          text-align: center; font-size: 8.6pt; padding: 5pt; page-break-inside: avoid; }
+  .peca .txt { font-size: 7.6pt; color: #444; }
+  .oval    { width: 92pt; height: 40pt; border-radius: 20pt; background: #f7e0e0; border-color: #c0392b; }
+  .rect    { width: 92pt; height: 40pt; background: #e3edf7; border-color: #3d7ab8; }
+  .diamant { width: 96pt; height: 76pt; background: #fbe9d7; border-color: #c97a2b;
+             clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+  .diamant .txt { max-width: 62pt; }
+  .parall  { width: 96pt; height: 40pt; background: #e6f7f5; border-color: #1a9b8a;
+             clip-path: polygon(14% 0, 100% 0, 86% 100%, 0% 100%); }
+  .fletxa  { width: 92pt; height: 26pt; background: #f7f3d8; border-color: #b8973d;
+             font-size: 14pt; line-height: 26pt; }
+</style>
+</head>
+<body>
+<h1>➡️ Peces per muntar diagrames de flux</h1>
+<p class="lead">Retalla les peces (millor sobre cartolina o plastificades) i combina-les sobre la taula per dissenyar el flux del teu programa <strong>abans</strong> d'escriure el codi. Consulta <code>Classes/00_General/00_Glossari_tecnic.md</code> per al significat de cada forma.</p>
+
+<h2>⬭ Inici / Final (ovals) — 6 peces</h2>
+<div class="fila">
+  <div class="peca oval"><span class="txt">INICI</span></div>
+  <div class="peca oval"><span class="txt">FINAL</span></div>
+  <div class="peca oval"><span class="txt">INICI</span></div>
+  <div class="peca oval"><span class="txt">FINAL</span></div>
+  <div class="peca oval"><span class="txt">INICI</span></div>
+  <div class="peca oval"><span class="txt">FINAL</span></div>
+</div>
+
+<h2>▭ Procés / acció (rectangles) — 10 peces en blanc</h2>
+<div class="fila">
+  <div class="peca rect"></div><div class="peca rect"></div><div class="peca rect"></div>
+  <div class="peca rect"></div><div class="peca rect"></div><div class="peca rect"></div>
+  <div class="peca rect"></div><div class="peca rect"></div><div class="peca rect"></div>
+  <div class="peca rect"></div>
+</div>
+
+<h2>◇ Decisió (rombes) — 6 peces en blanc</h2>
+<div class="fila">
+  <div class="peca diamant"><span class="txt">condició?</span></div>
+  <div class="peca diamant"><span class="txt">condició?</span></div>
+  <div class="peca diamant"><span class="txt">condició?</span></div>
+  <div class="peca diamant"><span class="txt">condició?</span></div>
+  <div class="peca diamant"><span class="txt">condició?</span></div>
+  <div class="peca diamant"><span class="txt">condició?</span></div>
+</div>
+
+<h2>▱ Entrada / Sortida de dades (paral·lelograms) — 6 peces en blanc</h2>
+<div class="fila">
+  <div class="peca parall"></div><div class="peca parall"></div><div class="peca parall"></div>
+  <div class="peca parall"></div><div class="peca parall"></div><div class="peca parall"></div>
+</div>
+
+<h2>→ Fletxes de connexió — 12 peces</h2>
+<div class="fila">
+  <div class="peca fletxa">→</div><div class="peca fletxa">↓</div><div class="peca fletxa">→</div>
+  <div class="peca fletxa">↓</div><div class="peca fletxa">→</div><div class="peca fletxa">↓</div>
+  <div class="peca fletxa">→</div><div class="peca fletxa">↓</div><div class="peca fletxa">→</div>
+  <div class="peca fletxa">↓</div><div class="peca fletxa">→</div><div class="peca fletxa">↓</div>
+</div>
+
+<p class="lead" style="margin-top:8pt;"><strong>Com fer-ho servir:</strong> comença sempre amb un oval «INICI», encadena rectangles (accions) i rombes (decisions —surten dos camins: sí/no—) amb fletxes, i acaba amb un oval «FINAL». Els rectangles i rombes en blanc s'omplen a mà amb el que fa el teu programa a cada pas.</p>
+</body>
+</html>

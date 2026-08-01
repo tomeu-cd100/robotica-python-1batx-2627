@@ -18,7 +18,8 @@ anual.md`). El `titol` de cada sessió coincideix literalment amb la
 capçalera «## SESSIÓ n (2 h) — …» de la guia docent corresponent (SA1-SA8;
 SA9 usa les fases de la seva taula «Seqüència de sessions» i queda
 exempta d'aquesta comparació literal, vegeu `tools/qa.py:comprova_
-quadern()`). Pendent (Task 16): enunciats reals de `PROVES` (T1-T3).
+quadern()`). `PROVES` (T1-T3) reflecteix el títol real de cada
+`Avaluació/Prova_practica_Tn.md` (Task 16 completada).
 """
 
 def _s(sa, s, titol, avui, vocab, prova=False):
@@ -39,8 +40,8 @@ _TITOL_SA = {
     "SA9": "Repte final integrador",
 }
 
-# TODO: placeholder d'UNA sessió per SA (vegeu el TODO de dalt). La darrera
-# SA de cada trimestre porta, a més, una sessió de prova pràctica.
+# Una entrada per sessió lectiva real de cada SA. La darrera SA de cada
+# trimestre porta, a més, una sessió de prova pràctica.
 SESSIONS = {
     1: [
         _s("SA1", 1, "Què és un robot?",
@@ -232,16 +233,16 @@ SESSIONS = {
     ],
 }
 
-# Prova pràctica de cada trimestre (Avaluació/Prova_practica_Tn.md).
-# TODO: enunciat i títol pendents; el maquinari ja reflecteix el curs nou.
+# Prova pràctica de cada trimestre (Avaluació/Prova_practica_Tn.md). El
+# títol coincideix literalment amb l'«## » de la 2a línia de cada document.
 PROVES = {
-    1: {"titol": "TODO",
+    1: {"titol": "Estació personal d'alertes",
         "material": "micro:bit V2 · Micro:shield · sensors Keyestudio",
         "reflexio_final": False},
-    2: {"titol": "TODO",
+    2: {"titol": "Vehicle amb màquina d'estats + control amb histèresi",
         "material": "micro:bit V2 · Micro:shield · sensors Keyestudio",
         "reflexio_final": False},
-    3: {"titol": "TODO",
+    3: {"titol": "Rover autònom + telemetria",
         "material": "micro:bit V2 · Micro:shield · sensors Keyestudio · robot mòbil",
         "reflexio_final": True},
 }

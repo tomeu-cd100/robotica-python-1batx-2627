@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<title>Blocs de programació offline</title>
+<style>
+  @page { size: A4; margin: 12mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Arial, sans-serif; color: #111; margin: 0; }
+  h1 { font-size: 15pt; margin: 0 0 3pt; }
+  p.lead { font-size: 9.5pt; color: #333; margin: 0 0 9pt; }
+  .llegenda { display: flex; flex-wrap: wrap; gap: 5pt 12pt; font-size: 8pt;
+              margin: 0 0 10pt; }
+  .llegenda span { display: inline-flex; align-items: center; gap: 4pt; }
+  .llegenda i { width: 9pt; height: 9pt; border-radius: 2px; display: inline-block; }
+  .graella { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6pt; }
+  .bloc { border: 1.4px dashed #888; border-radius: 8pt; padding: 6pt 7pt;
+          font-size: 8.6pt; min-height: 46pt; page-break-inside: avoid;
+          display: flex; flex-direction: column; justify-content: center; }
+  .bloc .cat { font-size: 6.6pt; text-transform: uppercase; letter-spacing: .4pt;
+               opacity: .7; margin: 0 0 2pt; }
+  .bloc code { font-family: Consolas, "Courier New", monospace; font-size: 9.3pt;
+               display: block; font-weight: 600; }
+  .bloc .nota { font-size: 7.4pt; color: #333; margin-top: 2pt; }
+  .sortides   { background: #e8f3e3; border-color: #6ea24a; }
+  .entrades   { background: #e3edf7; border-color: #3d7ab8; }
+  .control    { background: #fbe9d7; border-color: #c97a2b; }
+  .funcions   { background: #f3e3f0; border-color: #a24a8f; }
+  .moviment   { background: #fdecec; border-color: #c0392b; }
+  .radio      { background: #e6f7f5; border-color: #1a9b8a; }
+  .variables  { background: #f7f3d8; border-color: #b8973d; }
+  .temps      { background: #ece5f7; border-color: #7a53b8; }
+  @media print { .graella { gap: 5pt; } }
+</style>
+</head>
+<body>
+<h1>🧩 Blocs de programació offline</h1>
+<p class="lead">48 blocs retallables per construir programes MicroPython sobre la taula, sense ordinador: talla'ls i ordena'ls en files per muntar un programa abans d'escriure'l a la placa. Vocabulari: <code>Classes/00_General/00_Glossari_tecnic.md</code>.</p>
+<div class="llegenda">
+  <span><i style="background:#6ea24a"></i>Sortides</span>
+  <span><i style="background:#3d7ab8"></i>Entrades</span>
+  <span><i style="background:#c97a2b"></i>Control</span>
+  <span><i style="background:#a24a8f"></i>Funcions</span>
+  <span><i style="background:#c0392b"></i>Moviment (rover)</span>
+  <span><i style="background:#1a9b8a"></i>Ràdio</span>
+  <span><i style="background:#b8973d"></i>Variables</span>
+  <span><i style="background:#7a53b8"></i>Temps</span>
+</div>
+<div class="graella">
+
+<div class="bloc sortides"><div class="cat">Sortida</div><code>display.show(Image.HAPPY)</code><div class="nota">mostra una imatge fixa</div></div>
+<div class="bloc sortides"><div class="cat">Sortida</div><code>display.scroll("Text")</code><div class="nota">passa un text pel display</div></div>
+<div class="bloc sortides"><div class="cat">Sortida</div><code>display.clear()</code><div class="nota">apaga tots els LED</div></div>
+<div class="bloc sortides"><div class="cat">Sortida</div><code>pin0.write_digital(1)</code><div class="nota">encén (HIGH) un pin</div></div>
+<div class="bloc sortides"><div class="cat">Sortida</div><code>pin0.write_digital(0)</code><div class="nota">apaga (LOW) un pin</div></div>
+<div class="bloc sortides"><div class="cat">Sortida</div><code>pin0.write_analog(v)</code><div class="nota">PWM: intensitat 0-1023</div></div>
+<div class="bloc sortides"><div class="cat">Sortida</div><code>music.play(music.NYAN)</code><div class="nota">reprodueix una melodia</div></div>
+<div class="bloc sortides"><div class="cat">Sortida</div><code>audio.play(Sound.HAPPY)</code><div class="nota">so amb l'altaveu integrat</div></div>
+
+<div class="bloc entrades"><div class="cat">Entrada</div><code>button_a.is_pressed()</code><div class="nota">cert mentre es prem A</div></div>
+<div class="bloc entrades"><div class="cat">Entrada</div><code>button_a.was_pressed()</code><div class="nota">cert un cop, en soltar</div></div>
+<div class="bloc entrades"><div class="cat">Entrada</div><code>pin0.read_digital()</code><div class="nota">0 o 1</div></div>
+<div class="bloc entrades"><div class="cat">Entrada</div><code>pin0.read_analog()</code><div class="nota">valor 0-1023</div></div>
+<div class="bloc entrades"><div class="cat">Entrada</div><code>accelerometer.get_x()</code><div class="nota">inclinació en un eix</div></div>
+<div class="bloc entrades"><div class="cat">Entrada</div><code>accelerometer.was_gesture("shake")</code><div class="nota">detecta un gest</div></div>
+<div class="bloc entrades"><div class="cat">Entrada</div><code>compass.heading()</code><div class="nota">graus respecte al nord</div></div>
+<div class="bloc entrades"><div class="cat">Entrada</div><code>microphone.sound_level()</code><div class="nota">nivell de so captat</div></div>
+
+<div class="bloc control"><div class="cat">Control</div><code>if condició:</code><div class="nota">decisió d'un sol camí</div></div>
+<div class="bloc control"><div class="cat">Control</div><code>elif altra_condició:</code><div class="nota">segona opció</div></div>
+<div class="bloc control"><div class="cat">Control</div><code>else:</code><div class="nota">la resta de casos</div></div>
+<div class="bloc control"><div class="cat">Control</div><code>while True:</code><div class="nota">bucle sense fi</div></div>
+<div class="bloc control"><div class="cat">Control</div><code>while condició:</code><div class="nota">bucle mentre sigui cert</div></div>
+<div class="bloc control"><div class="cat">Control</div><code>for i in range(n):</code><div class="nota">repeteix n vegades</div></div>
+<div class="bloc control"><div class="cat">Control</div><code>and&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;not</code><div class="nota">combina condicions</div></div>
+<div class="bloc control"><div class="cat">Control</div><code>estat = "STOP"</code><div class="nota">variable d'estat (màquina d'estats)</div></div>
+
+<div class="bloc funcions"><div class="cat">Funció</div><code>def nom_funcio():</code><div class="nota">defineix una funció</div></div>
+<div class="bloc funcions"><div class="cat">Funció</div><code>def nom(param):</code><div class="nota">amb un paràmetre</div></div>
+<div class="bloc funcions"><div class="cat">Funció</div><code>return valor</code><div class="nota">retorna un resultat</div></div>
+<div class="bloc funcions"><div class="cat">Funció</div><code>nom_funcio()</code><div class="nota">crida la funció</div></div>
+<div class="bloc funcions"><div class="cat">Funció</div><code>import radio</code><div class="nota">carrega un mòdul</div></div>
+<div class="bloc funcions"><div class="cat">Funció</div><code># comentari</code><div class="nota">nota que Python ignora</div></div>
+
+<div class="bloc moviment"><div class="cat">Moviment</div><code>avancar()</code><div class="nota">tots dos motors endavant</div></div>
+<div class="bloc moviment"><div class="cat">Moviment</div><code>retrocedir()</code><div class="nota">tots dos motors enrere</div></div>
+<div class="bloc moviment"><div class="cat">Moviment</div><code>girar("esquerra")</code><div class="nota">gira sobre si mateix</div></div>
+<div class="bloc moviment"><div class="cat">Moviment</div><code>girar("dreta")</code><div class="nota">gira sobre si mateix</div></div>
+<div class="bloc moviment"><div class="cat">Moviment</div><code>aturar()</code><div class="nota">para tots dos motors</div></div>
+<div class="bloc moviment"><div class="cat">Moviment</div><code>servo.write_angle(90)</code><div class="nota">posiciona el servo</div></div>
+
+<div class="bloc radio"><div class="cat">Ràdio</div><code>radio.on()</code><div class="nota">activa la ràdio</div></div>
+<div class="bloc radio"><div class="cat">Ràdio</div><code>radio.config(group=1)</code><div class="nota">tria el canal</div></div>
+<div class="bloc radio"><div class="cat">Ràdio</div><code>radio.send("MISSATGE")</code><div class="nota">envia un text</div></div>
+<div class="bloc radio"><div class="cat">Ràdio</div><code>msg = radio.receive()</code><div class="nota">rep un text (o None)</div></div>
+
+<div class="bloc variables"><div class="cat">Variable</div><code>nom = valor</code><div class="nota">assignació</div></div>
+<div class="bloc variables"><div class="cat">Variable</div><code>llindar = 500</code><div class="nota">constant de decisió</div></div>
+<div class="bloc variables"><div class="cat">Variable</div><code>comptador += 1</code><div class="nota">incrementa una variable</div></div>
+<div class="bloc variables"><div class="cat">Variable</div><code>llista = [a, b, c]</code><div class="nota">diverses dades juntes</div></div>
+
+<div class="bloc temps"><div class="cat">Temps</div><code>sleep(1000)</code><div class="nota">pausa en mil·lisegons</div></div>
+<div class="bloc temps"><div class="cat">Temps</div><code>running_time()</code><div class="nota">ms des de l'engegada</div></div>
+
+<div class="bloc variables"><div class="cat">Variable</div><code>if valor > llindar:</code><div class="nota">compara amb una constant</div></div>
+<div class="bloc control"><div class="cat">Control</div><code>try:</code> / <code>except:</code><div class="nota">gestiona un error sense aturar-se</div></div>
+
+</div>
+</body>
+</html>

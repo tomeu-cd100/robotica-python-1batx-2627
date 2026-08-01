@@ -39,6 +39,4 @@ jobs:
         run: python web/_generador/generar_pdf.py
 
       - name: QA (enllaços, cobertura de SA, hores, sintaxi Python)
-        # TODO: treu --nomes-sintaxi quan les 9 SA i el document 08 estiguin
-        # complets (contracte de cobertura de tools/qa.py:comprova_cobertura_sa).
-        run: python tools/qa.py --nomes-sintaxi
+        run: python tools/qa.py

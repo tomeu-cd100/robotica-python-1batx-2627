@@ -18,10 +18,13 @@ Material docent per a la matèria optativa **Robòtica amb Python** de 1r de Bat
 
 ## Estat actual
 
-Aquest repositori és a la fase d'**infraestructura**: generador web, QA automàtic i
-l'esquelet de carpetes ja hi són; el **contingut de les 9 situacions d'aprenentatge
-encara s'està construint**. Mentre no existeixi, `tools/qa.py --nomes-sintaxi` és el
-mode correcte per validar canvis (vegeu més avall).
+El curs està **complet**: infraestructura, programació didàctica (00-18), les 9
+situacions d'aprenentatge (guia docent, fitxa d'alumnat, esquemes, codi, reptes
+i solucionari), avaluació i recursos. `py tools/qa.py` (sense flags) valida tot
+el repositori i ha de donar «✅ QA net.» — és el que executa el CI a cada push.
+Pendent de fase posterior: Classroom real, fotos de muntatges amb maquinari i
+publicació a GitHub Pages (només amb confirmació del docent). Vegeu
+`GUIA_INICI_DOCENT.md` per a l'itinerari de lectura i la checklist d'arrencada.
 
 ## 🎯 Plantejament
 
@@ -97,16 +100,16 @@ material `.md`; `web/` (excepte `_generador/`, `assets/css/estil.css`,
 ## ✅ Passar el QA
 
 ```bash
-py tools/qa.py --nomes-sintaxi
+py tools/qa.py
 ```
 
-Mentre el material de les 9 SA i el document `08_Sequenciacio_temporal_anual.md`
-encara no existeixen, `--nomes-sintaxi` salta els checks de cobertura i de
-contingut (enllaços interns, quadre d'hores, quadern tècnic, lliurables,
-explicacions de pràctica, projectes trimestrals, codi incrustat) i valida només el
-que ja té sentit ara: dependències, sintaxi dels `.py` (`ast.parse`), PII, PDFs
-versionats i mojibake. Quan el contingut estigui complet, treu el flag i executa
-`py tools/qa.py` a seques (és el que farà el CI).
+Comprova cobertura de les 9 SA, enllaços interns del web generat, quadre
+d'hores, sintaxi dels `.py` (`ast.parse`) d'alumnat i de solucionari, PII,
+PDFs versionats, mojibake i coherència dels projectes trimestrals. Ha de donar
+«✅ QA net.» (els avisos `⚠️` de PDFs pendents de regenerar no bloquegen). És
+exactament el que executa `.github/workflows/qa.yml` a cada push i pull
+request. L'opció `--nomes-sintaxi` (salta els checks de cobertura/contingut)
+només té sentit per a un fork que encara no tingui el material complet.
 
 ---
 

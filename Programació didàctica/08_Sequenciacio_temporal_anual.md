@@ -62,7 +62,7 @@ El curs aplica el **fil conductor de tres artefactes individuals** (mascota T1 �
 
 > ⚠️ Amb el fil conductor en marxa, la **primera i la segona retallada** del pla de contingència queden **assignades per endavant** a la fabricació dels artefactes individuals, no disponibles com a marge davant d'imprevistos: el **marge efectiu real és ≈ 0 h**. L'única palanca que queda lliure és la **tercera retallada** (SA7 de 8 h a 6 h, últim recurs).
 >
-> **Mitigació:** com que cada alumne fabrica el seu propi exemplar (mascota/vehicle/rover) i el temps de tall làser/impressió 3D per a ~30 alumnes no és comprimible dins d'una sola sessió, **el docent pretalla les peces base fora d'horari lectiu** (talladora làser en dies previs) i l'alumnat només munta, ajusta i personalitza a l'aula. Això és el que permet que el «consum» de la taula anterior sigui d'una sola sessió per trimestre i no més.
+> **Mitigació:** com que cada alumne fabrica el seu propi exemplar (mascota/vehicle/rover) i el temps de tall làser/impressió 3D per al grup real (15-20 alumnes) no és comprimible dins d'una sola sessió, **el docent pretalla les peces base fora d'horari lectiu** (talladora làser en dies previs) i l'alumnat només munta, ajusta i personalitza a l'aula. Això és el que permet que el «consum» de la taula anterior sigui d'una sola sessió per trimestre i no més.
 >
 > **Senyal d'alerta:** si en acabar el 1r trimestre no s'ha tancat la SA3 (el mateix senyal que activa la retallada 2 més amunt), les peces de la mascota es reparteixen **ja pretallades pel docent**, en lloc d'esperar una sessió de tall làser addicional.
 

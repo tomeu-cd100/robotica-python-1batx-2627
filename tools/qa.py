@@ -250,8 +250,15 @@ def comprova_quadern() -> None:
         for s in sessions:
             if s["sa"] == "SA9":
                 continue
-            guia = (ARREL / "Classes" / s["sa"] /
-                    f"{s['sa']}_guia_docent.md").read_text(encoding="utf-8")
+            guia_path = (ARREL / "Classes" / s["sa"] /
+                         f"{s['sa']}_guia_docent.md")
+            if not guia_path.exists():
+                errors.append(f"[quadern] falta la guia docent "
+                              f"{guia_path.relative_to(ARREL)} (referenciada "
+                              f"des de {s['sa']} S{s['s']} del quadern)")
+                fallats += 1
+                continue
+            guia = guia_path.read_text(encoding="utf-8")
             cap = re.search(rf"^## SESSIÓ {s['s']} \(2 h\) — (.+)$", guia, re.M)
             if not cap or cap.group(1).strip() != s["titol"]:
                 errors.append(f"[quadern] {s['sa']} S{s['s']}: títol «{s['titol']}» "

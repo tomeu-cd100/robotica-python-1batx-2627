@@ -70,7 +70,7 @@ Flux (detall del calendari a [`00_Fil_conductor_construccions.md`](00_Fil_conduc
 
 **Sensors ja integrats a la micro:bit V2** (sense cablejar res): matriu de LED (`display`), altaveu (`audio`/`music`), acceleròmetre (`accelerometer`), sensor de llum (`display.read_light_level()`) i botons A/B.
 
-> 🔑 **Per al docent:** implementació completa de referència al [solucionari del trimestre](../Solucionari/Solucionari_T1_SA1-SA3.md).
+> 🔑 **Per al docent:** implementació completa de referència als solucionaris de [SA1](../../Reptes/Solucionari/SA1/Reptes_SA1_solucions.md), [SA2](../../Reptes/Solucionari/SA2/Reptes_SA2_solucions.md) i [SA3](../../Reptes/Solucionari/SA3/Reptes_SA3_solucions.md).
 
 ## Simular la mascota abans de muntar-la
 

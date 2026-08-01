@@ -75,8 +75,12 @@ IMG_EXT = {".png", ".jpg", ".jpeg", ".svg", ".webp", ".gif"}
 DOC_EXT = {".pdf", ".xlsx", ".xls", ".pptx", ".ppt", ".docx", ".doc",
            ".csv", ".odt", ".ods", ".zip"}
 
-# Bases de GitHub per enllaçar/visualitzar documents sense copiar-los al web
-REPO_SLUG = os.environ.get("REPO_SLUG", "tomeu-cd100/robotica-python-1batx-2627")
+# Bases de GitHub per enllaçar/visualitzar documents sense copiar-los al web.
+# ⚠️ El valor per defecte és una SUPOSICIÓ (encara no hi ha repositori creat):
+# el docent l'ha de substituir pel repositori real abans de publicar, o bé
+# generar el web amb la variable d'entorn REPO_SLUG="usuari/repo" py ....
+# Vegeu GUIA_INICI_DOCENT.md § «Abans de publicar a GitHub Pages».
+REPO_SLUG = os.environ.get("REPO_SLUG", "PENDENT-DOCENT/robotica-python-1batx-2627")
 REPO_URL = f"https://github.com/{REPO_SLUG}"
 PAGES_BASE = f"https://{REPO_SLUG.split('/')[0]}.github.io/{REPO_SLUG.split('/')[1]}"
 RAW_BASE = f"https://raw.githubusercontent.com/{REPO_SLUG}/main/"
@@ -1721,6 +1725,7 @@ def hub_urls(pages: list[Page]) -> dict[str, str]:
         "targ": find_out(pages, "00_Targetes_rescat.md", "classes/index.html"),
         "glos": find_out(pages, "00_Glossari_tecnic.md", "classes/index.html"),
         "quad": find_out(pages, "00_Quadern_tecnic.md", "classes/index.html"),
+        "fil": find_out(pages, "00_Fil_conductor_construccions.md", "classes/index.html"),
     }
 
 
@@ -1795,6 +1800,7 @@ def render_home(pages: list[Page]) -> str:
     u_met, u_seq, u_rub = u["met"], u["seq"], u["rub"]
     u_full, u_trans, u_alum = u["full"], u["trans"], u["alum"]
     u_targ, u_glos = u["targ"], u["glos"]
+    u_fil = u["fil"]
     rutes = f"""
 <h2 class="seccio-sep">Per on començo?</h2>
 <p class="seccio-intro">Tria la teva situació: cada ruta et porta, pas a pas, al que necessites.</p>
@@ -1805,7 +1811,7 @@ def render_home(pages: list[Page]) -> str:
       <li><a href="guia-inici.html">Guia d'inici docent</a> — instal·lació, comptes, checklist i pla B.</li>
       <li><a href="{u_met}">Metodologia</a> — com és una sessió tipus i com es treballa.</li>
       <li><a href="{u_seq}">Calendari del curs</a> — seqüència de SA i pla de contingència.</li>
-      <li><a href="classes/00-general/00-fil-conductor-robots.html">Els tres robots del curs</a> — el fil conductor: què es construeix cada trimestre i quan es fabrica.</li>
+      <li><a href="{u_fil}">Els tres robots del curs</a> — el fil conductor: què es construeix cada trimestre i quan es fabrica.</li>
     </ol>
   </div>
   <div class="ruta-card">
