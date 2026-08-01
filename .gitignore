@@ -1,0 +1,83 @@
+# Configuracio local de Claude Code (permisos, ajustos de maquina)
+.claude/
+
+# Workspace intern de superpowers (specs, plans, notes de treball de l'IA):
+# no es committeja, es material de treball, no material docent publicable.
+.superpowers/
+
+# Cache de Python (generador del web)
+__pycache__/
+*.pyc
+
+# Entorn virtual de Python
+.venv/
+
+# Web GENERAT: es reconstrueix a CI (web/_generador/generar.py) a cada push.
+# Es versionen només els FONTS: estil.css, lloc.js, el generador i web/README.md.
+/web/*.html
+/web/.nojekyll
+/web/classes/
+/web/programacio/
+/web/avaluacio/
+/web/normativa/
+/web/reptes/
+/web/recursos/
+/web/simulacions/
+/web/impresos/
+/web/pdf/
+/web/assets/img/
+/web/assets/css/pygments.css
+/web/assets/js/cerca-index.js
+/web/_generador/_activitats.json
+
+# Fitxers temporals del sistema
+Thumbs.db
+desktop.ini
+~$*
+*.tmp
+
+# Fitxers temporals d'Office en obrir documents
+.~lock.*
+
+# Material massa gros per a GitHub (>100 MB). El contingut ja es guarda
+# descomprimit a la carpeta "Fitxes STEAM Cards curs 2020-2021/".
+Recursos/Fitxes STEAM Cards curs 2020-2021-*.zip
+
+# Llibres i manuals de TERCERS (STEAMakers, ArduinoBlocks, Innova Didactic...):
+# copyright d'altri, no poden anar en un repo public CC BY-SA. Es consulten en
+# local (copia del docent) i l'Excel de Recursos en te els enllacos originals.
+Recursos/_tercers_nomes_local/
+# Material del vehicle micro:bit d'Antonio Romero (CC BY-NC-SA): 101 MB de
+# .hex de MakeCode, guies PDF i fotos — nomes local. L'unic fitxer que es
+# versiona es la copia amb credit a Recursos/plantilles_laser/xassis_rover_ARomero.svg.
+Recursos/rover/
+
+# Eina local d'automatitzacio del Google Classroom (scripts Node +
+# node_modules + credentials.json). NO ha d'anar al repo public:
+# conte credencials i pesa >100 MB. Es material de treball de la maquina.
+# S'ignora tot el contingut EXCEPTE alguns scripts reutilitzables (sense
+# secrets: llegeixen token.json en temps d'execucio, no l'incrusten).
+Material Classroom/*
+# Llibreria compartida + definicions (sense secrets): els scripts de sota en
+# depenen via import; sense elles el codi publicat no s'executa en un clone.
+!Material Classroom/_form_sa_lib.js
+!Material Classroom/sa_definicions.js
+!Material Classroom/config.js
+!Material Classroom/estat_classroom.js
+!Material Classroom/crear_materials_enllac.js
+!Material Classroom/crear_questionaris_conceptes_forms.js
+!Material Classroom/adjuntar_questionaris_classroom.js
+!Material Classroom/actualitzar_fitxes_pdf.js
+!Material Classroom/crear_robots_classroom.js
+!Material Classroom/crear_rubriques_importables_maker.js
+!Material Classroom/crear_questionaris_repas_maker.js
+!Material Classroom/actualitzar_form_gruix_sa5_maker.mjs
+!Material Classroom/moure_carpetes_maker_a_treball.mjs
+!Material Classroom/preparar_drive_maker_inici_curs.mjs
+!Material Classroom/backup_classroom.js
+!Material Classroom/restaurar_classroom.js
+# Carpeta de backups: es versiona l'estructura (.gitkeep) però NO els JSON
+# generats (contingut del curs, es decideix a mà quan versionar-ne un).
+!Material Classroom/backups/
+Material Classroom/backups/*
+!Material Classroom/backups/.gitkeep

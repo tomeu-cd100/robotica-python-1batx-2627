@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-labelledby="titol desc">
+  <title id="titol">Esquema de blocs del vehicle T2 (vista de dalt)</title>
+  <desc id="desc">Xassís de DM vist de dalt amb els dos motoreductors i rodes als laterals, la roda boja al davant, la micro:bit amb Micro:shield i el portapiles al centre, i el LED indicador i el polsador de STOP.</desc>
+  <rect x="0" y="0" width="640" height="420" fill="#ffffff"/>
+  <text x="320" y="34" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#222">Xassís del vehicle (vist de dalt) — xassis_vehicle.svg</text>
+
+  <!-- Xassís -->
+  <rect x="160" y="80" width="320" height="260" rx="16" fill="#e8f1f2" stroke="#3a3a3a" stroke-width="3"/>
+
+  <!-- Roda boja al davant -->
+  <circle cx="320" cy="110" r="16" fill="#adb5bd" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="320" y="65" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#333">roda boja (davant)</text>
+
+  <!-- Motoreductors laterals -->
+  <rect x="90" y="180" width="70" height="110" rx="8" fill="#f2c14e" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="125" y="310" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#333">motor esquerre</text>
+  <text x="125" y="325" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#333">(M1)</text>
+
+  <rect x="480" y="180" width="70" height="110" rx="8" fill="#f2c14e" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="515" y="310" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#333">motor dret</text>
+  <text x="515" y="325" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#333">(M2)</text>
+
+  <!-- Bloc central: micro:bit + shield + portapiles -->
+  <rect x="230" y="160" width="180" height="150" rx="10" fill="#e9ecef" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="320" y="215" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#333">micro:bit V2 +</text>
+  <text x="320" y="233" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#333">Micro:shield</text>
+  <text x="320" y="260" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555">portapiles 4×AA</text>
+
+  <!-- LED + STOP -->
+  <circle cx="270" cy="290" r="9" fill="#2a9d8f" stroke="#3a3a3a" stroke-width="1.5"/>
+  <text x="270" y="315" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#333">LED estat</text>
+
+  <circle cx="370" cy="290" r="9" fill="#e63946" stroke="#3a3a3a" stroke-width="1.5"/>
+  <text x="370" y="315" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#333">STOP manual</text>
+</svg>

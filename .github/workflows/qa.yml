@@ -1,0 +1,42 @@
+name: QA del material (enllaços, cobertura, hores, codi)
+
+# Xarxa de seguretat: falla el push si hi ha enllaços trencats al web generat,
+# una SA incompleta, hores que no quadren o errors de sintaxi als .py
+# d'alumnat (micro:bit V2 + Micro:shield + sensors Keyestudio; MicroPython,
+# sense compilació: no hi ha cap .ino en aquest repositori).
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qa-material:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clona el repositori
+        uses: actions/checkout@v4
+
+      - name: Prepara Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instal·la les dependències del generador
+        run: pip install -r web/_generador/requirements.txt pytest
+
+      - name: Genera el web
+        run: python web/_generador/generar.py
+
+      - name: Tests del generador
+        run: python -m pytest web/_generador/tests -q
+
+      - name: Genera els PDF (perquè el link-check els pugui verificar)
+        run: python web/_generador/generar_pdf.py
+
+      - name: QA (enllaços, cobertura de SA, hores, sintaxi Python)
+        run: python tools/qa.py

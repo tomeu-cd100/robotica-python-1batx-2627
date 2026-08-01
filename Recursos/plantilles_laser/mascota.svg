@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="158mm" height="120mm" viewBox="0 0 158 120">
+<rect x="0" y="0" width="62" height="48" rx="0" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="8" cy="8" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="54" cy="8" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="8" cy="40" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="54" cy="40" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<text x="3" y="10" font-family="sans-serif" font-size="4" fill="#ff0000">BASE</text>
+<rect x="0" y="52" width="62" height="32" rx="0" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="8" cy="60" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="54" cy="60" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="8" cy="76" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="54" cy="76" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<rect x="23" y="54" width="16" height="13" rx="0" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="31" cy="73" r="4.5" fill="none" stroke="#000000" stroke-width="0.2"/>
+<path d="M 24 79 Q 31 81.5 38 79 Q 31 83.5 24 79 Z" fill="none" stroke="#000000" stroke-width="0.2"/>
+<text x="2" y="58" font-family="sans-serif" font-size="3" fill="#ff0000">FRONTAL</text>
+<rect x="0" y="88" width="62" height="32" rx="0" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="8" cy="96" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="54" cy="96" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="8" cy="112" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="54" cy="112" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<rect x="26" y="101" width="10" height="6" rx="0" fill="none" stroke="#000000" stroke-width="0.2"/>
+<text x="2" y="94" font-family="sans-serif" font-size="3" fill="#ff0000">DARRERE</text>
+<rect x="66" y="0" width="62" height="48" rx="0" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="74" cy="8" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="120" cy="8" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="74" cy="40" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="120" cy="40" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<rect x="85" y="5" width="23.5" height="12.5" rx="0" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="82.5" cy="11.25" r="1.0" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="111" cy="11.25" r="1.0" fill="none" stroke="#000000" stroke-width="0.2"/>
+<rect x="78" y="30" width="10.4" height="3.4" rx="0" fill="none" stroke="#000000" stroke-width="0.2"/>
+<rect x="105" y="30" width="10.4" height="3.4" rx="0" fill="none" stroke="#000000" stroke-width="0.2"/>
+<text x="69" y="10" font-family="sans-serif" font-size="4" fill="#ff0000">TAPA</text>
+<rect x="66" y="52" width="48" height="32" rx="0" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="74" cy="60" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="106" cy="60" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="74" cy="76" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="106" cy="76" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<text x="68" y="58" font-family="sans-serif" font-size="3" fill="#ff0000">LAT. A</text>
+<rect x="66" y="88" width="48" height="32" rx="0" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="74" cy="96" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="106" cy="96" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="74" cy="112" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="106" cy="112" r="1.6" fill="none" stroke="#000000" stroke-width="0.2"/>
+<text x="68" y="94" font-family="sans-serif" font-size="3" fill="#ff0000">LAT. B</text>
+<path d="M 140 25.0 L 140 35.0 L 150 35.0 L 150 25.0 A 13 13 0 1 0 140 25.0 Z" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="145" cy="13" r="7.475" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<path d="M 132 61.1 Q 140.45 40.3 145 38.35 Q 149.55 40.3 158 61.1 L 150 61.1 140 74.0 L 150 74.0 L 150 64.0 L 140 61.1 Z" fill="none" stroke="#000000" stroke-width="0.2"/>
+<circle cx="145" cy="52" r="7.475" fill="none" stroke="#ff0000" stroke-width="0.2"/>
+<text x="132" y="84" font-family="sans-serif" font-size="3.2" fill="#ff0000">ORELLES x2:</text>
+<text x="132" y="90" font-family="sans-serif" font-size="3.2" fill="#ff0000">encaixen a la</text>
+<text x="132" y="96" font-family="sans-serif" font-size="3.2" fill="#ff0000">ranura de la TAPA</text>
+</svg>

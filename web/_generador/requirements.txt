@@ -1,0 +1,13 @@
+# Dependències del generador del web (web/_generador/generar.py).
+# Versions fixades perquè el build sigui reproduïble: una versió nova de
+# Markdown o Pygments pot canviar l'HTML generat de forma silenciosa.
+#
+# Instal·lació (recomanat dins d'un entorn virtual):
+#   python -m venv .venv
+#   .venv\Scripts\activate        (Windows)   |   source .venv/bin/activate  (Linux/macOS)
+#   pip install -r web/_generador/requirements.txt
+#
+# generar_pdf.py NO té dependències de Python (només Chrome/Edge instal·lat).
+
+Markdown==3.10.2
+Pygments==2.19.2
