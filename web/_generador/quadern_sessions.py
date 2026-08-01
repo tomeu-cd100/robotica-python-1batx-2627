@@ -38,7 +38,7 @@ _TITOL_SA = {
     "SA2": "Sortides digitals i PWM",
     "SA3": "Entrades i sensors",
     "SA4": "Funcions i moviment",
-    "SA5": "Ràdio i comunicació",
+    "SA5": "Ràdio: robots que parlen",
     "SA6": "Sistemes de control",
     "SA7": "Robòtica mòbil",
     "SA8": "Autonomia i telemetria",
@@ -129,9 +129,21 @@ SESSIONS = {
            "i roda boja, micro:bit i Micro:shield, portapiles, i he fet la "
            "prova d'encesa amb les funcions de moviment ja programades.",
            "fabricacio, muntatge, xassis, vehicle, prova d'encesa"),
-        _s("SA5", 1, _TITOL_SA["SA5"],
-           "TODO: pendent de la guia docent de SA5 (radio.on/config/send/receive).",
-           "TODO"),
+        _s("SA5", 1, "Xat per ràdio: enviar i rebre missatges",
+           "Avui he activat la radio de la meva placa (radio.on, "
+           "radio.config amb un grup) i he enviat i rebut missatges de "
+           "text amb un company, guardant els ultims a una llista.",
+           "radio, group, radio.send, radio.receive, llista"),
+        _s("SA5", 2, "Dissenyar un protocol de comandes",
+           "Avui he dissenyat el meu propi protocol de comandes (prefix "
+           "CMD: + una ordre curta) i l'he enviat amb botons i gestos. He "
+           "fet el mini-check individual (no qualifica).",
+           "protocol, prefix, accelerometer, gest, esdeveniment"),
+        _s("SA5", 3, "Repte «control remot bàsic» (producte de la SA)",
+           "Avui he tancat el repte control remot basic: el vehicle rep "
+           "les meves ordres per radio i les converteix en moviment amb "
+           "les funcions de la SA4. He guardat l'historic en tuples.",
+           "esdeveniment, accio, tupla, historic de comandes"),
         _s("SA6", 1, _TITOL_SA["SA6"],
            "TODO: pendent de la guia docent de SA6 (llaç obert/tancat, histèresi).",
            "TODO"),
