@@ -41,6 +41,8 @@ ___________________________________________________________________
 
 **+ Ampliació (opcional):** fes que el LED RGB canviï de color **seguint el ritme** de la melodia de `musica_altaveu.py` (un color diferent per nota).
 
+**+ Ampliació amb maquinari real (opcional, qui va molt sobrat):** el **Kit 2** inclou una **tira LED adreçable WS2812B** (NeoPixel, ~30 LED; vegeu [`09c_Inventari_kits_disponibles.md`](../../Programació%20didàctica/09c_Inventari_kits_disponibles.md)). Amb el mòdul `neopixel` de MicroPython pots encendre-hi patrons de colors propis (per exemple, un "arc de Sant Martí" o un indicador de nivell). **No es pot simular** a python.microbit.org: cal maquinari real. No forma part del nucli de la SA2; reapareix com a opció al repte final (SA9).
+
 ---
 
 ## Activitat 3 · Repte «semàfor o llum d'ambient» (producte)

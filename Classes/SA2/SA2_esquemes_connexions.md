@@ -37,7 +37,7 @@ El [dossier del Projecte T1 · La mascota](../00_General/00_Projecte_T1_Mascota.
 | Brunzidor | P2 | **SA2** (aquesta SA). |
 | Sensor PIR, polsador, sensor de so... | P8, P12, P4... | **SA3** (properament). |
 
-> Per això la prova d'encesa de la S4 només **valida** el LED/RGB i el so amb el codi ja fet d'aquesta SA: la resta arribarà a la SA3.
+> Per això la prova d'encesa de la S4 només **valida** el LED (P1, amb `led_parpelleig.py`) i el so (amb `musica_altaveu.py`) amb el codi ja fet d'aquesta SA: la resta arribarà a la SA3.
 
 ## 4. Pins analògics (ADC) del micro:bit V2
 

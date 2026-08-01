@@ -68,15 +68,17 @@ Aporta els **sensors de percepció** i les **peces mecàniques** per a la robòt
 - **Sensor d'ultrasons HC-SR04**.
 - **Seguidor de línia.**
 - **Sensor d'humitat del terra.**
+- **Tira LED adreçable WS2812B** (NeoPixel, ~30 LED).
 
 **On s'utilitza:**
 | SA | Ús del Kit 2 |
 |---|---|
+| SA2 | Tira LED WS2812B (NeoPixel): **ampliació** (requereix el mòdul `neopixel`; no simulable a python.microbit.org). |
 | SA3 | Sensor de llum, temperatura, ultrasons, PIR, humitat del terra (entrades). |
 | SA4 | Micro servo(s) i motoreductor (moviment del vehicle). |
 | SA6 | Sensor de temperatura + actuador per a control (llaç tancat). |
 | SA7 | Motoreductors, rodes, seguidor de línia i ultrasò per al rover individual. |
-| SA9 | Sensor d'humitat del terra: **reserva per a SA9** (repte lliure de reg/domòtica, en combinació amb el relé i la bomba d'aigua del Kit 3). |
+| SA9 | Sensor d'humitat del terra: **reserva per a SA9** (repte lliure de reg/domòtica, en combinació amb el relé i la bomba d'aigua del Kit 3). Tira LED WS2812B: **reserva per a SA9** (repte lliure d'indicador lluminós). |
 
 ---
 

@@ -33,7 +33,7 @@
 **Sessió 4 — Fabricació i muntatge de la mascota**
 - [ ] Repartir peces pretallades i personalitzades
 - [ ] Acompanyar el muntatge (dossier [`00_Projecte_T1_Mascota.md`](../00_General/00_Projecte_T1_Mascota.md))
-- [ ] Prova d'encesa: LED/RGB i so funcionant; servo **muntat però no programat** (arriba a SA4)
+- [ ] Prova d'encesa: `led_parpelleig.py` (LED a P1) i `musica_altaveu.py` (so) funcionant; servo **muntat però no programat** (arriba a SA4)
 - [ ] Checklist de muntatge i **retorn ordenat del material** sobrant
 - ⚠️ *Mantra:* el relé **commuta**, no alimenta, el circuit extern
 

@@ -14,7 +14,7 @@ Segona situació d'aprenentatge del curs (1r trimestre). La micro:bit s'encaixa 
 | S4 | 🤖 Muntatge físic de la **mascota** ([Activitat 4](SA2_fitxa_alumnat.md#4--muntatge-de-la-mascota-sessió-4)) | Es queda a l'aula/casa fins a la SA3 |
 | ⭐ | [Repte triat](../../Reptes/Reptes_SA2.md) | El docent el valida |
 | 📓 | Full del quadern tècnic de cada sessió | En acabar cada sessió |
-| 🤖 | Mascota muntada (LED/RGB i so validats, servo muntat) | Es porta a la SA3 |
+| 🤖 | Mascota muntada (LED de P1 i so validats amb `led_parpelleig.py`/`musica_altaveu.py`, servo muntat) | Es porta a la SA3 |
 
 ## Itinerari per sessions
 

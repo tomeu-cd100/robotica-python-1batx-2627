@@ -57,7 +57,7 @@ Munta el semàfor complet (LED verd/ambre/vermell + brunzidor + relé, [esquema]
 
 ### 4 · Muntatge de la mascota (Sessió 4)
 
-Segueix el dossier [`00_Projecte_T1_Mascota.md`](../00_General/00_Projecte_T1_Mascota.md): munta la carcassa, cablega el LED/RGB i el brunzidor amb el codi que ja tens fet, i deixa el servo muntat (es programarà a la SA4).
+Segueix el dossier [`00_Projecte_T1_Mascota.md`](../00_General/00_Projecte_T1_Mascota.md): munta la carcassa, cablega el LED (P1) i el brunzidor amb el codi que ja tens fet (`led_parpelleig.py`, `musica_altaveu.py`), i deixa el servo muntat (es programarà a la SA4).
 
 ## Producte · Repte «semàfor o llum d'ambient»
 

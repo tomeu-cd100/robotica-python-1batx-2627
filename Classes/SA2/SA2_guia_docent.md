@@ -110,18 +110,18 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 
 ## SESSIÓ 4 (2 h) — Fabricació i muntatge de la mascota
 
-> 🧵 **Fil conductor.** Aquesta sessió és la fabricació del **Projecte T1 · La mascota reactiva** (dossier complet: [`00_Projecte_T1_Mascota.md`](../00_General/00_Projecte_T1_Mascota.md)). No hi ha codi nou: el que ja funciona a `codi/` (LED/RGB, so) és el que anirà **dins** de la mascota; els sensors (SA3) hi entraran més endavant.
+> 🧵 **Fil conductor.** Aquesta sessió és la fabricació del **Projecte T1 · La mascota reactiva** (dossier complet: [`00_Projecte_T1_Mascota.md`](../00_General/00_Projecte_T1_Mascota.md)). No hi ha codi nou: el que ja funciona a `codi/` (LED a P1, so) és el que anirà **dins** de la mascota; els sensors (SA3) hi entraran més endavant.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
 | Activació | 10' | Reparteix les peces pretallades (personalitzades per alumne/a, tallades fora d'horari) i la llista de peces del dossier. | Comproven que tenen totes les peces (§ Llista de peces del dossier). |
-| Muntatge | 80' | Acompanya el muntatge pas a pas (§ Muntatge del dossier): base i laterals, fixació de la micro:bit + Micro:shield, servo a la tapa, LED/RGB i brunzidor a la boca, cablatge segons la taula de pins del dossier. | Munten la carcassa i cablegen els components, seguint la taula de pins. |
-| Prova d'encesa | 20' | Supervisa la **prova d'encesa** (§ del dossier): carregar `led_parpelleig.py` o `pwm_led_rgb.py` per comprovar que el LED/RGB de la mascota respon; comprovar que el servo es mou lliurement a mà (**no es programa encara**). | Carreguen un programa ja fet de `codi/` per validar el cablatge; deixen la tapa sense encolar. |
+| Muntatge | 80' | Acompanya el muntatge pas a pas (§ Muntatge del dossier): base i laterals, fixació de la micro:bit + Micro:shield, servo a la tapa, LED i brunzidor a la boca, cablatge segons la taula de pins del dossier. | Munten la carcassa i cablegen els components, seguint la taula de pins. |
+| Prova d'encesa | 20' | Supervisa la **prova d'encesa** (§ del dossier): carregar `led_parpelleig.py` per comprovar que el LED de P1 de la mascota respon i `musica_altaveu.py` per validar el brunzidor/altaveu; comprovar que el servo es mou lliurement a mà (**no es programa encara**). | Carreguen `led_parpelleig.py` i `musica_altaveu.py` per validar el cablatge del LED i del so; deixen la tapa sense encolar. |
 | Tancament | 10' | Checklist de muntatge i **retorn ordenat del material** (cargols, retalls sobrants). Anuncia la SA3 (sensors de la mascota). | Omplen el [checklist alumnat](SA2_checklist_alumnat.md) §muntatge i entreguen el material sobrant. |
 
 > ⏱️ **Marge:** aquesta sessió **es pot alliberar sencera** (pla de contingència, `08_Sequenciacio_temporal_anual.md`): si cal recuperar temps, el repte de la S3 ja fa de producte avaluable i la fabricació es reprograma a la primera sessió lliure sense penalitzar la nota.
 
-**Punts clau:** el servo i el LED/RGB de la mascota **ja funcionen** perquè són el mateix codi de `codi/pwm_led_rgb` i `codi/musica_altaveu` adaptat als pins del dossier; el que hi ha de nou avui és **mecànic** (muntatge físic), no de programació. El servo es mourà de manera programada a la **SA4**.
+**Punts clau:** el LED i el so de la mascota **ja funcionen** perquè són el mateix codi de `codi/led_parpelleig` i `codi/musica_altaveu` adaptat als pins del dossier (només P1 i P2: la mascota **no** fa servir el LED RGB de `pwm_led_rgb`, perquè al seu cablatge complet P8 i P12 ja són el PIR i el polsador de la SA3, i escriure-hi PWM ara entraria en conflicte amb aquests sensors); el que hi ha de nou avui és **mecànic** (muntatge físic), no de programació. El servo es mourà de manera programada a la **SA4**.
 
 **Producte de la SA:** repte «semàfor o llum d'ambient» (LED/RGB/brunzidor/relé amb bucles i PWM), tancat i avaluat a la **S3**. Muntatge físic de la **mascota** a la **S4** (avaluat amb la rúbrica de muntatge del dossier, R2).
 
