@@ -1,17 +1,16 @@
-# SA5 - receptor_vehicle.py  (PRODUCTE de la SA5, Sessio 3)
-# Repte "control remot basic": el vehicle T2 (muntat a la SA4) rep ordres
-# per radio i les converteix en moviment, reutilitzant les MATEIXES funcions
-# de moviment de velocitat_pwm.py/control_per_botons.py (SA4): nomes canvia
-# l'ENTRADA (radio en lloc de botons). Ha d'anar aparellat, mateix GRUP i
-# mateix protocol, amb la placa que porta comandament.py (banc de proves
-# puntual amb un company; el codi que s'avalua es sempre el propi).
-# Cablatge: pins DEFINITIUS del vehicle des de la SA4 (SA5_esquemes_connexions.md,
-# 00_Fil_conductor_construccions.md #1b): M1=P13/P14, M2=P15/P16.
+# SA5 - Repte 2 (SOLUCIO, costat RECEPTOR): interpreta la comanda de
+# velocitat de l'ampliacio 1 ("CMD:V3", "CMD:V5"...) i ajusta la variable
+# VELOCITAT en lloc d'un valor fix, com demana Reptes_SA5.md.
+# Parteix de receptor_vehicle.py (SA5, Sessio 3) i hi afegeix NOMES la
+# interpretacio de les ordres que comencen per "V".
+# Maquinari: vehicle T2 (M1=pin13/pin14, M2=pin15/pin16), com a
+# receptor_vehicle.py. Es fa servir aparellat amb
+# repte2_comandament_gestos.py (mateix GRUP i mateix PREFIX).
 
 from microbit import *
 import radio
 
-GRUP = 1   # ha de coincidir amb el GRUP de comandament.py de la parella
+GRUP = 1   # ha de coincidir amb el GRUP de repte2_comandament_gestos.py
 
 radio.on()
 radio.config(group=GRUP, power=6)
@@ -23,13 +22,7 @@ M1_ENRERE = pin14
 M2_ENDAVANT = pin15
 M2_ENRERE = pin16
 
-VELOCITAT = 400
-
-# Ampliacio (+): historic de comandes rebudes, com a llista de tuples
-# (ordre, instant en ms). Es una introduccio a estructures de dades que la
-# SA6 completara amb mes detall.
-historic_comandes = []
-MAX_HISTORIC = 10
+VELOCITAT = 400   # ja no es una constant fixa: l'ordre "Vn" la pot canviar
 
 
 def avancar(velocitat):
@@ -67,18 +60,21 @@ def aturar():
     M2_ENRERE.write_digital(0)
 
 
-def desa_al_historic(ordre):
-    # Tupla (ordre, instant): una parella de valors que no es pot modificar
-    # un cop creada, a diferencia d'una llista.
-    historic_comandes.append((ordre, running_time()))
-    if len(historic_comandes) > MAX_HISTORIC:
-        historic_comandes.pop(0)
+def canvia_velocitat(ordre):
+    # Ampliacio 1: "V3" -> VELOCITAT = 3*100 = 300, "V5" -> 500, etc.
+    # Nomes es crida si ordre comenca per "V" i la resta son digits.
+    global VELOCITAT
+    xifra = ordre[1:]
+    if xifra.isdigit():
+        VELOCITAT = int(xifra) * 100
+        display.show(Image.ARROW_N)
+        sleep(100)
+        display.clear()
 
 
 def actua(ordre):
-    # Esdeveniment -> accio: relaciona cada ordre rebuda amb una funcio de
-    # moviment ja creada a la SA4 (mateix esquema que els botons A/B, ara
-    # amb una ordre de radio com a entrada).
+    # Esdeveniment -> accio: igual que receptor_vehicle.py, pero ara "V..."
+    # no mou el vehicle, nomes en canvia la velocitat de les properes ordres.
     if ordre == "F":
         display.show(Image.ARROW_N)
         avancar(VELOCITAT)
@@ -94,6 +90,8 @@ def actua(ordre):
     elif ordre == "S":
         display.show(Image.NO)
         aturar()
+    elif ordre.startswith("V"):
+        canvia_velocitat(ordre)
 
 
 aturar()
@@ -103,6 +101,5 @@ while True:
     missatge = radio.receive()
     if missatge is not None and missatge.startswith(PREFIX):
         ordre = missatge[len(PREFIX):]
-        desa_al_historic(ordre)
         actua(ordre)
     sleep(20)
