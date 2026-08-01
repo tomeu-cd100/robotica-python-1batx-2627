@@ -87,7 +87,7 @@
    - c) `return estat`
    - d) `import estat`
 
-10. **[CORREGIR]** Aquest fragment de `vehicle_seguretat.py` té un error real: el vehicle a vegades "no respon" al polsador STOP encara que se'l premi ben clarament. On és l'error?
+10. **[CORREGIR]** Aquest fragment de `vehicle_seguretat.py` no respecta la convenció de seguretat de la SA per a la comanda STOP. Quin és el problema?
     ```python
     while True:
         missatge = radio.receive()
@@ -101,7 +101,7 @@
 
         sleep(20)
     ```
-    - a) El polsador es comprova DESPRÉS de processar la ràdio, no al principi del bucle: hi ha una finestra en què el vehicle pot "ignorar" el polsador si encara està tractant un missatge.
+    - a) El polsador es comprova DESPRÉS de processar la ràdio, no al principi del bucle: encara que amb aquest codi concret el polsador es llegeix igualment a cada volta, no seguir la convenció de "STOP sempre primer" és una mala pràctica de seguretat que deixa el disseny fràgil davant de futurs canvis al bloc de la ràdio.
     - b) Falta un `import radio` al principi del programa.
     - c) `sleep(20)` fa que el programa vagi massa ràpid.
     - d) `read_digital()` no es pot fer servir amb un polsador, només amb un sensor.
@@ -124,13 +124,13 @@ ___________________________________________________________________
 |---|---|---|---|---|---|---|---|---|---|
 | b | c | b | b | b | b | b | b | a | a |
 
-La pregunta 11 és oberta: valora que expliqui que l'STOP s'ha de comprovar **abans que res** a cada volta del bucle i que **totes** les vies (polsador i ràdio) criden la mateixa funció, de manera que mai hi ha un moment en què el vehicle pugui "ignorar" una ordre d'aturada perquè estava processant-ne una altra.
-
 La pregunta 8 és de **traça de codi**: valora que sàpiga seguir pas a pas una transició d'estat condicionada (el mateix patró que `termostat_histeresi.py`), sense executar-lo, no només recordar-ne la definició de memòria.
 
 La pregunta 9 és de **completar codi**: valora que identifiqui que sense `global estat` la funció crea una variable local pròpia i el canvi no es propaga a la variable de fora, tal com passa a `actualitza_estat()` de `vehicle_seguretat.py`.
 
-La pregunta 10 és de **corregir codi**: valora que reconegui l'error real "el polsador es comprova després de la ràdio, no al principi del bucle" (recollit a "Errors freqüents i solució" de la guia docent) i no el confongui amb un simple detall d'estil.
+La pregunta 10 és de **corregir codi**: en aquest fragment concret el bucle és seqüencial (sense `return`/`continue`) i el polsador SÍ es llegeix a cada volta, així que no hi ha cap finestra real en què quedi "ignorat". El que cal reconèixer és una mala pràctica de **prioritat**: la convenció de seguretat d'aquesta SA és comprovar sempre l'aturada d'emergència **primer**, abans de processar qualsevol altra comanda (vegeu "Errors freqüents i solució" de la guia docent), perquè un canvi futur al bloc de la ràdio (per exemple, afegir-hi un `continue` o un `return` anticipat en alguna branca) no acabi deixant el polsador sense comprovar-se. No és un bug demostrable amb aquest codi tal com està escrit, sinó un disseny fràgil que trenca la convenció de seguretat del curs.
+
+La pregunta 11 és oberta: valora que expliqui que l'STOP s'ha de comprovar **abans que res** a cada volta del bucle i que **totes** les vies (polsador i ràdio) criden la mateixa funció, de manera que mai hi ha un moment en què el vehicle pugui "ignorar" una ordre d'aturada perquè estava processant-ne una altra.
 
 ---
 

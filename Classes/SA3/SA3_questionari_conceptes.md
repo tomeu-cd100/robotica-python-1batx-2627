@@ -132,7 +132,7 @@ ___________________________________________________________________
 |---|---|---|---|---|---|---|---|---|---|
 | b | b | a | b | b | b | b | b | a | b |
 
-La pregunta 1 (**TRAÇA**) substitueix una pregunta merament memorística per exigir seguir l'execució d'un codi real (comptador amb *pull-up* i antirebot implícit) i triar què fa, no només reconèixer una instrucció aïllada.
+La pregunta 1 (**TRAÇA**) substitueix una pregunta merament memorística per exigir seguir l'execució d'un codi real (comptador amb *pull-up*) i triar què fa, no només reconèixer una instrucció aïllada. Nota per al docent: aquest fragment **no** té antirebot (a diferència de `mascota_reactiva.py`), així que en una premuda llarga pot incrementar `comptador` diverses vegades; és exactament el problema de sobrecomptatge per rebot que la SA ensenya a resoldre amb `running_time()`, i es pot aprofitar la pregunta per obrir aquest debat a classe encara que no formi part de les opcions de resposta.
 
 La pregunta 3 (**COMPLETAR**) substitueix la llista memorística de pins ADC per demanar completar la línia que falta a `mapa()`, comprovant que l'alumnat entén per què cal un `return` amb la regla de tres, no només que existeix la funció.
 
