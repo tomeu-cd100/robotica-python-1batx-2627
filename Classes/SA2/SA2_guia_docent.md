@@ -64,7 +64,7 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
 | Mini-check | 10' | Passa el **mini-check individual** a l'inici de sessió (banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md#sa2--mini-check-inici-de-la-sessió-2)): de memòria, parpelleig d'un LED per sortida digital (consolida la S1). | Responen individualment (no qualifica). |
-| Activació | 10' | Recorda `write_digital`; pregunta: *"i si vull un LED a mitja llum, no del tot encès ni apagat?"* | Formulen hipòtesis. |
+| Activació | 10' | Recorda `write_digital`; pregunta: *"i si vull un LED a mitja llum, no del tot encès ni apagat?"* 🥋 **Kata del dia:** K18 (if/while) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis. |
 | Explicació | 20' | **PWM** (`pinN.write_analog(0-1023)`): explica el parpelleig ràpid que "enganya l'ull". LED RGB: barrejar colors variant la intensitat de cada canal. Mòdul `music`: `music.play()`, notes i durada. | Prenen notes; prediuen l'efecte d'un `write_analog` creixent. |
 | Pràctica | 55' | Modelatge de [`pwm_led_rgb.py`](codi/pwm_led_rgb/pwm_led_rgb.py) (efecte de respiració + colors combinats) i [`musica_altaveu.py`](codi/musica_altaveu/musica_altaveu.py) (melodia + to segons botó). | Munten LED RGB i brunzidor ([esquemes](SA2_esquemes_connexions.md)); escriuen/proven els dos programes (Activitat 2). |
 | Tancament | 15' | Recull dubtes; presenta el repte de la S3 (semàfor/llum d'ambient). | Anoten al quadern un color RGB propi (valors R/G/B) per provar la sessió vinent. |

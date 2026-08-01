@@ -27,7 +27,7 @@ La taula de la secció «Mapa sessió → kata» indica, per a cada kata, quina 
 3. Correcció **a mà alçada** en 30 segons per alumne, amb el criteri de la fitxa (no es puntua ni es registra com a nota).
 4. Si un concepte falla de manera massiva (més d'un terç de la classe), és un avís per revisar-lo abans de la propera prova (`06_Avaluacio_criteris_qualificacio.md`).
 
-> ⚠️ **Dies sense kata.** No hi ha kata els dies de **prova pràctica** (S11, S22, S34: l'activació d'aquell dia és repàs lliure/dubtes) ni els dies en què el **mini-check individual** ja ocupa la franja d'activació (`00_Mini_checks_individuals.md` §Rutina, punt 1: «aquell dia el mini-check substitueix la graella d'activació») ni els dies sense fase d'Activació pròpia a la guia docent (fabricació pura o sessions de projecte obert de SA9 S3-S4). Aquests dies es marquen a la taula amb el motiu.
+> ⚠️ **Dies sense kata.** No hi ha kata els dies de **prova pràctica** (S11, S22, S34: l'activació d'aquell dia és repàs lliure/dubtes). Als dies amb **mini-check individual**, cal mirar la guia docent sessió a sessió: a la majoria la fila **Activació (10')** és **independent** de la fila «Mini-check» (SA2-S2, SA3-S2, SA4-S2, SA5-S2), així que **sí que hi ha kata**. Només a **S20 (SA6-S2), S24 (SA7-S2) i S28 (SA8-S2)** la guia docent té **una única fila «Mini-check»** que ocupa tota la franja inicial, sense cap fila «Activació» separada: només aquests tres dies **no** tenen kata per aquest motiu (`00_Mini_checks_individuals.md` §Rutina, punt 1). Tampoc n'hi ha els altres dies sense fase d'Activació pròpia a la guia docent: S15 (fabricació pura del vehicle) i S31-S33 (sessions de projecte obert/proves/defensa de SA9). Aquests dies es marquen a la taula amb el motiu.
 
 ## Conceptes coberts
 
@@ -42,19 +42,19 @@ variables · `while`/`if`/`elif` · `for` amb `range` · condicionals amb sensor
 | Sessió | SA · Sessió | Kata | Concepte | Tipus |
 |---|---|---|---|---|
 | S4 | SA2 · S1 | [K01](#k01--s4--ifwhile--parsons) | if/while | Parsons |
-| S5 | SA2 · S2 | — | *(mini-check SA2, substitueix l'activació)* | — |
+| S5 | SA2 · S2 | [K18](#k18--s5--ifwhile--completar-buits) | if/while | Completar buits |
 | S6 | SA2 · S3 | [K02](#k02--s6--variables--parsons) | variables | Parsons |
 | S7 | SA2 · S4 | [K03](#k03--s7--for-range--parsons) | for-range | Parsons |
-| S8 | SA3 · S1 | [K04](#k04--s8--ifwhile--completar-buits) | if/while | Completar buits |
-| S9 | SA3 · S2 | — | *(mini-check SA3, substitueix l'activació)* | — |
+| S8 | SA3 · S1 | [K04](#k04--s8--ifwhile--escriure-de-zero) | if/while | Escriure de zero |
+| S9 | SA3 · S2 | [K19](#k19--s9--variables--completar-buits) | variables | Completar buits |
 | S10 | SA3 · S3 | [K05](#k05--s10--condicionals-amb-sensorsllindar--parsons) | condicionals amb sensors/llindar | Parsons |
 | S11 | SA3 · S4 | — | *(prova pràctica T1: repàs lliure)* | — |
 | S12 | SA4 · S1 | [K06](#k06--s12--ifwhile--escriure-de-zero) | if/while | Escriure de zero |
-| S13 | SA4 · S2 | — | *(mini-check SA4, substitueix l'activació)* | — |
+| S13 | SA4 · S2 | [K20](#k20--s13--condicionals-amb-sensorsllindar--completar-buits) | condicionals amb sensors/llindar | Completar buits |
 | S14 | SA4 · S3 | [K07](#k07--s14--funcionsparametres--parsons) | funcions/paràmetres | Parsons |
 | S15 | SA4 · S4 | — | *(fabricació del vehicle: sense fase d'Activació a la guia)* | — |
 | S16 | SA5 · S1 | [K08](#k08--s16--return--parsons) | return | Parsons |
-| S17 | SA5 · S2 | — | *(mini-check SA5, substitueix l'activació)* | — |
+| S17 | SA5 · S2 | [K21](#k21--s17--funcionsparametres--completar-buits) | funcions/paràmetres | Completar buits |
 | S18 | SA5 · S3 | [K09](#k09--s18--global--parsons) | global | Parsons |
 | S19 | SA6 · S1 | [K10](#k10--s19--radio--parsons) | ràdio | Parsons |
 | S20 | SA6 · S2 | — | *(mini-check SA6, substitueix l'activació)* | — |
@@ -66,7 +66,7 @@ variables · `while`/`if`/`elif` · `for` amb `range` · condicionals amb sensor
 | S26 | SA7 · S4 | [K14](#k14--s26--tryexcept--parsons--️-requereix-activitat-sa7-s2) ⚠️ | try/except | Parsons |
 | S27 | SA8 · S1 | [K15](#k15--s27--log--parsons) | log | Parsons |
 | S28 | SA8 · S2 | — | *(mini-check SA8, la guia no té fase d'Activació aquell dia)* | — |
-| S29 | SA8 · S3 | [K16](#k16--s29--funcionsparametres--completar-buits) | funcions/paràmetres | Completar buits |
+| S29 | SA8 · S3 | [K16](#k16--s29--funcionsparametres--escriure-de-zero) | funcions/paràmetres | Escriure de zero |
 | S30 | SA9 · S1 | [K17](#k17--s30--return--completar-buits) | return | Completar buits |
 | S31 | SA9 · S2 | — | *(mini-check SA9, la guia no té fase d'Activació aquell dia)* | — |
 | S32 | SA9 · S3 | — | *(sessió de proves/defenses esglaonades: sense fase d'Activació a la guia)* | — |
@@ -106,6 +106,39 @@ while True:
 ```
 
 **Correcció ràpida (30''):** `while True:` amb dos punts i tot el cos indentat sota seu · `if`/`else` alineats entre ells i indentats un nivell més · `sleep(100)` dins del bucle (no abans de `while`).
+
+---
+
+### K18 · S5 — if/while — Completar buits
+
+**Repassa:** 2a aparició d'aquest concepte al banc (K01 Parsons a S4): el gest de sacsejada de `dau_sacseig.py` (SA1), en lloc dels botons.
+
+**Enunciat per a l'alumnat:**
+> Completa els `___` perquè, en sacsejar la placa, el programa mostri un número de dau (1-6) a l'atzar.
+> ```python
+> from microbit import *
+> import random
+>
+> while ___:
+>     if accelerometer.was_gesture("shake"):
+>         numero = random.randint(1, ___)
+>         display.show(___(numero))
+>         sleep(1000)
+> ```
+
+**Solució completa:**
+```python
+from microbit import *
+import random
+
+while True:
+    if accelerometer.was_gesture("shake"):
+        numero = random.randint(1, 6)
+        display.show(str(numero))
+        sleep(1000)
+```
+
+**Correcció ràpida (30''):** `while True:` (no `1` ni cap altra cosa) · `random.randint(1, 6)` amb el límit superior **6** (un dau) · `str(numero)` abans de `show()`.
 
 ---
 
@@ -175,20 +208,17 @@ for i in range(VEGADES):
 
 ---
 
-### K04 · S8 — if/while — Completar buits
+### K04 · S8 — if/while — Escriure de zero
 
-**Repassa:** el mateix patró `while`/`if` de K01, amb un cas nou (LED extern en lloc de display).
+**Repassa:** 3a aparició d'aquest concepte al banc (K01 Parsons a S4, K18 completar buits a S5): ara, de zero, amb un cas nou (LED extern en lloc de display).
 
 **Enunciat per a l'alumnat:**
-> Completa els `___` perquè el LED del pin **P1** estigui encès mentre es manté premut el botó A, i apagat en cas contrari.
+> Sense mirar apunts, completa aquest esquelet (màxim 4 línies noves) perquè el LED del pin **P1** estigui encès mentre es manté premut el botó A, i apagat en cas contrari.
 > ```python
 > from microbit import *
 >
-> while ___:
->     if button_a.___():
->         pin1.write_digital(___)
->     else:
->         pin1.write_digital(___)
+> while True:
+>     # escriu aqui 3-4 linies
 >     sleep(50)
 > ```
 
@@ -204,7 +234,7 @@ while True:
     sleep(50)
 ```
 
-**Correcció ràpida (30''):** `True` (no `1` ni cap variable) · `is_pressed()` amb parèntesis (no `was_pressed`, que només detecta el moment de prémer) · `1` a la branca `if` i `0` a l'`else`, no invertits.
+**Correcció ràpida (30''):** `if`/`else` amb dos punts i indentació correcta dins del `while` · `is_pressed()` amb parèntesis (no `was_pressed`, que només detecta el moment de prémer) · `1` a la branca `if` i `0` a l'`else`, no invertits.
 
 ---
 
@@ -245,9 +275,44 @@ while True:
 
 ---
 
+### K19 · S9 — variables — Completar buits
+
+**Repassa:** 2a aparició d'aquest concepte al banc (K02 Parsons a S6): l'acumulador `comptador`, ara comptant polsacions del botó A en lloc de parpellejos.
+
+**Enunciat per a l'alumnat:**
+> Completa els `___` perquè el programa compti cada vegada que es prem el botó A i mostri el comptador actualitzat.
+> ```python
+> from microbit import *
+>
+> comptador = ___
+>
+> while True:
+>     if button_a.was_pressed():
+>         comptador = comptador ___ 1
+>         display.___(str(comptador))
+>     sleep(100)
+> ```
+
+**Solució completa:**
+```python
+from microbit import *
+
+comptador = 0
+
+while True:
+    if button_a.was_pressed():
+        comptador = comptador + 1
+        display.show(str(comptador))
+    sleep(100)
+```
+
+**Correcció ràpida (30''):** `comptador = 0` **fora** del bucle (s'inicialitza un sol cop) · `comptador = comptador + 1` (acumulador, no un valor fix) · `display.show(...)`, amb `str()` abans.
+
+---
+
 ### K06 · S12 — if/while — Escriure de zero
 
-**Repassa:** 3a aparició d'aquest concepte al banc (K01 Parsons, K04 completar buits): ara, de zero.
+**Repassa:** 4a aparició d'aquest concepte al banc (K01 Parsons a S4, K18 completar buits a S5, K04 escriure de zero a S8): repeteix «escriure de zero» amb un cas nou, com marca la progressió a partir de la 3a vegada.
 
 **Enunciat per a l'alumnat:**
 > Sense mirar apunts, completa aquest esquelet (màxim 4 línies noves) perquè es mostri una fletxa cap a la dreta (`Image.ARROW_E`) quan es faci el gest `'right'` amb la placa, i el display s'esborri en cas contrari.
@@ -255,7 +320,7 @@ while True:
 > from microbit import *
 >
 > while True:
->     # escriu aquí 3-4 línies
+>     # escriu aqui 3-4 linies
 >     sleep(100)
 > ```
 
@@ -272,6 +337,45 @@ while True:
 ```
 
 **Correcció ràpida (30''):** `if`/`else` amb dos punts i indentació correcta dins del `while` · `was_gesture('right')` ben escrit (cometes, parèntesi) · `display.clear()` a l'`else` (si no hi és, la fletxa es queda encesa per sempre).
+
+---
+
+### K20 · S13 — condicionals amb sensors/llindar — Completar buits
+
+**Repassa:** 2a aparició d'aquest concepte al banc (K05 Parsons a S10): un llindar de temperatura en lloc d'un llindar de llum, com `termometre.py` (SA3).
+
+**Enunciat per a l'alumnat:**
+> Completa els `___` perquè el programa mostri una cara de sorpresa quan la temperatura superi els 28 graus, i esborri el display en cas contrari.
+> ```python
+> from microbit import *
+>
+> LLINDAR_CALOR = ___
+>
+> while True:
+>     temp = ___()
+>     if temp > LLINDAR_CALOR:
+>         display.show(Image.SURPRISED)
+>     ___:
+>         display.clear()
+>     sleep(200)
+> ```
+
+**Solució completa:**
+```python
+from microbit import *
+
+LLINDAR_CALOR = 28
+
+while True:
+    temp = temperature()
+    if temp > LLINDAR_CALOR:
+        display.show(Image.SURPRISED)
+    else:
+        display.clear()
+    sleep(200)
+```
+
+**Correcció ràpida (30''):** `LLINDAR_CALOR = 28` (un número raonable, no una variable buida) · `temperature()` és la funció que llegeix el sensor intern · `else:` amb dos punts, mateixa indentació que l'`if`.
 
 ---
 
@@ -335,36 +439,69 @@ display.scroll(str(valor))
 
 ---
 
-### K09 · S18 — global — Parsons
+### K21 · S17 — funcions/paràmetres — Completar buits
 
-**Repassa:** `canvia_emocio()` (`mascota_reactiva.py`, SA3) i `actualitza_estat()` (`maquina_estats_semafor.py`), les funcions que canvien una variable definida fora seu amb `global`.
+**Repassa:** 2a aparició d'aquest concepte al banc (K07 Parsons a S14): una funció amb un paràmetre que decideix quina fletxa mostrar, com les funcions de moviment de `funcions_moviments.py`/`velocitat_pwm.py` (SA4).
 
 **Enunciat per a l'alumnat:**
-> Ordena aquestes línies perquè una funció canviï una variable `estat` definida fora d'ella, i mostri el nou valor.
-> ```
-> canvia_estat(1)
-> estat = 0
-> global estat
-> def canvia_estat(nou):
-> display.show(str(estat))
-> estat = nou
+> Completa els `___` perquè la funció mostri una fletxa cap a l'esquerra o cap a la dreta segons el paràmetre rebut, i crida-la amb `'dreta'`.
+> ```python
+> def mostra_fletxa(costat):
+>     if costat == 'esquerra':
+>         display.show(___)
+>     elif costat == ___:
+>         display.show(Image.ARROW_E)
+>
+>
+> ___('dreta')
 > ```
 
 **Solució completa:**
 ```python
-estat = 0
+def mostra_fletxa(costat):
+    if costat == 'esquerra':
+        display.show(Image.ARROW_W)
+    elif costat == 'dreta':
+        display.show(Image.ARROW_E)
 
 
-def canvia_estat(nou):
-    global estat
-    estat = nou
-    display.show(str(estat))
-
-
-canvia_estat(1)
+mostra_fletxa('dreta')
 ```
 
-**Correcció ràpida (30''):** `estat = 0` es defineix **fora** de la funció, abans de tot · `global estat` és la **primera** línia dins del cos de la funció (abans de tocar-la) · la crida `canvia_estat(1)` és fora de la funció.
+**Correcció ràpida (30''):** el paràmetre `costat` es compara amb un text entre cometes (`'esquerra'`/`'dreta'`), no amb un número · el cos de la funció va indentat sota `def` · la crida final `mostra_fletxa('dreta')` és fora de la funció, amb parèntesis i cometes.
+
+---
+
+### K09 · S18 — global — Parsons
+
+**Repassa:** `canvia_emocio()` de `mascota_reactiva.py` (SA3, S8-S10), la primera funció del curs que canvia amb `global` una variable definida fora seu.
+
+**Enunciat per a l'alumnat:**
+> Ordena aquestes línies perquè una funció canviï una variable `emocio` definida fora d'ella, i mostri el nou valor.
+> ```
+> canvia_emocio(1)
+> emocio = 0
+> global emocio
+> def canvia_emocio(nova):
+> display.show(str(emocio))
+> emocio = nova
+> ```
+
+**Solució completa:**
+```python
+emocio = 0
+
+
+def canvia_emocio(nova):
+    global emocio
+    emocio = nova
+    display.show(str(emocio))
+
+
+canvia_emocio(1)
+```
+
+**Correcció ràpida (30''):** `emocio = 0` es defineix **fora** de la funció, abans de tot · `global emocio` és la **primera** línia dins del cos de la funció (abans de tocar-la) · la crida `canvia_emocio(1)` és fora de la funció.
 
 ---
 
@@ -582,20 +719,12 @@ while True:
 
 ---
 
-### K16 · S29 — funcions/paràmetres — Completar buits
+### K16 · S29 — funcions/paràmetres — Escriure de zero
 
-**Repassa:** 2a aparició d'aquest concepte (K07 Parsons): funció amb paràmetre per moure un motor, com `avancar(velocitat)` de `velocitat_pwm.py`/`rover_missions.py`.
+**Repassa:** 3a aparició d'aquest concepte al banc (K07 Parsons a S14, K21 completar buits a S17): funció amb paràmetre per moure un motor, com `avancar(velocitat)` de `velocitat_pwm.py`/`rover_missions.py`.
 
 **Enunciat per a l'alumnat:**
-> Completa els `___` perquè la funció faci avançar el motor M1 (pins P13/P14) a la velocitat que li passis com a paràmetre, i crida-la a 500.
-> ```python
-> def avancar(___):
->     pin13.write_analog(___)
->     pin14.write_digital(0)
->
->
-> ___(500)
-> ```
+> Sense mirar apunts, escriu (2-4 línies) una funció `avancar(velocitat)` que faci avançar el motor M1 (pins P13/P14) a la velocitat rebuda com a paràmetre, i crida-la amb el valor 500.
 
 **Solució completa:**
 ```python
@@ -607,7 +736,7 @@ def avancar(velocitat):
 avancar(500)
 ```
 
-**Correcció ràpida (30''):** el nom del paràmetre (`velocitat`) es fa servir **igual** dins de la funció, no un número fix · l'altre pin del motor (P14) es posa sempre a `0` · la crida final és `avancar(500)`, amb parèntesis.
+**Correcció ràpida (30''):** `def avancar(velocitat):` amb dos punts · el nom del paràmetre (`velocitat`) es fa servir **igual** dins de la funció, no un número fix · l'altre pin del motor (P14) es posa sempre a `0` · la crida final és `avancar(500)`, amb parèntesis, fora de la funció.
 
 ---
 

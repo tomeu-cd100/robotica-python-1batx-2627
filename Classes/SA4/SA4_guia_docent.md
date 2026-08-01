@@ -61,7 +61,7 @@
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Activació | 10' | Recorda el servo (angle fix); pregunta: *"i si un motor no ha d'anar a un angle, sinó girar sense parar?"* | Formulen hipòtesis sobre com es controlaria la velocitat. |
+| Activació | 10' | Recorda el servo (angle fix); pregunta: *"i si un motor no ha d'anar a un angle, sinó girar sense parar?"* 🥋 **Kata del dia:** K20 (condicionals amb sensors/llindar) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis sobre com es controlaria la velocitat. |
 | Explicació | 25' | **Motoreductors** del Kit 2: cada motor porta **dos** pins (un per sentit), i la velocitat és PWM (`write_analog`, com el LED de la SA2). Introdueix els pins **definitius** M1/M2 ([esquemes](SA4_esquemes_connexions.md)): a partir d'avui no es tornen a tocar en tot el curs. | Prenen notes; munten els dos motoreductors seguint l'esquema. |
 | Pràctica | 55' | Modelatge de [`velocitat_pwm.py`](codi/velocitat_pwm/velocitat_pwm.py): `avancar(velocitat)`, `retrocedir(velocitat)`, `girar(costat)`, `aturar()`. | Proven `velocitat_pwm.py` amb els motors alimentats per portapiles (**mai** USB); fan l'Activitat 2 de la fitxa. |
 | Mini-check + Tancament | 30' | **Mini-check individual** (10', escriure una funció amb paràmetre sense apunts; banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md)). Recull dubtes. | Fan el mini-check (no qualifica); anoten al quadern un comentari de cada paràmetre de les seves funcions de moviment. |
