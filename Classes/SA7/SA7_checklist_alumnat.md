@@ -14,7 +14,7 @@
 - [ ] Programar l'**evita-obstacles** amb `evita_obstacles.py` i triar el meu comportament autònom (Act. 3)
 - [ ] Integrar el comportament triat amb `rover_missions.py` i alguna millora (Act. 4) → *compta amb R1 i R3*
 - [ ] Fer el **repte ⭐** de `Reptes/Reptes_SA7.md` (nucli obligatori) i ensenyar-lo al docent → *compta amb R1*
-- [ ] Fer la **mini-defensa breu** (una decisió justificada) → *compta amb R4*
+- [ ] Fer la **mini-defensa breu** (una decisió justificada; per mostreig — si no et toca, escriu-ho al quadern) → *compta amb R4*
 - [ ] Tenir l'entrada del **quadern tècnic** de la SA7 (què he après · el repte · un error · els meus llindars i factors)
 - [ ] Recordar que el rover reutilitza les funcions de moviment de la SA4 (`avancar/retrocedir/girar/aturar`); a la SA7 `girar()` guanya un segon paràmetre opcional de velocitat per als girs suaus del seguidor de línia
 

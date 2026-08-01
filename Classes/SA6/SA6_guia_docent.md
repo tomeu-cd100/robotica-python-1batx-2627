@@ -76,20 +76,19 @@
 ## SESSIÓ 3 (2 h) — Repte «vehicle amb aturada d'emergència» (producte de la SA — es tanca el Projecte T2)
 
 > 🎯 **Producte de la SA6.** Aquest repte **tanca el Projecte T2**: s'avalua amb **R1** (funcionament), **R3** (criteri "Autonomia/control") i **R4** (documentació i defensa). El sensor de temperatura/relé i l'estat ALERTA són **+ampliació**, no nucli.
->
-> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
 
 > ⭐ **Repte nucli obligatori.** Un cop tancat el producte, tothom fa el repte **⭐** de [`Reptes_SA6.md`](../../Reptes/Reptes_SA6.md) (fila pròpia a la taula, més avall). Els reptes **⭐⭐/⭐⭐⭐** continuen sent ampliació opcional per a qui vagi sobrat.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
 | Activació | 10' | Mostra [`vehicle_seguretat.py`](codi/vehicle_seguretat/EXPLICACIO.md) **sense executar-lo** (PRIMM): pregunta què passa si arriba `"X"` mentre el vehicle avança. 🥋 **Kata del dia:** K11 (llistes) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen el comportament davant de cada comanda, amb èmfasi en la prioritat de l'STOP. |
-| Explicació | 20' | Sensor de temperatura (Kit 2 / intern) i **DHT11** (Kit 3) com a **+ampliació**: exemple de "termòstat" integrat amb la màquina d'estats del vehicle (mateix esquema d'histèresi de la Sessió 1, ara amb el relé del Kit 3). Recorda que **no** és control proporcional. | Prenen notes; qui vagi sobrat integra el sensor com a tercer estat ALERTA (opcional). |
-| Repte | 55' | Acompanya el tancament individual del repte «vehicle amb aturada d'emergència»: cadascú prova el **seu** protocol complet (F/B/L/R/S/X) amb el comandament d'un company o del docent. | Tanquen `vehicle_seguretat.py`: protocol de ràdio + màquina d'estats + STOP prioritari + LED. Proven l'STOP amb el polsador i amb `"X"` per ràdio. |
-| **Repte ⭐ (nucli obligatori)** | 15' | Un cop tancat el producte, repte **⭐** de [`Reptes_SA6.md`](../../Reptes/Reptes_SA6.md) (termòstat de dues zones). | Fan el repte ⭐; 🤝 **parella de lectura (5')** abans de lliurar-lo; l'ensenyen al docent perquè el validi. Qui vagi sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
-| Tancament | 20' | Recull dubtes; **mini-defensa breu** de cada alumne/a (2-3', R4·DO): decisió de disseny justificada. | Mini-defensa; anoten al quadern el diagrama d'estats final i una decisió justificada. |
+| Explicació | 10' | Sensor de temperatura (Kit 2 / intern) i **DHT11** (Kit 3) com a **+ampliació**, en una explicació comprimida (el PRIMM de l'Activació ja ha fet mitja feina): exemple de "termòstat" integrat amb la màquina d'estats del vehicle (mateix esquema d'histèresi de la Sessió 1). Recorda que **no** és control proporcional. | Prenen notes; qui vagi sobrat integra el sensor com a tercer estat ALERTA (opcional). |
+| Repte | 45' | Acompanya el tancament individual del repte «vehicle amb aturada d'emergència»: cadascú prova el **seu** protocol complet (F/B/L/R/S/X) amb el comandament d'un company o del docent. | Tanquen `vehicle_seguretat.py`: protocol de ràdio + màquina d'estats + STOP prioritari + LED. Proven l'STOP amb el polsador i amb `"X"` per ràdio. |
+| **Repte ⭐ (nucli obligatori)** | 25' | Un cop tancat el producte, repte **⭐** de [`Reptes_SA6.md`](../../Reptes/Reptes_SA6.md) (termòstat de dues zones). | Fan el repte ⭐; 🤝 **parella de lectura (5', dins d'aquests 25')** abans de lliurar-lo; l'ensenyen al docent perquè el validi. Qui vagi sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
+| Mini-defensa (MOSTREIG) + tancament | 10' | Recull dubtes; **mini-defensa breu, per MOSTREIG rotatiu** (2-3', R4·DO): tria **5-6 alumnes** (registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)) perquè justifiquin una decisió de disseny; la resta tanca directament. | Els sortejats fan la mini-defensa; la resta anota al quadern el diagrama d'estats final i una decisió justificada. |
+| **Marge/imprevistos** | 20' | Coixí per a arrencada i recollida: el temps efectiu real d'aula és ~100' (no 120'); aquesta fila ho fa explícit. | — |
 
-> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: l'ampliació del sensor de temperatura/DHT11 (deixa-la com a **+ampliació** per a qui vagi sobrat; l'STOP prioritari amb polsador i ràdio és el nucli innegociable).
+> ⏱️ **Marge:** la fila «Marge/imprevistos» (20') ja recull que el temps efectiu real és ~100'. Si encara vas just, retalla primer: l'ampliació del sensor de temperatura/DHT11 (deixa-la com a **+ampliació** per a qui vagi sobrat; l'STOP prioritari amb polsador i ràdio és el nucli innegociable).
 
 **Punts clau:** el vehicle **no aprèn cap funció de moviment nova**: reutilitza `avancar()`/`retrocedir()`/`girar()`/`aturar()` de la SA4 i el protocol `"CMD:"` de la SA5; l'única cosa realment nova és la **màquina d'estats amb STOP prioritari**. La comanda `"X"` té la mateixa prioritat màxima que el polsador físic: totes dues vies criden **exactament** la mateixa funció `actualitza_estat(STOP)`.
 

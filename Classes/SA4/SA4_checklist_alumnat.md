@@ -11,7 +11,7 @@
 - [ ] Muntar els dos **motoreductors** i provar `velocitat_pwm.py` (Act. 2)
 - [ ] Fer el **mini-check** individual (Sessió 2, no qualifica)
 - [ ] Programar el repte **«control per botons»** amb la meva pròpia seqüència (Act. 3) → *compta amb R1 i R2*
-- [ ] Fer la **mini-defensa breu** (una decisió justificada) → *compta amb R4*
+- [ ] Fer la **mini-defensa breu** (una decisió justificada; per mostreig — si no et toca, escriu-ho al quadern) → *compta amb R4*
 - [ ] Fer el **repte ⭐** de `Reptes/Reptes_SA4.md` (nucli obligatori) i ensenyar-lo al docent → *compta amb R1*
 - [ ] Muntar físicament el **vehicle T2** (Sessió 4) i fer la prova d'encesa → *compta amb R2*
 - [ ] Tenir l'entrada del **quadern tècnic** de la SA4 (què he après · el repte · un error · muntatge)

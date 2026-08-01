@@ -100,15 +100,16 @@ La SA1 no només respon *"què és un robot?"*: també presenta **com treballare
 
 | Fase (PRIMM) | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| **Predir** | 15' | Projecta `hola_mon.py` **sense executar-lo**: *"Què creieu que farà? Què fa cada línia?"* | Escriuen la seva **predicció** a la fitxa (Activitat 4). |
+| **Predir** | 10' | Projecta `hola_mon.py` **sense executar-lo**: *"Què creieu que farà? Què fa cada línia?"* | Escriuen la seva **predicció** a la fitxa (Activitat 4). |
 | **Executar** | 10' | Carrega el programa (simulador o placa real). | Comproven la predicció; comenten diferències. |
-| **Investigar** | 20' | Lectura guiada: `from microbit import *`, `display.scroll()`, `display.show()`, `Image`. | Anoten què fa cada part i per què. |
-| **Modificar** | 25' | Demana canviar el text i afegir una imatge diferent. | Modifiquen el text i la imatge i observen l'efecte. |
-| **Crea** | 20' | Proposa el programa **`emocions_botons`**: els botons A/B canvien la cara del display. | Escriuen/proven; comparen solucions. |
-| **Repte ⭐ (nucli obligatori)** | 10' | Repte **⭐ · Targeta de benvinguda digital** de [`Reptes_SA1.md`](../../Reptes/Reptes_SA1.md): a partir de `hola_mon.py`, mostra el nom (`scroll`) i una imatge que el representi (`show`). | Fan el repte ⭐; abans de lliurar-lo, 🤝 **parella de lectura (5')** amb un company (vegeu [`00_Parella_de_lectura.md`](../00_General/00_Parella_de_lectura.md)); l'ensenyen al docent perquè el validi. Qui acaba aviat continua amb `dau_sacseig` i els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
-| **Debat + tancament** | 20' | Mini-debat **ètica de l'automatització** (ODS); presenta la **fitxa-pòster** ([`SA1_poster_robot_plantilla.md`](SA1_poster_robot_plantilla.md)). | Reflexió escrita al quadern; trien el robot del pòster. |
+| **Investigar** | 15' | Lectura guiada: `from microbit import *`, `display.scroll()`, `display.show()`, `Image`. | Anoten què fa cada part i per què. |
+| **Modificar** | 20' | Demana canviar el text i afegir una imatge diferent. | Modifiquen el text i la imatge i observen l'efecte. |
+| **Crea** | 10' | Proposa el programa **`emocions_botons`**: els botons A/B canvien la cara del display (guió comprimit: el pas «Predir» del PRIMM ja ha fet mitja feina d'explicació). | Escriuen/proven; comparen solucions. |
+| **Repte ⭐ (nucli obligatori)** | 25' | Repte **⭐ · Targeta de benvinguda digital** de [`Reptes_SA1.md`](../../Reptes/Reptes_SA1.md): a partir de `hola_mon.py`, mostra el nom (`scroll`) i una imatge que el representi (`show`). | Fan el repte ⭐; abans de lliurar-lo, 🤝 **parella de lectura (5', dins d'aquests 25')** amb un company (vegeu [`00_Parella_de_lectura.md`](../00_General/00_Parella_de_lectura.md)); l'ensenyen al docent perquè el validi. Qui acaba aviat continua amb `dau_sacseig` i els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
+| **Debat + tancament** | 10' | Mini-debat **ètica de l'automatització** (ODS); presenta la **fitxa-pòster** ([`SA1_poster_robot_plantilla.md`](SA1_poster_robot_plantilla.md)). | Reflexió escrita al quadern; trien el robot del pòster. |
+| **Marge/imprevistos** | 20' | Coixí per a arrencada i recollida: el temps efectiu real d'aula és ~100' (no 120'); aquesta fila ho fa explícit. | — |
 
-> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: **els reptes ⭐⭐/⭐⭐⭐ de `Reptes_SA1.md`** (inclosa l'ampliació `dau_sacseig`), que queden com a feina opcional; el repte **⭐ (nucli obligatori)** s'ha de mantenir, encara que calgui acabar-lo fora de sessió.
+> ⏱️ **Marge:** la fila «Marge/imprevistos» (20') ja recull que el temps efectiu real és ~100'. Si encara vas just, retalla primer: **els reptes ⭐⭐/⭐⭐⭐ de `Reptes_SA1.md`** (inclosa l'ampliació `dau_sacseig`), que queden com a feina opcional; el repte **⭐ (nucli obligatori)** s'ha de mantenir, encara que calgui acabar-lo fora de sessió.
 
 > 🎯 **Mini-check individual (10', a l'inici d'aquesta sessió).** Abans de començar el bloc PRIMM, passa el mini-check de la SA1: banc complet a [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md#sa1--mini-check-inici-de-la-sessió-3). Sense mirar `hola_mon.py`, l'alumnat **escriu de zero** un programa curt (`display.scroll`/`sleep`/`display.show`/`sleep`) que mostri el seu nom i després una imatge fixa. No qualifica el dia que es fa (radar formatiu), però el millor mini-check del trimestre sí compta un 5 % — vegeu el banc complet.
 

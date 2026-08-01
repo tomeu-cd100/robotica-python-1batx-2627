@@ -82,6 +82,8 @@ Les defenses orals **es repeteixen tot el curs**: unes puntuen a la R4 (SA2 S4, 
 
 > La nota de la defensa **continua entrant per la R4** (fila «Defensa oral») només en els moments marcats «Sí»: aquesta mini-rúbrica és el **desglossament formatiu** d'aquella fila, no una rúbrica nova al còmput. Les mini-defenses de **SA3 S3** i **SA7 S4** són **exclusivament formatives** (retorn oral amb els mateixos 3 indicadors, sense nota): preparen l'alumnat per a les defenses graduades següents (SA4 i SA9 respectivament) sense avançar-ne la nota.
 
+> ⏱️ **Mostreig rotatiu (SA1-SA8).** Cap d'aquestes mini-defenses les fa tota la classe la mateixa sessió: el temps d'aula real (~10' dins la fila «Repte ⭐/Mini-defensa» de la guia docent) només dona per a **5-6 alumnes/sessió**, triats amb un registre rotatiu que garanteix que **tothom hi passa almenys un cop per trimestre** (mecànica completa a [`00_Guia_defensa_oral.md`](../Classes/00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)). Per als alumnes **no sortejats** en una sessió marcada «Sí», la nota d'aquell criteri de la R4 s'agafa de la **primera sessió posterior del mateix trimestre** en què sí que passin (o, si el trimestre s'acaba abans, del quadern tècnic amb el mateix guió de defensa). La SA9 és l'única excepció: allà defensa **tothom**, sense mostreig.
+
 ## R5 · Rúbrica d'actitud i autoregulació
 
 > 🔗 **Traçabilitat:** aquesta rúbrica avalua sobretot **CA5.1** (gestionar individualment un projecte tecnològic complet) i **CA5.2** (elaborar documentació tècnica pròpia i comunicar/defensar la solució), lligats a **CE-R5**. Detall dels criteris a `06_Avaluacio_criteris_qualificacio.md`.

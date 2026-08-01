@@ -120,19 +120,18 @@
 
 > 🎯 **Producte de la SA7.** Aquest programa **tanca** la SA: s'avalua amb **R1** (funcionament), **R3** (criteri "Autonomia/control") i **R4** (documentació i defensa).
 >
-> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
->
 > ⭐ **Repte nucli obligatori.** Un cop tancat el comportament autònom, tothom ha de fer el **repte ⭐ · Carret de magatzem amb velocitat variable** de [`Reptes_SA7.md`](../../Reptes/Reptes_SA7.md) (fila pròpia a la taula, més avall). Els reptes ⭐⭐/⭐⭐⭐ continuen sent ampliació opcional per a qui vagi sobrat.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
 | Activació | 10' | Recorda el comportament triat a la S3; introdueix la idea de **missió**: combinar més d'un comportament (o afegir-hi millores) sobre una pista real. 🥋 **Kata del dia:** K14 (try/except) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Recuperen el seu comportament de la S3. |
-| Explicació | 15' | Modelatge de [`rover_missions.py`](codi/rover_missions/EXPLICACIO.md): com se seleccionen missions amb els botons, i com el **polsador STOP** (P12, pull-up, mateix patró prioritari que `vehicle_seguretat.py` de la SA6) es comprova **sempre primer**. | Prenen notes; identifiquen per què cal comprovar el STOP dins de cada missió, no només al bucle principal. |
-| Repte | 60' | Acompanya la integració individual: el comportament triat (línia i/o obstacles) amb **millores** (velocitat variable, marge de seguretat) sobre una pista de proves. | Integren i milloren el seu comportament autònom (Activitat 4 de la fitxa, producte). Proven amb obstacles i/o circuit reals. |
-| **Repte ⭐ (nucli obligatori)** | 15' | Un cop tancat el comportament autònom, repte **⭐ · Carret de magatzem amb velocitat variable** de [`Reptes_SA7.md`](../../Reptes/Reptes_SA7.md). | Fan el repte ⭐; 🤝 **parella de lectura (5')** abans de lliurar-lo; l'ensenyen al docent perquè el validi (**R1**). Qui vagi sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
-| Tancament | 20' | Recull dubtes; **mini-defensa breu** de cada alumne/a (2-3', R4·DO): una decisió de disseny justificada. | Mini-defensa; anoten al quadern la millora aplicada i per què. |
+| Explicació | 10' | Modelatge comprimit de [`rover_missions.py`](codi/rover_missions/EXPLICACIO.md): com se seleccionen missions amb els botons, i com el **polsador STOP** (P12, pull-up, mateix patró prioritari que `vehicle_seguretat.py` de la SA6) es comprova **sempre primer** (l'Activació ja ha fet mitja feina). | Prenen notes; identifiquen per què cal comprovar el STOP dins de cada missió, no només al bucle principal. |
+| Repte | 45' | Acompanya la integració individual: el comportament triat (línia i/o obstacles) amb **millores** (velocitat variable, marge de seguretat) sobre una pista de proves. | Integren i milloren el seu comportament autònom (Activitat 4 de la fitxa, producte). Proven amb obstacles i/o circuit reals. |
+| **Repte ⭐ (nucli obligatori)** | 25' | Un cop tancat el comportament autònom, repte **⭐ · Carret de magatzem amb velocitat variable** de [`Reptes_SA7.md`](../../Reptes/Reptes_SA7.md). | Fan el repte ⭐; 🤝 **parella de lectura (5', dins d'aquests 25')** abans de lliurar-lo; l'ensenyen al docent perquè el validi (**R1**). Qui vagi sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
+| Mini-defensa (MOSTREIG) + tancament | 10' | Recull dubtes; **mini-defensa breu, per MOSTREIG rotatiu** (2-3', R4·DO): tria **5-6 alumnes** (registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)) perquè justifiquin una decisió de disseny; la resta tanca directament. | Els sortejats fan la mini-defensa; la resta anota al quadern la millora aplicada i per què. |
+| **Marge/imprevistos** | 20' | Coixí per a arrencada i recollida: el temps efectiu real d'aula és ~100' (no 120'); aquesta fila ho fa explícit. | — |
 
-> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: l'ampliació "combinar línia I obstacles en una sola missió" (deixa-la per a qui vagi sobrat; un únic comportament ben integrat i documentat és el nucli innegociable).
+> ⏱️ **Marge:** la fila «Marge/imprevistos» (20') ja recull que el temps efectiu real és ~100'. Si encara vas just, retalla primer: l'ampliació "combinar línia I obstacles en una sola missió" (deixa-la per a qui vagi sobrat; un únic comportament ben integrat i documentat és el nucli innegociable).
 
 **Punts clau:** el rover **no aprèn cap pin de moviment nou**: reutilitza `avancar()`/`retrocedir()`/`girar()`/`aturar()` de la SA4 tal com ja calibrades a la S1 (`girar()` amb el segon paràmetre opcional de velocitat introduït a la S2). L'única cosa realment nova de la S4 és la **integració**: combinar comportaments ja programats per separat en una sola estructura de missions, amb un polsador STOP que els talla tots per igual.
 

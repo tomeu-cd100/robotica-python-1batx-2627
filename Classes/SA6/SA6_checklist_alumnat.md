@@ -15,7 +15,7 @@
 - [ ] Provar `registre_dades.py` i llegir `MY_DATA.HTM` per USB (Act. 2)
 - [ ] Tancar el repte **«vehicle amb aturada d'emergència»** amb el meu protocol complet (Act. 3) → *compta amb R1 i R3*
 - [ ] Fer el **repte ⭐** de `Reptes/Reptes_SA6.md` (nucli obligatori) i ensenyar-lo al docent → *compta amb R1*
-- [ ] Fer la **mini-defensa breu** (una decisió justificada) → *compta amb R4*
+- [ ] Fer la **mini-defensa breu** (una decisió justificada; per mostreig — si no et toca, escriu-ho al quadern) → *compta amb R4*
 - [ ] Tenir l'entrada del **quadern tècnic** de la SA6 (què he après · el repte · un error · el meu diagrama d'estats)
 - [ ] Recordar que aquest repte **tanca el Projecte T2**: la Sessió 4 és la prova pràctica T2, individual
 

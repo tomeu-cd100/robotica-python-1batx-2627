@@ -86,19 +86,18 @@
 
 > 🎯 **Producte de la SA.** Aquest repte **fa de producte** de la SA4: s'avalua amb **R1** (codi, criteri "Estructura"/modularitat) i **R2** (bases del muntatge). Aquesta S3 **allibera la S4** per a la fabricació (primera retallada del pla de contingència si cal): si el repte no es tanca del tot, es completa com a deures.
 >
-> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
->
 > 🌟 **Nucli obligatori addicional (diferent de «control per botons»).** En acabar i tancar «control per botons», tothom fa el **repte ⭐** de [`Reptes_SA4.md`](../../Reptes/Reptes_SA4.md) (fila pròpia a la taula, més avall). Els reptes ⭐⭐/⭐⭐⭐ continuen sent ampliació opcional per a qui va sobrat.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
 | Activació | 10' | Mostra [`control_per_botons.py`](codi/control_per_botons/control_per_botons.py) **sense executar-lo** (PRIMM): pregunta què farà cada botó. 🥋 **Kata del dia:** K07 (funcions/paràmetres) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen el comportament dels botons A/B. |
-| Explicació | 20' | Modelatge de la **seqüència amb estat** (`PAS`, `seguent_moviment()`) i de per què el botó B **sempre** atura, es processi on es processi (anticipa l'estat STOP de la SA6). | Prenen notes; identifiquen quines funcions ja coneixen (`avancar`, `girar`...) i quines són noves (seqüència, botons). |
-| Repte | 55' | Acompanya la programació individual del repte: seqüència **pròpia** de moviments encadenada amb les funcions de moviment, activada amb els botons A/B. | Programen la seva pròpia seqüència a partir de `control_per_botons.py` (Activitat 3, producte). |
-| **Repte ⭐ (nucli obligatori, diferent de «control per botons»)** | 15' | En acabar i tancar «control per botons», repte **⭐** de [`Reptes_SA4.md`](../../Reptes/Reptes_SA4.md) («Salutació programable per a un aparador», a partir de `funcions_moviments.py`). Si algú no l'acaba dins la sessió, el tanca com a **deures** abans de la S4. | Fan el repte ⭐; 🤝 **parella de lectura (5')** abans de lliurar-lo; l'ensenyen al docent perquè el validi (**R1**). Qui va sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
-| Tancament | 20' | Recull dubtes; anuncia la fabricació de la S4. | Anoten al quadern la seqüència triada i per què. |
+| Explicació | 10' | Modelatge comprimit de la **seqüència amb estat** (`PAS`, `seguent_moviment()`) i de per què el botó B **sempre** atura, es processi on es processi (anticipa l'estat STOP de la SA6); el PRIMM de l'Activació ja ha fet mitja feina de predicció. | Prenen notes; identifiquen quines funcions ja coneixen (`avancar`, `girar`...) i quines són noves (seqüència, botons). |
+| Repte | 45' | Acompanya la programació individual del repte: seqüència **pròpia** de moviments encadenada amb les funcions de moviment, activada amb els botons A/B. | Programen la seva pròpia seqüència a partir de `control_per_botons.py` (Activitat 3, producte). |
+| **Repte ⭐ (nucli obligatori, diferent de «control per botons»)** | 25' | En acabar i tancar «control per botons», repte **⭐** de [`Reptes_SA4.md`](../../Reptes/Reptes_SA4.md) («Salutació programable per a un aparador», a partir de `funcions_moviments.py`). Si algú no l'acaba dins la sessió, el tanca com a **deures** abans de la S4. | Fan el repte ⭐; 🤝 **parella de lectura (5', dins d'aquests 25')** abans de lliurar-lo; l'ensenyen al docent perquè el validi (**R1**). Qui va sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
+| Mini-defensa (MOSTREIG) + tancament | 10' | **Mini-defensa breu (1-2', R4·DO), per MOSTREIG rotatiu:** tria **5-6 alumnes** (registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)) perquè justifiquin la seqüència triada; recull dubtes i anuncia la fabricació de la S4. | Els sortejats fan la mini-defensa; la resta anota al quadern la seqüència triada i per què. |
+| **Marge/imprevistos** | 20' | Coixí per a arrencada i recollida: el temps efectiu real d'aula és ~100' (no 120'); aquesta fila ho fa explícit. | — |
 
-> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: la **variació personal** de la seqüència (deixa la de `control_per_botons.py` tal qual; la personalització reapareix com a ampliació ⭐⭐/⭐⭐⭐).
+> ⏱️ **Marge:** la fila «Marge/imprevistos» (20') ja recull que el temps efectiu real és ~100'. Si encara vas just, retalla primer: la **variació personal** de la seqüència (deixa la de `control_per_botons.py` tal qual; la personalització reapareix com a ampliació ⭐⭐/⭐⭐⭐).
 
 **Punts clau:** una **seqüència** és una sèrie de crides a funcions ja fetes, controlada per una variable d'estat (`PAS`) que recorda on som; una entrada que **sempre interromp** el que s'estigui fent (el botó B) és la primera versió d'un concepte que la SA6 formalitzarà com a **STOP prioritari**.
 

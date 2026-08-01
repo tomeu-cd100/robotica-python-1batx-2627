@@ -12,7 +12,7 @@ Treballes amb el teu **propi micro:bit V2, Micro:shield i kits Keyestudio**, i c
 
 | Part | Pes | Què hi entra | Com anar-hi bé |
 |---|---|---|---|
-| **Projectes i productes** | **45 %** | El producte individual de cada SA (mascota, vehicle, sistema de control, rover…) i la seva defensa. | Fes-lo funcionar, però sobretot **entén-lo**: a la defensa t'ho preguntaran. |
+| **Projectes i productes** | **45 %** | El producte individual de cada SA (mascota, vehicle, sistema de control, rover…) i la seva defensa, **més el repte ⭐** (nucli obligatori) de cada SA1-SA8, que forma part del mateix producte i qualifica igual (R1). | Fes-lo funcionar, però sobretot **entén-lo**: a la defensa t'ho preguntaran. |
 | **Quadern tècnic i pràctiques** | **25 %** | El teu [**quadern digital**](00_Quadern_tecnic.md) (una entrada per SA): esquemes, pseudocodi, codi comentat, errors i com els has resolt, reflexions. | **Escriu-hi cada sessió** (no tot al final). Un error ben documentat hi suma. |
 | **Proves pràctiques** | **20 %** | Una prova individual per trimestre (T1, T2, T3), integrada a l'última sessió de SA3, SA6 i SA9 (**15 %**) + el **millor** dels teus 3 mini-checks del trimestre (**5 %**, vegeu §5). | Practica **tot sol** abans: els mini-checks t'avisen a temps de com vas, i el millor et puja nota. |
 | **Actitud, autonomia i responsabilitat** | **10 %** | Com gestiones el teu treball, els errors, el material propi i els terminis. | Aplica DEPURA abans de rendir-te i té cura del teu maquinari. |
