@@ -7,6 +7,10 @@
 # que vehicle_seguretat.py, SA6).
 # Ampliacio (excel-lent): LED indicador d'estat (P1): ences fix = RUN,
 # apagat = STOP.
+# Item NOU (obligatori, 2 punts): funcio propia amb UN PARAMETRE i VALOR DE
+# RETORN que converteix una magnitud (percentatge de velocitat 0-100) al
+# valor PWM que accepta write_analog() (0-1023), i que es fa servir de
+# veritat al programa per fixar VELOCITAT (no nomes definida, tambe usada).
 # Cablatge (00_Fil_conductor_construccions.md #1b, vehicle T2): M1=P13/P14,
 # M2=P15/P16, LED indicador=P1, polsador STOP=P12 (pull-up intern).
 # Simulador: python.microbit.org NO simula els motors; nomes es pot provar
@@ -31,7 +35,16 @@ LED_ESTAT = pin1
 POLSADOR_STOP = pin12
 POLSADOR_STOP.set_pull(POLSADOR_STOP.PULL_UP)   # repos = 1, premut = 0
 
-VELOCITAT = 400
+
+def percentatge_a_velocitat(percentatge):
+    # ITEM NOU (obligatori, 2 punts): funcio NOVA, amb parametre i retorn,
+    # que converteix una magnitud (percentatge 0-100) al rang PWM real
+    # (0-1023) que necessiten write_analog(). Es crida mes avall i el
+    # resultat es fa servir com a VELOCITAT: no nomes es defineix, s'usa.
+    return int(percentatge * 1023 / 100)
+
+
+VELOCITAT = percentatge_a_velocitat(40)   # ~40% de la velocitat maxima
 
 RUN, STOP = range(2)
 estat = STOP

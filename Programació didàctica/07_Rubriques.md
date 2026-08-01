@@ -22,8 +22,13 @@ Rúbriques reutilitzables amb **quatre nivells**, cadascun lligat a una **banda 
 |---|---|---|---|---|
 | **Funcionament** | El programa no s'executa o no fa la tasca. | Fa la tasca bàsica amb errors menors. | Fa la tasca completa de manera fiable. | Funciona i gestiona casos límit/errors. |
 | **Estructura** | Codi desordenat, tot al bucle principal. | Alguna funció, poca modularitat. | Ben modularitzat amb funcions. | Modular, reutilitzable i eficient. |
+| **Codi escrit per l'alumne mateix** (no copiat de la base) | Còpia gairebé literal de codi de la base/exemple, sense adaptar-lo. | Adapta codi de la base amb canvis mínims (noms, valors), sense estructura pròpia. | Estructures pròpies (funcions/variables/lògica de control) i adaptacions no trivials respecte al material de base. | Disseny propi identificable: decisions d'estructura i nom justificades, no reduïbles a «canviar quatre coses» d'un exemple. |
 | **Llegibilitat** | Sense comentaris ni noms clars. | Comentaris escassos. | Comentat i noms significatius. | Documentat de manera professional. |
 | **Depuració** | No identifica errors. | Corregeix amb ajuda. | Depura de forma autònoma. | Depura i explica la causa de l'error. |
+
+> **Pes del subcriteri «Codi escrit per l'alumne mateix» (P3.11):** quan la R1 s'aplica a un **producte** (no a un mini-check o kata puntual), aquest subcriteri pesa **com a mínim el 40 %** de la nota de R1 d'aquell producte (els altres criteris —Funcionament, Estructura, Llegibilitat, Depuració— es reparteixen la resta). L'objectiu és que copiar/adaptar trivialment el codi de base d'una SA no pugui, per si sol, treure una nota alta a R1.
+>
+> **Nota d'aplicació per al docent — com detectar-ho:** durant la validació del producte (mateix moment que la resta de R1), fes una **mini-entrevista de 2 preguntes** sobre el codi lliurat: **(1)** «Assenyala'm una línia o funció que hagis escrit tu i explica'm què fa» — si no la sap localitzar o explicar, és indici de còpia sense comprensió; **(2)** «Per què ho has fet així (aquesta estructura/nom/valor) i no d'una altra manera?» — una resposta amb criteri propi (encara que senzill) indica adaptació real; «perquè sortia així a l'exemple» indica còpia literal. Documenta breument la resposta (una frase) al quadern de seguiment del docent o al `Full_seguiment_grup.md`: serveix d'evidència per si la nota es qüestiona i per detectar patrons repetits de còpia a tot el grup.
 
 ## R2 · Rúbrica de circuit i electrònica
 

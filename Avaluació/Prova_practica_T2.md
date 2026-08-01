@@ -13,14 +13,15 @@
 
 ## Enunciat (dues parts)
 
-### PART A — Vehicle amb màquina d'estats (nucli + ampliacions, 6 punts)
+### PART A — Vehicle amb màquina d'estats (nucli + ampliacions + ítem obligatori, 6,5 punts)
 1. **Nivell satisfactori (nucli):** programa una **màquina d'estats RUN/STOP** que rebi ordres per ràdio amb el protocol **`CMD:`** (`F`/`B`/`L`/`R`/`S`), reutilitzant les funcions de moviment `avancar()`/`retrocedir()`/`girar()`/`aturar()` ja fetes a la SA4-SA5.
 2. **Ampliació (notable):** afegeix un **polsador STOP** (P12, *pull-up*) amb **prioritat màxima**: s'ha de comprovar **abans** que qualsevol ordre de ràdio, a cada volta del bucle.
 3. **Ampliació (excel·lent):** afegeix un **LED indicador d'estat** (P1): encès fix quan el vehicle és a RUN, apagat quan és a STOP.
+4. **Ítem obligatori (2 punts): escriu una funció NOVA.** Escriu una funció pròpia, amb **un paràmetre i un valor de retorn**, que **converteixi una magnitud** del vehicle — per exemple, `percentatge_a_velocitat(percentatge)` que passi un percentatge de velocitat (0-100) al valor PWM que accepta `write_analog()` (0-1023) — i **fes-la servir realment al programa** (p. ex. per fixar `VELOCITAT`). No n'hi ha prou de definir-la: cal cridar-la i utilitzar el valor que retorna.
 
-### PART B — Control amb histèresi + registre (nucli + ampliació, 4 punts)
-4. **Nivell satisfactori (nucli):** programa un **control tot/res amb histèresi** (dos llindars, no un de sol) sobre la temperatura **interna** de la micro:bit, que engegui/aturi un actuador (relé o LED a P2).
-5. **Ampliació:** **registra les lectures** amb el mòdul natiu `log` (`log.set_labels()` + `log.add()`), com a evidència per al quadern.
+### PART B — Control amb histèresi + registre (nucli + ampliació, 3 punts)
+5. **Nivell satisfactori (nucli):** programa un **control tot/res amb histèresi** (dos llindars, no un de sol) sobre la temperatura **interna** de la micro:bit, que engegui/aturi un actuador (relé o LED a P2).
+6. **Ampliació:** **registra les lectures** amb el mòdul natiu `log` (`log.set_labels()` + `log.add()`), com a evidència per al quadern.
 
 ### Lliurament
 Els dos programes funcionant (o la seva lògica assajada al simulador, si el maquinari no ho permet en aquell moment) + **quadern**: diagrama de la màquina d'estats (Part A) i taula amb almenys una lectura registrada (Part B).
@@ -36,13 +37,15 @@ Els dos programes funcionant (o la seva lògica assajada al simulador, si el maq
 | Criteri | Punts | CA | Rúbrica |
 |---|---|---|---|
 | Part A: FSM RUN/STOP amb ordres per ràdio (`CMD:`) funcional (nucli) | 3 | CA1.1, CA3.1 | R1, R3 |
-| Part A: polsador STOP prioritari (ampliació) | 1,5 | CA3.1 | R3 |
-| Part A: LED indicador d'estat (ampliació) | 1 | CA1.1 | R1, R3 |
+| Part A: polsador STOP prioritari (ampliació) | 1 | CA3.1 | R3 |
+| Part A: LED indicador d'estat (ampliació) | 0,5 | CA1.1 | R1, R3 |
+| **Part A: escriu una funció nova amb paràmetre i retorn (obligatori)** | **2** | **CA1.1** | **R1** |
 | Part B: control tot/res amb histèresi funcional (nucli) | 2,5 | CA2.1, CA3.1 | R1, R3 |
-| Part B: registre amb el mòdul `log` (ampliació) | 1 | CA1.1 | R1 |
-| Documentació (diagrama d'estats + taula de dades) | 1 | CA3.1 | R4 |
+| Part B: registre amb el mòdul `log` (ampliació) | 0,5 | CA1.1 | R1 |
+| Documentació (diagrama d'estats + taula de dades) | 0,5 | CA3.1 | R4 |
 
-> Orientació: nucli de les dues parts ben fet ≈ 5-6; amb una ampliació de cada part ≈ 7-8; amb totes i bona documentació ≈ 9-10.
+> Orientació: nucli + ítem obligatori de les dues parts ben fet ≈ 5-6; amb una ampliació de cada part ≈ 7-8; amb totes i bona documentació ≈ 9-10.
+> Reequilibri de barem (P3.9): l'ítem «escriu una funció nova» és **obligatori**, no una ampliació — puntua encara que no es facin les ampliacions. Per fer-hi lloc sense superar els 10 punts, s'han retallat 0,5 punts a cadascun dels quatre ítems més mecànics (polsador STOP, LED, registre `log` i documentació); el nucli de lògica (FSM i histèresi) es manté intacte.
 
 ---
 
@@ -67,6 +70,10 @@ Els dos programes funcionant (o la seva lògica assajada al simulador, si el maq
 # que vehicle_seguretat.py, SA6).
 # Ampliacio (excel-lent): LED indicador d'estat (P1): ences fix = RUN,
 # apagat = STOP.
+# Item NOU (obligatori, 2 punts): funcio propia amb UN PARAMETRE i VALOR DE
+# RETORN que converteix una magnitud (percentatge de velocitat 0-100) al
+# valor PWM que accepta write_analog() (0-1023), i que es fa servir de
+# veritat al programa per fixar VELOCITAT (no nomes definida, tambe usada).
 # Cablatge (00_Fil_conductor_construccions.md #1b, vehicle T2): M1=P13/P14,
 # M2=P15/P16, LED indicador=P1, polsador STOP=P12 (pull-up intern).
 # Simulador: python.microbit.org NO simula els motors; nomes es pot provar
@@ -91,7 +98,16 @@ LED_ESTAT = pin1
 POLSADOR_STOP = pin12
 POLSADOR_STOP.set_pull(POLSADOR_STOP.PULL_UP)   # repos = 1, premut = 0
 
-VELOCITAT = 400
+
+def percentatge_a_velocitat(percentatge):
+    # ITEM NOU (obligatori, 2 punts): funcio NOVA, amb parametre i retorn,
+    # que converteix una magnitud (percentatge 0-100) al rang PWM real
+    # (0-1023) que necessiten write_analog(). Es crida mes avall i el
+    # resultat es fa servir com a VELOCITAT: no nomes es defineix, s'usa.
+    return int(percentatge * 1023 / 100)
+
+
+VELOCITAT = percentatge_a_velocitat(40)   # ~40% de la velocitat maxima
 
 RUN, STOP = range(2)
 estat = STOP
@@ -183,6 +199,8 @@ while True:
 </details>
 
 **Què mirar en corregir el nucli:** (1) el polsador es comprova **abans** de processar la ràdio, a cada volta; (2) `actualitza_estat()` és l'únic lloc que canvia `estat` (mai s'assigna la variable directament en cap altre punt); (3) sortir de STOP exigeix una ordre de moviment explícita, no qualsevol missatge. Error típic: comprovar el polsador només dins del `if missatge is not None` — llavors l'STOP no funciona quan no arriba cap ordre de ràdio.
+
+**Què mirar a l'ítem obligatori «funció nova» (2 punts):** (1) la funció és **realment nova** (no una còpia amb un altre nom de `avancar`/`girar`/etc.); (2) té **un paràmetre** i **una instrucció `return`** que aporta un valor útil; (3) el programa **crida la funció i usa el valor retornat** — definir-la sense usar-la no puntua. Qualsevol funció de conversió coherent amb el vehicle és vàlida (percentatge→PWM, cm→temps de gir, etc.); l'exemple `percentatge_a_velocitat()` és només orientatiu.
 
 ### Part B — Control amb histèresi + registre amb `log`
 
