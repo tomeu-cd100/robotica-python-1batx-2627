@@ -60,7 +60,7 @@ Una **sortida digital** és un pin que només pot estar en dos estats: **encès*
 **Exemple mínim executable:**
 
 ```python
-# Parpelleig d'un LED al pin P1: mig segon encès, mig segon apagat, per sempre
+# Parpelleig d'un LED al pin P1: mig segon ences, mig segon apagat, per sempre
 from microbit import *
 
 while True:
@@ -151,11 +151,16 @@ Un **paràmetre** és una dada que la funció rep quan es crida, i que pot canvi
 
 ```python
 # Funcio amb un parametre: mou el motor esquerre (M1) a la velocitat rebuda
+# Pins del motor M1, mapa vinculant del fil conductor (00_Fil_conductor_construccions.md):
+# P13 = M1 sentit endavant, P14 = M1 sentit enrere.
 from microbit import *
 
+M1_ENDAVANT = pin13
+M1_ENRERE = pin14
+
 def avancar(velocitat):
-    pin1.write_digital(0)     # sentit endavant
-    pin2.write_analog(velocitat)   # 0-1023, PWM
+    M1_ENDAVANT.write_analog(velocitat)   # 0-1023, PWM
+    M1_ENRERE.write_digital(0)            # sentit endavant nomes
 
 avancar(300)   # velocitat baixa
 sleep(1000)
@@ -164,7 +169,7 @@ avancar(800)   # velocitat alta
 
 **Error típic.**
 - **Símptoma:** `TypeError: function takes 1 positional argument but 0 were given` (o similar), o la funció sempre es comporta igual encara que li passis valors diferents.
-- **Causa:** cridar la funció sense el paràmetre (`avancar()` en lloc de `avancar(300)`), o definir-la amb un valor fix dins en lloc de fer servir el nom del paràmetre (per exemple, escriure `pin2.write_analog(300)` en comptes de `pin2.write_analog(velocitat)`).
+- **Causa:** cridar la funció sense el paràmetre (`avancar()` en lloc de `avancar(300)`), o definir-la amb un valor fix dins en lloc de fer servir el nom del paràmetre (per exemple, escriure `M1_ENDAVANT.write_analog(300)` en comptes de `M1_ENDAVANT.write_analog(velocitat)`).
 - **Solució:** revisa que **dins** de la funció es faci servir el nom del paràmetre (no un número fix), i que **cada crida** li passi un valor entre parèntesis.
 
 ---
