@@ -37,7 +37,7 @@ while True:
         pin1.write_analog(intensitat)
         sleep(100)
     else:
-        # Ampliacio 3: es manté encès un temps minim encara que torni la llum.
+        # Ampliacio 3: es mante ences un temps minim encara que torni la llum.
         if running_time() - t_ultima_encesa > TEMPS_MINIM_ENCES:
             pin1.write_digital(0)
         sleep(100)

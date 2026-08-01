@@ -58,7 +58,7 @@ while True:
         display.show(Image.TARGET)
         sleep(500)
 
-    # Ampliacio 2: nomes canvia el resum si es manté estable 2 s seguits.
+    # Ampliacio 2: nomes canvia el resum si es mante estable 2 s seguits.
     if nou != resum_candidat:
         resum_candidat = nou
         t_candidat = running_time()

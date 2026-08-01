@@ -33,7 +33,7 @@ def canvia_emocio(nova):
     t_ultim_estimul = running_time()
     if emocio == CONTENT:
         display.show(Image.HAPPY)
-        music.play(['C4:2', 'E4:2', 'G4:2'], wait=False)
+        music.play(['C4:2', 'E4:2', 'G4:2'], pin=pin2, wait=False)
     elif emocio == ESPANTAT:
         display.show(Image.SURPRISED)
         music.pitch(880, 200, pin=pin2, wait=False)

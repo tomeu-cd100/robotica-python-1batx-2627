@@ -50,7 +50,7 @@ while True:
         pin1.write_analog(intensitat)
         sleep(100)
     else:
-        # Ampliacio 3: es manté encès un temps minim encara que torni la llum.
+        # Ampliacio 3: es mante ences un temps minim encara que torni la llum.
         if running_time() - t_ultima_encesa > TEMPS_MINIM_ENCES:
             pin1.write_digital(0)
         sleep(100)
@@ -189,7 +189,7 @@ while True:
         display.show(Image.TARGET)
         sleep(500)
 
-    # Ampliacio 2: nomes canvia el resum si es manté estable 2 s seguits.
+    # Ampliacio 2: nomes canvia el resum si es mante estable 2 s seguits.
     if nou != resum_candidat:
         resum_candidat = nou
         t_candidat = running_time()

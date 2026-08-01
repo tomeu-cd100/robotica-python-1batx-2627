@@ -97,7 +97,7 @@ SESSIONS = {
            "mini-check individual (no qualifica).",
            "entrada analogica, read_analog, mapa, llindar, ADC"),
         _s("SA3", 3, "Repte «mascota reactiva» (producte de la SA — es tanca la mascota T1)",
-           "Avui he cablejat la mascota amb el cablatge exacte del dosier i "
+           "Avui he cablejat la mascota amb el cablatge exacte del dossier i "
            "he programat almenys 2 reaccions sensor-resposta (so, llum, PIR, "
            "polsador, sacsejada). He tancat el Projecte T1 amb una "
            "mini-defensa breu.",
