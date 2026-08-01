@@ -112,7 +112,7 @@ SECTIONS = [
      "icon": "⚖️", "desc": "Marc legal LOMLOE i documents oficials.",
      "pauta": ["Per al dia a dia, la <strong>síntesi (01)</strong> és suficient.",
                "Els <strong>PDF oficials</strong> (Decret 171/2022, RD 243/2022) són per justificar decisions davant d'inspecció o famílies."]},
-    {"key": "simulacions", "title": "Simulacions", "src": "Simulacions/Wokwi",
+    {"key": "simulacions", "title": "Simulacions", "src": "Simulacions",
      "icon": "🔌", "desc": "Circuits Wokwi de pràctiques i reptes: codi i diagrama, reproduïbles.",
      "pauta": ["Cada pràctica i repte simulable té el seu <strong>circuit Wokwi</strong>: serveix per treballar sense maquinari o abans de muntar.",
                "Per reproduir-la: projecte nou a <strong>wokwi.com</strong> → enganxa-hi el <code>diagram.json</code> i el codi.",
