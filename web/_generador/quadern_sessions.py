@@ -9,22 +9,16 @@ guies i fitxes, en llenguatge d'alumne.
 
 La darrera sessió de cada trimestre és la prova pràctica (`"prova": True`).
 
-TODO (Tasks 7-15, guies docents de cada SA): aquest fitxer és un ESQUELET
-MÍNIM del curs nou (Robòtica amb Python, micro:bit V2 + Micro:shield +
-sensors Keyestudio, MicroPython). El contingut curricular detallat del curs
-germà (Arduino UNO, Servo.h, pont H L298N...) NO és vàlid aquí i s'ha
-substituït per placeholders d'una sola sessió per SA. Quan es creïn les
-guies docents reals, cal:
-  1. Desglossar cada SA en les seves sessions reals (2 h cadascuna, tantes
-     com calguin perquè `n * 2` quadri amb les hores de
-     `Programació didàctica/08_Sequenciacio_temporal_anual.md`: SA1=6,
-     SA2=8, SA3=8, SA4=8, SA5=6, SA6=8, SA7=8, SA8=6, SA9=10).
-  2. Fer que el `titol` de cada sessió coincideixi literalment amb la
-     capçalera «## SESSIÓ n (2 h) — …» de la guia docent corresponent
-     (ho valida `tools/qa.py:comprova_quadern()`).
-  3. Omplir `avui`/`vocab` amb el contingut real de la sessió.
-Mentre això no existeixi, `tools/qa.py --nomes-sintaxi` salta els checks
-que depenen d'aquest fitxer (5 i 12).
+Tasks 7-15 (guies docents de SA1-SA9) completades: totes les sessions
+reflecteixen ja el contingut curricular real del curs nou (Robòtica amb
+Python, micro:bit V2 + Micro:shield + sensors Keyestudio, MicroPython;
+SA1=6 h, SA2=8 h, SA3=8 h, SA4=8 h, SA5=6 h, SA6=8 h, SA7=8 h, SA8=6 h,
+SA9=10 h, quadrant amb `Programació didàctica/08_Sequenciacio_temporal_
+anual.md`). El `titol` de cada sessió coincideix literalment amb la
+capçalera «## SESSIÓ n (2 h) — …» de la guia docent corresponent (SA1-SA8;
+SA9 usa les fases de la seva taula «Seqüència de sessions» i queda
+exempta d'aquesta comparació literal, vegeu `tools/qa.py:comprova_
+quadern()`). Pendent (Task 16): enunciats reals de `PROVES` (T1-T3).
 """
 
 def _s(sa, s, titol, avui, vocab, prova=False):
@@ -210,12 +204,31 @@ SESSIONS = {
            "registre. He fet la mini-defensa breu i la reflexio d'IA i "
            "etica de dades.",
            "IA aplicada al control, biaix, etica de dades, mini-defensa"),
-        _s("SA9", 1, _TITOL_SA["SA9"],
-           "TODO: pendent de la guia docent de SA9 (projecte/repte final).",
-           "TODO"),
-        _s("SA9", 2, "PROVA PRÀCTICA T3 (individual)",
-           "TODO: pendent de definir l'enunciat de la prova del 3r trimestre.",
-           "TODO", prova=True),
+        _s("SA9", 1, "Idear",
+           "Avui he triat el meu repte lliure al banc de reptes de la SA9, "
+           "he definit els requisits minims i he fet un esbos de la solucio, "
+           "amb la planificacio de les properes sessions.",
+           "repte lliure, requisits minims, esbos, planificacio"),
+        _s("SA9", 2, "Prototipar",
+           "Avui he muntat el component nou del meu repte i he programat "
+           "un prototip minim viable a partir de plantilla_projecte.py "
+           "(percep/decideix/actua), integrant almenys un element nou.",
+           "prototip minim viable, percep, decideix, actua"),
+        _s("SA9", 3, "Provar i millorar",
+           "Avui he provat el meu sistema (DEPURA), he fet una prova de "
+           "limit i una primera iteracio de millora, i he avancat el meu "
+           "dossier tecnic (objectiu, disseny, esquema de connexions).",
+           "prova de limit, iteracio, dossier tecnic, DEPURA"),
+        _s("SA9", 4, "Comunicar",
+           "Avui he tancat el meu dossier tecnic complet i he fet la meva "
+           "defensa oral individual (5' + preguntes) amb demostracio del "
+           "meu rover ampliat. Producte de la SA9.",
+           "dossier tecnic, defensa oral individual, R4-DO, demostracio"),
+        _s("SA9", 5, "Prova pràctica T3 (individual)",
+           "Avui he fet la prova pràctica individual del 3r trimestre "
+           "(SA7-SA8), per estacions rotatives (taula + pista): no reavalua "
+           "el meu projecte de la SA9.",
+           "prova practica, avaluacio individual, estacions rotatives", prova=True),
     ],
 }
 
