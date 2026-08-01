@@ -167,9 +167,30 @@ SESSIONS = {
            "prova practica, avaluacio individual", prova=True),
     ],
     3: [
-        _s("SA7", 1, _TITOL_SA["SA7"],
-           "TODO: pendent de la guia docent de SA7 (robot mòbil, cinemàtica diferencial).",
-           "TODO"),
+        _s("SA7", 1, "Cinemàtica diferencial: el rover gira",
+           "Avui he revisat el meu rover muntat i he calibrat "
+           "FACTOR_M1/FACTOR_M2 perque vagi recte, reutilitzant les funcions "
+           "de moviment de la SA4. He provat una trajectoria en quadrat amb "
+           "girs i avancos temporitzats.",
+           "cinematica diferencial, calibratge, motoreductor, trajectoria"),
+        _s("SA7", 2, "Seguidor de línia",
+           "Avui he programat el seguidor de linia del rover: lectura amb "
+           "read_analog() i un llindar calibrat sobre el meu circuit real, "
+           "amb correccio de rumb cap al costat on es perd la linia. He fet "
+           "el mini-check individual (no qualifica).",
+           "seguidor de linia, read_analog, llindar, ADC, correccio de rumb"),
+        _s("SA7", 3, "Evita-obstacles amb ultrasons",
+           "Avui he programat l'evita-obstacles amb l'HC-SR04 "
+           "(mesura_distancia amb machine.time_pulse_us, mateix metode que "
+           "la SA3, pins nous). He triat el meu comportament autonom "
+           "(linia i/o obstacles) pel repte d'aquesta sessio.",
+           "HC-SR04, time_pulse_us, temps de vol, evita-obstacles"),
+        _s("SA7", 4, "Integració: missions del rover (producte de la SA)",
+           "Avui he integrat el meu comportament autonom en una estructura "
+           "de missions (rover_missions.py) amb un polsador STOP prioritari, "
+           "amb millores de velocitat i marge de seguretat. He fet la "
+           "mini-defensa breu d'una decisio de disseny.",
+           "missio, integracio, polsador STOP, mini-defensa"),
         _s("SA8", 1, _TITOL_SA["SA8"],
            "TODO: pendent de la guia docent de SA8 (telemetria per ràdio, autonomia).",
            "TODO"),
