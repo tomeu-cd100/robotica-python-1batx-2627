@@ -1,5 +1,5 @@
 // roda_boja.scad
-// Suport de la roda boja: sosté una canica de 16 mm com a tercer punt de
+// Suport de la roda boja: soste una canica de 16 mm com a tercer punt de
 // suport del vehicle (T2) i del rover (T3, reaprofitat sense canvis).
 // Es cargola al xassis amb 2 cargols M3, a la zona "RODA BOJA" de
 // Recursos/plantilles_laser/xassis_vehicle.svg.

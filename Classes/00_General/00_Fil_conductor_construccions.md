@@ -94,7 +94,7 @@ Si en acabar el 1r trimestre no s'ha tancat la SA3 (el senyal d'alerta del doc. 
 
 | Robot | Peça | Mida aprox. | Peces/alumne | Nesting per tauler (600×400 mm, DM 3 mm) | Talls necessaris (20 alumnes) |
 |---|---|---|---|---|---|
-| T1 Mascota | Carcassa (`mascota.svg`): base + 4 laterals + tapa + 2 orelles | ~180×140 mm | 1 planxa (8 peces) | 2 carcasses/tauler | 10 taulers |
+| T1 Mascota | Carcassa (`mascota.svg`): base + 4 laterals + tapa + 2 orelles | 158×120 mm | 1 planxa (8 peces) | 2 carcasses/tauler | 10 taulers |
 | T2 Vehicle | Xassís de 2 rodes (`xassis_vehicle.svg`) | ~200×150 mm | 1 planxa | 2 xassís/tauler | 10 taulers |
 | T3 Rover | — (reaprofita el xassís de T2) | — | — | — | **0 taulers** |
 | | | | | **Total anual** | **20 taulers** |

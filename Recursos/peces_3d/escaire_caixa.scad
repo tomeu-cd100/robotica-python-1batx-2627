@@ -9,7 +9,7 @@
 // --- Parametres (mm) ---
 llargada_ala = 18;    // llargada de cada ala: cobreix el forat a 8 mm del caire
 amplada_ala = 10;     // amplada de l'escaire
-gruix_peca = 4;       // gruix del material imprès
+gruix_peca = 4;       // gruix del material impres
 forat_m3 = 3.4;       // diametre del forat (M3 amb marge d'impressio)
 vora_forat = 8;        // distancia del centre del forat al caire (com el SVG)
 $fn = 32;
