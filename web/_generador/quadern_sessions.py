@@ -109,9 +109,26 @@ SESSIONS = {
            "prova practica, avaluacio individual", prova=True),
     ],
     2: [
-        _s("SA4", 1, _TITOL_SA["SA4"],
-           "TODO: pendent de la guia docent de SA4 (servo/motor Keyestudio, funcions).",
-           "TODO"),
+        _s("SA4", 1, "Definir funcions amb paràmetres i valor de retorn",
+           "Avui he posat nom al concepte de funcio (def, parametre, valor "
+           "de retorn) i l'he fet servir per programar per primer cop el "
+           "servo de la mascota (graus_a_pwm, mou_servo, saluda, escombra).",
+           "funcio, def, parametre, valor de retorn, servo, set_analog_period"),
+        _s("SA4", 2, "Controlar un motoreductor amb funcions de moviment",
+           "Avui he muntat els dos motoreductors del vehicle i he programat "
+           "les funcions avancar, retrocedir, girar i aturar amb PWM i "
+           "sentit de gir. He fet el mini-check individual (no qualifica).",
+           "motoreductor, PWM, sentit de gir, canal M1/M2, write_analog"),
+        _s("SA4", 3, "Repte «control per botons» (producte de la SA)",
+           "Avui he programat la meva propia sequencia de moviments "
+           "(avancar/girar/retrocedir/aturar) activada amb els botons A/B. "
+           "He fet la mini-defensa breu d'una decisio de disseny.",
+           "sequencia, estat, boto A/B, funcions de moviment"),
+        _s("SA4", 4, "Muntatge físic del vehicle",
+           "Avui he muntat fisicament el xassis del vehicle T2: motoreductors "
+           "i roda boja, micro:bit i Micro:shield, portapiles, i he fet la "
+           "prova d'encesa amb les funcions de moviment ja programades.",
+           "fabricacio, muntatge, xassis, vehicle, prova d'encesa"),
         _s("SA5", 1, _TITOL_SA["SA5"],
            "TODO: pendent de la guia docent de SA5 (radio.on/config/send/receive).",
            "TODO"),
