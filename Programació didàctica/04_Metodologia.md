@@ -17,7 +17,7 @@ La matèria adopta un **enfocament competencial** basat en **situacions d'aprene
 | Fase | Temps | Descripció |
 |---|---|---|
 | **0. Arrencada i preparació** | 5-10' | Repartiment i recompte de material individual, encesa d'ordinadors, obrir l'editor MicroPython. **No es pot ometre:** és temps real d'aula. |
-| **Activació** | 10' | Repte o pregunta inicial; recuperació del que se sap. Inclou la **graella de repàs espaiat** (5': 3 preguntes retrospectives — sessió anterior · SA anterior · trimestre —, tothom escriu, no qualifica). Banc complet per sessió: `../Classes/00_General/00_Banc_activacio_repas.md`. |
+| **Activació** | 10' | **Kata d'activació** (`../Classes/00_General/00_Banc_activacio_repas.md`): repàs espaiat d'un concepte de fa 1-2 setmanes, amb progressió Parsons → completar buits → escriure de zero (mai el que es treballa aquell mateix dia). Tothom escriu, no qualifica. Als dies amb mini-check individual, la kata i el mini-check **conviuen** (falta a S20/S24/S28/S31, on el mini-check ocupa tota la franja: `../Classes/00_General/00_Mini_checks_individuals.md` §Rutina). |
 | **Modelatge (amb PRIMM)** | 20' | El docent mostra el concepte/codi clau (live coding). **Predir abans d'executar:** projecta el codi nou **sense executar-lo** i recull prediccions (~5') *abans* d'investigar-lo. |
 | **Pràctica guiada** | 30-40' | Cada alumne replica i modifica **individualment** al seu maquinari. |
 | **Pràctica autònoma / repte** | 30-40' | Repte obert individual que aplica el concepte. El **"+ repte"** fa de marge: s'escurça si la sessió va justa. |

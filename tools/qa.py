@@ -399,6 +399,16 @@ def comprova_pdfs() -> None:
                       .glob("Quadern_tecnic_T*.pdf")):
         parelles.append((quadern_py, pdf))
 
+    # Quadern del docent per sessions (U3): no te un unic fitxer font (es
+    # sintetitza en temps de generacio a partir del banc de katas, els
+    # mini-checks, els reptes ⭐ i els checklists docent de cada SA), aixi
+    # que la marca de sincronia es compara amb el text combinat d'aquests
+    # documents (gfi.sessions_quadern_font_text()) en lloc d'un sol Path.
+    sessions_pdf = (ARREL / "Classes" / "00_General" / "pdf" /
+                     "00_Quadern_sessions_docent.pdf")
+    sessions_font_text = gfi.sessions_quadern_font_text()
+    sessions_font_label = "documents font del quadern de sessions (banc/mini-checks/reptes/checklists)"
+
     desfasats = 0
     for font, pdf in parelles:
         if not font.exists() or not pdf.exists():
@@ -410,6 +420,16 @@ def comprova_pdfs() -> None:
         elif marca != hash_font(font.read_text(encoding="utf-8")):
             errors.append(f"[pdf-sync] {pdf.relative_to(ARREL)}: la font "
                           f"{font.relative_to(ARREL)} ha canviat després de "
+                          f"generar el PDF (regenera'l)")
+            desfasats += 1
+    if sessions_pdf.exists():
+        marca = llegeix_marca(sessions_pdf)
+        if marca is None:
+            avisos.append(f"[pdf-sync] {sessions_pdf.relative_to(ARREL)}: sense "
+                          f"marca de sincronia (regenera'l per activar-la)")
+        elif marca != hash_font(sessions_font_text):
+            errors.append(f"[pdf-sync] {sessions_pdf.relative_to(ARREL)}: els "
+                          f"{sessions_font_label} han canviat després de "
                           f"generar el PDF (regenera'l)")
             desfasats += 1
     print(f"8) PDF versionats: {len(fitxers)} fitxers, {fallats} invàlids, "

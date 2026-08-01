@@ -40,7 +40,7 @@ Les 5 rúbriques del curs, en una línia cadascuna:
 | Activitat | Per a què serveix |
 |---|---|
 | **Prova diagnòstica** (SA1) | Saber d'on parteixes i com adaptar-te el ritme. |
-| **Graella d'activació** (cada sessió) | Recordar el que vas aprendre fa setmanes perquè no s'esborri. Respondre-la malament **no penalitza**: avisa. |
+| **Kata d'activació** (cada sessió, des de la S4) | Un exercici curt d'escriure codi sobre un concepte de fa 1-2 setmanes, perquè no s'esborri. Fer-la malament **no penalitza**: avisa. |
 | **Mini-check individual** (un per SA, SA1-SA9) | 10 minuts **escrivint codi** tot sol, sense IA. És el teu **radar**: et diu si vas bé abans que ho digui una prova. Cap no puntua **el dia que el fas** — però compte: el **millor dels 3 d'un trimestre sí que compta un 5 %** (vegeu §5). |
 | **Diana, exit ticket, coavaluació de la defensa final** | Saber on ets i donar/rebre retorn. Serveixen per millorar, no per puntuar. |
 

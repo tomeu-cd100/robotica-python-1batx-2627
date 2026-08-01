@@ -231,7 +231,7 @@ GENERAL_ALUMNAT = {
     "00_Fil_conductor_construccions.md", "00_Projecte_T1_Mascota.md",
     "00_Projecte_T2_Vehicle.md", "00_Projecte_T3_Rover.md",
     "00_Projecte_T1_portada.md", "00_Projecte_T2_portada.md",
-    "00_Projecte_T3_portada.md",
+    "00_Projecte_T3_portada.md", "00_Vaig_faltar.md",
 }
 
 

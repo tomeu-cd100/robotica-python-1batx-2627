@@ -55,10 +55,12 @@ El calendari de fabricació (cua de la talladora làser i de la impressora 3D pe
 | [`00_Projecte_T1_Mascota.md`](00_Projecte_T1_Mascota.md) · [`00_Projecte_T2_Vehicle.md`](00_Projecte_T2_Vehicle.md) · [`00_Projecte_T3_Rover.md`](00_Projecte_T3_Rover.md) | Alumnat | Dossier complet de cada robot: peces, muntatge, cablatge, codi mínim i rúbrica. |
 | [`00_Glossari_tecnic.md`](00_Glossari_tecnic.md) | Alumnat | Vocabulari català ↔ anglès per llegir documentació real. |
 | [`00_Mini_checks_individuals.md`](00_Mini_checks_individuals.md) | Docent | El micro-repte individual de 10' de cada SA (radar formatiu, no qualifica). |
+| [`pdf/00_Quadern_sessions_docent.pdf`](pdf/00_Quadern_sessions_docent.pdf) | Docent | Full imprimible d'una pàgina per sessió (kata + mini-check + repte ⭐ + checklist docent), generat de tots els documents anteriors. |
 | [`00_Guia_defensa_oral.md`](00_Guia_defensa_oral.md) | Docent i alumnat | Escala de progressió de les defenses orals del curs (R4·DO). |
 | [`00_Quadern_tecnic.md`](00_Quadern_tecnic.md) | Alumnat | El diari de treball individual: què hi va, com es porta, com es lliura. |
 | [`00_Avaluacio_per_alumnat.md`](00_Avaluacio_per_alumnat.md) | Alumnat | D'on surt la nota, en llenguatge d'alumne. |
 | [`00_Mode_supervivencia.md`](00_Mode_supervivencia.md) | Docent (primer any) | Què fer si falla el maquinari; les rutines no negociables i l'ordre d'adopció de la resta. |
+| [`00_Vaig_faltar.md`](00_Vaig_faltar.md) | Alumnat | Itinerari en 5 passos per posar-se al dia sol després de faltar a una sessió. |
 | [`00_IA_a_la_materia.md`](00_IA_a_la_materia.md) | Docent | Com s'introdueix la IA al curs i com gestionar assistents d'IA amb integritat acadèmica. |
 
 ## Notes

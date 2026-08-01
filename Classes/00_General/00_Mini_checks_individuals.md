@@ -9,7 +9,7 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 
 ## Rutina (10 minuts)
 
-1. **Quan:** a l'**inici de la sessió indicada** de cada SA. **Aquell dia el mini-check substitueix la graella d'activació** (`00_Banc_activacio_repas.md`): també és recuperació.
+1. **Quan:** a la sessió indicada de cada SA (a l'inici, o al final quan la guia ho diu així, vegeu la capçalera). **Només a SA6, SA7, SA8 i SA9** (S20, S24, S28, S31 al banc) el mini-check **substitueix** la kata d'activació aquell dia, perquè la guia docent hi té una única fila que ocupa tota la franja. **A la resta de SA el mini-check conviu amb la kata** (totes dues fases hi apareixen, per separat, a la taula de la sessió): fes primer la kata (`00_Banc_activacio_repas.md`) i després el mini-check, on digui la guia.
 2. **Com:** individual, **sense apunts, sense IA i sense connexió a internet**, en paper o a l'editor amb el projector apagat. 10' clavats. Es demana sempre **escriure** un programa curt (5-10 línies) de zero, mai només llegir-lo o triar una opció.
 3. **Correcció:** no es puntua individualment (excepte l'ús retrospectiu del §«El millor mini-check qualifica»). El docent fa una passada ràpida amb **semàfor**:
    - 🟢 **Ho fa sol** (errors de detall com a molt).

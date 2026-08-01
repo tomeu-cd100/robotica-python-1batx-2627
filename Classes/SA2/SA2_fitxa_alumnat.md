@@ -6,6 +6,8 @@
 
 <!-- /web:only-github -->
 
+> **Per què ara el Micro:shield?** A la SA1 vas fer aparèixer text i imatges al **display** (una sortida senzilla, integrada a la placa) i vas reaccionar a botons. Ara connectaràs el **Micro:shield** i faràs que la micro:bit **actuï sobre el món exterior**: LED, LED RGB, brunzidor i relé. És el mateix salt que fa un sistema embegut real (SA1): passar de mostrar informació a **actuar-hi a sobre**.
+
 > Connectaràs el Micro:shield i faràs que la micro:bit **actuï** sobre components externs: LED, LED RGB, brunzidor i relé. Acabaràs muntant la **mascota** del fil conductor. Tot el treball d'aquesta fitxa és **individual**.
 
 > 🔎 Veuràs `def` en algun exemple o repte d'ampliació: de moment les **funcions** només les **llegim** (per entendre-les), no cal saber escriure-les encara — les aprendrem a la **SA4**.
