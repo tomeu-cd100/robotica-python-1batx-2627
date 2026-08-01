@@ -20,7 +20,7 @@ pin1.write_analog(700)
 
 `write_analog(...)` no és realment "analògic de veritat": la placa **parpelleja el pin molt ràpid** (PWM, *pulse-width modulation*) i el nostre ull ho veu com una intensitat intermèdia. L'escala va de **0** (apagat) a **1023** (intensitat màxima) — **no** de 0 a 255 ni de 0 a 1.
 
-### Bloc 2 — Una rampa amb `for` i `range` amb pas
+### Bloc 2 — El mecanisme del `for`: recórrer una seqüència de números amb `range`
 
 ```python
 for valor in range(0, 1024, 32):
@@ -28,7 +28,24 @@ for valor in range(0, 1024, 32):
     sleep(10)
 ```
 
-`range(0, 1024, 32)` genera 0, 32, 64... fins a 1023: el tercer número és el **pas**. Combinat amb un `sleep(10)` curt, l'ull veu una **rampa suau** de foscor a claror.
+Un `for` **repeteix** el seu cos un cop per cada element d'una seqüència, guardant l'element actual en una variable (aquí, `valor`) que pots fer servir dins del cos. `range(...)` és la manera més habitual de generar aquesta seqüència de números, i té **tres formes**:
+
+| Forma | Genera | Exemple |
+|---|---|---|
+| `range(n)` | de `0` a `n-1` | `range(5)` → 0, 1, 2, 3, 4 |
+| `range(inici, final)` | de `inici` a `final-1` | `range(2, 6)` → 2, 3, 4, 5 |
+| `range(inici, final, pas)` | de `inici` a `final-1`, saltant de `pas` en `pas` | `range(0, 1024, 32)` → 0, 32, 64... fins a 1023 |
+
+Fixa't que el **`final` mai s'inclou** (per això `range(0, 1024, 32)` arriba fins a 1023, no fins a 1024). Una **traça** de les primeres voltes de `for valor in range(0, 1024, 32):` t'ajuda a veure-ho pas a pas:
+
+| Volta | `valor` | Què fa el cos |
+|---|---|---|
+| 1a | 0 | `pin.write_analog(0)` (apagat), `sleep(10)` |
+| 2a | 32 | `pin.write_analog(32)`, `sleep(10)` |
+| 3a | 64 | `pin.write_analog(64)`, `sleep(10)` |
+| ... | ... | ... fins que `valor` supera 1023: el `for` s'atura sol |
+
+Combinat amb un `sleep(10)` curt, aquesta rampa de valors fa que l'ull vegi una transició **suau** de foscor a claror, en lloc d'un salt brusc.
 
 ### Bloc 3 — Barrejar colors: tres canals PWM alhora
 

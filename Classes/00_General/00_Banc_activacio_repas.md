@@ -33,7 +33,7 @@ La taula de la secció «Mapa sessió → kata» indica, per a cada kata, quina 
 
 variables · `while`/`if`/`elif` · `for` amb `range` · condicionals amb sensors/llindar · funcions (`def`, paràmetres) · `return` · `global` · llistes · `for` sobre una col·lecció · ràdio (`radio.send`/`radio.receive`) · diccionaris / FSM · `log` · `try`/`except`.
 
-> Els conceptes **`for` sobre col·lecció** i **`try`/`except`** s'avancen a SA7 (Task 2 del pla de millora pedagògica: mou aquest contingut a SA7-S2). Les katas K13 i K14 porten la nota «⚠️ requereix activitat SA7-S2» perquè només tenen sentit si aquell moviment ja s'ha fet al material de SA7; mentre no s'hagi fet, ajorna-les a la primera sessió en què el concepte ja s'hagi explicat.
+> Els conceptes **`for` sobre col·lecció** i **`try`/`except`** ja no s'estrenen a SA8 (Task 2 del pla de millora pedagògica, fet): `for element in col·lecció` s'escriu per primer cop a **SA5-S1** (`mostra_historic()` de `radio_missatges.py`) i `try`/`except` a **SA7-S3** (`mesura_distancia()` de `evita_obstacles.py`, lectura robusta de l'HC-SR04). Les katas K13 (S25, SA7-S3) i K14 (S26, SA7-S4) ja tenen, doncs, el concepte explicat abans de repassar-lo.
 
 ---
 
@@ -62,8 +62,8 @@ variables · `while`/`if`/`elif` · `for` amb `range` · condicionals amb sensor
 | S22 | SA6 · S4 | — | *(prova pràctica T2: repàs lliure)* | — |
 | S23 | SA7 · S1 | [K12](#k12--s23--fsmdiccionari--parsons) | FSM/diccionari | Parsons |
 | S24 | SA7 · S2 | — | *(mini-check SA7, substitueix l'activació)* | — |
-| S25 | SA7 · S3 | [K13](#k13--s25--for-sobre-col·lecció--parsons--️-requereix-activitat-sa7-s2) ⚠️ | for sobre col·lecció | Parsons |
-| S26 | SA7 · S4 | [K14](#k14--s26--tryexcept--parsons--️-requereix-activitat-sa7-s2) ⚠️ | try/except | Parsons |
+| S25 | SA7 · S3 | [K13](#k13--s25--for-sobre-col·lecció--parsons) | for sobre col·lecció | Parsons |
+| S26 | SA7 · S4 | [K14](#k14--s26--tryexcept--parsons) | try/except | Parsons |
 | S27 | SA8 · S1 | [K15](#k15--s27--log--parsons) | log | Parsons |
 | S28 | SA8 · S2 | — | *(mini-check SA8, la guia no té fase d'Activació aquell dia)* | — |
 | S29 | SA8 · S3 | [K16](#k16--s29--funcionsparametres--escriure-de-zero) | funcions/paràmetres | Escriure de zero |
@@ -624,11 +624,9 @@ while True:
 
 ---
 
-### K13 · S25 — for sobre col·lecció — Parsons — ⚠️ requereix activitat SA7-S2
+### K13 · S25 — for sobre col·lecció — Parsons
 
-> ⚠️ **Coordinació amb el Task 2 del pla de millora pedagògica.** Aquesta kata dona per fet que `for element in col·lecció` ja s'ha explicat a SA7-S2 (avançat des de SA8 segons el pla de millora). Si aquell moviment encara no s'ha fet al material de SA7, **ajorna aquesta kata** a la primera sessió posterior en què el concepte ja s'hagi explicat i deixa S25 amb repàs lliure.
-
-**Repassa:** iterar directament sobre els elements d'una llista (en lloc d'un índex), en el context de les mesures de distància del rover.
+**Repassa:** `for missatge in historic:` de `mostra_historic()` (`radio_missatges.py`, SA5-S1), ara en el context de les mesures de distància del rover: iterar directament sobre els elements d'una llista, en lloc d'un índex.
 
 **Enunciat per a l'alumnat:**
 > Ordena aquestes línies perquè el programa recorri una llista de distàncies mesurades i mostri un avís cada cop que una és inferior a 10 cm.
@@ -658,11 +656,9 @@ for d in distancies:
 
 ---
 
-### K14 · S26 — try/except — Parsons — ⚠️ requereix activitat SA7-S2
+### K14 · S26 — try/except — Parsons
 
-> ⚠️ **Coordinació amb el Task 2 del pla de millora pedagògica.** Mateixa nota que K13: `try`/`except` es dona per explicat a SA7-S2. Si encara no s'ha fet, ajorna aquesta kata.
-
-**Repassa:** convertir de manera segura un text rebut a número, sense que un valor inesperat aturi el programa.
+**Repassa:** `try`/`except OSError` de `mesura_distancia()` (`evita_obstacles.py`, SA7-S3), ara en el context de convertir de manera segura un text rebut a número, sense que un valor inesperat aturi el programa.
 
 **Enunciat per a l'alumnat:**
 > Ordena aquestes línies perquè el programa intenti convertir un missatge a número i, si no ho aconsegueix, mostri una "E" d'error en lloc d'aturar-se.

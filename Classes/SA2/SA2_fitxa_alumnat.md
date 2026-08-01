@@ -49,6 +49,10 @@ Munta el LED RGB (P8/P12/P16) i el brunzidor (P2). Parteix de `pwm_led_rgb.py` i
 
 **Mini-animació (matriu LED + so):** encadena 2-3 `display.show(Image.___)` amb un `sleep()` entre cada un i un so diferent de `musica_altaveu.py` per a cada imatge (per exemple: `Image.HAPPY` + to agut, `Image.SAD` + to greu). No cal desar-ho com a fitxer a part: prova-ho al REPL o afegeix-ho temporalment al final de `pwm_led_rgb.py`.
 
+**Modifica el `for` de `respira()`:** a `pwm_led_rgb.py`, `respira()` fa servir `range(0, 1024, 32)` per pujar la intensitat. Canvia el **pas** a `range(0, 1024, 8)` i torna a provar-ho: quants passos calen ara per arribar a 1023 (aproximadament)? La rampa es veu més suau o més brusca? ______________________
+
+> 🔎 Pista: `range(inici, final, pas)` és una de les **tres formes** de `range` (les altres són `range(n)` i `range(inici, final)`); vegeu la [pàgina de pràctica de `pwm_led_rgb`](codi/pwm_led_rgb/EXPLICACIO.md#bloc-2--el-mecanisme-del-for-recórrer-una-seqüència-de-números-amb-range).
+
 > 🎯 **Mini-check individual (10', a l'inici d'aquesta sessió; no qualifica).** Banc complet: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md#sa2--mini-check-inici-de-la-sessió-2).
 
 ### 3 · Repte «semàfor o llum d'ambient» (Sessió 3 — producte)

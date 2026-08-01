@@ -35,6 +35,26 @@ def seguent_moviment():
 
 La variable `PAS` recorda **en quin punt** de la seqüència estem; cada crida a `seguent_moviment()` executa el pas actual i avança al següent (`% 4` fa que torni a `0` després del quart pas). El display mostra una fletxa diferent a cada pas perquè es vegi la seqüència sense haver de veure el vehicle en moviment.
 
+### 🔑 Per què cal `global`: àmbit de les variables
+
+`PAS = 0` es defineix **fora** de qualsevol funció, al nivell "principal" del programa: és una variable **global**, visible des de tot el fitxer. Cada funció, en canvi, té el seu propi **àmbit local**: les variables que crees DINS d'una funció (per exemple `angle` dins de `mou_servo(angle)`, SA4-S1) només existeixen mentre s'executa aquella funció i desapareixen en acabar.
+
+El problema apareix quan una funció vol **canviar** (no només llegir) una variable global. Prova de treure la línia `global PAS` de `seguent_moviment()`:
+
+```python
+PAS = 0
+
+def seguent_moviment():
+    # SENSE "global PAS":
+    if PAS == 0:
+        avancar(VELOCITAT)
+    PAS = (PAS + 1) % 4   # <-- aixo peta
+```
+
+Aquest codi dona `UnboundLocalError: local variable 'PAS' referenced before assignment`. Per defecte, en el moment en què Python veu una **assignació** a `PAS` (`PAS = ...`) dins d'una funció, decideix que `PAS` és una variable **local** nova d'aquella funció, sencera funció (no a partir d'aquella línia) — i llavors la línia `if PAS == 0:` d'abans falla, perquè aquesta "PAS local" encara no té cap valor assignat. `global PAS` li diu explícitament a Python: "quan aquesta funció toqui `PAS`, refereix-se a la variable global, no en creïs cap de local". Sense `global`, una funció pot **llegir** una variable global sense problema (com fa `mou_servo()` amb `graus_a_pwm`, que és una crida, no una assignació); només cal `global` quan la funció l'ha de **reassignar**.
+
+> 🔗 Aquesta mateixa necessitat reapareix cada cop que una funció ha de recordar un **estat** entre crides (per exemple `actualitza_estat()` a `maquina_estats_semafor.py`, SA6): sempre que vegis `global` a partir d'ara, és perquè la funció **canvia** una variable definida fora seu.
+
 ### Bloc 3 — El botó B sempre atura, es processi on es processi
 
 ```python

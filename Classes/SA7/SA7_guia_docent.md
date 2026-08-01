@@ -79,7 +79,7 @@
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: el nombre de circuits provats (deixa'n un de sol per taula, ben calibrat, en lloc de provar-ne diversos).
 
-**Punts clau:** el seguidor de línia és un altre **llaç tancat** (com la histèresi de la SA6): el rover llegeix, decideix i actua a cada volta del bucle, sense cap ordre externa. Amb un **únic** sensor no es pot saber cap a quin costat s'ha desviat de veritat el rover: cal triar una estratègia de cerca fixa (per exemple, girar sempre cap a l'esquerra quan es perd la línia).
+**Punts clau:** el seguidor de línia és un altre **llaç tancat** (com la histèresi de la SA6): el rover llegeix, decideix i actua a cada volta del bucle, sense cap ordre externa. Amb un **únic** sensor no es pot saber cap a quin costat s'ha desviat de veritat el rover: cal triar una estratègia de cerca fixa (per exemple, girar sempre cap a l'esquerra quan es perd la línia). Pregunta oberta per obrir la S3: *"i si el sensor, algun cop, no pogués donar cap lectura vàlida — què hauria de fer el programa?"* (es respon amb `try`/`except` a `evita_obstacles.py`).
 
 **Errors freqüents i solució:**
 | Error | Causa | Solució |
@@ -97,13 +97,13 @@
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
 | Activació | 10' | Mostra [`evita_obstacles.py`](codi/evita_obstacles/EXPLICACIO.md) **sense executar-lo** (PRIMM): pregunta què passa si el rover avança i la distància baixa de 15 cm de cop. 🥋 **Kata del dia:** K13 (for sobre col·lecció ⚠️ requereix activitat SA7-S2) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen el comportament davant d'un obstacle sobtat. |
-| Explicació | 25' | Sensor d'**ultrasons HC-SR04**: mesura de distància amb `machine.time_pulse_us`, **exactament** el patró de `alarma_ultrasons.py` (SA3), només canviant de pins (trigger **P1**, echo **P2**; a la SA3 es practicava a P14/P15, ara ocupats pels motors). Funció `mesura_distancia()`. Algorisme d'evita-obstacles: aturar, girar, tornar a mesurar. | Prenen notes; comparen amb el patró de la SA3 i identifiquen què canvia (només els pins) i què no (la lògica del time-of-flight). |
-| Repte | 65' | Acompanya el repte **"tria un comportament autònom"**: segons el material disponible a cada taula, cada alumne/a tria seguidor de línia i/o evita-obstacles i el prova a fons. | Trien i proven el seu comportament (Activitat 3 de la fitxa); si sobra temps, proven l'altre. |
+| Explicació | 25' | Sensor d'**ultrasons HC-SR04**: mesura de distància amb `machine.time_pulse_us`, **exactament** el patró de `alarma_ultrasons.py` (SA3), només canviant de pins (trigger **P1**, echo **P2**; a la SA3 es practicava a P14/P15, ara ocupats pels motors). Funció `mesura_distancia()`, ara amb `try`/`except OSError` per si la lectura falla (activitat nucli: lectura robusta d'un sensor). Algorisme d'evita-obstacles: aturar, girar, tornar a mesurar. | Prenen notes; comparen amb el patró de la SA3 i identifiquen què canvia (pins + `try`/`except`) i què no (la lògica del time-of-flight). |
+| Repte | 60' | Acompanya el repte **"tria un comportament autònom"**: segons el material disponible a cada taula, cada alumne/a tria seguidor de línia i/o evita-obstacles i el prova a fons. | Trien i proven el seu comportament (Activitat 3 de la fitxa); si sobra temps, proven l'altre. |
 | Tancament | 20' | Recull dubtes; anticipa la integració de la S4. | Documenten al quadern quin comportament han triat i per què. |
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: deixa que cadascú tanqui **només un** comportament (línia o obstacles), l'altre queda com a deures/simulador de lògica.
 
-**Punts clau:** el sensor d'ultrasons **no** llegeix una distància directament: envia un pols i mesura el temps de vol de l'eco, exactament com a la SA3. El canvi de pins (de P14/P15 a P1/P2) és **deliberat**: al rover, P14/P15 són ara dels motoreductors (fixats des de la SA4), i el fil conductor del curs documenta aquest canvi explícitament perquè no sembli un error.
+**Punts clau:** el sensor d'ultrasons **no** llegeix una distància directament: envia un pols i mesura el temps de vol de l'eco, exactament com a la SA3. El canvi de pins (de P14/P15 a P1/P2) és **deliberat**: al rover, P14/P15 són ara dels motoreductors (fixats des de la SA4), i el fil conductor del curs documenta aquest canvi explícitament perquè no sembli un error. `try`/`except OSError` al voltant de `machine.time_pulse_us(...)` és la primera vegada que l'alumnat **escriu** un `try`/`except`: quan un timeout es manifesta com a excepció (en lloc d'un valor negatiu), sense atrapar-la tot el programa s'aturaria per una única lectura dolenta.
 
 **Errors freqüents i solució:**
 | Error | Causa | Solució |
@@ -111,6 +111,7 @@
 | `mesura_distancia()` retorna sempre `None` | Cablatge de trigger/echo intercanviat, o als pins vells (P14/P15) en lloc dels nous (P1/P2) | Revisar [`SA7_esquemes_connexions.md`](SA7_esquemes_connexions.md): trigger **P1**, echo **P2** |
 | El rover xoca abans d'aturar-se | `LLINDAR_OBSTACLE_CM` massa baix per a la velocitat d'avanç | Pujar el llindar o reduir la velocitat d'avanç |
 | El rover gira i torna a topar amb el mateix obstacle | Temps de gir massa curt per a l'amplada real de l'obstacle | Allargar el `sleep()` del gir, provant amb obstacles reals de l'aula |
+| El `try`/`except` "amaga" un error real de cablatge | L'`except OSError` només hauria d'atrapar el timeout del sensor, no un error de programació | Provar primer sense `try`/`except` amb el REPL per veure l'error real, i tornar-lo a afegir després |
 
 ---
 

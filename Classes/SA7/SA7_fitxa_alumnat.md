@@ -49,6 +49,8 @@ Sensor **seguidor de línia** KS0050 a P0: lectura amb `read_analog()` i **llind
 
 Sensor d'**ultrasons HC-SR04** (trigger P1, echo P2): mesura de distància amb `mesura_distancia()`, **exactament** el mètode de `alarma_ultrasons.py` (SA3), només amb pins nous. Prova [`evita_obstacles.py`](codi/evita_obstacles/evita_obstacles.py): aturar/girar en detectar un obstacle proper.
 
+**Activitat nucli · lectura robusta amb `try`/`except`.** `mesura_distancia()` pot no trobar mai l'eco (obstacle massa lluny o fora d'abast): a més de comprovar que el valor no sigui negatiu, envolta la crida a `machine.time_pulse_us(...)` amb `try:`/`except OSError:` perquè una lectura puntual dolenta **no aturi tot el programa** del rover. Vegeu la [pàgina de pràctica](codi/evita_obstacles/EXPLICACIO.md#bloc-1b--activitat-nucli-lectura-robusta-amb-tryexcept).
+
 **Repte "tria un comportament autònom":** decideix, segons el material disponible a la teva taula, si tanques **seguidor de línia**, **evita-obstacles**, o tots dos. Aquest repte pot fer de producte de la SA si el docent t'ho indica.
 
 ### 4 · Integració: missions del rover (Sessió 4 — producte)

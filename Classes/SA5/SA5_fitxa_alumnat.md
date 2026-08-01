@@ -38,6 +38,8 @@ Activa la ràdio amb el **grup** que t'assigni el docent i prova [`radio_missatg
 
 **Prediu abans d'executar:** si dues plaques tenen **grups diferents**, es rebran els missatges l'una a l'altra? ______________________
 
+**Activitat nucli · `for` sobre una llista.** El programa guarda els missatges rebuts a la llista `historic`. Prem **A+B alhora**: `mostra_historic()` els recorre TOTS amb `for missatge in historic:` (un `for` que agafa els **elements** de la llista directament, no un índex). Envia't 3-4 missatges de prova i comprova que els veus tots, en ordre.
+
 ### 2 · Un protocol propi de comandes (Sessió 2)
 
 Dissenya **4-5 comandes pròpies** (per exemple `F`, `B`, `L`, `R`, `S`) amb un prefix (per exemple `"CMD:"`) i programa [`comandament.py`](codi/comandament/comandament.py). Connecta la recepció amb les funcions `avancar()`/`girar()`/`aturar()` de la SA4.

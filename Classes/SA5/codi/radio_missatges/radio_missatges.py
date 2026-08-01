@@ -36,13 +36,23 @@ def desa_al_historic(missatge):
         historic.pop(0)
 
 
+def mostra_historic():
+    # ACTIVITAT NUCLI (Sessio 1): un "for" que recorre els ELEMENTS de la
+    # llista directament (for missatge in historic), no un index ni un
+    # range(len(historic)). Mostra'ls TOTS, del mes antic al mes nou.
+    for missatge in historic:
+        display.scroll(missatge)
+
+
 while True:
-    if button_a.was_pressed():
+    if button_a.is_pressed() and button_b.is_pressed():
+        mostra_historic()           # A+B: repassa TOT l'historic
+    elif button_a.was_pressed():
         envia("Hola")
         display.show(Image.YES)
         sleep(200)
         display.clear()
-    if button_b.was_pressed():
+    elif button_b.was_pressed():
         # Mostra el darrer missatge rebut, o una cara triste si encara no
         # n'ha arribat cap.
         if len(historic) > 0:

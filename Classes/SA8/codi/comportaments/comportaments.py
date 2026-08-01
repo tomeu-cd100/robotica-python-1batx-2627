@@ -4,6 +4,16 @@
 # maquina_estats_semafor.py i vehicle_seguretat.py de la SA6): SEGUIR linia
 # FINS QUE apareix un obstacle -> ESQUIVAR-lo -> RECUPERAR la linia perduda
 # -> torna a SEGUIR. Sense classes: nomes funcions + una variable d'estat.
+# ARQUITECTURA PERCEP/DECIDEIX/ACTUA: el mateix esquema que fara servir CADA
+# programa individual a partir d'ara (plantilla_projecte.py de la SA9):
+#   percep()   -> nomes LLEGEIX sensors, no decideix ni mou res.
+#   decideix() -> nomes CANVIA D'ESTAT segons les dades de percep(), no mou
+#                 motors (excepte la maniobra d'ESQUIVAR: es GARANTIDA, no
+#                 depen de cap sensor, i forma part d'executar-la; per aixo
+#                 viu a actua(), no aqui).
+#   actua()    -> executa el moviment que toca segons l'estat en que erem
+#                 ABANS de decideix() (estat_abans), com faria un unic
+#                 if/elif d'una sola volta de bucle (SA6-SA7).
 # Aquest programa es la base conceptual de telemetria_radio.py (Sessio 2-3):
 # alla es reutilitza EXACTAMENT aquesta mateixa FSM, afegint-hi Kit 3 i
 # radio, perque la telemetria tingui quelcom rellevant a explicar (l'estat).
@@ -99,6 +109,58 @@ def actualitza_estat(nou):
     display.show(NOMS_ESTAT[estat][0])
 
 
+def percep():
+    # NOMES llegeix sensors i els retorna: no decideix res, no mou motors.
+    return {
+        "distancia": mesura_distancia(),
+        "linia": SEGUIDOR_LINIA.read_analog(),
+    }
+
+
+def decideix(dades):
+    # NOMES canvia d'estat (per a la propera volta); MAI mou motors, aixo
+    # es feina d'actua(). La transicio ESQUIVAR->RECUPERAR es GARANTIDA (no
+    # depen de cap sensor: sempre passa igual en acabar el gir), per aixo
+    # no hi es aqui: forma part de completar la maniobra, dins d'actua().
+    global estat
+    if estat == SEGUIR:
+        # Prioritat: l'obstacle guanya SEMPRE al seguiment de linia, encara
+        # que en aquell instant la linia es vegi be.
+        if dades["distancia"] is not None and dades["distancia"] < LLINDAR_OBSTACLE_CM:
+            actualitza_estat(ESQUIVAR)
+    elif estat == RECUPERAR:
+        # Cerca la linia altre cop: si la retroba, torna a SEGUIR.
+        if dades["linia"] < LLINDAR_LINIA:
+            actualitza_estat(SEGUIR)
+
+
+def actua(dades, estat_abans):
+    # Executa el moviment que toca segons l'estat en que erem ABANS de
+    # decideix() (equivalent a l'unic if/elif d'una sola volta de bucle
+    # que feia servir la versio anterior d'aquest programa).
+    if estat_abans == SEGUIR:
+        if dades["distancia"] is not None and dades["distancia"] < LLINDAR_OBSTACLE_CM:
+            aturar()
+        elif dades["linia"] < LLINDAR_LINIA:
+            avancar(VELOCITAT_AVANCAR)
+        else:
+            girar('esquerra')   # estrategia de cerca fixa (un unic sensor)
+    elif estat_abans == ESQUIVAR:
+        # Gir fix per apartar-se de l'obstacle; en acabar, passa a RECUPERAR.
+        girar('dreta')
+        sleep(400)
+        aturar()
+        actualitza_estat(RECUPERAR)
+    elif estat_abans == RECUPERAR:
+        # Si encara no hem retrobat la linia, continuem avancant a poc a poc
+        # mentre la busquem (si ja l'hem retrobat, decideix() ja ha canviat
+        # a SEGUIR i aqui no cal fer res mes aquesta volta).
+        if dades["linia"] >= LLINDAR_LINIA:
+            avancar(VELOCITAT_AVANCAR)
+            sleep(150)
+            aturar()
+
+
 actualitza_estat(SEGUIR)
 
 while True:
@@ -110,33 +172,9 @@ while True:
         sleep(20)
         continue
 
-    distancia = mesura_distancia()
-    lectura_linia = SEGUIDOR_LINIA.read_analog()
-
-    if estat == SEGUIR:
-        # Prioritat: l'obstacle guanya SEMPRE al seguiment de linia, encara
-        # que en aquell instant la linia es vegi be.
-        if distancia is not None and distancia < LLINDAR_OBSTACLE_CM:
-            aturar()
-            actualitza_estat(ESQUIVAR)
-        elif lectura_linia < LLINDAR_LINIA:
-            avancar(VELOCITAT_AVANCAR)
-        else:
-            girar('esquerra')   # estrategia de cerca fixa (un unic sensor)
-    elif estat == ESQUIVAR:
-        # Gir fix per apartar-se de l'obstacle; en acabar, passa a RECUPERAR.
-        girar('dreta')
-        sleep(400)
-        aturar()
-        actualitza_estat(RECUPERAR)
-    elif estat == RECUPERAR:
-        # Cerca la linia altre cop: si la retroba, torna a SEGUIR; si no,
-        # continua avancant a poc a poc mentre la busca.
-        if lectura_linia < LLINDAR_LINIA:
-            actualitza_estat(SEGUIR)
-        else:
-            avancar(VELOCITAT_AVANCAR)
-            sleep(150)
-            aturar()
+    dades = percep()
+    estat_abans = estat
+    decideix(dades)
+    actua(dades, estat_abans)
 
     sleep(20)

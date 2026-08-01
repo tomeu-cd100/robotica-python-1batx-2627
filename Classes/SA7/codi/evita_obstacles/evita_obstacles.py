@@ -31,18 +31,27 @@ VELOCITAT_GIR = 300
 
 
 def mesura_distancia():
-    # Trigger: pols de 10 us per iniciar la mesura (utime.sleep_us, no
-    # sleep() normal: sleep() nomes treballa en ms).
+    # ACTIVITAT NUCLI (lectura robusta d'un sensor): time_pulse_us pot NO
+    # trobar mai el pols esperat (obstacle massa lluny, eco perdut, sensor
+    # mal cablejat). Segons la placa/versio de MicroPython aixo es manifesta
+    # de DUES maneres possibles: retornant un valor negatiu (-1/-2, ja
+    # comprovat sota) O bé llancant una excepcio OSError. Un "try/except"
+    # cobreix aquesta segona possibilitat perque una lectura puntual dolenta
+    # NO aturi tot el programa del rover.
     TRIGGER.write_digital(0)
     utime.sleep_us(2)
     TRIGGER.write_digital(1)
     utime.sleep_us(10)
     TRIGGER.write_digital(0)
 
-    # Echo: machine.time_pulse_us mesura quant triga el pin en estar a 1.
-    durada_us = machine.time_pulse_us(ECHO, 1, 30000)   # 30 ms de marge (~5 m)
+    try:
+        # Echo: machine.time_pulse_us mesura quant triga el pin en estar a 1.
+        durada_us = machine.time_pulse_us(ECHO, 1, 30000)   # 30 ms (~5 m)
+    except OSError:
+        return None   # timeout llancat com a excepcio: cap eco rebut
+
     if durada_us < 0:
-        return None   # cap eco rebut (fora de rang)
+        return None   # timeout retornat com a valor negatiu: mateix cas
     # Anada i tornada: la distancia real es la meitat del recorregut total.
     return (durada_us * VELOCITAT_SO_CM_US) / 2
 

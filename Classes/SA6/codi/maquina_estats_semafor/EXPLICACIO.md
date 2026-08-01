@@ -43,7 +43,7 @@ def actualitza_estat(nou):
     print("Semafor ->", NOMS[estat])
 ```
 
-Igual que farà `actualitza_estat()` al vehicle (Sessió 2-3), tot el que ha de passar quan canvia l'estat (mostrar-lo, registrar-lo) viu en **un sol lloc**: així no hi ha risc que una part del programa "oblidi" actualitzar el display en canviar d'estat.
+Igual que farà `actualitza_estat()` al vehicle (Sessió 2-3), tot el que ha de passar quan canvia l'estat (mostrar-lo, registrar-lo) viu en **un sol lloc**: així no hi ha risc que una part del programa "oblidi" actualitzar el display en canviar d'estat. Per què cal `global estat`: mateix motiu que `global PAS` a `control_per_botons.py` (SA4) — la funció **reassigna** una variable definida fora seu.
 
 ## ⚠️ Errors que veuràs segur
 

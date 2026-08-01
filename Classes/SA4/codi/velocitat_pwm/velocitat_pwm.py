@@ -60,6 +60,21 @@ def aturar():
     M2_ENRERE.write_digital(0)
 
 
+# --- ACTIVITAT NUCLI (Sessio 2): funcio AMB VALOR DE RETORN ---------------
+# Calibratge de referencia: a VELOCITAT_REFERENCIA el vehicle avanca
+# aproximadament CM_PER_SEGON centimetres cada segon (ajusta aquest valor
+# al TEU vehicle cronometrant-lo). Escriu-la TU mateix abans de mirar-la:
+# ha de RETORNAR (amb "return") els mil.lisegons que cal mantenir el motor
+# engegat per recorrer unes certes distancies, NO moure res per si sola
+# (com graus_a_pwm() a la SA4-S1).
+CM_PER_SEGON = 20
+
+
+def temps_per_recorregut(cm):
+    # Funcio AMB VALOR DE RETORN: nomes calcula, no mou el vehicle.
+    return int((cm / CM_PER_SEGON) * 1000)
+
+
 # --- Demostracio: sentit de gir i velocitat amb les funcions de moviment ---
 avancar(300)     # lent
 sleep(1000)
@@ -71,4 +86,10 @@ girar('esquerra')
 sleep(600)
 girar('dreta')
 sleep(600)
+aturar()
+
+# --- Us de temps_per_recorregut(cm): la funcio es CRIDA i el resultat ------
+# --- s'USA per decidir quant dura l'avanc, en lloc d'un sleep() fix. -------
+avancar(400)
+sleep(temps_per_recorregut(30))   # avanca uns 30 cm i para
 aturar()

@@ -63,12 +63,13 @@
 |---|---|---|---|
 | Activació | 10' | Recorda el servo (angle fix); pregunta: *"i si un motor no ha d'anar a un angle, sinó girar sense parar?"* 🥋 **Kata del dia:** K20 (condicionals amb sensors/llindar) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Formulen hipòtesis sobre com es controlaria la velocitat. |
 | Explicació | 25' | **Motoreductors** del Kit 2: cada motor porta **dos** pins (un per sentit), i la velocitat és PWM (`write_analog`, com el LED de la SA2). Introdueix els pins **definitius** M1/M2 ([esquemes](SA4_esquemes_connexions.md)): a partir d'avui no es tornen a tocar en tot el curs. | Prenen notes; munten els dos motoreductors seguint l'esquema. |
-| Pràctica | 55' | Modelatge de [`velocitat_pwm.py`](codi/velocitat_pwm/velocitat_pwm.py): `avancar(velocitat)`, `retrocedir(velocitat)`, `girar(costat)`, `aturar()`. | Proven `velocitat_pwm.py` amb els motors alimentats per portapiles (**mai** USB); fan l'Activitat 2 de la fitxa. |
-| Mini-check + Tancament | 30' | **Mini-check individual** (10', escriure una funció amb paràmetre sense apunts; banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md)). Recull dubtes. | Fan el mini-check (no qualifica); anoten al quadern un comentari de cada paràmetre de les seves funcions de moviment. |
+| Pràctica | 45' | Modelatge de [`velocitat_pwm.py`](codi/velocitat_pwm/velocitat_pwm.py): `avancar(velocitat)`, `retrocedir(velocitat)`, `girar(costat)`, `aturar()`. | Proven `velocitat_pwm.py` amb els motors alimentats per portapiles (**mai** USB); fan l'Activitat 2 de la fitxa. |
+| Activitat nucli · `return` | 10' | **Escriptura guiada:** demana que cadascú escrigui `temps_per_recorregut(cm)` (paràmetre `cm`, `return` dels ms calculats a partir d'una velocitat calibrada) ABANS de mirar la solució, i que la facin servir amb `sleep(temps_per_recorregut(30))`. És la primera funció amb valor de retorn que **escriu** l'alumnat (a S1 només la van llegir a `graus_a_pwm()`). | Escriuen `temps_per_recorregut(cm)`, la proven i la comparen amb [`velocitat_pwm.py`](codi/velocitat_pwm/EXPLICACIO.md#bloc-5--activitat-nucli-sessió-2-escriu-tu-una-funció-amb-valor-de-retorn). |
+| Mini-check + Tancament | 25' | **Mini-check individual** (10', escriure una funció amb paràmetre sense apunts; banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md)). Recull dubtes. | Fan el mini-check (no qualifica); anoten al quadern un comentari de cada paràmetre de les seves funcions de moviment. |
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: **`girar()`** (deixa `avancar()`/`retrocedir()`/`aturar()`; `girar()` reapareix igualment a `control_per_botons.py`, S3).
 
-**Punts clau:** un motoreductor **no** va a un angle: gira contínuament, i el **sentit** es decideix triant a quin dels dos pins del motor s'envia el PWM (l'altre a `0`); mai als dos alhora. La **velocitat** és el mateix concepte de PWM que ja coneixies (`write_analog`, 0-1023), aplicat a un motor en lloc d'un LED.
+**Punts clau:** un motoreductor **no** va a un angle: gira contínuament, i el **sentit** es decideix triant a quin dels dos pins del motor s'envia el PWM (l'altre a `0`); mai als dos alhora. La **velocitat** és el mateix concepte de PWM que ja coneixies (`write_analog`, 0-1023), aplicat a un motor en lloc d'un LED. `temps_per_recorregut(cm)` és la primera funció amb `return` que **escriu** l'alumnat (no només la llegeix): calcula un temps a partir d'una distància, no mou res per si sola.
 
 **Errors freqüents i solució:**
 | Error | Causa | Solució |
@@ -76,6 +77,7 @@
 | El motor no es mou | Micro:shield alimentat només per USB | Alimentar sempre els motors des del portapiles. |
 | Un motor gira al revés del que esperaves | Sentit del cablatge del canal invertit | Inverteix el signe al codi (`avancar()`/`retrocedir()`), no recablis. |
 | Els dos pins d'un motor reben PWM alhora | Error de programació (bloqueja o vibra sense girar) | Revisar que l'altre pin es posi sempre a `0`. |
+| `temps_per_recorregut()` no fa avançar res | Confon una funció amb `return` (calcula) amb una que **fa** alguna cosa; li falta cridar `avancar()`/`sleep()` amb el resultat | Repassar amb `graus_a_pwm()` (S1): el `return` calcula, la crida a `avancar(...)`/`sleep(...)` és qui actua. |
 
 ---
 
