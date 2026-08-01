@@ -8,7 +8,7 @@ Material del **docent**: no es lliura a l'alumnat. Codi complet i orientacions d
 
 Enunciat complet, graella i solució raonada: [`Avaluació/Prova_practica_T1.md`](../../Avaluació/Prova_practica_T1.md).
 
-**Resum de correcció:** nucli = botons A/B + condicionals amb sensors interns (llum/temperatura) + lectura pel REPL; ampliacions = sensor extern (P3) comparat amb l'intern, i acceleròmetre + micròfon amb codi organitzat en funcions.
+**Resum de correcció:** nucli = botons A/B amb `is_pressed()` (SA1-SA3; `was_pressed()` no s'ensenya fins la SA4) + condicionals amb sensors interns (llum/temperatura) + lectura pel REPL; ampliacions = sensor extern (P3) comparat amb l'intern, i acceleròmetre + micròfon amb codi organitzat en funcions.
 
 <details markdown="1">
 <summary>Desplega el codi complet (<code>prova_t1_solucio.py</code>)</summary>
@@ -18,9 +18,14 @@ Enunciat complet, graella i solució raonada: [`Avaluació/Prova_practica_T1.md`
 # Tema: "estacio personal d'alertes" amb la micro:bit sola (sense muntar la
 # mascota: aquesta prova es individual i separada del producte, ja tancat a
 # la Sessio 3 de SA3).
-# NUCLI (satisfactori): botons A/B per triar mode + sensors INTERNS de llum
-# i temperatura amb condicionals if/elif/else + lectura continua pel REPL
-# (print) per depurar abans de fixar els llindars.
+# NUCLI (satisfactori): botons A/B per triar mode amb is_pressed() (SA1-SA3;
+# was_pressed() NO s'ensenya fins la SA4 i no es pot exigir al nucli) +
+# sensors INTERNS de llum i temperatura amb condicionals if/elif/else +
+# lectura continua pel REPL (print) per depurar abans de fixar els llindars.
+# NOTA: canviar de mode amb is_pressed() no necessita antirebot perque
+# l'assignacio es IDEMPOTENT (mentre el boto es manté premut, cada volta
+# torna a fixar el MATEIX mode: no hi ha cap comptador ni commutacio que
+# es pugui "disparar" de mes).
 # Ampliacio (notable): sensor de llum EXTERN del Kit 2 (P3, ADC) comparat
 # amb l'intern (entrada analogica basica, mapa() de la SA3).
 # Ampliacio (excel-lent): accelerometre (sacsejada) per confirmar l'alerta
@@ -94,9 +99,11 @@ def comprova_alertes_ampliacio():
 
 
 while True:
-    if button_a.was_pressed():
+    # NUCLI: is_pressed() (SA1-SA3), no was_pressed() (SA4). Idempotent:
+    # mentre el boto es manté premut, es torna a fixar el mateix mode.
+    if button_a.is_pressed():
         mode = MODE_LLUM
-    if button_b.was_pressed():
+    if button_b.is_pressed():
         mode = MODE_TEMP
     mostra_mode()
 
@@ -460,7 +467,7 @@ else:
 
 </details>
 
-**Resum de correcció Part B (taula):** nucli = telemetria per ràdio amb prefix `TEL:`; ampliació = integració d'una ordre `CMD:` en el comportament.
+**Resum de correcció Part B (taula):** nucli = telemetria per ràdio amb prefix `TEL:`; ampliació = integració d'una ordre `CMD:` en el comportament (repàs d'integració de la SA5-SA6, no contingut nou de SA7-SA8).
 
 <details markdown="1">
 <summary>Desplega el codi complet (<code>prova_t3_telemetria.py</code>)</summary>

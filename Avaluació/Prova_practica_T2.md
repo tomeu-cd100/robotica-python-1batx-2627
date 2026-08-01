@@ -6,7 +6,7 @@
 > ℹ️ Aquesta prova **no reutilitza el «vehicle amb aturada d'emergència»** (producte de la SA6, ja tancat i avaluat a la Sessió 3): és un programa nou, individual, sobre el mateix vehicle.
 
 ### Competències i criteris avaluats
-- **CE-R3** (control) → CA3.1 · **CE-R1** (programar) → CA1.1, CA2.1
+- **CE-R3** (control) → CA3.1 · **CE-R1** (programar) → CA1.1 · **CE-R2** (sensors/circuits) → CA2.1
 - Rúbriques: **R1** (codi), **R3** (control), **R4** (documentació).
 
 ---
@@ -33,14 +33,14 @@ Els dos programes funcionant (o la seva lògica assajada al simulador, si el maq
 
 ## Graella de correcció (10 punts)
 
-| Criteri | Punts | Rúbrica |
-|---|---|---|
-| Part A: FSM RUN/STOP amb ordres per ràdio (`CMD:`) funcional (nucli) | 3 | R1, R3 |
-| Part A: polsador STOP prioritari (ampliació) | 1,5 | R3 |
-| Part A: LED indicador d'estat (ampliació) | 1 | R1, R3 |
-| Part B: control tot/res amb histèresi funcional (nucli) | 2,5 | R1, R3 |
-| Part B: registre amb el mòdul `log` (ampliació) | 1 | R1 |
-| Documentació (diagrama d'estats + taula de dades) | 1 | R4 |
+| Criteri | Punts | CA | Rúbrica |
+|---|---|---|---|
+| Part A: FSM RUN/STOP amb ordres per ràdio (`CMD:`) funcional (nucli) | 3 | CA1.1, CA3.1 | R1, R3 |
+| Part A: polsador STOP prioritari (ampliació) | 1,5 | CA3.1 | R3 |
+| Part A: LED indicador d'estat (ampliació) | 1 | CA1.1 | R1, R3 |
+| Part B: control tot/res amb histèresi funcional (nucli) | 2,5 | CA2.1, CA3.1 | R1, R3 |
+| Part B: registre amb el mòdul `log` (ampliació) | 1 | CA1.1 | R1 |
+| Documentació (diagrama d'estats + taula de dades) | 1 | CA3.1 | R4 |
 
 > Orientació: nucli de les dues parts ben fet ≈ 5-6; amb una ampliació de cada part ≈ 7-8; amb totes i bona documentació ≈ 9-10.
 

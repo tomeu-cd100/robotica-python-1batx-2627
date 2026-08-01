@@ -24,7 +24,7 @@
 | [`SA3_esquemes_connexions.md`](SA3_esquemes_connexions.md) | Sessions 1-3 (pins ADC, taula de connexions i pins EXACTES de la mascota). |
 | `codi/` | `nivell_llum`, `termometre`, `alarma_ultrasons` i el repte-producte `mascota_reactiva`. |
 | [`00_Projecte_T1_Mascota.md`](../00_General/00_Projecte_T1_Mascota.md) | Sessió 3 (cablatge vinculant i tancament de la mascota). |
-| [`../../Avaluació/Prova_practica_T1.md`](../../Avaluació/Prova_practica_T1.md) | Sessió 4 (enunciat de la prova; document del Task 16). |
+| [`../../Avaluació/Prova_practica_T1.md`](../../Avaluació/Prova_practica_T1.md) | Sessió 4 (enunciat de la prova). |
 
 > Cada programa de `codi/` té la seva **pàgina de pràctica** (per què es fa + codi explicat per blocs, l'`EXPLICACIO.md` de la seva carpeta). El «Guió de modelatge» oral de sota continua sent teu.
 
@@ -119,8 +119,6 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 | Tancament | 10' | Recull el material i les entregues; anuncia quan es publicaran els resultats. | Entreguen el treball fet. |
 
 **Punts clau:** aquesta sessió avalua de manera **individual i tancada** els continguts de tot el trimestre (SA1-SA3): entrades i sortides, condicionals, bucles i el mètode de projecte. Vegeu els criteris i l'enunciat complet a [`Avaluació/Prova_practica_T1.md`](../../Avaluació/Prova_practica_T1.md).
-
-> ⚠️ **Estat d'aquest enllaç:** el document `Avaluació/Prova_practica_T1.md` encara no existeix en aquest moment del pla (és responsabilitat d'una tasca posterior, dedicada exclusivament al disseny de les tres proves pràctiques del curs). Aquesta guia hi enllaça per preparar l'estructura; l'enllaç quedarà operatiu quan es creï el document.
 
 **Producte de la SA:** repte «mascota reactiva» (≥2 reaccions sensor→resposta coherents), tancat i avaluat a la **S3** — **tanca el Projecte T1**. La **S4** és la prova pràctica T1 individual.
 

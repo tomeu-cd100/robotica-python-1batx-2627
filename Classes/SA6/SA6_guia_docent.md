@@ -108,8 +108,6 @@
 
 **Punts clau:** aquesta sessió avalua de manera **individual i tancada** els continguts del 2n trimestre (SA4-SA6): funcions de moviment, ràdio i sistemes de control amb màquina d'estats. Vegeu els criteris i l'enunciat complet a [`Avaluació/Prova_practica_T2.md`](../../Avaluació/Prova_practica_T2.md).
 
-> ⚠️ **Estat d'aquest enllaç:** el document `Avaluació/Prova_practica_T2.md` encara no existeix en aquest moment del pla (és responsabilitat d'una tasca posterior, dedicada exclusivament al disseny de les tres proves pràctiques del curs). Aquesta guia hi enllaça per preparar l'estructura; l'enllaç quedarà operatiu quan es creï el document.
-
 **Producte de la SA:** repte «vehicle amb aturada d'emergència» (control per ràdio + màquina d'estats + STOP prioritari, amb senyal visual de l'estat), tancat i avaluat a la **S3** — **tanca el Projecte T2**. La **S4** és la prova pràctica T2 individual.
 
 ### Mapa d'avaluació (traçabilitat)

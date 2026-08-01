@@ -12,7 +12,6 @@
 - **Sense esquemes/connexions dedicat.** El contracte també exempta SA9 de `SAn_esquemes_connexions.md` (només n ≤ 8): coherent amb el fet que el maquinari nou de cada repte és **triat per l'alumnat** (no hi ha un cablatge únic de SA), i cada repte del banc ja porta el seu propi esquema de components.
 - **Curs germà organitzat en equips; aquest curs és individual.** El curs germà (Arduino) estructura la SA9 amb rols d'equip rotatius. Aquest curs és **individual durant tot el curs** (`04_Metodologia.md` §4.3): l'estructura de sessions (Idear/Prototipar/Provar i millorar/Comunicar/Prova T3) es manté, però sense equips ni rols — cada alumne fa tot el cicle sol.
 - **`07_Rubriques.md` diu "SA9 S4-S5" a la taula de progressió de la R4·DO; la fitxa 18 mana.** La fitxa 18 és taxativa: el producte **es tanca a la S4** (dossier + defensa) i la **S5 és, sencera, la prova pràctica T3**, "independent del producte" i que "no reavalua el projecte". S'interpreta "S4-S5" de `07_Rubriques.md` com a referència laxa a l'**esglaonament** de les defenses (que poden començar ja a S3, segons `00_Guia_defensa_oral.md`), **mai** com una defensa que envaeixi la S5: cap activitat de projecte no competeix amb la prova pràctica (mateix principi que ja regia SA3/SA6 amb T1/T2, doc. 08).
-- **Enllaç a la prova pràctica T3 pendent.** `Avaluació/Prova_practica_T3.md` **encara no existeix** (és tasca del Task 16 d'aquest pla). Aquesta guia i els documents de la SA9 hi fan referència **en text pla**, sense enllaç Markdown, per no trencar el QA d'enllaços fins que es creï.
 
 ## Objectius de la SA
 1. Gestionar, individualment, un **projecte** complet (anàlisi → prototip → proves → millora) amb metodologia de disseny.
@@ -53,9 +52,9 @@ Amb 15-20 alumnes, una sola sessió de defenses no dona: 5' + preguntes + canvi 
 **No és sessió de projecte.** És, sencera, la prova pràctica individual del 3r trimestre (SA7-SA8), independent del producte de la SA9.
 
 - **Estructura per estacions:** part de **programació a la taula** (individual, sense apunts, sobre paper o REPL) + part de **rover per torns** a les pistes disponibles (línia, obstacles, com a SA7).
-- **Torns:** amb el nombre de pistes disponibles al taller, organitza grups petits que roten cada 8-10 minuts entre "taula" i "pista", perquè ningú esperi sense fer res.
+- **Torns:** amb el nombre de pistes disponibles al taller, organitza grups petits que roten **contínuament** cada 8-10 minuts entre "taula" i "pista" (des del minut 0 de la sessió, no en dues fases seqüencials), perquè ningú esperi sense fer res. Aritmètica de referència (20 alumnes, ~100' efectius, mínim de pistes): [`Avaluació/Prova_practica_T3.md`](../../Avaluació/Prova_practica_T3.md) §Logística.
 - **Repàs previ (deures de la S4):** "Python flash" de ràdio (5') + targetes de repàs espaiat, perquè l'alumnat arribi a la S5 amb els conceptes de SA7-SA8 frescos.
-- **Enunciat complet:** `Avaluació/Prova_practica_T3.md` (pendent, Task 16); quan existeixi, enllaça'l des d'aquí i des del README.
+- **Enunciat complet:** [`Avaluació/Prova_practica_T3.md`](../../Avaluació/Prova_practica_T3.md).
 
 ---
 

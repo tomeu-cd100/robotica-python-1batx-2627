@@ -16,7 +16,7 @@
 Programa una micro:bit que actuï d'**estació personal d'alertes**: ha de vigilar la llum i la temperatura de l'aula i avisar quan calgui, tal com hem practicat a `nivell_llum.py` i `termometre.py`.
 
 ### Nivell 1 — Nucli obligatori (assoliment satisfactori)
-1. Amb els botons **A**/**B**, alterna entre dos modes: **mode llum** i **mode temperatura** (mostra una icona diferent per a cada mode).
+1. Amb els botons **A**/**B** (`is_pressed()`, com a la SA1-SA3), alterna entre dos modes: **mode llum** i **mode temperatura** (mostra una icona diferent per a cada mode).
 2. En **mode llum**, llegeix el sensor de llum **intern** (`display.read_light_level()`) i mostra una icona quan sigui de nit/fosc (per sota d'un llindar **calibrat amb el REPL**, no inventat) i una altra quan hi hagi prou llum.
 3. En **mode temperatura**, llegeix `temperature()` i mostra, amb un `if/elif/else`, tres icones diferents segons si fa fred, temperatura agradable o calor.
 4. **Mentre el programa corre, imprimeix (`print`) la lectura pel REPL** perquè es pugui depurar en directe.
@@ -38,15 +38,15 @@ Programa funcionant + **explicació breu al quadern** (què fa cada mode, quins 
 
 ## Graella de correcció (10 punts)
 
-| Criteri | Punts | Rúbrica |
-|---|---|---|
-| Botons A/B canvien de mode correctament (icona pròpia per mode) | 1,5 | R1 |
-| Mode llum: condicional correcte amb el sensor intern i llindar calibrat | 1,5 | R1 |
-| Mode temperatura: `if/elif/else` correcte amb les tres icones | 1,5 | R1 |
-| Lectura contínua pel REPL (`print`) | 1 | R1 |
-| Sensor extern (P3) muntat i comparat amb l'intern (ampliació) | 2 | R1, R2 |
-| Acceleròmetre + micròfon integrats, codi amb funcions (ampliació) | 1,5 | R1 |
-| Documentació al quadern (llindars + calibratge + error resolt) | 1 | R4 |
+| Criteri | Punts | CA | Rúbrica |
+|---|---|---|---|
+| Botons A/B canvien de mode correctament amb `is_pressed()` (icona pròpia per mode) | 1,5 | CA1.1 | R1 |
+| Mode llum: condicional correcte amb el sensor intern i llindar calibrat | 1,5 | CA1.1, CA2.2 | R1 |
+| Mode temperatura: `if/elif/else` correcte amb les tres icones | 1,5 | CA1.1, CA2.2 | R1 |
+| Lectura contínua pel REPL (`print`) | 1 | CA1.1 | R1 |
+| Sensor extern (P3) muntat i comparat amb l'intern (ampliació) | 2 | CA2.1, CA2.2 | R1, R2 |
+| Acceleròmetre + micròfon integrats, codi amb funcions (ampliació) | 1,5 | CA1.1 | R1 |
+| Documentació al quadern (llindars + calibratge + error resolt) | 1 | CA1.1 | R4 |
 
 > Orientació: nucli ben fet ≈ 5-6; amb el sensor extern ≈ 7-8; amb totes dues ampliacions i bona documentació ≈ 9-10.
 
@@ -64,9 +64,14 @@ Programa funcionant + **explicació breu al quadern** (què fa cada mode, quins 
 # Tema: "estacio personal d'alertes" amb la micro:bit sola (sense muntar la
 # mascota: aquesta prova es individual i separada del producte, ja tancat a
 # la Sessio 3 de SA3).
-# NUCLI (satisfactori): botons A/B per triar mode + sensors INTERNS de llum
-# i temperatura amb condicionals if/elif/else + lectura continua pel REPL
-# (print) per depurar abans de fixar els llindars.
+# NUCLI (satisfactori): botons A/B per triar mode amb is_pressed() (SA1-SA3;
+# was_pressed() NO s'ensenya fins la SA4 i no es pot exigir al nucli) +
+# sensors INTERNS de llum i temperatura amb condicionals if/elif/else +
+# lectura continua pel REPL (print) per depurar abans de fixar els llindars.
+# NOTA: canviar de mode amb is_pressed() no necessita antirebot perque
+# l'assignacio es IDEMPOTENT (mentre el boto es manté premut, cada volta
+# torna a fixar el MATEIX mode: no hi ha cap comptador ni commutacio que
+# es pugui "disparar" de mes).
 # Ampliacio (notable): sensor de llum EXTERN del Kit 2 (P3, ADC) comparat
 # amb l'intern (entrada analogica basica, mapa() de la SA3).
 # Ampliacio (excel-lent): accelerometre (sacsejada) per confirmar l'alerta
@@ -140,9 +145,11 @@ def comprova_alertes_ampliacio():
 
 
 while True:
-    if button_a.was_pressed():
+    # NUCLI: is_pressed() (SA1-SA3), no was_pressed() (SA4). Idempotent:
+    # mentre el boto es manté premut, es torna a fixar el mateix mode.
+    if button_a.is_pressed():
         mode = MODE_LLUM
-    if button_b.was_pressed():
+    if button_b.is_pressed():
         mode = MODE_TEMP
     mostra_mode()
 
@@ -157,6 +164,6 @@ while True:
 
 </details>
 
-**Què mirar en corregir el nucli:** (1) els botons canvien de mode de manera fiable (`was_pressed()`, no `is_pressed()`, per no repetir el canvi mentre es manté premut); (2) el llindar de foscor s'ha **calibrat al REPL**, no copiat a ull; (3) les tres branques de temperatura són excloents i cobreixen tot el rang. Error típic: comparar `read_light_level()` (0-255) directament amb una lectura de `read_analog()` (0-1023) sense `mapa()` — confusió d'escales ja treballada a la SA3.
+**Què mirar en corregir el nucli:** (1) els botons canvien de mode amb `is_pressed()` (SA1-SA3 encara no ensenyen `was_pressed()`, exclusiu de la SA4: exigir-lo al nucli seria avaluar contingut no impartit; l'assignació és idempotent, així que no cal antirebot); (2) el llindar de foscor s'ha **calibrat al REPL**, no copiat a ull; (3) les tres branques de temperatura són excloents i cobreixen tot el rang. Error típic: comparar `read_light_level()` (0-255) directament amb una lectura de `read_analog()` (0-1023) sense `mapa()` — confusió d'escales ja treballada a la SA3.
 
 > Avaluació global del trimestre: combinar el resultat d'aquesta prova amb el producte «mascota reactiva» (S3 de SA3, dimensió «Projectes i productes») — cap evidència no compta dues vegades.

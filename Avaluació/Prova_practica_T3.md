@@ -5,14 +5,21 @@
 
 > ℹ️ Al 3r trimestre **el pes principal de l'avaluació és el projecte final (SA9)** amb les rúbriques R1-R5 i el dossier tècnic, tancat i defensat a la **S4**. Aquesta prova pràctica és un instrument **separat i individual**: comprova destreses de robòtica i integració (SA7-SA8), puntua **només** a la dimensió «Proves pràctiques» (20 %) i **no reavalua el projecte**. Cap evidència no compta dues vegades.
 
-### Logística: estacions rotatives (poques pistes, tot el grup alhora)
+### Logística: rotació contínua per grups (mateix model que `Classes/SA9/SA9_guia_docent.md` §Organització de la S5)
 
-Amb 2-3 pistes no es pot fer la Part A tothom alhora. Organització de la sessió (detall complet a `Classes/SA9/SA9_guia_docent.md` §Organització de la S5):
+**No hi ha dues fases seqüencials** (no "tothom fa primer la Part B i després tothom la Part A"): des del minut 0 de la sessió, la classe es divideix en **grups petits que roten contínuament** entre la Part B (a la taula, individual) i el seu torn de Part A (a la pista), en cicles de **8-10 minuts**, fins que tothom ha passat per totes dues parts.
 
-1. **Tota la classe comença per la Part B** (taula, individual, sense rover): 40-45'.
-2. **Part A per torns a les pistes** (10-12' per persona i pista), mentre la resta acaba la Part B i **verifica el codi de la Part A** al banc o al simulador (per a la lògica de radio/protocol; motors i sensors **no** es simulen).
-3. Ordre de torns publicat a l'inici; qui ha passat per la pista completa la documentació del quadern.
-4. El docent només observa i cronometra a la pista; la correcció de codi es fa després amb el quadern i el codi lliurat.
+**Aritmètica (grup de referència: 20 alumnes, ~100' efectius de sessió):**
+
+| Pistes actives | Torns per pista (⌈20 ÷ pistes⌉) | Temps total de rotació (torns × 9', mitjana de 8-10') | Marge respecte als ~100' |
+|---|---|---|---|
+| 2 | 10 | 90' | ~10' |
+| 3 | 7 | 63' | ~37' |
+
+- **Mínim de pistes per a un grup de 20 alumnes: 2** (marge ajustat, ~10'). Amb grups de **més de 22 alumnes cal una tercera pista**: amb 2 pistes, 24 alumnes necessitarien ⌈24/2⌉×9' = 108', que ja no caben en ~100' efectius.
+- Cada grup fa la Part B (taula) **mentre espera** el seu torn de pista, no com un bloc separat abans o després; mentre no li toca pista, **verifica el codi de la Part A** al banc o al simulador (només la lògica de ràdio/protocol; motors i sensors **no** es simulen).
+- Ordre de torns publicat a l'inici; qui ha passat per la pista completa la documentació del quadern.
+- El docent només observa i cronometra a la pista; la correcció de codi es fa després amb el quadern i el codi lliurat.
 
 ### Competències i criteris avaluats
 - **CE-R4** (robots) → CA4.1, CA4.2 · **CE-R3** (control) → CA3.1
@@ -30,7 +37,7 @@ Programa el rover perquè, sobre la pista marcada:
 
 ### PART B — Telemetria a la taula (4 punts)
 4. **Nivell satisfactori (nucli):** programa (**sense rover, només la placa**) l'enviament d'una **lectura per ràdio** amb el prefix **`TEL:`** (format clau:valor separat per `;`, com a `telemetria_radio.py`/`estacio_base.py`).
-5. **Ampliació:** integra una **decisió a partir d'una ordre rebuda** amb un prefix diferent (**`CMD:`**), de manera que una acció (per exemple, prémer un botó) dispari un comportament (com aturar el rover en un sistema real).
+5. **Ampliació:** integra una **decisió a partir d'una ordre rebuda** amb un prefix diferent (**`CMD:`**), de manera que una acció (per exemple, prémer un botó) dispari un comportament (com aturar el rover en un sistema real). *(Repàs d'integració: el protocol `CMD:` és contingut de la SA5-SA6, no de la SA7-SA8; aquí es reutilitza per integrar-lo amb la telemetria nova, no s'hi introdueix res nou.)*
 
 ### Lliurament
 Demostració a la pista (Part A) + programa de telemetria (Part B) + **explicació al quadern**: estratègia del recorregut/comportament (Part A) i descripció del protocol `TEL:`/`CMD:` (Part B).
@@ -42,14 +49,14 @@ Demostració a la pista (Part A) + programa de telemetria (Part B) + **explicaci
 
 ## Graella de correcció (10 punts)
 
-| Criteri | Punts | Rúbrica |
-|---|---|---|
-| Part A: recorregut fix calibrat i fiable (nucli) | 3 | R1, R3 |
-| Part A: reacció a obstacle amb HC-SR04 (ampliació) | 1,5 | R3 |
-| Part A: seguidor de línia (ampliació) | 1,5 | R3 |
-| Part B: telemetria per ràdio amb prefix `TEL:` (nucli) | 2 | R1 |
-| Part B: integració decisió/ordre `CMD:` en el comportament (ampliació) | 1 | R1, R3 |
-| Documentació (estratègia del recorregut + protocol de ràdio) | 1 | R4 |
+| Criteri | Punts | CA | Rúbrica |
+|---|---|---|---|
+| Part A: recorregut fix calibrat i fiable (nucli) | 3 | CA4.1 | R1, R3 |
+| Part A: reacció a obstacle amb HC-SR04 (ampliació) | 1,5 | CA4.1, CA3.1 | R3 |
+| Part A: seguidor de línia (ampliació) | 1,5 | CA4.1, CA3.1 | R3 |
+| Part B: telemetria per ràdio amb prefix `TEL:` (nucli) | 2 | CA4.2 | R1 |
+| Part B: integració decisió/ordre `CMD:` (ampliació, repàs SA5-SA6) | 1 | CA4.2, CA3.1 | R1, R3 |
+| Documentació (estratègia del recorregut + protocol de ràdio) | 1 | CA3.1 | R4 |
 
 > Orientació: nucli de les dues parts ben fet ≈ 5-6; amb una ampliació ≈ 7-8; amb totes i bona documentació ≈ 9-10.
 
@@ -284,6 +291,6 @@ while True:
 
 </details>
 
-**Què mirar en corregir el nucli:** (1) el missatge de telemetria porta el prefix `TEL:` i camps `clau:valor` separats per `;`; (2) l'enviament es llença **a intervals** (`running_time()`), no a cada volta del bucle; (3) el prefix `CMD:` de l'ampliació és **diferent** del `TEL:`, perquè la placa receptora no confongui una ordre amb una dada.
+**Què mirar en corregir el nucli:** (1) el missatge de telemetria porta el prefix `TEL:` i camps `clau:valor` separats per `;`; (2) l'enviament es llença **a intervals** (`running_time()`), no a cada volta del bucle; (3) el prefix `CMD:` de l'ampliació és **diferent** del `TEL:`, perquè la placa receptora no confongui una ordre amb una dada — recorda que aquest protocol `CMD:` ja es va ensenyar a la SA5-SA6: aquí **no s'avalua contingut nou de SA7-SA8**, sinó la capacitat d'integrar-lo amb la telemetria.
 
 > Avaluació global del trimestre: combinar el resultat d'aquesta prova amb la rúbrica del **projecte final (SA9)**, defensat a la S4 — instruments separats, cap evidència no compta dues vegades.

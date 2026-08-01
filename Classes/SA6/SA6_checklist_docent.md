@@ -11,7 +11,7 @@
 - [ ] Projector provat amb [`SA6_esquemes_connexions.md`](SA6_esquemes_connexions.md)
 - [ ] Programes oberts i provats: `maquina_estats_semafor` · `termostat_histeresi` · `registre_dades` · `vehicle_seguretat`
 - [ ] Compartir rúbriques **R1, R3 i R4** amb l'alumnat *abans* del producte (avaluació formativa)
-- [ ] Reservar/confirmar l'enunciat de la **Prova pràctica T2** (S4): [`Avaluació/Prova_practica_T2.md`](../../Avaluació/Prova_practica_T2.md) *(document pendent d'una tasca posterior; l'enllaç quedarà operatiu quan es creï)*
+- [ ] Reservar/confirmar l'enunciat de la **Prova pràctica T2** (S4): [`Avaluació/Prova_practica_T2.md`](../../Avaluació/Prova_practica_T2.md)
 
 ## ⏱️ 2. Moments (punts de control per sessió)
 

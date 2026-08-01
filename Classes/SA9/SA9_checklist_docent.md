@@ -12,7 +12,7 @@
 - [ ] [Plantilla de projecte](codi/plantilla_projecte/plantilla_projecte.py) i [plantilla del dossier](SA9_dossier_plantilla.md) accessibles a l'alumnat
 - [ ] Pistes de la S5 (línia + obstacles) muntades i provades, en nombre suficient per als torns (vegeu §Organització de la S5 de la guia)
 - [ ] Compartir **totes** les rúbriques (R1-R5) amb l'alumnat des de la **Sessió 1** (avaluació formativa)
-- [ ] Avisar que **`Avaluació/Prova_practica_T3.md` és pendent** (Task 16): tenir l'enunciat preparat abans de la S5
+- [ ] Tenir l'enunciat de [`Avaluació/Prova_practica_T3.md`](../../Avaluació/Prova_practica_T3.md) preparat abans de la S5
 
 ## ⏱️ 2. Moments (punts de control per sessió)
 

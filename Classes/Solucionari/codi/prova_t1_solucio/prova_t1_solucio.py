@@ -2,9 +2,14 @@
 # Tema: "estacio personal d'alertes" amb la micro:bit sola (sense muntar la
 # mascota: aquesta prova es individual i separada del producte, ja tancat a
 # la Sessio 3 de SA3).
-# NUCLI (satisfactori): botons A/B per triar mode + sensors INTERNS de llum
-# i temperatura amb condicionals if/elif/else + lectura continua pel REPL
-# (print) per depurar abans de fixar els llindars.
+# NUCLI (satisfactori): botons A/B per triar mode amb is_pressed() (SA1-SA3;
+# was_pressed() NO s'ensenya fins la SA4 i no es pot exigir al nucli) +
+# sensors INTERNS de llum i temperatura amb condicionals if/elif/else +
+# lectura continua pel REPL (print) per depurar abans de fixar els llindars.
+# NOTA: canviar de mode amb is_pressed() no necessita antirebot perque
+# l'assignacio es IDEMPOTENT (mentre el boto es manté premut, cada volta
+# torna a fixar el MATEIX mode: no hi ha cap comptador ni commutacio que
+# es pugui "disparar" de mes).
 # Ampliacio (notable): sensor de llum EXTERN del Kit 2 (P3, ADC) comparat
 # amb l'intern (entrada analogica basica, mapa() de la SA3).
 # Ampliacio (excel-lent): accelerometre (sacsejada) per confirmar l'alerta
@@ -78,9 +83,11 @@ def comprova_alertes_ampliacio():
 
 
 while True:
-    if button_a.was_pressed():
+    # NUCLI: is_pressed() (SA1-SA3), no was_pressed() (SA4). Idempotent:
+    # mentre el boto es manté premut, es torna a fixar el mateix mode.
+    if button_a.is_pressed():
         mode = MODE_LLUM
-    if button_b.was_pressed():
+    if button_b.is_pressed():
         mode = MODE_TEMP
     mostra_mode()
 

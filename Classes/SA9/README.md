@@ -43,7 +43,7 @@ Si un dia no tens el rover o els kits a mà, treballa la **lògica** (protocol, 
 
 - **Producte:** **rover ampliat amb el repte lliure**, funcional, + **dossier tècnic** individual (anàlisi, esquemes, codi comentat, proves, millores, conclusions, reflexió ètica/ODS) + **defensa oral individual**. **Es tanca a la S4.**
 - **Rúbriques:** **R1, R2, R3, R4 (nivell alt), R5** — totes.
-- La **S5** és la **prova pràctica T3**, individual, per estacions rotatives: un instrument **separat** que avalua destreses de SA7-SA8, **no** reavalua el projecte (cap evidència compta dues vegades). Enunciat: `Avaluació/Prova_practica_T3.md` (pendent, Task 16).
+- La **S5** és la **prova pràctica T3**, individual, per estacions rotatives: un instrument **separat** que avalua destreses de SA7-SA8, **no** reavalua el projecte (cap evidència compta dues vegades). Enunciat: [`Avaluació/Prova_practica_T3.md`](../../Avaluació/Prova_practica_T3.md).
 - Escala de nota, rúbriques i tot el sistema: [`Com s'avalua la matèria`](../00_General/00_Avaluacio_per_alumnat.md).
 
 <!-- web:only-github -->
