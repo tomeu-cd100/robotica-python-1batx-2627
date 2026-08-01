@@ -64,9 +64,27 @@ SESSIONS = {
            "MicroPython (from microbit import *, display.scroll, display.show, "
            "sleep) i he comencat la fitxa-poster.",
            "MicroPython, display, bucle, while True"),
-        _s("SA2", 1, _TITOL_SA["SA2"],
-           "TODO: pendent de la guia docent de SA2 (sortides Keyestudio: LED, brunzidor...).",
-           "TODO"),
+        _s("SA2", 1, "Sortides digitals amb bucles",
+           "Avui he encaixat el Micro:shield i he controlat un LED extern amb "
+           "sortides digitals (write_digital), bucles i un acumulador que "
+           "compta els parpellejos.",
+           "sortida digital, write_digital, bucle for, acumulador"),
+        _s("SA2", 2, "Sortides PWM i so",
+           "Avui he controlat sortides PWM (write_analog, 0-1023): intensitat "
+           "d'un LED i colors combinats d'un LED RGB, i he fet sonar melodies "
+           "i tons amb el modul music.",
+           "PWM, write_analog, LED RGB, music, to, melodia"),
+        _s("SA2", 3, "Repte «semàfor o llum d'ambient» (producte de la SA)",
+           "Avui he muntat i programat el meu repte «semafor o llum "
+           "d'ambient»: LED, LED RGB, brunzidor i rele amb bucles, PWM i "
+           "temps en variables. He fet la mini-defensa oral d'una decisio.",
+           "rele, variables de temps, funcions, mini-defensa"),
+        _s("SA2", 4, "Fabricació i muntatge de la mascota",
+           "Avui he muntat fisicament la carcassa de la meva mascota: he "
+           "fixat la micro:bit i el Micro:shield, he muntat el servo i he "
+           "cablejat el LED/RGB i el brunzidor per validar-los amb el codi "
+           "ja fet.",
+           "fabricacio, muntatge, cablatge, mascota"),
         _s("SA3", 1, _TITOL_SA["SA3"],
            "TODO: pendent de la guia docent de SA3 (entrades Keyestudio: LDR, polsador...).",
            "TODO"),
