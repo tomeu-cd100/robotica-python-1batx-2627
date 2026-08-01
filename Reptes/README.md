@@ -1,11 +1,16 @@
 # Reptes
 
-Banc de **reptes triables per SA** (SA1 a SA8): l'ampliació ⭐ de cada situació
-d'aprenentatge, per a qui ha acabat el nucli de la fitxa i vol anar més enllà.
+Banc de **reptes de cada SA** (SA1 a SA8). El repte **⭐ és nucli obligatori**:
+tothom el fa, dins del mateix temps de pràctica ja previst a la guia docent (fila
+pròpia a la taula de la sessió), i compta com a producte a la dimensió «Projectes
+i productes» (45 %, rúbrica R1). Els reptes **⭐⭐/⭐⭐⭐ són ampliació opcional**,
+per a qui ha acabat el nucli ⭐ i vol anar més enllà: si es fan, compten a la
+dimensió «Quadern tècnic i pràctiques» (25 %).
 
 > Cada SA té **3 reptes de dificultat creixent** (⭐/⭐⭐/⭐⭐⭐), tots amb el mateix
-> requisit tècnic mínim però contextos ("client" i "lliurable") diferents: l'alumnat
-> tria pel context que l'enganxi més, no per la dificultat.
+> requisit tècnic mínim però contextos ("client" i "lliurable") diferents. El ⭐ no
+> és opcional; ⭐⭐/⭐⭐⭐ sí ho són — l'alumnat que hi arriba tria pel context que
+> l'enganxi més, no per la dificultat.
 
 ## Contingut
 

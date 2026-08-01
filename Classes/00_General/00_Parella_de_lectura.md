@@ -50,7 +50,7 @@ if percentatge_llum > 50:
     write_digital(P8, 1)
 ```
 
-### Ítem 2 — un comentari que digui PER QUE, no QUE
+### Ítem 2 — un comentari que digui PER QUÈ, no QUÈ
 
 Dolent (el comentari repeteix el codi, no aporta res):
 
@@ -59,7 +59,7 @@ Dolent (el comentari repeteix el codi, no aporta res):
 comptador = comptador + 1
 ```
 
-Bo (el comentari explica la rao, no repeteix la linia):
+Bo (el comentari explica la raó, no repeteix la línia):
 
 ```python
 # comptem els avisos per activar l'alarma nomes a partir del tercer,
@@ -69,14 +69,14 @@ comptador = comptador + 1
 
 ### Ítem 3 — cap número màgic sense nom
 
-Dolent (d'on surt el 15? per que 15 i no 10?):
+Dolent (d'on surt el 15? per què 15 i no 10?):
 
 ```python
 if distancia < 15:
     aturar()
 ```
 
-Bo (el nom explica el que representa el numero):
+Bo (el nom explica el que representa el número):
 
 ```python
 LLINDAR_SEGURETAT_CM = 15

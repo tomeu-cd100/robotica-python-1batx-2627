@@ -1,7 +1,7 @@
 # 00 · Mini-checks individuals (radar formatiu de cada SA)
 
 > **Per a qui és?** Per al **docent**. Un **micro-repte individual de 10 minuts** per SA (SA1–SA9), sempre d'**escriptura de codi curt (5-10 línies)**, a fer **en solitari, sense apunts i sense IA**. **Cap mini-check individual no es puntua en el moment de fer-lo** (és un radar formatiu i cal dir-ho explícitament a l'alumnat), però **el millor mini-check del trimestre sí que compta** un 5 % dins la dimensió «Proves pràctiques» — vegeu §«El millor mini-check qualifica» més avall i `Programació didàctica/06_Avaluacio_criteris_qualificacio.md` §6.3.
-> **Quan es passa?** A l'**inici de la sessió que indica cada fitxa** (normalment la Sessió 2; a SA1 i a les SA que tanquen trimestre —SA3, SA6, SA9— es reubica perquè la darrera sessió és la prova pràctica): prou aviat per reaccionar, prou tard perquè hi hagi hagut pràctica.
+> **Quan es passa?** **On digui la guia de cada SA** (normalment la Sessió 2, però no sempre a l'**inici**: a SA4 i SA5 la pròpia guia el situa al **final** de la Sessió 2, combinat amb el tancament, i les capçaleres de cada bloc més avall ho reflecteixen). A SA6, SA7, SA8 i SA9 el mini-check **substitueix la graella d'activació** aquell dia (no hi ha fila d'Activació/kata pròpia a la sessió); a la resta de SA **conviu amb la kata** (totes dues fases hi apareixen, per separat, a la taula de la sessió). A SA1 i a les SA que tanquen trimestre —SA3, SA6, SA9— es reubica, a més, perquè la darrera sessió és la prova pràctica: prou aviat per reaccionar, prou tard perquè hi hagi hagut pràctica.
 
 ## El problema que resol
 
@@ -72,7 +72,7 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 **🟢** tot correcte · **🟡** if bé però rang confós amb 0-1023 · **🔴** no sap escriure la condició.
 **Reforç 🔴:** `SA0_guia_programacio.md` A5 (`if/elif/else`) i A6 (entrades analògiques).
 
-## SA4 · Mini-check (inici de la Sessió 2)
+## SA4 · Mini-check (final de la Sessió 2, combinat amb el tancament)
 
 **Enunciat (projectar):**
 > Escriu una funció `avancar(velocitat)` que faci moure el motor esquerre (canal M1) a la velocitat rebuda com a paràmetre. **(b)** En una frase: per què el motoreductor **no** es pot alimentar només amb el corrent del port USB?
@@ -81,7 +81,7 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 **🟢** tot · **🟡** funció correcta però (b) confosa · **🔴** no recorda la sintaxi de `def`/paràmetre.
 **Reforç 🔴:** `SA0_guia_programacio.md` A7 (funcions i paràmetres).
 
-## SA5 · Mini-check (inici de la Sessió 2)
+## SA5 · Mini-check (final de la Sessió 2, combinat amb el tancament)
 
 **Enunciat (projectar):**
 > **Escriu de zero** el bucle receptor: configura la ràdio en el canal (`group`) **10**, activa-la, i a cada volta comprova si ha arribat el missatge exacte `'F'`; si és així, crida `avancar(400)`.
@@ -101,12 +101,14 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 
 ## SA7 · Mini-check (inici de la Sessió 2)
 
-**Enunciat (projectar):**
-> El rover té el seguidor de línia (KS0050, P0) llegit amb `SEGUIDOR_LINIA.read_analog()` i un `LLINDAR_LINIA` ja calibrat sobre el circuit real. Les funcions de moviment (`avancar()`, `aturar()`, `girar()`) ja estan fetes. Escriu el **bucle complet** del comportament *seguidor de línia*: si la lectura és per sota del llindar (línia), avança recte; si és per sobre (s'ha perdut la línia), corregeix girant cap al costat on s'ha perdut.
+> Deliberadament **no** demana res del seguidor de línia (tema de la Sessió 2, que encara no s'ha explicat quan es passa el mini-check): repassa el cicle **llegir → decidir → actuar** amb un sensor analògic genèric (patró ja après a la SA3) aplicat al rover ja calibrat a la Sessió 1.
 
-**Què mires:** `if SEGUIDOR_LINIA.read_analog() < LLINDAR_LINIA: avancar(...)` / `else: girar(...)` (amb el costat de correcció coherent amb el circuit) · que la lectura es faci **a cada volta** del bucle (llaç tancat: llegeix → decideix → actua) · que reconegui que el llindar s'ha de calibrar sobre el circuit real, no un valor fix "de llibre".
-**🟢** estructura reactiva correcta i llindar aplicat amb el sentit correcte (per sota = línia) · **🟡** lògica bé però llegeix el sensor un sol cop fora del bucle, o inverteix el sentit del llindar · **🔴** no lliga sensor→decisió→acció.
-**Reforç 🔴:** repassar el cicle «llegir → decidir → actuar» i el calibratge del llindar a la fitxa SA7 (l'evita-obstacles amb `mesura_distancia()` i l'HC-SR04 arriba a la Sessió 3).
+**Enunciat (projectar):**
+> El teu rover ja avança recte gràcies al calibratge de M1/M2 (Sessió 1). Imagina un sensor analògic qualsevol muntat al davant, llegit amb `SENSOR.read_analog()` (0-1023), amb un llindar ja calibrat `LLINDAR = 500`. Les funcions de moviment (`avancar()`, `aturar()`) ja estan fetes. Escriu el **bucle complet**: si la lectura és per sota del llindar, avança (`avancar(400)`); si és per sobre, atura't (`aturar()`).
+
+**Què mires:** `while True:` · `if SENSOR.read_analog() < LLINDAR: avancar(400)` / `else: aturar()` · que la lectura es faci **a cada volta** del bucle (llaç tancat: llegeix → decideix → actua), no un sol cop abans d'entrar-hi.
+**🟢** estructura reactiva completa i correcta, lectura dins del bucle · **🟡** lògica bé però llegeix el sensor un sol cop fora del bucle, o inverteix el sentit de la comparació · **🔴** no lliga sensor→decisió→acció.
+**Reforç 🔴:** repassar el cicle «llegir → decidir → actuar» amb `nivell_llum.py`/`termometre.py` (SA3); el seguidor de línia concret (`SEGUIDOR_LINIA`, `LLINDAR_LINIA`) i l'evita-obstacles amb `mesura_distancia()` arriben aquesta mateixa Sessió 2 i la Sessió 3.
 
 ## SA8 · Mini-check (inici de la Sessió 2)
 

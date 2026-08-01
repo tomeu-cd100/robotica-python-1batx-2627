@@ -37,7 +37,7 @@ ___________________________________________________________________
 
 **Les teves velocitats de prova:** lenta = ______ , ràpida = ______ → comprovades amb el vehicle sobre la taula (rodes a l'aire, sense que caigui).
 
-> 🎯 **Mini-check individual (10', a l'inici d'aquesta sessió).** Banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md).
+> 🎯 **Mini-check individual (10', al final d'aquesta sessió, combinat amb el tancament).** Banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md).
 
 **+ Ampliació (opcional):** afegeix una funció `acceleracio(velocitat_final)` que pugi la velocitat de mica en mica (com `respira()` a la SA2) en lloc de saltar directament al valor final.
 

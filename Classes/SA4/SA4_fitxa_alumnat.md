@@ -48,7 +48,7 @@ Munta els dos motoreductors ([esquema](SA4_esquemes_connexions.md), pins **M1**/
 
 **Activitat nucli · funció amb valor de retorn.** Abans de mirar la solució, escriu tu mateix `temps_per_recorregut(cm)`: una funció **amb un paràmetre** (`cm`) que **RETORNI** (amb `return`) els mil·lisegons que cal mantenir el motor engegat per recórrer aquests centímetres, a partir d'una velocitat de referència calibrada (per exemple, `CM_PER_SEGON = 20`). No ha de moure res: només calcula i retorna un número, com `graus_a_pwm()` de la S1. **Usa-la** després per fer avançar el vehicle una distància triada per tu, per exemple: `avancar(400); sleep(temps_per_recorregut(30)); aturar()`. Compara amb la solució a [`velocitat_pwm.py`](codi/velocitat_pwm/velocitat_pwm.py).
 
-> 🎯 **Mini-check individual (10', a l'inici d'aquesta sessió; no qualifica).** Escriu una funció amb paràmetre sense apunts. Banc complet: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md).
+> 🎯 **Mini-check individual (10', al final d'aquesta sessió, combinat amb el tancament; no qualifica).** Escriu una funció amb paràmetre sense apunts. Banc complet: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md).
 
 ### 3 · Repte «control per botons» (Sessió 3 — producte)
 

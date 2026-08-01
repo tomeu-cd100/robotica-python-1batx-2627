@@ -24,7 +24,7 @@
 | [`SA2_esquemes_connexions.md`](SA2_esquemes_connexions.md) | Sessions 1-3 (pins del Micro:shield per a cada component). |
 | `codi/` | `led_parpelleig`, `pwm_led_rgb`, `musica_altaveu` i el repte-producte `semafor_rele`. |
 | [`00_Projecte_T1_Mascota.md`](../00_General/00_Projecte_T1_Mascota.md) | Sessió 4 (fabricació i muntatge). |
-| [`Reptes_SA2.md`](../../Reptes/Reptes_SA2.md) | Un cop tancats el repte de la S3 i la mascota de la S4: repte **⭐ nucli obligatori** (mateix temps de pràctica ja previst); reptes ⭐⭐/⭐⭐⭐ com a ampliació opcional. |
+| [`Reptes_SA2.md`](../../Reptes/Reptes_SA2.md) | Sessió 3, en tancar el repte «semàfor/llum d'ambient»: repte **⭐ nucli obligatori** (fila pròpia a la taula de la S3, minuts agafats del bloc de repte); reptes ⭐⭐/⭐⭐⭐ com a ampliació opcional. Independent de la mascota (es munta després, a la S4). |
 
 > Cada programa de `codi/` té la seva **pàgina de pràctica** (per què es fa + codi explicat per blocs, l'`EXPLICACIO.md` de la seva carpeta). El «Guió de modelatge» oral de sota continua sent teu.
 
@@ -85,7 +85,7 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 
 ## SESSIÓ 3 (2 h) — Repte «semàfor o llum d'ambient» (producte de la SA)
 
-> 🎯 **Producte de la SA.** Aquest repte **fa de producte** de la SA2: s'avalua amb R1 (codi) i R2 (muntatge). És també la **primera retallada** del pla de contingència horari (vegeu `08_Sequenciacio_temporal_anual.md`): si cal recuperar temps, la S4 s'allibera sencera per a la fabricació i aquest repte fa de producte final sense necessitat d'ampliar-lo.
+> 🎯 **Producte de la SA.** Aquest repte **fa de producte** de la SA2: s'avalua amb R1 (codi) i R2 (muntatge). És també la **primera retallada** del pla de contingència horari (vegeu `08_Sequenciacio_temporal_anual.md`): si cal recuperar temps, la S4 s'allibera sencera per a la fabricació — el repte **⭐ nucli obligatori** ja s'ha fet aquí, a la S3 (fila pròpia de la taula, més avall), així que alliberar la S4 no en deixa res pendent.
 >
 > 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
 
@@ -93,10 +93,11 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 |---|---|---|---|
 | Activació | 10' | Presenta l'encàrrec: *"un semàfor o una llum d'ambient que reacciona sola"*. Mostra [`semafor_rele.py`](codi/semafor_rele/semafor_rele.py) **sense executar-lo** (PRIMM). 🥋 **Kata del dia:** K02 (variables) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen la seqüència de colors i temps. |
 | Explicació | 15' | Introdueix el **relé** (Kit 3): commuta un circuit extern (p. ex. un llum de 5-12 V aliè a la micro:bit) amb un senyal digital de control; **seguretat**: el relé aïlla el circuit extern, no es toca mai el costat d'alta tensió. | Anoten com es cablegen la bobina i els contactes del relé. |
-| Repte | 75' | Acompanya el muntatge i la programació individual: seqüència de LED/RGB/brunzidor amb bucles i temporitzacions + relé per commutar el circuit extern. | Munten i programen el seu repte (Activitat 3, producte). |
+| Repte | 60' | Acompanya el muntatge i la programació individual: seqüència de LED/RGB/brunzidor amb bucles i temporitzacions + relé per commutar el circuit extern. | Munten i programen el seu repte (Activitat 3, producte). |
+| **Repte ⭐ (nucli obligatori)** | 15' | Un cop tancat el producte, repte **⭐ · Llum de seguretat per a motxilla** de [`Reptes_SA2.md`](../../Reptes/Reptes_SA2.md): amplia `led_parpelleig.py` (el LED de P1 muntat des de la S1) amb un segon mode «alerta» més ràpid controlat pel botó A. | Fan el repte ⭐; 🤝 **parella de lectura (5')** abans de lliurar-lo (vegeu [`00_Parella_de_lectura.md`](../00_General/00_Parella_de_lectura.md)); l'ensenyen al docent perquè el validi. Qui acaba aviat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
 | Mini-defensa + tancament | 20' | **Mini-defensa oral (1', R4·DO):** cada alumne/a explica en veu alta **què fa** el seu semàfor i **una decisió** presa (per exemple, per què aquest ordre de colors o aquests temps). No cal acabar-lo del tot per defensar-lo. | Fan la mini-defensa; anoten al quadern la decisió que han justificat. |
 
-> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: **l'ús del relé** (deixa el repte només amb LED/RGB/brunzidor; el relé queda com a ampliació ⭐).
+> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: **l'ús del relé** (deixa el repte només amb LED/RGB/brunzidor; el relé queda com a ampliació ⭐⭐/⭐⭐⭐).
 
 **Punts clau:** el relé és un **interruptor controlat per software**: la bobina (costat baixa tensió, controlada per `write_digital` des del Micro:shield) obre o tanca un contacte mecànic (costat del circuit extern). Permet que un senyal de 3,3 V governi un circuit de tensió i corrent molt més grans **sense connectar-los directament**.
 
@@ -122,13 +123,11 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 | Prova d'encesa | 20' | Supervisa la **prova d'encesa** (§ del dossier): carregar `led_parpelleig.py` per comprovar que el LED de P1 de la mascota respon i `musica_altaveu.py` per validar el brunzidor/altaveu; comprovar que el servo es mou lliurement a mà (**no es programa encara**). | Carreguen `led_parpelleig.py` i `musica_altaveu.py` per validar el cablatge del LED i del so; deixen la tapa sense encolar. |
 | Tancament | 10' | Checklist de muntatge i **retorn ordenat del material** (cargols, retalls sobrants). Anuncia la SA3 (sensors de la mascota). | Omplen el [checklist alumnat](SA2_checklist_alumnat.md) §muntatge i entreguen el material sobrant. |
 
-> ⏱️ **Marge:** aquesta sessió **es pot alliberar sencera** (pla de contingència, `08_Sequenciacio_temporal_anual.md`): si cal recuperar temps, el repte de la S3 ja fa de producte avaluable i la fabricació es reprograma a la primera sessió lliure sense penalitzar la nota.
+> ⏱️ **Marge:** aquesta sessió **es pot alliberar sencera** (pla de contingència, `08_Sequenciacio_temporal_anual.md`): si cal recuperar temps, el repte de la S3 ja fa de producte avaluable, **el repte ⭐ ja està fet a la S3** (no hi ha res de programació pendent) i la fabricació es reprograma a la primera sessió lliure sense penalitzar la nota.
 
-> 🎯 **Repte ⭐ (nucli obligatori, mateix temps de pràctica ja previst):** un cop tancats el repte de la S3 i el muntatge de la mascota, tothom fa el repte **⭐ · Llum de seguretat per a motxilla** de [`Reptes_SA2.md`](../../Reptes/Reptes_SA2.md) — amplia `led_parpelleig.py` (el mateix LED de P1 ja muntat a la mascota) amb un segon mode «alerta» més ràpid controlat pel botó A. Cal ensenyar-lo al docent perquè el validi. Qui acaba aviat pot continuar amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional).
+**Punts clau:** el LED i el so de la mascota **ja funcionen** perquè són el mateix codi de `codi/led_parpelleig` i `codi/musica_altaveu` adaptat als pins del dossier (només P1 i P2: la mascota **no** fa servir el LED RGB de `pwm_led_rgb`, perquè al seu cablatge complet P8 i P12 ja són el PIR i el polsador de la SA3, i escriure-hi PWM ara entraria en conflicte amb aquests sensors); el que hi ha de nou avui és **mecànic** (muntatge físic), no de programació — el repte ⭐ (LED de P1) ja es va tancar a la S3, abans que aquest mateix LED es munti físicament dins la mascota. El servo es mourà de manera programada a la **SA4**.
 
-**Punts clau:** el LED i el so de la mascota **ja funcionen** perquè són el mateix codi de `codi/led_parpelleig` i `codi/musica_altaveu` adaptat als pins del dossier (només P1 i P2: la mascota **no** fa servir el LED RGB de `pwm_led_rgb`, perquè al seu cablatge complet P8 i P12 ja són el PIR i el polsador de la SA3, i escriure-hi PWM ara entraria en conflicte amb aquests sensors); el que hi ha de nou avui és **mecànic** (muntatge físic), no de programació. El servo es mourà de manera programada a la **SA4**.
-
-**Producte de la SA:** repte «semàfor o llum d'ambient» (LED/RGB/brunzidor/relé amb bucles i PWM), tancat i avaluat a la **S3**. Muntatge físic de la **mascota** a la **S4** (avaluat amb la rúbrica de muntatge del dossier, R2).
+**Producte de la SA:** repte «semàfor o llum d'ambient» + repte **⭐** nucli obligatori (LED de P1 amb mode alerta), tancats i avaluats a la **S3**. Muntatge físic de la **mascota** a la **S4** (avaluat amb la rúbrica de muntatge del dossier, R2).
 
 ### Mapa d'avaluació (traçabilitat)
 
@@ -137,9 +136,9 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 | Mini-check (S2) | Bucle amb sortida digital sense apunts | CA1.1 | — | **No** (radar formatiu) |
 | Fitxa d'alumnat (Act. 1-2) | Sortides digitals i PWM bàsiques | CA2.1, CA2.2 | R1 | Formativa |
 | Repte «semàfor/llum d'ambient» (S3, producte) | Integració de sortides amb bucles i PWM | CA1.1, CA2.1, CA2.2 | **R1**, **R2** | Sí |
+| Repte **⭐** (`Reptes_SA2.md`, S3, nucli obligatori) | Segon mode de sortida digital controlat per botó | CA1.1 | **R1** | Sí |
 | Mini-defensa (S3, R4·DO) | Claredat + inici de justificació d'una decisió | CA5.2 | **R4** (fila «Defensa oral») | Sí |
 | Muntatge de la mascota (S4) | Muntatge físic i cablatge segur | CA2.1 | **R2** (criteri «Muntatge») | Sí |
-| Repte ⭐ (Reptes_SA2.md) | Segon mode de sortida digital controlat per botó | CA1.1 | **R1** | Sí |
 | Quadern tècnic | Documentació i reflexió del procés | CA5.2 | **R4** | Sí |
 | Observació d'aula | Autonomia i seguretat amb el maquinari | CA5.3 | **R5** | Sí |
 

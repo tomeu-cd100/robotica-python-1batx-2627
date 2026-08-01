@@ -73,9 +73,9 @@
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Mini-check | 10' | **Mini-check individual** (10', sense apunts; banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md#sa7--mini-check-inici-de-la-sessió-2)). Comprova el cicle general **llegir → decidir → actuar** aplicat a un sensor del rover, base comuna del seguidor de línia d'avui i de l'evita-obstacles de la S3. | Fan el mini-check (no qualifica). |
+| Mini-check | 10' | **Mini-check individual** (10', sense apunts; banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md#sa7--mini-check-inici-de-la-sessió-2)). Deliberadament **no** demana el seguidor de línia (tema d'avui, encara no explicat): comprova el cicle general **llegir → decidir → actuar** amb un sensor analògic genèric, ja après a la SA3. | Fan el mini-check (no qualifica). |
 | Explicació | 25' | Sensor **seguidor de línia** KS0050 (Kit 2): lectura amb `read_analog()` (0-1023, com qualsevol entrada analògica de la SA3) i **llindar de detecció**, que cal calibrar sobre el circuit real de l'aula. Modelatge de [`segueix_linia.py`](codi/segueix_linia/EXPLICACIO.md): algorisme de correcció de rumb (girar cap al costat on es perd la línia). | Prenen notes; relacionen el llindar amb el de `nivell_llum.py`/`termometre.py` (SA3). |
-| Pràctica | 55' | Acompanya la calibració del llindar taula per taula (cada circuit i cada llum d'aula són una mica diferents) i les proves sobre el circuit de línia. | Calibren `LLINDAR_LINIA` al REPL sobre el seu circuit; proven `segueix_linia.py` (Activitat 2 de la fitxa). |
+| Pràctica | 65' | Acompanya la calibració del llindar taula per taula (cada circuit i cada llum d'aula són una mica diferents) i les proves sobre el circuit de línia. | Calibren `LLINDAR_LINIA` al REPL sobre el seu circuit; proven `segueix_linia.py` (Activitat 2 de la fitxa). |
 | Tancament | 20' | Recull dubtes; anticipa l'evita-obstacles de la S3. | Documenten al quadern el llindar triat i una foto/captura del circuit de proves. |
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: el nombre de circuits provats (deixa'n un de sol per taula, ben calibrat, en lloc de provar-ne diversos).
@@ -121,17 +121,18 @@
 > 🎯 **Producte de la SA7.** Aquest programa **tanca** la SA: s'avalua amb **R1** (funcionament), **R3** (criteri "Autonomia/control") i **R4** (documentació i defensa).
 >
 > 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
+>
+> ⭐ **Repte nucli obligatori.** Un cop tancat el comportament autònom, tothom ha de fer el **repte ⭐ · Carret de magatzem amb velocitat variable** de [`Reptes_SA7.md`](../../Reptes/Reptes_SA7.md) (fila pròpia a la taula, més avall). Els reptes ⭐⭐/⭐⭐⭐ continuen sent ampliació opcional per a qui vagi sobrat.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
 | Activació | 10' | Recorda el comportament triat a la S3; introdueix la idea de **missió**: combinar més d'un comportament (o afegir-hi millores) sobre una pista real. 🥋 **Kata del dia:** K14 (try/except) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Recuperen el seu comportament de la S3. |
 | Explicació | 15' | Modelatge de [`rover_missions.py`](codi/rover_missions/EXPLICACIO.md): com se seleccionen missions amb els botons, i com el **polsador STOP** (P12, pull-up, mateix patró prioritari que `vehicle_seguretat.py` de la SA6) es comprova **sempre primer**. | Prenen notes; identifiquen per què cal comprovar el STOP dins de cada missió, no només al bucle principal. |
-| Repte | 75' | Acompanya la integració individual: el comportament triat (línia i/o obstacles) amb **millores** (velocitat variable, marge de seguretat) sobre una pista de proves. | Integren i milloren el seu comportament autònom (Activitat 4 de la fitxa, producte). Proven amb obstacles i/o circuit reals. |
+| Repte | 60' | Acompanya la integració individual: el comportament triat (línia i/o obstacles) amb **millores** (velocitat variable, marge de seguretat) sobre una pista de proves. | Integren i milloren el seu comportament autònom (Activitat 4 de la fitxa, producte). Proven amb obstacles i/o circuit reals. |
+| **Repte ⭐ (nucli obligatori)** | 15' | Un cop tancat el comportament autònom, repte **⭐ · Carret de magatzem amb velocitat variable** de [`Reptes_SA7.md`](../../Reptes/Reptes_SA7.md). | Fan el repte ⭐; 🤝 **parella de lectura (5')** abans de lliurar-lo; l'ensenyen al docent perquè el validi (**R1**). Qui vagi sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
 | Tancament | 20' | Recull dubtes; **mini-defensa breu** de cada alumne/a (2-3', R4·DO): una decisió de disseny justificada. | Mini-defensa; anoten al quadern la millora aplicada i per què. |
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: l'ampliació "combinar línia I obstacles en una sola missió" (deixa-la per a qui vagi sobrat; un únic comportament ben integrat i documentat és el nucli innegociable).
-
-> ⭐ **Repte nucli obligatori.** Un cop tancat el comportament autònom (fase «Repte», 75'), amb el mateix temps de pràctica que abans es dedicava opcionalment als reptes, tothom ha de fer el **repte ⭐ · Carret de magatzem amb velocitat variable** de [`Reptes_SA7.md`](../../Reptes/Reptes_SA7.md) i ensenyar-lo al docent perquè el validi (**R1**). No s'hi afegeix cap hora nova. Els reptes ⭐⭐/⭐⭐⭐ continuen sent ampliació opcional per a qui vagi sobrat.
 
 **Punts clau:** el rover **no aprèn cap pin de moviment nou**: reutilitza `avancar()`/`retrocedir()`/`girar()`/`aturar()` de la SA4 tal com ja calibrades a la S1 (`girar()` amb el segon paràmetre opcional de velocitat introduït a la S2). L'única cosa realment nova de la S4 és la **integració**: combinar comportaments ja programats per separat en una sola estructura de missions, amb un polsador STOP que els talla tots per igual.
 

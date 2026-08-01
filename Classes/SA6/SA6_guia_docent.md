@@ -79,13 +79,14 @@
 >
 > 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
 
-> ⭐ **Repte nucli obligatori.** Un cop tancat el producte, tothom fa el repte **⭐** de [`Reptes_SA6.md`](../../Reptes/Reptes_SA6.md) (termòstat de dues zones), aprofitant el mateix temps de pràctica que abans es destinava opcionalment a l'ampliació, i l'ensenya al docent perquè el validi. Els reptes **⭐⭐/⭐⭐⭐** continuen sent ampliació opcional per a qui vagi sobrat.
+> ⭐ **Repte nucli obligatori.** Un cop tancat el producte, tothom fa el repte **⭐** de [`Reptes_SA6.md`](../../Reptes/Reptes_SA6.md) (fila pròpia a la taula, més avall). Els reptes **⭐⭐/⭐⭐⭐** continuen sent ampliació opcional per a qui vagi sobrat.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
 | Activació | 10' | Mostra [`vehicle_seguretat.py`](codi/vehicle_seguretat/EXPLICACIO.md) **sense executar-lo** (PRIMM): pregunta què passa si arriba `"X"` mentre el vehicle avança. 🥋 **Kata del dia:** K11 (llistes) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). | Prediuen el comportament davant de cada comanda, amb èmfasi en la prioritat de l'STOP. |
 | Explicació | 20' | Sensor de temperatura (Kit 2 / intern) i **DHT11** (Kit 3) com a **+ampliació**: exemple de "termòstat" integrat amb la màquina d'estats del vehicle (mateix esquema d'histèresi de la Sessió 1, ara amb el relé del Kit 3). Recorda que **no** és control proporcional. | Prenen notes; qui vagi sobrat integra el sensor com a tercer estat ALERTA (opcional). |
-| Repte | 70' | Acompanya el tancament individual del repte «vehicle amb aturada d'emergència»: cadascú prova el **seu** protocol complet (F/B/L/R/S/X) amb el comandament d'un company o del docent. | Tanquen `vehicle_seguretat.py`: protocol de ràdio + màquina d'estats + STOP prioritari + LED. Proven l'STOP amb el polsador i amb `"X"` per ràdio. |
+| Repte | 55' | Acompanya el tancament individual del repte «vehicle amb aturada d'emergència»: cadascú prova el **seu** protocol complet (F/B/L/R/S/X) amb el comandament d'un company o del docent. | Tanquen `vehicle_seguretat.py`: protocol de ràdio + màquina d'estats + STOP prioritari + LED. Proven l'STOP amb el polsador i amb `"X"` per ràdio. |
+| **Repte ⭐ (nucli obligatori)** | 15' | Un cop tancat el producte, repte **⭐** de [`Reptes_SA6.md`](../../Reptes/Reptes_SA6.md) (termòstat de dues zones). | Fan el repte ⭐; 🤝 **parella de lectura (5')** abans de lliurar-lo; l'ensenyen al docent perquè el validi. Qui vagi sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
 | Tancament | 20' | Recull dubtes; **mini-defensa breu** de cada alumne/a (2-3', R4·DO): decisió de disseny justificada. | Mini-defensa; anoten al quadern el diagrama d'estats final i una decisió justificada. |
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: l'ampliació del sensor de temperatura/DHT11 (deixa-la com a **+ampliació** per a qui vagi sobrat; l'STOP prioritari amb polsador i ràdio és el nucli innegociable).

@@ -54,7 +54,7 @@ Dissenya **4-5 comandes pròpies** (per exemple `F`, `B`, `L`, `R`, `S`) amb un 
 | | |
 | | |
 
-> 🎯 **Mini-check individual (10', a l'inici d'aquesta sessió; no qualifica).** Enviar/rebre un missatge i actuar-hi sense apunts. Banc complet: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md).
+> 🎯 **Mini-check individual (10', al final d'aquesta sessió, combinat amb el tancament; no qualifica).** Enviar/rebre un missatge i actuar-hi sense apunts. Banc complet: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md).
 
 ### 3 · Repte «control remot bàsic» (Sessió 3 — producte)
 

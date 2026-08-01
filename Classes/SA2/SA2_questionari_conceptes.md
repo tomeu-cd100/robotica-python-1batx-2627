@@ -13,7 +13,7 @@
 
 ## Preguntes (tria una resposta)
 
-1. Quina és la sortida d'aquest programa? (TRAÇA)
+1. **[TRAÇA]** Quina és la sortida d'aquest programa?
 
    ```python
    from microbit import *
@@ -59,7 +59,7 @@
    - c) Llegeix el volum del micròfon.
    - d) Fa parpellejar la matriu de LED.
 
-6. Aquest programa hauria de comptar parpellejos i mostrar-ne el total cada volta, però sempre mostra `1`. On és l'error? (CORREGIR)
+6. **[CORREGIR]** Aquest programa hauria de comptar parpellejos i mostrar-ne el total cada volta, però sempre mostra `1`. On és l'error?
 
    ```python
    from microbit import *
@@ -85,7 +85,7 @@
    - c) Perquè Python no ho permet dins d'un bucle.
    - d) Perquè els acumuladors només funcionen amb `for`.
 
-8. Aquest fragment ha de commutar el relé del pin P13 per encendre un llum extern quan es prem el botó A, i tornar-lo a apagar 3 segons després. Quina línia falta? (COMPLETAR)
+8. **[COMPLETAR]** Aquest fragment ha de commutar el relé del pin P13 per encendre un llum extern quan es prem el botó A, i tornar-lo a apagar 3 segons després. Quina línia falta?
 
    ```python
    from microbit import *

@@ -43,7 +43,7 @@ ___________________________________________________________________
 | | | |
 | | | |
 
-> 🎯 **Mini-check individual (10', a l'inici d'aquesta sessió).** Banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md).
+> 🎯 **Mini-check individual (10', al final d'aquesta sessió, combinat amb el tancament).** Banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md).
 
 **+ Ampliació (opcional):** afegeix una comanda de **velocitat variable** (per exemple, `"CMD:V5"` per a velocitat 500) que el receptor interpreti extraient el número del text del missatge.
 

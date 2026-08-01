@@ -28,6 +28,7 @@
 3. **[TRAÇA]** Observa aquest fragment (com el de `comandament.py`):
 
    ```python
+   PREFIX = "CMD:"
    ordre = ""
    if button_a.is_pressed() and button_b.is_pressed():
        ordre = "S"

@@ -32,8 +32,8 @@ L'avaluació és **competencial, contínua, formativa i global**, d'acord amb el
 
 | Dimensió | Pes | Instruments |
 |---|---|---|
-| **Projectes i productes** | **45 %** | Productes individuals de les SA + defenses (rúbriques). |
-| **Quadern tècnic i pràctiques** | **25 %** | *Logbook* individual, pràctiques guiades i reptes. |
+| **Projectes i productes** | **45 %** | Productes individuals de les SA + repte **⭐ nucli obligatori** de cada SA (R1) + defenses (rúbriques). |
+| **Quadern tècnic i pràctiques** | **25 %** | *Logbook* individual, pràctiques guiades i reptes **d'ampliació ⭐⭐/⭐⭐⭐** (quan es fan). |
 | **Proves pràctiques** (programació/electrònica) | **20 %** | Prova trimestral (T1, T2, T3) — **15 %** + millor mini-check del trimestre — **5 %** (vegeu més avall). |
 | **Actitud, autonomia i responsabilitat** | **10 %** | Observació, autoavaluació. |
 

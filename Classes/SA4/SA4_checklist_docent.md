@@ -23,7 +23,7 @@
 **Sessió 2 — Motoreductor amb funcions de moviment**
 - [ ] Introduir els pins **definitius** M1/M2: no es tornaran a tocar en tot el curs
 - [ ] Modelatge de `velocitat_pwm.py`: `avancar`/`retrocedir`/`girar`/`aturar`
-- [ ] **Mini-check individual** a l'inici (10', [banc SA4](../00_General/00_Mini_checks_individuals.md)) — funció amb paràmetre sense apunts
+- [ ] **Mini-check individual** al final de la sessió, amb el tancament (10', [banc SA4](../00_General/00_Mini_checks_individuals.md)) — funció amb paràmetre sense apunts
 - ⚠️ *Error a vigilar:* motors alimentats només per USB (no giren); PWM als dos pins d'un motor alhora
 
 **Sessió 3 — Repte «control per botons» (producte)**

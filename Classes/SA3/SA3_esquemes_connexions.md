@@ -42,7 +42,7 @@ El [dossier del Projecte T1 · La mascota](../00_General/00_Projecte_T1_Mascota.
 | Sensor PIR | **P8** | Digital | Sí (detecta presència → CURIÓS). |
 | Polsador (carícia) | **P12** | Digital, *pull-up* + antirebot | Sí (calma la mascota). |
 | Sensor de so (micròfon) | **P4** analògic, o `microphone.sound_level()` intern | Analògic / intern | Sí (soroll fort → ESPANTAT); el codi model fa servir el **micròfon integrat** de la V2 (alternativa vàlida a cablejar el del Kit 3). **Si s'usa el micròfon extern del Kit 3 (P4):** cal `display.off()`, perquè P4 comparteix circuit amb el display i `mascota_reactiva` el té sempre actiu (cara); per això el codi model del fil conductor només fa servir el micròfon **intern**. |
-| DHT11 *(extra opcional)* | **P13** | Digital 1-Wire | No al nucli (ampliació ⭐). |
+| DHT11 *(extra opcional)* | **P13** | Digital 1-Wire | No al nucli (ampliació ⭐⭐/⭐⭐⭐). |
 | Sensor de llum | — | Analògic intern | Sí (`display.read_light_level()`, foscor → ADORMIT). |
 | Acceleròmetre | — | Intern (I2C) | Sí (`accelerometer.was_gesture('shake')`). |
 

@@ -24,7 +24,7 @@
 **Sessió 2 — Dissenyar un protocol de comandes**
 - [ ] Introduir la idea de **protocol** (prefix + ordre curta) abans de mostrar `comandament.py`
 - [ ] Modelatge de la connexió recepció → funcions de moviment de la SA4
-- [ ] **Mini-check individual** a l'inici (10', [banc SA5](../00_General/00_Mini_checks_individuals.md)) — enviar/rebre un missatge i actuar-hi
+- [ ] **Mini-check individual** al final de la sessió, amb el tancament (10', [banc SA5](../00_General/00_Mini_checks_individuals.md)) — enviar/rebre un missatge i actuar-hi
 - ⚠️ *Error a vigilar:* `PREFIX` que no coincideix exactament entre comandament i receptor
 
 **Sessió 3 — Repte «control remot bàsic» (producte)**

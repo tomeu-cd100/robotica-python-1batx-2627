@@ -42,8 +42,8 @@ Conversió única per a totes les rúbriques (vegeu `Programació didàctica/07_
 
 | Dimensió | Pes | Instruments | Rúbriques |
 |---|---|---|---|
-| **Projectes i productes** | **45 %** | Productes individuals de cada SA + defenses orals | R1, R2, R3 |
-| **Quadern tècnic i pràctiques** | **25 %** | *Logbook* individual, pràctiques guiades i reptes | R4 (quadern), R1 |
+| **Projectes i productes** | **45 %** | Productes individuals de cada SA + repte **⭐ nucli obligatori** de cada SA + defenses orals | R1, R2, R3 |
+| **Quadern tècnic i pràctiques** | **25 %** | *Logbook* individual, pràctiques guiades i reptes **d'ampliació ⭐⭐/⭐⭐⭐** (quan es fan) | R4 (quadern), R1 |
 | **Proves pràctiques** | **20 %** | Prova trimestral T1/T2/T3 (**15 %**) + millor mini-check individual del trimestre (**5 %**) | R1, R3 |
 | **Actitud, autonomia i responsabilitat** | **10 %** | Observació, autoavaluació | R5 |
 

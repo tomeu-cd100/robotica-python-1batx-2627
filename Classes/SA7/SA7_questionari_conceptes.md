@@ -12,7 +12,7 @@
 
 ## Preguntes (tria una resposta)
 
-1. Fixa't en aquest fragment, extret de `missio_quadrat()` (`rover_missions.py`):
+1. **[TRAÇA]** Fixa't en aquest fragment, adaptat de `missio_quadrat()` (`rover_missions.py`):
 
    ```python
    for _ in range(4):
@@ -41,7 +41,7 @@
    - c) Perquè el KS0050 és analògic i mai dona el mateix valor dues vegades.
    - d) No hi ha cap motiu, es podria fixar un únic valor vàlid per a tothom.
 
-4. Aquest fragment és una versió incompleta de `mesura_distancia()` (d'`evita_obstacles.py`). Hi falta **una línia** (marcada amb `____`):
+4. **[COMPLETAR]** Aquest fragment és una versió incompleta de `mesura_distancia()` (d'`evita_obstacles.py`). Hi falta **una línia** (marcada amb `____`):
 
    ```python
    def mesura_distancia():
@@ -95,7 +95,7 @@
    - c) Llegint directament el valor de `girar()`.
    - d) El rover s'atura sempre que perd la línia, mai gira.
 
-10. Aquest fragment (basat en `mesura_distancia()` d'`evita_obstacles.py`) té **un error**. Troba'l:
+10. **[CORREGIR]** Aquest fragment (adaptat de `mesura_distancia()` d'`evita_obstacles.py`) té **un error**. Troba'l:
 
     ```python
     def mesura_distancia():
