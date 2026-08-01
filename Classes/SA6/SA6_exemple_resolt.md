@@ -37,7 +37,9 @@ Fa servir només conceptes de la SA6: **màquina d'estats** (RUN/STOP), **aturad
 from microbit import *
 
 LED_MOTOR = pin1
-POLSADOR_EMERGENCIA = pin12   # pull-up intern: LOW (0) = premut
+POLSADOR_EMERGENCIA = pin12
+POLSADOR_EMERGENCIA.set_pull(POLSADOR_EMERGENCIA.PULL_UP)   # sense aixo la
+# lectura flota; amb pull-up intern: repos = 1, premut = 0 (LOW)
 
 RUN, STOP = range(2)
 estat = STOP
@@ -89,7 +91,7 @@ while True:
 - **Comprovar el polsador després d'altres condicions:** el programa no dona cap error, però hi ha un instant en què l'aturada "no es nota". **Pista:** el polsador ha de ser el **primer** `if` del bucle, sempre.
 - **Canviar `estat` directament (`estat = RUN`) en lloc de cridar `actualitza_estat()`:** el LED es queda desincronitzat amb la variable d'estat real. **Pista:** tot canvi d'estat ha de passar **sempre** per la mateixa funció.
 - **Deixar que la cinta torni a RUN sola quan el polsador es deixa d'estar premut:** és perillós (una emergència real no s'hauria de resoldre sola, sense intervenció humana). **Pista:** STOP només es surt amb una ordre explícita nova, mai automàticament.
-- **Oblidar el `pull-up` intern del polsador:** sense pull-up, la lectura "flota" i pot donar falsos positius d'emergència. **Pista:** el polsador del vehicle (pin12) ja porta el pull-up configurat igual que aquí.
+- **Oblidar el `pull-up` intern del polsador:** sense pull-up, la lectura "flota" i pot donar falsos positius (o falsos negatius) d'emergència. **Pista:** cal configurar-lo explícitament amb `pin.set_pull(pin.PULL_UP)` abans del bucle, exactament com fa `vehicle_seguretat.py` amb el polsador del vehicle (pin12) i com ja s'ensenyava a la SA3.
 
 ---
 

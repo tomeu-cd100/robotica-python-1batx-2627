@@ -15,7 +15,7 @@
 | Motoreductor **dret** (M2), sentit endavant | **P15** | PWM | Fixat a la SA4; **no es toca**. |
 | Motoreductor **dret** (M2), sentit enrere | **P16** | PWM | Fixat a la SA4; **no es toca**. |
 | LED indicador d'estat | **P1** | Digital | Encès fix = RUN, apagat = STOP, intermitent = ALERTA (si s'amplia). Reaprofita el pin del LED de la mascota, ja alliberat. |
-| Polsador STOP manual | **P12** | Digital, *pull-up* intern | LOW (0) = premut; **prioritat màxima**, es comprova el primer a cada volta del bucle. |
+| Polsador STOP manual | **P12** | Digital, *pull-up* intern (cal configurar-lo al codi amb `pin12.set_pull(pin12.PULL_UP)`, no ve activat per defecte) | LOW (0) = premut; **prioritat màxima**, es comprova el primer a cada volta del bucle. |
 | Ràdio (SA5) | — | Interna (RF) | `radio.on()` + `radio.config(group=...)`; mateix `GRUP` i mateix `PREFIX` ("CMD:") que a la SA5. |
 | Alimentació dels motors | Portapiles 4×AA → Micro:shield | — | **Mai** des de l'USB de l'ordinador quan els motors giren. |
 

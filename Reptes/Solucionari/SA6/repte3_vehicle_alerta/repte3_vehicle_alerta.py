@@ -24,6 +24,8 @@ M2_ENRERE = pin16
 
 LED_ESTAT = pin1
 POLSADOR_STOP = pin12
+POLSADOR_STOP.set_pull(POLSADOR_STOP.PULL_UP)   # sense aixo la lectura flota
+# amb pull-up intern: repos = 1, premut = 0 (LOW)
 
 VELOCITAT = 400
 

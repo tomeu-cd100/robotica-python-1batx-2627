@@ -34,7 +34,8 @@ while True:
         actiu = False
     # Si temp esta ENTRE els dos llindars, NO es toca "actiu": aixo es la
     # histeresi. Un termostat sense histeresi nomes tindria un llindar i
-    # canviaria d'estat cada volta que la lectura ballegés al seu voltant.
+    # faria que el rele balli amunt i avall cada volta que la lectura
+    # es mogues lleugerament al seu voltant.
 
     RELE.write_digital(1 if actiu else 0)
 

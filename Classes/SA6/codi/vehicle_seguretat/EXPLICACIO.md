@@ -14,6 +14,15 @@ Si el vehicle està avançant (`estat == RUN`) i just en aquell moment arriba pe
 
 ## 🧠 El codi, per blocs
 
+### Bloc 0 — El pull-up del polsador es configura ABANS del bucle
+
+```python
+POLSADOR_STOP = pin12
+POLSADOR_STOP.set_pull(POLSADOR_STOP.PULL_UP)
+```
+
+Sense aquesta línia, la lectura del pin **flota** (no té repòs definit) i pot donar falsos STOP o, pitjor, no detectar-ne un de real. Amb `PULL_UP`, el pin llegeix `1` en repòs i `0` quan es prem el polsador (per això el bloc 1 fa `if not ...`).
+
 ### Bloc 1 — El polsador es mira SEMPRE primer
 
 ```python
