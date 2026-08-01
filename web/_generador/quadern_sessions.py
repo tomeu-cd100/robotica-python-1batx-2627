@@ -191,9 +191,25 @@ SESSIONS = {
            "amb millores de velocitat i marge de seguretat. He fet la "
            "mini-defensa breu d'una decisio de disseny.",
            "missio, integracio, polsador STOP, mini-defensa"),
-        _s("SA8", 1, _TITOL_SA["SA8"],
-           "TODO: pendent de la guia docent de SA8 (telemetria per ràdio, autonomia).",
-           "TODO"),
+        _s("SA8", 1, "Sensors avançats: llegir el Kit 3",
+           "Avui he conegut els sensors avancats del Kit 3 (IMU MPU6050, "
+           "DHT11, BMP280, CCS811), he programat comportaments.py (FSM de "
+           "prioritats SEGUIR/ESQUIVAR/RECUPERAR) i he dissenyat el meu "
+           "format de missatge de telemetria.",
+           "IMU, I2C, DHT11, FSM de prioritats, protocol de telemetria"),
+        _s("SA8", 2, "Telemetria per ràdio: enviar i registrar",
+           "Avui he programat telemetria_radio.py (sensors del Kit 3 + "
+           "radio amb prefix TEL:) i el meu propi estacio_base.py (rebre, "
+           "mostrar i registrar amb log). He fet el mini-check individual "
+           "(no qualifica).",
+           "radio.send, prefix TEL, log, llista, mitjana simple"),
+        _s("SA8", 3, "IA aplicada al control i producte: sistema de telemetria",
+           "Avui he fet una practica guiada de classificacio de patrons "
+           "(Teachable Machine) i he tancat el producte: sistema de "
+           "telemetria del rover amb com a minim dos sensors, radio i "
+           "registre. He fet la mini-defensa breu i la reflexio d'IA i "
+           "etica de dades.",
+           "IA aplicada al control, biaix, etica de dades, mini-defensa"),
         _s("SA9", 1, _TITOL_SA["SA9"],
            "TODO: pendent de la guia docent de SA9 (projecte/repte final).",
            "TODO"),
