@@ -97,6 +97,8 @@ Assigna els **grups de ràdio per parelles de números de llista** (rotant si el
 ## SESSIÓ 3 (2 h) — Repte «control remot bàsic» (producte de la SA)
 
 > 🎯 **Producte de la SA.** Aquest repte **fa de producte** de la SA5: s'avalua amb **R1** (codi, criteri "Funcionament") i **R4** (documentació). Introdueix, com a **+ampliació**, l'historial de comandes amb llistes/tuples (es completa a la SA6).
+>
+> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
 
 > ⭐ **Repte nucli obligatori.** Un cop tancat el producte, tothom fa el repte **⭐** de [`Reptes_SA5.md`](../../Reptes/Reptes_SA5.md) (xat de classe amb identificació), aprofitant el mateix temps de pràctica que abans es destinava opcionalment a l'ampliació, i l'ensenya al docent perquè el validi. Els reptes **⭐⭐/⭐⭐⭐** continuen sent ampliació opcional per a qui vagi sobrat.
 

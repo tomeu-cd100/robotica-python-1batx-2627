@@ -76,6 +76,8 @@
 ## SESSIÓ 3 (2 h) — Repte «vehicle amb aturada d'emergència» (producte de la SA — es tanca el Projecte T2)
 
 > 🎯 **Producte de la SA6.** Aquest repte **tanca el Projecte T2**: s'avalua amb **R1** (funcionament), **R3** (criteri "Autonomia/control") i **R4** (documentació i defensa). El sensor de temperatura/relé i l'estat ALERTA són **+ampliació**, no nucli.
+>
+> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
 
 > ⭐ **Repte nucli obligatori.** Un cop tancat el producte, tothom fa el repte **⭐** de [`Reptes_SA6.md`](../../Reptes/Reptes_SA6.md) (termòstat de dues zones), aprofitant el mateix temps de pràctica que abans es destinava opcionalment a l'ampliació, i l'ensenya al docent perquè el validi. Els reptes **⭐⭐/⭐⭐⭐** continuen sent ampliació opcional per a qui vagi sobrat.
 

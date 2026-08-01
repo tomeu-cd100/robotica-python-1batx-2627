@@ -87,6 +87,8 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 
 > 🎯 **Producte de la SA.** Aquest repte **fa de producte** de la SA3 i **tanca el projecte T1** (la mascota): s'avalua amb **R1** (codi), **R2** (muntatge) i **R3** (compliment del repte, ≥2 reaccions sensor→resposta). Mini-defensa breu (R4·DO).
 >
+> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
+>
 > 🌟 **Nucli obligatori addicional.** En acabar i tancar la mascota, tothom fa el **repte ⭐** de [`Reptes_SA3.md`](../../Reptes/Reptes_SA3.md) («Llum automàtica d'estudi», a partir de `nivell_llum.py`): reaprofita el mateix marge/temps que abans es destinava opcionalment als reptes (no s'afegeixen hores). Si algú no l'acaba dins la sessió, el tanca com a **deures** abans de la S4. Es valida ensenyant-lo al docent → compta amb **R1**. Els reptes ⭐⭐/⭐⭐⭐ continuen sent ampliació opcional per a qui va sobrat.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |

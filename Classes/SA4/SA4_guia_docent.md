@@ -86,6 +86,8 @@
 
 > 🎯 **Producte de la SA.** Aquest repte **fa de producte** de la SA4: s'avalua amb **R1** (codi, criteri "Estructura"/modularitat) i **R2** (bases del muntatge). Aquesta S3 **allibera la S4** per a la fabricació (primera retallada del pla de contingència si cal): si el repte no es tanca del tot, es completa com a deures.
 >
+> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
+>
 > 🌟 **Nucli obligatori addicional (diferent de «control per botons»).** En acabar i tancar «control per botons», tothom fa el **repte ⭐** de [`Reptes_SA4.md`](../../Reptes/Reptes_SA4.md) («Salutació programable per a un aparador», a partir de `funcions_moviments.py`): reaprofita el mateix marge/temps que abans es destinava opcionalment als reptes (no s'afegeixen hores). Si algú no l'acaba dins la sessió, el tanca com a **deures** abans de la S4. Es valida ensenyant-lo al docent → compta amb **R1**. Els reptes ⭐⭐/⭐⭐⭐ continuen sent ampliació opcional per a qui va sobrat.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |

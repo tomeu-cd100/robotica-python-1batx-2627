@@ -90,6 +90,8 @@ Si el calendari real obliga a comprimir la SA8 de 6 h a 4 h, **fusiona la S1 i l
 ## SESSIÓ 3 (2 h) — IA aplicada al control i producte: sistema de telemetria
 
 > 🎯 **Producte de la SA8.** Es tanca i s'avalua amb **R1** (codi, funcionament), **R3** (criteri "Integració") i **R4** (documentació).
+>
+> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|

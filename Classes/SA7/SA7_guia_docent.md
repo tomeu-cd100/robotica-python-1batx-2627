@@ -119,6 +119,8 @@
 ## SESSIÓ 4 (2 h) — Integració: missions del rover (producte de la SA)
 
 > 🎯 **Producte de la SA7.** Aquest programa **tanca** la SA: s'avalua amb **R1** (funcionament), **R3** (criteri "Autonomia/control") i **R4** (documentació i defensa).
+>
+> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|

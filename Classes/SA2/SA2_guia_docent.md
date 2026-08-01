@@ -86,6 +86,8 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 ## SESSIÓ 3 (2 h) — Repte «semàfor o llum d'ambient» (producte de la SA)
 
 > 🎯 **Producte de la SA.** Aquest repte **fa de producte** de la SA2: s'avalua amb R1 (codi) i R2 (muntatge). És també la **primera retallada** del pla de contingència horari (vegeu `08_Sequenciacio_temporal_anual.md`): si cal recuperar temps, la S4 s'allibera sencera per a la fabricació i aquest repte fa de producte final sense necessitat d'ampliar-lo.
+>
+> 🤝 **Parella de lectura (5')** abans de lliurar — vegeu `Classes/00_General/00_Parella_de_lectura.md`.
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|

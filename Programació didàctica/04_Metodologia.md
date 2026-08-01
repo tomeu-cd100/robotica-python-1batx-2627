@@ -5,7 +5,9 @@
 La matèria adopta un **enfocament competencial** basat en **situacions d'aprenentatge** contextualitzades, coherent amb el Decret 171/2022, i un format de **treball individual** en totes les activitats. Principis:
 
 - **Aprendre fent** (*learning by doing*) i **fes-ho tu mateix** (*DIY*): cada concepte es consolida amb una pràctica real amb el propi maquinari.
-- **Aprenentatge basat en projectes (ABP)** i en **reptes**: les unitats culminen en un producte/repte individual.
+- **Aprenentatge basat en projectes (ABP)** i en **reptes**: les unitats culminen en un producte/repte individual, ampliat des de la SA2 amb un **repte ⭐ de nucli obligatori** (mateix temps de pràctica ja previst; ⭐⭐/⭐⭐⭐ resten ampliació opcional) que garanteix que tothom escriu codi nou, no només llegit o modificat, a cada SA.
+- **Recuperació espaiada de la memòria** (*retrieval practice*): cada sessió des de la S4 obre amb una **kata d'activació** de 10' (banc a `Classes/00_General/00_Banc_activacio_repas.md`) que reprèn un concepte de fa 1-2 setmanes amb progressió Parsons → completar buits → escriure de zero.
+- **Mini-check d'escriptura individual, un per SA** (`Classes/00_General/00_Mini_checks_individuals.md`): 10' escrivint codi sense apunts, radar formatiu que **no qualifica el dia que es fa**; el **millor dels tres del trimestre sí qualifica** (5 % dins «Proves pràctiques» — detall a `06_Avaluacio_criteris_qualificacio.md` §6.3).
 - **Design thinking**: iteració, prototip mínim viable, millora contínua, sempre sobre el fil conductor propi (mascota/vehicle/rover).
 - **L'error com a part de l'aprenentatge**: la depuració (*debugging*) és contingut, no fracàs.
 - **Progressió del concret a l'abstracte**: del component físic al sistema autònom; del codi guiat al codi autònom.
@@ -49,7 +51,8 @@ REPETEIX sempre:
 ## 4.3. Agrupaments: treball individual i ajuda entre iguals
 
 - **Tot el treball és individual.** No hi ha parelles de programació ni equips de projecte: cada alumne té el seu propi maquinari (micro:bit V2 + Micro:shield + kit Keyestudio) i construeix, munta i programa el seu propi fil conductor (mascota/vehicle/rover).
-- **Dinàmica d'ajuda entre iguals, sense productes compartits:** es fomenta que l'alumnat es consulti dubtes conceptuals i estratègies de depuració (p. ex. «pregunta a dos companys abans de preguntar al docent»), però **cada producte lliurat, cada codi i cada quadern tècnic són exclusivament individuals**. No es dissenyen rúbriques de coavaluació de grup ni de repartiment de rols cooperatius.
+- **Dinàmica d'ajuda entre iguals, sense productes compartits:** es fomenta que l'alumnat es consulti dubtes conceptuals i estratègies de depuració (p. ex. «pregunta a dos companys abans de preguntar al docent»), però **cada producte lliurat, cada codi i cada quadern tècnic són exclusivament individuals**. No es dissenyen rúbriques de coavaluació de **grup** ni de repartiment de rols cooperatius: aquí no hi ha equips ni nota compartida.
+- **Parella de lectura (5'), coavaluació lleugera i individual:** abans de lliurar el producte/repte de cada SA (des de la SA2), dos alumnes intercanvien la *lectura* (no el codi ni l'edició) amb una checklist de 3 ítems i es diuen l'un a l'altre una cosa a millorar. És feedback formatiu entre iguals, **no qualifica** i no altera l'autoria individual del producte (protocol complet a `Classes/00_General/00_Parella_de_lectura.md`).
 - **Moments d'autoavaluació i registre individual** al quadern tècnic propi, a cada sessió.
 
 ## 4.4. Eines i entorns
