@@ -88,7 +88,7 @@ Trimestre 3 — ROBÒTICA I INTEGRACIÓ (fil conductor: el rover)
 ## Criteris de seqüenciació
 
 1. **Maquinari concret → abstracció:** del component (SA2) al sistema autònom (SA9).
-2. **Progressió interna a Python:** seqüències (SA1) → variables i bucles (SA2) → condicionals (SA3) → funcions (SA4) → esdeveniments i estructures de dades (SA5-SA6) → integració (SA7-SA9).
+2. **Progressió interna a Python:** seqüències + `while True:`/`if` bàsic amb PRIMM (SA1) → variables i bucles (SA2, aprofundeix el bucle) → condicionals aplicats a sensors (SA3, aprofundeix el `if`) → funcions (SA4, formalització d'escriure-les; als reptes ⭐⭐⭐ de SA1-SA3 ja se'n **llegeixen**) → esdeveniments i estructures de dades (SA5-SA6) → integració (SA7-SA9).
 3. **Cada SA reutilitza i amplia l'anterior** (avaluació contínua i espiral).
 4. **El projecte final (SA9) integra** electrònica + programació + control + robòtica + documentació.
 

@@ -8,6 +8,8 @@
 
 > Connectaràs el Micro:shield i faràs que la micro:bit **actuï** sobre components externs: LED, LED RGB, brunzidor i relé. Acabaràs muntant la **mascota** del fil conductor. Tot el treball d'aquesta fitxa és **individual**.
 
+> 🔎 Veuràs `def` en algun exemple o repte d'ampliació: de moment les **funcions** només les **llegim** (per entendre-les), no cal saber escriure-les encara — les aprendrem a la **SA4**.
+
 ## 🎯 Objectius i avaluació
 
 **En acabar aquesta SA podré:**
@@ -44,6 +46,8 @@ Munta el LED extern al pin **P1** ([esquema](SA2_esquemes_connexions.md)) i part
 Munta el LED RGB (P8/P12/P16) i el brunzidor (P2). Parteix de `pwm_led_rgb.py` i `musica_altaveu.py`.
 
 **El teu color propi (R, G, B):** ______ , ______ , ______  → quin color surt? ______________________
+
+**Mini-animació (matriu LED + so):** encadena 2-3 `display.show(Image.___)` amb un `sleep()` entre cada un i un so diferent de `musica_altaveu.py` per a cada imatge (per exemple: `Image.HAPPY` + to agut, `Image.SAD` + to greu). No cal desar-ho com a fitxer a part: prova-ho al REPL o afegeix-ho temporalment al final de `pwm_led_rgb.py`.
 
 > 🎯 **Mini-check individual (10', a l'inici d'aquesta sessió; no qualifica).** Banc complet: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md#sa2--mini-check-inici-de-la-sessió-2).
 

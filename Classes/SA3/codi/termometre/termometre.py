@@ -2,7 +2,9 @@
 # Entrada analogica: sensor de temperatura basic del Kit 1 (extern) comparat
 # amb el sensor de temperatura INTERN de la micro:bit (temperature(), graus
 # Celsius). Interpreta la temperatura amb if/elif/else i la mostra al display.
-# Maquinari: sensor de temperatura basic del Kit 1 al pin P10 (ADC valid).
+# Maquinari: sensor de temperatura basic del Kit 1 al pin P1 (ADC valid; P3/P4/P10
+# tambe tenen ADC pero comparteixen circuit amb el display i no es poden
+# llegir amb el display actiu, com aqui).
 # Veure SA3_esquemes_connexions.md pel cablatge.
 
 from microbit import *
@@ -27,7 +29,7 @@ def mapa(valor, entrada_min, entrada_max, sortida_min, sortida_max):
 
 while True:
     temp_interna = temperature()                     # graus C, sensor intern
-    temp_externa = graus_del_sensor_extern(pin10.read_analog())
+    temp_externa = graus_del_sensor_extern(pin1.read_analog())
 
     if temp_interna < FRED:
         display.show(Image.SAD)     # icona "fred"

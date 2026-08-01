@@ -12,7 +12,7 @@ Els sabers s'organitzen en **sis blocs**, coherents amb el bloc *Automatització
 
 ## Bloc B · Programació en MicroPython — progressió I (seqüències, variables, bucles)
 - Sintaxi de Python: indentació, comentaris, variables, tipus de dades bàsics.
-- **Seqüències d'instruccions** (SA1): ordre, execució lineal, `sleep()`.
+- **Seqüències d'instruccions** (SA1): ordre, execució lineal, `sleep()`. Amb el mètode **PRIMM**, la SA1 ja introdueix `while True:` (perquè el programa no s'aturi) i un `if`/`elif`/`else` bàsic (reaccionar segons botons) com a primer contacte amb bucles i condicionals — es formalitzen i s'aprofundeixen a SA2 i SA3 respectivament.
 - **Variables i bucles** (SA2): `for`, `while`, acumuladors, control de sortides repetitives (parpelleigs, tons, animacions a la matriu LED).
 - Comunicació per USB i depuració (REPL / consola).
 
@@ -24,8 +24,8 @@ Els sabers s'organitzen en **sis blocs**, coherents amb el bloc *Automatització
 - Connexió, esquemes i simbologia normalitzada del Micro:shield.
 
 ## Bloc D · Programació en MicroPython — progressió II (condicionals, funcions)
-- **Condicionals** (SA3): `if/elif/else` aplicats a la interpretació de senyals de sensors.
-- **Funcions** (SA4): definició, paràmetres, valors de retorn, modularitat, aplicades al control de moviment (servos/motors).
+- **Condicionals** (SA3): `if/elif/else` aplicats a la interpretació de senyals de sensors (aprofundeix el `if` bàsic ja vist a SA1).
+- **Funcions** (SA4): **formalització** — definició, paràmetres, valors de retorn, modularitat, aplicades al control de moviment (servos/motors). L'alumnat ja n'ha **llegit** (sense escriure-les) a exemples i reptes ⭐⭐⭐ de SA1-SA3; a SA4 aprèn a escriure-les.
 - Depuració sistemàtica i lectura d'errors del REPL.
 
 ## Bloc E · Sistemes de control i automatització
@@ -49,11 +49,13 @@ Els sabers s'organitzen en **sis blocs**, coherents amb el bloc *Automatització
 
 | Bloc de sabers | SA principals | Progressió Python |
 |---|---|---|
-| A · Fonaments i metodologia | SA1 (i transversal) | Seqüències |
+| A · Fonaments i metodologia | SA1 (i transversal) | Seqüències + `while True:`/`if` bàsic (PRIMM) |
 | B · MicroPython I | SA2 | Variables i bucles |
 | C · Sensors i actuadors | SA2, SA3, SA4 | — |
-| D · MicroPython II | SA3, SA4 | Condicionals, funcions |
+| D · MicroPython II | SA3, SA4 | Condicionals (aprofundiment), funcions (formalització a SA4; es llegeixen, sense escriure-les, a reptes ⭐⭐⭐ de SA1-SA3) |
 | E · Control i automatització | SA5, SA6 (i SA4, SA7) | Esdeveniments, estructures de dades, objectes només d'ús |
 | F · Robòtica, IoT/IA i projecte | SA7, SA8, SA9 | Integració |
+
+> 🔑 **SA1 no és "només seqüència":** amb el mètode PRIMM, el primer repte de SA1 (`emocions_botons`) ja introdueix `while True:` i un `if`/`elif`/`else` bàsic; SA2 i SA3 els **aprofundeixen** (bucles amb acumuladors; condicionals aplicats a sensors), no els introdueixen de zero. De la mateixa manera, els reptes ⭐⭐⭐ de SA1-SA3 ja fan **llegir** funcions ja escrites (sense demanar que se n'escriguin): SA4 és on es formalitza **escriure** funcions pròpies.
 
 > Els sabers es treballen **integrats en projectes individuals** (no com a temari aïllat), tal com demana l'enfocament competencial del Decret 171/2022.

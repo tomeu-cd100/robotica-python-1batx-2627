@@ -1,7 +1,9 @@
 # SA3 - Repte 1 (SOLUCIO): llum automatica d'estudi
 # Nucli + ampliacions 1-3: segon llindar "molt fosc" amb parpelleig,
 # intensitat proporcional (PWM) i temporitzador d'apagada.
-# Maquinari: sensor de llum extern al pin P3 (Kit 2), LED extern al pin P1.
+# Maquinari: sensor de llum extern al pin P0 (Kit 2), LED extern al pin P1.
+# (No P3/P4/P10: comparteixen circuit amb el display; P0 es un ADC lliure
+# de display, coherent amb la resta de practiques de la SA3.)
 
 from microbit import *
 
@@ -21,7 +23,7 @@ t_ultima_encesa = 0
 
 
 while True:
-    llum = pin3.read_analog()
+    llum = pin0.read_analog()
 
     if llum < LLINDAR_MOLT_FOSC:
         # Ampliacio 1: "molt fosc" -> parpelleig en lloc de fix.

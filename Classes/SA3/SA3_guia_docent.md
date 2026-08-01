@@ -64,7 +64,7 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 |---|---|---|---|
 | Mini-check | 10' | Passa el **mini-check individual** a l'inici de sessió (banc: [`00_Mini_checks_individuals.md`](../00_General/00_Mini_checks_individuals.md#sa3--mini-check-inici-de-la-sessió-2)): `if/else` sobre `display.read_light_level()` de memòria (consolida la S1/introdueix l'analògic). | Responen individualment (no qualifica). |
 | Activació | 10' | Recorda l'entrada digital; pregunta: *"i si necessito saber QUANTA llum hi ha, no només si n'hi ha o no?"* | Formulen hipòtesis. |
-| Explicació | 25' | **Entrades analògiques**: `read_analog()` (0-1023) i els **sensors integrats** (`display.read_light_level()`, 0-255; `temperature()`, graus C). MicroPython no té `map()`: es programa una funció `mapa()` amb una regla de tres. Potenciòmetre (Kit 1) com a primer exemple pur d'ADC. Recorda els **pins ADC vàlids** (P0, P1, P2, P3, P4, P10). | Prenen notes; proven `read_analog()` del potenciòmetre en directe al REPL. |
+| Explicació | 25' | **Entrades analògiques**: `read_analog()` (0-1023) i els **sensors integrats** (`display.read_light_level()`, 0-255; `temperature()`, graus C). MicroPython no té `map()`: es programa una funció `mapa()` amb una regla de tres. Potenciòmetre (Kit 1) com a primer exemple pur d'ADC. Recorda els **pins ADC vàlids** (P0, P1, P2, P3, P4, P10) i que **P3/P4/P10 comparteixen circuit amb el display** (`read_analog()` hi falla amb el display actiu): per això les pràctiques d'avui fan servir P0/P1. | Prenen notes; proven `read_analog()` del potenciòmetre en directe al REPL. |
 | Pràctica | 55' | Modelatge de [`nivell_llum.py`](codi/nivell_llum/nivell_llum.py) (llum intern vs extern, barres) i [`termometre.py`](codi/termometre/termometre.py) (temperatura intern vs extern, condicionals). | Munten sensor de llum i de temperatura ([esquemes](SA3_esquemes_connexions.md)); escriuen/proven els dos programes (Activitat 2). |
 | Tancament | 15' | Recull dubtes; presenta el producte de la S3 (mascota reactiva). | Anoten al quadern el llindar propi triat (per exemple, `LLINDAR_FOSCOR`) i per què. |
 
@@ -77,6 +77,7 @@ Continuem el cicle **analitzar → dissenyar → programar/prototipar → provar
 |---|---|---|
 | Es confon l'escala 0-255 (sensors integrats) amb la 0-1023 (pins ADC) | No s'ha comprovat quina funció retorna quin rang | Repassar la taula de l'[esquema](SA3_esquemes_connexions.md) §1. |
 | `read_analog()` sempre dona 0 o sempre el màxim | El component és a un pin **sense ADC** (fora de P0/P1/P2/P3/P4/P10) | Recablejar a un pin vàlid. |
+| `ValueError: Pin in display mode` | El component analògic és a P3, P4 o P10 amb el display actiu (comparteixen circuit) | Recablejar a P0/P1/P2. |
 | El llindar "no funciona mai" a l'aula | S'ha copiat un valor d'exemple sense mesurar-lo amb el REPL a l'aula real | Calibrar sempre al REPL, mai a ull. |
 
 ---

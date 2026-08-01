@@ -22,7 +22,7 @@
 | **LED semàfor: verd** | **P1** | Kit 1 | `semafor_rele` | Reaprofita el mateix pin que S1 (circuit desmuntat i tornat a muntar). |
 | **LED semàfor: ambre** | **P8** | Kit 1 | `semafor_rele` | — |
 | **LED semàfor: vermell** | **P12** | Kit 1 | `semafor_rele` | — |
-| **Relé** | **P13** (bobina/control) | Kit 3 | `semafor_rele` | Contactes **NO** (normalment obert) al costat del circuit extern; **mai** connectis el costat extern directament a un pin de la placa. |
+| **Relé** | **P13** (bobina/control) | Kit 3 | `semafor_rele` | Contactes **NO** (normalment obert) al costat del circuit extern; **mai** connectis el costat extern directament a un pin de la placa. **Nota de coherència:** el «Mapa de pins» (`00_Fil_conductor_construccions.md` §1b) posa el relé del **vehicle T2** a P2 (reaprofitant el brunzidor de la mascota, ja desmuntada); aquí, en canvi, el brunzidor (P2) i el relé ja conviuen al **mateix** programa `semafor_rele.py`, per això el relé va a P13. És una excepció declarada, no una inconsistència. |
 
 > 🔁 **Pins reaprofitats a propòsit:** P1, P8 i P12 canvien de component entre exercicis (un LED solt a la S1, un canal del semàfor a la S3): és normal muntar i desmuntar circuits diferents dins de la mateixa SA. Cap muntatge d'aquesta pàgina es queda fix fins a la S4: la mascota **torna a triar** els seus propis pins (taula següent).
 

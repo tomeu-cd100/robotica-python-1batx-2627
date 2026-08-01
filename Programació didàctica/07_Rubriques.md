@@ -79,6 +79,8 @@ Les defenses orals **es repeteixen tot el curs**: unes puntuen a la R4 (SA2 S4, 
 
 ## R5 · Rúbrica d'actitud i autoregulació
 
+> 🔗 **Traçabilitat:** aquesta rúbrica avalua sobretot **CA5.1** (gestionar individualment un projecte tecnològic complet) i **CA5.2** (elaborar documentació tècnica pròpia i comunicar/defensar la solució), lligats a **CE-R5**. Detall dels criteris a `06_Avaluacio_criteris_qualificacio.md`.
+
 | Criteri | Insuficient | Suficient/Bé | Notable | Excel·lent |
 |---|---|---|---|---|
 | **Implicació** | No participa activament a les sessions. | Participa puntualment. | Participa activament. | Aporta i s'avança a les tasques. |

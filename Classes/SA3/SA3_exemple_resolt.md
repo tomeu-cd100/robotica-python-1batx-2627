@@ -31,8 +31,9 @@ Fa servir només conceptes de la SA3: entrada **analògica** (`read_analog()`, 0
 # SA3 - exemple_rec_automatic.py  (EXEMPLE MODEL, no es el producte)
 # Avisa quan un sensor analogic (aqui, el de llum del Kit 2 fent de sensor
 # d'humitat simulat) baixa per sota d'un llindar calibrat amb el REPL.
-# Maquinari: sensor de llum extern al pin P3 del Micro:shield (Kit 2),
-# com a nivell_llum.py.
+# Maquinari: sensor de llum extern al pin P0 del Micro:shield (Kit 2),
+# com a nivell_llum.py (no P3: comparteix circuit amb el display, que aqui
+# esta actiu).
 
 from microbit import *
 import music
@@ -43,7 +44,7 @@ estat_anterior = None   # cap estat encara: forcem que la primera lectura avisi
 
 
 while True:
-    lectura = pin3.read_analog()   # 0-1023
+    lectura = pin0.read_analog()   # 0-1023
 
     if lectura < LLINDAR_SEC:
         estat = "sec"
@@ -71,7 +72,7 @@ while True:
 ## 🔬 Provo i mesuro
 
 - **Predicció ✔:** amb llindar `400` i lectura `250` (< 400), la cara mostra **alarma** ("sec"); a `600` (≥ 400) torna a "bé".
-- **Mesuro amb el REPL:** abans de fixar `LLINDAR_SEC`, escric `pin3.read_analog()` diverses vegades tapant i destapant el sensor, i anoto els dos valors extrems; el llindar és el punt mig entre tots dos, no un número "rodó" triat a ull.
+- **Mesuro amb el REPL:** abans de fixar `LLINDAR_SEC`, escric `pin0.read_analog()` diverses vegades tapant i destapant el sensor, i anoto els dos valors extrems; el llindar és el punt mig entre tots dos, no un número "rodó" triat a ull.
 - **Sense maquinari:** la **lògica** (canvi d'estat, condicional) es pot revisar llegint el codi, però la lectura real del sensor **només** es veu amb el component físic connectat (el simulador de python.microbit.org no reprodueix sensors externs).
 
 ---
@@ -82,6 +83,7 @@ while True:
 - **Oblido `estat_anterior` i comparo `lectura` directament dins l'`if` cada volta:** el so sona sense parar mentre estigui "sec", no només al canviar. **Pista:** si una reacció només ha de passar **un cop** en entrar a un estat, cal una variable que recordi l'estat anterior.
 - **Confonc el llindar amb l'escala 0-255 dels sensors interns:** el sensor extern (pin ADC) sempre dona 0-1023, no 0-255. **Pista:** repassa quina funció retorna quin rang abans de triar el llindar.
 - **El programa no reacciona mai:** el component és a un pin **sense ADC** (fora de P0/P1/P2/P3/P4/P10). **Pista:** repassa la taula de l'[esquema](SA3_esquemes_connexions.md) §1.
+- **`ValueError: Pin in display mode`:** el sensor analògic és a P3, P4 o P10 amb el display actiu (comparteixen circuit). **Pista:** amb el display en marxa, usa P0/P1/P2.
 
 ---
 

@@ -24,7 +24,7 @@
 **Sessió 2 — Entrades analògiques: llum i temperatura**
 - [ ] **Mini-check individual** a l'inici (10', [banc SA3](../00_General/00_Mini_checks_individuals.md#sa3--mini-check-inici-de-la-sessió-2)) — `if/else` sobre `read_light_level()`
 - [ ] Modelatge de `nivell_llum.py` (barres, funció `mapa()`) i `termometre.py` (condicionals)
-- [ ] Recordar els **pins ADC vàlids** (P0, P1, P2, P3, P4, P10)
+- [ ] Recordar els **pins ADC vàlids** (P0, P1, P2, P3, P4, P10) i que P3/P4/P10 no es poden llegir amb el display actiu (usar P0/P1/P2 a les pràctiques d'avui)
 - ⚠️ *Error a vigilar:* confondre l'escala 0-255 (sensors interns) amb la 0-1023 (pins ADC)
 
 **Sessió 3 — Repte «mascota reactiva» (producte — tanca T1)**

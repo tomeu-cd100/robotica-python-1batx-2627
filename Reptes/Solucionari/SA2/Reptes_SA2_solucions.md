@@ -66,7 +66,7 @@ while True:
 
 ## ⭐⭐ Repte 2 · Ambientador de llum i so per a una habitació
 
-**Idea de la solució:** una `transicio()` que interpola de 0 fins al color final (requisit mínim); `respira()` reutilitza la mateixa idea de PWM incremental de `pwm_led_rgb.py` per pujar/baixar la intensitat (ampliació 2); un diccionari `COLORS_PER_NOTA` sincronitza color i so nota a nota (ampliació 3), en lloc de cridar `music.play()` d'un cop.
+**Idea de la solució:** una `transicio()` que interpola de 0 fins al color final (requisit mínim), amb el vermell/verd/blau com a **variables simples** (no una tupla); `respira()` reutilitza la mateixa idea de PWM incremental de `pwm_led_rgb.py` per pujar/baixar la intensitat (ampliació 2); quatre crides seguides a `toca_nota()` (una per nota, amb la freqüència i el color escrits a mà) sincronitzen color i so nota a nota (ampliació 3), en lloc de cridar `music.play()` d'un cop.
 
 ```python
 # SA2 - Repte 2 (SOLUCIO): ambientador de llum i so per a una habitacio
@@ -74,21 +74,20 @@ while True:
 # color sincronitzat amb la melodia.
 # Maquinari: LED RGB als pins P8 (vermell), P12 (verd), P16 (blau) i
 # brunzidor al pin P2 del Micro:shield (Kit 1).
+# Nivell SA2: nomes variables simples (cap color en tupla ni diccionari),
+# funcions amb parametres separats i if/elif.
 
 from microbit import *
 import music
 
-COLOR_RELAX = (0, 200, 600)     # blau suau
-COLOR_FESTA = (700, 0, 700)     # magenta viu
-MELODIA = ['C4:2', 'E4:2', 'G4:2', 'C5:4']
+# Colors en tres variables simples (vermell, verd, blau) per a cada mode.
+RELAX_R = 0
+RELAX_G = 200
+RELAX_B = 600     # blau suau
 
-# Ampliacio 3: un color per nota (greu=blau, agut=vermell).
-COLORS_PER_NOTA = {
-    'C4': (0, 0, 1023),
-    'E4': (0, 600, 400),
-    'G4': (400, 600, 0),
-    'C5': (1023, 0, 0),
-}
+FESTA_R = 700
+FESTA_G = 0
+FESTA_B = 700     # magenta viu
 
 
 def mostra_color(vermell, verd, blau):
@@ -97,17 +96,18 @@ def mostra_color(vermell, verd, blau):
     pin16.write_analog(blau)
 
 
-def transicio(color_final, passos=20, espera=30):
+def transicio(r_final, g_final, b_final, passos, espera):
     # Transicio suau des d'apagat fins al color final (nucli).
-    r_final, g_final, b_final = color_final
     for i in range(passos + 1):
-        mostra_color(r_final * i // passos, g_final * i // passos, b_final * i // passos)
+        vermell = r_final * i // passos
+        verd = g_final * i // passos
+        blau = b_final * i // passos
+        mostra_color(vermell, verd, blau)
         sleep(espera)
 
 
-def respira(color, cicles=1):
+def respira(r, g, b, cicles=1):
     # Ampliacio 2: la intensitat del color "respira" (puja i baixa).
-    r, g, b = color
     for c in range(cicles):
         for i in range(0, 21):
             mostra_color(r * i // 20, g * i // 20, b * i // 20)
@@ -117,21 +117,25 @@ def respira(color, cicles=1):
             sleep(20)
 
 
+def toca_nota(freq, durada, r, g, b):
+    # Una nota + el seu color associat (greu=blau, agut=vermell).
+    mostra_color(r, g, b)
+    music.pitch(0, 0)  # evita solapament residual d'una nota anterior
+    music.pitch(freq, durada, pin=pin2)
+
+
 def melodia_sincronitzada():
     # Ampliacio 3: canvia de color a cada nota, en lloc de fer sonar
-    # la melodia sencera d'un cop amb music.play().
-    for nota in MELODIA:
-        clau = nota.split(':')[0]
-        color = COLORS_PER_NOTA.get(clau, (200, 200, 200))
-        mostra_color(*color)
-        music.pitch(0, 0)  # evita solapament residual d'una nota anterior
-        durada_notes = int(nota.split(':')[1]) * 100
-        freq = 262 if clau == 'C4' else 330 if clau == 'E4' else 392 if clau == 'G4' else 523
-        music.pitch(freq, durada_notes, pin=pin2)
+    # la melodia sencera d'un cop amb music.play(). Quatre crides seguides
+    # (una per nota) en lloc de recorrer una llista/diccionari.
+    toca_nota(262, 200, 0, 0, 1023)      # C4 - blau
+    toca_nota(330, 200, 0, 600, 400)     # E4
+    toca_nota(392, 200, 400, 600, 0)     # G4
+    toca_nota(523, 400, 1023, 0, 0)      # C5 - vermell
 
 
 # --- Engegada: transicio suau + melodia de benvinguda (requisit minim) ---
-transicio(COLOR_RELAX)
+transicio(RELAX_R, RELAX_G, RELAX_B, 20, 30)
 melodia_sincronitzada()
 
 mode_festa = False
@@ -142,9 +146,9 @@ while True:
         sleep(300)
 
     if mode_festa:
-        respira(COLOR_FESTA)
+        respira(FESTA_R, FESTA_G, FESTA_B)
     else:
-        respira(COLOR_RELAX)
+        respira(RELAX_R, RELAX_G, RELAX_B)
 ```
 
 **Punts a corregir:** la transició d'engegada ha de veure's **progressiva**, no un salt directe al color final; els dos colors de l'ampliació 1 han de ser clarament diferents i alternar-se sense reiniciar el programa; a l'ampliació 3, el color ha de canviar **al ritme** de cada nota, no de manera aleatòria.

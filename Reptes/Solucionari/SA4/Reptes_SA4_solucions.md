@@ -8,7 +8,7 @@
 
 ## ⭐ Repte 1 · Salutació programable per a un aparador
 
-**Idea de la solució:** una funció `salutacio(estil, vegades)` amb dos paràmetres que tria entre `saluda()`/`escombra()` (nucli), un tercer estil `'doble'` que combina totes dues (ampliació 1), una cara pròpia per estil (ampliació 2) i una llista `ESTILS` recorreguda per torns amb el botó A (ampliació 3).
+**Idea de la solució:** una funció `salutacio(estil, vegades)` amb dos paràmetres que tria entre `saluda()`/`escombra()` (nucli), un tercer estil `'doble'` que combina totes dues (ampliació 1), una cara pròpia per estil (ampliació 2) i un **comptador** `index_estil` (0/1/2) que decideix per `if/elif` quin estil toca a cada torn amb el botó A (ampliació 3).
 
 ```python
 # SA4 - Repte 1 (SOLUCIO): salutacio programable per a un aparador
@@ -20,8 +20,7 @@ from microbit import *
 
 pin0.set_analog_period(20)
 
-ESTILS = ['curt', 'llarg', 'doble']   # ampliacio 3: seleccio per torns
-index_estil = 0
+index_estil = 0   # ampliacio 3: comptador 0/1/2 que cicla els tres estils
 
 
 def graus_a_pwm(angle):
@@ -68,10 +67,17 @@ def salutacio(estil, vegades):
 
 while True:
     if button_a.was_pressed():
-        # Ampliacio 3: cada premuda tria el seguent estil de la llista.
-        estil_actual = ESTILS[index_estil]
+        # Ampliacio 3: cada premuda tria el seguent estil, segons el comptador.
+        if index_estil == 0:
+            estil_actual = 'curt'
+        elif index_estil == 1:
+            estil_actual = 'llarg'
+        else:
+            estil_actual = 'doble'
         salutacio(estil_actual, 2)
-        index_estil = (index_estil + 1) % len(ESTILS)
+        index_estil = index_estil + 1
+        if index_estil == 3:
+            index_estil = 0   # torna a comencar el cicle
     sleep(20)
 ```
 

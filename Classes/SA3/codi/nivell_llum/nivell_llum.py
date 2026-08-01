@@ -2,7 +2,9 @@
 # Entrada analogica: compara el sensor de llum INTERN de la micro:bit
 # (display.read_light_level(), 0-255) amb el sensor de llum EXTERN del
 # Kit 2 (analogic, 0-1023) i mapa la lectura a barres al display.
-# Maquinari: sensor de llum extern del Kit 2 al pin P3 (ADC valid).
+# Maquinari: sensor de llum extern del Kit 2 al pin P0 (ADC valid; P3/P4/P10
+# tambe tenen ADC pero comparteixen circuit amb el display i no es poden
+# llegir amb el display actiu, com aqui).
 # Veure SA3_esquemes_connexions.md pel cablatge.
 
 from microbit import *
@@ -29,7 +31,7 @@ def barres(n):
 
 while True:
     llum_interna = display.read_light_level()      # 0-255, sensor intern
-    llum_externa = pin3.read_analog()               # 0-1023, sensor Kit 2
+    llum_externa = pin0.read_analog()               # 0-1023, sensor Kit 2
 
     n_barres = mapa(llum_externa, 0, 1023, 0, 5)
     barres(n_barres)

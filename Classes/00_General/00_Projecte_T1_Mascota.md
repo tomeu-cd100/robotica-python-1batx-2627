@@ -65,7 +65,7 @@ Flux (detall del calendari a [`00_Fil_conductor_construccions.md`](00_Fil_conduc
 | Brunzidor | P2 | `music.pitch()` o PWM propi. |
 | Sensor PIR | P8 | Digital; necessita 30-60 s d'estabilització en engegar. |
 | Polsador (carícia) | P12 | Digital, amb *pull-up* i antirebot per programari. |
-| Sensor de so (micròfon) | P4 (analògic; ADC vàlid: P0/P1/P2/P3/P4/P10) | Llindar de so a calibrar; el micròfon **integrat** de la micro:bit V2 (`microphone.sound_level()`) és una alternativa vàlida si no s'usa el del Kit 3. |
+| Sensor de so (micròfon) | P4 (analògic; ADC vàlid: P0/P1/P2/P3/P4/P10) | Llindar de so a calibrar; el micròfon **integrat** de la micro:bit V2 (`microphone.sound_level()`) és l'opció que fa servir el codi model, perquè P4 comparteix circuit amb el display i `mascota_reactiva` el té sempre actiu (cara): si s'opta per l'extern del Kit 3 cal `display.off()` mentre es llegeix. |
 | DHT11 *(extra)* | P13 | Bus digital 1-Wire (llibreria pròpia de MicroPython per a DHT). |
 
 **Sensors ja integrats a la micro:bit V2** (sense cablejar res): matriu de LED (`display`), altaveu (`audio`/`music`), acceleròmetre (`accelerometer`), sensor de llum (`display.read_light_level()`) i botons A/B.

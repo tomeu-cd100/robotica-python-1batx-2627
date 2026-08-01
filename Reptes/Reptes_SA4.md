@@ -14,7 +14,7 @@
 
 **Context.** Una botiga vol una figura d'aparador que saludi els vianants de manera diferent segons el moment del dia (matí animat, tarda tranquil·la), sense que calgui reprogramar-la cada cop.
 
-> *Client: comerç de barri · Lliurable: figura d'aparador amb salutacions configurables · Món real: cartells i figures animatroniques d'aparador, robots de recepció.*
+> *Client: comerç de barri · Lliurable: figura d'aparador amb salutacions configurables · Món real: cartells i figures animatròniques d'aparador, robots de recepció.*
 
 **Què treballa.** Funcions amb paràmetres, servo amb PWM, `mou_servo()`/`saluda()` de `funcions_moviments.py`.
 
@@ -74,7 +74,7 @@
 
 **Ampliacions graduades.**
 1. *(bàsica)* Afegeix una funció `comiat()` simètrica a `benvinguda()` (per exemple, recular en lloc d'avançar).
-2. *(notable)* Encadena `benvinguda()` i `comiat()` en una seqüència activada amb els botons A/B (com `control_per_botons.py`), amb el botó B aturant-ho tot immediatament, es processi on es processi.
+2. *(notable)* El botó **A** activa `benvinguda()`. El botó **B** té un doble paper, com `aturar()` a `control_per_botons.py`: si el vehicle està **aturat**, B activa `comiat()`; si es prem **mentre `benvinguda()` s'està executant** (es processi on es processi), B la interromp a l'instant i para el vehicle **sense** encadenar `comiat()` — no s'esperen els dos gestos seguits.
 3. *(⭐⭐⭐)* Fes que la velocitat del vehicle a `benvinguda()`/`comiat()` sigui un **paràmetre** propi de cada crida, i documenta al quadern per què has triat aquests valors.
 
     **Fites** (valida-les en ordre):
@@ -122,7 +122,7 @@
 
 ## Orientació docent
 
-- **Errors freqüents:** escriure codi repetitiu enlloc de convertir-lo en funció amb paràmetre; oblidar el `return` en funcions que calculen un valor; alimentar servo/motors només per USB; enviar PWM als dos pins d'un motor alhora.
+- **Errors freqüents:** escriure codi repetitiu en lloc de convertir-lo en funció amb paràmetre; oblidar el `return` en funcions que calculen un valor; alimentar servo/motors només per USB; enviar PWM als dos pins d'un motor alhora.
 - **Diferenciació:** el mínim és idèntic per a tothom → tothom assoleix la base; les ampliacions 2-3 introdueixen combinacions de funcions, seqüències amb botons i paràmetres addicionals per a qui va sobrat.
 - **Gestió d'aula:** tots requereixen maquinari real per a la part de servo/motors (el simulador només valida la lògica); el repte 3 reaprofita el muntatge complet del vehicle (servo de la mascota + motors del vehicle).
 - **Vincle avaluació:** producte coherent amb el de la SA4 (quadern tècnic, R4/R5) i amb les rúbriques R1/R2 del repte «control per botons».

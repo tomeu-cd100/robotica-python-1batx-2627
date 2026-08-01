@@ -7,17 +7,18 @@
 # sensors INTERNS de llum i temperatura amb condicionals if/elif/else +
 # lectura continua pel REPL (print) per depurar abans de fixar els llindars.
 # NOTA: canviar de mode amb is_pressed() no necessita antirebot perque
-# l'assignacio es IDEMPOTENT (mentre el boto es manté premut, cada volta
+# l'assignacio es IDEMPOTENT (mentre el boto es mante premut, cada volta
 # torna a fixar el MATEIX mode: no hi ha cap comptador ni commutacio que
 # es pugui "disparar" de mes).
-# Ampliacio (notable): sensor de llum EXTERN del Kit 2 (P3, ADC) comparat
+# Ampliacio (notable): sensor de llum EXTERN del Kit 2 (P0, ADC) comparat
 # amb l'intern (entrada analogica basica, mapa() de la SA3).
 # Ampliacio (excel-lent): accelerometre (sacsejada) per confirmar l'alerta
 # i microfon intern per detectar un soroll fort com a via addicional
 # d'alerta; codi organitzat amb funcions (una responsabilitat per funcio).
-# Maquinari: micro:bit V2 + Micro:shield; sensor de llum extern Kit 2 a P3
-# (vegeu SA3_esquemes_connexions.md #2). Cap altre cablatge necessari: la
-# resta son sensors interns.
+# Maquinari: micro:bit V2 + Micro:shield; sensor de llum extern Kit 2 a P0
+# (no P3: comparteix circuit amb el display, actiu en aquest programa;
+# vegeu SA3_esquemes_connexions.md #1 i #2). Cap altre cablatge necessari:
+# la resta son sensors interns.
 
 from microbit import *
 import music
@@ -48,7 +49,7 @@ def mostra_mode():
 def avalua_llum():
     # NUCLI: llum interna amb condicional + lectura pel REPL.
     intern = display.read_light_level()             # 0-255
-    extern = pin3.read_analog()                      # 0-1023, sensor Kit 2
+    extern = pin0.read_analog()                      # 0-1023, sensor Kit 2
     extern_equivalent = mapa(extern, 0, 1023, 0, 255)
     print("llum intern:", intern, "extern (0-255):", round(extern_equivalent))
 
@@ -84,7 +85,7 @@ def comprova_alertes_ampliacio():
 
 while True:
     # NUCLI: is_pressed() (SA1-SA3), no was_pressed() (SA4). Idempotent:
-    # mentre el boto es manté premut, es torna a fixar el mateix mode.
+    # mentre el boto es mante premut, es torna a fixar el mateix mode.
     if button_a.is_pressed():
         mode = MODE_LLUM
     if button_b.is_pressed():

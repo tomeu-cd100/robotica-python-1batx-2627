@@ -8,6 +8,8 @@
 
 > Faràs que la micro:bit **percebi** el món: botons, llum, temperatura, distància, presència i so. Acabaràs programant la **mascota reactiva** i **tancant el Projecte T1**. Tot el treball d'aquesta fitxa és **individual**.
 
+> 🔎 `mascota_reactiva.py` i alguns reptes d'ampliació ja usen `def`: de moment les **funcions** només les **llegim** (per entendre com organitzen el codi), no cal saber-les escriure encara — les aprendrem a la **SA4**.
+
 ## 🎯 Objectius i avaluació
 
 **En acabar aquesta SA podré:**

@@ -31,6 +31,8 @@ def canvia_emocio(nova):
 
 Igual que `tot_apagat()` + una fase a `semafor_rele.py` (SA2), cada emoció és un bloc `elif` amb **la seva** cara i **el seu** so. El `if nova == emocio: return` evita repetir la cara/el so si ja hi som (sense això, la mascota "parpellejaria" la mateixa expressió sense parar).
 
+> 🔑 **Què fa `global`:** sense aquesta línia, `emocio = nova` dins de la funció crearia una variable **nova i local** que desapareixeria en sortir de `canvia_emocio()`, sense tocar la `emocio` de fora. `global emocio, t_ultim_estimul` diu explícitament que aquestes dues variables **no** són noves: són les de fora de la funció, i la funció les vol modificar de debò. Es fa servir aquí perquè `emocio` i `t_ultim_estimul` s'han de recordar entre voltes del `while True:`.
+
 ### Bloc 2 — Un estímul per volta: `return` després de decidir
 
 ```python

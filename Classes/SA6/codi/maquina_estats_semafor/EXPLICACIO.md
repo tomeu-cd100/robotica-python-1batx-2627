@@ -53,6 +53,29 @@ Igual que farà `actualitza_estat()` al vehicle (Sessió 2-3), tot el que ha de 
 | El display no canvia mai | S'ha oblidat de cridar `actualitza_estat()` en lloc de canviar `estat` directament |
 | L'ordre dels colors és estrany | Revisa la taula `TRANSICIONS`: cada clau ha d'apuntar al **següent** estat correcte |
 
+## 🧗 Si t'encalles: la mateixa FSM amb `if`/`elif`
+
+Si el diccionari `TRANSICIONS` se't fa costa amunt, comença amb la versió **equivalent** escrita amb `if`/`elif` encadenats — mateixa lògica, sense diccionari:
+
+```python
+def transicio(estat_actual):
+    # Retorna (proxim_estat, durada_ms) amb if/elif, sense diccionari.
+    if estat_actual == VERD:
+        return GROC, 3000
+    elif estat_actual == GROC:
+        return VERMELL, 1000
+    else:  # VERMELL
+        return VERD, 3000
+
+
+while True:
+    proxim, durada = transicio(estat)
+    sleep(durada)
+    actualitza_estat(proxim)
+```
+
+Un cop et surti bé, torna a la versió amb `TRANSICIONS` (bloc 2): fa exactament el mateix, però és més curta d'ampliar si el semàfor guanyés un quart estat.
+
 ## 🔗 On ho aplicaràs
 
 - **Sessió 2:** el vehicle tindrà la seva pròpia FSM (RUN/STOP/ALERTA), amb la mateixa idea de «un únic lloc que canvia l'estat» però amb l'STOP com a transició **prioritària**.

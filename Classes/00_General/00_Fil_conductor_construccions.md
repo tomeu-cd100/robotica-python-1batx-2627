@@ -33,9 +33,9 @@ Cada alumne té el seu **propi exemplar**: no hi ha peces ni codi compartits ent
 | Brunzidor | **P2** | — |
 | Sensor PIR | **P8** | — |
 | Polsador (carícia) | **P12** | — |
-| Sensor de so (micròfon extern, opcional) | P4 (analògic) | Alternativa: micròfon **intern** de la V2. |
+| Sensor de so (micròfon extern, opcional) | P4 (analògic) | Alternativa: micròfon **intern** de la V2 (per defecte al codi model). **P4 comparteix circuit amb el display**: si s'usa l'extern, cal `display.off()` mentre es llegeix, ja que `mascota_reactiva` té el display sempre actiu (cara). Per això el fil conductor usa el micròfon intern. |
 | DHT11 *(extra opcional)* | P13 | Ampliació, no al nucli. |
-| Bancs de proves temporals de SA3 (`nivell_llum`, `termometre`, `alarma_ultrasons`) | P3, P10, P14/P15 | **Només pràctica de taula**, fora del cablatge final de la mascota; l'HC-SR04 a P14/P15 no forma part de cap producte tancat, és exercici. |
+| Bancs de proves temporals de SA3 (`nivell_llum`, `termometre`, `alarma_ultrasons`) | P0, P1, P14/P15 | **Només pràctica de taula**, fora del cablatge final de la mascota; l'HC-SR04 a P14/P15 no forma part de cap producte tancat, és exercici. P0/P1 (no P3/P10) perquè aquests exercicis tenen el display actiu i P3/P4/P10 hi comparteixen circuit (`ValueError: Pin in display mode`). |
 
 > ➡️ **Transició T1 → T2 (frase vinculant).** La mascota es desmunta a la **S4 de SA4** (sessió de fabricació del vehicle): **tots els pins queden alliberats**. El servo (P0) es reutilitza físicament sobre el vehicle només si el disseny ho demana (no és el cas: el vehicle gira per diferència de velocitat entre motors); la resta de pins (P1, P2, P8, P12...) queden lliures per a un ús completament nou al vehicle, sense cap continuïtat obligada amb el seu paper a la mascota.
 
@@ -50,6 +50,7 @@ Cada alumne té el seu **propi exemplar**: no hi ha peces ni codi compartits ent
 | LED indicador d'estat | **P1** | Reaprofita el pin del LED de la mascota (ja alliberat). |
 | Polsador STOP manual | **P12** | Reaprofita el pin del polsador de la mascota (ja alliberat). |
 | Relé *(termòstat, ampliació SA6)* | **P2** | Reaprofita el pin del brunzidor de la mascota (ja alliberat). |
+| *(excepció declarada)* Relé de l'exercici `semafor_rele` (SA2, S3) | **P13** | Aquest exercici **no** és el relé de T2: és una pràctica autònoma i anterior (SA2) que ja usa **P2 pel brunzidor** dins del mateix programa, així que el relé hi va a P13 (lliure en aquell moment). No hi ha conflicte real: són dos components, en dos programes diferents, en dos moments del curs. |
 | DHT11 *(temperatura, ampliació SA6)* | **P8** | Reaprofita el pin del PIR de la mascota (ja alliberat); **no** P13, ocupat pel motor M1. |
 | Ràdio (SA5) | — | Ràdio interna; no necessita cablatge. |
 

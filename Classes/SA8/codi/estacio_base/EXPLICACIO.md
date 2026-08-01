@@ -30,6 +30,17 @@ def analitza(missatge):
 
 Primer es treu el prefix (`"TEL:"`), després es parteix per `;` (un camp per sensor) i cada camp per `:` (clau i valor). El `if ":" not in camp: continue` és una petita defensa: si un camp arriba trencat, es descarta **només aquell camp**, no tot el missatge.
 
+### Bloc 1b — Protegir una conversió amb `try`/`except`
+
+```python
+try:
+    distancia = int(dades.get("D", -1))
+except ValueError:
+    distancia = -1
+```
+
+> 🔑 **Què fa `try`/`except`:** `int(...)` peta amb un `ValueError` si el text no és un número vàlid (per exemple, un camp de ràdio arribat a mig escriure). `try` diu "intenta fer això"; si peta, en lloc d'aturar tot el programa, `except ValueError` **atrapa** l'error i executa una alternativa (aquí, `distancia = -1`, un valor sentinella que es descarta més endavant). S'usa aquí perquè una lectura de ràdio corrupta puntual **no ha de tombar** l'estació base sencera.
+
 ### Bloc 2 — Llista + mitjana simple (objectiu 3 de la fitxa 17)
 
 ```python

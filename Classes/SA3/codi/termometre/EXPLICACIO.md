@@ -1,6 +1,8 @@
 # Termòmetre: intern vs extern
 
-**Quan es fa:** Sessió 2 (modelatge) · **Fitxer:** `termometre.py` · **Maquinari:** [esquemes de connexions](../../SA3_esquemes_connexions.md) — sensor de temperatura bàsic del Kit 1 al pin **P10** (ADC vàlid); sensor de temperatura **intern** de la micro:bit (cap cablatge)
+**Quan es fa:** Sessió 2 (modelatge) · **Fitxer:** `termometre.py` · **Maquinari:** [esquemes de connexions](../../SA3_esquemes_connexions.md) — sensor de temperatura bàsic del Kit 1 al pin **P1** (ADC vàlid); sensor de temperatura **intern** de la micro:bit (cap cablatge)
+
+> ⚠️ **Per què P1 i no P10?** P3, P4 i P10 també tenen ADC, però comparteixen circuit amb el display: `read_analog()` hi falla (`ValueError: Pin in display mode`) mentre el display estigui actiu, com passa aquí. P0/P1/P2 són ADC lliures de display.
 
 ## 🎯 Per què fem aquesta pràctica
 
@@ -47,6 +49,7 @@ El mateix patró de `nivell_llum` (llegir → comparar amb un llindar → decidi
 | Símptoma | Causa probable |
 |---|---|
 | El sensor extern sempre dona la mateixa temperatura | Cablatge incorrecte o pin sense ADC (recorda: només P0, P1, P2, P3, P4, P10) |
+| `ValueError: Pin in display mode` | El sensor analògic és a P3, P4 o P10 amb el display actiu (comparteixen circuit): passa'l a P0/P1/P2 |
 | La cara no canvia mai | `FRED`/`CALOR` mal calibrats per a la temperatura real de l'aula: llegeix el valor amb el REPL abans de fixar els llindars |
 | `temp_interna` sembla més alta que la temperatura real de l'aula | El sensor intern és a prop del processador i nota una mica la seva pròpia escalfor: és normal, per això es documenten els **dos** sensors |
 

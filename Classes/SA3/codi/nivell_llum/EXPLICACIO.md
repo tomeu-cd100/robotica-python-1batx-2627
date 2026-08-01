@@ -1,6 +1,8 @@
 # Nivell de llum: intern vs extern
 
-**Quan es fa:** Sessió 2 (modelatge) · **Fitxer:** `nivell_llum.py` · **Maquinari:** [esquemes de connexions](../../SA3_esquemes_connexions.md) — sensor de llum extern del Kit 2 al pin **P3** (ADC vàlid); sensor de llum **intern** de la micro:bit (cap cablatge)
+**Quan es fa:** Sessió 2 (modelatge) · **Fitxer:** `nivell_llum.py` · **Maquinari:** [esquemes de connexions](../../SA3_esquemes_connexions.md) — sensor de llum extern del Kit 2 al pin **P0** (ADC vàlid); sensor de llum **intern** de la micro:bit (cap cablatge)
+
+> ⚠️ **Per què P0 i no P3?** P3, P4 i P10 també tenen ADC, però comparteixen circuit amb el display: `read_analog()` hi falla (`ValueError: Pin in display mode`) mentre el display estigui actiu, com passa aquí (les barres). P0/P1/P2 són ADC lliures de display.
 
 ## 🎯 Per què fem aquesta pràctica
 
@@ -40,16 +42,17 @@ def barres(n):
 
 ```python
 llum_interna = display.read_light_level()      # 0-255
-llum_externa = pin3.read_analog()               # 0-1023
+llum_externa = pin0.read_analog()               # 0-1023
 ```
 
-Fixa't que **no** són la mateixa escala: el sensor intern dona 0-255, el de P3 dona 0-1023 (com tots els pins ADC). Barrejar-les sense adonar-te'n és un error típic — sempre cal saber **quin rang** dona cada sensor abans de comparar-lo o mapar-lo.
+Fixa't que **no** són la mateixa escala: el sensor intern dona 0-255, el de P0 dona 0-1023 (com tots els pins ADC). Barrejar-les sense adonar-te'n és un error típic — sempre cal saber **quin rang** dona cada sensor abans de comparar-lo o mapar-lo.
 
 ## ⚠️ Errors que veuràs segur
 
 | Símptoma | Causa probable |
 |---|---|
-| `pin3.read_analog()` sempre dona el mateix valor | El sensor extern no és a un pin **ADC vàlid** (només P0, P1, P2, P3, P4, P10) o el cablatge és incorrecte |
+| `pin0.read_analog()` sempre dona el mateix valor | El sensor extern no és a un pin **ADC vàlid** (només P0, P1, P2, P3, P4, P10) o el cablatge és incorrecte |
+| `ValueError: Pin in display mode` | El sensor analògic és a P3, P4 o P10 amb el display actiu (comparteixen circuit): passa'l a P0/P1/P2 |
 | Les barres no es mouen mai | S'ha confós l'escala 0-255 (intern) amb la 0-1023 (extern) als paràmetres de `mapa()` |
 | El display "parpelleja" estrany en comptes de mostrar barres netes | Falta `display.clear()` a `barres()`: els píxels de la volta anterior es queden encesos |
 
@@ -57,6 +60,6 @@ Fixa't que **no** són la mateixa escala: el sensor intern dona 0-255, el de P3 
 
 - **Ara mateix:** [`termometre`](../termometre/EXPLICACIO.md) reutilitza la mateixa idea de "sensor intern vs extern" i la mateixa `mapa()`.
 - **Sessió 3:** [`mascota_reactiva`](../mascota_reactiva/EXPLICACIO.md) fa servir `display.read_light_level()` per decidir quan la mascota "s'adorm".
-- **Simulador:** python.microbit.org simula el sensor de llum **intern** (`display.read_light_level()`), però **no** el sensor extern del Kit 2 (`pin3.read_analog()`): la part de barres només es veu sencera amb maquinari real.
+- **Simulador:** python.microbit.org simula el sensor de llum **intern** (`display.read_light_level()`), però **no** el sensor extern del Kit 2 (`pin0.read_analog()`): la part de barres només es veu sencera amb maquinari real.
 
 > ⭐ **Has acabat abans?** Tria un repte a **[Reptes de la SA3](../../../../Reptes/Reptes_SA3.md)**.

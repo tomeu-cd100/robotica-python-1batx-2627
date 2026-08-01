@@ -41,13 +41,22 @@ def desa_al_historic(missatge):
 
 
 def mostra_historial():
-    text = " ".join(historic)
+    # Requisit minim: mostra tots els missatges de l'historial, un darrere
+    # l'altre, separats per un espai (concatenacio amb un for, sense join()).
+    text = ""
+    for missatge in historic:
+        text = text + missatge + " "
     display.scroll(text)
 
 
 def mostra_historial_amb_paraula(paraula):
-    filtrats = [m for m in historic if paraula in m]
-    display.scroll(" ".join(filtrats))
+    # Ampliacio 2: nomes mostra els missatges que continguin "paraula"
+    # (un for que va afegint-los, sense comprensio de llistes).
+    text = ""
+    for missatge in historic:
+        if paraula in missatge:
+            text = text + missatge + " "
+    display.scroll(text)
 
 
 while True:
