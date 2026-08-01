@@ -41,19 +41,20 @@ def retrocedir_calibrat(velocitat):
     M2_ENDAVANT.write_digital(0)
 
 
-def girar(costat):
+def girar(costat, velocitat=300):
     # Gir sobre el propi eix: un motor endavant i l'altre enrere. El gir NO
     # es calibra (la simetria del gir ja compensa prou per a proves curtes).
-    velocitat_gir = 300
+    # Parametre "velocitat" opcional (per defecte 300, com a SA4): a la SA7
+    # els programes de comportament autonom hi passen girs mes suaus.
     if costat == 'esquerra':
-        M1_ENRERE.write_analog(velocitat_gir)
+        M1_ENRERE.write_analog(velocitat)
         M1_ENDAVANT.write_digital(0)
-        M2_ENDAVANT.write_analog(velocitat_gir)
+        M2_ENDAVANT.write_analog(velocitat)
         M2_ENRERE.write_digital(0)
     elif costat == 'dreta':
-        M1_ENDAVANT.write_analog(velocitat_gir)
+        M1_ENDAVANT.write_analog(velocitat)
         M1_ENRERE.write_digital(0)
-        M2_ENRERE.write_analog(velocitat_gir)
+        M2_ENRERE.write_analog(velocitat)
         M2_ENDAVANT.write_digital(0)
 
 

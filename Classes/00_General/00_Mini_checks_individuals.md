@@ -96,11 +96,11 @@ Tot el curs és **individual** (`Programació didàctica/04_Metodologia.md` §4.
 ## SA7 · Mini-check (inici de la Sessió 2)
 
 **Enunciat (projectar):**
-> El rover té les funcions fetes: `mesura_distancia()` (cm), `avancar()`, `aturar()` i `girar()`. Escriu el **bucle complet** del comportament *evita-obstacles*: si hi ha res a menys de 15 cm, atura't i gira; si no, avança.
+> El rover té el seguidor de línia (KS0050, P0) llegit amb `SEGUIDOR_LINIA.read_analog()` i un `LLINDAR_LINIA` ja calibrat sobre el circuit real. Les funcions de moviment (`avancar()`, `aturar()`, `girar()`) ja estan fetes. Escriu el **bucle complet** del comportament *seguidor de línia*: si la lectura és per sota del llindar (línia), avança recte; si és per sobre (s'ha perdut la línia), corregeix girant cap al costat on s'ha perdut.
 
-**Què mires:** `if mesura_distancia() < 15: aturar(); girar()` / `else: avancar()` (amb pauses opcionals) · que la lectura es faci **a cada volta** del bucle.
-**🟢** estructura reactiva correcta · **🟡** lògica bé però llegeix el sensor un sol cop fora del bucle · **🔴** no lliga sensor→decisió→acció.
-**Reforç 🔴:** repassar el cicle «llegir → decidir → actuar» de la fitxa SA7.
+**Què mires:** `if SEGUIDOR_LINIA.read_analog() < LLINDAR_LINIA: avancar(...)` / `else: girar(...)` (amb el costat de correcció coherent amb el circuit) · que la lectura es faci **a cada volta** del bucle (llaç tancat: llegeix → decideix → actua) · que reconegui que el llindar s'ha de calibrar sobre el circuit real, no un valor fix "de llibre".
+**🟢** estructura reactiva correcta i llindar aplicat amb el sentit correcte (per sota = línia) · **🟡** lògica bé però llegeix el sensor un sol cop fora del bucle, o inverteix el sentit del llindar · **🔴** no lliga sensor→decisió→acció.
+**Reforç 🔴:** repassar el cicle «llegir → decidir → actuar» i el calibratge del llindar a la fitxa SA7 (l'evita-obstacles amb `mesura_distancia()` i l'HC-SR04 arriba a la Sessió 3).
 
 ## SA8 · Mini-check (inici de la Sessió 2)
 

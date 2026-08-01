@@ -30,7 +30,7 @@ def avancar(velocitat):
     M2_ENRERE.write_digital(0)
 
 
-def girar(costat, velocitat):
+def girar(costat, velocitat=300):
     if costat == 'esquerra':
         M1_ENRERE.write_analog(velocitat)
         M1_ENDAVANT.write_digital(0)

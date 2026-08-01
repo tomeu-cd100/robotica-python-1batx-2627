@@ -4,7 +4,7 @@
 
 ## 🎯 Per què fem aquesta pràctica
 
-Les funcions `avancar()`, `retrocedir()`, `girar()` i `aturar()` són **exactament** les de la SA4: el rover no aprèn cap pin nou per moure's. El que sí és nou és la **cinemàtica diferencial**: el rover gira variant la velocitat/sentit relatiu de cada roda, i per la mateixa raó, si els dos motoreductors no surten idèntics de fàbrica, el rover **es desvia** en avançar "recte" encara que els dos rebin la mateixa consigna de PWM.
+Les funcions `avancar()`, `retrocedir()`, `girar()` i `aturar()` són les mateixes de la SA4 (mateixos pins, mateixa lògica): el rover no aprèn cap pin nou per moure's. A partir d'aquí, `girar()` guanya un segon paràmetre **opcional** de velocitat (`girar(costat, velocitat=300)`, vegeu `segueix_linia.py`/`evita_obstacles.py`) per als girs suaus dels comportaments autònoms; les crides a l'estil SA4 (`girar('dreta')`) continuen funcionant igual. El que sí és nou és la **cinemàtica diferencial**: el rover gira variant la velocitat/sentit relatiu de cada roda, i per la mateixa raó, si els dos motoreductors no surten idèntics de fàbrica, el rover **es desvia** en avançar "recte" encara que els dos rebin la mateixa consigna de PWM.
 
 ## 🔮 Abans d'executar: prediu
 

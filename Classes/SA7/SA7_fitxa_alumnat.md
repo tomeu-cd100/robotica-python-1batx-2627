@@ -35,7 +35,7 @@
 
 ### 1 · Cinemàtica diferencial (Sessió 1)
 
-El rover reutilitza **exactament** les funcions `avancar()`, `retrocedir()`, `girar()` i `aturar()` de la SA4: cap pin nou. Prova [`calibratge_motors.py`](codi/calibratge_motors/calibratge_motors.py) i ajusta `FACTOR_M1`/`FACTOR_M2` fins que el rover vagi recte. Prova una trajectòria en **quadrat** (avança + gira 90° × 4).
+El rover reutilitza les funcions de moviment de la SA4 (`avancar()`, `retrocedir()`, `girar()` i `aturar()`, mateixos pins): cap pin nou. A la SA7, `girar()` guanya un segon paràmetre **opcional** de velocitat (`girar(costat, velocitat=300)`) per als girs suaus del seguidor de línia; les crides a l'estil SA4 (`girar("dreta")`) continuen funcionant igual. Prova [`calibratge_motors.py`](codi/calibratge_motors/calibratge_motors.py) i ajusta `FACTOR_M1`/`FACTOR_M2` fins que el rover vagi recte. Prova una trajectòria en **quadrat** (avança + gira 90° × 4).
 
 **Prediu abans d'executar:** si envies la mateixa velocitat als dos motors i el rover es desvia cap a la dreta, quin motor "guanya"? ______________________
 

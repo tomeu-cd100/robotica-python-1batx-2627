@@ -127,7 +127,7 @@
 
 > ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: l'ampliació "combinar línia I obstacles en una sola missió" (deixa-la per a qui vagi sobrat; un únic comportament ben integrat i documentat és el nucli innegociable).
 
-**Punts clau:** el rover **no aprèn cap funció de moviment nova**: reutilitza `avancar()`/`retrocedir()`/`girar()`/`aturar()` de la SA4 tal com ja calibrades a la S1. L'única cosa realment nova de la S4 és la **integració**: combinar comportaments ja programats per separat en una sola estructura de missions, amb un polsador STOP que els talla tots per igual.
+**Punts clau:** el rover **no aprèn cap pin de moviment nou**: reutilitza `avancar()`/`retrocedir()`/`girar()`/`aturar()` de la SA4 tal com ja calibrades a la S1 (`girar()` amb el segon paràmetre opcional de velocitat introduït a la S2). L'única cosa realment nova de la S4 és la **integració**: combinar comportaments ja programats per separat en una sola estructura de missions, amb un polsador STOP que els talla tots per igual.
 
 **Errors freqüents i solució:**
 | Error | Causa | Solució |

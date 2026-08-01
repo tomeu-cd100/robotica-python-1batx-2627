@@ -15,7 +15,7 @@
 - [ ] Integrar el comportament triat amb `rover_missions.py` i alguna millora (Act. 4) → *compta amb R1 i R3*
 - [ ] Fer la **mini-defensa breu** (una decisió justificada) → *compta amb R4*
 - [ ] Tenir l'entrada del **quadern tècnic** de la SA7 (què he après · el repte · un error · els meus llindars i factors)
-- [ ] Recordar que el rover **no aprèn cap funció de moviment nova**: reutilitza `avancar/retrocedir/girar/aturar` de la SA4
+- [ ] Recordar que el rover reutilitza les funcions de moviment de la SA4 (`avancar/retrocedir/girar/aturar`); a la SA7 `girar()` guanya un segon paràmetre opcional de velocitat per als girs suaus del seguidor de línia
 
 ## 🚦 Com vaig? (pinta el teu nivell)
 | Ja sé… | 🔴 Encara no | 🟡 A mitges | 🟢 Sí |
