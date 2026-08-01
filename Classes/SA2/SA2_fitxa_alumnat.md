@@ -66,7 +66,7 @@ Munta el semàfor complet (LED verd/ambre/vermell + brunzidor + relé, [esquema]
 
 ### 4 · Repte ⭐ (nucli obligatori, un cop tancat el semàfor)
 
-Fes el **repte ⭐ · Llum de seguretat per a motxilla** de [`Reptes_SA2.md`](../../Reptes/Reptes_SA2.md), en la seva pròpia franja de 25' (Sessió 3, un cop tancat el semàfor; inclou 5' de parella de lectura): amplia `led_parpelleig.py` (el mateix LED de P1 que ja tens muntat a la mascota) perquè, mentre el **botó A** està premut, parpellegi **més ràpid** ("mode alerta"); sense prémer'l, parpelleja al ritme normal. És **nucli obligatori** — forma part del producte d'aquesta SA, no és una ampliació. Quan l'acabis, **ensenya'l al docent** perquè el validi.
+Fes el **repte ⭐ · Llum de seguretat per a motxilla** de [`Reptes_SA2.md`](../../Reptes/Reptes_SA2.md), en la seva pròpia franja de 25' (Sessió 3, un cop tancat el semàfor; inclou 5' de parella de lectura): amplia `led_parpelleig.py` (el LED de P1 que ja tens muntat des de la Sessió 1 — el mateix que muntaràs dins la mascota a la S4) perquè, mentre el **botó A** està premut, parpellegi **més ràpid** ("mode alerta"); sense prémer'l, parpelleja al ritme normal. És **nucli obligatori** — forma part del producte d'aquesta SA, no és una ampliació. Quan l'acabis, **ensenya'l al docent** perquè el validi.
 
 ### 5 · Muntatge de la mascota (Sessió 4)
 
