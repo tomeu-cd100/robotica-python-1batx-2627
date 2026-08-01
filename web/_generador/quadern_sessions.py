@@ -85,12 +85,28 @@ SESSIONS = {
            "cablejat el LED/RGB i el brunzidor per validar-los amb el codi "
            "ja fet.",
            "fabricacio, muntatge, cablatge, mascota"),
-        _s("SA3", 1, _TITOL_SA["SA3"],
-           "TODO: pendent de la guia docent de SA3 (entrades Keyestudio: LDR, polsador...).",
-           "TODO"),
-        _s("SA3", 2, "PROVA PRÀCTICA T1 (individual)",
-           "TODO: pendent de definir l'enunciat de la prova del 1r trimestre.",
-           "TODO", prova=True),
+        _s("SA3", 1, "Entrades digitals i condicionals",
+           "Avui he llegit entrades digitals (button_a/button_b, polsador amb "
+           "pull-up) amb if/elif/else i he fet un comptador de premudes al "
+           "REPL, amb antirebot per software.",
+           "entrada digital, pull-up, antirebot, read_digital, REPL"),
+        _s("SA3", 2, "Entrades analògiques: llum i temperatura",
+           "Avui he llegit entrades analogiques (read_analog, 0-1023) i "
+           "sensors interns (llum 0-255, temperatura en graus C), i he "
+           "programat una funcio mapa() per convertir rangs. He fet el "
+           "mini-check individual (no qualifica).",
+           "entrada analogica, read_analog, mapa, llindar, ADC"),
+        _s("SA3", 3, "Repte «mascota reactiva» (producte de la SA — es tanca la mascota T1)",
+           "Avui he cablejat la mascota amb el cablatge exacte del dosier i "
+           "he programat almenys 2 reaccions sensor-resposta (so, llum, PIR, "
+           "polsador, sacsejada). He tancat el Projecte T1 amb una "
+           "mini-defensa breu.",
+           "PIR, HC-SR04, temps de vol, condicionals encadenats, mascota"),
+        _s("SA3", 4, "PROVA PRÀCTICA T1 (individual)",
+           "Avui he fet la prova pràctica individual del 1r trimestre "
+           "(SA1-SA3): entrades i sortides, condicionals, bucles i el "
+           "mètode de projecte.",
+           "prova practica, avaluacio individual", prova=True),
     ],
     2: [
         _s("SA4", 1, _TITOL_SA["SA4"],
