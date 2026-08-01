@@ -25,6 +25,40 @@
 - Afegeix una funció `mostra_historial()` que faci `display.scroll()` de **tots** els missatges de `historic`, un darrere l'altre.
 - Codi comentat.
 
+<details markdown="1">
+<summary>🧗 Si t'encalles (repte ⭐): pistes esglaonades</summary>
+
+**Nivell 1 — Pista conceptual.** `historic` ja és una llista que es va omplint. Per mostrar-la sencera necessites un `for` que recorri **els elements** de la llista (no un índex): és el mateix `for missatge in historic:` que ja vas veure a `mostra_historic()`, però ara escrivint-lo tu dins d'una funció pròpia.
+
+**Nivell 2 — Pseudocodi.**
+```
+defineix mostra_historial():
+  per a cada missatge de historic:
+    mostra'l amb scroll
+```
+
+**Nivell 3 — Esquelet amb TODO.** Omple només el `for` i la crida a `scroll`.
+```python
+# SA5 - Repte 1 (BASTIDA / esquelet per a l'alumnat)
+#
+# QUE JA ESTA FET (no ho toquis):
+#   - La llista historic ja es va omplint amb desa_al_historic().
+#
+# QUE HAS DE FER TU:
+#   - Escriu una funcio mostra_historial() que faci scroll de TOTS els
+#     missatges de historic, un darrere l'altre.
+#
+# EINES QUE POTS USAR (nomes conceptes de la SA5):
+#   - for element in colleccio:   -> recorre els elements de la llista
+#   - display.scroll(text)
+
+def mostra_historial():
+    for ___ in ___:
+        display.scroll(___)   # TODO: mostra cada missatge
+```
+
+</details>
+
 **Ampliacions graduades.**
 1. *(bàsica)* Afegeix un comptador `total_rebuts` que sumi 1 cada cop que arriba un missatge nou, i mostra'l amb el botó A+B.
 2. *(notable)* Filtra l'historial: `mostra_historial()` només mostra els missatges que continguin una paraula concreta (per exemple, el nom d'un company).

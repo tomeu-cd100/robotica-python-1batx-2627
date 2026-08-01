@@ -25,6 +25,46 @@
 - Afegeix una **segona velocitat**, més baixa, que s'utilitzi durant els girs de correcció (quan es perd la línia), i la velocitat normal quan la segueix recte.
 - Codi comentat.
 
+<details markdown="1">
+<summary>🧗 Si t'encalles (repte ⭐): pistes esglaonades</summary>
+
+**Nivell 1 — Pista conceptual.** `girar()` ja accepta un segon paràmetre `velocitat` (amb un valor per defecte). No necessites cap funció nova: només una **constant nova**, més baixa que `VELOCITAT_AVANCAR`, i passar-la com a argument a `girar()` a la branca on ara es perd la línia.
+
+**Nivell 2 — Pseudocodi.**
+```
+defineix VELOCITAT_CORRECCIO (mes baixa que VELOCITAT_AVANCAR)
+dins del while True:
+  si la lectura indica linia:
+    avanca a VELOCITAT_AVANCAR
+  sino:
+    gira cap a un costat a VELOCITAT_CORRECCIO
+```
+
+**Nivell 3 — Esquelet amb TODO.** El llindar i el bucle base ja hi són; omple només la velocitat de correcció.
+```python
+# SA7 - Repte 1 (BASTIDA / esquelet per a l'alumnat)
+#
+# QUE JA ESTA FET (no ho toquis):
+#   - VELOCITAT_AVANCAR i LLINDAR_LINIA ja hi son.
+#
+# QUE HAS DE FER TU:
+#   - Defineix una velocitat de correccio MES BAIXA i fes-la servir
+#     nomes quan es perd la linia.
+#
+# EINES QUE POTS USAR (nomes conceptes de la SA7):
+#   - girar(costat, velocitat)   -> ja feta, admet un segon parametre
+
+VELOCITAT_CORRECCIO = ___   # TODO 1: mes baixa que VELOCITAT_AVANCAR
+
+# ... dins del while True:
+if lectura < LLINDAR_LINIA:
+    avancar(VELOCITAT_AVANCAR)
+else:
+    girar('esquerra', ___)   # TODO 2: fes servir VELOCITAT_CORRECCIO
+```
+
+</details>
+
 **Ampliacions graduades.**
 1. *(bàsica)* Mostra al display, amb `display.show()`, una icona diferent quan el rover va a velocitat normal i quan va a velocitat de correcció.
 2. *(notable)* Compta amb una variable quantes vegades ha hagut de corregir el rumb durant una volta completa del circuit, i mostra-ho per REPL amb `print()` en acabar.

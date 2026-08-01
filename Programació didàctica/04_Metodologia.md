@@ -34,8 +34,10 @@ Amb PRIMM l'alumnat sempre parteix de **codi donat**; el projecte final (SA9) de
 |---|---|---|
 | **SA1–SA3** | PRIMM complet sobre codi donat. | Prediu, modifica i amplia programes MicroPython. **Des de la SA3**, abans de codificar el repte escriu el **pseudocodi (3–5 línies)** al quadern: és el pas *Dissenyar* del mètode de projecte fet visible. |
 | **SA4–SA6** | Codi donat com a **referència**, no com a plantilla. | La fase **Crea** de cada repte parteix del **pseudocodi propi**; el programa de la sessió es consulta, no es retoca. |
-| **SA7–SA8** | Full-xuleta d'API (`microbit`, `radio`, sensors), sense estructura. | **Un repte per SA "a full en blanc"**: editor buit, només amb la xuleta i el pseudocodi propi. |
-| **SA9** | Cap (plantilla d'esquelet opcional). | Escriu el seu propi codi (per això la SA9 **no** té PRIMM). |
+| **SA7–SA8** | Full-xuleta d'API (`microbit`, `radio`, sensors), sense estructura; el repte ⭐ segueix partint d'un `.py` donat (com a totes les SA), però amb **menys línies ja fetes** i més pseudocodi propi abans d'obrir l'editor. | Amplia el `.py` de partida a partir del **seu** pseudocodi, sense modelatge línia a línia previ; la bastida «Si t'encalles» de `Reptes_SAn.md` (pistes esglaonades, mai la solució) és l'últim graó abans de programar sense cap suport. |
+| **SA9** | Cap (plantilla d'esquelet opcional). | Escriu el seu propi codi (per això la SA9 **no** té PRIMM): tria repte, dissenya i programa el projecte final sense partir de cap `.py` donat. |
+
+**On culmina realment la retirada de bastida:** no hi ha cap repte "a full en blanc" a SA7–SA8 (tots els reptes de `Reptes/Reptes_SAn.md` parteixen d'un `.py` de `Classes/SAn/codi/`, com a la resta del curs). La retirada completa de bastida es dona en dos punts, més tard i més exigents: l'**ítem obligatori de comportament NOU del rover** (2 punts, `Avaluació/Prova_practica_T3.md`) — una funció pròpia que resol un comportament **no treballat a cap sessió del curs**, escrita a la taula, individual i sense partir de cap fitxer donat — i el **projecte SA9**, que sí és, literalment, editor buit des del primer dia.
 
 **El pseudocodi, tal com el demanem** (paraules pròpies, sense sintaxi; una acció per línia):
 

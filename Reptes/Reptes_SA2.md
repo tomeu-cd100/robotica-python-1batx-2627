@@ -23,6 +23,53 @@
 - Afegeix un **segon mode**: mentre el **botó A** està premut, el LED parpelleja **més ràpid** ("mode alerta"); sense prémer'l, parpelleja al ritme normal.
 - Codi comentat.
 
+<details markdown="1">
+<summary>🧗 Si t'encalles (repte ⭐): pistes esglaonades</summary>
+
+**Nivell 1 — Pista conceptual.** `led_parpelleig.py` fa servir sempre la mateixa pausa entre encès i apagat. Tu necessites **dues** pauses diferents (curta i normal) i decidir, a **cada volta** del bucle, quina toca segons si el botó A està premut en aquell instant (`button_a.is_pressed()`).
+
+**Nivell 2 — Pseudocodi.**
+```
+importa microbit
+mentre sempre:
+  si el boto A esta premut:
+    la pausa es curta (mode alerta)
+  sino:
+    la pausa es normal
+  encen el LED, espera la pausa
+  apaga el LED, espera la pausa
+```
+
+**Nivell 3 — Esquelet amb TODO.** L'`import` i el `while True:` ja hi són; omple només la tria de pausa.
+```python
+# SA2 - Repte 1 (BASTIDA / esquelet per a l'alumnat)
+#
+# QUE JA ESTA FET (no ho toquis):
+#   - L'import de microbit i el while True: ja hi son.
+#
+# QUE HAS DE FER TU:
+#   - Tria la pausa (en ms) segons si el boto A esta premut o no.
+#
+# EINES QUE POTS USAR (nomes conceptes de la SA1-SA2):
+#   - button_a.is_pressed()      -> True si el boto A esta premut ARA
+#   - pin1.write_digital(1 o 0)  -> LED extern (P1) ences/apagat
+#   - sleep(ms)
+
+from microbit import *
+
+while True:
+    if button_a.is_pressed():
+        pausa = ___   # TODO 1: pausa curta (mode alerta)
+    else:
+        pausa = ___   # TODO 2: pausa normal
+    pin1.write_digital(1)
+    sleep(pausa)
+    pin1.write_digital(0)
+    sleep(pausa)
+```
+
+</details>
+
 **Ampliacions graduades.**
 1. *(bàsica)* Mostra el comptador de parpellejos al display cada **5** cops en lloc de cada 10 (canvia només el número de l'operador `%`).
 2. *(notable)* Afegeix un **tercer mode** amb el botó B: el LED es queda **fix** (mode "aparcada", sense parpellejar) fins que es torna a prémer un botó.

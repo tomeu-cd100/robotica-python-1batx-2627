@@ -105,11 +105,12 @@ Amb 15-20 alumnes, una sola sessió de defenses no dona: 5' + preguntes + canvi 
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
-| Pràctica | 70' | Acompanya les proves sistemàtiques (rutina DEPURA) i la primera iteració de millora; ronda resolent errors de maquinari/codi. | Proven el sistema, identifiquen errors, fan una **iteració de millora** documentada; avancen el [dossier tècnic](SA9_dossier_plantilla.md) (§1-§3). |
+| Activació | 10' | 🥋 **Kata del dia (repàs combinat pre-T3, 3 mini-katas):** K22 (try/except), K23 (llistes), K24 (for sobre col·lecció) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). 2-3' per mini-kata, correcció ràpida a mà alçada. | Fan les 3 mini-katas en 10 minuts, sense apunts: repàs espaiat de conceptes de SA5-SA7 abans de la prova pràctica T3. |
+| Pràctica | 60' | Acompanya les proves sistemàtiques (rutina DEPURA) i la primera iteració de millora; ronda resolent errors de maquinari/codi. | Proven el sistema, identifiquen errors, fan una **iteració de millora** documentada; avancen el [dossier tècnic](SA9_dossier_plantilla.md) (§1-§3). |
 | Defenses esglaonades | 20-30' | Escolta les defenses de qui ja té el prototip llest (vegeu §Defenses esglaonades); dona **preguntes** que la resta pugui aprofitar. | Qui està llest defensa (5' + preguntes); la resta observa i pren nota de preguntes útils per a la seva pròpia defensa. |
 | Tancament | 10' | Recull dubtes; anticipa que la S4 tanca el dossier i la defensa. | Documenten al quadern les proves fetes i un error trobat/resolt. |
 
-> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: redueix les defenses esglaonades d'avui a 2-3 (les més llestes) i reparteix la resta a la S4.
+> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Si vas just, retalla primer: redueix les defenses esglaonades d'avui a 2-3 (les més llestes) i reparteix la resta a la S4; la kata d'Activació **no** es retalla (és l'únic repàs espaiat de SA5-SA7 abans de la T3).
 
 **Punts clau:** distingeix explícitament una prova del **cas normal** d'una prova de **límit** (què passa si un sensor dona un valor extrem, o si el polsador STOP es prem enmig d'una acció): el dossier (§5) demana com a mínim una prova de límit.
 
@@ -128,11 +129,12 @@ Amb 15-20 alumnes, una sola sessió de defenses no dona: 5' + preguntes + canvi 
 
 | Fase | Temps | Activitat docent | Activitat alumnat |
 |---|---|---|---|
+| Activació | 10' | 🥋 **Kata del dia (repàs combinat pre-T3, 3 mini-katas):** K25 (ràdio), K26 (FSM/diccionari), K27 (return) — vegeu el [Banc d'activació](../00_General/00_Banc_activacio_repas.md). 2-3' per mini-kata, correcció ràpida a mà alçada. | Fan les 3 mini-katas en 10 minuts, sense apunts: repàs espaiat de conceptes de SA5-SA6/SA9 abans de la prova pràctica T3, el dia abans de la prova. |
 | Pràctica | 40' | Acompanya el tancament del [dossier tècnic](SA9_dossier_plantilla.md) (§4-§9: codi comentat, proves, dificultats, millores futures, conclusions, ètica/ODS). | Tanquen el dossier tècnic. |
 | Defensa oral individual | 60' | Dirigeix les defenses (5' + preguntes cadascuna, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md)); modera el torn de preguntes de manera equilibrada (perspectiva coeducativa). | Fan la seva defensa oral individual amb demostració; qui no defensa encara, escolta i omple la coavaluació (2 estrelles i un desig). |
-| Tancament | 20' | Recorda els deures de repàs per a la S5 (Python flash + targetes de repàs espaiat); recull dossiers. | Reben el repàs exprés (deures per a la T3); entrada final del quadern (reflexió, ètica/ODS). |
+| Tancament | 10' | Recorda els deures de repàs per a la S5 (Python flash + targetes de repàs espaiat); recull dossiers. | Reben el repàs exprés (deures per a la T3); entrada final del quadern (reflexió, ètica/ODS). |
 
-> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Amb grups nombrosos, la major part de la gestió del temps ja s'ha fet a la S3 (defenses esglaonades): si encara queden moltes defenses, prioritza-les sobre el tancament fi del dossier (es pot acabar de polir com a deures, sense penalitzar).
+> ⏱️ **Marge:** el temps efectiu real és ~100' (arrencada + recollida), no 120'. Amb grups nombrosos, la major part de la gestió del temps ja s'ha fet a la S3 (defenses esglaonades): si encara queden moltes defenses, prioritza-les sobre el tancament fi del dossier (es pot acabar de polir com a deures, sense penalitzar); la kata d'Activació **no** es retalla.
 
 > 🔌 **Pla B si falla el maquinari el dia de la defensa.** Accepta una **demostració gravada** (vídeo curt fet en una sessió anterior) com a evidència del funcionament, sempre que la defensa en directe (explicació + preguntes) es faci igualment: el que s'avalua amb R4·DO és la comunicació, no només la demo en directe.
 
