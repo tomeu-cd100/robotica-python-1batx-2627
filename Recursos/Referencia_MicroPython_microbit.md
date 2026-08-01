@@ -122,14 +122,45 @@ USB com una unitat). Substitueix `print()` per a sèries de mesures llargues
 
 ## 10. Bus I2C (sensors del Kit 3: MPU6050, BMP280, CCS811 — SA8)
 
+`i2c` **ja existeix** amb `from microbit import *` (bus fix a P19 SCL /
+P20 SDA): **no cal** `machine.I2C()` ni cap `i2c.init()`.
+
+| Crida | Què fa |
+|---|---|
+| `i2c.write(adreça, bytes([...]))` | Escriu una seqüència de bytes al dispositiu de l'`adreça` donada. |
+| `i2c.write(adreça, bytes([registre]), repeat=True)` | Escriu **sense deixar anar el bus** (`repeat=True`): apunta a un registre abans de llegir-lo tot seguit, sense que un altre dispositiu I2C hi pugui interferir pel mig. |
+| `i2c.read(adreça, n_bytes)` | Llegeix `n_bytes` consecutius del dispositiu. |
+
+Exemple real (IMU MPU6050, adreça `0x68`, `Classes/SA8/codi/telemetria_radio/telemetria_radio.py`):
 ```python
-import machine
-i2c = machine.I2C()                          # P19 (SCL) / P20 (SDA)
-i2c.write(ADREÇA, bytes([registre, valor]))   # escriu a un registre
-dades = i2c.read(ADREÇA, N_BYTES)             # llegeix N bytes
+MPU_ADR = 0x68
+MPU_REG_PWR = 0x6B      # registre de gestió d'energia (el sensor arrenca en "sleep")
+MPU_REG_ACCEL = 0x3B    # primer registre de l'acceleròmetre (X alt)
+
+i2c.write(MPU_ADR, bytes([MPU_REG_PWR, 0x00]))          # el desperta
+i2c.write(MPU_ADR, bytes([MPU_REG_ACCEL]), repeat=True)  # apunta al registre
+dades = i2c.read(MPU_ADR, 6)                              # llegeix X, Y, Z (2 bytes cadascun)
 ```
 Cada sensor I2C té la seva pròpia adreça i mapa de registres (datasheet del
-fabricant); vegeu `Classes/SA8/codi/` per als drivers ja fets al curs.
+fabricant); vegeu `Classes/SA8/codi/` per als drivers ja fets al curs
+(MPU6050 al nucli; BMP280/CCS811 a l'ampliació, mateix bus, adreça diferent).
+
+## 11. `machine.time_pulse_us` (mesura de polsos: HC-SR04, DHT11)
+
+`machine` **sí** cal importar-lo (`import machine`), però al curs **només**
+s'hi usa aquesta funció, per mesurar quant dura un pols digital (temps de
+vol):
+
+```python
+import machine
+durada_us = machine.time_pulse_us(pin, valor_pols, temps_maxim_us)
+```
+- **HC-SR04** (SA7-SA8): un sol pols a l'ECHO, per calcular la distància.
+- **DHT11** (SA6-SA8): 40 polsos consecutius, per muntar els bits de
+  temperatura/humitat (mateix mecanisme, repetit).
+
+Retorna la durada en microsegons, o un valor negatiu si no arriba cap pols
+dins del `temps_maxim_us` (llavors es descarta la lectura, `return None`).
 
 ---
 

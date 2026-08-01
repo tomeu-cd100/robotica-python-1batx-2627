@@ -12,6 +12,7 @@
 | [`Enllacos_i_tutorials.md`](Enllacos_i_tutorials.md) | 10 recursos externs validats (lliçons, docs oficials, referències curriculars, models de projecte), amb llicència i ús recomanat de cadascun. | Ampliació i referència puntual; **cap és obligatori**. |
 | [`Referencia_MicroPython_microbit.md`](Referencia_MicroPython_microbit.md) | Xuleta pròpia de 2 pàgines amb **només l'API de `microbit` usada al curs** (display, botons, pins, música, ràdio, acceleròmetre, `log`...). | Consulta ràpida durant les sessions, sense haver d'anar a la documentació completa. |
 | [`plantilles_laser/`](plantilles_laser/README.md) | Plantilles SVG de tall làser de la mascota (T1) i el xassís del vehicle (T2), amb el seu generador paramètric i el detall de mides/nesting. | Fabricació dels dos robots amb peça làser pròpia (el rover T3 reaprofita el xassís del vehicle). |
+| [`peces_3d/`](peces_3d/README.md) | 4 peces OpenSCAD paramètriques (escaire de la mascota, suport de la roda boja, suports d'ampliació del rover). | Fabricació de les peces impreses en 3D dels tres robots. |
 
 ## Relació amb la resta del curs
 

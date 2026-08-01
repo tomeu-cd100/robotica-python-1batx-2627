@@ -16,3 +16,5 @@ formen part de la seqüència del curs.
 - [`plantilles_laser/`](plantilles_laser/README.md) — plantilles SVG de tall
   làser de la mascota (T1) i el vehicle (T2), amb el generador paramètric i el
   detall de mides/nesting.
+- [`peces_3d/`](peces_3d/README.md) — peces OpenSCAD paramètriques impreses en
+  3D dels tres robots (escaires, roda boja, suports d'ampliació del rover).

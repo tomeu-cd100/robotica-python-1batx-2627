@@ -18,7 +18,7 @@ reescalar.
 
 | Fitxer | Robot | Peces | Mida generada (1 unitat) |
 | --- | --- | --- | --- |
-| `mascota.svg` | T1 · Mascota | Base + 4 laterals + tapa + 2 orelles (8 peces) | 285 × 158 mm |
+| `mascota.svg` | T1 · Mascota | Base + 4 laterals + tapa + 2 orelles (8 peces) | 158 × 120 mm |
 | `xassis_vehicle.svg` | T2 · Vehicle | Xassís amb encaixos de motor integrats (1 peça) | 190 × 140 mm |
 
 **El rover (T3) NO té cap plantilla làser pròpia**: reaprofita íntegrament
@@ -52,10 +52,17 @@ Segons `00_Fil_conductor_construccions.md` §3.1, amb un tauler de treball de
 
 | Robot | Mida/unitat | Unitats/tauler | Taulers per a 20 alumnes |
 | --- | --- | --- | --- |
-| Mascota (`mascota.svg`) | 285 × 158 mm | 2 (costat a costat, 570 × 158 mm) | 10 |
+| Mascota (`mascota.svg`) | 158 × 120 mm | 2 (costat a costat, 316 × 120 mm; hi cabrien 3, però es reserva marge de tall/pinces) | 10 |
 | Vehicle (`xassis_vehicle.svg`) | 190 × 140 mm | 2 (costat a costat, 380 × 140 mm) | 10 |
 | Rover | — | — | 0 |
 | **Total anual** | | | **20 taulers** |
+
+La mida de la mascota (158 × 120 mm) és propera a l'aproximació «~180 ×
+140 mm» de `00_Fil_conductor_construccions.md` §3.1 (caixa de sobretaula
+petita, pensada per a micro:bit + Micro:shield + sensors del Kit, no per a
+un Arduino UNO); qualsevol ajust del generador (mida de la caixa, forma de
+les orelles) es reflecteix automàticament aquí en tornar a executar
+l'script.
 
 El **nesting** (agrupar les còpies personalitzades de 2 alumnes al mateix
 tauler abans de llançar el tall) és el que fa viable tallar fora d'horari

@@ -72,19 +72,25 @@ def _finestra_servo(e, x, y):
 
 
 def mascota():
-    """T1 - Caixa 70x55x40 (base + 4 laterals + tapa), amb orelles amb
-    ranura de servo (Classes/00_General/00_Projecte_T1_Mascota.md).
+    """T1 - Caixa de sobretaula ~62x48x32 (base + 4 laterals + tapa), amb
+    orelles amb ranura de servo (Classes/00_General/00_Projecte_T1_Mascota.md).
     Unio amb escaires impresos en 3D i cargols M3 (forats a 8 mm del caire).
+    Layout en 3 columnes (caixa | tapa+laterals | orelles) perque el
+    conjunt de les 8 peces surti proper a la mida de referencia ~180x140 mm
+    de Classes/00_General/00_Fil_conductor_construccions.md Sec. 3.1.
     """
     e = []
+    BW, BD, BH = 62, 48, 32     # amplada x fondaria x alcada de la caixa
+    GAP = 4                     # separacio entre peces al tauler
 
     def orella(x, y, forma="rodona"):
         """Orella amb una pestanya de 10 mm INTEGRADA al contorn (una sola
         peca de tall) que s'encaixa a la ranura de la tapa. Es pot redibuixar
-        el contorn negre sempre que es mantingui la pestanya de 10 mm."""
-        cx, cy = x + 17, y + 17
-        r = 17
-        # punts on la pestanya talla el cercle/triangle: x = cx +/- 5
+        el contorn negre sempre que es mantingui la pestanya de 10 mm.
+        Capsa (x, y, x+26, y+35): cercle r=13 + pestanya de 10 mm avall."""
+        r = 13
+        cx, cy = x + r, y + r
+        # punt on la pestanya talla el cercle: x = cx +/- 5 (r=13 -> yt = cy+12)
         yt = round(cy + (r ** 2 - 5 ** 2) ** 0.5, 2)
         pestanya = (f"L {cx - 5} {yt + 10} L {cx + 5} {yt + 10} "
                     f"L {cx + 5} {yt} ")
@@ -98,45 +104,58 @@ def mascota():
                           f"Q {cx + r * 0.35} {b - r * 1.6} {cx + r} {b} "
                           f"L {cx + 5} {b} {pestanya[2:]}"
                           f"L {cx - 5} {b} Z"))
-        e.append(cercle(cx, cy, r * 1.3, GRAVAT))  # contorn de gravat (personalitzable)
+        e.append(cercle(cx, cy, r * 1.15, GRAVAT))  # contorn de gravat (personalitzable)
 
-    # BASE 70x55
-    e.append(rect(0, 0, 70, 55))
-    _forats_escaire(e, 0, 0, 70, 55)
-    e.append(etiqueta(3, 10, "BASE"))
-    # TAPA 70x55: finestra de servo (orelles/cua) + 2 ranures d'orella
-    e.append(rect(78, 0, 70, 55))
-    _forats_escaire(e, 78, 0, 70, 55)
-    _finestra_servo(e, 91, 21)
-    e.append(rect(84, 42, 10.4, 3.4))   # ranura orella esquerra
-    e.append(rect(133, 42, 10.4, 3.4))  # ranura orella dreta
-    e.append(etiqueta(81, 10, "TAPA"))
-    # FRONTAL 70x40: cara de criatura - finestra de la matriu de LED (ulls),
-    # PIR com a nas i boca somrient tallada (sortida de so + micro + polsador,
+    # --- Columna A (x=0..BW): BASE / FRONTAL / DARRERE, apilades ---
+    y_base, y_front, y_dar = 0, BD + GAP, BD + GAP + BH + GAP
+    e.append(rect(0, y_base, BW, BD))
+    _forats_escaire(e, 0, y_base, BW, BD)
+    e.append(etiqueta(3, y_base + 10, "BASE", 4))
+    # FRONTAL: cara de criatura - finestra de la matriu de LED (ulls), PIR
+    # com a nas i boca somrient tallada (sortida de so + micro + polsador,
     # muntats darrere, vegeu Cablatge del dossier T1)
-    e.append(rect(0, 60, 70, 40))
-    _forats_escaire(e, 0, 60, 70, 40)
-    e.append(rect(24.5, 70, 21, 21))              # finestra matriu de LED (ulls/cara)
-    e.append(cercle(35, 92, 15))                  # finestra del PIR (el nas)
-    e.append(cami("M 22 108 Q 35 116 48 108 Q 35 122 22 108 Z"))  # boca somrient
-    e.append(etiqueta(3, 70, "FRONTAL - decora (vermell=gravat)", 3.5))
-    # DARRERE 70x40: pas del cable USB
-    e.append(rect(78, 60, 70, 40))
-    _forats_escaire(e, 78, 60, 70, 40)
-    e.append(rect(103, 88, 10, 6))
-    e.append(etiqueta(81, 70, "DARRERE"))
-    # LATERAL A / LATERAL B 55x40 (x2)
-    for i, nom in enumerate(["LATERAL A", "LATERAL B"]):
-        x0 = 156 + i * 60
-        e.append(rect(x0, 60, 55, 40))
-        _forats_escaire(e, x0, 60, 55, 40)
-        e.append(etiqueta(x0 + 3, 70, nom))
-    # Orelles (x2, formes de mostra diferents; l'alumnat en pot redibuixar el
-    # contorn sempre que mantingui la pestanya de 10 mm)
-    orella(0, 105, "rodona")
-    orella(45, 105, "gat")
-    e.append(etiqueta(0, 152, "ORELLES x2 - encaixen a la ranura de la TAPA", 4))
-    desa("mascota.svg", 285, 158, e)
+    e.append(rect(0, y_front, BW, BH))
+    _forats_escaire(e, 0, y_front, BW, BH)
+    e.append(rect(23, y_front + 2, 16, 13))                    # finestra matriu de LED
+    e.append(cercle(31, y_front + 21, 9))                       # finestra del PIR (el nas)
+    e.append(cami(f"M 24 {y_front + 27} Q 31 {y_front + 29.5} 38 {y_front + 27} "
+                  f"Q 31 {y_front + 31.5} 24 {y_front + 27} Z"))  # boca somrient
+    e.append(etiqueta(2, y_front + 6, "FRONTAL", 3))
+    # DARRERE: pas del cable USB
+    e.append(rect(0, y_dar, BW, BH))
+    _forats_escaire(e, 0, y_dar, BW, BH)
+    e.append(rect(26, y_dar + 13, 10, 6))
+    e.append(etiqueta(2, y_dar + 6, "DARRERE", 3))
+
+    # --- Columna B (x=BW+GAP..): TAPA / LATERAL A / LATERAL B, apilades ---
+    xB = BW + GAP
+    e.append(rect(xB, y_base, BW, BD))
+    _forats_escaire(e, xB, y_base, BW, BD)
+    _finestra_servo(e, xB + 19, y_base + 5)                     # servo orelles/cua
+    e.append(rect(xB + 12, y_base + 30, 10.4, 3.4))             # ranura orella esquerra
+    e.append(rect(xB + 39, y_base + 30, 10.4, 3.4))             # ranura orella dreta
+    e.append(etiqueta(xB + 3, y_base + 10, "TAPA", 4))
+    for i, nom in enumerate(["LAT. A", "LAT. B"]):
+        y0 = y_front + i * (BH + GAP)
+        e.append(rect(xB, y0, BD, BH))
+        _forats_escaire(e, xB, y0, BD, BH)
+        e.append(etiqueta(xB + 2, y0 + 6, nom, 3))
+
+    # --- Columna C: orelles (x2, formes de mostra diferents; l'alumnat en
+    # pot redibuixar el contorn sempre que mantingui la pestanya de 10 mm) ---
+    xC = xB + BW + GAP
+    orella(xC, y_base, "rodona")
+    orella(xC, y_base + 35 + GAP, "gat")
+    e.append(etiqueta(xC, y_base + 2 * (35 + GAP) + 6,
+                      "ORELLES x2:", 3.2))
+    e.append(etiqueta(xC, y_base + 2 * (35 + GAP) + 12,
+                      "encaixen a la", 3.2))
+    e.append(etiqueta(xC, y_base + 2 * (35 + GAP) + 18,
+                      "ranura de la TAPA", 3.2))
+
+    ample_total = xC + 26
+    alt_total = y_dar + BH
+    desa("mascota.svg", ample_total, alt_total, e)
 
 
 def xassis_vehicle():
