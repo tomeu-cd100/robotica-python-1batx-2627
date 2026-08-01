@@ -61,7 +61,7 @@ Rúbriques reutilitzables amb **quatre nivells**, cadascun lligat a una **banda 
 
 ### R4·DO — Mini-rúbrica de la defensa oral (detall del criteri «Defensa oral» de la R4)
 
-Les defenses orals **es repeteixen tot el curs**: unes puntuen a la R4 (SA2 S4, SA4 S4, SA6 S4, SA9 S4-S5) i unes altres són **mini-defenses purament formatives, sense nota R4** (SA3 S3, SA7 S4) que preparen l'alumnat per a les properes defenses graduades. Fins ara la R4 només tenia una fila genèrica per a la «Defensa oral». Aquesta mini-rúbrica de **3 indicadors** la desplega, es comparteix amb l'alumnat **des de la SA2** i fa visible la progressió; també serveix per **calibrar l'autoavaluació** (l'alumnat es prepara amb els mateixos 3 indicadors), incloses les mini-defenses formatives de SA3 i SA7.
+Les defenses orals **es repeteixen tot el curs**: unes puntuen a la R4 (SA2 S3, SA4 S3, SA6 S3, SA9 S4-S5) i unes altres són **mini-defenses purament formatives, sense nota R4** (SA3 S3, SA7 S4) que preparen l'alumnat per a les properes defenses graduades. Fins ara la R4 només tenia una fila genèrica per a la «Defensa oral». Aquesta mini-rúbrica de **3 indicadors** la desplega, es comparteix amb l'alumnat **des de la SA2** i fa visible la progressió; també serveix per **calibrar l'autoavaluació** (l'alumnat es prepara amb els mateixos 3 indicadors), incloses les mini-defenses formatives de SA3 i SA7.
 
 | Indicador | Insuficient (0–4) | Suficient/Bé (5–6) | Notable (7–8) | Excel·lent (9–10) |
 |---|---|---|---|---|
@@ -73,10 +73,10 @@ Les defenses orals **es repeteixen tot el curs**: unes puntuen a la R4 (SA2 S4, 
 
 | Moment | Format | Nivell esperat | Puntua a la R4? |
 |---|---|---|---|
-| **SA2 S4** (mini-defensa, 1') | Davant el docent | Claredat; la decisió justificada s'hi **inicia** | Sí |
+| **SA2 S3** (mini-defensa, 1') | Davant el docent | Claredat; la decisió justificada s'hi **inicia** | Sí |
 | **SA3 S3** (mini-defensa breu, 1') | Davant el docent | Claredat (formativa: retorn per preparar la SA4) | **No** (formativa) |
-| **SA4 S4** (mini-defensa, 1-2') | Davant el docent | Claredat + una decisió justificada | Sí |
-| **SA6 S4** (defensa a peu de taula, 2-3', abans/després de la prova T2) | Docent | Els 3 indicadors | Sí |
+| **SA4 S3** (mini-defensa, 1-2') | Davant el docent | Claredat + una decisió justificada | Sí |
+| **SA6 S3** (defensa a peu de taula, 2-3', abans de la prova T2 de la S4) | Docent | Els 3 indicadors | Sí |
 | **SA7 S4** (mini-defensa breu, 1') | Davant el docent | Claredat + decisió justificada (formativa: retorn per preparar la SA9) | **No** (formativa) |
 | **SA9 S4-S5** (defensa final + demo) | Grup classe | Els 3 indicadors al nivell alt | Sí |
 

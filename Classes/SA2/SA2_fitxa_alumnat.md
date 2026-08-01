@@ -64,13 +64,13 @@ Munta el semàfor complet (LED verd/ambre/vermell + brunzidor + relé, [esquema]
 
 **Mini-defensa (1', davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)):** si et toca, explica **què fa** el teu semàfor i **una decisió** que hagis pres (per exemple, per què aquest ordre o aquests temps). Si no et toca aquesta sessió, escriu la mateixa resposta al quadern.
 
-### 4 · Muntatge de la mascota (Sessió 4)
-
-Segueix el dossier [`00_Projecte_T1_Mascota.md`](../00_General/00_Projecte_T1_Mascota.md): munta la carcassa, cablega el LED (P1) i el brunzidor amb el codi que ja tens fet (`led_parpelleig.py`, `musica_altaveu.py`), i deixa el servo muntat (es programarà a la SA4).
-
-### 5 · Repte ⭐ (nucli obligatori, un cop tancats el semàfor i la mascota)
+### 4 · Repte ⭐ (nucli obligatori, un cop tancat el semàfor)
 
 Fes el **repte ⭐ · Llum de seguretat per a motxilla** de [`Reptes_SA2.md`](../../Reptes/Reptes_SA2.md), en la seva pròpia franja de 25' (Sessió 3, un cop tancat el semàfor; inclou 5' de parella de lectura): amplia `led_parpelleig.py` (el mateix LED de P1 que ja tens muntat a la mascota) perquè, mentre el **botó A** està premut, parpellegi **més ràpid** ("mode alerta"); sense prémer'l, parpelleja al ritme normal. És **nucli obligatori** — forma part del producte d'aquesta SA, no és una ampliació. Quan l'acabis, **ensenya'l al docent** perquè el validi.
+
+### 5 · Muntatge de la mascota (Sessió 4)
+
+Segueix el dossier [`00_Projecte_T1_Mascota.md`](../00_General/00_Projecte_T1_Mascota.md): munta la carcassa, cablega el LED (P1) i el brunzidor amb el codi que ja tens fet (`led_parpelleig.py`, `musica_altaveu.py`), i deixa el servo muntat (es programarà a la SA4).
 
 ## Producte · Repte «semàfor o llum d'ambient»
 
