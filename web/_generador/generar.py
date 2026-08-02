@@ -234,7 +234,7 @@ GENERAL_ALUMNAT = {
     "00_Targetes_rescat.md",
     "00_Entorns_de_treball.md",
     "00_Glossari_tecnic.md",
-    "00_Avaluacio_per_alumnat.md",
+    "00_Avaluacio_per_alumnat.md", "00_Mapa_tasques_rubriques.md",
     "00_Quadern_tecnic.md",
     "00_Repas_expres_MicroPython.md", "00_Repas_expres_Radio.md",
     "00_Guia_defensa_oral.md",

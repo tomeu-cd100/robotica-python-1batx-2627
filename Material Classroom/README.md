@@ -33,21 +33,23 @@ navegador, i el token es regenera **a la carpeta dels secrets**, no aquí.
 | `crear_questionaris_conceptes_forms.js` | Un Google Form autocorrectiu per SA: parseja les preguntes de `Classes/SAn/SAn_questionari_conceptes.md` i les claus de `Classes/Solucionari/Questionaris_conceptes_solucions.md`. `APPLY=1` per crear; `SA=3` per limitar-ho a una SA. |
 | `adjuntar_questionaris_classroom.js` | Penja aquells Forms com a tasca **sense nota** (formativa) al tema de la seva SA. |
 | `crear_tasques_lliurament.js` | Tasca de lliurament del producte per SA (10 punts, categoria T1/T2/T3, enllaços a fitxa/checklist/reptes). |
-| `crear_rubriques_lliurament.js` | Rúbrica de producte (5 criteris × 2 punts, derivada de `07_Rubriques.md`): escriu el CSV versionat a `Avaluació/rubriques/` i, com que aquest compte no té llicència per a l'API de rúbriques, puja el full importable a Drive. |
+| `crear_rubriques_per_tasca.js` | Les **sis rúbriques unificades (A-F)** i el mapa tasca → rúbrica. Escriu els CSV versionats a `Avaluació/rubriques/`, els puja a Drive com a fulls importables i crea el material «Quina rúbrica avalua cada tasca». És la font de dades del mapa. |
+| `generar_mapa_rubriques_md.js` | Genera `Classes/00_General/00_Mapa_tasques_rubriques.md` a partir d'aquelles mateixes dades (el document no s'edita a mà). |
 | `crear_quadern_classroom.js` | Material amb les plantilles del quadern tècnic (les del web, no de GitHub) i una tasca de lliurament del quadern sencer per trimestre (10 punts, categoria T1/T2/T3). |
 
 ## Estat del curs (02/08/2026)
 
-Creat: 11 temes · 15 materials-enllaç · 9 qüestionaris (Forms autocorrectius +
+Creat: 11 temes · 16 materials-enllaç · 9 qüestionaris (Forms autocorrectius +
 tasca sense nota) · 9 tasques de lliurament de producte + 3 de quadern tècnic
-(10 punts, categoria de trimestre) · full de rúbrica importable a Drive.
-**Tot en esborrany**, pendent que el docent ho publiqui i hi posi dates.
+(10 punts) · 6 fulls de rúbrica a Drive i el material amb el mapa tasca →
+rúbrica. **Tot en esborrany**, pendent que el docent ho publiqui i hi posi dates.
 
 Pendent manual (dues coses que l'API no deixa fer):
 
-1. **Rúbrica**: a cada tasca de lliurament, *Rúbrica → Importar des de Sheets* →
-   «Rúbrica de producte de SA (importable a Classroom)». L'API de rúbriques
-   demana Education Plus / Teaching & Learning Upgrade, que aquest compte no té.
+1. **Rúbrica**: a cada tasca amb nota, *Rúbrica → Importar des de Sheets* → el
+   full que digui `Classes/00_General/00_Mapa_tasques_rubriques.md` (A-F).
+   L'API de rúbriques demana Education Plus / Teaching & Learning Upgrade, que
+   aquest compte no té.
 2. **Categoria de nota** (T1/T2/T3): s'ha d'assignar a mà al desplegable de cada
    tasca. L'API accepta el camp `gradeCategory` a la creació però **no l'aplica**,
    i el `patch` amb `updateMask=gradeCategory` el rebutja («Non-supported update

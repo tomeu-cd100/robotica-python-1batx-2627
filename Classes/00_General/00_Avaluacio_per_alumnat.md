@@ -99,7 +99,7 @@ Regla d'or: **la IA t'ha d'ajudar a aprendre, no a saltar-te l'aprenentatge**.
 
 ## 8 · Els teus drets (i la teva part)
 
-**Tens dret a:** conèixer les rúbriques i objectius **abans** de començar · saber en tot moment què qualifica i què no · rebre retorn a temps per poder millorar · recuperar millorant el producte.
+**Tens dret a:** conèixer les rúbriques i objectius **abans** de començar (taula completa: [`00_Mapa_tasques_rubriques.md`](00_Mapa_tasques_rubriques.md), quina rúbrica avalua cada tasca) · saber en tot moment què qualifica i què no · rebre retorn a temps per poder millorar · recuperar millorant el producte.
 
 **Et toca a tu:** portar el quadern al dia · fer els mini-checks amb honestedat (sense IA ni apunts) · aplicar DEPURA abans de demanar ajuda · declarar l'ús d'IA · tenir cura del teu maquinari individual.
 
