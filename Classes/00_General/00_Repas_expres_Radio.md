@@ -16,11 +16,11 @@ Tres línies s'han d'escriure **sempre, abans del bucle**, a qualsevol programa 
 ```python
 import radio
 
-radio.config(group=10)
 radio.on()
+radio.config(group=10)
 ```
 
-Si dues plaques no es «senten», el 90 % de les vegades és una d'aquestes tres línies: falta `radio.on()`, o cada placa és en un `group` diferent. El `group` (0-255) és el «canal privat»: només es reben missatges del mateix grup.
+Si dues plaques no es «senten», el 90 % de les vegades és una d'aquestes tres línies: falta `radio.on()`, o cada placa és en un `group` diferent. El `group` (0-255) és el «canal privat»: només es reben missatges del mateix grup. (L'ordre `on()` → `config()` és el de tots els programes del curs.)
 </details>
 
 ## R2 · Emissor de telemetria
@@ -34,8 +34,8 @@ Si dues plaques no es «senten», el 90 % de les vegades és una d'aquestes tres
 from microbit import *
 import radio
 
-radio.config(group=10)
 radio.on()
+radio.config(group=10)
 
 while True:
     radio.send('T:' + str(temperature()))
@@ -56,8 +56,8 @@ while True:
 from microbit import *
 import radio
 
-radio.config(group=10)
 radio.on()
+radio.config(group=10)
 
 while True:
     missatge = radio.receive()
@@ -65,7 +65,7 @@ while True:
         avancar(400)
 ```
 
-Dos punts crítics: `radio.receive()` retorna **`None`** si no hi ha res (per això es compara amb `==`, que amb `None` simplement dona `False`), i la comparació és `==` (preguntar), **mai** `=` (assignar).
+Dos punts crítics: `radio.receive()` retorna **`None`** si no hi ha res (per això es compara amb `==`, que amb `None` simplement dona `False`), i la comparació és `==` (preguntar), **mai** `=` (assignar). Nota: `avancar()` és la funció de motors de la SA4 — si ho proves al simulador sense el vehicle, substitueix-la per `display.show(Image.ARROW_N)`.
 </details>
 
 ## R4 · Rebre un número sense petar

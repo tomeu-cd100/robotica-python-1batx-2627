@@ -28,6 +28,6 @@
 | Explicar la diferència entre una regla feta a mà i un model d'IA entrenat amb dades | | | |
 
 ## 🆘 Si m'encallo
-Segueixo **DEPURA**: **D**escriu · **E**xamina · **P**rova una hipòtesi cada cop · **U**bica · **R**epara · **A**punta. Nou aquesta SA: si un missatge de ràdio "no arriba com toca", **comprovo primer** el protocol (mateix `group`? mateix `PREFIX`?), abans de sospitar dels sensors. Si segueixo encallat, demano ajuda explicant **què ja he provat**.
+Segueixo **DEPURA**: **D**escriu · **E**xamina · **P**rova una hipòtesi cada cop · **U**bica · **R**epara · **A**punta. Nou aquesta SA: si un missatge de ràdio "no arriba com toca", **comprovo primer** el protocol (mateix `group`? mateix `PREFIX`?), abans de sospitar dels sensors. Si segueixo encallat, agafo la **targeta de rescat** de la meva SA ([`00_Targetes_rescat.md`](../00_General/00_Targetes_rescat.md), 3 nivells de pista) i, com a últim recurs, demano ajuda explicant **què ja he provat**.
 
 > Tens dos o més 🔴? Repassa el material de la SA i demana ajuda: **no passa res**, per això hi ha temps abans de la SA9.

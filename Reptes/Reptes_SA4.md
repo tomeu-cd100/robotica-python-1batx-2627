@@ -26,7 +26,7 @@
 <details markdown="1">
 <summary>🧗 Si t'encalles (repte ⭐): pistes esglaonades</summary>
 
-**Nivell 1 — Pista conceptual.** `salutacio()` no fa cap moviment nou: només **decideix**, segons el paràmetre `estil`, quina de les funcions que ja tens (`saluda()` o `escombra()`) crida. És el mateix patró que `mostra_fletxa(costat)`: un `if`/`elif` que compara el paràmetre amb un text entre cometes.
+**Nivell 1 — Pista conceptual.** `salutacio()` no fa cap moviment nou: només **decideix**, segons el paràmetre `estil`, quina de les funcions que ja tens (`saluda()` o `escombra()`) crida. És el mateix patró que `girar(costat)` de `velocitat_pwm.py` (que ja coneixes): un `if`/`elif` que compara el paràmetre amb un text entre cometes.
 
 **Nivell 2 — Pseudocodi.**
 ```

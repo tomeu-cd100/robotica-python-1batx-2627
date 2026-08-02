@@ -60,6 +60,7 @@ El calendari de fabricació (cua de la talladora làser i de la impressora 3D pe
 | [`00_Quadern_tecnic.md`](00_Quadern_tecnic.md) | Alumnat | El diari de treball individual: què hi va, com es porta, com es lliura. |
 | [`00_Avaluacio_per_alumnat.md`](00_Avaluacio_per_alumnat.md) | Alumnat | D'on surt la nota, en llenguatge d'alumne. |
 | [`00_Mode_supervivencia.md`](00_Mode_supervivencia.md) | Docent (primer any) | Què fer si falla el maquinari; les rutines no negociables i l'ordre d'adopció de la resta. |
+| [`00_Targetes_rescat.md`](00_Targetes_rescat.md) | Alumnat | Targetes d'autoajuda quan t'encalles: 3 nivells de pista per SA, abans de cridar el docent. |
 | [`00_Vaig_faltar.md`](00_Vaig_faltar.md) | Alumnat | Itinerari en 5 passos per posar-se al dia sol després de faltar a una sessió. |
 | [`00_Repas_expres_MicroPython.md`](00_Repas_expres_MicroPython.md) | Alumnat | Targeta d'autoestudi «Python flash»: deures de repàs abans de la prova pràctica T3. |
 | [`00_Repas_expres_Radio.md`](00_Repas_expres_Radio.md) | Alumnat | Targeta d'autoestudi de ràdio: deures de repàs abans de la prova pràctica T3. |

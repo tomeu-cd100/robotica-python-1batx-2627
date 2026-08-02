@@ -86,4 +86,4 @@ ______________________________________________________________________
 
 ---
 
-*Plantilla del dossier tècnic de la SA9. Alineada amb **R3** (projecte i robot) i **R5** (quadern/actitud, via el registre del procés). Es lliura tancada a la Sessió 4, abans de la defensa oral. Llicència CC BY-SA 4.0.*
+*Plantilla del dossier tècnic de la SA9. Alineada amb **R4** (documentació, la rúbrica que avalua el dossier) i **R5** (actitud, via el registre del procés). Es lliura tancada a la Sessió 4, abans de la defensa oral. Llicència CC BY-SA 4.0.*

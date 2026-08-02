@@ -33,7 +33,7 @@
 | Component | Pin | Tipus | Notes |
 |---|---|---|---|
 | DHT11 (temperatura/humitat, Kit 3) | **P8** | Digital 1-Wire | Reaprofita el pin del PIR de la mascota; **no** P13, ocupat pel motor M1. |
-| Sensor de temperatura extern (Kit 2, si es vol comparar amb l'intern) | **P10** *(o el pin ADC vàlid que indiqui el docent)* | Analògic (0-1023), ADC | Mateix pin que a la pràctica `termometre.py` de la SA3; **només** per a qui amplia. |
+| Sensor de temperatura extern (Kit 2, si es vol comparar amb l'intern) | **P0** *(o el pin ADC vàlid que indiqui el docent)* | Analògic (0-1023), ADC | A la SA3 (`termometre.py`) anava a **P1**; al vehicle P1 és el LED indicador, per això aquí es proposa P0. Evita P3/P4/P10 si el programa té el display actiu (`termostat_histeresi` mostra imatges): comparteixen circuit amb el display. **Només** per a qui amplia. |
 
 > Pins ADC vàlids del Micro:shield: **P0, P1, P2, P3, P4, P10**. Si el LED indicador (P1) ja està ocupat al vehicle, no reutilitzis aquest pin per a cap entrada analògica del sensor extern.
 

@@ -28,7 +28,7 @@ treballar sense maquinari amb el **simulador de python.microbit.org** (l'eina
 principal, vegeu `Simulacions/Simulador_microbit.md`); Wokwi és només per a
 l'ampliació opcional amb Raspberry Pi Pico.
 
-**Tot el treball de l'alumnat és individual**: cap activitat en parelles ni en grup.
+**Tot el treball de l'alumnat és individual**: cap producte en parelles ni en grup. Les úniques excepcions, totes de bancs de proves o de lectura (mai de codi compartit): la **🤝 parella de lectura** (5', es llegeix el codi de l'altre en veu alta, no es toca — `Classes/00_General/00_Parella_de_lectura.md`) i l'**aparellament puntual de dues plaques** per provar la ràdio (SA5/SA8).
 
 ## 3. Com fer servir la web
 

@@ -40,19 +40,21 @@ mentre sempre:
     apaga el LED extern
 ```
 
-**Nivell 3 — Esquelet amb TODO.** El llindar i el bucle ja hi són; omple només l'encès/apagat del LED.
+**Nivell 3 — Esquelet amb TODO.** El llindar i el bucle ja hi són; escriu tu la decisió sencera (l'`if/else` i les dues accions).
 ```python
 # SA3 - Repte 1 (BASTIDA / esquelet per a l'alumnat)
 #
 # QUE JA ESTA FET (no ho toquis):
 #   - LLINDAR_FOSCOR i el while True: ja hi son.
 #
-# QUE HAS DE FER TU:
-#   - Encen/apaga el LED extern segons la lectura de llum.
+# QUE HAS DE FER TU (l'if/else sencer, dins del bucle):
+#   - Si la lectura es mes petita que el llindar (fosc), encen el LED.
+#   - Altrament, apaga'l.
 #
 # EINES QUE POTS USAR (nomes conceptes de la SA3):
 #   - pin0.read_analog()          -> 0-1023, sensor de llum extern
 #   - pin1.write_digital(1 o 0)   -> LED extern (P1) ences/apagat
+#   - if condicio: / else:
 
 from microbit import *
 
@@ -60,10 +62,7 @@ LLINDAR_FOSCOR = 300
 
 while True:
     llum = pin0.read_analog()
-    if llum < LLINDAR_FOSCOR:
-        pass  # TODO 1: pin1.write_digital(...)
-    else:
-        pass  # TODO 2: pin1.write_digital(...)
+    # TODO: escriu aqui l'if/else que encen o apaga el LED segons llum
     sleep(200)
 ```
 

@@ -23,6 +23,6 @@
 | Llegir i modificar codi MicroPython senzill | | | |
 
 ## 🆘 Si m'encallo
-Segueixo **DEPURA**: **D**escriu · **E**xamina · **P**rova una hipòtesi cada cop · **U**bica · **R**epara · **A**punta. Si segueixo encallat, demano ajuda explicant **què ja he provat**.
+Segueixo **DEPURA**: **D**escriu · **E**xamina · **P**rova una hipòtesi cada cop · **U**bica · **R**epara · **A**punta. Si segueixo encallat, agafo la **targeta de rescat** de la meva SA ([`00_Targetes_rescat.md`](../00_General/00_Targetes_rescat.md), 3 nivells de pista) i, com a últim recurs, demano ajuda explicant **què ja he provat**.
 
 > Tens dos o més 🔴? Repassa el material de la SA i demana ajuda: **no passa res**, per això hi ha temps.

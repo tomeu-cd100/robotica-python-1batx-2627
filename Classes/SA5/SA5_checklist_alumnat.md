@@ -24,6 +24,6 @@
 | Connectar la recepció d'un missatge a una funció de moviment | | | |
 
 ## 🆘 Si m'encallo
-Segueixo **DEPURA**: **D**escriu · **E**xamina · **P**rova una hipòtesi cada cop · **U**bica · **R**epara · **A**punta. Nou aquesta SA: si un missatge "no arriba", **comprovo cada extrem per separat** (l'emissor l'envia realment? el receptor rep alguna cosa, encara que no faci res amb ella?) abans de sospitar de tot el protocol. Si segueixo encallat, demano ajuda explicant **què ja he provat**.
+Segueixo **DEPURA**: **D**escriu · **E**xamina · **P**rova una hipòtesi cada cop · **U**bica · **R**epara · **A**punta. Nou aquesta SA: si un missatge "no arriba", **comprovo cada extrem per separat** (l'emissor l'envia realment? el receptor rep alguna cosa, encara que no faci res amb ella?) abans de sospitar de tot el protocol. Si segueixo encallat, agafo la **targeta de rescat** de la meva SA ([`00_Targetes_rescat.md`](../00_General/00_Targetes_rescat.md), 3 nivells de pista) i, com a últim recurs, demano ajuda explicant **què ja he provat**.
 
 > Tens dos o més 🔴? Repassa el material de la SA i demana ajuda: **no passa res**, per això hi ha temps.

@@ -28,6 +28,6 @@
 | Integrar un sensor amb histèresi (sense oscil·lació) | | | |
 
 ## 🆘 Si m'encallo
-Segueixo **DEPURA**: **D**escriu · **E**xamina · **P**rova una hipòtesi cada cop · **U**bica · **R**epara · **A**punta. Nou aquesta SA: si l'STOP "de vegades" no funciona, **comprovo on** dins del bucle es fa la comprovació del polsador (ha de ser el **primer** `if`, abans de mirar cap altra entrada). Si segueixo encallat, demano ajuda explicant **què ja he provat**.
+Segueixo **DEPURA**: **D**escriu · **E**xamina · **P**rova una hipòtesi cada cop · **U**bica · **R**epara · **A**punta. Nou aquesta SA: si l'STOP "de vegades" no funciona, **comprovo on** dins del bucle es fa la comprovació del polsador (ha de ser el **primer** `if`, abans de mirar cap altra entrada). Si segueixo encallat, agafo la **targeta de rescat** de la meva SA ([`00_Targetes_rescat.md`](../00_General/00_Targetes_rescat.md), 3 nivells de pista) i, com a últim recurs, demano ajuda explicant **què ja he provat**.
 
 > Tens dos o més 🔴? Repassa el material de la SA i demana ajuda: **no passa res**, per això hi ha temps abans de la prova pràctica T2.

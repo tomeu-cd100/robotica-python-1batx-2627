@@ -179,25 +179,28 @@ avancar(800)   # velocitat alta
 **L'explicació planera.** Dues o més micro:bit poden parlar-se sense fils amb el mòdul `radio`. Per fer-ho, calen sempre **tres passos**, en aquest ordre:
 
 1. `import radio` — dona accés a les eines de ràdio (com `from microbit import *` dona accés al display).
-2. `radio.config(group=10)` — fixa el **grup**: només les plaques amb el **mateix número** de grup es senten entre elles (així la teva ràdio no interfereix amb la del company del costat).
-3. `radio.on()` — **activa** la ràdio. Sense aquesta línia, la placa no envia ni rep res, encara que la resta del codi sigui correcte. Es crida **un sol cop, fora del bucle**, no a cada volta.
+2. `radio.on()` — **activa** la ràdio. Sense aquesta línia, la placa no envia ni rep res, encara que la resta del codi sigui correcte. Es crida **un sol cop, fora del bucle**, no a cada volta.
+3. `radio.config(group=10)` — fixa el **grup**: només les plaques amb el **mateix número** de grup es senten entre elles (així la teva ràdio no interfereix amb la del company del costat). *(És l'ordre que veuràs a tots els programes del curs; `config()` abans d'`on()` també funciona, però aquí el fixem per no barrejar estils.)*
 
 Per **enviar**, `radio.send('text')` (sempre text, mai un número sol: si vols enviar un número, cal convertir-lo amb `str()`, per exemple `radio.send('T:' + str(temperature()))`). Per **rebre**, `radio.receive()` retorna el darrer missatge arribat, o `None` si no n'ha arribat cap de nou: per això sempre es crida **dins** del `while True:`, a cada volta, i es compara amb `==` (com als condicionals de la secció A5) per decidir què fer-hi.
 
 **Exemple mínim executable:**
 
 ```python
-# Receptor per radio: si arriba exactament el missatge 'F', avanca
+# Receptor per radio: si arriba exactament el missatge 'F', mostra una fletxa
+# (a la SA5, en lloc de la fletxa cridaras avancar(400), la funcio de motors
+# de la SA4; aqui es mostra una imatge perque l'exemple es pugui provar
+# al simulador sense cap funcio externa)
 from microbit import *
 import radio
 
-radio.config(group=10)
 radio.on()   # una sola vegada, fora del bucle
+radio.config(group=10)
 
 while True:
     missatge = radio.receive()
     if missatge == 'F':
-        avancar(400)
+        display.show(Image.ARROW_N)
     sleep(20)
 ```
 

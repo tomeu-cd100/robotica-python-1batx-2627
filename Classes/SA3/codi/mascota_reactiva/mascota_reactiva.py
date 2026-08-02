@@ -3,8 +3,8 @@
 # (polsador) i sacsejada (accelerometre), amb cara (display) i so.
 # Cablatge EXACTE del Projecte T1 (00_Projecte_T1_Mascota.md):
 #   P0 servo (orelles/cua, NOMES muntat; es programa a la SA4, no aqui)
-#   P1 LED/RGB (indicador d'humor) · P2 brunzidor
-#   P8 PIR (digital) · P12 polsador (digital, pull-up + antirebot)
+#   P1 LED/RGB (indicador d'humor) / P2 brunzidor
+#   P8 PIR (digital) / P12 polsador (digital, pull-up + antirebot)
 #   Microfon: microphone.sound_level() intern (alternativa valida al
 #   sensor de so extern del Kit 3, que aniria al pin P4 analogic).
 # Veure SA3_esquemes_connexions.md i el dossier de la mascota.

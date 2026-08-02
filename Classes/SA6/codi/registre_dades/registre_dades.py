@@ -9,7 +9,7 @@
 # l'explorador de fitxers de l'ordinador, obre el fitxer MY_DATA.HTM que
 # apareix dins la unitat MICROBIT: es un full HTML amb una taula i un grafic
 # amb totes les files registrades (es pot obrir amb qualsevol navegador,
-# sense instal·lar res mes).
+# sense instal.lar res mes).
 # Maquinari: cap component nou, sensors interns (temperature(),
 # read_light_level()).
 # Simulador: python.microbit.org SIMULA el modul log (es pot descarregar el

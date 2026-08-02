@@ -107,7 +107,7 @@ while True:
 `return` **envia el resultat** a qui ha fet la crida (aquí, directament un booleà). Una funció amb `return` no mostra res per si sola: el valor es fa servir a la condició.
 </details>
 
-## R6 · `for` sobre una llista
+## R6 · `for` sobre una llista (SA5 — repàs: `mostra_historic()`)
 
 Tens `notes = [523, 587, 659]`. Escriu el bucle que fa sonar cada freqüència mig segon amb `music.pitch(freq, 500)`.
 
@@ -125,7 +125,7 @@ for freq in notes:
 El `for` recorre la llista **element a element**: a cada volta, `freq` val el següent valor. Res d'índexs a mà si no els necessites.
 </details>
 
-## R7 · `try/except` per no petar
+## R7 · `try/except` per no petar (SA7 — repàs: `mesura_distancia()`)
 
 Tens `text = "37"` (un número que arriba com a **text**). Escriu el bloc que el converteix a enter amb `int(text)` i, si la conversió falla (el text no és un número), mostra `Image.SAD` en lloc de deixar que el programa peti.
 
@@ -145,4 +145,4 @@ except ValueError:
 
 ---
 
-> Has fallat 2 o més reptes de la mateixa lletra (A1-A7)? Rellegeix aquella secció de [`SA0_guia_programacio.md`](../SA0/SA0_guia_programacio.md) i repeteix només aquells reptes demà. La part de **ràdio** té targeta pròpia: [`00_Repas_expres_Radio.md`](00_Repas_expres_Radio.md).
+> Has fallat 2 o més reptes del mateix tema? Per a R1-R5, rellegeix la secció (A1-A7) de [`SA0_guia_programacio.md`](../SA0/SA0_guia_programacio.md) indicada al títol; per a R6, torna a l'activitat nucli del `for` de la fitxa SA5; per a R7, a l'EXPLICACIO d'`evita_obstacles` (SA7). Repeteix només aquells reptes demà. La part de **ràdio** té targeta pròpia: [`00_Repas_expres_Radio.md`](00_Repas_expres_Radio.md).

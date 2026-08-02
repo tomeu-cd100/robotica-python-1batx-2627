@@ -2,6 +2,8 @@
 
 **Quan es fa:** Sessió 3 · **Fitxer:** `receptor_vehicle.py` · **Maquinari:** vehicle T2 muntat a la SA4 (motoreductors **M1**=P13/P14, **M2**=P15/P16, [esquemes](../../SA5_esquemes_connexions.md)); es prova aparellat puntualment amb la placa d'un company que porti [`comandament.py`](../comandament/EXPLICACIO.md)
 
+> ✋ **Aquesta pàgina mostra la SOLUCIÓ del producte «control remot bàsic».** Intenta escriure el receptor pel teu compte a l'Activitat 3 de la [fitxa](../../SA5_fitxa_alumnat.md) abans de mirar-la sencera: el patró (rebre → comprovar el prefix → actuar) ja el coneixes de `comandament.py` i de la SA3.
+
 > 🎯 **Producte de la SA5.** Aquest programa és el que s'avalua amb **R1** (codi) i **R4** (documentació): és la **teva** implementació del receptor, encara que la proves amb l'emissor d'un company.
 
 ## 🎯 Per què fem aquesta pràctica

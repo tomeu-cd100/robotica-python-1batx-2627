@@ -42,9 +42,10 @@ mostra una imatge fixa que et representi (show)
 # QUE JA ESTA FET (no ho toquis):
 #   - L'import de microbit ja hi es.
 #
-# QUE HAS DE FER TU:
-#   - Substitueix "NOM" pel teu nom (entre cometes).
-#   - Tria una Image predefinida que et representi.
+# QUE HAS DE FER TU (cada TODO es una linia sencera que escrius tu):
+#   - Mostra el teu nom desplacant-se.
+#   - Fes mitja pausa de mig segon.
+#   - Mostra una Image predefinida que et representi.
 #
 # EINES QUE POTS USAR (nomes conceptes de la SA1):
 #   - display.scroll(text)    -> mostra text desplacant-se
@@ -53,16 +54,16 @@ mostra una imatge fixa que et representi (show)
 
 from microbit import *
 
-display.scroll("NOM")     # TODO 1: posa el teu nom
-sleep(500)
-display.show(Image.___)   # TODO 2: tria una imatge que et representi
+# TODO 1: mostra el teu nom (scroll)
+# TODO 2: pausa de mig segon
+# TODO 3: mostra la imatge triada (show)
 ```
 
 </details>
 
 **Ampliacions graduades.**
 1. *(bàsica)* Afegeix una **segona imatge** (per exemple, alterna dues cares o símbols amb un `sleep()` entre totes dues).
-2. *(notable)* Repeteix el cicle nom→imatge **tres vegades seguides** amb un `while` (sense copiar i enganxar el mateix bloc tres cops).
+2. *(notable)* Repeteix el cicle nom→imatge **tres vegades seguides** sense copiar i enganxar el mateix bloc tres cops. *(Pista: `for _ in range(3):` amb el bloc indentat a dins — el `for` amb `range` es treballa a fons a la SA2; aquí és un tastet per a qui va sobrat.)*
 3. *(⭐⭐⭐)* Crea una **imatge pròpia** amb `Image("90009:09090:00900:09090:90009")` (o el patró que tu dissenyis) en lloc d'usar-ne una de predefinida.
 
     **Fites** (valida-les en ordre):

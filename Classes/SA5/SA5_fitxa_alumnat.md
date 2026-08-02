@@ -43,7 +43,7 @@ Activa la ràdio amb el **grup** que t'assigni el docent i prova [`radio_missatg
 
 ### 2 · Un protocol propi de comandes (Sessió 2)
 
-Dissenya **4-5 comandes pròpies** (per exemple `F`, `B`, `L`, `R`, `S`) amb un prefix (per exemple `"CMD:"`) i programa [`comandament.py`](codi/comandament/comandament.py). Connecta la recepció amb les funcions `avancar()`/`girar()`/`aturar()` de la SA4.
+Dissenya **4-5 comandes pròpies** (per exemple `F`, `B`, `L`, `R`, `S`) amb un prefix (per exemple `"CMD:"`) i programa [`comandament.py`](codi/comandament/comandament.py), l'**emissor**: cada botó/gest envia la seva comanda. (La connexió de la **recepció** amb les funcions de moviment és feina de la Sessió 3, amb `receptor_vehicle.py`.)
 
 **La meva taula de comandes:**
 
@@ -58,9 +58,9 @@ Dissenya **4-5 comandes pròpies** (per exemple `F`, `B`, `L`, `R`, `S`) amb un 
 
 ### 3 · Repte «control remot bàsic» (Sessió 3 — producte)
 
-Parteix de [`receptor_vehicle.py`](codi/receptor_vehicle/receptor_vehicle.py) i tanca el teu vehicle controlat per ràdio amb el **teu** protocol.
+Escriu el **receptor**: connecta la recepció de les teves comandes amb les funcions `avancar()`/`girar()`/`aturar()` de la SA4 i tanca el teu vehicle controlat per ràdio amb el **teu** protocol. Intenta-ho primer pel teu compte (el patró rebre → comprovar prefix → actuar ja el tens de `comandament.py`); [`receptor_vehicle.py`](codi/receptor_vehicle/receptor_vehicle.py) és la solució de referència.
 
-**Mini-defensa (breu, davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)):** si et toca, explica **quin protocol** has dissenyat i **una decisió** (per exemple, per què has triat aquestes comandes o aquesta manera de guardar l'historial). Si no et toca, escriu-ho al quadern.
+**Mini-defensa (breu, davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa2-sa8)):** si et toca, explica **quin protocol** has dissenyat i **una decisió** (per exemple, per què has triat aquestes comandes o aquesta manera de guardar l'historial). Si no et toca, escriu-ho al quadern.
 
 ### 4 · Repte ⭐ (nucli obligatori) (Sessió 3, en acabar el producte)
 

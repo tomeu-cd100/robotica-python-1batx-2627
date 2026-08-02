@@ -76,7 +76,7 @@ def aturar():
     motor_dre.write_analog(0)
 ```
 
-## SA5 · micro:bit i MicroPython (ràdio)
+## SA5 · Ràdio: robots que parlen
 
 **Nivell 1.** Les **dues** plaques tenen `radio.on()` i el **mateix `group`**? Sense el mateix grup, no es «senten» encara que estiguin engegades.
 
@@ -126,7 +126,7 @@ def girar(costat):
         motor_dre.write_analog(0)
 ```
 
-## SA8 · IoT i IA (autonomia i telemetria)
+## SA8 · Autonomia i telemetria
 
 **Nivell 1.** El problema és que **no arriba** la dada (ràdio) o que arriba **però és incorrecta** (sensor/format)? Separa-ho: imprimeix la dada abans d'enviar-la i just en rebre-la.
 
@@ -147,4 +147,4 @@ if msg is not None:
 
 **Nivell 2.** Fes una llista de les funcions/comportaments que ja tens provats i funcionant per separat; integra'ls d'un en un, provant després de cada integració.
 
-**Nivell 3.** No hi ha fragment: a SA9 el rescat és **metodològic**. Revisa `00_Quadern_tecnic.md` §«🐞 Error del dia» i la rutina DEPURA de `00_Mode_supervivencia.md`.
+**Nivell 3.** No hi ha fragment: a SA9 el rescat és **metodològic**. Revisa la secció «Proves i errors (DEPURA)» del teu [`00_Quadern_tecnic.md`](00_Quadern_tecnic.md) i rellegeix els teus apunts DEPURA dels trimestres anteriors: els errors d'integració del projecte gairebé sempre són variants d'errors que ja has resolt.
