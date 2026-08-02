@@ -57,25 +57,17 @@ Recursos/rover/
 # conte credencials i pesa >100 MB. Es material de treball de la maquina.
 # S'ignora tot el contingut EXCEPTE alguns scripts reutilitzables (sense
 # secrets: llegeixen token.json en temps d'execucio, no l'incrusten).
+# En aquest repositori NO hi ha credencials (viuen a la carpeta del curs
+# germa i s'hi apunta amb CLASSROOM_SECRETS_DIR, vegeu-ne el README).
 Material Classroom/*
-# Llibreria compartida + definicions (sense secrets): els scripts de sota en
+# Llibreria compartida + configuracio (sense secrets): els scripts de sota en
 # depenen via import; sense elles el codi publicat no s'executa en un clone.
-!Material Classroom/_form_sa_lib.js
-!Material Classroom/sa_definicions.js
+!Material Classroom/README.md
+!Material Classroom/package.json
 !Material Classroom/config.js
+!Material Classroom/_form_sa_lib.js
 !Material Classroom/estat_classroom.js
-!Material Classroom/crear_materials_enllac.js
-!Material Classroom/crear_questionaris_conceptes_forms.js
-!Material Classroom/adjuntar_questionaris_classroom.js
-!Material Classroom/actualitzar_fitxes_pdf.js
-!Material Classroom/crear_robots_classroom.js
-!Material Classroom/crear_rubriques_importables_maker.js
-!Material Classroom/crear_questionaris_repas_maker.js
-!Material Classroom/actualitzar_form_gruix_sa5_maker.mjs
-!Material Classroom/moure_carpetes_maker_a_treball.mjs
-!Material Classroom/preparar_drive_maker_inici_curs.mjs
-!Material Classroom/backup_classroom.js
-!Material Classroom/restaurar_classroom.js
+!Material Classroom/crear_estructura_curs.js
 # Carpeta de backups: es versiona l'estructura (.gitkeep) però NO els JSON
 # generats (contingut del curs, es decideix a mà quan versionar-ne un).
 !Material Classroom/backups/

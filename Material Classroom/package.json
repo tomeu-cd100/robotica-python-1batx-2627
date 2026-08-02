@@ -1,0 +1,10 @@
+{
+  "name": "automatitzacio-classroom-robotica-python",
+  "version": "1.0.0",
+  "description": "Automatitzacio per crear Google Forms i penjar-los al Google Classroom del curs Robotica amb Python (1r Batx)",
+  "type": "module",
+  "dependencies": {
+    "@google-cloud/local-auth": "^3.0.1",
+    "googleapis": "^144.0.0"
+  }
+}
