@@ -237,6 +237,14 @@ export const MAPA = [
   { tasca: '📓 Quadern tècnic — T1', rubrica: 'F', detall: 'Quadern sencer del trimestre (R4).' },
   { tasca: '📓 Quadern tècnic — T2', rubrica: 'F', detall: 'Quadern sencer del trimestre (R4).' },
   { tasca: '📓 Quadern tècnic — T3', rubrica: 'F', detall: 'Quadern sencer del trimestre (R4).' },
+  { tasca: '📝 Prova pràctica T1 / T2 / T3', rubrica: null,
+    detall: 'No porta rúbrica de nivells: es corregeix amb la **graella d\'ítems** del seu '
+      + 'enunciat (10 punts), que ja diu quants punts val cada ítem i quin criteri avalua '
+      + '(T1 → R1+R2+R4 · T2 → R1+R3+R4 · T3 → R1+R3). És més precisa que una rúbrica per a '
+      + 'una prova amb ítems tancats.' },
+  { tasca: '🎯 Millor mini-check del trimestre', rubrica: null,
+    detall: 'Sense rúbrica: la nota surt de l\'escala de semàfors del mini-check '
+      + '(🟢 9-10 · 🟡 6-8 · 🟠 4-5 · 🔴 1-3), aplicada al MILLOR mini-check del trimestre.' },
   { tasca: 'SAn · Qüestionari de conceptes', rubrica: null,
     detall: 'Sense rúbrica: és repàs formatiu i no qualifica mai. El Form es corregeix sol.' },
 ];

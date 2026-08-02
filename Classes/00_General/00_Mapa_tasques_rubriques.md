@@ -24,6 +24,8 @@ Google Classroom, en canvi, només admet **una rúbrica per tasca**. Per això l
 | 📓 Quadern tècnic — T1 | **F** · Quadern tècnic del trimestre (R4) | R4 | Quadern sencer del trimestre (R4). |
 | 📓 Quadern tècnic — T2 | **F** · Quadern tècnic del trimestre (R4) | R4 | Quadern sencer del trimestre (R4). |
 | 📓 Quadern tècnic — T3 | **F** · Quadern tècnic del trimestre (R4) | R4 | Quadern sencer del trimestre (R4). |
+| 📝 Prova pràctica T1 / T2 / T3 | — | — | No porta rúbrica de nivells: es corregeix amb la **graella d'ítems** del seu enunciat (10 punts), que ja diu quants punts val cada ítem i quin criteri avalua (T1 → R1+R2+R4 · T2 → R1+R3+R4 · T3 → R1+R3). És més precisa que una rúbrica per a una prova amb ítems tancats. |
+| 🎯 Millor mini-check del trimestre | — | — | Sense rúbrica: la nota surt de l'escala de semàfors del mini-check (🟢 9-10 · 🟡 6-8 · 🟠 4-5 · 🔴 1-3), aplicada al MILLOR mini-check del trimestre. |
 | SAn · Qüestionari de conceptes | — | — | Sense rúbrica: és repàs formatiu i no qualifica mai. El Form es corregeix sol. |
 
 > Els **qüestionaris de conceptes** no tenen rúbrica perquè **no qualifiquen mai**: són repàs formatiu i el formulari es corregeix sol.

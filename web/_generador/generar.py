@@ -84,6 +84,9 @@ DOC_PUBLICS = {
     "Quadern_tecnic_T1.pdf",
     "Quadern_tecnic_T2.pdf",
     "Quadern_tecnic_T3.pdf",
+    # Full que cada alumne/a signa a la Sessió 2 de la SA1: ha de ser
+    # imprimible directament des del web (i des del Classroom).
+    "SA1_normes_seguretat.pdf",
 }
 
 # Bases de GitHub per enllaçar/visualitzar documents sense copiar-los al web.

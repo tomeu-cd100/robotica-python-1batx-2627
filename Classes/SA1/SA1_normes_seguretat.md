@@ -2,6 +2,8 @@
 
 > 🧑‍🎓 **Quan toca?** A la **Sessió 2**, dins l'**Activitat 3 de la fitxa**: es llegeixen en veu alta, es comenten amb exemples i **signes** el compromís del final — que val per a **tot el curs**. Les 2 normes que triïs es traslladen a la fitxa. El full signat es guarda a la carpeta del grup.
 
+> 🖨️ **Per imprimir i signar:** [full de normes en PDF](pdf/SA1_normes_seguretat.pdf) (amb l'espai de signatura del compromís).
+
 > Aquestes normes estan **adaptades al maquinari real del curs**: la micro:bit i el Micro:shield funcionen a **molt baixa tensió** (USB o piles, mai 230 V), així que el risc elèctric és mínim si es treballa amb cura. L'únic element del curs amb un risc real és el **làser** de la talladora que s'usarà més endavant per fabricar les peces del fil conductor (mascota/vehicle/rover): **el làser el fa servir sempre i només el professorat**, mai l'alumnat.
 
 ---
