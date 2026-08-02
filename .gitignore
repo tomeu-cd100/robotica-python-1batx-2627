@@ -73,6 +73,7 @@ Material Classroom/*
 !Material Classroom/adjuntar_questionaris_classroom.js
 !Material Classroom/crear_tasques_lliurament.js
 !Material Classroom/crear_rubriques_lliurament.js
+!Material Classroom/crear_quadern_classroom.js
 # Carpeta de backups: es versiona l'estructura (.gitkeep) però NO els JSON
 # generats (contingut del curs, es decideix a mà quan versionar-ne un).
 !Material Classroom/backups/

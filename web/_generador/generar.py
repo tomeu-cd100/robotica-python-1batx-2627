@@ -75,6 +75,17 @@ IMG_EXT = {".png", ".jpg", ".jpeg", ".svg", ".webp", ".gif"}
 DOC_EXT = {".pdf", ".xlsx", ".xls", ".pptx", ".ppt", ".docx", ".doc",
            ".csv", ".odt", ".ods", ".zip"}
 
+# Documents versionats que SÍ es copien al web en lloc d'enllaçar-se a GitHub
+# (un alumne no hauria d'acabar a la interfície de GitHub per baixar una
+# plantilla). És una ALLOWLIST per nom de fitxer, deliberadament curta: el web
+# és públic, i material del docent com `00_Quadern_sessions_docent.pdf` no s'hi
+# ha de copiar mai encara que hi hagi un enllaç que hi apunti.
+DOC_PUBLICS = {
+    "Quadern_tecnic_T1.pdf",
+    "Quadern_tecnic_T2.pdf",
+    "Quadern_tecnic_T3.pdf",
+}
+
 # Bases de GitHub per enllaçar/visualitzar documents sense copiar-los al web.
 # ⚠️ El valor per defecte és una SUPOSICIÓ (encara no hi ha repositori creat):
 # el docent l'ha de substituir pel repositori real abans de publicar, o bé
@@ -595,6 +606,9 @@ def rewrite_links(html_body: str, src_file: Path, out_rel: str,
                 return BLOB_BASE + urllib.parse.quote(str(relpath).replace("\\", "/")) + frag
             except ValueError:
                 pass
+        # Document de l'allowlist -> es copia al web i s'enllaça relativament
+        if target.name in DOC_PUBLICS and target.exists():
+            return prefix + "pdf/adjunts/" + copy_doc_public(target)
         # Document (pdf, full de càlcul…) -> enllaç a GitHub
         if target.suffix.lower() in DOC_EXT and target.exists():
             try:
@@ -635,6 +649,20 @@ def rewrite_links(html_body: str, src_file: Path, out_rel: str,
         return segment
 
     return apply_outside_code(html_body, reescriu)
+
+
+def copy_doc_public(src: Path) -> str:
+    """Copia un document de `DOC_PUBLICS` a `web/pdf/adjunts/` i retorna'n el nom.
+
+    Es fa servir per a les plantilles que l'alumnat ha de poder baixar del web
+    (no de GitHub). El nom es manté tal qual: és el que veurà a la descàrrega.
+    """
+    dest_dir = WEB / "pdf" / "adjunts"
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    dest = dest_dir / src.name
+    if not dest.exists() or dest.stat().st_mtime < src.stat().st_mtime:
+        shutil.copy2(src, dest)
+    return urllib.parse.quote(src.name)
 
 
 def copy_image(src: Path, copied: dict) -> str:

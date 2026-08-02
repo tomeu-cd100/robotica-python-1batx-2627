@@ -16,7 +16,10 @@
 4. **Els errors es documenten** a la secció «Proves i errors (DEPURA)» de la plantilla: explica què fallava, com el vas trobar (rutina **DEPURA**) i com el vas resoldre. Amagar errors no puja la nota; documentar-los, sí.
 5. **Si fas servir IA, ho declares** al document del dia i saps explicar cada línia (vegeu el semàfor d'usos a [`00_Avaluacio_per_alumnat.md`](00_Avaluacio_per_alumnat.md) §7). Declarar-ho no baixa la nota; amagar-ho, sí.
 
-**Com es lliura:** en acabar cada SA, puja el document (o l'enllaç, si treballes al núvol) a la tasca «📓 Quadern tècnic — SAx» del Classroom.
+**Com es lliura (dues fites, no una per setmana):**
+
+1. **En acabar cada SA**, l'entrada d'aquella unitat va **dins de la tasca de lliurament de la SA** al Classroom («SAn · Lliurament del producte…»), al costat del codi: així el docent veu el producte i el raonament junts.
+2. **En acabar cada trimestre**, puja el quadern **sencer** (document o enllaç, si treballes al núvol) a la tasca «📓 Quadern tècnic — T1 / T2 / T3». Aquesta és la que posa la nota de la dimensió *Quadern tècnic i pràctiques* del trimestre.
 
 ## Què s'avalua (R4)
 

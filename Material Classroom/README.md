@@ -34,13 +34,14 @@ navegador, i el token es regenera **a la carpeta dels secrets**, no aquí.
 | `adjuntar_questionaris_classroom.js` | Penja aquells Forms com a tasca **sense nota** (formativa) al tema de la seva SA. |
 | `crear_tasques_lliurament.js` | Tasca de lliurament del producte per SA (10 punts, categoria T1/T2/T3, enllaços a fitxa/checklist/reptes). |
 | `crear_rubriques_lliurament.js` | Rúbrica de producte (5 criteris × 2 punts, derivada de `07_Rubriques.md`): escriu el CSV versionat a `Avaluació/rubriques/` i, com que aquest compte no té llicència per a l'API de rúbriques, puja el full importable a Drive. |
+| `crear_quadern_classroom.js` | Material amb les plantilles del quadern tècnic (les del web, no de GitHub) i una tasca de lliurament del quadern sencer per trimestre (10 punts, categoria T1/T2/T3). |
 
 ## Estat del curs (02/08/2026)
 
-Creat: 11 temes · 14 materials-enllaç · 9 qüestionaris (Forms autocorrectius +
-tasca sense nota) · 9 tasques de lliurament (10 punts, categoria de trimestre) ·
-full de rúbrica importable a Drive. **Tot en esborrany**, pendent que el docent
-ho publiqui i hi posi dates.
+Creat: 11 temes · 15 materials-enllaç · 9 qüestionaris (Forms autocorrectius +
+tasca sense nota) · 9 tasques de lliurament de producte + 3 de quadern tècnic
+(10 punts, categoria de trimestre) · full de rúbrica importable a Drive.
+**Tot en esborrany**, pendent que el docent ho publiqui i hi posi dates.
 
 Pendent manual: a cada tasca de lliurament, *Rúbrica → Importar des de Sheets* →
 triar «Rúbrica de producte de SA (importable a Classroom)». L'API de rúbriques

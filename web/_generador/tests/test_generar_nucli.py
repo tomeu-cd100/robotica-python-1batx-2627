@@ -108,6 +108,40 @@ def test_ancora_local_intacta(fitxes):
     assert 'href="#material"' in out
 
 
+# --- rewrite_links: documents (allowlist DOC_PUBLICS vs enllaç a GitHub) -------
+def test_pdf_de_lallowlist_es_copia_al_web(fitxes, monkeypatch, tmp_path):
+    """Les plantilles de DOC_PUBLICS es baixen del web, no de GitHub."""
+    fitxa, _ = fitxes
+    pdf = fitxa.parent / "Quadern_tecnic_T1.pdf"
+    pdf.write_bytes(b"%PDF-1.4 fals")
+    monkeypatch.setattr(generar, "WEB", tmp_path / "web")
+
+    out = _rewrite('<a href="Quadern_tecnic_T1.pdf">plantilla</a>', fitxes)
+
+    assert 'href="../../pdf/adjunts/Quadern_tecnic_T1.pdf"' in out
+    assert BLOB_BASE not in out
+    assert (tmp_path / "web" / "pdf" / "adjunts" / "Quadern_tecnic_T1.pdf").exists()
+
+
+def test_pdf_del_docent_no_es_copia_mai(fitxes, monkeypatch, tmp_path):
+    """Un PDF fora de l'allowlist no s'ha de copiar al web públic encara que
+    hi hagi un enllaç que hi apunti: el quadern de sessions és del docent."""
+    fitxa, _ = fitxes
+    pdf = fitxa.parent / "00_Quadern_sessions_docent.pdf"
+    pdf.write_bytes(b"%PDF-1.4 fals")
+    monkeypatch.setattr(generar, "WEB", tmp_path / "web")
+
+    _rewrite('<a href="00_Quadern_sessions_docent.pdf">quadern</a>', fitxes)
+
+    assert not (tmp_path / "web" / "pdf" / "adjunts" /
+                "00_Quadern_sessions_docent.pdf").exists()
+
+
+def test_allowlist_nomes_conte_material_dalumnat():
+    """Barana: si algú hi afegeix un fitxer amb «docent» al nom, salta."""
+    assert all("docent" not in nom.lower() for nom in generar.DOC_PUBLICS)
+
+
 # --- rewrite_links: mai dins de <pre>/<code> (integració amb apply_outside_code)
 def test_no_toca_res_dins_de_pre_ni_code(fitxes):
     body = ('<p><a href="SA1_guia_docent.md">fora</a></p>'
