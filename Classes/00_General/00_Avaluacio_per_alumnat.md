@@ -86,7 +86,16 @@ Regla d'or: **la IA t'ha d'ajudar a aprendre, no a saltar-te l'aprenentatge**.
 - **Declarar-ne l'ús al quadern no et baixa la nota.** Amagar-lo, o no saber explicar el codi que has lliurat, **sí**.
 - El docent pot assenyalar **qualsevol línia** i demanar-te "què fa això i per què?". Si no ho saps explicar, no compta com a teu.
 - Abans de preguntar a una IA: **DEPURA primer**. Protegeix el teu múscul de resoldre problemes — i és imprescindible als mini-checks, on treballes **sense IA i sense apunts**.
-- Semàfor complet d'usos permesos: [`00_IA_a_la_materia.md`](00_IA_a_la_materia.md) §5.
+- Si l'uses, **declara-ho al quadern tècnic** amb una línia com aquesta: *"He fet servir [eina] per: ______. Li he demanat: '______'. M'ha donat: ______. Què he canviat/entès: ______."*
+
+**Semàfor d'usos** (això és tot el que necessites saber):
+
+| 🟢 SÍ (ben fet) | 🟡 AMB CURA | 🔴 NO (deshonest) |
+|---|---|---|
+| Demanar que **expliqui** un missatge d'error. | Demanar que **suggereixi** com estructurar el codi (després el reescric jo). | Enganxar l'enunciat i lliurar la resposta **sense entendre-la**. |
+| Demanar **exemples** d'una funció (`map()`, `radio.send()`). | Generar un **esborrany** que jo **reviso, provo i modifico**. | Fer-li **tota la pràctica/quadern** i copiar-ho. |
+| Demanar que em **faci preguntes** per repassar. | Traduir/millorar la **redacció** d'una reflexió meva. | Presentar com a **propi** un text/codi que no puc explicar. |
+| Demanar **idees** per a un repte i triar-ne jo. | | Usar-la en una **prova/mini-check** on no està permès (mai). |
 
 ## 8 · Els teus drets (i la teva part)
 

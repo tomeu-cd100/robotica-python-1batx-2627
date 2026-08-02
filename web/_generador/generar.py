@@ -221,6 +221,7 @@ DOCENT_NAME_HINTS = ("_guia_docent", "_checklist_docent", "_solucions")
 # 00-general: material transversal visible a l'alumnat (la resta, docent)
 GENERAL_ALUMNAT = {
     "00_Targetes_rescat.md",
+    "00_Entorns_de_treball.md",
     "00_Glossari_tecnic.md",
     "00_Avaluacio_per_alumnat.md",
     "00_Quadern_tecnic.md",

@@ -10,11 +10,11 @@
 
 ## Com el porto (5 regles)
 
-1. **Digital, individual:** un **document propi** (Markdown o document de text) amb una entrada per SA; el docent te'n dona la plantilla al Classroom. Els esquemes i diagrames de flux es poden fer a mà i **fotografiar-se** per enganxar-los al document, o dibuixar-se directament amb una eina digital.
+1. **Digital, individual:** un **document propi** (Markdown o document de text) amb una entrada per SA; la plantilla és aquí mateix, una per trimestre ([T1](pdf/Quadern_tecnic_T1.pdf) · [T2](pdf/Quadern_tecnic_T2.pdf) · [T3](pdf/Quadern_tecnic_T3.pdf)), i el docent també la penja al Classroom. Els esquemes i diagrames de flux es poden fer a mà i **fotografiar-se** per enganxar-los al document, o dibuixar-se directament amb una eina digital.
 2. **Escric a cada sessió, no tot al final.** Dedica-hi 2-3 minuts després de cada part (modelatge, repte, tancament). Deixar-ho per al final és el pitjor error.
 3. **El pseudocodi o el diagrama de flux, abans del codi** (el pas *Dissenyar* del mètode de projecte, `04_Metodologia.md` §4.2 bis): paraules pròpies, una acció per línia, o un esquema amb rombes i rectangles.
-4. **Els errors es documenten** a la secció «🐞 Error del dia»: explica què fallava, com el vas trobar (rutina **DEPURA**) i com el vas resoldre. Amagar errors no puja la nota; documentar-los, sí.
-5. **Si fas servir IA, ho declares** al document del dia i saps explicar cada línia (vegeu [`00_IA_a_la_materia.md`](00_IA_a_la_materia.md) §5). Declarar-ho no baixa la nota; amagar-ho, sí.
+4. **Els errors es documenten** a la secció «Proves i errors (DEPURA)» de la plantilla: explica què fallava, com el vas trobar (rutina **DEPURA**) i com el vas resoldre. Amagar errors no puja la nota; documentar-los, sí.
+5. **Si fas servir IA, ho declares** al document del dia i saps explicar cada línia (vegeu el semàfor d'usos a [`00_Avaluacio_per_alumnat.md`](00_Avaluacio_per_alumnat.md) §7). Declarar-ho no baixa la nota; amagar-ho, sí.
 
 **Com es lliura:** en acabar cada SA, puja el document (o l'enllaç, si treballes al núvol) a la tasca «📓 Quadern tècnic — SAx» del Classroom.
 

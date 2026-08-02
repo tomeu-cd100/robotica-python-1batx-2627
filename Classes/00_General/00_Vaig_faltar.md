@@ -4,7 +4,7 @@
 
 ## Abans de començar: quina sessió he de recuperar?
 
-Mira el teu horari o pregunta a un company **quina SA i quina sessió** vas faltar (per exemple «SA4 · Sessió 2»). Si no ho tens clar, el **[`00_Quadern_sessions_docent.pdf`](pdf/00_Quadern_sessions_docent.pdf)** (demana'l al docent, o consulta'l a classe) té una pàgina per sessió amb tot el que s'hi va fer: és la manera més ràpida de veure d'un cop d'ull què et falta.
+Mira el teu horari o pregunta a un company **quina SA i quina sessió** vas faltar (per exemple «SA4 · Sessió 2»). La manera més ràpida de veure què s'hi va fer és obrir la **fitxa de la SA** (`Classes/SAn/SAn_fitxa_alumnat.md`): té un apartat per sessió amb els objectius i l'activitat. Si ets a classe, també pots demanar al docent el seu quadern de sessions (una pàgina per sessió amb tot el que s'hi va fer).
 
 ## Els 5 passos
 
@@ -16,13 +16,13 @@ Obre la **fitxa base de la SA** (`Classes/SAn/SAn_fitxa_alumnat.md`) i busca l'a
 
 Cada programa de `Classes/SAn/codi/<nom>/` porta un fitxer **`EXPLICACIO.md`** al seu costat: explica què fa el codi línia a línia, en llenguatge d'alumne. Llegeix-lo **abans** d'obrir el `.py` — és l'equivalent escrit del modelatge (PRIMM) que vas faltar, i és exactament la mateixa font que fan servir els mini-checks per al reforç 🔴 (`SA0/SA0_guia_programacio.md`).
 
-### 3 · Fes la kata pendent (si la sessió en tenia)
+### 3 · Repassa el concepte que tocava aquell dia
 
-Consulta la taula «Mapa sessió → kata» de [`00_Banc_activacio_repas.md`](00_Banc_activacio_repas.md#mapa-sessio-kata): si la teva sessió hi surt amb una kata assignada, fes-la sol, cronometrada (8-10'), abans de continuar. És repàs espaiat: no qualifica, però et diu si el concepte de fa 1-2 setmanes el tens prou fresc.
+La kata d'activació del dia és material del docent, però pots fer el mateix repàs pel teu compte: obre la secció corresponent de la **guia de programació** ([`SA0_guia_programacio.md`](../SA0/SA0_guia_programacio.md), seccions A1-A9 per concepte) i **escriu de memòria** l'exemple mínim d'aquella secció, cronometrat (8-10'). Si ets a final de curs, les targetes de repàs exprés ([`00_Repas_expres_MicroPython.md`](00_Repas_expres_MicroPython.md) i [`00_Repas_expres_Radio.md`](00_Repas_expres_Radio.md)) fan exactament aquesta funció, amb solucions per autocorregir-te.
 
-### 4 · Fes el mini-check pendent (si la sessió en tenia)
+### 4 · Demana el mini-check pendent (si la sessió en tenia)
 
-Consulta [`00_Mini_checks_individuals.md`](00_Mini_checks_individuals.md): si la teva SA té el mini-check situat a la sessió que vas faltar, fes-lo tu mateix, **sense apunts ni IA**, 10' clavats, i demana al docent que te'l corregeixi amb el semàfor a la sessió següent. No puntua el dia que el fas (com a tothom), però és el teu radar personal.
+Cada SA té un mini-check de 10' en una de les seves sessions. Si vas faltar el dia que tocava, **demana al docent** de fer-lo a l'inici de la sessió següent (és l'única part d'aquest itinerari que no pots fer sol: l'enunciat el projecta el docent). Fes-lo com tothom, **sense apunts ni IA**: no puntua el dia que el fas, però és el teu radar personal.
 
 ### 5 · Escriu l'entrada del quadern tècnic
 
