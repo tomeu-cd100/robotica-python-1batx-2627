@@ -45,8 +45,8 @@ variables · `while`/`if`/`elif` · `for` amb `range` · condicionals amb sensor
 | S5 | SA2 · S2 | [K18](#k18--s5--ifwhile--completar-buits) | if/while | Completar buits |
 | S6 | SA2 · S3 | [K02](#k02--s6--variables--parsons) | variables | Parsons |
 | S7 | SA2 · S4 | [K03](#k03--s7--for-range--parsons) | for-range | Parsons |
-| S8 | SA3 · S1 | [K04](#k04--s8--ifwhile--escriure-de-zero) | if/while | Escriure de zero |
-| S9 | SA3 · S2 | [K19](#k19--s9--variables--completar-buits) | variables | Completar buits |
+| S8 | SA3 · S1 | [K19](#k19--s8--variables--completar-buits) | variables | Completar buits |
+| S9 | SA3 · S2 | [K04](#k04--s9--ifwhile--escriure-de-zero) | if/while | Escriure de zero |
 | S10 | SA3 · S3 | [K05](#k05--s10--condicionals-amb-sensorsllindar--parsons) | condicionals amb sensors/llindar | Parsons |
 | S11 | SA3 · S4 | — | *(prova pràctica T1: repàs lliure)* | — |
 | S12 | SA4 · S1 | [K06](#k06--s12--ifwhile--escriure-de-zero) | if/while | Escriure de zero |
@@ -54,7 +54,7 @@ variables · `while`/`if`/`elif` · `for` amb `range` · condicionals amb sensor
 | S14 | SA4 · S3 | [K07](#k07--s14--funcionsparametres--parsons) | funcions/paràmetres | Parsons |
 | S15 | SA4 · S4 | — | *(fabricació del vehicle: sense fase d'Activació a la guia)* | — |
 | S16 | SA5 · S1 | [K08](#k08--s16--return--parsons) | return | Parsons |
-| S17 | SA5 · S2 | [K21](#k21--s17--funcionsparametres--completar-buits) | funcions/paràmetres | Completar buits |
+| S17 | SA5 · S2 | [K21](#k21--s17--funcionsparametres--escriure-de-zero) | funcions/paràmetres | Escriure de zero |
 | S18 | SA5 · S3 | [K09](#k09--s18--global--parsons) | global | Parsons |
 | S19 | SA6 · S1 | [K10](#k10--s19--radio--parsons) | ràdio | Parsons |
 | S20 | SA6 · S2 | — | *(mini-check SA6, substitueix l'activació)* | — |
@@ -93,7 +93,11 @@ variables · `while`/`if`/`elif` · `for` amb `range` · condicionals amb sensor
 > display.show(Image.ASLEEP)
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 from microbit import *
 
@@ -104,6 +108,9 @@ while True:
         display.show(Image.ASLEEP)
     sleep(100)
 ```
+
+**Què comentar:** L'error típic és col·locar el `sleep(100)` abans del `while` (el bucle es queda sense pausa) o desalinear l'`if`/`else`. Punt clau: tot el que ha de passar «per sempre» viu indentat dins del `while True:`.
+</details>
 
 **Correcció ràpida (30''):** `while True:` amb dos punts i tot el cos indentat sota seu · `if`/`else` alineats entre ells i indentats un nivell més · `sleep(100)` dins del bucle (no abans de `while`).
 
@@ -126,7 +133,11 @@ while True:
 >         sleep(1000)
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 from microbit import *
 import random
@@ -137,6 +148,9 @@ while True:
         display.show(str(numero))
         sleep(1000)
 ```
+
+**Què comentar:** L'error típic és omplir el límit superior amb `5` pensant que `randint` funciona com `range` (aquí els dos extrems hi entren: 1-6). Punt clau: `while True:` manté el dau viu per sempre, i `str()` converteix el número abans de mostrar-lo.
+</details>
 
 **Correcció ràpida (30''):** `while True:` (no `1` ni cap altra cosa) · `random.randint(1, 6)` amb el límit superior **6** (un dau) · `str(numero)` abans de `show()`.
 
@@ -158,7 +172,11 @@ while True:
 > if accelerometer.was_gesture("shake"):
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 from microbit import *
 
@@ -170,6 +188,9 @@ while True:
         display.show(str(comptador))
     sleep(100)
 ```
+
+**Què comentar:** L'error típic és posar `comptador = 0` dins del bucle: el comptador es reinicia a cada volta i es queda clavat a 1. Punt clau: l'acumulador s'inicialitza **un sol cop**, abans del `while`.
+</details>
 
 **Correcció ràpida (30''):** `comptador = 0` **fora** i **abans** del `while` (s'inicialitza un sol cop) · `comptador = comptador + 1` dins de l'`if`, no fora · `str(comptador)` abans de `show()`.
 
@@ -191,7 +212,11 @@ while True:
 > display.show(Image.HAPPY)
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 from microbit import *
 
@@ -204,37 +229,52 @@ for i in range(VEGADES):
     sleep(300)
 ```
 
+**Què comentar:** L'error típic és deixar `display.clear()` o un dels `sleep` fora del cos del `for`: el parpelleig queda coix. Punt clau: el `for` amb `range()` estalvia el comptador manual; tot el que s'ha de repetir va indentat a dins.
+</details>
+
 **Correcció ràpida (30''):** `for i in range(VEGADES):` amb dos punts i les 4 línies del cos indentades igual · cap comptador manual ni `while` · `VEGADES` en majúscules abans del `for` (convenció de constant).
 
 ---
 
-### K04 · S8 — if/while — Escriure de zero
+### K19 · S8 — variables — Completar buits
 
-**Repassa:** 3a aparició d'aquest concepte al banc (K01 Parsons a S4, K18 completar buits a S5): ara, de zero, amb un cas nou (LED extern en lloc de display).
+**Repassa:** 2a aparició d'aquest concepte al banc (K02 Parsons a S6): l'acumulador `comptador`, ara comptant polsacions del botó A en lloc de parpellejos.
 
 **Enunciat per a l'alumnat:**
-> Sense mirar apunts, completa aquest esquelet (màxim 4 línies noves) perquè el LED del pin **P1** estigui encès mentre es manté premut el botó A, i apagat en cas contrari.
+> Completa els `___` perquè el programa compti cada vegada que es prem el botó A i mostri el comptador actualitzat.
 > ```python
 > from microbit import *
 >
+> comptador = ___
+>
 > while True:
->     # escriu aqui 3-4 linies
->     sleep(50)
+>     if button_a.was_pressed():
+>         comptador = comptador ___ 1
+>         display.___(str(comptador))
+>     sleep(100)
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 from microbit import *
 
+comptador = 0
+
 while True:
-    if button_a.is_pressed():
-        pin1.write_digital(1)
-    else:
-        pin1.write_digital(0)
-    sleep(50)
+    if button_a.was_pressed():
+        comptador = comptador + 1
+        display.show(str(comptador))
+    sleep(100)
 ```
 
-**Correcció ràpida (30''):** `if`/`else` amb dos punts i indentació correcta dins del `while` · `is_pressed()` amb parèntesis (no `was_pressed`, que només detecta el moment de prémer) · `1` a la branca `if` i `0` a l'`else`, no invertits.
+**Què comentar:** L'error típic és omplir `comptador = comptador ___ 1` amb `=` en lloc de `+`. Punt clau: l'acumulador es construeix sobre el seu valor anterior (`comptador + 1`) i s'inicialitza a `0` un sol cop, fora del bucle.
+</details>
+
+**Correcció ràpida (30''):** `comptador = 0` **fora** del bucle (s'inicialitza un sol cop) · `comptador = comptador + 1` (acumulador, no un valor fix) · `display.show(...)`, amb `str()` abans.
 
 ---
 
@@ -256,7 +296,11 @@ while True:
 > else:
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 from microbit import *
 
@@ -271,48 +315,53 @@ while True:
     sleep(200)
 ```
 
+**Què comentar:** L'error típic és llegir `read_light_level()` fora del bucle: la lectura queda congelada al valor inicial i el programa no reacciona mai. Punt clau: el sensor es llegeix **a cada volta**; el llindar, en canvi, es defineix un sol cop a fora.
+</details>
+
 **Correcció ràpida (30''):** `llum = display.read_light_level()` es **llegeix dins del bucle**, a cada volta · la comparació és `llum < LLINDAR_FOSCOR` (el llindar és el segon terme) · `LLINDAR_FOSCOR` es defineix un cop, fora del bucle.
 
 ---
 
-### K19 · S9 — variables — Completar buits
+### K04 · S9 — if/while — Escriure de zero
 
-**Repassa:** 2a aparició d'aquest concepte al banc (K02 Parsons a S6): l'acumulador `comptador`, ara comptant polsacions del botó A en lloc de parpellejos.
+**Repassa:** 3a aparició d'aquest concepte al banc (K01 Parsons a S4, K18 completar buits a S5): ara, de zero, amb un cas nou (LED extern en lloc de display). A S9 el condicional ja no és el concepte del dia (es va estrenar amb sensors a S8): la regla d'or es manté.
 
 **Enunciat per a l'alumnat:**
-> Completa els `___` perquè el programa compti cada vegada que es prem el botó A i mostri el comptador actualitzat.
+> Sense mirar apunts, completa aquest esquelet (màxim 4 línies noves) perquè el LED del pin **P1** estigui encès mentre es manté premut el botó A, i apagat en cas contrari.
 > ```python
 > from microbit import *
 >
-> comptador = ___
->
 > while True:
->     if button_a.was_pressed():
->         comptador = comptador ___ 1
->         display.___(str(comptador))
->     sleep(100)
+>     # escriu aqui 3-4 linies
+>     sleep(50)
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 from microbit import *
 
-comptador = 0
-
 while True:
-    if button_a.was_pressed():
-        comptador = comptador + 1
-        display.show(str(comptador))
-    sleep(100)
+    if button_a.is_pressed():
+        pin1.write_digital(1)
+    else:
+        pin1.write_digital(0)
+    sleep(50)
 ```
 
-**Correcció ràpida (30''):** `comptador = 0` **fora** del bucle (s'inicialitza un sol cop) · `comptador = comptador + 1` (acumulador, no un valor fix) · `display.show(...)`, amb `str()` abans.
+**Què comentar:** L'error típic és fer servir `was_pressed()` (només detecta el moment de prémer: el LED no es queda encès mentre mantens el botó). Punt clau: `is_pressed()` llegeix l'estat actual, i cada branca de l'`if`/`else` escriu un valor diferent al pin.
+</details>
+
+**Correcció ràpida (30''):** `if`/`else` amb dos punts i indentació correcta dins del `while` · `is_pressed()` amb parèntesis (no `was_pressed`, que només detecta el moment de prémer) · `1` a la branca `if` i `0` a l'`else`, no invertits.
 
 ---
 
 ### K06 · S12 — if/while — Escriure de zero
 
-**Repassa:** 4a aparició d'aquest concepte al banc (K01 Parsons a S4, K18 completar buits a S5, K04 escriure de zero a S8): repeteix «escriure de zero» amb un cas nou, com marca la progressió a partir de la 3a vegada.
+**Repassa:** 4a aparició d'aquest concepte al banc (K01 Parsons a S4, K18 completar buits a S5, K04 escriure de zero a S9): repeteix «escriure de zero» amb un cas nou, com marca la progressió a partir de la 3a vegada.
 
 **Enunciat per a l'alumnat:**
 > Sense mirar apunts, completa aquest esquelet (màxim 4 línies noves) perquè es mostri una fletxa cap a la dreta (`Image.ARROW_E`) quan es faci el gest `'right'` amb la placa, i el display s'esborri en cas contrari.
@@ -324,7 +373,11 @@ while True:
 >     sleep(100)
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 from microbit import *
 
@@ -335,6 +388,9 @@ while True:
         display.clear()
     sleep(100)
 ```
+
+**Què comentar:** L'error típic és oblidar la branca `else` amb `display.clear()`: la fletxa es queda encesa per sempre. Punt clau: un `if` que encén alguna cosa gairebé sempre necessita la branca que l'apaga.
+</details>
 
 **Correcció ràpida (30''):** `if`/`else` amb dos punts i indentació correcta dins del `while` · `was_gesture('right')` ben escrit (cometes, parèntesi) · `display.clear()` a l'`else` (si no hi és, la fletxa es queda encesa per sempre).
 
@@ -360,7 +416,11 @@ while True:
 >     sleep(200)
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 from microbit import *
 
@@ -374,6 +434,9 @@ while True:
         display.clear()
     sleep(200)
 ```
+
+**Què comentar:** L'error típic és escriure `temperature` sense parèntesis: es guarda la funció, no la lectura, i la comparació falla. Punt clau: les funcions de sensor es criden amb `()` a cada volta del bucle.
+</details>
 
 **Correcció ràpida (30''):** `LLINDAR_CALOR = 28` (un número raonable, no una variable buida) · `temperature()` és la funció que llegeix el sensor intern · `else:` amb dos punts, mateixa indentació que l'`if`.
 
@@ -395,7 +458,11 @@ while True:
 > display.show(Image.HAPPY)
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 def saluda(vegades):
     for i in range(vegades):
@@ -407,6 +474,9 @@ def saluda(vegades):
 
 saluda(3)
 ```
+
+**Què comentar:** L'error típic és indentar la crida `saluda(3)` dins del cos de la funció: el programa no fa mai res. Punt clau: `def` només **defineix**; sense una crida a fora, el codi de la funció no s'executa.
+</details>
 
 **Correcció ràpida (30''):** `def saluda(vegades):` amb dos punts i el cos indentat **sota** el `def` · la crida `saluda(3)` va **fora** de la funció (sense indentar), amb parèntesis i un valor concret.
 
@@ -425,7 +495,11 @@ saluda(3)
 > return 26 + (angle * (128 - 26)) // 180
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 def graus_a_pwm(angle):
     return 26 + (angle * (128 - 26)) // 180
@@ -435,28 +509,25 @@ valor = graus_a_pwm(90)
 display.scroll(str(valor))
 ```
 
+**Què comentar:** L'error típic és posar el `display.scroll()` dins de la funció en lloc del `return`. Punt clau: una funció amb `return` **calcula i torna** un valor; qui la crida decideix què fer-ne (mostrar-lo, guardar-lo, reutilitzar-lo).
+</details>
+
 **Correcció ràpida (30''):** `return` és la **darrera** línia del cos de la funció (calcula i torna un valor, no mostra res) · `valor = graus_a_pwm(90)` recull el que retorna la funció · `str(valor)` abans de `scroll()`.
 
 ---
 
-### K21 · S17 — funcions/paràmetres — Completar buits
+### K21 · S17 — funcions/paràmetres — Escriure de zero
 
-**Repassa:** 2a aparició d'aquest concepte al banc (K07 Parsons a S14): una funció amb un paràmetre que decideix quina fletxa mostrar, com les funcions de moviment de `funcions_moviments.py`/`velocitat_pwm.py` (SA4).
+**Repassa:** 2a aparició d'aquest concepte al banc (K07 Parsons a S14): una funció amb un paràmetre que decideix quina fletxa mostrar, com les funcions de moviment de `funcions_moviments.py`/`velocitat_pwm.py` (SA4). **Excepció a propòsit de la progressió** (salta el nivell «completar buits» i passa directament a «escriure de zero», quarta ronda de millores): entre K06 (S12) i K16 (S29) el T2 no tenia cap kata d'escriptura autònoma. El material repassat és de SA4-S1 (S12), fa diverses setmanes, i a S17 el concepte del dia és la ràdio: la regla d'or es manté.
 
 **Enunciat per a l'alumnat:**
-> Completa els `___` perquè la funció mostri una fletxa cap a l'esquerra o cap a la dreta segons el paràmetre rebut, i crida-la amb `'dreta'`.
-> ```python
-> def mostra_fletxa(costat):
->     if costat == 'esquerra':
->         display.show(___)
->     elif costat == ___:
->         display.show(Image.ARROW_E)
->
->
-> ___('dreta')
-> ```
+> Sense mirar apunts, escriu (5-6 línies) una funció `mostra_fletxa(costat)` que mostri la fletxa cap a l'esquerra (`Image.ARROW_W`) si el paràmetre val `'esquerra'`, i la fletxa cap a la dreta (`Image.ARROW_E`) si val `'dreta'`. Després crida-la un cop amb `'dreta'`.
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 def mostra_fletxa(costat):
     if costat == 'esquerra':
@@ -467,6 +538,9 @@ def mostra_fletxa(costat):
 
 mostra_fletxa('dreta')
 ```
+
+**Què comentar:** L'error típic és comparar sense cometes (`if costat == esquerra` dona `NameError`) o indentar la crida final dins de la funció. Punt clau: el paràmetre es compara amb textos entre cometes, i la crida va fora del `def`, sense indentar.
+</details>
 
 **Correcció ràpida (30''):** el paràmetre `costat` es compara amb un text entre cometes (`'esquerra'`/`'dreta'`), no amb un número · el cos de la funció va indentat sota `def` · la crida final `mostra_fletxa('dreta')` és fora de la funció, amb parèntesis i cometes.
 
@@ -487,7 +561,11 @@ mostra_fletxa('dreta')
 > emocio = nova
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 emocio = 0
 
@@ -500,6 +578,9 @@ def canvia_emocio(nova):
 
 canvia_emocio(1)
 ```
+
+**Què comentar:** L'error típic és oblidar la línia `global emocio`: la funció crea una variable local i la de fora no canvia mai. Punt clau: `global` va com a primera línia del cos, **abans** de reassignar la variable.
+</details>
 
 **Correcció ràpida (30''):** `emocio = 0` es defineix **fora** de la funció, abans de tot · `global emocio` és la **primera** línia dins del cos de la funció (abans de tocar-la) · la crida `canvia_emocio(1)` és fora de la funció.
 
@@ -524,7 +605,11 @@ canvia_emocio(1)
 > display.scroll(missatge)
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 from microbit import *
 import radio
@@ -540,6 +625,9 @@ while True:
         display.scroll(missatge)
     sleep(20)
 ```
+
+**Què comentar:** L'error típic és posar `radio.on()`/`radio.config()` dins del `while`: es reconfigura la ràdio a cada volta. Punt clau: `radio.receive()` pot tornar `None` (la majoria de voltes no hi ha missatge) i sempre es comprova abans de fer-lo servir.
+</details>
 
 **Correcció ràpida (30''):** `radio.on()` i `radio.config()` es criden **un sol cop, fora** del bucle · `radio.receive()` **pot tornar `None`**: cal comprovar-ho abans de fer-hi res.
 
@@ -562,7 +650,11 @@ while True:
 > desa("B")
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 historic = []
 MAX = 3
@@ -577,6 +669,9 @@ def desa(missatge):
 desa("A")
 desa("B")
 ```
+
+**Què comentar:** L'error típic és fer `pop()` sense el `0`: es descartaria el missatge més **nou**, no el més antic. Punt clau: `historic = []` i `MAX` viuen fora de la funció; primer `append`, després es comprova la mida.
+</details>
 
 **Correcció ràpida (30''):** `historic = []` i `MAX = 3` es defineixen **fora** de la funció, abans de tot · `append()` és sempre la primera acció dins de `desa()` · `pop(0)` treu el **primer** element (el més antic), no el darrer.
 
@@ -601,7 +696,11 @@ desa("B")
 > display.show(str(estat))
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 ENCES, APAGAT = range(2)
 estat = APAGAT
@@ -619,6 +718,9 @@ while True:
     canvia()
     sleep(1000)
 ```
+
+**Què comentar:** L'error típic és voler reescriure la lògica amb `if`/`elif` en lloc de consultar el diccionari. Punt clau: `TRANSICIONS[estat]` ja retorna el següent estat — en una FSM la lògica viu a les **dades**, no al codi.
+</details>
 
 **Correcció ràpida (30''):** `TRANSICIONS[estat]` retorna directament el **següent** estat (no cal cap `if/elif`) · `global estat` dins de `canvia()` · el `while True:` només crida `canvia()` i espera; tota la lògica de transició viu al diccionari.
 
@@ -640,7 +742,11 @@ while True:
 > else:
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 distancies = [12, 8, 20, 5]
 
@@ -651,6 +757,9 @@ for d in distancies:
         display.clear()
     sleep(300)
 ```
+
+**Què comentar:** L'error típic és voler-hi encabir un `range(len(distancies))` amb índex. Punt clau: `for d in distancies:` recorre directament els **valors** de la llista, i tot el cos (`if`/`else` i `sleep`) va indentat dins del `for`.
+</details>
 
 **Correcció ràpida (30''):** `for d in distancies:` recorre els **valors** directament (sense `range(len(...))` ni índex) · tot el cos (`if/else` i `sleep`) va indentat dins del `for`.
 
@@ -671,7 +780,11 @@ for d in distancies:
 > except ValueError:
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 missatge = "12"
 
@@ -681,6 +794,9 @@ try:
 except ValueError:
     display.show("E")
 ```
+
+**Què comentar:** L'error típic és posar `int(missatge)` dins de l'`except` (al revés del que toca). Punt clau: dins del `try` va el codi que **pot fallar**; l'`except ValueError:` és el pla B, al mateix nivell d'indentació que el `try`.
+</details>
 
 **Correcció ràpida (30''):** `try:` i `except ValueError:` van al **mateix nivell** d'indentació · el codi que **pot fallar** (`int(missatge)`) va dins del `try`, no dins de l'`except` · el missatge d'error només s'executa si falla la conversió.
 
@@ -700,7 +816,11 @@ except ValueError:
 > while True:
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 import log
 
@@ -711,18 +831,25 @@ while True:
     sleep(2000)
 ```
 
+**Què comentar:** L'error típic és cridar `log.set_labels()` dins del bucle. Punt clau: la capçalera del registre es defineix **un sol cop**, abans del `while`, i `log.add()` fa servir exactament els mateixos noms de columna.
+</details>
+
 **Correcció ràpida (30''):** `log.set_labels()` es crida **un sol cop, abans** del bucle · `log.add()` fa servir els **mateixos noms** de columna (`temp`, `llum`) que `set_labels()` · `sleep(2000)` dins del bucle marca la cadència.
 
 ---
 
 ### K16 · S29 — funcions/paràmetres — Escriure de zero
 
-**Repassa:** 3a aparició d'aquest concepte al banc (K07 Parsons a S14, K21 completar buits a S17): funció amb **dos** paràmetres, un d'ells amb **valor per defecte**, com `girar(costat, velocitat=300)` de `segueix_linia.py`/`telemetria_radio.py`. **Variant a propòsit** del mini-check individual de la SA4 (que demana `avancar(velocitat)`, un sol paràmetre sense valor per defecte): aquí es repassa un cas diferent, no el mateix ítem.
+**Repassa:** 3a aparició d'aquest concepte al banc (K07 Parsons a S14, K21 escriure de zero a S17): funció amb **dos** paràmetres, un d'ells amb **valor per defecte**, com `girar(costat, velocitat=300)` de `segueix_linia.py`/`telemetria_radio.py`. **Variant a propòsit** del mini-check individual de la SA4 (que demana `avancar(velocitat)`, un sol paràmetre sense valor per defecte): aquí es repassa un cas diferent, no el mateix ítem.
 
 **Enunciat per a l'alumnat:**
 > Sense mirar apunts, escriu (4-6 línies) una funció `girar(costat, velocitat=300)` que faci girar el motor M1 (pins P13/P14) a la velocitat rebuda si `costat` val `'esquerra'`, i el motor M2 (pins P15/P16) si val `'dreta'`. Crida-la un cop passant els dos arguments, i un altre cop **sense** indicar la velocitat (per comprovar que fa servir el valor per defecte).
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 def girar(costat, velocitat=300):
     if costat == 'esquerra':
@@ -736,6 +863,9 @@ def girar(costat, velocitat=300):
 girar('esquerra', 400)
 girar('dreta')
 ```
+
+**Què comentar:** L'error típic és escriure el valor per defecte a la crida en lloc del `def` (o pensar que `girar('dreta')` petarà). Punt clau: `velocitat=300` al paràmetre fa que la crida sense segon argument funcioni sola amb `300`.
+</details>
 
 **Correcció ràpida (30''):** `def girar(costat, velocitat=300):` amb el valor per defecte **al paràmetre**, no a la crida · `if`/`elif` compara `costat` amb un text entre cometes · `girar('dreta')` (sense segon argument) fa servir automàticament `300`, no peta ni cal repetir-lo.
 
@@ -759,7 +889,11 @@ girar('dreta')
 > display.scroll(str(resultat))
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 def classifica(distancia):
     if distancia < 15:
@@ -771,6 +905,9 @@ def classifica(distancia):
 resultat = classifica(10)
 display.scroll(str(resultat))
 ```
+
+**Què comentar:** L'error típic és omplir `return ___` amb un `display.scroll("LLUNY")` (mostrar en lloc de retornar). Punt clau: la funció només **retorna** el text; mostrar-lo és feina de qui la crida, que recull el valor en una variable.
+</details>
 
 **Correcció ràpida (30''):** cada branca (`if` i `else`) té el seu propi `return` amb un text diferent · la crida `classifica(10)` es fa amb parèntesis i s'assigna a `resultat` · `str(resultat)` abans de `scroll()`.
 
@@ -796,7 +933,11 @@ Sis katas noves, afegides a la tercera ronda de millores perquè cap concepte po
 >         display.show("E")
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 missatge = radio.receive()
 if missatge is not None:
@@ -807,13 +948,16 @@ if missatge is not None:
         display.show("E")
 ```
 
+**Què comentar:** L'error típic és omplir el segon buit amb un `except:` pelat (amagaria **qualsevol** error, no només el de conversió). Punt clau: `try`/`except ValueError:` al mateix nivell, dins de l'`if`, i al `try` només el codi que pot fallar.
+</details>
+
 **Correcció ràpida (30''):** `try:` i `except ValueError:` van al **mateix** nivell d'indentació, dins de l'`if` · `int(missatge)` (que pot fallar) va dins del `try` · `display.show("E")` només s'executa si la conversió falla.
 
 ---
 
 ### K23 · S32 — llistes — Completar buits
 
-**Repassa:** 2a aparició d'aquest concepte al banc (K11 Parsons a S21): ara buscant el valor màxim d'una llista de temperatures, com el seguiment de màxim/mínim d'`estacio_base.py` (SA8).
+**Repassa:** 2a aparició d'aquest concepte al banc (K11 Parsons a S21): ara buscant el valor màxim d'una llista de temperatures, en la línia del càlcul sobre llistes de lectures que fa la mitjana d'`estacio_base.py` (SA8).
 
 **Enunciat per a l'alumnat:**
 > Completa els `___` perquè la funció retorni el valor més alt d'una llista de temperatures.
@@ -830,7 +974,11 @@ if missatge is not None:
 > display.scroll(str(maxim(___)))
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 def maxim(llista):
     valor_maxim = llista[0]
@@ -843,6 +991,9 @@ def maxim(llista):
 temperatures = [21, 25, 19, 28, 22]
 display.scroll(str(maxim(temperatures)))
 ```
+
+**Què comentar:** L'error típic és voler inicialitzar `valor_maxim` a `0` (amb temperatures negatives fallaria). Punt clau: es parteix del **primer element** (`llista[0]`) i el `for` recorre els valors, no els índexs.
+</details>
 
 **Correcció ràpida (30''):** `valor_maxim` s'inicialitza amb el **primer** element (`llista[0]`), no amb `0` (una llista de negatius fallaria) · `for valor in llista:` recorre els **valors**, no índexs · `return valor_maxim` és la darrera línia de la funció.
 
@@ -867,7 +1018,11 @@ display.scroll(str(maxim(temperatures)))
 > display.scroll(str(compta_perill(___)))
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 def compta_perill(distancies):
     comptador = 0
@@ -881,13 +1036,16 @@ mesures = [12, 8, 5, 20, 9]
 display.scroll(str(compta_perill(mesures)))
 ```
 
+**Què comentar:** L'error típic és pensar que l'increment va fora de l'`if` (comptaria totes les mesures, no només les de perill). Punt clau: acumulador a `0` abans del `for` i incrementat **només** quan es compleix la condició.
+</details>
+
 **Correcció ràpida (30''):** `comptador = 0` **abans** del `for` (acumulador, un sol cop) · `for d in distancies:` recorre els valors directament · `comptador = comptador + 1` només dins de l'`if`.
 
 ---
 
 ### K25 · S33 — ràdio — Completar buits
 
-**Repassa:** 2a aparició d'aquest concepte al banc (K10 Parsons a S19): ara amb un protocol amb prefix `"CMD:"`, com `semafor_rele.py`/`vehicle_seguretat.py` (SA6), en lloc del xat sense protocol.
+**Repassa:** 2a aparició d'aquest concepte al banc (K10 Parsons a S19): ara amb un protocol amb prefix `"CMD:"`, com `comandament.py` (SA5) / `vehicle_seguretat.py` (SA6), en lloc del xat sense protocol.
 
 **Enunciat per a l'alumnat:**
 > Completa els `___` perquè el programa enviï una ordre d'aturada amb prefix `"CMD:"` en prémer A, i la reconegui correctament en rebre-la.
@@ -904,7 +1062,11 @@ display.scroll(str(compta_perill(mesures)))
 >         aturar()
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 PREFIX = "CMD:"
 
@@ -917,6 +1079,9 @@ if missatge is not None and missatge.startswith(PREFIX):
     if ordre == "S":
         aturar()
 ```
+
+**Què comentar:** L'error típic és omplir el tall amb un `4` a pèl (funciona avui, es trenca si canvia el prefix). Punt clau: `startswith(PREFIX)` filtra el protocol **abans** de tocar el missatge, i `len(PREFIX)` fa el tall robust.
+</details>
 
 **Correcció ràpida (30''):** `radio.send(PREFIX + "S")` concatena el prefix davant l'ordre · `startswith(PREFIX)` comprova que el missatge és del protocol esperat **abans** de fer-hi res · `missatge[len(PREFIX):]` talla el prefix per quedar-se amb l'ordre.
 
@@ -944,7 +1109,11 @@ if missatge is not None and missatge.startswith(PREFIX):
 > display.show(str(seguent_estat()))
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 SEGUIR, ESQUIVAR, RECUPERAR = range(3)
 estat = SEGUIR
@@ -960,6 +1129,9 @@ def seguent_estat():
 
 display.show(str(seguent_estat()))
 ```
+
+**Què comentar:** L'error típic és deixar un estat sense entrada al diccionari: `KeyError` en arribar-hi. Punt clau: una FSM necessita una transició per a **cada** estat, i es consulta sempre amb l'estat actual (`TRANSICIONS[estat]`).
+</details>
 
 **Correcció ràpida (30''):** `TRANSICIONS` té una entrada per a **cada** estat, sense buits · `TRANSICIONS[estat]` fa servir l'estat **actual** per trobar el següent · `global estat` abans de reassignar-la dins de la funció.
 
@@ -984,7 +1156,11 @@ display.show(str(seguent_estat()))
 > display.scroll(zona(22))
 > ```
 
-**Solució completa:**
+**Solució:**
+
+<details markdown="1">
+<summary>✅ Solució (per comentar amb l'alumnat)</summary>
+
 ```python
 def zona(temp):
     if temp < 18:
@@ -997,6 +1173,9 @@ def zona(temp):
 
 display.scroll(zona(22))
 ```
+
+**Què comentar:** L'error típic és omplir les comparacions amb `=` en lloc de `<`/`>`. Punt clau: només **una** de les tres branques s'executa a cada crida, i cadascuna té el seu propi `return`.
+</details>
 
 **Correcció ràpida (30''):** `temp < 18` i `temp > 26` són comparacions, no assignacions (`<`/`>`, no `=`) · cada branca (`if`/`elif`/`else`) té el seu propi `return` amb un text diferent · només **una** branca s'executa per crida.
 
