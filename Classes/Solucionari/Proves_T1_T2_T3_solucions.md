@@ -405,7 +405,10 @@ def mesura_distancia():
     TRIGGER.write_digital(1)
     utime.sleep_us(10)
     TRIGGER.write_digital(0)
-    durada_us = machine.time_pulse_us(ECHO, 1, 30000)
+    try:
+        durada_us = machine.time_pulse_us(ECHO, 1, 30000)
+    except OSError:
+        return None   # timeout llancat com a excepcio: cap eco rebut
     if durada_us < 0:
         return None   # cap eco rebut (fora de rang)
     return (durada_us * VELOCITAT_SO_CM_US) / 2

@@ -22,7 +22,7 @@ import log
 GRUP = 1   # ha de coincidir amb el GRUP de telemetria_radio.py de la parella
 
 radio.on()
-radio.config(group=GRUP, power=6)
+radio.config(group=GRUP, power=6, length=64)   # length: mateix limit que l'emissor (32 bytes per defecte)
 
 PREFIX = "TEL:"
 

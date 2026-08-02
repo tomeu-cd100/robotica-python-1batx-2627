@@ -1,6 +1,7 @@
 # SA5 - Repte 1 (SOLUCIO): xat de classe amb identificacio
-# Nucli + ampliacions 1-3: comptador de missatges rebuts, filtre per
-# paraula a l'historial, i comanda especial "NETEJA" que buida l'historial.
+# Nucli (compta_missatges amb return) + ampliacions 1-3: comptador de
+# missatges rebuts, filtre per paraula a l'historial, i comanda especial
+# "NETEJA" que buida l'historial.
 # Maquinari: cap de nou, nomes la radio interna (com radio_missatges.py).
 
 from microbit import *
@@ -27,13 +28,15 @@ def desa_al_historic(missatge):
         historic.pop(0)
 
 
-def mostra_historial():
-    # Requisit minim: mostra tots els missatges de l'historial, un darrere
-    # l'altre, separats per un espai (concatenacio amb un for, sense join()).
-    text = ""
+def compta_missatges(remitent):
+    # Requisit minim: recorre l'historial i RETORNA quants missatges son
+    # d'aquell remitent (comencen per remitent + ":"), sense mostrar res:
+    # qui crida la funcio decideix que fer amb el resultat.
+    comptador = 0
     for missatge in historic:
-        text = text + missatge + " "
-    display.scroll(text)
+        if missatge.startswith(remitent + ":"):
+            comptador = comptador + 1
+    return comptador
 
 
 def mostra_historial_amb_paraula(paraula):
@@ -53,7 +56,10 @@ while True:
         sleep(200)
         display.clear()
     if button_b.was_pressed():
-        mostra_historial()
+        # Requisit minim: darrer missatge + recompte dels missatges propis.
+        if len(historic) > 0:
+            display.scroll(historic[-1])
+        display.scroll(str(compta_missatges(MEU_NOM)))
     if button_a.is_pressed() and button_b.is_pressed():
         # Ampliacio 1: mostra el total de missatges rebuts.
         display.scroll(str(total_rebuts))

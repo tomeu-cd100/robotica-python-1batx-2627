@@ -26,7 +26,7 @@ import math
 GRUP = 1   # ha de coincidir amb el GRUP d'estacio_base.py de la parella
 
 radio.on()
-radio.config(group=GRUP, power=6)
+radio.config(group=GRUP, power=6, length=64)   # length: el limit per defecte es 32 bytes i el missatge TEL: en pot ocupar mes
 
 PREFIX = "TEL:"
 

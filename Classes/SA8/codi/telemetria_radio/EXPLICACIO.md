@@ -22,6 +22,8 @@ radio.send(missatge)
 
 Mateixa idea de `PREFIX` que `comandament.py`/`vehicle_seguretat.py` (SA5-SA6), però amb un prefix **diferent**: així `estacio_base.py` pot distingir un missatge de telemetria d'una futura ordre de control sense ambigüitat.
 
+I un detall nou de protocol: fins ara els missatges eren curts (`CMD:F`), però el paquet de telemetria (`TEL:D:…;S:…;E:…;T:…;H:…;O:…`) pot superar els **32 bytes**, que és la mida màxima **per defecte** d'un missatge de ràdio. Per això el `radio.config()` d'aquesta pràctica afegeix `length=64` — i l'ha de dur **també l'estació base**: la mida màxima forma part del protocol, com el `group`. Si l'oblides, `radio.send()` peta amb `ValueError` justament quan el missatge es fa llarg.
+
 ### Bloc 2 — Llegir l'IMU per I2C: despertar-lo i llegir registres
 
 ```python

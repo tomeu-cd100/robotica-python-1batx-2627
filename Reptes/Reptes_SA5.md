@@ -21,23 +21,27 @@
 **Què treballa.** `radio.on()`/`config()`/`send()`/`receive()`, llistes, `radio_missatges.py`.
 
 **Requisit mínim.**
-- Parteix de `radio_missatges.py`: enviament amb remitent i historial en una llista (ja fet).
-- Afegeix una funció `mostra_historial()` que faci `display.scroll()` de **tots** els missatges de `historic`, un darrere l'altre.
+- Parteix de `radio_missatges.py`: enviament amb remitent, historial en una llista i `mostra_historic()` (ja fets).
+- Escriu una funció **nova** `compta_missatges(remitent)` que recorri `historic` i **retorni** quants missatges són d'aquell remitent (els que comencen per `remitent + ":"`).
+- Fes que, en prémer **B**, a més del darrer missatge es mostri el recompte dels teus: `display.scroll(compta_missatges(MEU_NOM))`.
 - Codi comentat.
 
 <details markdown="1">
 <summary>🧗 Si t'encalles (repte ⭐): pistes esglaonades</summary>
 
-**Nivell 1 — Pista conceptual.** `historic` ja és una llista que es va omplint. Per mostrar-la sencera necessites un `for` que recorri **els elements** de la llista (no un índex): és el mateix `for missatge in historic:` que ja vas veure a `mostra_historic()`, però ara escrivint-lo tu dins d'una funció pròpia.
+**Nivell 1 — Pista conceptual.** Vols **comptar**, no mostrar: necessites una variable que comenci a 0 i pugi 1 cada cop que un missatge compleixi la condició. La condició és la mateixa idea de protocol que ja coneixes: un missatge «és de» un remitent si **comença per** `remitent + ":"` (`startswith`, com al protocol `CMD:`). I com que la funció **retorna** el resultat (no el mostra), qui la crida decideix què fer-ne.
 
 **Nivell 2 — Pseudocodi.**
 ```
-defineix mostra_historial():
+defineix compta_missatges(remitent):
+  comptador comenca a 0
   per a cada missatge de historic:
-    mostra'l amb scroll
+    si el missatge comenca per remitent + ":":
+      suma 1 al comptador
+  retorna el comptador
 ```
 
-**Nivell 3 — Esquelet amb TODO.** Omple només el `for` i la crida a `scroll`.
+**Nivell 3 — Esquelet amb TODO.** Cada `# TODO` és una línia sencera que has d'escriure tu.
 ```python
 # SA5 - Repte 1 (BASTIDA / esquelet per a l'alumnat)
 #
@@ -45,27 +49,31 @@ defineix mostra_historial():
 #   - La llista historic ja es va omplint amb desa_al_historic().
 #
 # QUE HAS DE FER TU:
-#   - Escriu una funcio mostra_historial() que faci scroll de TOTS els
-#     missatges de historic, un darrere l'altre.
+#   - Escriu compta_missatges(remitent): retorna quants missatges de
+#     historic comencen per remitent + ":".
 #
-# EINES QUE POTS USAR (nomes conceptes de la SA5):
+# EINES QUE POTS USAR (nomes conceptes ja vistos):
 #   - for element in colleccio:   -> recorre els elements de la llista
-#   - display.scroll(text)
+#   - text.startswith(prefix)     -> True si el text comenca aixi
+#   - return valor                -> torna el resultat a qui ha cridat
 
-def mostra_historial():
-    for ___ in ___:
-        display.scroll(___)   # TODO: mostra cada missatge
+def compta_missatges(remitent):
+    comptador = 0
+    for missatge in historic:
+        # TODO: si el missatge comenca per remitent + ":", suma 1
+        pass
+    # TODO: retorna el comptador
 ```
 
 </details>
 
 **Ampliacions graduades.**
 1. *(bàsica)* Afegeix un comptador `total_rebuts` que sumi 1 cada cop que arriba un missatge nou, i mostra'l amb el botó A+B.
-2. *(notable)* Filtra l'historial: `mostra_historial()` només mostra els missatges que continguin una paraula concreta (per exemple, el nom d'un company).
+2. *(notable)* Filtra l'historial: una funció `mostra_historial_amb_paraula(paraula)` que només mostri els missatges que continguin una paraula concreta (per exemple, el nom d'un company).
 3. *(⭐⭐⭐)* Afegeix una comanda especial `"NETEJA"` que, en rebre-la, buidi l'historial (`historic.clear()` o `historic = []`) de qui la rep.
 
     **Fites** (valida-les en ordre):
-    1. L'historial es mostra sencer i en l'ordre correcte de recepció.
+    1. `compta_missatges()` retorna el recompte correcte amb missatges de **dos remitents diferents** a l'historial.
     2. El filtre per paraula (ampliació 2) distingeix correctament els missatges que la contenen.
     3. La comanda `"NETEJA"` (ampliació 3) buida l'historial sense afectar cap altra funcionalitat.
 
@@ -124,7 +132,7 @@ def mostra_historial():
 ## 🎨 Fes-lo teu (tria abans de començar)
 
 > El repte fixa **què** ha de fer el sistema; **el context el poses tu**. Tria i anota-ho al quadern — un producte amb decisions teves sempre s'explica i es defensa millor:
-> - **Repte 1:** decideix la teva manera de mostrar i filtrar l'historial.
+> - **Repte 1:** decideix què vols comptar i filtrar de l'historial (remitents, paraules…).
 > - **Repte 2:** tria els teus **gestos** i la seva correspondència amb comandes.
 > - **Repte 3:** decideix quines estadístiques et semblen més útils per detectar problemes.
 

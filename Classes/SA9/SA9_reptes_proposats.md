@@ -14,7 +14,7 @@
 
 **Maquinari necessari (Kit 2 + Kit 3).** Sensor d'humitat del terra (Kit 2, analògic) + mòdul relé (Kit 3) + bomba d'aigua amb tub (Kit 3).
 
-**Esquema de components.** Sensor d'humitat del terra → pin analògic lliure (p. ex. **P4**); relé → pin digital lliure (p. ex. **P3**); la bomba es connecta a través del relé, **mai** directament al Micro:shield (el relé commuta l'alimentació externa de la bomba). Alimentació de la bomba: portapiles/font externa, mai des de l'USB.
+**Esquema de components.** Sensor d'humitat del terra → pin analògic lliure: en estació fixa, **P0**; al rover (on P0 és del seguidor de línia), **P4**, i llavors cal `display.off()` perquè P3/P4/P10 comparteixen circuit amb el display. Relé → pin digital lliure **no compartit amb el display** (p. ex. **P12**); la bomba es connecta a través del relé, **mai** directament al Micro:shield (el relé commuta l'alimentació externa de la bomba). Alimentació de la bomba: portapiles/font externa, mai des de l'USB.
 
 **Criteris d'èxit.**
 - ⭐ Llegeix el sensor d'humitat del terra i mostra la lectura (display o REPL).
@@ -50,7 +50,7 @@
 
 **Maquinari necessari (Kit 2 + Kit 3).** Sensor PIR (Kit 2) + LED RGB o brunzidor (Kit 1/3) per a l'alarma; ràdio interna per enviar l'alerta a una segona placa (estació de vigilància, com a SA8).
 
-**Esquema de components.** PIR → pin digital lliure (p. ex. **P10**); en detectar moviment, activa l'alarma local (LED/so) i envia un missatge de telemetria d'alerta (`"TEL:ALERTA_PIR"`) a l'estació base.
+**Esquema de components.** PIR → pin digital lliure **no compartit amb el display** (p. ex. **P8** si no hi ha DHT11 muntat, o **P12**; evita P3/P4/P10, que són del display); en detectar moviment, activa l'alarma local (LED/so) i envia un missatge de telemetria d'alerta (`"TEL:ALERTA_PIR"`) a l'estació base.
 
 **Criteris d'èxit.**
 - ⭐ Detecta moviment amb el PIR i ho mostra al display.
@@ -67,7 +67,7 @@
 
 **Maquinari necessari (Kit 2 + sensors interns).** Tira LED adreçable WS2812B/NeoPixel (Kit 2, reserva SA9); sensor de temperatura i de llum (interns de la micro:bit, o DHT11 del Kit 3).
 
-**Esquema de components.** Tira NeoPixel → pin digital lliure (p. ex. **P17**), mòdul `neopixel` (com preveu `09c` i `00_Fil_conductor_construccions.md`); sensors de temperatura/llum sense cablatge addicional (interns) o DHT11 a P8 si el rover ja el porta muntat (SA6/SA8).
+**Esquema de components.** Tira NeoPixel → pin digital lliure (p. ex. **P8** en estació fixa, o **P12**; els pins 17-18 de l'edge connector són de 3V, no GPIO), mòdul `neopixel` (com preveu `09c`); sensors de temperatura/llum sense cablatge addicional (interns) o DHT11 a P8 si el rover ja el porta muntat (SA6/SA8).
 
 **Criteris d'èxit.**
 - ⭐ Llegeix dues magnituds ambientals i les mostra per REPL.
@@ -84,7 +84,7 @@
 
 **Maquinari necessari (sensors interns + Kit 3).** Acceleròmetre intern (gestos) o sensor de so (Kit 3, micròfon); rover de SA7-SA8 per executar el comportament resultant.
 
-**Esquema de components.** Sense pins nous si es fa servir l'acceleròmetre intern; si es fa servir el sensor de so del Kit 3, connecta'l a un pin analògic lliure (p. ex. **P11**).
+**Esquema de components.** Sense pins nous si es fa servir l'acceleròmetre intern o el **micròfon intern de la V2** (`microphone.sound_level()`, ja usat a T1 — l'opció recomanada per al so); si es fa servir el sensor de so extern del Kit 3, cal un pin **ADC** lliure (només P0-P4 i P10 ho són; en estació fixa, P0).
 
 **Criteris d'èxit.**
 - ⭐ Distingeix, amb una regla feta a mà (llindar), almenys dos patrons diferents (com `mpu_orientacio()` de SA8).

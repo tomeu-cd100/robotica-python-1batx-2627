@@ -38,7 +38,7 @@ import radio
 
 GRUP = 5
 radio.on()
-radio.config(group=GRUP, power=6)
+radio.config(group=GRUP, power=6, length=64)
 
 PREFIX = "AMB:"
 INTERVAL_MS = 2000
@@ -68,7 +68,7 @@ import radio
 
 GRUP = 5
 radio.on()
-radio.config(group=GRUP, power=6)
+radio.config(group=GRUP, power=6, length=64)
 
 PREFIX = "AMB:"
 MAX_HISTORIC = 5
