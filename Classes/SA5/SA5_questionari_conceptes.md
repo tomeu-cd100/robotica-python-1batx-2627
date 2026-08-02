@@ -130,19 +130,7 @@ ___________________________________________________________________
 
 ---
 
-## Clau de correcció (docent)
-
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-|---|---|---|---|---|---|---|---|---|---|
-| b | b | c | b | b | a | a | b | b | a |
-
-La pregunta 3 (traça) demana seguir l'execució real d'un `if`/`elif` amb `is_pressed()`/`was_pressed()`: valora que l'alumnat distingeixi que amb només el botó B premut s'entra a la branca `elif button_b.was_pressed()`, no a la del A+B ni a la del A sol.
-
-La pregunta 6 (completar) comprova que l'alumnat identifica **quina crida concreta** falta (`radio.config(group=GRUP)`) per activar el filtre de grup, no només que en sap la definició de memòria.
-
-La pregunta 7 (corregir) es basa en l'error freqüent documentat a la guia docent ("el `PREFIX` no coincideix exactament entre comandament i receptor"): valora que l'alumnat sàpiga localitzar una discrepància concreta de text (majúscules) dins de codi que, a simple vista, sembla correcte.
-
-La pregunta 11 és oberta: valora que expliqui la idea de **reutilització**/modularitat (les funcions `avancar`/`girar`/`aturar` ja estaven provades i funcionaven a la SA4; només cal canviar **l'entrada** que les crida, dels botons a la ràdio) i que reconegui l'avantatge de no haver de tornar a depurar una lògica ja validada.
+> 🔑 **La correcció.** La clau és **material del docent** (`Classes/Solucionari/Questionaris_conceptes_solucions.md`): així el qüestionari serveix de debò per comprovar què saps. Si el fas amb el **Google Form** del Classroom, la correcció te la dona el formulari mateix en enviar-lo; si el fas en paper, demana-la al docent en acabar.
 
 ---
 

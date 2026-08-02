@@ -129,19 +129,7 @@ ___________________________________________________________________
 
 ---
 
-## Clau de correcció (docent)
-
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-|---|---|---|---|---|---|---|---|---|---|
-| a | b | a | b | a | b | b | b | b | b |
-
-La pregunta 1 (COMPLETAR) substitueix el record memorístic de "com es connecta l'IMU per I2C" per la necessitat de completar la línia que el desperta (`i2c.write(MPU_ADR, bytes([MPU_REG_PWR, 0x00]))`), aplicant directament el patró d'inicialització de `mpu_inicia()`.
-
-La pregunta 3 (CORREGIR) substitueix la definició memorística del mecanisme de lectura del DHT11 per l'error freqüent documentat a la guia docent ("el DHT11 retorna sempre `None` perquè es llegeix massa sovint"): l'alumnat ha de localitzar-lo en codi, no repetir-ne la definició.
-
-La pregunta 6 (TRAÇA) substitueix la pregunta de pur record ("quants estats alhora") per haver de llegir un fragment real de la FSM i predir quin és l'estat final, reforçant que `estat` és una variable de decisió pròpia (no una lectura de sensor) i que només en pren un valor cada volta.
-
-La pregunta 11 és oberta: valora que expliqui que totes dues funcions fan servir `machine.time_pulse_us` per mesurar **quant de temps** dura un senyal digital (un pols) i que, a partir d'aquesta durada, en dedueixen una magnitud (distància o bit de dades): el mecanisme de mesura és el mateix, encara que el que se'n dedueix i el nombre de polsos mesurats (1 a l'HC-SR04, 40 al DHT11) sigui diferent.
+> 🔑 **La correcció.** La clau és **material del docent** (`Classes/Solucionari/Questionaris_conceptes_solucions.md`): així el qüestionari serveix de debò per comprovar què saps. Si el fas amb el **Google Form** del Classroom, la correcció te la dona el formulari mateix en enviar-lo; si el fas en paper, demana-la al docent en acabar.
 
 ---
 

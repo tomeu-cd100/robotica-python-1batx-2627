@@ -119,19 +119,7 @@ ___________________________________________________________________
 
 ---
 
-## Clau de correcció (docent)
-
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-|---|---|---|---|---|---|---|---|---|---|
-| b | a | b | c | b | a | b | a | b | b |
-
-La pregunta 11 és oberta: valora que expliqui que a la SA9 no s'introdueix cap component "nou i obligatori per a tothom" (com el DHT11 a SA6 o l'IMU a SA8), sinó que cada alumne **combina** components i tècniques ja après en SA anteriors (sensors, FSM, motors, ràdio) en una solució pròpia coherent: el saber nou és **com integrar-los**, no un component concret.
-
-La pregunta 5 (CORREGIR) substitueix l'antiga pregunta sobre els nivells ⭐/⭐⭐/⭐⭐⭐ (record purament memorístic) per un error real recollit a la guia docent (Sessió 2: "el prototip barreja tota la lògica dins del `while True`, sense `percep()`/`decideix()`/`actua()`"): cal que l'alumnat sàpiga identificar-lo llegint codi, no només recitar-ne el motiu.
-
-La pregunta 6 (COMPLETAR) substitueix l'antiga pregunta sobre els indicadors de la R4·DO (fet aïllat, sense codi) per una traça de la FSM del repte de reg: cal saber que `decideix()` només canvia d'estat i mai actua directament sobre el relé (aquest matís és el que distingeix la resposta correcta de la distractora b).
-
-La pregunta 10 (TRAÇA) manté el tema original (integrar temperatura i CO₂ en una alerta combinada) però ara amb codi real: cal distingir una condició `and` d'una `or` llegint `decideix()`, en lloc de triar entre frases abstractes sobre "quins blocs s'integren".
+> 🔑 **La correcció.** La clau és **material del docent** (`Classes/Solucionari/Questionaris_conceptes_solucions.md`): així el qüestionari serveix de debò per comprovar què saps. Si el fas amb el **Google Form** del Classroom, la correcció te la dona el formulari mateix en enviar-lo; si el fas en paper, demana-la al docent en acabar.
 
 ---
 

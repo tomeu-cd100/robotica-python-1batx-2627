@@ -119,19 +119,7 @@ ___________________________________________________________________
 
 ---
 
-## Clau de correcció (docent)
-
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-|---|---|---|---|---|---|---|---|---|---|
-| b | c | b | b | b | b | b | b | a | a |
-
-La pregunta 8 és de **traça de codi**: valora que sàpiga seguir pas a pas una transició d'estat condicionada (el mateix patró que `termostat_histeresi.py`), sense executar-lo, no només recordar-ne la definició de memòria.
-
-La pregunta 9 és de **completar codi**: valora que identifiqui que sense `global estat` la funció crea una variable local pròpia i el canvi no es propaga a la variable de fora, tal com passa a `actualitza_estat()` de `vehicle_seguretat.py`.
-
-La pregunta 10 és de **corregir codi**: en aquest fragment concret el bucle és seqüencial (sense `return`/`continue`) i el polsador SÍ es llegeix a cada volta, així que no hi ha cap finestra real en què quedi "ignorat". El que cal reconèixer és una mala pràctica de **prioritat**: la convenció de seguretat d'aquesta SA és comprovar sempre l'aturada d'emergència **primer**, abans de processar qualsevol altra comanda (vegeu "Errors freqüents i solució" de la guia docent), perquè un canvi futur al bloc de la ràdio (per exemple, afegir-hi un `continue` o un `return` anticipat en alguna branca) no acabi deixant el polsador sense comprovar-se. No és un bug demostrable amb aquest codi tal com està escrit, sinó un disseny fràgil que trenca la convenció de seguretat del curs.
-
-La pregunta 11 és oberta: valora que expliqui que l'STOP s'ha de comprovar **abans que res** a cada volta del bucle i que **totes** les vies (polsador i ràdio) criden la mateixa funció, de manera que mai hi ha un moment en què el vehicle pugui "ignorar" una ordre d'aturada perquè estava processant-ne una altra.
+> 🔑 **La correcció.** La clau és **material del docent** (`Classes/Solucionari/Questionaris_conceptes_solucions.md`): així el qüestionari serveix de debò per comprovar què saps. Si el fas amb el **Google Form** del Classroom, la correcció te la dona el formulari mateix en enviar-lo; si el fas en paper, demana-la al docent en acabar.
 
 ---
 

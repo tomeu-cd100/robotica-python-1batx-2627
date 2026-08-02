@@ -17,10 +17,10 @@
 
 export const COURSE_ID = '871507273731';
 
-// Carpeta de Drive del curs: encara no fixada (els Forms nous hi aniran).
-// Mentre sigui null, els scripts que mouen fitxers a Drive han d'avisar i
-// aturar-se en lloc de deixar els Forms escampats per l'arrel del Drive.
-export const DRIVE_FOLDER_ID = null;
+// Carpeta de Drive del curs (creada amb `APPLY=1 node preparar_drive.js`):
+// «Robòtica amb Python 1r Batx 2627 — Formularis del curs». Tots els Forms
+// generats hi van a parar.
+export const DRIVE_FOLDER_ID = '1UgQfzg-0pE1vBiRpYgzenLt8DwA0BMTb';
 
 export const WEB_ROOT = 'https://tomeu-cd100.github.io/robotica-python-1batx-2627';
 // WEB_BASE apunta a la secció «classes» (compatibilitat amb el patró del curs

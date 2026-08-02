@@ -131,19 +131,7 @@ ___________________________________________________________________
 
 ---
 
-## Clau de correcció (docent)
-
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-|---|---|---|---|---|---|---|---|---|---|
-| b | b | b | c | b | c | b | d | b | a |
-
-La pregunta 1 (traça de codi) avalua que l'alumnat sàpiga llegir un fragment real de `missio_quadrat()` i predir el comportament resultant (una trajectòria en quadrat), en lloc de limitar-se a recitar la definició de cinemàtica diferencial.
-
-La pregunta 4 (completar codi) avalua que l'alumnat entengui la seqüència exacta del pols de trigger de l'HC-SR04 (0 → 1 → 0) prou bé com per identificar quina línia hi falta, no només que en sàpiga la definició de manual.
-
-La pregunta 10 (corregir codi) avalua que l'alumnat reconegui un error real i freqüent (un `except:` massa genèric que amaga bugs de programació, en lloc de capturar només el timeout amb `except OSError:`), tal com es descriu a la guia docent de la S3.
-
-La pregunta 11 és oberta: valora que expliqui que el mètode de mesura (pols de trigger + `machine.time_pulse_us` a l'echo + càlcul distància = temps × velocitat del so / 2) és **idèntic** als dos programes; només canvien els pins concrets (P14/P15 a la SA3, P1/P2 al rover), perquè al rover aquests dos pins vells ja estan ocupats pels motoreductors.
+> 🔑 **La correcció.** La clau és **material del docent** (`Classes/Solucionari/Questionaris_conceptes_solucions.md`): així el qüestionari serveix de debò per comprovar què saps. Si el fas amb el **Google Form** del Classroom, la correcció te la dona el formulari mateix en enviar-lo; si el fas en paper, demana-la al docent en acabar.
 
 ---
 

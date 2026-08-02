@@ -127,19 +127,7 @@ ___________________________________________________________________
 
 ---
 
-## Clau de correcció (docent)
-
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-|---|---|---|---|---|---|---|---|---|---|
-| b | b | a | b | b | b | b | b | a | b |
-
-La pregunta 1 (**TRAÇA**) substitueix una pregunta merament memorística per exigir seguir l'execució d'un codi real (comptador amb *pull-up*) i triar què fa, no només reconèixer una instrucció aïllada. Nota per al docent: aquest fragment **no** té antirebot (a diferència de `mascota_reactiva.py`), així que en una premuda llarga pot incrementar `comptador` diverses vegades; és exactament el problema de sobrecomptatge per rebot que la SA ensenya a resoldre amb `running_time()`, i es pot aprofitar la pregunta per obrir aquest debat a classe encara que no formi part de les opcions de resposta.
-
-La pregunta 3 (**COMPLETAR**) substitueix la llista memorística de pins ADC per demanar completar la línia que falta a `mapa()`, comprovant que l'alumnat entén per què cal un `return` amb la regla de tres, no només que existeix la funció.
-
-La pregunta 9 (**CORREGIR**) substitueix el fet aïllat del PIR per un error real i freqüent (confondre l'escala 0-255 dels sensors integrats amb la 0-1023 dels pins ADC, documentat a la guia docent), i obliga a diagnosticar-lo sobre codi complet.
-
-La pregunta 11 és oberta: valora que expliqui que un llindar "inventat" pot no funcionar amb les condicions reals de l'aula (llum ambiental, soroll de fons...) i que l'exemple sigui coherent amb un component real de la SA3 (llindar de foscor, de temperatura, de so o de distància).
+> 🔑 **La correcció.** La clau és **material del docent** (`Classes/Solucionari/Questionaris_conceptes_solucions.md`): així el qüestionari serveix de debò per comprovar què saps. Si el fas amb el **Google Form** del Classroom, la correcció te la dona el formulari mateix en enviar-lo; si el fas en paper, demana-la al docent en acabar.
 
 ---
 

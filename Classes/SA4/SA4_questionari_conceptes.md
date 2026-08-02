@@ -130,19 +130,7 @@ ___________________________________________________________________
 
 ---
 
-## Clau de correcció (docent)
-
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-|---|---|---|---|---|---|---|---|---|---|
-| a | b | b | b | b | a | a | a | c | a |
-
-La pregunta 1 (traça de codi) substitueix una pregunta merament memorística per una de lectura activa: valora que l'alumnat entengui que una crida posterior (`girar('dreta')`) **sobreescriu** l'estat que havia deixat una crida anterior (`avancar()`) sobre el mateix pin, no que els valors "se sumin" ni que quedin fixats per sempre.
-
-La pregunta 7 (completar codi) comprova que l'alumnat sap identificar quina instrucció **falta** perquè un fragment funcioni com cal, no només reconèixer-la quan ja hi és: `set_analog_period(20)` és el pas que sovint s'oblida abans d'un `write_analog` sobre un servo.
-
-La pregunta 10 (corregir codi) es basa en un error freqüent real (guia docent, Sessió 2): enviar PWM als **dos** pins del mateix motor alhora. Valora que l'alumnat sàpiga localitzar l'error concret, no només recitar la norma general.
-
-La pregunta 11 és oberta: valora que expliqui la idea d'**abstracció** (un nom que expressa la intenció, "avançar", amaga el detall de pins i PWM) i que el codi principal (`seguent_moviment()`) es pugui llegir com una seqüència d'ordres senzilles en lloc d'un bloc llarg de `write_analog`/`write_digital`.
+> 🔑 **La correcció.** La clau és **material del docent** (`Classes/Solucionari/Questionaris_conceptes_solucions.md`): així el qüestionari serveix de debò per comprovar què saps. Si el fas amb el **Google Form** del Classroom, la correcció te la dona el formulari mateix en enviar-lo; si el fas en paper, demana-la al docent en acabar.
 
 ---
 

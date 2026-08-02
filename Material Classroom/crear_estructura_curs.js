@@ -150,6 +150,10 @@ async function assegurarTema(classroom, nom, existents) {
     }), `crear tema «${nom}»`);
   console.log(`✅ Tema creat: ${nom}`);
   existents.push({ topicId: res.data.topicId, name: nom });
+  // El tema tot just creat triga un instant a ser visible per a la resta de
+  // l'API: sense aquesta pausa, el material que l'usa pot fallar amb un
+  // INVALID_ARGUMENT (400) que ni tan sols és reintentable.
+  await new Promise(r => setTimeout(r, 1500));
   return res.data.topicId;
 }
 
@@ -216,4 +220,11 @@ async function main() {
   console.log('\nFet. Els materials queden en ESBORRANY: publica\'ls des del Classroom quan toqui.');
 }
 
-main().catch(e => { console.error('❌', e.message); process.exit(1); });
+main().catch(e => {
+  console.error('❌', e.message);
+  // Detall de l'API (quin camp no li agrada): sense això, «invalid argument»
+  // no diu res útil.
+  const detall = e?.response?.data;
+  if (detall) console.error(JSON.stringify(detall, null, 2));
+  process.exit(1);
+});

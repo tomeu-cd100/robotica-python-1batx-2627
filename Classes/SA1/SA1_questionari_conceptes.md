@@ -116,19 +116,7 @@ ___________________________________________________________________
 
 ---
 
-## Clau de correcció (docent)
-
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-|---|---|---|---|---|---|---|---|---|---|
-| b | c | a | b | a | c | b | a | b | b |
-
-La pregunta 1 (traça) es corregeix perquè cal llegir el codi sencer (bucle, condicional i `sleep`) i deduir el comportament real, no recordar una definició de "robot".
-
-La pregunta 3 (completar) es corregeix perquè demana identificar quina instrucció (`display.show`) produeix l'efecte descrit —una imatge fixa després del text—, en lloc de repetir de memòria la definició de "sistema embegut".
-
-La pregunta 10 (corregir) es corregeix perquè reprodueix l'error freqüent real d'aquesta SA (falta el `while True:`, vegeu `SA1_guia_docent.md`, taula «Errors freqüents») i obliga a raonar sobre l'execució del codi, no a recitar les fases del mètode de projecte.
-
-La pregunta 11 és oberta: valora que aparegui **un** sensor, **una** decisió i **un** actuador coherents amb l'aparell triat.
+> 🔑 **La correcció.** La clau és **material del docent** (`Classes/Solucionari/Questionaris_conceptes_solucions.md`): així el qüestionari serveix de debò per comprovar què saps. Si el fas amb el **Google Form** del Classroom, la correcció te la dona el formulari mateix en enviar-lo; si el fas en paper, demana-la al docent en acabar.
 
 ---
 

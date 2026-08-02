@@ -129,19 +129,7 @@ ___________________________________________________________________
 
 ---
 
-## Clau de correcció (docent)
-
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-|---|---|---|---|---|---|---|---|---|---|
-| b | c | c | b | b | a | b | a | b | b |
-
-La pregunta 1 (TRAÇA) substitueix una pregunta de pur record de la instrucció; ara cal llegir un bucle real amb `write_digital` i un acumulador i predir què mostra, no només recordar el nom de la funció.
-
-La pregunta 6 (CORREGIR) substitueix la definició memorística d'"acumulador" per l'error freqüent documentat a la guia docent ("el comptador no avança perquè s'inicialitza dins del bucle"): l'alumnat ha de localitzar-lo en codi, no repetir-ne la definició.
-
-La pregunta 8 (COMPLETAR) substitueix la definició memorística de "relé" per la necessitat de completar la línia que el torna a obrir (`write_digital(0)`), aplicant directament el patró tanca/obre del repte «semàfor o llum d'ambient».
-
-La pregunta 11 és oberta: valora que la diferència digital/PWM sigui correcta (dos estats vs valors intermedis) i que els dos exemples siguin coherents amb components reals de la SA2 (per exemple, LED verd/ambre/vermell = digital; respiració o intensitat = PWM).
+> 🔑 **La correcció.** La clau és **material del docent** (`Classes/Solucionari/Questionaris_conceptes_solucions.md`): així el qüestionari serveix de debò per comprovar què saps. Si el fas amb el **Google Form** del Classroom, la correcció te la dona el formulari mateix en enviar-lo; si el fas en paper, demana-la al docent en acabar.
 
 ---
 
