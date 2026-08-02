@@ -2,7 +2,8 @@
 """
 Genera PDF imprimibles (per omplir/recollir en paper) dels fulls d'alumnat
 que no passen pel pipeline d'activitats: el full de normes de seguretat (amb
-signatura) i els 10 checklists d'alumnat (SA0-SA9, amb autoavaluació semàfor).
+signatura) i els 9 checklists d'alumnat (SA1-SA9, amb autoavaluació semàfor;
+SA0 és acollida amb contracte reduït i no en té).
 
 - Converteix el Markdown amb el MATEIX motor que el web (python-markdown) i
   aplica un post-procés de paper: caselles reals, graella semàfor per pintar
@@ -36,10 +37,8 @@ CLASSES = REPO / "Classes"
 # Fulls a convertir: (md relatiu a Classes, "checklist" | "normes" | "targeta")
 TARGETS = [
     ("SA1/SA1_normes_seguretat.md", "normes"),
-] + [(f"SA{n}/SA{n}_checklist_alumnat.md", "checklist") for n in range(0, 10)] + [
+] + [(f"SA{n}/SA{n}_checklist_alumnat.md", "checklist") for n in range(1, 10)] + [
     ("SA1/SA1_poster_robot_plantilla.md", "checklist"),
-    ("00_General/00_Plantilla_disseny_objecte.md", "checklist"),
-    ("00_General/00_Tauler_reptes.md", "checklist"),
     # Targetes de repàs exprés: es reparteixen en paper com a deures de
     # represa. Curs nou (100% MicroPython, sense C++): la targeta de
     # comparació de paradigmes del germà no aplica.

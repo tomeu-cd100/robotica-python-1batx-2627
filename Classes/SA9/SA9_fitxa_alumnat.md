@@ -61,7 +61,7 @@ Prova el sistema, identifica errors (rutina **DEPURA**) i fes una **primera iter
 
 **Tanca el dossier tècnic** (totes les 9 seccions de [`SA9_dossier_plantilla.md`](SA9_dossier_plantilla.md)) i fes la teva **defensa oral individual** (5' + preguntes, [guia de defensa](../00_General/00_Guia_defensa_oral.md)): problema, solució, una decisió tècnica justificada, demostració amb el teu maquinari.
 
-**Deures:** repàs exprés de MicroPython i de ràdio ("Python flash", targetes de repàs espaiat) de cara a la prova pràctica T3 de la S5.
+**Deures:** repàs exprés de MicroPython i de ràdio ("Python flash", targetes de repàs espaiat: [`00_Repas_expres_MicroPython.md`](../00_General/00_Repas_expres_MicroPython.md) i [`00_Repas_expres_Radio.md`](../00_General/00_Repas_expres_Radio.md)) de cara a la prova pràctica T3 de la S5.
 
 ## Producte · Rover ampliat + dossier tècnic + defensa
 

@@ -220,14 +220,12 @@ DOCENT_SECTIONS = {"programacio", "normativa", "avaluacio", "recursos"}
 DOCENT_NAME_HINTS = ("_guia_docent", "_checklist_docent", "_solucions")
 # 00-general: material transversal visible a l'alumnat (la resta, docent)
 GENERAL_ALUMNAT = {
-    "00_Targetes_rescat.md", "00_Checklist_taller_avaries.md",
+    "00_Targetes_rescat.md",
     "00_Glossari_tecnic.md",
-    "00_Avaluacio_per_alumnat.md", "00_Fitxes_referencia_tecnica.md",
-    "00_Plantilla_disseny_objecte.md", "00_Galeria_exemples_objectes.md",
-    "00_Poster_IA_us_assistents.md", "00_Quadern_tecnic.md",
+    "00_Avaluacio_per_alumnat.md",
+    "00_Quadern_tecnic.md",
     "00_Repas_expres_MicroPython.md", "00_Repas_expres_Radio.md",
-    "00_Repas_expres_Cpp.md", "00_Guia_defensa_oral.md",
-    "00_Tauler_reptes.md",
+    "00_Guia_defensa_oral.md",
     "00_Fil_conductor_construccions.md", "00_Projecte_T1_Mascota.md",
     "00_Projecte_T2_Vehicle.md", "00_Projecte_T3_Rover.md",
     "00_Projecte_T1_portada.md", "00_Projecte_T2_portada.md",
@@ -259,7 +257,7 @@ def is_activitat(src: Path) -> bool:
     parts = src.parts
     if name.endswith(("_fitxa_alumnat.md", "_fitxa_ampliada.md")):
         return True
-    if name in {"SA1_poster_robot_plantilla.md", "00_Plantilla_disseny_objecte.md",
+    if name in {"SA1_poster_robot_plantilla.md",
                 "SA1_prova_diagnostica.md", "00_Avaluacio_per_alumnat.md",
                 "00_Glossari_tecnic.md", "00_Targetes_rescat.md",
                 "00_Quadern_tecnic.md"}:

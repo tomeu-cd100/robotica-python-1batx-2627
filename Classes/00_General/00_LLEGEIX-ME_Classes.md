@@ -61,6 +61,8 @@ El calendari de fabricació (cua de la talladora làser i de la impressora 3D pe
 | [`00_Avaluacio_per_alumnat.md`](00_Avaluacio_per_alumnat.md) | Alumnat | D'on surt la nota, en llenguatge d'alumne. |
 | [`00_Mode_supervivencia.md`](00_Mode_supervivencia.md) | Docent (primer any) | Què fer si falla el maquinari; les rutines no negociables i l'ordre d'adopció de la resta. |
 | [`00_Vaig_faltar.md`](00_Vaig_faltar.md) | Alumnat | Itinerari en 5 passos per posar-se al dia sol després de faltar a una sessió. |
+| [`00_Repas_expres_MicroPython.md`](00_Repas_expres_MicroPython.md) | Alumnat | Targeta d'autoestudi «Python flash»: deures de repàs abans de la prova pràctica T3. |
+| [`00_Repas_expres_Radio.md`](00_Repas_expres_Radio.md) | Alumnat | Targeta d'autoestudi de ràdio: deures de repàs abans de la prova pràctica T3. |
 | [`00_IA_a_la_materia.md`](00_IA_a_la_materia.md) | Docent | Com s'introdueix la IA al curs i com gestionar assistents d'IA amb integritat acadèmica. |
 
 ## Notes

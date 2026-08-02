@@ -15,7 +15,7 @@
 - [ ] Tancar el **dossier tècnic complet** (§1-§9) → *compta amb R4*
 - [ ] Fer la **defensa oral individual** amb demostració (5' + preguntes) → *compta amb R4·DO*
 - [ ] Tenir el **rover ampliat** funcionant amb el meu repte → *compta amb R1, R2, R3*
-- [ ] Fer el **repàs exprés** de MicroPython/ràdio (deures) de cara a la prova pràctica T3
+- [ ] Fer el **repàs exprés** de MicroPython/ràdio (deures: [`00_Repas_expres_MicroPython.md`](../00_General/00_Repas_expres_MicroPython.md), [`00_Repas_expres_Radio.md`](../00_General/00_Repas_expres_Radio.md)) de cara a la prova pràctica T3
 - [ ] Recordar que la **S5 no és sessió de projecte**: és la prova pràctica T3, individual, per estacions
 
 ## 🚦 Com vaig? (pinta el teu nivell)
