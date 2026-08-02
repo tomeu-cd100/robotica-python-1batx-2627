@@ -28,7 +28,23 @@ navegador, i el token es regenera **a la carpeta dels secrets**, no aquí.
 | `config.js` | Font única d'ids: `COURSE_ID`, `DRIVE_FOLDER_ID`, `GRADE_CATEGORIES` (T1/T2/T3), `WEB_ROOT`/`WEB_BASE`, `SA_TRIMESTRE`. Canviar de curs = tocar només això. |
 | `_form_sa_lib.js` | Helpers de Forms (`t()`, `p()`, `radio()`, `autoaval()`…), `getAuthClient()` amb secrets externs, reintents amb backoff (429/5xx) i `crearIPenjar()` amb deduplicació per títol i neteja del Form orfe si falla a mig fer. |
 | `estat_classroom.js` | **Només lectura.** Llista categories de nota (amb els ids per a `config.js`), temes i tasques reals del curs → `estat_classroom.json`. |
+| `preparar_drive.js` | Crea (o troba) la carpeta de Drive del curs on van tots els Forms. `APPLY=1` per crear-la. |
 | `crear_estructura_curs.js` | Crea els temes (SA0-SA9 + general) i un material-enllaç per tema cap a les pàgines de l'alumnat del web publicat. Accepta `--simula`. |
+| `crear_questionaris_conceptes_forms.js` | Un Google Form autocorrectiu per SA: parseja les preguntes de `Classes/SAn/SAn_questionari_conceptes.md` i les claus de `Classes/Solucionari/Questionaris_conceptes_solucions.md`. `APPLY=1` per crear; `SA=3` per limitar-ho a una SA. |
+| `adjuntar_questionaris_classroom.js` | Penja aquells Forms com a tasca **sense nota** (formativa) al tema de la seva SA. |
+| `crear_tasques_lliurament.js` | Tasca de lliurament del producte per SA (10 punts, categoria T1/T2/T3, enllaços a fitxa/checklist/reptes). |
+| `crear_rubriques_lliurament.js` | Rúbrica de producte (5 criteris × 2 punts, derivada de `07_Rubriques.md`): escriu el CSV versionat a `Avaluació/rubriques/` i, com que aquest compte no té llicència per a l'API de rúbriques, puja el full importable a Drive. |
+
+## Estat del curs (02/08/2026)
+
+Creat: 11 temes · 14 materials-enllaç · 9 qüestionaris (Forms autocorrectius +
+tasca sense nota) · 9 tasques de lliurament (10 punts, categoria de trimestre) ·
+full de rúbrica importable a Drive. **Tot en esborrany**, pendent que el docent
+ho publiqui i hi posi dates.
+
+Pendent manual: a cada tasca de lliurament, *Rúbrica → Importar des de Sheets* →
+triar «Rúbrica de producte de SA (importable a Classroom)». L'API de rúbriques
+demana Education Plus / Teaching & Learning Upgrade, que aquest compte no té.
 
 `node_modules/`, `estat_classroom.json` i els `resultats_*.json` són locals i
 estan ignorats per git; els scripts es versionen per excepció al `.gitignore`
