@@ -43,9 +43,17 @@ tasca sense nota) · 9 tasques de lliurament de producte + 3 de quadern tècnic
 (10 punts, categoria de trimestre) · full de rúbrica importable a Drive.
 **Tot en esborrany**, pendent que el docent ho publiqui i hi posi dates.
 
-Pendent manual: a cada tasca de lliurament, *Rúbrica → Importar des de Sheets* →
-triar «Rúbrica de producte de SA (importable a Classroom)». L'API de rúbriques
-demana Education Plus / Teaching & Learning Upgrade, que aquest compte no té.
+Pendent manual (dues coses que l'API no deixa fer):
+
+1. **Rúbrica**: a cada tasca de lliurament, *Rúbrica → Importar des de Sheets* →
+   «Rúbrica de producte de SA (importable a Classroom)». L'API de rúbriques
+   demana Education Plus / Teaching & Learning Upgrade, que aquest compte no té.
+2. **Categoria de nota** (T1/T2/T3): s'ha d'assignar a mà al desplegable de cada
+   tasca. L'API accepta el camp `gradeCategory` a la creació però **no l'aplica**,
+   i el `patch` amb `updateMask=gradeCategory` el rebutja («Non-supported update
+   mask fields»). Els scripts ho comproven després de crear i llisten les tasques
+   pendents. El curs té `calculationType: TOTAL_POINTS`, així que la nota global
+   surt igualment; les categories només serveixen per agrupar per trimestre.
 
 `node_modules/`, `estat_classroom.json` i els `resultats_*.json` són locals i
 estan ignorats per git; els scripts es versionen per excepció al `.gitignore`

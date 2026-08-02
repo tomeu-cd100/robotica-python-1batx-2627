@@ -87,6 +87,7 @@ async function main() {
   const temes = topicsRes.data.topic || [];
 
   const creades = [];
+  const senseCategoria = [];
   for (let n = 1; n <= 9; n++) {
     const titol = `SA${n} · Lliurament del producte: ${PRODUCTES[n].nom}`;
     const tema = temes.find(tp => tp.name && tp.name.toUpperCase().startsWith(`SA${n}`));
@@ -117,8 +118,19 @@ async function main() {
           materials: materials(n),
         },
       }), `crear la tasca de SA${n}`);
-    console.log(`  ✅ SA${n}: creada (DRAFT, 10 punts, ${trimestre}) — id ${cw.data.id}`);
-    creades.push({ sa: `SA${n}`, id: cw.data.id, titol, trimestre });
+    // ⚠️ L'API accepta `gradeCategory` al cos però NO l'aplica (i el patch amb
+    // updateMask=gradeCategory el rebutja: «Non-supported update mask fields»).
+    // La categoria s'ha d'assignar a mà des de la interfície de Classroom.
+    const ambCategoria = Boolean(cw.data.gradeCategory?.id);
+    if (!ambCategoria) senseCategoria.push(`${titol} → ${trimestre}`);
+    console.log(`  ✅ SA${n}: creada (DRAFT, 10 punts${ambCategoria ? `, ${trimestre}` : ''}) — id ${cw.data.id}`);
+    creades.push({ sa: `SA${n}`, id: cw.data.id, titol, trimestre, categoriaAplicada: ambCategoria });
+  }
+
+  if (senseCategoria.length) {
+    console.log('\n⚠️ Categoria de nota NO assignada per l\'API (no ho permet). ' +
+                'Assigna-la a mà a cada tasca (desplegable «Categoria de nota»):');
+    for (const t of senseCategoria) console.log(`   · ${t}`);
   }
 
   if (creades.length) {

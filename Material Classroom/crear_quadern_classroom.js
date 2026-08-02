@@ -110,6 +110,7 @@ async function main() {
 
   // 2) Una tasca de lliurament per trimestre
   const creades = [];
+  const senseCategoria = [];
   for (const tri of TRIMESTRES) {
     const titol = `📓 Quadern tècnic — ${tri.t} (${tri.nom})`;
     const categoria = GRADE_CATEGORIES[tri.t];
@@ -139,8 +140,17 @@ async function main() {
           ],
         },
       }), `crear la tasca del quadern ${tri.t}`);
+    // ⚠️ Vegeu `crear_tasques_lliurament.js`: l'API accepta `gradeCategory`
+    // però no l'aplica; s'ha d'assignar a mà des de Classroom.
+    if (!cw.data.gradeCategory?.id) senseCategoria.push(`${titol} → ${tri.t}`);
     console.log(`  ✅ ${tri.t}: tasca creada (DRAFT, 10 punts) — id ${cw.data.id}`);
     creades.push({ trimestre: tri.t, id: cw.data.id, titol });
+  }
+
+  if (senseCategoria.length) {
+    console.log('\n⚠️ Categoria de nota NO assignada per l\'API (no ho permet). ' +
+                'Assigna-la a mà a cada tasca:');
+    for (const t of senseCategoria) console.log(`   · ${t}`);
   }
 
   if (creades.length) {
