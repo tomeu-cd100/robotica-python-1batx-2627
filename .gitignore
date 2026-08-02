@@ -75,6 +75,7 @@ Material Classroom/*
 !Material Classroom/crear_rubriques_per_tasca.js
 !Material Classroom/generar_mapa_rubriques_md.js
 !Material Classroom/crear_quadern_classroom.js
+!Material Classroom/crear_proves_i_materials.js
 # Carpeta de backups: es versiona l'estructura (.gitkeep) però NO els JSON
 # generats (contingut del curs, es decideix a mà quan versionar-ne un).
 !Material Classroom/backups/
