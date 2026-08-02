@@ -31,7 +31,7 @@
 - [ ] PRIMM amb `receptor_vehicle.py` (predicció abans d'executar)
 - [ ] Acompanyar el tancament individual del repte, aparellat puntualment amb un company o el docent com a emissor
 - [ ] **Repte ⭐** de `Reptes_SA5.md` (nucli obligatori, 25' fila pròpia)
-- [ ] **Mini-defensa breu (R4·DO), per MOSTREIG rotatiu:** 5-6 alumnes (protocol + una decisió justificada; registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8))
+- [ ] **Mini-defensa breu (R4·DO), per MOSTREIG rotatiu:** 5-6 alumnes (protocol + una decisió justificada; registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa2-sa8))
 - ⚠️ *Mantra:* les funcions de moviment **no canvien** respecte a la SA4; només canvia l'entrada (ràdio en lloc de botons)
 
 ## 📊 3. Avaluació i evidències (a recollir)

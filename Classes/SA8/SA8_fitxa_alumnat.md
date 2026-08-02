@@ -51,7 +51,7 @@ Programa [`telemetria_radio.py`](codi/telemetria_radio/telemetria_radio.py): reu
 
 Practica una **classificació de patrons** amb dades de sensors (p. ex. Teachable Machine, a nivell de demostració/pràctica guiada). **Tanca el producte: sistema de telemetria del rover** (com a mínim dos sensors del Kit 3, ràdio, registre amb el teu propi `estacio_base.py`).
 
-**Mini-defensa (breu, davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)):** si et toca, explica **una decisió** de disseny (per exemple, per què has triat aquest format de missatge, o com decideixes si el rover està "inclinat" a `mpu_orientacio()`). Si no et toca, escriu-ho al quadern.
+**Mini-defensa (breu, davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa2-sa8)):** si et toca, explica **una decisió** de disseny (per exemple, per què has triat aquest format de missatge, o com decideixes si el rover està "inclinat" a `mpu_orientacio()`). Si no et toca, escriu-ho al quadern.
 
 **Reflexió d'IA i ètica de dades:** si volguessis que un model d'IA "aprengués" a decidir en lloc del teu llindar fet a mà, quines dades li caldrien i per què cal tenir cura amb la privadesa d'aquestes dades? ______________________
 

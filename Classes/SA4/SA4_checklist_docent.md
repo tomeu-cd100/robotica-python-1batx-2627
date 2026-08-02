@@ -30,7 +30,7 @@
 - [ ] PRIMM amb `control_per_botons.py` (predicció abans d'executar)
 - [ ] Acompanyar la programació individual de la seqüència pròpia
 - [ ] **Repte ⭐** de `Reptes_SA4.md` (nucli obligatori, diferent de «control per botons», 25' fila pròpia): dins la S3 o com a deures abans de la S4
-- [ ] **Mini-defensa breu (R4·DO), per MOSTREIG rotatiu:** 5-6 alumnes (seqüència + una decisió justificada; registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8))
+- [ ] **Mini-defensa breu (R4·DO), per MOSTREIG rotatiu:** 5-6 alumnes (seqüència + una decisió justificada; registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa2-sa8))
 - ⚠️ *Mantra:* el botó B **sempre** atura, es processi on es processi (anticipa l'STOP de la SA6)
 
 **Sessió 4 — Muntatge del vehicle T2 (fabricació)**

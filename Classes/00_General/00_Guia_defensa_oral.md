@@ -16,8 +16,10 @@ Els **3 indicadors** de la R4·DO (claredat, decisió tècnica justificada, resp
 | **SA2** (mini-defensa, 1') | A peu de taula, davant el docent | Claredat (què fa el sistema); la decisió justificada s'hi **inicia** | Sí |
 | **SA3** (mini-defensa breu, 1') | Davant el docent | Claredat — **formativa**: retorn per preparar la defensa de SA4 | **No** |
 | **SA4** (mini-defensa, 1-2') | A peu de taula, davant el docent | Claredat + una **decisió tècnica justificada** | Sí |
+| **SA5** (mini-defensa, 1-2') | A peu de taula, davant el docent | Claredat + decisió justificada (el **protocol de ràdio** triat) | Sí |
 | **SA6** (defensa a peu de taula, 2-3') | Davant el docent | Els **3 indicadors**, nivell inicial | Sí |
 | **SA7** (mini-defensa breu, 1') | Davant el docent | Claredat + decisió justificada — **formativa**: retorn per preparar la SA9 | **No** |
+| **SA8** (mini-defensa, 2') | A peu de taula, davant el docent | Els **3 indicadors**, nivell mitjà (assaig de la SA9) | Sí |
 | **SA9** (defensa final + demo, 5' + preguntes) | Grup classe | Els **3 indicadors** al nivell alt | Sí |
 
 > Consulta sempre la **mini-rúbrica R4·DO completa** (`Programació didàctica/07_Rubriques.md`) per als 4 nivells (Insuficient/Suficient/Notable/Excel·lent) de cada indicador i per a la **sessió exacta** en què es fa cada defensa dins de la seva SA (pot variar lleugerament entre la fitxa de la SA i el doc. de rúbriques; en cas de dubte, la **guia docent de la SA en curs** (`Classes/SAx/SAx_guia_docent.md`) és la font que fixa el dia real de l'aula).
@@ -30,13 +32,13 @@ Els **3 indicadors** de la R4·DO (claredat, decisió tècnica justificada, resp
 4. **Demostració** — el requisit principal funcionant, amb el propi maquinari.
 5. *(SA9)* **Preguntes** — respondre amb criteri; "no ho sé, però ho comprovaria així" és una resposta vàlida.
 
-## Mostreig rotatiu de la mini-defensa (repte ⭐, SA1-SA8)
+## Mostreig rotatiu de la mini-defensa (repte ⭐, SA2-SA8)
 
 > A partir de la tercera ronda de millores, la mini-defensa de la fila «Repte ⭐» de cada guia docent (SA1-SA8) **no la fa tota la classe cada sessió**: amb 20 alumnes i ~10' de franja real, no hi cap. Es fa per **mostreig rotatiu**.
 
-- Cada sessió amb mini-defensa, el docent **tria 5-6 alumnes** (a l'atzar o per llista) perquè la facin davant seu; la resta tanca directament fitxa i quadern.
+- Cada sessió amb mini-defensa, el docent **tria una mostra d'alumnes** (a l'atzar o per llista) perquè la facin davant seu; la resta tanca directament fitxa i quadern. Mida de la mostra segons el trimestre: **T1, 8-10 alumnes/sessió** (les defenses són d'1' i només hi ha 2 sessions amb mini-defensa: sense mostra àmplia no hi passa tothom); **T2-T3, 5-6 alumnes/sessió** (defenses més llargues, més sessions disponibles).
 - **Registre rotatiu:** el docent porta un tick a la llista de classe (paper o full de càlcul) amb qui ja ha passat aquest trimestre. Mai es torna a triar algú que ja hi ha passat **fins que tothom del grup hi hagi passat**.
-- **Garantia mínima:** l'objectiu és que **tothom passi almenys un cop per trimestre**. Cada trimestre hi ha diverses sessions amb mini-defensa (T1: SA2, SA3; T2: SA4, SA5, SA6; T3: SA7, SA8, i la defensa final de grup classe de la SA9), prou perquè el mostreig de 5-6 alumnes/sessió cobreixi tot el grup. Si a la **darrera oportunitat** del trimestre encara queden alumnes sense passar, tenen **prioritat** en el mostreig d'aquella sessió.
+- **Garantia mínima:** l'objectiu és que **tothom passi almenys un cop per trimestre**. Cada trimestre hi ha aquestes sessions amb mini-defensa: T1, **2** (SA2, SA3 — d'aquí la mostra de 8-10); T2, **3** (SA4, SA5, SA6); T3, **2 + la defensa final** (SA7, SA8, i la SA9 de grup classe, on tothom passa segur). Si a la **darrera oportunitat** del trimestre encara queden alumnes sense passar, tenen **prioritat** en el mostreig d'aquella sessió.
 - Els alumnes **no sortejats** no es queden sense res: apliquen el mateix guió de defensa per escrit al quadern tècnic (problema → solució → decisió justificada), que el docent pot repassar puntualment.
 - Aquest mostreig **no canvia** la SA9 (defensa final, grup classe): allà **tothom** defensa, sense mostreig.
 

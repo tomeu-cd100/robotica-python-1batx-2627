@@ -62,7 +62,7 @@ La ponderació 45/25/20/10 permet, en teoria, compensar una escriptura de codi f
 
 > **Per superar el trimestre cal, com a mínim, UNA** de les dues evidències següents d'escriptura autònoma de codi:
 > 1. **almenys un dels 3 mini-checks del trimestre amb semàfor ≥ 🟡** («se'n surt amb dubtes» o millor), o
-> 2. **l'ítem obligatori «funció nova» de la prova trimestral ≥ la meitat de la seva puntuació** (a T2/T3: ≥ 1 dels 2 punts de l'ítem «escriu una funció nova» — vegeu `Avaluació/Prova_practica_T2.md`/`T3.md`). **A T1**, on encara no hi ha funcions pròpies al nucli, el criteri equivalent és el **nucli de condicionals de la prova** (ítems 2-3 de la graella de `Avaluació/Prova_practica_T1.md`, 3 punts) **≥ la meitat** (≥ 1,5 punts).
+> 2. **l'ítem obligatori «funció nova» de la prova trimestral ≥ la meitat de la seva puntuació** (a T2: l'ítem «funció nova» de `Avaluació/Prova_practica_T2.md`; a T3: l'ítem «comportament nou del rover, funció pròpia (obligatori)» de `Avaluació/Prova_practica_T3.md` — en tots dos casos, ≥ 1 dels seus 2 punts). **A T1**, on encara no hi ha funcions pròpies al nucli, el criteri equivalent és el **nucli de condicionals de la prova** (ítems 2-3 de la graella de `Avaluació/Prova_practica_T1.md`, 3 punts) **≥ la meitat** (≥ 1,5 punts).
 
 Si cap de les dues evidències s'assoleix, el trimestre **no es dona per superat** encara que la mitjana ponderada de les 4 dimensions arribi a 5: és una porta mínima competencial, no una nota afegida ni restada. La qualificació numèrica de les dimensions es manté sense rebaixar-la artificialment; el que canvia és que el trimestre queda **pendent de la porta mínima** fins que es resol amb la mecànica de recuperació.
 

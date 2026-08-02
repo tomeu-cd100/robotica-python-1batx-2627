@@ -43,7 +43,7 @@
 - [ ] Modelatge de `rover_missions.py`: selecció de missions amb botons + polsador STOP prioritari (mateix patró que `vehicle_seguretat.py`, SA6)
 - [ ] Acompanyar la integració individual amb millores (velocitat variable, marge de seguretat)
 - [ ] **Repte ⭐** de `Reptes_SA7.md` (nucli obligatori, 25' fila pròpia, carret de magatzem amb velocitat variable)
-- [ ] **Mini-defensa breu (R4·DO), per MOSTREIG rotatiu:** 5-6 alumnes (una decisió justificada; registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8))
+- [ ] **Mini-defensa breu (R4·DO), per MOSTREIG rotatiu:** 5-6 alumnes (una decisió justificada; registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa2-sa8))
 - ⚠️ *Error a vigilar:* el polsador STOP no comprovat dins del bucle intern de cada missió
 
 ## 📊 3. Avaluació i evidències (a recollir)

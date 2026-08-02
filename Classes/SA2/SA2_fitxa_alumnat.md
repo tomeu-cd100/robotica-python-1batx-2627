@@ -64,7 +64,7 @@ Munta el semàfor complet (LED verd/ambre/vermell + brunzidor + relé, [esquema]
 
 > 💡 Si t'encalles, parteix de l'**esquelet** de la secció «Si t'encalles» de la [pàgina de la pràctica de `semafor_rele`](codi/semafor_rele/EXPLICACIO.md).
 
-**Mini-defensa (1', davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)):** si et toca, explica **què fa** el teu semàfor i **una decisió** que hagis pres (per exemple, per què aquest ordre o aquests temps). Si no et toca aquesta sessió, escriu la mateixa resposta al quadern.
+**Mini-defensa (1', davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa2-sa8)):** si et toca, explica **què fa** el teu semàfor i **una decisió** que hagis pres (per exemple, per què aquest ordre o aquests temps). Si no et toca aquesta sessió, escriu la mateixa resposta al quadern.
 
 ### 4 · Repte ⭐ (nucli obligatori, un cop tancat el semàfor)
 

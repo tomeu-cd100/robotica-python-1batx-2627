@@ -128,7 +128,7 @@
 | Explicació | 10' | Modelatge comprimit de [`rover_missions.py`](codi/rover_missions/EXPLICACIO.md): com se seleccionen missions amb els botons, i com el **polsador STOP** (P12, pull-up, mateix patró prioritari que `vehicle_seguretat.py` de la SA6) es comprova **sempre primer** (l'Activació ja ha fet mitja feina). | Prenen notes; identifiquen per què cal comprovar el STOP dins de cada missió, no només al bucle principal. |
 | Repte | 45' | Acompanya la integració individual: el comportament triat (línia i/o obstacles) amb **millores** (velocitat variable, marge de seguretat) sobre una pista de proves. | Integren i milloren el seu comportament autònom (Activitat 4 de la fitxa, producte). Proven amb obstacles i/o circuit reals. |
 | **Repte ⭐ (nucli obligatori)** | 25' | Un cop tancat el comportament autònom, repte **⭐ · Carret de magatzem amb velocitat variable** de [`Reptes_SA7.md`](../../Reptes/Reptes_SA7.md). | Fan el repte ⭐; 🤝 **parella de lectura (5', dins d'aquests 25')** abans de lliurar-lo; l'ensenyen al docent perquè el validi (**R1**). Qui vagi sobrat continua amb els reptes ⭐⭐/⭐⭐⭐ (ampliació opcional). |
-| Mini-defensa (MOSTREIG) + tancament | 10' | Recull dubtes; **mini-defensa breu, per MOSTREIG rotatiu** (2-3', R4·DO): tria **5-6 alumnes** (registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)) perquè justifiquin una decisió de disseny; la resta tanca directament. | Els sortejats fan la mini-defensa; la resta anota al quadern la millora aplicada i per què. |
+| Mini-defensa (MOSTREIG) + tancament | 10' | Recull dubtes; **mini-defensa breu, per MOSTREIG rotatiu** (1', R4·DO, formativa): tria **5-6 alumnes** (registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa2-sa8)) perquè justifiquin una decisió de disseny; la resta tanca directament. | Els sortejats fan la mini-defensa; la resta anota al quadern la millora aplicada i per què. |
 | **Marge/imprevistos** | 20' | Coixí per a arrencada i recollida: el temps efectiu real d'aula és ~100' (no 120'); aquesta fila ho fa explícit. | — |
 
 > ⏱️ **Marge:** la fila «Marge/imprevistos» (20') ja recull que el temps efectiu real és ~100'. Si encara vas just, retalla primer: l'ampliació "combinar línia I obstacles en una sola missió" (deixa-la per a qui vagi sobrat; un únic comportament ben integrat i documentat és el nucli innegociable).
@@ -153,7 +153,7 @@
 | Fitxa d'alumnat (Act. 1-3) | Cinemàtica diferencial, seguidor de línia, evita-obstacles | CA1.1, CA3.1, CA4.1 | R1 | Formativa |
 | Producte «comportament autònom del rover» (S4) | Comportament integrat funcional (línia i/o obstacles) | CA1.1, CA3.1, CA4.1 | **R1**, **R3** | Sí |
 | Repte **⭐** (`Reptes_SA7.md`, S4, nucli obligatori) | Velocitat variable de correcció aplicada al seguidor de línia | CA1.1 | **R1** | Sí |
-| Mini-defensa (S4, R4·DO) | Claredat + justificació d'una decisió de disseny/millora | CA3.1 | **R4** (fila «Defensa oral») | Sí |
+| Mini-defensa (S4, R4·DO, 1') | Claredat + justificació d'una decisió de disseny/millora | CA3.1 | — | **No** (formativa: retorn per preparar la SA9, vegeu l'escala de [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md)) |
 | Quadern tècnic | Factors de calibratge, llindars, proves de trajectòria | CA4.1 | **R4** | Sí |
 | Observació d'aula | Autonomia i seguretat en manipular el rover | — | **R5** | Sí |
 

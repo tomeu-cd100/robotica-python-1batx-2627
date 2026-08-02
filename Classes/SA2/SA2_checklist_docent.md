@@ -28,7 +28,7 @@
 - [ ] Introduir el relé: seguretat (costat extern mai en contacte amb la placa)
 - [ ] Acompanyar el muntatge i la programació individual del repte
 - [ ] **Repte ⭐** (25', fila pròpia — [`Reptes_SA2.md`](../../Reptes/Reptes_SA2.md)) + 🤝 parella de lectura (5', dins)
-- [ ] **Mini-defensa oral (1', R4·DO), per MOSTREIG rotatiu:** 5-6 alumnes (registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8))
+- [ ] **Mini-defensa oral (1', R4·DO), per MOSTREIG rotatiu:** 5-6 alumnes (registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa2-sa8))
 - ⚠️ *Retallada del pla de contingència:* si cal recuperar temps, aquest repte **fa de producte final** i la S4 s'allibera sencera
 
 **Sessió 4 — Fabricació i muntatge de la mascota**

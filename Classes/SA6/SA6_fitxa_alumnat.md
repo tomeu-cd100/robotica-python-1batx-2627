@@ -56,7 +56,7 @@ Programa l'estat **STOP** com a **prioritari sobre qualsevol altre**: es dispara
 
 Parteix de [`vehicle_seguretat.py`](codi/vehicle_seguretat/vehicle_seguretat.py) i tanca el teu vehicle: protocol de ràdio de la SA5 (F/B/L/R/S) + comanda **`"X"`** dedicada + màquina d'estats RUN/STOP + LED indicador. **Tanca el Projecte T2.**
 
-**Mini-defensa (breu, davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)):** si et toca, explica **una decisió** de disseny (per exemple, per què el polsador es comprova abans que la ràdio a cada volta del bucle, o com has organitzat `actualitza_estat()`). Si no et toca, escriu-ho al quadern.
+**Mini-defensa (breu, davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa2-sa8)):** si et toca, explica **una decisió** de disseny (per exemple, per què el polsador es comprova abans que la ràdio a cada volta del bucle, o com has organitzat `actualitza_estat()`). Si no et toca, escriu-ho al quadern.
 
 ### 4 · Repte ⭐ (nucli obligatori) (Sessió 3, en acabar el producte)
 

@@ -52,11 +52,11 @@ Munta el sensor de llum i el de temperatura del Kit ([esquema](SA3_esquemes_conn
 
 ### 3 · Repte «mascota reactiva» (Sessió 3 — producte, tanca la mascota T1)
 
-Cablega la mascota amb el cablatge **exacte** del [dossier del Projecte T1](../00_General/00_Projecte_T1_Mascota.md): P1 (LED), P2 (brunzidor), P8 (PIR), P12 (polsador). Parteix de `mascota_reactiva.py` i programa **almenys 2 reaccions** sensor→resposta coherents amb el nom/caràcter que li has triat.
+Cablega la mascota amb el cablatge **exacte** del [dossier del Projecte T1](../00_General/00_Projecte_T1_Mascota.md): P1 (LED), P2 (brunzidor), P8 (PIR), P12 (polsador). **Escriu el programa partint de l'esquelet del dossier** (enllaç de sota), amb **almenys 2 reaccions** sensor→resposta coherents amb el nom/caràcter que li has triat; `mascota_reactiva.py` és la **solució de referència**, per consultar només després del teu intent.
 
 > 💡 Si t'encalles, parteix de l'**esquelet** del [dossier de la mascota](../00_General/00_Projecte_T1_Mascota.md#-si-tencalles-lesquelet-del-programa).
 
-**Mini-defensa (breu, davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)):** si et toca, explica **quines reaccions** té la teva mascota i **una decisió** que hagis pres (per exemple, per què aquest llindar o aquest ordre de prioritat). Si no et toca, escriu-ho al quadern.
+**Mini-defensa (breu, davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa2-sa8)):** si et toca, explica **quines reaccions** té la teva mascota i **una decisió** que hagis pres (per exemple, per què aquest llindar o aquest ordre de prioritat). Si no et toca, escriu-ho al quadern.
 
 ### 4 · Repte ⭐ «Llum automàtica d'estudi» (Sessió 3, en acabar la mascota — NUCLI OBLIGATORI)
 

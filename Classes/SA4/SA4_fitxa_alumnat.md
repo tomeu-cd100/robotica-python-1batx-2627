@@ -54,7 +54,7 @@ Munta els dos motoreductors ([esquema](SA4_esquemes_connexions.md), pins **M1**/
 
 Parteix de [`control_per_botons.py`](codi/control_per_botons/control_per_botons.py) i programa la **teva** seqüència de moviments (avançar/girar/retrocedir/aturar) activada amb els botons A/B.
 
-**Mini-defensa (breu, davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8)):** si et toca, explica **quina seqüència** has triat i **una decisió** de disseny (per exemple, per què aquest ordre de moviments o aquesta velocitat). Si no et toca, escriu-ho al quadern.
+**Mini-defensa (breu, davant el docent, per mostreig — no la fa tothom cada sessió, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa2-sa8)):** si et toca, explica **quina seqüència** has triat i **una decisió** de disseny (per exemple, per què aquest ordre de moviments o aquesta velocitat). Si no et toca, escriu-ho al quadern.
 
 ### 4 · Repte ⭐ «Salutació programable per a un aparador» (Sessió 3, en acabar «control per botons» — NUCLI OBLIGATORI)
 

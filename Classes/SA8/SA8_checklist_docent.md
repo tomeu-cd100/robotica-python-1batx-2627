@@ -35,7 +35,7 @@
 - [ ] Bloc «Ètica de dades i IA» (RGPD, biaix, consentiment) aplicat a la telemetria del rover
 - [ ] Acompanyar el tancament del producte (mínim dos sensors, ràdio, registre)
 - [ ] **Repte ⭐** de `Reptes_SA8.md` (nucli obligatori, 25' fila pròpia, estació meteorològica amb alertes)
-- [ ] **Mini-defensa breu (R4·DO), per MOSTREIG rotatiu:** 5-6 alumnes (una decisió justificada; registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8))
+- [ ] **Mini-defensa breu (R4·DO), per MOSTREIG rotatiu:** 5-6 alumnes (una decisió justificada; registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa2-sa8))
 - ⚠️ *Error a vigilar:* que la reflexió d'IA es quedi en generalitats sense connectar-la amb `mpu_orientacio()`
 
 ## 📊 3. Avaluació i evidències (a recollir)

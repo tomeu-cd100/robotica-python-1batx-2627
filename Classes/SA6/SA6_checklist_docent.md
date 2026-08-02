@@ -32,7 +32,7 @@
 - [ ] PRIMM amb `vehicle_seguretat.py` (predicció abans d'executar): què fa `"X"` si arriba en ple moviment
 - [ ] Acompanyar el tancament individual: protocol complet F/B/L/R/S/X + STOP prioritari
 - [ ] **Repte ⭐** de `Reptes_SA6.md` (nucli obligatori, 25' fila pròpia, termòstat de dues zones)
-- [ ] **Mini-defensa breu (R4·DO), per MOSTREIG rotatiu:** 5-6 alumnes (FSM + una decisió justificada; registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa1-sa8))
+- [ ] **Mini-defensa breu (R4·DO), per MOSTREIG rotatiu:** 5-6 alumnes (FSM + una decisió justificada; registre rotatiu, vegeu [`00_Guia_defensa_oral.md`](../00_General/00_Guia_defensa_oral.md#mostreig-rotatiu-de-la-mini-defensa-repte--sa2-sa8))
 - [ ] Ampliació opcional: sensor de temperatura/DHT11 com a tercer estat ALERTA (**no nucli**)
 - ⚠️ *Mantra:* les funcions de moviment i el protocol **no canvien** respecte a SA4/SA5; només s'hi afegeix la màquina d'estats amb STOP prioritari
 

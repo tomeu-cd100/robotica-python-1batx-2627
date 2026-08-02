@@ -21,7 +21,29 @@
 
 ### PART B — Control amb histèresi + registre (nucli + ampliació, 3 punts)
 5. **Nivell satisfactori (nucli):** programa un **control tot/res amb histèresi** (dos llindars, no un de sol) sobre la temperatura **interna** de la micro:bit, que engegui/aturi un actuador (relé o LED a P2).
-6. **Ampliació:** **registra les lectures** amb el mòdul natiu `log` (`log.set_labels()` + `log.add()`), com a evidència per al quadern.
+6. **Ampliació:** **registra les lectures** amb el mòdul natiu `log` (`log.set_labels()` + `log.add()`), com a evidència per al quadern (puntua dins de l'ítem de documentació).
+
+### ÍTEM OBLIGATORI DE DEPURACIÓ (1 punt) — «aquest programa falla: arregla'l»
+7. Un company ha escrit aquest fragment per a la Part B i **peta en executar-se**. Aquí tens el codi i el **traceback real**:
+
+```python
+llindar = "25"
+
+while True:
+    if temperature() > llindar:
+        display.show(Image.NO)
+    else:
+        display.show(Image.YES)
+    sleep(500)
+```
+
+```
+Traceback (most recent call last):
+  File "main.py", line 4, in <module>
+TypeError: unsupported types for __gt__: 'int', 'str'
+```
+
+**(a)** Llegeix el traceback i explica **en una o dues frases** què diu i per què passa (quina línia, quins tipus xoquen). **(b)** Arregla **la línia responsable** (n'hi ha prou de canviar-ne una) i justifica el canvi. *(No cal maquinari: es respon per escrit al full de la prova.)*
 
 ### Lliurament
 Els dos programes funcionant (o la seva lògica assajada al simulador, si el maquinari no ho permet en aquell moment) + **quadern**: diagrama de la màquina d'estats (Part A) i taula amb almenys una lectura registrada (Part B).
@@ -37,15 +59,14 @@ Els dos programes funcionant (o la seva lògica assajada al simulador, si el maq
 | Criteri | Punts | CA | Rúbrica |
 |---|---|---|---|
 | Part A: FSM RUN/STOP amb ordres per ràdio (`CMD:`) funcional (nucli) | 3 | CA1.1, CA3.1 | R1, R3 |
-| Part A: polsador STOP prioritari (ampliació) | 1 | CA3.1 | R3 |
-| Part A: LED indicador d'estat (ampliació) | 0,5 | CA1.1 | R1, R3 |
+| Part A: polsador STOP prioritari + LED indicador d'estat (ampliacions) | 1 | CA3.1 | R3 |
 | **Part A: escriu una funció nova amb paràmetre i retorn (obligatori)** | **2** | **CA1.1** | **R1** |
 | Part B: control tot/res amb histèresi funcional (nucli) | 2,5 | CA2.1, CA3.1 | R1, R3 |
-| Part B: registre amb el mòdul `log` (ampliació) | 0,5 | CA1.1 | R1 |
-| Documentació (diagrama d'estats + taula de dades) | 0,5 | CA3.1 | R4 |
+| **Ítem de depuració: llegir el traceback, explicar la causa i arreglar la línia (obligatori)** | **1** | **CA1.1** | **R1** |
+| Documentació (diagrama d'estats + taula de dades del registre `log`) | 0,5 | CA3.1 | R4 |
 
-> Orientació: nucli + ítem obligatori de les dues parts ben fet ≈ 5-6; amb una ampliació de cada part ≈ 7-8; amb totes i bona documentació ≈ 9-10.
-> Reequilibri de barem (P3.9): l'ítem «escriu una funció nova» és **obligatori**, no una ampliació — puntua encara que no es facin les ampliacions. Per fer-hi lloc sense superar els 10 punts, s'han retallat 0,5 punts a cadascun dels quatre ítems més mecànics (polsador STOP, LED, registre `log` i documentació); el nucli de lògica (FSM i histèresi) es manté intacte.
+> Orientació: nuclis + els dos ítems obligatoris ben fets ≈ 6; amb les ampliacions ≈ 7-8; amb tot i bona documentació ≈ 9-10.
+> Reequilibri de barem (4a ronda): els ítems «funció nova» (2 p) i «depuració amb traceback» (1 p) són **obligatoris**, no ampliacions — puntuen encara que no es facin les ampliacions. Per fer-hi lloc sense superar els 10 punts, les ampliacions mecàniques s'han compactat (STOP+LED en un sol ítem d'1 punt; el registre `log` puntua dins de la documentació); el nucli de lògica (FSM i histèresi) es manté intacte.
 
 ---
 
@@ -256,5 +277,12 @@ while True:
 </details>
 
 **Què mirar en corregir el nucli:** (1) dos llindars diferents i separats (no un de sol); (2) `actiu` es manté dins de la banda entre els dos llindars; (3) l'actuador reflecteix sempre `actiu`. Error típic: comparar `temp` amb un únic `LLINDAR` — histèresi absent.
+
+### Ítem de depuració — resposta esperada
+
+**(a)** El traceback assenyala la **línia 4** (`if temperature() > llindar:`) i diu que no es poden comparar amb `>` un **enter** (`temperature()` retorna un `int`) i un **text** (`llindar` val `"25"`, amb cometes): `TypeError: unsupported types for __gt__: 'int', 'str'`.
+**(b)** Arreglar la línia responsable, que és la **primera** (`llindar = "25"` → `llindar = 25`, sense cometes; també s'accepta `int(llindar)` a la comparació). Justificació: el llindar ha de ser un número per poder-se comparar amb una temperatura.
+
+**Barem (1 punt):** 0,5 la lectura del traceback (línia + tipus que xoquen, amb paraules pròpies) · 0,5 l'arreglada correcta amb justificació. **0** si només reescriu el programa sencer de memòria sense explicar la causa. Compte: l'error és a la línia 1, però el traceback assenyala la 4 (on esclata) — entendre aquesta diferència és exactament el que avalua l'ítem.
 
 > Avaluació global del trimestre: combinar el resultat d'aquesta prova amb el producte «vehicle amb aturada d'emergència» (S3 de SA6, dimensió «Projectes i productes») — cap evidència no compta dues vegades.

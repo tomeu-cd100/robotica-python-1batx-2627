@@ -6,7 +6,7 @@
 > ℹ️ Aquesta prova **no reutilitza la mascota** (el producte de la SA3, ja tancat i avaluat a la Sessió 3): és un programa nou, individual, sobre la micro:bit sola.
 
 ### Competències i criteris avaluats
-- **CE-R1** (programar) → CA1.1 · **CE-R2** (sensors/circuits) → CA2.1, CA2.2
+- **CE-R1** (programar) → CA1.1, CA1.2 (ús autònom del REPL) · **CE-R2** (sensors/circuits) → CA2.1, CA2.2
 - Rúbriques: **R1** (codi), **R2** (circuit/mesura), **R4** (documentació).
 
 ---
@@ -43,7 +43,7 @@ Programa funcionant + **explicació breu al quadern** (què fa cada mode, quins 
 | Botons A/B canvien de mode correctament amb `is_pressed()` (icona pròpia per mode) | 1,5 | CA1.1 | R1 |
 | Mode llum: condicional correcte amb el sensor intern i llindar calibrat | 1,5 | CA1.1, CA2.2 | R1 |
 | Mode temperatura: `if/elif/else` correcte amb les tres icones | 1,5 | CA1.1, CA2.2 | R1 |
-| Lectura contínua pel REPL (`print`) | 1 | CA1.1 | R1 |
+| Lectura contínua pel REPL (`print`) | 1 | CA1.2 | R1 |
 | Sensor extern (P0) muntat i comparat amb l'intern (ampliació) | 2 | CA2.1, CA2.2 | R1, R2 |
 | Acceleròmetre + micròfon integrats, codi amb funcions (ampliació) | 1,5 | CA1.1 | R1 |
 | Documentació al quadern (llindars + calibratge + error resolt) | 1 | CA1.1 | R4 |
